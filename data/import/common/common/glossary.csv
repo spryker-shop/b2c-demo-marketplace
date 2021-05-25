@@ -2850,6 +2850,22 @@ mail.trans.company_status.title,The status of your company has been changed to,e
 mail.trans.company_status.title,Der Status deines Unternehmens wurde geändert auf,de_DE
 mail.trans.customer_registration.confirmation_link,Validate your email address,en_US
 mail.trans.customer_registration.confirmation_link,Bestätigen Sie Ihre E-Mail-Adresse,de_DE
+merchant_profile.email,Email Address,en_US
+merchant_profile.email,E-Mail,de_DE
+merchant_profile.address,Address,en_US
+merchant_profile.address,Adresse,de_DE
+merchant_profile.phone,Phone,en_US
+merchant_profile.phone,Telefon,de_DE
+merchant_profile.terms_and_conditions,Terms & Conditions,en_US
+merchant_profile.terms_and_conditions,AGB,de_DE
+merchant_profile.cancellation_policy,Cancellation Policy,en_US
+merchant_profile.cancellation_policy,Widerrufsbelehrung,de_DE
+merchant_profile.imprint,Imprint,en_US
+merchant_profile.imprint,Impressum,de_DE
+merchant_profile.privacy,Data Privacy,en_US
+merchant_profile.privacy,Datenschutz,de_DE
+merchant_profile.delivery_time,Delivery Time,en_US
+merchant_profile.delivery_time,Lieferzeit,de_DE
 customer.error.confirm_email_link.invalid_or_used,This email verification link is invalid or has been already used.,en_US
 customer.error.confirm_email_link.invalid_or_used,Dieser E-Mail-Verifizierungslink ist ungültig oder wurde bereits verwendet.,de_DE
 customer.authorization.validate_email_address,"Almost there! We send you an email to validate your email address. Please confirm it to be able to log in.",en_US

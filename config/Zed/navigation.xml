@@ -349,6 +349,20 @@
             </category-filters>
         </pages>
     </merchandising>
+    <marketplace>
+        <label>Marketplace</label>
+        <title>Marketplace</title>
+        <icon>fa-shopping-basket</icon>
+        <pages>
+            <merchant>
+                <label>Merchants</label>
+                <title>Merchants</title>
+                <bundle>merchant-gui</bundle>
+                <controller>list-merchant</controller>
+                <action>index</action>
+            </merchant>
+        </pages>
+    </marketplace>
     <users>
         <label>Users</label>
         <title>Users</title>

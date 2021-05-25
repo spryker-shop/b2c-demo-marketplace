@@ -185,3 +185,13 @@ actions:
 #6. Miscellaneous Setup import
   - data_entity: mime-type
     source: data/import/common/common/mime_type.csv
+
+#8. Marketplace import
+  - data_entity: merchant
+    source: data/import/common/common/marketplace/merchant.csv
+  - data_entity: merchant-profile
+    source: data/import/common/common/marketplace/merchant_profile.csv
+  - data_entity: merchant-profile-address
+    source: data/import/common/common/marketplace/merchant_profile_address.csv
+  - data_entity: merchant-store
+    source: data/import/common/common/marketplace/merchant_store.csv
