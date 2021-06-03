@@ -40,6 +40,7 @@
     "spryker-feature/invoice": "^202009.0",
     "spryker-feature/mailing-notifications": "^202009.0",
     "spryker-feature/marketplace-merchant": "202107.x-dev",
+    "spryker-feature/marketplace-product-offer": "202107.x-dev",
     "spryker-feature/merchant": "202107.x-dev",
     "spryker-feature/navigation": "^202009.0",
     "spryker-feature/non-splittable-products": "^202009.0",

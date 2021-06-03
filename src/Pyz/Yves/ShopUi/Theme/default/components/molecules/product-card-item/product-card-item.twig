@@ -126,6 +126,14 @@
             {% widget 'ProductBundleCartItemsListWidget' args [data.productItem, data.product] only %}{% endwidget %}
         {% endblock %}
 
+        {% if widgetGlobalExists('SoldByMerchantWidget') %}
+            {% widget 'SoldByMerchantWidget' args [data.productItem] only %}{% endwidget %}
+        {% elseif widgetGlobalExists('ProductOfferSoldByMerchantWidget') %}
+            {% widget 'ProductOfferSoldByMerchantWidget' args [data.productItem] only %}{% endwidget %}
+        {% elseif widgetGlobalExists('ProductSoldByMerchantWidget') %}
+            {% widget 'ProductSoldByMerchantWidget' args [data.productItem] only %}{% endwidget %}
+        {% endif %}
+
         {% block summary %}
             {% if data.productItem.productOptions is defined and data.productItem.productOptions is not empty %}
                 <div class="grid grid--right">

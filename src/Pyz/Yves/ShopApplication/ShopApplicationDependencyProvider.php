@@ -48,6 +48,8 @@ use SprykerShop\Yves\DiscountPromotionWidget\Widget\CartDiscountPromotionProduct
 use SprykerShop\Yves\DiscountWidget\Widget\CheckoutVoucherFormWidget;
 use SprykerShop\Yves\DiscountWidget\Widget\DiscountVoucherFormWidget;
 use SprykerShop\Yves\LanguageSwitcherWidget\Widget\LanguageSwitcherWidget;
+use SprykerShop\Yves\MerchantProductOfferWidget\Widget\MerchantProductOfferWidget;
+use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
 use SprykerShop\Yves\NewsletterWidget\Widget\NewsletterSubscriptionSummaryWidget;
 use SprykerShop\Yves\OrderCancelWidget\Widget\OrderCancelButtonWidget;
 use SprykerShop\Yves\PriceProductVolumeWidget\Widget\ProductPriceVolumeWidget;
@@ -161,6 +163,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             CartChangeQuantityFormWidget::class,
             RemoveFromCartFormWidget::class,
             ProductAbstractAddToCartButtonWidget::class,
+            MerchantProductOfferWidget::class,
+            SoldByMerchantWidget::class,
         ];
     }
 

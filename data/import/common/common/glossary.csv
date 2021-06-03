@@ -2850,6 +2850,12 @@ mail.trans.company_status.title,The status of your company has been changed to,e
 mail.trans.company_status.title,Der Status deines Unternehmens wurde geändert auf,de_DE
 mail.trans.customer_registration.confirmation_link,Validate your email address,en_US
 mail.trans.customer_registration.confirmation_link,Bestätigen Sie Ihre E-Mail-Adresse,de_DE
+merchant_product_offer.view_seller,View Seller,en_US
+merchant_product_offer.view_seller,Händler ansehen,de_DE
+merchant_product_offer.sold_by,Sold by,en_US
+merchant_product_offer.sold_by,Verkauft durch,de_DE
+merchant.sold_by,Sold by,en_US
+merchant.sold_by,Verkauft durch,de_DE
 merchant_profile.email,Email Address,en_US
 merchant_profile.email,E-Mail,de_DE
 merchant_profile.address,Address,en_US

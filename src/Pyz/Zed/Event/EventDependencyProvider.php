@@ -52,6 +52,9 @@ use Spryker\Zed\Publisher\Communication\Plugin\Event\PublisherSubscriber;
 use Spryker\Zed\TaxProductStorage\Communication\Plugin\Event\Subscriber\TaxProductStorageSubscriber;
 use Spryker\Zed\TaxStorage\Communication\Plugin\Event\Subscriber\TaxStorageSubscriber;
 use Spryker\Zed\UrlStorage\Communication\Plugin\Event\Subscriber\UrlStorageEventSubscriber;
+use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber\MerchantProductOfferSearchEventSubscriber;
+use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber\MerchantSearchEventSubscriber;
+use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Event\Subscriber\MerchantProductOfferStorageEventSubscriber;
 
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
@@ -125,6 +128,11 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
         $eventSubscriberCollection->add(new ProductListSearchEventSubscriber());
 
         $eventSubscriberCollection->add(new PublisherSubscriber());
+
+
+        $eventSubscriberCollection->add(new MerchantSearchEventSubscriber());
+        $eventSubscriberCollection->add(new MerchantProductOfferSearchEventSubscriber());
+        $eventSubscriberCollection->add(new MerchantProductOfferStorageEventSubscriber());
 
         return $eventSubscriberCollection;
     }

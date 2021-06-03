@@ -43,6 +43,9 @@ use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Cart\ProductDiscontinue
 use Spryker\Zed\ProductImageCartConnector\Communication\Plugin\ProductImageCartPlugin;
 use Spryker\Zed\ProductList\Communication\Plugin\CartExtension\ProductListRestrictedItemsPreCheckPlugin;
 use Spryker\Zed\ProductList\Communication\Plugin\CartExtension\RemoveRestrictedItemsPreReloadPlugin;
+use Spryker\Zed\ProductOffer\Communication\Plugin\Cart\FilterInactiveProductOfferPreReloadItemsPlugin;
+use Spryker\Zed\ProductOffer\Communication\Plugin\Cart\ProductOfferCartPreCheckPlugin;
+use Spryker\Zed\ProductOffer\Communication\Plugin\Cart\ProductOfferGroupKeyItemExpanderPlugin;
 use Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\Cart\CartItemOptionPreCheckPlugin;
 use Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\CartItemGroupKeyOptionPlugin;
 use Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\CartItemProductOptionPlugin;
@@ -81,6 +84,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new GiftCardMetadataExpanderPlugin(), #GiftCardFeature
             new ConfiguredBundleQuantityPerSlotItemExpanderPlugin(),
             new ConfiguredBundleGroupKeyItemExpanderPlugin(),
+            new ProductOfferGroupKeyItemExpanderPlugin(),
         ];
     }
 
@@ -106,6 +110,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new CheckAvailabilityPlugin(),
             new ConfiguredBundleTemplateSlotCombinationPreCheckPlugin(),
             new ProductListRestrictedItemsPreCheckPlugin(),
+            new ProductOfferCartPreCheckPlugin(),
         ];
 
         return $cartPreCheckPlugins;
@@ -142,6 +147,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new FilterItemsWithoutPricePlugin(),
             new ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin(),
             new RemoveRestrictedItemsPreReloadPlugin(),
+            new FilterInactiveProductOfferPreReloadItemsPlugin(),
         ];
 
         return $preReloadPlugins;
