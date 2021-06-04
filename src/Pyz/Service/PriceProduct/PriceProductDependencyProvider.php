@@ -8,6 +8,8 @@
 namespace Pyz\Service\PriceProduct;
 
 use Spryker\Service\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
+use Spryker\Service\PriceProductOffer\Plugin\PriceProduct\PriceProductOfferPriceProductFilterPlugin;
+use Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer\PriceProductOfferVolumeFilterPlugin;
 use Spryker\Service\PriceProductVolume\Plugin\PriceProductExtension\PriceProductVolumeFilterPlugin;
 
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
@@ -20,6 +22,8 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     protected function getPriceProductDecisionPlugins(): array
     {
         return array_merge([
+            new PriceProductOfferPriceProductFilterPlugin(),
+            new PriceProductOfferVolumeFilterPlugin(),
             new PriceProductVolumeFilterPlugin(),
         ], parent::getPriceProductDecisionPlugins());
     }

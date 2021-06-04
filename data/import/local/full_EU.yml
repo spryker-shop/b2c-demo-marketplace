@@ -201,3 +201,5 @@ actions:
     source: data/import/common/common/marketplace/merchant_product_offer_store.csv
   - data_entity: product-offer-validity
     source: data/import/common/common/marketplace/product_offer_validity.csv
+  - data_entity: price-product-offer
+    source: data/import/common/DE/price_product_offer.csv

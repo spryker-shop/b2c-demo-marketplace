@@ -10,8 +10,17 @@
     {% set jsonVolumeProductPrices = [{"price": data.amount|money, "count": 1}] %}
 
     {% if data.volumeProductPrices.volumePrices is defined and data.volumeProductPrices.volumePrices is not empty %}
+        {% block priceTable %}
+            {% include molecule('volume-price-table', 'PriceProductVolumeWidget') with {
+                data: {
+                    volumePrices: data.volumeProductPrices.volumePrices,
+                }
+            } only %}
+        {% endblock %}
         {% for volumePrice in data.volumeProductPrices.volumePrices %}
-            {% set jsonVolumeProductPrices = jsonVolumeProductPrices | merge([{"price": volumePrice.price | money, "count": volumePrice.quantity}]) %}
+            {% set jsonVolumeProductPrices = jsonVolumeProductPrices|merge(
+                [{"price": volumePrice.price|money, "count": volumePrice.quantity}]
+            ) %}
         {% endfor %}
     {% endif %}
 
@@ -27,15 +36,6 @@
         } only %}
     {% else %}
         {{ 'customer.access.cannot_see_price' | trans }}
-    {% endif %}
-
-    {% if data.volumeProductPrices.volumePrices is defined and data.volumeProductPrices.volumePrices is not empty %}
-        {% include molecule('volume-price-table', 'PriceProductVolumeWidget') with {
-            class: 'col col--sm-12',
-            data: {
-                volumePrices: data.volumeProductPrices.volumePrices
-            }
-        } only %}
     {% endif %}
 
 {% endblock %}

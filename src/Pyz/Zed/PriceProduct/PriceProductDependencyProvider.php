@@ -8,6 +8,9 @@
 namespace Pyz\Zed\PriceProduct;
 
 use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
+use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionConcreteSaverPlugin;
+use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionQueryCriteriaPlugin;
+use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceProductDimensionExpanderStrategyPlugin;
 use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProductExtension\PriceProductVolumeExtractorPlugin;
 
 /**
@@ -25,4 +28,37 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
             new PriceProductVolumeExtractorPlugin(),
         ];
     }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceDimensionQueryCriteriaPluginInterface[]
+     */
+    protected function getPriceDimensionQueryCriteriaPlugins(): array
+    {
+        return array_merge(parent::getPriceDimensionQueryCriteriaPlugins(), [
+            new PriceProductOfferPriceDimensionQueryCriteriaPlugin(),
+        ]);
+    }
+
+    /**
+     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceDimensionConcreteSaverPluginInterface[]
+     */
+    protected function getPriceDimensionConcreteSaverPlugins(): array
+    {
+        return [
+            new PriceProductOfferPriceDimensionConcreteSaverPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductDimensionExpanderStrategyPluginInterface[]
+     */
+    protected function getPriceProductDimensionExpanderStrategyPlugins(): array
+    {
+        return [
+            new PriceProductOfferPriceProductDimensionExpanderStrategyPlugin(),
+        ];
+    }
+
 }
