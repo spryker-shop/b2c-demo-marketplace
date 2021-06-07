@@ -9,6 +9,10 @@ namespace Pyz\Zed\Sales;
 
 use Spryker\Zed\Customer\Communication\Plugin\Sales\CustomerOrderHydratePlugin;
 use Spryker\Zed\Discount\Communication\Plugin\Sales\DiscountOrderHydratePlugin;
+use Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales\MerchantOmsStateOrderItemsTableExpanderPlugin;
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantOrderDataOrderExpanderPlugin;
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantReferenceOrderItemExpanderPreSavePlugin;
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantReferencesOrderExpanderPlugin;
 use Spryker\Zed\Oms\Communication\Plugin\Sales\IsCancellableOrderExpanderPlugin;
 use Spryker\Zed\Oms\Communication\Plugin\Sales\IsCancellableSearchOrderExpanderPlugin;
 use Spryker\Zed\Oms\Communication\Plugin\Sales\ItemStateOrderItemExpanderPlugin;
@@ -22,6 +26,7 @@ use Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOptionOrde
 use Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOrderHydratePlugin;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOrderItemExpanderPlugin;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Sales\UniqueOrderBundleItemsExpanderPlugin;
+use Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales\ProductOfferReferenceOrderItemExpanderPreSavePlugin;
 use Spryker\Zed\ProductOption\Communication\Plugin\Sales\ProductOptionGroupIdHydratorPlugin;
 use Spryker\Zed\ProductOption\Communication\Plugin\Sales\ProductOptionsOrderItemExpanderPlugin;
 use Spryker\Zed\Sales\Communication\Plugin\Sales\CurrencyIsoCodeOrderItemExpanderPlugin;
@@ -57,6 +62,8 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ProductBundleOptionOrderExpanderPlugin(),
             new RemunerationTotalOrderExpanderPlugin(),
             new IsCancellableOrderExpanderPlugin(),
+            new MerchantOrderDataOrderExpanderPlugin(),
+            new MerchantReferencesOrderExpanderPlugin(),
         ];
     }
 
@@ -67,6 +74,8 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     {
         return [
             new IsQuantitySplittableOrderItemExpanderPreSavePlugin(),
+            new MerchantReferenceOrderItemExpanderPreSavePlugin(),
+            new ProductOfferReferenceOrderItemExpanderPreSavePlugin(),
         ];
     }
 
@@ -158,6 +167,16 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     {
         return [
             new OmsMultiThreadProcessorIdentifierOrderExpanderPreSavePlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsTableExpanderPluginInterface[]
+     */
+    protected function getOrderItemsTableExpanderPlugins(): array
+    {
+        return [
+            new MerchantOmsStateOrderItemsTableExpanderPlugin(),
         ];
     }
 }

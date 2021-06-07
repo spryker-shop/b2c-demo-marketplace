@@ -27,6 +27,7 @@ use Spryker\Zed\FileManagerDataImport\Communication\Plugin\FileManagerDataImport
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantDataImportPlugin;
 use Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantStoreDataImportPlugin;
+use Spryker\Zed\MerchantOmsDataImport\Communication\Plugin\DataImport\MerchantOmsProcessDataImportPlugin;
 use Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin\DataImport\MerchantProductOfferDataImportPlugin;
 use Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin\DataImport\MerchantProductOfferStoreDataImportPlugin;
 use Spryker\Zed\MerchantProfileDataImport\Communication\Plugin\MerchantProfileAddressDataImportPlugin;
@@ -270,6 +271,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new PriceProductOfferDataImportPlugin(),
             new MerchantStockDataImportPlugin(),
             new ProductOfferStockDataImportPlugin(),
+            new MerchantOmsProcessDataImportPlugin(),
         ];
     }
 
