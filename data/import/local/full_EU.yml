@@ -203,3 +203,7 @@ actions:
     source: data/import/common/common/marketplace/product_offer_validity.csv
   - data_entity: price-product-offer
     source: data/import/common/DE/price_product_offer.csv
+  - data_entity: merchant-stock
+    source: data/import/common/common/marketplace/merchant_stock.csv
+  - data_entity: product-offer-stock
+    source: data/import/common/common/marketplace/product_offer_stock.csv
