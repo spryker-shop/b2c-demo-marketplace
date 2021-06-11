@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3548b734f5b80abe7d84f3f26512218",
+    "content-hash": "f1ae4181149377b13b014a629b937fde",
     "packages": [
         {
             "name": "brick/math",
@@ -19179,6 +19179,60 @@
             "time": "2018-11-05T12:18:13+00:00"
         },
         {
+            "name": "spryker/dummy-marketplace-payment",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/dummy-marketplace-payment.git",
+                "reference": "577b8b7c79147c21e16ea39a2e345f6ba6a61afa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/dummy-marketplace-payment/zipball/577b8b7c79147c21e16ea39a2e345f6ba6a61afa",
+                "reference": "577b8b7c79147c21e16ea39a2e345f6ba6a61afa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.30.0",
+                "spryker/payment-extension": "^1.0.0",
+                "spryker/step-engine": "^3.1.0",
+                "spryker/symfony": "^3.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/oms": "*",
+                "spryker/propel": "*",
+                "spryker/sales": "*",
+                "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/oms": "If you want to use OMS constants.",
+                "spryker/payment": "If you want to use Payment command plugins.",
+                "spryker/sales": "If you want to use Sales constants."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "DummyMarketplacePayment module",
+            "support": {
+                "source": "https://github.com/spryker/dummy-marketplace-payment/tree/0.2.2"
+            },
+            "time": "2021-05-13T09:05:30+00:00"
+        },
+        {
             "name": "spryker/dummy-payment",
             "version": "2.5.9",
             "source": {
@@ -24826,6 +24880,47 @@
             ],
             "description": "PaymentDataImport module",
             "time": "2019-12-21T14:19:19+00:00"
+        },
+        {
+            "name": "spryker/payment-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/payment-extension.git",
+                "reference": "6f28bd21da0bed0f959758897c544c7c17aece92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/payment-extension/zipball/6f28bd21da0bed0f959758897c544c7c17aece92",
+                "reference": "6f28bd21da0bed0f959758897c544c7c17aece92",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "PaymentExtension module",
+            "support": {
+                "source": "https://github.com/spryker/payment-extension/tree/1.0.0"
+            },
+            "time": "2021-05-24T10:32:31+00:00"
         },
         {
             "name": "spryker/payment-gui",
