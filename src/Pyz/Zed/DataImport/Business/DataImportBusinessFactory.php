@@ -51,6 +51,7 @@ use Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep;
 use Pyz\Zed\DataImport\Business\Model\Locale\AddLocalesStep;
 use Pyz\Zed\DataImport\Business\Model\Locale\LocaleNameToIdLocaleStep;
 use Pyz\Zed\DataImport\Business\Model\Locale\Repository\LocaleRepository;
+use Pyz\Zed\DataImport\Business\Model\MerchantUser\MerchantUserWriterStep;
 use Pyz\Zed\DataImport\Business\Model\Navigation\NavigationKeyToIdNavigationStep;
 use Pyz\Zed\DataImport\Business\Model\Navigation\NavigationWriterStep;
 use Pyz\Zed\DataImport\Business\Model\NavigationNode\NavigationNodeValidityDatesStep;
@@ -214,6 +215,8 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
                 return $this->createNavigationImporter($dataImportConfigurationActionTransfer);
             case DataImportConfig::IMPORT_TYPE_NAVIGATION_NODE:
                 return $this->createNavigationNodeImporter($dataImportConfigurationActionTransfer);
+            case DataImportConfig::IMPORT_TYPE_MERCHANT_USER:
+                return $this->createMerchantUserImporter($dataImportConfigurationActionTransfer);
             default:
                 return null;
         }
@@ -289,6 +292,25 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
         $dataSetStepBroker
             ->addStep($this->createLocaleNameToIdStep(GlossaryWriterStep::KEY_LOCALE))
             ->addStep(new GlossaryWriterStep());
+
+        $dataImporter->addDataSetStepBroker($dataSetStepBroker);
+
+        return $dataImporter;
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer
+     *
+     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
+     */
+    public function createMerchantUserImporter(DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer)
+    {
+        $dataImporter = $this->getCsvDataImporterFromConfig(
+            $this->getConfig()->buildImporterConfigurationByDataImportConfigAction($dataImportConfigurationActionTransfer)
+        );
+
+        $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
+        $dataSetStepBroker->addStep(new MerchantUserWriterStep());
 
         $dataImporter->addDataSetStepBroker($dataSetStepBroker);
 
