@@ -8,6 +8,8 @@
 namespace Pyz\Zed\ProductPageSearch;
 
 use Spryker\Shared\MerchantProductOfferSearch\MerchantProductOfferSearchConfig;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
+use Spryker\Shared\MerchantProductSearch\MerchantProductSearchConfig;
 use Spryker\Shared\ProductLabelSearch\ProductLabelSearchConfig;
 use Spryker\Shared\ProductListSearch\ProductListSearchConfig;
 use Spryker\Shared\ProductPageSearch\ProductPageSearchConfig;
@@ -17,6 +19,7 @@ use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearc
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataLoaderPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch\MerchantReferencesProductAbstractsMapExpanderPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductAbstractMapExpanderPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\PageDataExpander\ProductLabelDataLoaderExpanderPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\PageDataLoader\ProductLabelDataLoaderPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\ProductPageSearch\Elasticsearch\ProductLabelMapExpanderPlugin;
@@ -59,6 +62,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
         $dataExpanderPlugins[ProductPageSearchConfig::PLUGIN_PRODUCT_PRICE_PAGE_DATA] = new PricePageDataLoaderExpanderPlugin();
         $dataExpanderPlugins[ProductPageSearchConfig::PLUGIN_PRODUCT_IMAGE_PAGE_DATA] = new ProductImagePageDataLoaderExpanderPlugin();
         $dataExpanderPlugins[MerchantProductOfferSearchConfig::PLUGIN_PRODUCT_MERCHANT_DATA] = new MerchantProductPageDataExpanderPlugin();
+        $dataExpanderPlugins[MerchantProductSearchConfig::PLUGIN_MERCHANT_PRODUCT_DATA] = new MerchantMerchantProductPageDataExpanderPlugin();
 
         return $dataExpanderPlugins;
     }
@@ -93,6 +97,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new ProductListMapExpanderPlugin(),
             new MerchantNamesProductAbstractMapExpanderPlugin(),
             new MerchantReferencesProductAbstractsMapExpanderPlugin(),
+            new MerchantProductAbstractMapExpanderPlugin(),
         ];
     }
 

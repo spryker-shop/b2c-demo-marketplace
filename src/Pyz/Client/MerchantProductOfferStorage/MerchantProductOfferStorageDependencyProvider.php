@@ -6,6 +6,7 @@ use Spryker\Client\MerchantProductOfferStorage\MerchantProductOfferStorageDepend
 use Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage\DefaultProductOfferReferenceStrategyPlugin;
 use Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage\ProductOfferReferenceStrategyPlugin;
 use Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageCollectionSorterPluginInterface;
+use Spryker\Client\MerchantProductStorage\Plugin\MerchantProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
 use Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage\LowestPriceProductOfferStorageCollectionSorterPlugin;
 use Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage\PriceProductOfferStorageExpanderPlugin;
 
@@ -18,6 +19,7 @@ class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProdu
     {
         return [
             new ProductOfferReferenceStrategyPlugin(),
+            new MerchantProductProductOfferReferenceStrategyPlugin(),
             new DefaultProductOfferReferenceStrategyPlugin(),
         ];
     }

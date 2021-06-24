@@ -211,3 +211,5 @@ actions:
     source: data/import/common/common/marketplace/merchant_oms_process.csv
   - data_entity: merchant-user
     source: data/import/common/common/marketplace/merchant_user.csv
+  - data_entity: merchant-product
+    source: data/import/common/common/marketplace/merchant_product.csv

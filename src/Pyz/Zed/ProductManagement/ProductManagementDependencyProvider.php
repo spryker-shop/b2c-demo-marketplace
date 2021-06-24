@@ -8,6 +8,9 @@
 namespace Pyz\Zed\ProductManagement;
 
 use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\MerchantGui\Communication\Plugin\ProductManagement\MerchantProductAbstractListActionViewDataExpanderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractViewActionViewDataExpanderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductTableQueryCriteriaExpanderPlugin;
 use Spryker\Zed\Money\Communication\Plugin\Form\MoneyFormTypePlugin;
 use Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement\ScheduledPriceProductAbstractEditViewExpanderPlugin;
 use Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement\ScheduledPriceProductAbstractFormEditTabsExpanderPlugin;
@@ -116,6 +119,36 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     {
         return [
             new ScheduledPriceProductConcreteEditViewExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractViewActionViewDataExpanderPluginInterface[]
+     */
+    protected function getProductAbstractViewActionViewDataExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductProductAbstractViewActionViewDataExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableQueryCriteriaExpanderPluginInterface[]
+     */
+    protected function getProductTableQueryCriteriaExpanderPluginInterfaces(): array
+    {
+        return [
+            new MerchantProductProductTableQueryCriteriaExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractListActionViewDataExpanderPluginInterface[]
+     */
+    protected function getProductAbstractListActionViewDataExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractListActionViewDataExpanderPlugin(),
         ];
     }
 }

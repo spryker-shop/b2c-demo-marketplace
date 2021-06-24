@@ -42,6 +42,7 @@
     "spryker-feature/marketplace-inventory-management": "202107.x-dev",
     "spryker-feature/marketplace-merchant": "202107.x-dev",
     "spryker-feature/marketplace-order-management": "202107.x-dev",
+    "spryker-feature/marketplace-product": "202107.x-dev",
     "spryker-feature/marketplace-product-offer": "202107.x-dev",
     "spryker-feature/marketplace-product-offer-prices": "202107.x-dev",
     "spryker-feature/merchant": "202107.x-dev",
