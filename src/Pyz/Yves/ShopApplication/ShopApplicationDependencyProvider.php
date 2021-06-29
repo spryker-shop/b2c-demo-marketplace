@@ -48,6 +48,7 @@ use SprykerShop\Yves\DiscountPromotionWidget\Widget\CartDiscountPromotionProduct
 use SprykerShop\Yves\DiscountWidget\Widget\CheckoutVoucherFormWidget;
 use SprykerShop\Yves\DiscountWidget\Widget\DiscountVoucherFormWidget;
 use SprykerShop\Yves\LanguageSwitcherWidget\Widget\LanguageSwitcherWidget;
+use SprykerShop\Yves\MerchantOpeningHoursWidget\Widget\MerchantOpeningHoursWidget;
 use SprykerShop\Yves\MerchantProductOfferWidget\Widget\MerchantProductOfferWidget;
 use SprykerShop\Yves\MerchantProductWidget\Widget\MerchantProductWidget;
 use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
@@ -170,6 +171,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             CurrentProductPriceVolumeWidget::class,
             SoldByMerchantWidget::class,
             MerchantProductWidget::class,
+            MerchantOpeningHoursWidget::class,
         ];
     }
 

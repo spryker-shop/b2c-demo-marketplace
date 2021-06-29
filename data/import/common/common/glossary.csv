@@ -2850,6 +2850,28 @@ mail.trans.company_status.title,The status of your company has been changed to,e
 mail.trans.company_status.title,Der Status deines Unternehmens wurde geändert auf,de_DE
 mail.trans.customer_registration.confirmation_link,Validate your email address,en_US
 mail.trans.customer_registration.confirmation_link,Bestätigen Sie Ihre E-Mail-Adresse,de_DE
+merchant_opening_hours.opening_hours_title,Opening Hours,en_US
+merchant_opening_hours.opening_hours_title,Öffnungszeiten,de_DE
+merchant_opening_hours.special_opening_hours_title,Special Opening Hours,en_US
+merchant_opening_hours.special_opening_hours_title,Besondere Öffnungszeiten,de_DE
+merchant_opening_hours.public_holidays_title,Public Holidays,en_US
+merchant_opening_hours.public_holidays_title,Feiertage,de_DE
+merchant_opening_hours.opening_hours_closed,Closed,en_US
+merchant_opening_hours.opening_hours_closed,Geschlossen,de_DE
+merchant_opening_hours.day.title.monday,Monday,en_US
+merchant_opening_hours.day.title.monday,Montag,de_DE
+merchant_opening_hours.day.title.tuesday,Tuesday,en_US
+merchant_opening_hours.day.title.tuesday,Dienstag,de_DE
+merchant_opening_hours.day.title.wednesday,Wednesday,en_US
+merchant_opening_hours.day.title.wednesday,Mittwoch,de_DE
+merchant_opening_hours.day.title.thursday,Thursday,en_US
+merchant_opening_hours.day.title.thursday,Donnerstag,de_DE
+merchant_opening_hours.day.title.friday,Friday,en_US
+merchant_opening_hours.day.title.friday,Freitag,de_DE
+merchant_opening_hours.day.title.saturday,Saturday,en_US
+merchant_opening_hours.day.title.saturday,Samstag,de_DE
+merchant_opening_hours.day.title.sunday,Sunday,en_US
+merchant_opening_hours.day.title.sunday,Sonntag,de_DE
 merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
 merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
 merchant_product.sold_by,Sold by,en_US
