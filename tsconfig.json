@@ -18,30 +18,22 @@
         "removeComments": true,
         "rootDir": ".",
         "paths": {
+            "@mp/dashboard-merchant-portal-gui": ["vendor/spryker/dashboard-merchant-portal-gui/mp.public-api.ts"],
+            "@mp/security-merchant-portal-gui": ["vendor/spryker/security-merchant-portal-gui/mp.public-api.ts"],
+            "@mp/user-merchant-portal-gui": ["vendor/spryker/user-merchant-portal-gui/mp.public-api.ts"],
+            "@mp/zed-ui": ["vendor/spryker/zed-ui/mp.public-api.ts"],
+            "@mp/*": ["vendor/spryker/*/mp.public-api.ts"],
+            "@mp/polyfills": ["./vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/Presentation/Components/mp.polyfills.ts"],
             "*": ["*"],
-            "ShopUiProject/*": ["./src/Pyz/Yves/ShopUi/Theme/default/*"],
-            "ProductImageWidgetProject/*": ["./src/Pyz/Yves/ProductImageWidget/Theme/default/*"],
-            "ShopUi/*": ["./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/*"],
-            "SprykerShop/*": ["./vendor/spryker-shop/*"],
-            "PriceProductVolumeWidget/*": [
-                "./vendor/spryker-shop/price-product-volume-widget/src/SprykerShop/Yves/PriceProductVolumeWidget/Theme/default/*"
-            ],
-            "CatalogPage/*": ["./vendor/spryker-shop/catalog-page/src/SprykerShop/Yves/CatalogPage/Theme/default/*"],
-            "ProductGroupWidget/*": [
-                "./vendor/spryker-shop/product-group-widget/src/SprykerShop/Yves/ProductGroupWidget/Theme/default/*"
-            ],
-            "ProductReviewWidget/*": [
-                "./vendor/spryker-shop/product-review-widget/src/SprykerShop/Yves/ProductReviewWidget/Theme/default/*"
-            ],
-            "ProductLabelWidget/*": [
-                "./vendor/spryker-shop/product-label-widget/src/SprykerShop/Yves/ProductLabelWidget/Theme/default/*"
-            ],
-            "ProductSetWidget/*": [
-                "./vendor/spryker-shop/product-set-widget/src/SprykerShop/Yves/ProductSetWidget/Theme/default/*"
-            ]
+            "ShopUi/*": ["./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/*"]
         }
     },
-    "files": ["./src/Pyz/Yves/ShopUi/Theme/default/app.ts", "./src/Pyz/Yves/ShopUi/Theme/default/vendor.ts"],
-    "include": ["./vendor/spryker-shop/**/*", "./vendor/spryker-eco/**/*", "./src/Pyz/Yves/**/*"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
+    "include": [
+        "./vendor/spryker/**/*",
+        "./vendor/spryker-shop/**/*",
+        "./vendor/spryker-eco/**/*",
+        "./src/Pyz/Yves/**/*",
+        "./src/Pyz/Zed/**/*"
+    ],
+    "exclude": ["**/node_modules/**", "**/*.spec.ts", "public", "dist", "**/dist/**"]
 }

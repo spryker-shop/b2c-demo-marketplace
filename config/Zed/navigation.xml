@@ -582,4 +582,12 @@
             </storage>
         </pages>
     </maintenance>
+    <merchant-portal-dashboard>
+        <label>Dashboard</label>
+        <title>Merchant Dashboard</title>
+        <icon>dashboard</icon>
+        <bundle>dashboard-merchant-portal-gui</bundle>
+        <controller>dashboard</controller>
+        <action>index</action>
+    </merchant-portal-dashboard>
 </config>

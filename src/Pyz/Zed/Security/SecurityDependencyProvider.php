@@ -9,6 +9,8 @@ namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
 use Spryker\Zed\SecurityGui\Communication\Plugin\Security\UserSecurityPlugin;
+use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security\MerchantUserSecurityPlugin;
+use Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security\OauthUserSecurityPlugin;
 use Spryker\Zed\SecuritySystemUser\Communication\Plugin\Security\SystemUserSecurityPlugin;
 use Spryker\Zed\User\Communication\Plugin\Security\UserSessionHandlerSecurityPlugin;
 
@@ -22,7 +24,9 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
         return [
             new UserSessionHandlerSecurityPlugin(),
             new SystemUserSecurityPlugin(),
+            new MerchantUserSecurityPlugin(),
             new UserSecurityPlugin(),
+            new OauthUserSecurityPlugin(),
         ];
     }
 }
