@@ -7,6 +7,7 @@
 
 namespace Pyz\Zed\UserPasswordReset;
 
+use Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailMerchantUserPasswordResetRequestStrategyPlugin;
 use Spryker\Zed\UserPasswordReset\UserPasswordResetDependencyProvider as SprykerUserPasswordResetDependencyProvider;
 use Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailUserPasswordResetRequestStrategyPlugin;
 
@@ -18,6 +19,7 @@ class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDepend
     public function getUserPasswordResetRequestStrategyPlugins(): array
     {
         return [
+            new MailMerchantUserPasswordResetRequestStrategyPlugin(),
             new MailUserPasswordResetRequestStrategyPlugin(),
         ];
     }

@@ -37,6 +37,7 @@ use Spryker\Zed\Gui\Communication\Plugin\Twig\GuiTwigLoaderPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\TabsTwigPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\UrlDecodeTwigPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\UrlTwigPlugin;
+use Spryker\Zed\GuiTable\Communication\Plugin\Twig\GuiTableConfigurationTwigPlugin;
 use Spryker\Zed\Http\Communication\Plugin\Twig\HttpKernelTwigPlugin;
 use Spryker\Zed\Http\Communication\Plugin\Twig\RuntimeLoaderTwigPlugin;
 use Spryker\Zed\Money\Communication\Plugin\Twig\MoneyTwigPlugin;
@@ -48,6 +49,8 @@ use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
 use Spryker\Zed\User\Communication\Plugin\Twig\UserTwigPlugin;
 use Spryker\Zed\WebProfiler\Communication\Plugin\Twig\WebProfilerTwigLoaderPlugin;
 use Spryker\Zed\ZedNavigation\Communication\Plugin\Twig\ZedNavigationTwigPlugin;
+use Spryker\Zed\ZedUi\Communication\Plugin\Twig\BooleanToStringTwigPlugin;
+use Spryker\Zed\ZedUi\Communication\Plugin\ZedUiNavigationTwigPlugin;
 
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
@@ -96,6 +99,10 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
             // Form buttons
             new SubmitButtonTwigPlugin(),
             new GuiFilterTwigPlugin(),
+
+            new ZedUiNavigationTwigPlugin(),
+            new BooleanToStringTwigPlugin(),
+            new GuiTableConfigurationTwigPlugin()
         ];
     }
 
