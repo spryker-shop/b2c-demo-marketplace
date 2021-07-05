@@ -3,6 +3,9 @@
     "compilerOptions": {
         "paths": {
             "@mp/dashboard-merchant-portal-gui": ["vendor/spryker/dashboard-merchant-portal-gui/mp.public-api.ts"],
+            "@mp/merchant-profile-merchant-portal-gui": [
+                "vendor/spryker/merchant-profile-merchant-portal-gui/mp.public-api.ts"
+            ],
             "@mp/security-merchant-portal-gui": ["vendor/spryker/security-merchant-portal-gui/mp.public-api.ts"],
             "@mp/user-merchant-portal-gui": ["vendor/spryker/user-merchant-portal-gui/mp.public-api.ts"],
             "@mp/zed-ui": ["vendor/spryker/zed-ui/mp.public-api.ts"],
