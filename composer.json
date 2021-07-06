@@ -169,6 +169,7 @@
     "spryker/product-label-discount-connector": "^3.0.3",
     "spryker/product-labels-rest-api": "^1.2.3",
     "spryker/product-merchant-portal-gui": "^0.6.3",
+    "spryker/product-offer-merchant-portal-gui": "^0.11.1",
     "spryker/product-option-cart-connector": "^7.1.1",
     "spryker/product-options-rest-api": "^1.0.2",
     "spryker/product-prices-rest-api": "^1.4.2",
