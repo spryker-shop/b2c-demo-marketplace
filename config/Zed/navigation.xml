@@ -597,4 +597,38 @@
         <controller>dashboard</controller>
         <action>index</action>
     </merchant-portal-dashboard>
+    <merchant-portal-profile>
+        <label>Profile</label>
+        <title>Profile</title>
+        <icon>profile</icon>
+        <bundle>merchant-profile-merchant-portal-gui</bundle>
+        <controller>profile</controller>
+        <action>index</action>
+    </merchant-portal-profile>
+    <product-offer-merchant-portal-gui>
+        <label>Offers</label>
+        <title>Offers</title>
+        <icon>offers</icon>
+        <bundle>product-offer-merchant-portal-gui</bundle>
+        <controller>product-offers</controller>
+        <action>index</action>
+        <pages>
+            <create-offer>
+                <label>Create Offer</label>
+                <title>Create Offer</title>
+                <bundle>product-offer-merchant-portal-gui</bundle>
+                <controller>product-list</controller>
+                <action>index</action>
+                <visible>0</visible>
+            </create-offer>
+        </pages>
+    </product-offer-merchant-portal-gui>
+    <product-merchant-portal-gui>
+        <label>Products</label>
+        <title>Products</title>
+        <icon>offers</icon>
+        <bundle>product-merchant-portal-gui</bundle>
+        <controller>products</controller>
+        <action>index</action>
+    </product-merchant-portal-gui>
 </config>
