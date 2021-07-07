@@ -9,6 +9,7 @@ namespace Pyz\Zed\DashboardMerchantPortalGui;
 
 use Spryker\Zed\DashboardMerchantPortalGui\DashboardMerchantPortalGuiDependencyProvider as SprykerDashboardMerchantPortalGuiDependencyProvider;
 use Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui\OffersMerchantDashboardCardPlugin;
+use Spryker\Zed\SalesMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui\OrdersMerchantDashboardCardPlugin;
 
 class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerchantPortalGuiDependencyProvider
 {
@@ -19,6 +20,7 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
     {
         return [
             new OffersMerchantDashboardCardPlugin(),
+            new OrdersMerchantDashboardCardPlugin(),
         ];
     }
 }

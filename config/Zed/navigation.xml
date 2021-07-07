@@ -616,6 +616,14 @@
             </create-offer>
         </pages>
     </product-offer-merchant-portal-gui>
+    <sales-merchant-portal-gui>
+        <label>Orders</label>
+        <title>Orders</title>
+        <icon>orders</icon>
+        <bundle>sales-merchant-portal-gui</bundle>
+        <controller>orders</controller>
+        <action>index</action>
+    </sales-merchant-portal-gui>
     <product-merchant-portal-gui>
         <label>Products</label>
         <title>Products</title>
