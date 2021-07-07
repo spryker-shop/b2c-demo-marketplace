@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0e3dfffe558303ba44a8974b114719c",
+    "content-hash": "5f25c309e48877f9eb1228d725dba0fe",
     "packages": [
         {
             "name": "brick/math",
@@ -4516,6 +4516,45 @@
             "time": "2020-12-23T15:01:08+00:00"
         },
         {
+            "name": "spryker-feature/marketplace-wishlist",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker-feature/marketplace-wishlist.git",
+                "reference": "953fef207a802b3a28d2f800ab1d11eb51b4fc03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-wishlist/zipball/953fef207a802b3a28d2f800ab1d11eb51b4fc03",
+                "reference": "953fef207a802b3a28d2f800ab1d11eb51b4fc03",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker-shop/wishlist-page": "^1.9.0",
+                "spryker-shop/wishlist-widget": "^1.3.0",
+                "spryker/merchant-product-offer-wishlist": "^0.2.1",
+                "spryker/merchant-product-wishlist": "^0.1.0",
+                "spryker/wishlist": "^8.3.0"
+            },
+            "default-branch": true,
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "202107.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Marketplace Wishlist [feature]",
+            "support": {
+                "source": "https://github.com/spryker-feature/marketplace-wishlist/tree/master"
+            },
+            "time": "2021-07-07T16:58:53+00:00"
+        },
+        {
             "name": "spryker-feature/merchant",
             "version": "dev-master",
             "source": {
@@ -6601,16 +6640,16 @@
         },
         {
             "name": "spryker-shop/checkout-page",
-            "version": "3.17.0",
+            "version": "3.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/checkout-page.git",
-                "reference": "f0eea4edcd894386d27e7684b7351c2b2cbf1fb4"
+                "reference": "2dc0671e2f1028a2628c9737bb7e4a1d09e5ebb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/f0eea4edcd894386d27e7684b7351c2b2cbf1fb4",
-                "reference": "f0eea4edcd894386d27e7684b7351c2b2cbf1fb4",
+                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/2dc0671e2f1028a2628c9737bb7e4a1d09e5ebb6",
+                "reference": "2dc0671e2f1028a2628c9737bb7e4a1d09e5ebb6",
                 "shasum": ""
             },
             "require": {
@@ -6683,9 +6722,9 @@
             ],
             "description": "CheckoutPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/checkout-page/tree/3.17.0"
+                "source": "https://github.com/spryker-shop/checkout-page/tree/3.18.3"
             },
-            "time": "2021-04-12T12:02:49+00:00"
+            "time": "2021-06-30T12:20:45+00:00"
         },
         {
             "name": "spryker-shop/checkout-page-extension",
@@ -7634,26 +7673,29 @@
                 "proprietary"
             ],
             "description": "CurrencyWidget module",
+            "support": {
+                "source": "https://github.com/spryker-shop/currency-widget/tree/1.4.2"
+            },
             "time": "2020-07-24T04:43:12+00:00"
         },
         {
             "name": "spryker-shop/customer-page",
-            "version": "2.31.0",
+            "version": "2.34.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-page.git",
-                "reference": "b21af1987c4fb103be900d99b690f83c344fce0f"
+                "reference": "a3163498a34d95eca1e427c72f5c231a3c4039a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/b21af1987c4fb103be900d99b690f83c344fce0f",
-                "reference": "b21af1987c4fb103be900d99b690f83c344fce0f",
+                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/a3163498a34d95eca1e427c72f5c231a3c4039a0",
+                "reference": "a3163498a34d95eca1e427c72f5c231a3c4039a0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker-shop/checkout-page-extension": "^1.0.0",
-                "spryker-shop/customer-page-extension": "^1.4.0",
+                "spryker-shop/customer-page-extension": "^1.5.0",
                 "spryker-shop/shop-application": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.42.0",
                 "spryker/application": "^3.8.0",
@@ -7727,33 +7769,30 @@
             ],
             "description": "CustomerPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/customer-page/tree/2.31.0"
+                "source": "https://github.com/spryker-shop/customer-page/tree/2.34.0"
             },
-            "time": "2020-12-29T11:53:13+00:00"
+            "time": "2021-07-01T07:33:02+00:00"
         },
         {
             "name": "spryker-shop/customer-page-extension",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-page-extension.git",
-                "reference": "de8b51c0dbf5a21309b84cb59ae67d0879f5635c"
+                "reference": "ffac939bd3446bb08bea7c3ab207a270b1098da5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-page-extension/zipball/de8b51c0dbf5a21309b84cb59ae67d0879f5635c",
-                "reference": "de8b51c0dbf5a21309b84cb59ae67d0879f5635c",
+                "url": "https://api.github.com/repos/spryker-shop/customer-page-extension/zipball/ffac939bd3446bb08bea7c3ab207a270b1098da5",
+                "reference": "ffac939bd3446bb08bea7c3ab207a270b1098da5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2"
+                "php": ">=7.3",
+                "spryker/symfony": "^3.5.0"
             },
             "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/symfony": "*"
-            },
-            "suggest": {
-                "spryker/symfony": "If you want to use form expander plugins."
+                "spryker/code-sniffer": "*"
             },
             "type": "library",
             "extra": {
@@ -7772,9 +7811,9 @@
             ],
             "description": "CustomerPageExtension module",
             "support": {
-                "source": "https://github.com/spryker-shop/customer-page-extension/tree/1.4.0"
+                "source": "https://github.com/spryker-shop/customer-page-extension/tree/1.5.0"
             },
-            "time": "2020-04-27T07:14:15+00:00"
+            "time": "2021-07-01T07:33:02+00:00"
         },
         {
             "name": "spryker-shop/customer-reorder-widget",
@@ -8224,6 +8263,9 @@
                 "proprietary"
             ],
             "description": "HomePage module",
+            "support": {
+                "source": "https://github.com/spryker-shop/home-page/tree/master"
+            },
             "time": "2020-08-13T13:59:14+00:00"
         },
         {
@@ -8651,20 +8693,20 @@
         },
         {
             "name": "spryker-shop/money-widget",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/money-widget.git",
-                "reference": "9cf053a3a49b21a18a776f49429b92b00cd462ea"
+                "reference": "fd73527653f92685cf4dd695ccaad7df5260e6ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/money-widget/zipball/9cf053a3a49b21a18a776f49429b92b00cd462ea",
-                "reference": "9cf053a3a49b21a18a776f49429b92b00cd462ea",
+                "url": "https://api.github.com/repos/spryker-shop/money-widget/zipball/fd73527653f92685cf4dd695ccaad7df5260e6ea",
+                "reference": "fd73527653f92685cf4dd695ccaad7df5260e6ea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker-shop/currency-widget": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -8698,7 +8740,10 @@
                 "proprietary"
             ],
             "description": "MoneyWidget module",
-            "time": "2020-10-23T12:49:10+00:00"
+            "support": {
+                "source": "https://github.com/spryker-shop/money-widget/tree/1.4.0"
+            },
+            "time": "2021-03-18T14:21:09+00:00"
         },
         {
             "name": "spryker-shop/newsletter-page",
@@ -11010,37 +11055,43 @@
         },
         {
             "name": "spryker-shop/wishlist-page",
-            "version": "1.8.3",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/wishlist-page.git",
-                "reference": "e787d63173f6a11d1a2fd37ae39e0924941e9c16"
+                "reference": "6ad400efdb2e908dad77939b0559eeb6908ebd6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/wishlist-page/zipball/e787d63173f6a11d1a2fd37ae39e0924941e9c16",
-                "reference": "e787d63173f6a11d1a2fd37ae39e0924941e9c16",
+                "url": "https://api.github.com/repos/spryker-shop/wishlist-page/zipball/6ad400efdb2e908dad77939b0559eeb6908ebd6a",
+                "reference": "6ad400efdb2e908dad77939b0559eeb6908ebd6a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker-shop/customer-page": "^1.0.0 || ^2.0.0",
                 "spryker-shop/shop-application": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.40.0",
+                "spryker-shop/wishlist-page-extension": "^1.0.0",
                 "spryker/application": "^3.8.0",
                 "spryker/customer": "^7.4.0",
+                "spryker/glossary-storage": "^1.9.1",
                 "spryker/kernel": "^3.52.0",
                 "spryker/product-storage": "^1.1.0",
                 "spryker/symfony": "^3.1.0",
-                "spryker/wishlist": "^5.1.0 || ^6.0.0 || ^8.0.0"
+                "spryker/wishlist": "^8.3.0"
             },
             "require-dev": {
+                "spryker-shop/merchant-product-offer-widget": "*",
+                "spryker-shop/merchant-product-widget": "*",
                 "spryker-shop/product-discontinued-widget": "*",
                 "spryker/code-sniffer": "*",
                 "spryker/router": "*",
                 "spryker/silex": "*"
             },
             "suggest": {
+                "spryker-shop/merchant-product-offer-widget": "If you want to use MerchantProductOfferWidget or expander plugins.",
+                "spryker-shop/merchant-product-widget": "If you want to use MerchantProductWidget or expander plugins.",
                 "spryker-shop/product-discontinued-widget": "If you want to use ProductDiscontinuedWidget or ProductDiscontinuedWidgetPlugin.",
                 "spryker/router": "Use this module when you want to use the Router.",
                 "spryker/silex": "Use this module when using plugins that need Silex dependencies."
@@ -11061,7 +11112,10 @@
                 "proprietary"
             ],
             "description": "WishlistPage module",
-            "time": "2020-10-23T12:49:10+00:00"
+            "support": {
+                "source": "https://github.com/spryker-shop/wishlist-page/tree/1.9.0"
+            },
+            "time": "2021-03-17T10:05:48+00:00"
         },
         {
             "name": "spryker-shop/wishlist-page-extension",
@@ -11110,31 +11164,34 @@
         },
         {
             "name": "spryker-shop/wishlist-widget",
-            "version": "1.2.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/wishlist-widget.git",
-                "reference": "8377dc5212f3f43e99b0acb5f5c3ccfa055fe8af"
+                "reference": "01b91b657178b857287ab382c9dcb633f7f60f86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/wishlist-widget/zipball/8377dc5212f3f43e99b0acb5f5c3ccfa055fe8af",
-                "reference": "8377dc5212f3f43e99b0acb5f5c3ccfa055fe8af",
+                "url": "https://api.github.com/repos/spryker-shop/wishlist-widget/zipball/01b91b657178b857287ab382c9dcb633f7f60f86",
+                "reference": "01b91b657178b857287ab382c9dcb633f7f60f86",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker-shop/shop-ui": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
-                "spryker/wishlist": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^8.0.0"
+                "spryker/wishlist": "^4.1.0 || ^5.0.0 || ^6.0.0 || ^8.0.0"
             },
             "require-dev": {
                 "spryker-shop/customer-page": "*",
+                "spryker-shop/merchant-product-offer-widget": "*",
                 "spryker-shop/product-detail-page": "*",
                 "spryker/code-sniffer": "*"
             },
             "suggest": {
                 "spryker-shop/customer-page": "To have customer account pages",
+                "spryker-shop/merchant-product-offer-widget": "To use molecules",
+                "spryker-shop/merchant-product-widget": "To use molecules ",
                 "spryker-shop/product-detail-page": "Widget plugins are available for this module."
             },
             "type": "library",
@@ -11153,7 +11210,10 @@
                 "proprietary"
             ],
             "description": "WishlistWidget module",
-            "time": "2020-06-26T16:02:13+00:00"
+            "support": {
+                "source": "https://github.com/spryker-shop/wishlist-widget/tree/1.3.1"
+            },
+            "time": "2021-03-19T09:24:29+00:00"
         },
         {
             "name": "spryker/acl",
@@ -18461,6 +18521,9 @@
                 "proprietary"
             ],
             "description": "CustomerAccess module",
+            "support": {
+                "source": "https://github.com/spryker/customer-access/tree/master"
+            },
             "time": "2019-10-14T10:22:10+00:00"
         },
         {
@@ -18545,6 +18608,9 @@
                 "proprietary"
             ],
             "description": "CustomerAccessPermission module",
+            "support": {
+                "source": "https://github.com/spryker/customer-access-permission/tree/master"
+            },
             "time": "2020-05-29T13:08:37+00:00"
         },
         {
@@ -18640,6 +18706,9 @@
                 "proprietary"
             ],
             "description": "CustomerAccessStorage module",
+            "support": {
+                "source": "https://github.com/spryker/customer-access-storage/tree/master"
+            },
             "time": "2020-07-03T07:32:24+00:00"
         },
         {
@@ -23503,6 +23572,56 @@
             "time": "2020-07-06T13:07:02+00:00"
         },
         {
+            "name": "spryker/merchant-product-offer-wishlist",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-product-offer-wishlist.git",
+                "reference": "9e09931686af05c009d23dc67394dc058053824e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offer-wishlist/zipball/9e09931686af05c009d23dc67394dc058053824e",
+                "reference": "9e09931686af05c009d23dc67394dc058053824e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant": "^3.0.0",
+                "spryker/product-offer": "^0.6.0 || ^0.7.0",
+                "spryker/wishlist-extension": "^1.2.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/customer": "*",
+                "spryker/product": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*",
+                "spryker/wishlist": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantProductOfferWishlist module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-offer-wishlist/tree/0.2.1"
+            },
+            "time": "2021-05-14T08:43:47+00:00"
+        },
+        {
             "name": "spryker/merchant-product-offers-rest-api",
             "version": "0.6.0",
             "source": {
@@ -23668,6 +23787,51 @@
                 "source": "https://github.com/spryker/merchant-product-storage/tree/0.1.1"
             },
             "time": "2020-12-09T13:48:10+00:00"
+        },
+        {
+            "name": "spryker/merchant-product-wishlist",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-product-wishlist.git",
+                "reference": "99c6d0e229dd6b0d94b65ebbc166affe468e19cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-product-wishlist/zipball/99c6d0e229dd6b0d94b65ebbc166affe468e19cd",
+                "reference": "99c6d0e229dd6b0d94b65ebbc166affe468e19cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant-product": "^0.2.0",
+                "spryker/product": "^6.22.0",
+                "spryker/wishlist-extension": "^1.1.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantProductWishlist module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-wishlist/tree/0.1.0"
+            },
+            "time": "2021-03-16T11:02:55+00:00"
         },
         {
             "name": "spryker/merchant-profile",
@@ -26351,26 +26515,28 @@
         },
         {
             "name": "spryker/payment",
-            "version": "5.3.0",
+            "version": "5.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/payment.git",
-                "reference": "030ac1e6696b64711ce9e981deb09350d736bf55"
+                "reference": "ed2617651b99f06d81a4f5429a906c83e1010347"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/payment/zipball/030ac1e6696b64711ce9e981deb09350d736bf55",
-                "reference": "030ac1e6696b64711ce9e981deb09350d736bf55",
+                "url": "https://api.github.com/repos/spryker/payment/zipball/ed2617651b99f06d81a4f5429a906c83e1010347",
+                "reference": "ed2617651b99f06d81a4f5429a906c83e1010347",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/checkout-extension": "^1.2.0",
                 "spryker/kernel": "^3.30.0",
+                "spryker/payment-extension": "^1.0.0",
                 "spryker/propel-orm": "^1.0.0",
                 "spryker/sales": "^8.0.0 || ^10.0.0 || ^11.0.0",
                 "spryker/store": "^1.4.0",
                 "spryker/symfony": "^3.0.0",
+                "spryker/transfer": "^3.27.0",
                 "spryker/zed-request": "^3.0.0"
             },
             "require-dev": {
@@ -26402,7 +26568,10 @@
                 "proprietary"
             ],
             "description": "Payment module",
-            "time": "2020-08-20T12:38:58+00:00"
+            "support": {
+                "source": "https://github.com/spryker/payment/tree/5.4.1"
+            },
+            "time": "2021-06-29T09:34:47+00:00"
         },
         {
             "name": "spryker/payment-cart-connector",
@@ -40963,27 +41132,27 @@
         },
         {
             "name": "spryker/wishlist",
-            "version": "8.2.3",
+            "version": "8.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/wishlist.git",
-                "reference": "76cfc8a1ab02c8695cde98f1d3d9e2a8c178d316"
+                "reference": "6a301d8b6e830f211647977d64dea2cf253381a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/wishlist/zipball/76cfc8a1ab02c8695cde98f1d3d9e2a8c178d316",
-                "reference": "76cfc8a1ab02c8695cde98f1d3d9e2a8c178d316",
+                "url": "https://api.github.com/repos/spryker/wishlist/zipball/6a301d8b6e830f211647977d64dea2cf253381a4",
+                "reference": "6a301d8b6e830f211647977d64dea2cf253381a4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/cart": "^5.0.0 || ^7.0.0",
                 "spryker/customer": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/price-product": "^1.0.0 || ^2.0.0 || ^4.0.0",
-                "spryker/product": "^5.0.0 || ^6.0.0",
+                "spryker/product": "^5.9.0 || ^6.0.0",
                 "spryker/propel-orm": "^1.1.0",
-                "spryker/wishlist-extension": "^1.0.0",
+                "spryker/wishlist-extension": "^1.2.0",
                 "spryker/zed-request": "^3.0.0"
             },
             "require-dev": {
@@ -41008,7 +41177,10 @@
                 "proprietary"
             ],
             "description": "Wishlist module",
-            "time": "2020-05-29T13:08:37+00:00"
+            "support": {
+                "source": "https://github.com/spryker/wishlist/tree/8.5.0"
+            },
+            "time": "2021-04-30T10:16:58+00:00"
         },
         {
             "name": "spryker/wishlist-extension",
@@ -52331,6 +52503,7 @@
         "spryker-feature/marketplace-promotions-discounts": 20,
         "spryker-feature/marketplace-return-management": 20,
         "spryker-feature/marketplace-shipment": 20,
+        "spryker-feature/marketplace-wishlist": 20,
         "spryker-feature/merchant": 20,
         "spryker-feature/merchant-opening-hours": 20,
         "spryker-feature/search": 20,
