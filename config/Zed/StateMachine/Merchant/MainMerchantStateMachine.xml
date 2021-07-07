@@ -84,6 +84,14 @@
             <event name="cancel" manual="true"/>
         </events>
 
+        <subprocesses>
+            <process>MerchantReturn</process>
+            <process>MerchantRefund</process>
+        </subprocesses>
+
     </process>
+
+    <process name="MerchantReturn" file="Subprocess/MerchantReturn"/>
+    <process name="MerchantRefund" file="Subprocess/MerchantRefund"/>
 
 </statemachine>

@@ -51,6 +51,8 @@ use SprykerShop\Yves\LanguageSwitcherWidget\Widget\LanguageSwitcherWidget;
 use SprykerShop\Yves\MerchantOpeningHoursWidget\Widget\MerchantOpeningHoursWidget;
 use SprykerShop\Yves\MerchantProductOfferWidget\Widget\MerchantProductOfferWidget;
 use SprykerShop\Yves\MerchantProductWidget\Widget\MerchantProductWidget;
+use SprykerShop\Yves\MerchantSalesReturnWidget\Plugin\MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin;
+use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateFormWidget;
 use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
 use SprykerShop\Yves\NewsletterWidget\Widget\NewsletterSubscriptionSummaryWidget;
 use SprykerShop\Yves\OrderCancelWidget\Widget\OrderCancelButtonWidget;
@@ -172,6 +174,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             SoldByMerchantWidget::class,
             MerchantProductWidget::class,
             MerchantOpeningHoursWidget::class,
+            MerchantSalesReturnCreateFormWidget::class,
         ];
     }
 
@@ -214,6 +217,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         return [
             new CartItemNoteFormWidgetCacheKeyGeneratorStrategyPlugin(),
             new CartDiscountPromotionProductListWidgetCacheKeyGeneratorStrategyPlugin(),
+            new MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin(),
         ];
     }
 }

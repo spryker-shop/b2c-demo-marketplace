@@ -4,30 +4,30 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a988720a995dd5a2a905f660d5e46ad",
+    "content-hash": "b0e3dfffe558303ba44a8974b114719c",
     "packages": [
         {
             "name": "brick/math",
-            "version": "0.9.1",
+            "version": "0.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "283a40c901101e66de7061bd359252c013dcc43c"
+                "reference": "dff976c2f3487d42c1db75a3b180e2b9f0e72ce0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/283a40c901101e66de7061bd359252c013dcc43c",
-                "reference": "283a40c901101e66de7061bd359252c013dcc43c",
+                "url": "https://api.github.com/repos/brick/math/zipball/dff976c2f3487d42c1db75a3b180e2b9f0e72ce0",
+                "reference": "dff976c2f3487d42c1db75a3b180e2b9f0e72ce0",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.1|^8.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.2",
-                "phpunit/phpunit": "^7.5.15|^8.5",
-                "vimeo/psalm": "^3.5"
+                "phpunit/phpunit": "^7.5.15 || ^8.5 || ^9.0",
+                "vimeo/psalm": "4.3.2"
             },
             "type": "library",
             "autoload": {
@@ -50,7 +50,17 @@
                 "brick",
                 "math"
             ],
-            "time": "2020-08-18T23:57:15+00:00"
+            "support": {
+                "issues": "https://github.com/brick/math/issues",
+                "source": "https://github.com/brick/math/tree/0.9.2"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/brick/math",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-20T22:51:39+00:00"
         },
         {
             "name": "codeitnowin/barcode",
@@ -2801,16 +2811,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "1.1.1",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1"
+                "reference": "28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
-                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1",
+                "reference": "28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1",
                 "shasum": ""
             },
             "require": {
@@ -2820,19 +2830,19 @@
                 "captainhook/captainhook": "^5.3",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
                 "ergebnis/composer-normalize": "^2.6",
-                "fzaninotto/faker": "^1.5",
+                "fakerphp/faker": "^1.5",
                 "hamcrest/hamcrest-php": "^2",
-                "jangregor/phpstan-prophecy": "^0.6",
+                "jangregor/phpstan-prophecy": "^0.8",
                 "mockery/mockery": "^1.3",
                 "phpstan/extension-installer": "^1",
                 "phpstan/phpstan": "^0.12.32",
                 "phpstan/phpstan-mockery": "^0.12.5",
                 "phpstan/phpstan-phpunit": "^0.12.11",
-                "phpunit/phpunit": "^8.5",
+                "phpunit/phpunit": "^8.5 || ^9",
                 "psy/psysh": "^0.10.4",
                 "slevomat/coding-standard": "^6.3",
                 "squizlabs/php_codesniffer": "^3.5",
-                "vimeo/psalm": "^3.12.2"
+                "vimeo/psalm": "^4.4"
             },
             "type": "library",
             "autoload": {
@@ -2860,7 +2870,21 @@
                 "queue",
                 "set"
             ],
-            "time": "2020-09-10T20:58:17+00:00"
+            "support": {
+                "issues": "https://github.com/ramsey/collection/issues",
+                "source": "https://github.com/ramsey/collection/tree/1.1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/ramsey/collection",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-21T17:40:04+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -2940,6 +2964,17 @@
                 "guid",
                 "identifier",
                 "uuid"
+            ],
+            "support": {
+                "issues": "https://github.com/ramsey/uuid/issues",
+                "rss": "https://github.com/ramsey/uuid/releases.atom",
+                "source": "https://github.com/ramsey/uuid"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                }
             ],
             "time": "2020-08-18T17:17:46+00:00"
         },
@@ -4401,6 +4436,45 @@
                 "source": "https://github.com/spryker-feature/marketplace-promotions-discounts/tree/master"
             },
             "time": "2021-06-30T12:10:48+00:00"
+        },
+        {
+            "name": "spryker-feature/marketplace-return-management",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker-feature/marketplace-return-management.git",
+                "reference": "30ee766ff64b97b2c120bf3997483204a480d289"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-return-management/zipball/30ee766ff64b97b2c120bf3997483204a480d289",
+                "reference": "30ee766ff64b97b2c120bf3997483204a480d289",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker-shop/merchant-sales-return-widget": "^0.2.0",
+                "spryker/merchant-sales-return": "^0.2.0",
+                "spryker/merchant-sales-return-gui": "^0.1.0",
+                "spryker/merchant-sales-return-merchant-user-gui": "^0.1.0",
+                "spryker/sales-return": "^1.1.0"
+            },
+            "default-branch": true,
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "202107.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Marketplace Return Management [feature]",
+            "support": {
+                "source": "https://github.com/spryker-feature/marketplace-return-management/tree/master"
+            },
+            "time": "2021-07-06T20:38:38+00:00"
         },
         {
             "name": "spryker-feature/marketplace-shipment",
@@ -8481,6 +8555,56 @@
                 "source": "https://github.com/spryker-shop/merchant-sales-order-widget/tree/0.1.0"
             },
             "time": "2020-04-10T11:41:43+00:00"
+        },
+        {
+            "name": "spryker-shop/merchant-sales-return-widget",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker-shop/merchant-sales-return-widget.git",
+                "reference": "bdc5ded24ee89a5a4a70f75c3a8f6ad05007e657"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker-shop/merchant-sales-return-widget/zipball/bdc5ded24ee89a5a4a70f75c3a8f6ad05007e657",
+                "reference": "bdc5ded24ee89a5a4a70f75c3a8f6ad05007e657",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker-shop/shop-application-extension": "^1.2.0",
+                "spryker-shop/shop-ui": "^1.52.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/merchant-sales-return": "^0.2.0",
+                "spryker/symfony": "^3.0.0"
+            },
+            "require-dev": {
+                "spryker-shop/sales-return-page": "*",
+                "spryker/code-sniffer": "*"
+            },
+            "suggest": {
+                "spryker-shop/sales-return-page": "Add the module if you want to use return-create-link molecule."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SprykerShop\\": "src/SprykerShop/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantSalesReturnWidget module",
+            "support": {
+                "source": "https://github.com/spryker-shop/merchant-sales-return-widget/tree/0.2.0"
+            },
+            "time": "2021-04-16T13:31:13+00:00"
         },
         {
             "name": "spryker-shop/merchant-widget",
@@ -24005,6 +24129,156 @@
             "time": "2020-11-18T08:46:37+00:00"
         },
         {
+            "name": "spryker/merchant-sales-return",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-sales-return.git",
+                "reference": "10f87eee56c3da45af31d5ece2d71f79a2273175"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-return/zipball/10f87eee56c3da45af31d5ece2d71f79a2273175",
+                "reference": "10f87eee56c3da45af31d5ece2d71f79a2273175",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant-sales-order": "^0.8.2",
+                "spryker/sales-return-extension": "^1.2.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/merchant": "*",
+                "spryker/oms": "*",
+                "spryker/propel": "*",
+                "spryker/sales": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantSalesReturn module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-sales-return/tree/0.2.0"
+            },
+            "time": "2021-04-16T13:31:11+00:00"
+        },
+        {
+            "name": "spryker/merchant-sales-return-gui",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-sales-return-gui.git",
+                "reference": "9790ba999d81942306352f6891e3c2ec52ce3cba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-return-gui/zipball/9790ba999d81942306352f6891e3c2ec52ce3cba",
+                "reference": "9790ba999d81942306352f6891e3c2ec52ce3cba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant-sales-order": "^0.8.2",
+                "spryker/merchant-sales-return": "^0.2.0",
+                "spryker/sales-return-gui-extension": "^1.1.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantSalesReturnGui module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-sales-return-gui/tree/0.1.0"
+            },
+            "time": "2021-04-16T13:31:11+00:00"
+        },
+        {
+            "name": "spryker/merchant-sales-return-merchant-user-gui",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-sales-return-merchant-user-gui.git",
+                "reference": "d6b8da1a2c259511fa750779eb49341a867871de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-return-merchant-user-gui/zipball/d6b8da1a2c259511fa750779eb49341a867871de",
+                "reference": "d6b8da1a2c259511fa750779eb49341a867871de",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/customer": "^7.0.0",
+                "spryker/glossary": "^3.0.0",
+                "spryker/gui": "^3.30.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant-oms": "^0.4.0",
+                "spryker/merchant-sales-order": "^0.8.2",
+                "spryker/merchant-sales-return": "^0.2.0",
+                "spryker/merchant-user": "^0.5.3 || ^0.6.0 || ^0.7.0",
+                "spryker/propel-orm": "^1.0.0",
+                "spryker/sales": "^10.0.0 || ^11.0.0",
+                "spryker/sales-return": "^1.3.0",
+                "spryker/state-machine": "^2.7.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/util-date-time": "^1.0.0",
+                "spryker/util-text": "^1.1.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantSalesReturnMerchantUserGui module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-sales-return-merchant-user-gui/tree/0.1.0"
+            },
+            "time": "2021-04-16T13:31:11+00:00"
+        },
+        {
             "name": "spryker/merchant-search",
             "version": "0.3.1",
             "source": {
@@ -34019,6 +34293,9 @@
                 "proprietary"
             ],
             "description": "RamseyUuid module",
+            "support": {
+                "source": "https://github.com/spryker/ramsey-uuid/tree/master"
+            },
             "time": "2020-05-25T14:48:08+00:00"
         },
         {
@@ -35218,20 +35495,20 @@
         },
         {
             "name": "spryker/sales-return",
-            "version": "1.0.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-return.git",
-                "reference": "7e250b86a5599f48f1d982b76ab0cf8bfc84046f"
+                "reference": "d391569a768f95ba0cd5880beeed7615ba372021"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-return/zipball/7e250b86a5599f48f1d982b76ab0cf8bfc84046f",
-                "reference": "7e250b86a5599f48f1d982b76ab0cf8bfc84046f",
+                "url": "https://api.github.com/repos/spryker/sales-return/zipball/d391569a768f95ba0cd5880beeed7615ba372021",
+                "reference": "d391569a768f95ba0cd5880beeed7615ba372021",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/customer": "^7.0.0",
                 "spryker/glossary": "^3.0.0",
                 "spryker/kernel": "^3.33.0",
@@ -35240,6 +35517,7 @@
                 "spryker/propel-orm": "^1.0.0",
                 "spryker/sales": "^11.7.0",
                 "spryker/sales-extension": "^1.6.0",
+                "spryker/sales-return-extension": "^1.2.0",
                 "spryker/store": "^1.11.0",
                 "spryker/util-date-time": "^1.0.0",
                 "spryker/uuid-behavior": "^1.0.0",
@@ -35267,7 +35545,10 @@
                 "proprietary"
             ],
             "description": "SalesReturn module",
-            "time": "2020-05-29T12:23:46+00:00"
+            "support": {
+                "source": "https://github.com/spryker/sales-return/tree/1.3.0"
+            },
+            "time": "2021-04-16T13:31:11+00:00"
         },
         {
             "name": "spryker/sales-return-data-import",
@@ -35312,6 +35593,47 @@
             ],
             "description": "SalesReturnDataImport module",
             "time": "2020-05-29T09:10:32+00:00"
+        },
+        {
+            "name": "spryker/sales-return-extension",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/sales-return-extension.git",
+                "reference": "3eeb82da3fba9697689b7fb713a1eb83783d8762"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/sales-return-extension/zipball/3eeb82da3fba9697689b7fb713a1eb83783d8762",
+                "reference": "3eeb82da3fba9697689b7fb713a1eb83783d8762",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SalesReturnExtension module",
+            "support": {
+                "source": "https://github.com/spryker/sales-return-extension/tree/1.2.0"
+            },
+            "time": "2021-04-16T13:31:11+00:00"
         },
         {
             "name": "spryker/sales-return-gui",
@@ -40273,6 +40595,9 @@
                 "proprietary"
             ],
             "description": "UtilUuidGenerator module",
+            "support": {
+                "source": "https://github.com/spryker/util-uuid-generator/tree/1.0.2"
+            },
             "time": "2020-06-02T09:42:31+00:00"
         },
         {
@@ -40362,26 +40687,29 @@
         },
         {
             "name": "spryker/uuid-behavior",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/uuid-behavior.git",
-                "reference": "b78e5ec8ef4179102f53afb2da95b7f813f2fe82"
+                "reference": "3b537188a52d0830d733ef39b38d296800163cfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/uuid-behavior/zipball/b78e5ec8ef4179102f53afb2da95b7f813f2fe82",
-                "reference": "b78e5ec8ef4179102f53afb2da95b7f813f2fe82",
+                "url": "https://api.github.com/repos/spryker/uuid-behavior/zipball/3b537188a52d0830d733ef39b38d296800163cfc",
+                "reference": "3b537188a52d0830d733ef39b38d296800163cfc",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/kernel": "^3.30.0",
+                "spryker/laminas": "^1.0.0",
                 "spryker/propel-orm": "^1.6.0",
-                "spryker/util-uuid-generator": "^1.0.0",
-                "spryker/zend": "^2.1.0"
+                "spryker/util-uuid-generator": "^1.0.0"
             },
             "require-dev": {
+                "codeception/codeception": "^4.0.0",
+                "codeception/module-asserts": "^1.3.0",
+                "phpstan/phpstan": "*",
                 "spryker/code-sniffer": "*",
                 "spryker/propel": "*",
                 "spryker/testify": "*"
@@ -40404,7 +40732,10 @@
                 "proprietary"
             ],
             "description": "UuidBehavior module",
-            "time": "2020-04-16T14:59:23+00:00"
+            "support": {
+                "source": "https://github.com/spryker/uuid-behavior"
+            },
+            "time": "2020-11-04T14:55:50+00:00"
         },
         {
             "name": "spryker/validator",
@@ -41038,42 +41369,6 @@
                 "source": "https://github.com/spryker/zed-ui/tree/0.4.3"
             },
             "time": "2021-06-15T11:41:24+00:00"
-        },
-        {
-            "name": "spryker/zend",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/Zend.git",
-                "reference": "820b8ecbadc8fb54b9e1e1048a788366f3248183"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/Zend/zipball/820b8ecbadc8fb54b9e1e1048a788366f3248183",
-                "reference": "820b8ecbadc8fb54b9e1e1048a788366f3248183",
-                "shasum": ""
-            },
-            "require": {
-                "zendframework/zend-config": "^2.5.1 || ^3.1.0",
-                "zendframework/zend-filter": "^2.5.1",
-                "zendframework/zend-servicemanager": "^2.7.4 || ^3.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Zend module",
-            "support": {
-                "source": "https://github.com/spryker/Zend/tree/2.1.0"
-            },
-            "abandoned": true,
-            "time": "2017-08-02T16:31:17+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -51194,6 +51489,42 @@
             "time": "2020-10-09T09:26:41+00:00"
         },
         {
+            "name": "spryker/zend",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/Zend.git",
+                "reference": "820b8ecbadc8fb54b9e1e1048a788366f3248183"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/Zend/zipball/820b8ecbadc8fb54b9e1e1048a788366f3248183",
+                "reference": "820b8ecbadc8fb54b9e1e1048a788366f3248183",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-config": "^2.5.1 || ^3.1.0",
+                "zendframework/zend-filter": "^2.5.1",
+                "zendframework/zend-servicemanager": "^2.7.4 || ^3.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Zend module",
+            "support": {
+                "source": "https://github.com/spryker/Zend/tree/2.1.0"
+            },
+            "abandoned": true,
+            "time": "2017-08-02T16:31:17+00:00"
+        },
+        {
             "name": "squizlabs/php_codesniffer",
             "version": "3.5.8",
             "source": {
@@ -51998,6 +52329,7 @@
         "spryker-feature/marketplace-product-offer": 20,
         "spryker-feature/marketplace-product-offer-prices": 20,
         "spryker-feature/marketplace-promotions-discounts": 20,
+        "spryker-feature/marketplace-return-management": 20,
         "spryker-feature/marketplace-shipment": 20,
         "spryker-feature/merchant": 20,
         "spryker-feature/merchant-opening-hours": 20,

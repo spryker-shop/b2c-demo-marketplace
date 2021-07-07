@@ -89,6 +89,15 @@
             <event name="close" manual="true" command="MerchantOms/CloseOrderItem"/>
         </events>
 
+        <subprocesses>
+            <process>MarketplaceReturn</process>
+            <process>MarketplaceRefund</process>
+        </subprocesses>
+
     </process>
+
+
+    <process name="MarketplaceReturn" file="MarketplaceSubprocess/MarketplaceReturn01.xml"/>
+    <process name="MarketplaceRefund" file="MarketplaceSubprocess/MarketplaceRefund01.xml"/>
 
 </statemachine>
