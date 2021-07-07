@@ -4180,12 +4180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-order-management.git",
-                "reference": "d5f31b99375a4beb89fd0f7bd6a59806de07a9cc"
+                "reference": "ca753da12820f448efdd182573433973c360470b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-order-management/zipball/d5f31b99375a4beb89fd0f7bd6a59806de07a9cc",
-                "reference": "d5f31b99375a4beb89fd0f7bd6a59806de07a9cc",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-order-management/zipball/ca753da12820f448efdd182573433973c360470b",
+                "reference": "ca753da12820f448efdd182573433973c360470b",
                 "shasum": ""
             },
             "require": {
@@ -4197,6 +4197,9 @@
                 "spryker/merchant-sales-order": "^0.8.0",
                 "spryker/merchant-sales-order-data-export": "^0.1.0",
                 "spryker/merchant-sales-order-merchant-user-gui": "^0.2.0",
+                "spryker/merchant-sales-order-threshold-gui": "^0.1.0",
+                "spryker/oms-product-offer-reservation": "^0.1.0",
+                "spryker/product-offer-reservation-gui": "^0.1.0",
                 "spryker/product-offer-sales": "^0.1.0"
             },
             "suggest": {
@@ -4219,7 +4222,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-order-management/tree/master"
             },
-            "time": "2021-06-07T20:15:54+00:00"
+            "time": "2021-07-02T15:47:47+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product",
@@ -23960,6 +23963,48 @@
             "time": "2021-05-06T15:35:25+00:00"
         },
         {
+            "name": "spryker/merchant-sales-order-threshold-gui",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-sales-order-threshold-gui.git",
+                "reference": "3af8466cd38175cf5a41981227f3d5feff80f717"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-order-threshold-gui/zipball/3af8466cd38175cf5a41981227f3d5feff80f717",
+                "reference": "3af8466cd38175cf5a41981227f3d5feff80f717",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/sales-order-threshold-gui": "^1.6.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantSalesOrderThresholdGui module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-sales-order-threshold-gui/tree/0.1.0"
+            },
+            "time": "2020-11-18T08:46:37+00:00"
+        },
+        {
             "name": "spryker/merchant-search",
             "version": "0.3.1",
             "source": {
@@ -31068,6 +31113,51 @@
                 "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/0.11.1"
             },
             "time": "2021-06-14T15:09:44+00:00"
+        },
+        {
+            "name": "spryker/product-offer-reservation-gui",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-offer-reservation-gui.git",
+                "reference": "26995df34e057b5603d8163e23b891a07999b392"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-offer-reservation-gui/zipball/26995df34e057b5603d8163e23b891a07999b392",
+                "reference": "26995df34e057b5603d8163e23b891a07999b392",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "spryker/kernel": "^3.33.0",
+                "spryker/oms-product-offer-reservation": "^0.1.0",
+                "spryker/product-offer-stock-gui-extension": "^0.1.0",
+                "spryker/transfer": "^3.18.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductOfferReservationGui module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-reservation-gui/tree/master"
+            },
+            "time": "2020-07-31T14:22:53+00:00"
         },
         {
             "name": "spryker/product-offer-sales",

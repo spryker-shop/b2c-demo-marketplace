@@ -21,6 +21,10 @@ use Spryker\Zed\Oms\Communication\Plugin\Oms\Command\SendOrderShippedPlugin;
 use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
 use Spryker\Zed\Oms\Dependency\Plugin\Condition\ConditionCollectionInterface;
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationAggregationPlugin;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationReaderStrategyPlugin;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationWriterStrategyPlugin;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferReservationPostSaveTerminationAwareStrategyPlugin;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Oms\ProductBundleAvailabilityHandlerPlugin;
 use Spryker\Zed\SalesInvoice\Communication\Plugin\Oms\GenerateOrderInvoiceCommandPlugin;
 use Spryker\Zed\SalesReturn\Communication\Plugin\Oms\Command\StartReturnCommandPlugin;
@@ -159,6 +163,46 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     {
         return [
             new ShipmentManualEventGrouperPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface[]
+     */
+    protected function getOmsReservationAggregationPlugins(): array
+    {
+        return [
+            new ProductOfferOmsReservationAggregationPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationWriterStrategyPluginInterface[]
+     */
+    protected function getOmsReservationWriterStrategyPlugins(): array
+    {
+        return [
+            new ProductOfferOmsReservationWriterStrategyPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationPostSaveTerminationAwareStrategyPluginInterface[]
+     */
+    protected function getReservationPostSaveTerminationAwareStrategyPlugins(): array
+    {
+        return [
+            new ProductOfferReservationPostSaveTerminationAwareStrategyPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationReaderStrategyPluginInterface[]
+     */
+    protected function getOmsReservationReaderStrategyPlugins(): array
+    {
+        return [
+            new ProductOfferOmsReservationReaderStrategyPlugin(),
         ];
     }
 }
