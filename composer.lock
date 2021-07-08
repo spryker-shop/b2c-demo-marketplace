@@ -42085,47 +42085,6 @@
             "time": "2021-04-14T08:07:12+00:00"
         },
         {
-            "name": "spryker/wishlists-rest-api-extension",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/wishlists-rest-api-extension.git",
-                "reference": "c22b06f531d8d4de11b12389e6a0451866540d98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/wishlists-rest-api-extension/zipball/c22b06f531d8d4de11b12389e6a0451866540d98",
-                "reference": "c22b06f531d8d4de11b12389e6a0451866540d98",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "WishlistsRestApiExtension module",
-            "support": {
-                "source": "https://github.com/spryker/wishlists-rest-api-extension/tree/1.0.0"
-            },
-            "time": "2021-04-14T08:07:12+00:00"
-        },
-        {
             "name": "spryker/zed-navigation",
             "version": "1.11.0",
             "source": {
