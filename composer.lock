@@ -37720,20 +37720,20 @@
         },
         {
             "name": "spryker/stock-data-import",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/stock-data-import.git",
-                "reference": "9a2acc565387cec43f06d0fbd8a674159a241454"
+                "reference": "c0fc08acb1837e27eb844428f4d05e1946d14c75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/stock-data-import/zipball/9a2acc565387cec43f06d0fbd8a674159a241454",
-                "reference": "9a2acc565387cec43f06d0fbd8a674159a241454",
+                "url": "https://api.github.com/repos/spryker/stock-data-import/zipball/c0fc08acb1837e27eb844428f4d05e1946d14c75",
+                "reference": "c0fc08acb1837e27eb844428f4d05e1946d14c75",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/data-import": "^1.4.3",
                 "spryker/kernel": "^3.33.0",
                 "spryker/stock": "^8.0.0",
@@ -37760,7 +37760,10 @@
                 "MIT"
             ],
             "description": "StockDataImport module",
-            "time": "2020-05-05T00:59:59+00:00"
+            "support": {
+                "source": "https://github.com/spryker/stock-data-import/tree/1.2.0"
+            },
+            "time": "2021-02-24T08:50:39+00:00"
         },
         {
             "name": "spryker/stock-extension",

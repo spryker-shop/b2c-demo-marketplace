@@ -61,6 +61,11 @@ use Spryker\Zed\ShipmentDataImport\Communication\Plugin\ShipmentMethodStoreDataI
 use Spryker\Zed\StockAddressDataImport\Communication\Plugin\DataImport\StockAddressDataImportPlugin;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockDataImportPlugin;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockStoreDataImportPlugin;
+use Pyz\Zed\MerchantProductOfferDataImport\Communication\Plugin\CombinedMerchantProductOfferDataImportPlugin;
+use Pyz\Zed\MerchantProductOfferDataImport\Communication\Plugin\CombinedMerchantProductOfferStoreDataImportPlugin;
+use Pyz\Zed\PriceProductOfferDataImport\Communication\Plugin\CombinedPriceProductOfferDataImportPlugin;
+use Pyz\Zed\ProductOfferStockDataImport\Communication\Plugin\CombinedProductOfferStockDataImportPlugin;
+use Pyz\Zed\ProductOfferValidityDataImport\Communication\Plugin\CombinedProductOfferValidityDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
@@ -278,6 +283,11 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new MerchantProductDataImportPlugin(),
             new MerchantOpeningHoursDateScheduleDataImportPlugin(),
             new MerchantOpeningHoursWeekdayScheduleDataImportPlugin(),
+            new CombinedMerchantProductOfferDataImportPlugin(),
+            new CombinedMerchantProductOfferStoreDataImportPlugin(),
+            new CombinedPriceProductOfferDataImportPlugin(),
+            new CombinedProductOfferValidityDataImportPlugin(),
+            new CombinedProductOfferStockDataImportPlugin(),
         ];
     }
 
