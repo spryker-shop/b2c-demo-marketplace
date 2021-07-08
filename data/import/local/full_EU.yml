@@ -219,3 +219,5 @@ actions:
     source: data/import/common/common/marketplace/merchant_opening_hours_weekday_schedule.csv
   - data_entity: merchant-product-option-group
     source: data/import/common/common/marketplace/merchant_product_option_group.csv
+  - data_entity: merchant-category
+    source: data/import/common/common/marketplace/merchant_category.csv
