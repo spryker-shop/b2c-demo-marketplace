@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f509fb97ffc88620e0e9c95759dfe659",
+    "content-hash": "c5a97a74abc2f43ed49a20423162c58f",
     "packages": [
         {
             "name": "brick/math",
@@ -23898,6 +23898,56 @@
             "time": "2021-05-14T08:43:47+00:00"
         },
         {
+            "name": "spryker/merchant-product-offer-wishlist-rest-api",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-product-offer-wishlist-rest-api.git",
+                "reference": "0a4bcff25a4b39d3b55c5cd8dae28ce2699c16aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offer-wishlist-rest-api/zipball/0a4bcff25a4b39d3b55c5cd8dae28ce2699c16aa",
+                "reference": "0a4bcff25a4b39d3b55c5cd8dae28ce2699c16aa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.33.0",
+                "spryker/wishlist": "^8.4.0",
+                "spryker/wishlists-rest-api-extension": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/customer": "*",
+                "spryker/merchant": "*",
+                "spryker/product": "*",
+                "spryker/product-offer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantProductOfferWishlistRestApi module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-offer-wishlist-rest-api/tree/0.1.0"
+            },
+            "time": "2021-04-14T08:07:12+00:00"
+        },
+        {
             "name": "spryker/merchant-product-offers-rest-api",
             "version": "0.6.0",
             "source": {
@@ -41982,6 +42032,47 @@
             ],
             "description": "WishlistsRestApi module",
             "time": "2020-06-02T09:42:31+00:00"
+        },
+        {
+            "name": "spryker/wishlists-rest-api-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/wishlists-rest-api-extension.git",
+                "reference": "c22b06f531d8d4de11b12389e6a0451866540d98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/wishlists-rest-api-extension/zipball/c22b06f531d8d4de11b12389e6a0451866540d98",
+                "reference": "c22b06f531d8d4de11b12389e6a0451866540d98",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "WishlistsRestApiExtension module",
+            "support": {
+                "source": "https://github.com/spryker/wishlists-rest-api-extension/tree/1.0.0"
+            },
+            "time": "2021-04-14T08:07:12+00:00"
         },
         {
             "name": "spryker/zed-navigation",
