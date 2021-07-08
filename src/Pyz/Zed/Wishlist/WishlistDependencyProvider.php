@@ -7,6 +7,10 @@
 
 namespace Pyz\Zed\Wishlist;
 
+use Spryker\Client\MerchantProductOfferWishlist\Plugin\Wishlist\WishlistProductOfferCollectionToRemoveExpanderPlugin;
+use Spryker\Client\MerchantProductOfferWishlist\Plugin\Wishlist\WishlistProductOfferPostMoveToCartCollectionExpanderPlugin;
+use Spryker\Client\MerchantProductWishlist\Plugin\Wishlist\WishlistMerchantProductCollectionToRemoveExpanderPlugin;
+use Spryker\Client\MerchantProductWishlist\Plugin\Wishlist\WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Wishlist\ProductDiscontinuedAddItemPreCheckPlugin;
 use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependencyProvider;
 
@@ -27,6 +31,28 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     {
         return [
             new ProductDiscontinuedAddItemPreCheckPlugin(), #ProductDiscontinuedFeature
+        ];
+    }
+
+    /**
+     * @return \Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistPostMoveToCartCollectionExpanderPluginInterface[]
+     */
+    protected function getWishlistPostMoveToCartCollectionExpanderPlugins(): array
+    {
+        return [
+            new WishlistProductOfferPostMoveToCartCollectionExpanderPlugin(),
+            new WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistCollectionToRemoveExpanderPluginInterface[]
+     */
+    protected function getWishlistCollectionToRemoveExpanderPlugins(): array
+    {
+        return [
+            new WishlistProductOfferCollectionToRemoveExpanderPlugin(),
+            new WishlistMerchantProductCollectionToRemoveExpanderPlugin(),
         ];
     }
 }
