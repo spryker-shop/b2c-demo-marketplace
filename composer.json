@@ -143,6 +143,7 @@
     "spryker/gift-cards-rest-api": "^1.0.0",
     "spryker/merchant-categories-rest-api": "^0.1.0",
     "spryker/merchant-opening-hours-rest-api": "^0.3.0",
+    "spryker/merchant-product-offer-wishlist-rest-api": "^0.1.0",
     "spryker/merchant-product-offers-rest-api": "^0.6.0",
     "spryker/merchant-products-rest-api": "^0.1.1",
     "spryker/merchant-profile-merchant-portal-gui": "^0.8.1",

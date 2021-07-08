@@ -11,6 +11,11 @@ use Spryker\Client\MerchantProductOfferWishlist\Plugin\Wishlist\WishlistProductO
 use Spryker\Client\MerchantProductOfferWishlist\Plugin\Wishlist\WishlistProductOfferPostMoveToCartCollectionExpanderPlugin;
 use Spryker\Client\MerchantProductWishlist\Plugin\Wishlist\WishlistMerchantProductCollectionToRemoveExpanderPlugin;
 use Spryker\Client\MerchantProductWishlist\Plugin\Wishlist\WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin;
+use Spryker\Zed\Availability\Communication\Plugin\Wishlist\AvailabilityWishlistItemExpanderPlugin;
+use Spryker\Zed\Availability\Communication\Plugin\Wishlist\SellableWishlistItemExpanderPlugin;
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\MerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\PriceProduct\Communication\Plugin\Wishlist\PriceProductWishlistItemExpanderPlugin;
+use Spryker\Zed\PriceProductOffer\Communication\Plugin\Wishlist\PriceProductOfferWishlistItemExpanderPlugin;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Wishlist\ProductDiscontinuedAddItemPreCheckPlugin;
 use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependencyProvider;
 
@@ -31,6 +36,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     {
         return [
             new ProductDiscontinuedAddItemPreCheckPlugin(), #ProductDiscontinuedFeature
+            new MerchantProductOfferAddItemPreCheckPlugin(),
         ];
     }
 
@@ -53,6 +59,19 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
         return [
             new WishlistProductOfferCollectionToRemoveExpanderPlugin(),
             new WishlistMerchantProductCollectionToRemoveExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface[]
+     */
+    protected function getWishlistItemExpanderPlugins(): array
+    {
+        return [
+            new PriceProductWishlistItemExpanderPlugin(),
+            new PriceProductOfferWishlistItemExpanderPlugin(),
+            new AvailabilityWishlistItemExpanderPlugin(),
+            new SellableWishlistItemExpanderPlugin(),
         ];
     }
 }
