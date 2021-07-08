@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e64cf826abe400af425b32a50517916c",
+    "content-hash": "cf202ddcde3f99381c1f5388dc677a41",
     "packages": [
         {
             "name": "brick/math",
@@ -31510,6 +31510,54 @@
                 "source": "https://github.com/spryker/product-offer/tree/0.7.1"
             },
             "time": "2021-06-09T09:15:38+00:00"
+        },
+        {
+            "name": "spryker/product-offer-availabilities-rest-api",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-offer-availabilities-rest-api.git",
+                "reference": "0ef768d107297aa3bf4058aec95e1e86284c8258"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-offer-availabilities-rest-api/zipball/0ef768d107297aa3bf4058aec95e1e86284c8258",
+                "reference": "0ef768d107297aa3bf4058aec95e1e86284c8258",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/glue-application": "^1.8.0",
+                "spryker/glue-application-extension": "^1.0.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/product-offer-availability-storage": "^0.8.0",
+                "spryker/store": "^1.4.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/transfer": "^3.18.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductOfferAvailabilitiesRestApi module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-availabilities-rest-api/tree/0.4.0"
+            },
+            "time": "2021-05-11T15:03:13+00:00"
         },
         {
             "name": "spryker/product-offer-availability",

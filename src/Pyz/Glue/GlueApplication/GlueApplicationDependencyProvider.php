@@ -112,6 +112,8 @@ use Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship\ConcreteProductsPro
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelByProductConcreteSkuResourceRelationshipPlugin;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin;
+use Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication\ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin;
+use Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication\ProductOfferAvailabilitiesResourceRoutePlugin;
 use Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication\ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin;
 use Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication\ProductOfferPricesResourceRoutePlugin;
 use Spryker\Glue\ProductOptionsRestApi\Plugin\GlueApplication\ProductOptionsByProductAbstractSkuResourceRelationshipPlugin;
@@ -236,6 +238,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ConcreteProductsProductOffersResourceRoutePlugin(),
             new MerchantOpeningHoursResourceRoutePlugin(),
             new ProductOfferPricesResourceRoutePlugin(),
+            new ProductOfferAvailabilitiesResourceRoutePlugin(),
         ];
     }
 
@@ -579,6 +582,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         $resourceRelationshipCollection->addRelationship(
             MerchantProductOffersRestApiConfig::RESOURCE_PRODUCT_OFFERS,
             new ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin()
+        );
+
+        $resourceRelationshipCollection->addRelationship(
+            MerchantProductOffersRestApiConfig::RESOURCE_PRODUCT_OFFERS,
+            new ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin()
         );
 
         return $resourceRelationshipCollection;
