@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58ce63384bf619196df4479009d5f857",
+    "content-hash": "e64cf826abe400af425b32a50517916c",
     "packages": [
         {
             "name": "brick/math",
@@ -21380,16 +21380,16 @@
         },
         {
             "name": "spryker/glue-application",
-            "version": "1.30.0",
+            "version": "1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/glue-application.git",
-                "reference": "7ce0111c1eb36d38d70e958f21db3276cf537e24"
+                "reference": "476cbd8bcd5e08f7919c40e426f8fb3c16e5b1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/glue-application/zipball/7ce0111c1eb36d38d70e958f21db3276cf537e24",
-                "reference": "7ce0111c1eb36d38d70e958f21db3276cf537e24",
+                "url": "https://api.github.com/repos/spryker/glue-application/zipball/476cbd8bcd5e08f7919c40e426f8fb3c16e5b1d9",
+                "reference": "476cbd8bcd5e08f7919c40e426f8fb3c16e5b1d9",
                 "shasum": ""
             },
             "require": {
@@ -21438,9 +21438,9 @@
             ],
             "description": "GlueApplication module",
             "support": {
-                "source": "https://github.com/spryker/glue-application/tree/1.30.0"
+                "source": "https://github.com/spryker/glue-application/tree/1.33.0"
             },
-            "time": "2021-05-11T17:48:47+00:00"
+            "time": "2021-06-24T12:53:04+00:00"
         },
         {
             "name": "spryker/glue-application-extension",
@@ -31839,6 +31839,98 @@
                 "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/0.11.1"
             },
             "time": "2021-06-14T15:09:44+00:00"
+        },
+        {
+            "name": "spryker/product-offer-prices-rest-api",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-offer-prices-rest-api.git",
+                "reference": "3bc7972bdccd2246b56696d4d16845d1316ef016"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-offer-prices-rest-api/zipball/3bc7972bdccd2246b56696d4d16845d1316ef016",
+                "reference": "3bc7972bdccd2246b56696d4d16845d1316ef016",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/glue-application": "^1.8.0",
+                "spryker/glue-application-extension": "^1.0.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant-product-offer-storage": "^0.13.0",
+                "spryker/price-product": "^4.0.0",
+                "spryker/price-product-storage": "^4.0.0",
+                "spryker/product-offer-prices-rest-api-extension": "^0.1.0",
+                "spryker/product-storage": "^1.16.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/synchronization-behavior": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductOfferPricesRestApi module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-prices-rest-api/tree/0.4.0"
+            },
+            "time": "2021-05-11T15:03:13+00:00"
+        },
+        {
+            "name": "spryker/product-offer-prices-rest-api-extension",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-offer-prices-rest-api-extension.git",
+                "reference": "05fab0f6dbb7b1307474d087eb5b98d35a4d4912"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-offer-prices-rest-api-extension/zipball/05fab0f6dbb7b1307474d087eb5b98d35a4d4912",
+                "reference": "05fab0f6dbb7b1307474d087eb5b98d35a4d4912",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductOfferPricesRestApiExtension module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-prices-rest-api-extension/tree/0.1.0"
+            },
+            "time": "2021-02-16T14:27:24+00:00"
         },
         {
             "name": "spryker/product-offer-reservation-gui",
