@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d1389b622907b5eeeb160daad32274c",
+    "content-hash": "58ce63384bf619196df4479009d5f857",
     "packages": [
         {
             "name": "brick/math",
@@ -11895,16 +11895,16 @@
         },
         {
             "name": "spryker/availability",
-            "version": "9.12.0",
+            "version": "9.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/availability.git",
-                "reference": "ec01e18ba54bb304fe0911f9d0e87984710dba96"
+                "reference": "ad4bf2e246cc04b0b74deacc55242df30ab49e81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/availability/zipball/ec01e18ba54bb304fe0911f9d0e87984710dba96",
-                "reference": "ec01e18ba54bb304fe0911f9d0e87984710dba96",
+                "url": "https://api.github.com/repos/spryker/availability/zipball/ad4bf2e246cc04b0b74deacc55242df30ab49e81",
+                "reference": "ad4bf2e246cc04b0b74deacc55242df30ab49e81",
                 "shasum": ""
             },
             "require": {
@@ -11957,9 +11957,9 @@
             ],
             "description": "Availability module",
             "support": {
-                "source": "https://github.com/spryker/availability/tree/9.12.0"
+                "source": "https://github.com/spryker/availability/tree/9.12.1"
             },
-            "time": "2021-06-30T16:22:08+00:00"
+            "time": "2021-07-08T09:34:57+00:00"
         },
         {
             "name": "spryker/availability-cart-connector",
@@ -13271,6 +13271,9 @@
                 "proprietary"
             ],
             "description": "CartsRestApiExtension module",
+            "support": {
+                "source": "https://github.com/spryker/carts-rest-api-extension/tree/1.6.0"
+            },
             "time": "2020-09-24T11:46:20+00:00"
         },
         {
@@ -24067,6 +24070,51 @@
                 "source": "https://github.com/spryker/merchant-product-wishlist/tree/0.1.0"
             },
             "time": "2021-03-16T11:02:55+00:00"
+        },
+        {
+            "name": "spryker/merchant-products-rest-api",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-products-rest-api.git",
+                "reference": "4adec6823dd2c791c180ca72a3ad4d3065a204c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-products-rest-api/zipball/4adec6823dd2c791c180ca72a3ad4d3065a204c8",
+                "reference": "4adec6823dd2c791c180ca72a3ad4d3065a204c8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/carts-rest-api-extension": "^1.5.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/synchronization-behavior": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantProductsRestApi module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-products-rest-api/tree/0.1.1"
+            },
+            "time": "2021-02-19T11:33:37+00:00"
         },
         {
             "name": "spryker/merchant-profile",
