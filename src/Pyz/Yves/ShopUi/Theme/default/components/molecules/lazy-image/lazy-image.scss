@@ -1,6 +1,10 @@
 @include shop-ui-lazy-image {
     &__image {
         flex-shrink: 0;
+
+        &--full-width {
+            width: 100%;
+        }
     }
 
     &--full-height {

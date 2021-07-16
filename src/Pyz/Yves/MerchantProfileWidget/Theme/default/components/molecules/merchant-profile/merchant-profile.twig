@@ -1,0 +1,80 @@
+{% extends molecule('merchant-profile', '@SprykerShop:MerchantProfileWidget') %}
+
+{% block extraClass %}
+    spacing-bottom spacing-bottom--big
+{% endblock %}
+
+{% block contentInner %}
+    <div class="col col--sm-12 col--lg-6 col--spaced-lg">
+        {% set bannerUrlGlossaryValue = (data.merchantStorageProfile.bannerUrlGlossaryKey ?: '') | trans %}
+        {% set hasBannerUrlTranslation = data.merchantStorageProfile.bannerUrlGlossaryKey
+            ? data.merchantStorageProfile.bannerUrlGlossaryKey != bannerUrlGlossaryValue %}
+
+        {% if hasBannerUrlTranslation %}
+            {% include molecule('lazy-image') with {
+                modifiers: ['full-width'],
+                data: {
+                    imageSrc: bannerUrlGlossaryValue,
+                },
+            } only %}
+        {% endif %}
+    </div>
+
+    <div class="col col--sm-12 col--lg-6 col--spaced-lg">
+        {{ block('detail') }}
+
+        {% widget 'MerchantOpeningHoursWidget' args [data.idMerchant] only %}{% endwidget %}
+    </div>
+{% endblock %}
+
+{% block detailInner %}
+    <div class="col col--sm-12 grid spacing-bottom spacing-bottom--big">
+        <div class="col col--sm-12 col--lg-12 col--xl-10">
+            {% set descriptionGlossaryValue = (data.merchantStorageProfile.descriptionGlossaryKey ?: '') | trans %}
+            {% set hasDescriptionTranslation = data.merchantStorageProfile.descriptionGlossaryKey
+                ? data.merchantStorageProfile.descriptionGlossaryKey != descriptionGlossaryValue %}
+
+            {% if hasDescriptionTranslation %}
+                {{ descriptionGlossaryValue }}
+            {% endif %}
+        </div>
+
+        <div class="col col--sm-3 col--lg-2">
+            {% if data.merchantStorageProfile.logoUrl %}
+                {% block logo %}
+                    {% include molecule('lazy-image') with {
+                        class: 'spacing spacing--reset',
+                        modifiers: ['thumbnail', 'small'],
+                        data: {
+                            imageSrc: data.merchantStorageProfile.logoUrl | trans,
+                        },
+                    } only %}
+                {% endblock %}
+            {% endif %}
+        </div>
+    </div>
+
+    {{ block('information') }}
+{% endblock %}
+
+{% block address %}
+    {% embed molecule('information-item', 'MerchantPage') with {
+        data: {
+            title: 'merchant_profile.address' | trans,
+        },
+        embed: {
+            addresses: merchantAddresses,
+        },
+    } only %}
+        {% block text %}
+            <div class="{{ config.name }}__text">
+                {% for address in embed.addresses %}
+                    <div>{{ address.address1 }} {{ address.address2 }}</div>
+                    <div>{{ address.zipCode }} {{ address.city}}</div>
+                    <div>{{ address.address3 }}</div>
+                    <div>{{ address.countryName }}</div>
+                {% endfor %}
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

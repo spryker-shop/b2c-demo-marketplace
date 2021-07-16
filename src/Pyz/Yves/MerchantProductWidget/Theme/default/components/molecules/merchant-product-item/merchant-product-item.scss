@@ -1,0 +1,24 @@
+@mixin merchant-product-widget-merchant-product-item($name: '.merchant-product-item') {
+    #{$name} {
+        padding: rem(12) 0;
+        border-bottom: rem(1) dotted $setting-color-gray-3;
+
+        &__name {
+            display: block;
+            font: fw(medium) rem(16)/rem(20) $setting-font-family-additional;
+            letter-spacing: rem(0.27);
+            margin-bottom: rem(10);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__link {
+            font-size: rem(15);
+            letter-spacing: rem(0.5);
+        }
+
+        @content;
+    }
+}
+
+@include merchant-product-widget-merchant-product-item();

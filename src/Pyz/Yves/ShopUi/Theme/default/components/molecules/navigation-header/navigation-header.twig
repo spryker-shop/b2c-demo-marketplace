@@ -15,7 +15,7 @@
 {% set menuChildrenClass = data.menuDropdown ? 'menu__item--has-children-dropdown' : 'menu__item--has-children-list' %}
 
 {% block body %}
-    <ul class="menu {{ menuClass }} grid grid--center grid--no-wrap">
+    <ul class="menu {{ menuClass }} grid grid--center">
         {% for node in data.nodes %}
             {% set hasChildren = node.children | length > 0 %}
             {% set flyoutClass = node.cssClass == 'flyout-fullscreen' %}

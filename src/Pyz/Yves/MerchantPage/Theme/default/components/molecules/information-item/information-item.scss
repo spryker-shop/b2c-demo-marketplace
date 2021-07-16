@@ -1,0 +1,20 @@
+@mixin merchant-page-information-item($name: '.information-item') {
+    #{$name} {
+        margin-bottom: rem(18);
+
+        &__title {
+            font: fw(medium) rem(15)/rem(18) $setting-font-family-additional;
+            letter-spacing: rem(0.27);
+            margin-bottom: rem(8);
+        }
+
+        &__text {
+            font: fw(light) rem(15)/rem(22) $setting-font-family;
+            letter-spacing: rem(0.2);
+        }
+
+        @content;
+    }
+}
+
+@include merchant-page-information-item();

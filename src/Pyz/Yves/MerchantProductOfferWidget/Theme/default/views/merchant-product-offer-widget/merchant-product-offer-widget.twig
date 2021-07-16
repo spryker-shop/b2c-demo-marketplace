@@ -1,0 +1,17 @@
+{% extends view('merchant-product-offer-widget', '@SprykerShop:MerchantProductOfferWidget') %}
+
+{% define data = {
+    isTitleVisible: true,
+} %}
+
+{% block content %}
+    {% include molecule('merchant-block', 'MerchantProductOfferWidget') with {
+        data: {
+            productView: data.productView,
+            radioGroupName: 'product_offer_reference',
+            productOffers: data.productOffers,
+            isRadioButtonVisible: isRadioButtonVisible,
+            isTitleVisible: data.isTitleVisible,
+        },
+    } only %}
+{% endblock %}

@@ -101,6 +101,7 @@
                     data: {
                         title: 'cart.item_quantity' | trans,
                         isToggler: false,
+                        targetClass: 'spacing-bottom spacing-bottom--inner spacing-bottom--big',
                     },
                 } only %}
                     {% block contentText %}
@@ -123,8 +124,17 @@
                 },
             } only %}
 
-            {% set merchantProductOfferWidget = findWidget('MerchantProductOfferWidget', [data.product]) %}
+            {% widget 'ProductDiscontinuedNoteWidget' args [data.product.sku] only %}{% endwidget %}
 
+            {% if can('SeeAddToCartPermissionPlugin') %}
+                <div class="{{ data.config.name }}__button-wrap">
+                    <button class="button button--large button--expand" {{ data.isDisabled ? 'disabled' }} {{ qa('add-to-cart-button') }} data-init-single-click>
+                        {{ 'page.detail.add-to-cart' | trans }}
+                    </button>
+                </div>
+            {% endif %}
+
+            {% set merchantProductOfferWidget = findWidget('MerchantProductOfferWidget', [data.product]) %}
             {% set productOffersCount = merchantProductOfferWidget ? merchantProductOfferWidget.productOffers | length : 0 %}
             {% set isRadioButtonVisible = productOffersCount > 0  %}
             {% set isChecked = merchantProductOfferWidget ? not merchantProductOfferWidget.productView.productOfferReference: true %}
@@ -135,40 +145,27 @@
             ]) %}
 
             {% if merchantProductWidget %}
-                {% widget merchantProductWidget %}
-                {% endwidget %}
+                {% widget merchantProductWidget %}{% endwidget %}
             {% endif %}
 
             {% if merchantProductOfferWidget %}
                 {% widget merchantProductOfferWidget with
                     {
+                        data: {
+                            isTitleVisible: not (merchantProductWidget and merchantProductWidget.merchantProductView is defined and merchantProductWidget.merchantProductView),
+                        },
                         embed: {
-                        hasMerchantProduct: merchantProductWidget and merchantProductWidget.merchantProductView is defined and merchantProductWidget.merchantProductView,
-                        productOffersCount: merchantProductOfferWidget.productOffers | length
-                    }
+                            hasMerchantProduct: merchantProductWidget and merchantProductWidget.merchantProductView is defined and merchantProductWidget.merchantProductView,
+                            productOffersCount: merchantProductOfferWidget.productOffers | length,
+                        },
                     }
                 %}
                     {% block content %}
                         {% set isRadioButtonVisible = embed.productOffersCount + embed.hasMerchantProduct > 1 %}
+
                         {{ parent() }}
                     {% endblock %}
-
-                    {% block title %}
-                        {% if not embed.hasMerchantProduct %}
-                            {{ parent() }}
-                        {% endif %}
-                    {% endblock %}
                 {% endwidget %}
-            {% endif %}
-
-            {% widget 'ProductDiscontinuedNoteWidget' args [data.product.sku] only %}{% endwidget %}
-
-            {% if can('SeeAddToCartPermissionPlugin') %}
-                <div class="{{ data.config.name }}__button-wrap">
-                    <button class="button button--large button--expand" {{ data.isDisabled ? 'disabled' }} {{ qa('add-to-cart-button') }} data-init-single-click>
-                        {{ 'page.detail.add-to-cart' | trans }}
-                    </button>
-                </div>
             {% endif %}
         {% endblock %}
     {% endwidget %}

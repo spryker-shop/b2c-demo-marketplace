@@ -52,6 +52,7 @@
 
         &--expand {
             flex-grow: 1;
+            min-width: 0;
         }
 
         &--top {
@@ -164,7 +165,8 @@
             max-width: $setting-grid-max-width;
         }
 
-        &--no-wrap {
+        &--no-wrap,
+        &--nowrap {
             flex-wrap: nowrap;
         }
 

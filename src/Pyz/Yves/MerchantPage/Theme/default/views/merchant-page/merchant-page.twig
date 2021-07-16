@@ -1,0 +1,15 @@
+{% extends view('merchant-page', '@SprykerShop:MerchantPage') %}
+
+{% block breadcrumbs %}
+    <div class="container">
+        <div class="container__inner">{{ parent() }}</div>
+    </div>
+{% endblock %}
+
+{% block title %}
+    <div class="container">
+        <div class="container__inner">
+            <h2 class="spacing-top spacing-top--big">{{ merchantName }}</h2>
+        </div>
+    </div>
+{% endblock %}

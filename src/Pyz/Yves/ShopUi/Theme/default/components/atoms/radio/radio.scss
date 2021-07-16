@@ -11,6 +11,7 @@
         width: rem(16);
         height: rem(16);
         margin-right: rem(7);
+        border: rem(1) solid $setting-color-gray-3;
     }
 
     &__label {
@@ -18,8 +19,17 @@
     }
 
     &__input:checked + #{$name}__box {
-        border: rem(1) solid $setting-color-main;
-        background-color: $setting-color-main;
+        &::before {
+            content: '';
+            position: absolute;
+            left: rem(4);
+            top: rem(4);
+            height: rem(8);
+            width: rem(8);
+            z-index: $setting-zi-element;
+            background-color: $setting-color-black;
+            border-radius: rem(4);
+        }
     }
 
     &--with-bg,
@@ -35,6 +45,8 @@
         }
 
         #{$name}__box {
+            border: rem(1) solid $setting-color-main;
+            background-color: $setting-color-main;
             margin-top: rem(4);
 
             &::before {

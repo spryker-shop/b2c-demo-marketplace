@@ -24,13 +24,6 @@
     {%- endif -%}
 
     <span class="{{ config.name }}__amount">
-
-        {% include atom('icon') with {
-            class: config.name ~ '__tag',
-            data: {
-                name: 'tag'
-            }
-        } only %}
         <span itemprop="price" content="{{ data.amount | moneyRaw }}" class="{{ config.jsName }}__price {{ config.name }}__price">
             <meta itemprop="priceCurrency" content="{{ currencyIsoCode() }}">
             {{ data.amount | money }}

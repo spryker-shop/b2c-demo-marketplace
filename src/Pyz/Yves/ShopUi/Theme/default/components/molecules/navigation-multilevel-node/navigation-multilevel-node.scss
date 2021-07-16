@@ -4,7 +4,7 @@
 
     #{$name} {
         align-self: flex-end;
-        margin: 0 rem(9);
+        margin: 0 rem(9) rem(5);
         text-transform: uppercase;
         font: fw(medium) rem(13) $setting-font-family-additional;
         letter-spacing: rem(2);

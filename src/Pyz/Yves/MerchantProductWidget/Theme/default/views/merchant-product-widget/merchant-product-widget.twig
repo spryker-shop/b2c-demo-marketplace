@@ -1,0 +1,12 @@
+{% extends view('merchant-product-widget', '@SprykerShop:MerchantProductWidget') %}
+
+{% block content %}
+    {% include molecule('merchant-block', 'MerchantProductWidget') with {
+        data: {
+            isChecked: data.isChecked,
+            radioGroupName: 'merchant_reference',
+            merchantProductView: data.merchantProductView,
+            isRadioButtonVisible: data.isRadioButtonVisible,
+        },
+    } only %}
+{% endblock %}

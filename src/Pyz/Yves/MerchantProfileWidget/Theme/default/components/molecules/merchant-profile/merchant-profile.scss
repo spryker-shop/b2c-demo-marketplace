@@ -1,0 +1,8 @@
+@mixin merchant-profile-widget-merchant-profile($name: '.merchant-profile') {
+    #{$name} {
+
+        @content;
+    }
+}
+
+@include merchant-profile-widget-merchant-profile();

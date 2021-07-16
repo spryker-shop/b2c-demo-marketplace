@@ -1,0 +1,15 @@
+{% extends molecule('information-item', '@SprykerShop:MerchantPage') %}
+
+{% block extraClass %}{% endblock %}
+
+{% block title %}
+    {% set titleClassName = config.name ~ '__title' %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block text %}
+    {% set textClassName = config.name ~ '__text' %}
+
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,1 @@
+import './merchant-profile.scss';

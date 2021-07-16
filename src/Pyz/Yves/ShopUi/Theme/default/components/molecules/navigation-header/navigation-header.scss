@@ -1,6 +1,6 @@
 @mixin shop-ui-navigation-header($name: '.navigation-header') {
     #{$name} {
-        padding: rem(16) 0;
+        padding: rem(16) 0 rem(10);
         position: relative;
 
         &__flyout-fullscreen,

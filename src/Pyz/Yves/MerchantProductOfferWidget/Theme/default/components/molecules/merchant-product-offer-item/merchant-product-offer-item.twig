@@ -1,0 +1,25 @@
+{% extends molecule('merchant-product-offer-item', '@SprykerShop:MerchantProductOfferWidget') %}
+
+{% define data = {
+    currentProductPrice: required,
+} %}
+
+{% block extraClass %}{% endblock %}
+
+{% block merchantName %}
+    <span class="{{ config.name }}__name">{{ data.merchantName }}</span>
+{% endblock %}
+
+{% block merchantLink %}
+    <a class="{{ config.name }}__link link link--darkest" href="{{ data.merchantUrl }}">
+        {{ 'merchant_product_offer.view_seller' | trans }}
+    </a>
+{% endblock %}
+
+{% block price %}
+    {% widget 'CurrentProductPriceVolumeWidget' args [data.currentProductPrice] only %}
+        {% block priceTable %}{% endblock %}
+    {% nowidget %}
+        {{ parent() }}
+    {% endwidget %}
+{% endblock %}
