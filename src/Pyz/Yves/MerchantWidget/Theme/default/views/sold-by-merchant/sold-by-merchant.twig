@@ -4,6 +4,7 @@
     {% if data.merchant %}
         {% set merchantUrl = null %}
         {% set merchantModifiers = [] %}
+        {% set merchantClass = '' %}
 
         {% for urlTransfer in data.merchant.urlCollection %}
             {% if urlTransfer.localeName == data.locale %}
@@ -14,6 +15,7 @@
         {% block soldBy %}
             {% include molecule('sold-by-merchant', 'MerchantWidget') with {
                 modifiers: merchantModifiers,
+                class: merchantClass,
                 data: {
                     url: merchantUrl,
                     name: data.merchant.name,

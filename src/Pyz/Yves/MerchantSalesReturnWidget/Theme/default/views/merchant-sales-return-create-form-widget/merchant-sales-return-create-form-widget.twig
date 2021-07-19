@@ -1,0 +1,11 @@
+{% extends view('merchant-sales-return-create-form-widget', '@SprykerShop:MerchantSalesReturnWidget') %}
+
+{% block differentMerchantsInfoBox %}
+    {% if data.merchantReferences | length > 1 %}
+        {% include molecule('alert') with {
+            data: {
+                content: 'merchant_sales_return_widget.create_form.different_merchants_info' | trans,
+            },
+        } only %}
+    {% endif %}
+{% endblock %}

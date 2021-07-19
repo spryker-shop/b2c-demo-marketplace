@@ -21,6 +21,7 @@
         {% widget 'SoldByMerchantWidget' args [orderItem] only %}
             {% block soldBy %}
                 {% set merchantModifiers = ['group'] %}
+                {% set merchantClass = 'spacing-bottom spacing-bottom--bigger' %}
 
                 {{ parent() }}
             {% endblock %}
