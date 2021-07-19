@@ -1,0 +1,24 @@
+{% extends view('sold-by-merchant', '@SprykerShop:MerchantWidget') %}
+
+{% block template %}
+    {% if data.merchant %}
+        {% set merchantUrl = null %}
+        {% set merchantModifiers = [] %}
+
+        {% for urlTransfer in data.merchant.urlCollection %}
+            {% if urlTransfer.localeName == data.locale %}
+                {% set merchantUrl = urlTransfer.url %}
+            {% endif %}
+        {% endfor %}
+
+        {% block soldBy %}
+            {% include molecule('sold-by-merchant', 'MerchantWidget') with {
+                modifiers: merchantModifiers,
+                data: {
+                    url: merchantUrl,
+                    name: data.merchant.name,
+                },
+            } only %}
+        {% endblock %}
+    {% endif %}
+{% endblock %}

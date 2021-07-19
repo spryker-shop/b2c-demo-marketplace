@@ -1,0 +1,16 @@
+{% extends view('merchant-opening-hours-widget', '@SprykerShop:MerchantOpeningHoursWidget') %}
+
+{% block body %}
+    <div class="box box--with-border">
+        <div class="grid grid--indent">
+            <div class="col col--spaced-lg col--sm-12 col--xl-6 spacing-y spacing-y--inner spacing-y--reset">
+                {{ block('weekdaySchedule') }}
+            </div>
+
+            <div class="col col--spaced-lg col--sm-12 col--xl-6 spacing-y spacing-y--inner spacing-y--reset">
+                {{ block('specialOpeningHours') }}
+                {{ block('holidays') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

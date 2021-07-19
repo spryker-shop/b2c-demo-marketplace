@@ -1,7 +1,7 @@
 @include shop-ui-volume-price() {
     &__amount {
         color: $setting-color-black;
-        font: fw(regular) rem(20)/rem(20) $setting-font-family-additional;
+        font: fw(regular) rem(20) / rem(20) $setting-font-family-additional;
         display: block;
 
         @include helper-breakpoint-media-min($xl-min) {

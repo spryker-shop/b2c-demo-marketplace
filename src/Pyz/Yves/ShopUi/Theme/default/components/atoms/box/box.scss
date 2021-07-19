@@ -5,4 +5,10 @@
     &__separator {
         border-bottom: none;
     }
+
+    &--with-border {
+        padding: 0 0 rem(10);
+        margin: 0 0 rem(20);
+        border-bottom: rem(1) dotted $setting-color-gray-3;
+    }
 }

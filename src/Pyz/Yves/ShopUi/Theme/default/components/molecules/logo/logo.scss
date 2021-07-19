@@ -19,7 +19,7 @@
             padding: rem(22) rem(13);
 
             @include helper-breakpoint-media-min($md-min) {
-                padding: 0;
+                padding: 0 0 rem(22);
             }
         }
     }

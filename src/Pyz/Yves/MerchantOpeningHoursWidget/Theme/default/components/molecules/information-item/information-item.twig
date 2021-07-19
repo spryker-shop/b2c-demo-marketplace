@@ -1,0 +1,13 @@
+{% extends molecule('information-item', '@SprykerShop:MerchantPage') %}
+
+{% block class %}{{ parent() }}{% endblock %}
+
+{% block title %}
+    <strong class="{{ config.name }}__title">{{ data.title }}</strong>
+{% endblock %}
+
+{% block text %}
+    {% if data.text | trim %}
+        <div class="{{ config.name }}__text">{{ data.text }}</div>
+    {% endif %}
+{% endblock %}

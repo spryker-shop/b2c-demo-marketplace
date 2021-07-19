@@ -1,5 +1,32 @@
 @mixin merchant-profile-widget-merchant-profile($name: '.merchant-profile') {
     #{$name} {
+        &__top-block {
+            position: relative;
+            margin-bottom: rem(20);
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: rem(16);
+                right: rem(16);
+                bottom: 0;
+                height: rem(1);
+                border-bottom: rem(1) dotted $setting-color-gray-3;
+            }
+        }
+
+        &__info-title {
+            font: fw(medium) rem(20) / rem(26) $setting-font-family-additional;
+            letter-spacing: 0;
+            margin-bottom: rem(20);
+        }
+
+        &__info-text,
+        p {
+            font: fw(light) rem(16) / rem(22) $setting-font-family;
+            letter-spacing: rem(0.2);
+        }
 
         @content;
     }

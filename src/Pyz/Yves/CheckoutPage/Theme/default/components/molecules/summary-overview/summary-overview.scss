@@ -1,11 +1,11 @@
 @mixin checkout-page-summary-overview($name: '.summary-overview') {
     #{$name} {
-        margin: rem(20) 0 rem(30);
+        margin: rem(20) 0;
         border-top: rem(1) dotted $setting-color-gray-3;
         border-bottom: rem(1) dotted $setting-color-gray-3;
 
         @include helper-breakpoint-media-min($lg-min) {
-            margin: rem(30) 0 rem(40);
+            margin: rem(30) 0 rem(20);
         }
 
         &__list-item {

@@ -4,6 +4,14 @@
     spacing-bottom spacing-bottom--big
 {% endblock %}
 
+{% block body %}
+    <div class="{{ config.name }}__top-block grid">
+        {{ block('contentInner') }}
+    </div>
+
+    {{ block('additional') }}
+{% endblock %}
+
 {% block contentInner %}
     <div class="col col--sm-12 col--lg-6 col--spaced-lg">
         {% set bannerUrlGlossaryValue = (data.merchantStorageProfile.bannerUrlGlossaryKey ?: '') | trans %}
@@ -29,7 +37,7 @@
 
 {% block detailInner %}
     <div class="col col--sm-12 grid spacing-bottom spacing-bottom--big">
-        <div class="col col--sm-12 col--lg-12 col--xl-10">
+        <div class="col col--sm-9 col--lg-10">
             {% set descriptionGlossaryValue = (data.merchantStorageProfile.descriptionGlossaryKey ?: '') | trans %}
             {% set hasDescriptionTranslation = data.merchantStorageProfile.descriptionGlossaryKey
                 ? data.merchantStorageProfile.descriptionGlossaryKey != descriptionGlossaryValue %}
@@ -54,7 +62,9 @@
         </div>
     </div>
 
-    {{ block('information') }}
+    <div class="grid grid--expand box box--with-border">
+        {{ block('informationInner') }}
+    </div>
 {% endblock %}
 
 {% block address %}
@@ -78,3 +88,10 @@
         {% endblock %}
     {% endembed %}
 {% endblock %}
+
+ {% block additionalInformation %}
+     <div class="box box--with-border">
+         <h4 class="{{ config.name }}__info-title">{{ informationArticle.title }}</h4>
+         <p class="{{ config.name }}__info-text">{{ informationArticle.text | raw }}</p>
+     </div>
+ {% endblock %}

@@ -65,6 +65,12 @@
                     {% endblock %}
                 </div>
 
+                {% block soldBy %}
+                    {% if widgetGlobalExists('SoldByMerchantWidget') %}
+                        {% widget 'SoldByMerchantWidget' args [data.productItem] only %}{% endwidget %}
+                    {% endif %}
+                {% endblock %}
+
                 {% if not data.isPromotionItem %}
                     <div class="{{ component.renderClass(config.name ~ '__options', modifiers) }}">
                         {% block options %}
@@ -125,14 +131,6 @@
         {% block bundles %}
             {% widget 'ProductBundleCartItemsListWidget' args [data.productItem, data.product] only %}{% endwidget %}
         {% endblock %}
-
-        {% if widgetGlobalExists('SoldByMerchantWidget') %}
-            {% widget 'SoldByMerchantWidget' args [data.productItem] only %}{% endwidget %}
-        {% elseif widgetGlobalExists('ProductOfferSoldByMerchantWidget') %}
-            {% widget 'ProductOfferSoldByMerchantWidget' args [data.productItem] only %}{% endwidget %}
-        {% elseif widgetGlobalExists('ProductSoldByMerchantWidget') %}
-            {% widget 'ProductSoldByMerchantWidget' args [data.productItem] only %}{% endwidget %}
-        {% endif %}
 
         {% block summary %}
             {% if data.productItem.productOptions is defined and data.productItem.productOptions is not empty %}

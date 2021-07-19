@@ -1,0 +1,16 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'sold-by-merchant',
+    tag: 'p',
+} %}
+
+{% define data = {
+    url: required,
+    name: required,
+} %}
+
+{% block body %}
+    {{ 'merchant.sold_by' | trans }}
+    <a class="{{ config.name }}__link link link--darkest" href="{{ data.url }}" target="_blank">{{ data.name }}</a>
+{% endblock %}

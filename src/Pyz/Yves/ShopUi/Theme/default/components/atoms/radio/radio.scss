@@ -45,8 +45,6 @@
         }
 
         #{$name}__box {
-            border: rem(1) solid $setting-color-main;
-            background-color: $setting-color-main;
             margin-top: rem(4);
 
             &::before {

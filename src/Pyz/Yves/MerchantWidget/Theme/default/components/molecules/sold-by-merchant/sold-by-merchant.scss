@@ -1,0 +1,25 @@
+@mixin merchant-widget-sold-by-merchant($name: '.sold-by-merchant') {
+    #{$name} {
+        font: fw(light) rem(13) $setting-font-family-additional;
+        letter-spacing: 0;
+        margin: rem(8) 0 rem(10);
+
+        &--group {
+            font-size: rem(16);
+            font-weight: fw(medium);
+            background-color: $setting-color-gray-1;
+            letter-spacing: rem(0.27);
+            padding: rem(12) rem(15);
+            margin: 0;
+            color: $setting-color-gray-4;
+
+            #{$name}__link {
+                font: fw(medium) rem(16) $setting-font-family-additional;
+            }
+        }
+
+        @content;
+    }
+}
+
+@include merchant-widget-sold-by-merchant();

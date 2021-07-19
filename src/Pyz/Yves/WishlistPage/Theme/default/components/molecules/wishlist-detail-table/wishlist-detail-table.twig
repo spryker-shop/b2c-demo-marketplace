@@ -51,17 +51,17 @@
                         {% endif %}
                         <ul class="menu menu--inline menu--middle">
                             <li><strong><a href="{{ item.url }}">{{ item.name }}</a></strong></li>
+                            <li>
+                                {% if widgetGlobalExists('SoldByMerchantWidget') %}
+                                    {% widget 'SoldByMerchantWidget' args [item] only %}{% endwidget %}
+                                {% endif %}
+                            </li>
                             <li>{{ item.sku }}</li>
                             {% for attribute in item.superAttributesDefinition %}
                                 {% if item.attributes[attribute] is defined %}
                                     <li>{{ ('product.attribute.' ~ attribute) | trans }}: <span class="title title--medium">{{ item.attributes[attribute] }}</span></li>
                                 {% endif %}
                             {% endfor %}
-                            <li>
-                                {% if widgetGlobalExists('SoldByMerchantWidget') %}
-                                    {% widget 'SoldByMerchantWidget' args [item] only %}{% endwidget %}
-                                {% endif %}
-                            </li>
                         </ul>
                     </td>
                     <td nowrap="nowrap">
