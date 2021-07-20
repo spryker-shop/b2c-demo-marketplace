@@ -15,6 +15,9 @@ sections:
         router-cache-warmup-backend-gateway:
             command: 'vendor/bin/console router:cache:warm-up:backend-gateway'
 
+        router-cache-warmup-merchant-portal:
+            command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
+
         twig-cache-warmup:
             command: 'vendor/bin/console twig:cache:warmer'
 
@@ -67,6 +70,9 @@ sections:
         zed-install-dependencies:
             command: 'vendor/bin/console frontend:zed:install-dependencies'
 
+        merchant-portal-install-dependencies:
+            command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
+
     build-static-production:
         excluded: true
         yves-build-frontend:
@@ -75,12 +81,20 @@ sections:
         zed-build-frontend:
             command: 'vendor/bin/console frontend:zed:build -e production'
 
+        merchant-portal-build-frontend:
+            command: 'vendor/bin/console frontend:mp:build -e production'
+            timeout: 1600
+
     build-static-development:
         yves-build-frontend:
             command: 'vendor/bin/console frontend:yves:build'
 
         zed-build-frontend:
             command: 'vendor/bin/console frontend:zed:build'
+
+        merchant-portal-build-frontend:
+            command: 'vendor/bin/console frontend:mp:build'
+            timeout: 1600
 
     scheduler-setup:
         jenkins-setup:

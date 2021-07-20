@@ -4132,17 +4132,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchantportal-core.git",
-                "reference": "0bd857930f52bb16eba74a11f4ebce001d7c61d2"
+                "reference": "c3611201caac4e86354a3bcd7bf36878ac957e9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/0bd857930f52bb16eba74a11f4ebce001d7c61d2",
-                "reference": "0bd857930f52bb16eba74a11f4ebce001d7c61d2",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/c3611201caac4e86354a3bcd7bf36878ac957e9b",
+                "reference": "c3611201caac4e86354a3bcd7bf36878ac957e9b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "spryker/gui-table": "^0.4.0",
+                "spryker/gui-table": "^0.4.6",
+                "spryker/merchant-portal-application": "^0.1.0",
                 "spryker/merchant-user-password-reset-mail": "^0.1.0"
             },
             "default-branch": true,
@@ -4160,7 +4161,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchantportal-core/tree/master"
             },
-            "time": "2021-07-08T14:04:02+00:00"
+            "time": "2021-07-20T16:59:53+00:00"
         },
         {
             "name": "spryker-feature/marketplace-order-management",
@@ -24505,6 +24506,53 @@
                 "source": "https://github.com/spryker/merchant-opening-hours-storage/tree/0.4.0"
             },
             "time": "2021-05-13T07:01:45+00:00"
+        },
+        {
+            "name": "spryker/merchant-portal-application",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-portal-application.git",
+                "reference": "de7d3756b16698a56dfc89d85274f7342423923a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-portal-application/zipball/de7d3756b16698a56dfc89d85274f7342423923a",
+                "reference": "de7d3756b16698a56dfc89d85274f7342423923a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/application": "^3.0.0",
+                "spryker/container": "^1.0.0",
+                "spryker/kernel": "^3.30.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "suggest": {
+                "spryker/log": "For logging request and response."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantPortalApplication module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-portal-application/tree/0.1.0"
+            },
+            "time": "2021-07-15T17:31:35+00:00"
         },
         {
             "name": "spryker/merchant-product",

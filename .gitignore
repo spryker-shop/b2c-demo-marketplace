@@ -52,6 +52,7 @@ config/Yves/cache_bust.php
 public/Yves/assets/
 public/Zed/assets/
 public/Backoffice/assets/
+public/MerchantPortal/assets/
 
 # vagrant stuff
 .vagrant

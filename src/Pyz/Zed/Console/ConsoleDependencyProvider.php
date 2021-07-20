@@ -105,6 +105,7 @@ use Spryker\Zed\RestRequestValidator\Communication\Console\BuildRestApiValidatio
 use Spryker\Zed\RestRequestValidator\Communication\Console\RemoveRestApiValidationCacheConsole;
 use Spryker\Zed\Router\Communication\Plugin\Console\BackendGatewayRouterCacheWarmUpConsole;
 use Spryker\Zed\Router\Communication\Plugin\Console\BackofficeRouterCacheWarmUpConsole;
+use Spryker\Zed\Router\Communication\Plugin\Console\MerchantPortalRouterCacheWarmUpConsole;
 use Spryker\Zed\Router\Communication\Plugin\Console\RouterCacheWarmUpConsole;
 use Spryker\Zed\SalesInvoice\Communication\Console\OrderInvoiceSendConsole;
 use Spryker\Zed\SalesOms\Communication\Console\ImportOrderItemsStatusConsole;
@@ -336,6 +337,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
             new BackofficeRouterCacheWarmUpConsole(),
             new BackendGatewayRouterCacheWarmUpConsole(),
+            new MerchantPortalRouterCacheWarmUpConsole(),
             new ResolvableClassCacheConsole(),
 
             new DataExportConsole(),
