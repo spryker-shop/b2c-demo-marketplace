@@ -7,6 +7,7 @@
 
 namespace Pyz\Zed\ProductManagement;
 
+use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractBlockListViewPlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantGui\Communication\Plugin\ProductManagement\MerchantProductAbstractListActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractViewActionViewDataExpanderPlugin;
@@ -30,6 +31,16 @@ use Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugi
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
     /**
+     * @return \Spryker\Zed\ProductManagement\Communication\Plugin\ProductAbstractViewPluginInterface[]
+     */
+    protected function getProductAbstractViewPlugins()
+    {
+        return [
+            new CmsBlockProductAbstractBlockListViewPlugin(),
+        ];
+    }
+
+    /**
      * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
      */
     protected function getStoreRelationFormTypePlugin()
@@ -48,47 +59,14 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 
     /**
-     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteEditFormExpanderPluginInterface[]
-     */
-    protected function getProductConcreteEditFormExpanderPlugins(): array
-    {
-        return [
-            new DiscontinuedProductConcreteEditFormExpanderPlugin(), #ProductDiscontinuedFeature
-            new ProductConcreteEditFormExpanderPlugin(), #ProductAlternativeFeature
-        ];
-    }
-
-    /**
      * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditTabsExpanderPluginInterface[]
      */
     protected function getProductConcreteFormEditTabsExpanderPlugins(): array
     {
         return [
-            new DiscontinueProductConcreteFormEditTabsExpanderPlugin(),
-            new ProductConcreteFormEditTabsExpanderPlugin(),
+            new DiscontinueProductConcreteFormEditTabsExpanderPlugin(), #ProductDiscontinuedFeature
+            new ProductConcreteFormEditTabsExpanderPlugin(), #ProductAlternativeFeature
             new ScheduledPriceProductConcreteFormEditTabsExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditDataProviderExpanderPluginInterface[]
-     */
-    protected function getProductConcreteFormEditDataProviderExpanderPlugins(): array
-    {
-        return [
-            new DiscontinueProductConcreteFormEditDataProviderExpanderPlugin(), #ProductDiscontinuedFeature
-            new ProductConcreteFormEditDataProviderExpanderPlugin(), #ProductAlternativeFeature
-        ];
-    }
-
-    /**
-     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductFormTransferMapperExpanderPluginInterface[]
-     */
-    protected function getProductFormTransferMapperExpanderPlugins(): array
-    {
-        return [
-            new ProductFormTransferMapperExpanderPlugin(), #ProductAlternativeFeature
-            new DiscontinuedNotesProductFormTransferMapperExpanderPlugin(), #ProductDiscontinuedFeature
         ];
     }
 
@@ -119,6 +97,39 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     {
         return [
             new ScheduledPriceProductConcreteEditViewExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteEditFormExpanderPluginInterface[]
+     */
+    protected function getProductConcreteEditFormExpanderPlugins(): array
+    {
+        return [
+            new DiscontinuedProductConcreteEditFormExpanderPlugin(), #ProductDiscontinuedFeature
+            new ProductConcreteEditFormExpanderPlugin(), #ProductAlternativeFeature
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditDataProviderExpanderPluginInterface[]
+     */
+    protected function getProductConcreteFormEditDataProviderExpanderPlugins(): array
+    {
+        return [
+            new DiscontinueProductConcreteFormEditDataProviderExpanderPlugin(), #ProductDiscontinuedFeature
+            new ProductConcreteFormEditDataProviderExpanderPlugin(), #ProductAlternativeFeature
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductFormTransferMapperExpanderPluginInterface[]
+     */
+    protected function getProductFormTransferMapperExpanderPlugins(): array
+    {
+        return [
+            new ProductFormTransferMapperExpanderPlugin(), #ProductAlternativeFeature
+            new DiscontinuedNotesProductFormTransferMapperExpanderPlugin(), #ProductDiscontinuedFeature
         ];
     }
 

@@ -8,6 +8,7 @@
 namespace Pyz\Zed\DataImport;
 
 use Spryker\Zed\CategoryDataImport\Communication\Plugin\CategoryDataImportPlugin;
+use Spryker\Zed\CategoryDataImport\Communication\Plugin\DataImport\CategoryStoreDataImportPlugin;
 use Spryker\Zed\CmsPageDataImport\Communication\Plugin\CmsPageDataImportPlugin;
 use Spryker\Zed\CmsPageDataImport\Communication\Plugin\CmsPageStoreDataImportPlugin;
 use Spryker\Zed\CmsSlotBlockDataImport\Communication\Plugin\CmsSlotBlockDataImportPlugin;
@@ -124,9 +125,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      */
     protected function addCategoryFacade(Container $container)
     {
-        $container[static::FACADE_CATEGORY] = function (Container $container) {
+        $container->set(static::FACADE_CATEGORY, function (Container $container) {
             return $container->getLocator()->category()->facade();
-        };
+        });
 
         return $container;
     }
@@ -138,9 +139,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      */
     protected function addProductBundleFacade(Container $container)
     {
-        $container[static::FACADE_PRODUCT_BUNDLE] = function (Container $container) {
+        $container->set(static::FACADE_PRODUCT_BUNDLE, function (Container $container) {
             return $container->getLocator()->productBundle()->facade();
-        };
+        });
 
         return $container;
     }
@@ -152,9 +153,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      */
     protected function addProductSearchFacade(Container $container)
     {
-        $container[static::FACADE_PRODUCT_SEARCH] = function (Container $container) {
+        $container->set(static::FACADE_PRODUCT_SEARCH, function (Container $container) {
             return $container->getLocator()->productSearch()->facade();
-        };
+        });
 
         return $container;
     }
@@ -271,6 +272,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new ReturnReasonDataImportPlugin(),
             new ContentNavigationDataImportPlugin(),
             new StockAddressDataImportPlugin(),
+            new CategoryStoreDataImportPlugin(),
             new MerchantDataImportPlugin(),
             new MerchantStoreDataImportPlugin(),
             new MerchantProfileDataImportPlugin(),

@@ -55,6 +55,7 @@
                 } only %}
             </div>
         {% endwidget %}
+
     </div>
     {% if data.isBundle != null %}
         {% embed molecule('toggler-item') with {
@@ -133,6 +134,8 @@
                     </button>
                 </div>
             {% endif %}
+
+            {% widget 'CartAddProductAsSeparateItemWidget' only %}{% endwidget %}
 
             {% set merchantProductOfferWidget = findWidget('MerchantProductOfferWidget', [data.product]) %}
             {% set productOffersCount = merchantProductOfferWidget ? merchantProductOfferWidget.productOffers | length : 0 %}

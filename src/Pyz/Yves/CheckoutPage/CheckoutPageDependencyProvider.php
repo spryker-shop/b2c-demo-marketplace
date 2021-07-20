@@ -15,7 +15,6 @@ use Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\SubForm\DummyMarketpl
 use Spryker\Yves\Kernel\Container;
 use Spryker\Yves\MerchantShipment\Plugin\CheckoutPage\MerchantShipmentCheckoutPageStepEnginePreRenderPlugin;
 use Spryker\Yves\Nopayment\Plugin\NopaymentHandlerPlugin;
-use Spryker\Yves\Payment\Plugin\PaymentFormFilterPlugin;
 use Spryker\Yves\StepEngine\Dependency\Form\StepEngineFormDataProviderInterface;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginCollection;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection;
@@ -64,7 +63,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 
     /**
-     * @return mixed[]
+     * @phpstan-return array<int, class-string<\Symfony\Component\Form\FormTypeInterface>|\Symfony\Component\Form\FormInterface>
+     *
+     * @return \Symfony\Component\Form\FormTypeInterface[]|string[]
      */
     protected function getCustomerStepSubForms(): array
     {
@@ -79,7 +80,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
      * @param string $subForm
      * @param string $blockPrefix
      *
-     * @return \SprykerShop\Yves\CustomerPage\Form\CustomerCheckoutForm|\Symfony\Component\Form\FormInterface
+     * @return \Symfony\Component\Form\FormInterface
      */
     protected function getCustomerCheckoutForm($subForm, $blockPrefix)
     {
@@ -94,7 +95,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     /**
      * @return \Symfony\Component\Form\FormFactory
      */
-    private function getFormFactory(): FormFactory
+    protected function getFormFactory(): FormFactory
     {
         return (new GlobalContainer())->get(static::SERVICE_FORM_FACTORY);
     }
@@ -106,16 +107,6 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     {
         return [
             CheckoutAddressCollectionForm::class,
-        ];
-    }
-
-    /**
-     * @return \Spryker\Yves\Checkout\Dependency\Plugin\Form\SubFormFilterPluginInterface[]
-     */
-    protected function getSubFormFilterPlugins(): array
-    {
-        return [
-            new PaymentFormFilterPlugin(),
         ];
     }
 
