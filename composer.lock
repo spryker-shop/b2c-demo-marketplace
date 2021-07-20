@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92faf5d846d5b990f87df4ee85c32f06",
+    "content-hash": "fdfb3563a84c7ff9560ff6841053717d",
     "packages": [
         {
             "name": "brick/math",
@@ -4548,28 +4548,29 @@
         },
         {
             "name": "spryker-feature/merchant",
-            "version": "202009.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/merchant.git",
-                "reference": "0c7205c648342952a6eaa44c631290def257e69c"
+                "reference": "e86477923c8eb71de66bc95531a416ebac7f7522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/merchant/zipball/0c7205c648342952a6eaa44c631290def257e69c",
-                "reference": "0c7205c648342952a6eaa44c631290def257e69c",
+                "url": "https://api.github.com/repos/spryker-feature/merchant/zipball/e86477923c8eb71de66bc95531a416ebac7f7522",
+                "reference": "e86477923c8eb71de66bc95531a416ebac7f7522",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/merchant": "^3.0.0",
-                "spryker/merchant-data-import": "^0.3.0",
-                "spryker/merchant-gui": "^3.4.0"
+                "spryker/merchant-data-import": "^0.4.0",
+                "spryker/merchant-gui": "^3.7.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202009.x-dev"
+                    "dev-master": "202107.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4580,7 +4581,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/merchant/tree/master"
             },
-            "time": "2020-09-02T09:34:08+00:00"
+            "time": "2021-07-07T18:23:23+00:00"
         },
         {
             "name": "spryker-feature/merchant-category",
@@ -5713,33 +5714,37 @@
         },
         {
             "name": "spryker-feature/spryker-core-back-office",
-            "version": "202009.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/spryker-core-back-office.git",
-                "reference": "834cc558c925d12ab66fc953b71d7ff7a6d54c04"
+                "reference": "1d1c3a6f7f2611cf9aac73fd5d41b9ff8db77d37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/spryker-core-back-office/zipball/834cc558c925d12ab66fc953b71d7ff7a6d54c04",
-                "reference": "834cc558c925d12ab66fc953b71d7ff7a6d54c04",
+                "url": "https://api.github.com/repos/spryker-feature/spryker-core-back-office/zipball/1d1c3a6f7f2611cf9aac73fd5d41b9ff8db77d37",
+                "reference": "1d1c3a6f7f2611cf9aac73fd5d41b9ff8db77d37",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/acl": "^3.7.0",
-                "spryker/auth": "^3.7.0",
                 "spryker/dashboard": "^1.1.0",
                 "spryker/gui": "^3.34.0",
+                "spryker/security-gui": "^0.2.0",
+                "spryker/security-oauth-user": "^1.0.0",
                 "spryker/user": "^3.11.0",
                 "spryker/user-locale": "^1.1.0",
                 "spryker/user-locale-gui": "^1.0.0",
+                "spryker/user-password-reset": "^0.2.0",
+                "spryker/user-password-reset-mail": "^0.2.0",
                 "spryker/zed-navigation": "^1.9.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202009.x-dev"
+                    "dev-master": "202107.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5750,7 +5755,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/spryker-core-back-office/tree/master"
             },
-            "time": "2020-09-02T09:33:53+00:00"
+            "time": "2021-06-24T15:50:31+00:00"
         },
         {
             "name": "spryker-feature/state-machine",
@@ -12041,75 +12046,6 @@
                 "source": "https://github.com/spryker/assertion/tree/master"
             },
             "time": "2019-11-14T07:54:49+00:00"
-        },
-        {
-            "name": "spryker/auth",
-            "version": "3.7.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/auth.git",
-                "reference": "d3e03accbd7a44db7e73f73bf80ea193746d4829"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/auth/zipball/d3e03accbd7a44db7e73f73bf80ea193746d4829",
-                "reference": "d3e03accbd7a44db7e73f73bf80ea193746d4829",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/event-dispatcher-extension": "^1.0.0",
-                "spryker/gui": "^3.26.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/session": "^3.0.0 || ^4.0.0",
-                "spryker/session-redis-extension": "^1.0.0",
-                "spryker/symfony": "^3.5.0",
-                "spryker/transfer": "^3.8.0",
-                "spryker/user": "^3.0.0",
-                "spryker/util-text": "^1.1.0"
-            },
-            "require-dev": {
-                "spryker/application": "*",
-                "spryker/code-sniffer": "*",
-                "spryker/config": "*",
-                "spryker/container": "*",
-                "spryker/discount": "*",
-                "spryker/event-dispatcher": "*",
-                "spryker/form": "*",
-                "spryker/propel": "*",
-                "spryker/router": "*",
-                "spryker/silex": "*",
-                "spryker/testify": "*",
-                "spryker/twig": "*",
-                "spryker/validator": "*"
-            },
-            "suggest": {
-                "spryker/config": "Add this module when you want to use the EventDispatcherPlugins.",
-                "spryker/container": "Add this module when you want to use the EventDispatcherPlugins.",
-                "spryker/event-dispatcher": "Add this module when you want to use the EventDispatcherPlugins.",
-                "spryker/silex": "If you want to use ServiceProvider."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Auth module",
-            "support": {
-                "source": "https://github.com/spryker/auth/tree/3.7.6"
-            },
-            "abandoned": "spryker/security-gui",
-            "time": "2021-06-03T09:19:29+00:00"
         },
         {
             "name": "spryker/auth-mail-connector-extension",
@@ -24029,20 +23965,20 @@
         },
         {
             "name": "spryker/merchant-data-import",
-            "version": "0.3.1",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-data-import.git",
-                "reference": "4246bc1fa96f3d0323db888b461dcd555b727bad"
+                "reference": "4ffb6f8dacfed8de2560bb6ecc636e17087701e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-data-import/zipball/4246bc1fa96f3d0323db888b461dcd555b727bad",
-                "reference": "4246bc1fa96f3d0323db888b461dcd555b727bad",
+                "url": "https://api.github.com/repos/spryker/merchant-data-import/zipball/4ffb6f8dacfed8de2560bb6ecc636e17087701e2",
+                "reference": "4ffb6f8dacfed8de2560bb6ecc636e17087701e2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/data-import": "^1.3.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/merchant": "^3.0.0",
@@ -24072,9 +24008,9 @@
             ],
             "description": "MerchantDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-data-import/tree/master"
+                "source": "https://github.com/spryker/merchant-data-import/tree/0.4.0"
             },
-            "time": "2020-05-15T13:58:38+00:00"
+            "time": "2021-02-24T08:50:39+00:00"
         },
         {
             "name": "spryker/merchant-extension",
@@ -39557,6 +39493,110 @@
             "time": "2020-09-24T11:48:26+00:00"
         },
         {
+            "name": "spryker/security-gui",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/security-gui.git",
+                "reference": "fbecb15d265049b03e9b49cfb2700f85ab233181"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/security-gui/zipball/fbecb15d265049b03e9b49cfb2700f85ab233181",
+                "reference": "fbecb15d265049b03e9b49cfb2700f85ab233181",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.30.0",
+                "spryker/messenger": "^3.0.0",
+                "spryker/security": "^1.3.0",
+                "spryker/security-extension": "^1.0.0",
+                "spryker/security-gui-extension": "^1.0.0",
+                "spryker/symfony": "^3.5.0",
+                "spryker/user": "^3.0.0",
+                "spryker/user-password-reset": "^0.2.0"
+            },
+            "require-dev": {
+                "spryker/application": "*",
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/customer": "*",
+                "spryker/event-dispatcher": "*",
+                "spryker/form": "*",
+                "spryker/propel": "*",
+                "spryker/router": "*",
+                "spryker/session": "*",
+                "spryker/testify": "*",
+                "spryker/validator": "*"
+            },
+            "suggest": {
+                "spryker/container": "Add this module to use the Container.",
+                "spryker/router": "You need to install this module when you want to use the RouterExtension interfaces."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SecurityGui module",
+            "support": {
+                "source": "https://github.com/spryker/security-gui/tree/0.2.0"
+            },
+            "time": "2021-03-19T08:54:29+00:00"
+        },
+        {
+            "name": "spryker/security-gui-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/security-gui-extension.git",
+                "reference": "f0041309dbfd705f083a3713f558e9d0802d27ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/security-gui-extension/zipball/f0041309dbfd705f083a3713f558e9d0802d27ab",
+                "reference": "f0041309dbfd705f083a3713f558e9d0802d27ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SecurityGuiExtension module",
+            "support": {
+                "source": "https://github.com/spryker/security-gui-extension/tree/1.0.0"
+            },
+            "time": "2020-12-16T08:45:12+00:00"
+        },
+        {
             "name": "spryker/security-merchant-portal-gui",
             "version": "0.4.6",
             "source": {
@@ -39619,6 +39659,108 @@
                 "source": "https://github.com/spryker/security-merchant-portal-gui/tree/0.4.6"
             },
             "time": "2021-07-15T11:58:22+00:00"
+        },
+        {
+            "name": "spryker/security-oauth-user",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/security-oauth-user.git",
+                "reference": "c1bb77ca1fbd127ae1120910a96f75a640ee03b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/security-oauth-user/zipball/c1bb77ca1fbd127ae1120910a96f75a640ee03b9",
+                "reference": "c1bb77ca1fbd127ae1120910a96f75a640ee03b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/acl": "^3.4.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/messenger": "^3.0.0",
+                "spryker/security-extension": "^1.0.0",
+                "spryker/security-oauth-user-extension": "^1.0.0",
+                "spryker/symfony": "^3.5.0",
+                "spryker/transfer": "^3.25.0",
+                "spryker/user": "^3.0.0",
+                "spryker/util-text": "^1.3.0"
+            },
+            "require-dev": {
+                "spryker/application": "*",
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/event-dispatcher": "*",
+                "spryker/propel": "*",
+                "spryker/router": "*",
+                "spryker/security": "*",
+                "spryker/session": "*",
+                "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/container": "Add this module to use the Container."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SecurityOauthUser module",
+            "support": {
+                "source": "https://github.com/spryker/security-oauth-user/tree/1.0.0"
+            },
+            "time": "2020-12-29T11:30:00+00:00"
+        },
+        {
+            "name": "spryker/security-oauth-user-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/security-oauth-user-extension.git",
+                "reference": "8a081c79a6018e911f64e4d903b582a2dc292819"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/security-oauth-user-extension/zipball/8a081c79a6018e911f64e4d903b582a2dc292819",
+                "reference": "8a081c79a6018e911f64e4d903b582a2dc292819",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SecurityOauthUserExtension module",
+            "support": {
+                "source": "https://github.com/spryker/security-oauth-user-extension/tree/1.0.0"
+            },
+            "time": "2020-12-03T13:12:06+00:00"
         },
         {
             "name": "spryker/security-system-user",
@@ -42948,6 +43090,53 @@
                 "source": "https://github.com/spryker/user-password-reset-extension/tree/0.2.0"
             },
             "time": "2021-03-11T08:39:27+00:00"
+        },
+        {
+            "name": "spryker/user-password-reset-mail",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/user-password-reset-mail.git",
+                "reference": "7b0c52774387a842327718303e8fc46ed23e26dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/user-password-reset-mail/zipball/7b0c52774387a842327718303e8fc46ed23e26dd",
+                "reference": "7b0c52774387a842327718303e8fc46ed23e26dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/kernel": "^3.33.0",
+                "spryker/mail": "^4.6.0",
+                "spryker/user-password-reset-extension": "^0.2.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*",
+                "spryker/user": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "UserPasswordResetMail module",
+            "support": {
+                "source": "https://github.com/spryker/user-password-reset-mail/tree/0.2.0"
+            },
+            "time": "2021-03-19T08:54:29+00:00"
         },
         {
             "name": "spryker/util-csv",
@@ -54652,212 +54841,6 @@
             "time": "2020-11-03T09:40:32+00:00"
         },
         {
-            "name": "spryker/security-gui",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/security-gui.git",
-                "reference": "fbecb15d265049b03e9b49cfb2700f85ab233181"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-gui/zipball/fbecb15d265049b03e9b49cfb2700f85ab233181",
-                "reference": "fbecb15d265049b03e9b49cfb2700f85ab233181",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/kernel": "^3.30.0",
-                "spryker/messenger": "^3.0.0",
-                "spryker/security": "^1.3.0",
-                "spryker/security-extension": "^1.0.0",
-                "spryker/security-gui-extension": "^1.0.0",
-                "spryker/symfony": "^3.5.0",
-                "spryker/user": "^3.0.0",
-                "spryker/user-password-reset": "^0.2.0"
-            },
-            "require-dev": {
-                "spryker/application": "*",
-                "spryker/code-sniffer": "*",
-                "spryker/container": "*",
-                "spryker/customer": "*",
-                "spryker/event-dispatcher": "*",
-                "spryker/form": "*",
-                "spryker/propel": "*",
-                "spryker/router": "*",
-                "spryker/session": "*",
-                "spryker/testify": "*",
-                "spryker/validator": "*"
-            },
-            "suggest": {
-                "spryker/container": "Add this module to use the Container.",
-                "spryker/router": "You need to install this module when you want to use the RouterExtension interfaces."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "SecurityGui module",
-            "support": {
-                "source": "https://github.com/spryker/security-gui/tree/0.2.0"
-            },
-            "time": "2021-03-19T08:54:29+00:00"
-        },
-        {
-            "name": "spryker/security-gui-extension",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/security-gui-extension.git",
-                "reference": "f0041309dbfd705f083a3713f558e9d0802d27ab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-gui-extension/zipball/f0041309dbfd705f083a3713f558e9d0802d27ab",
-                "reference": "f0041309dbfd705f083a3713f558e9d0802d27ab",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "SecurityGuiExtension module",
-            "support": {
-                "source": "https://github.com/spryker/security-gui-extension/tree/1.0.0"
-            },
-            "time": "2020-12-16T08:45:12+00:00"
-        },
-        {
-            "name": "spryker/security-oauth-user",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/security-oauth-user.git",
-                "reference": "c1bb77ca1fbd127ae1120910a96f75a640ee03b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-oauth-user/zipball/c1bb77ca1fbd127ae1120910a96f75a640ee03b9",
-                "reference": "c1bb77ca1fbd127ae1120910a96f75a640ee03b9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/acl": "^3.4.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/messenger": "^3.0.0",
-                "spryker/security-extension": "^1.0.0",
-                "spryker/security-oauth-user-extension": "^1.0.0",
-                "spryker/symfony": "^3.5.0",
-                "spryker/transfer": "^3.25.0",
-                "spryker/user": "^3.0.0",
-                "spryker/util-text": "^1.3.0"
-            },
-            "require-dev": {
-                "spryker/application": "*",
-                "spryker/code-sniffer": "*",
-                "spryker/container": "*",
-                "spryker/event-dispatcher": "*",
-                "spryker/propel": "*",
-                "spryker/router": "*",
-                "spryker/security": "*",
-                "spryker/session": "*",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/container": "Add this module to use the Container."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "SecurityOauthUser module",
-            "support": {
-                "source": "https://github.com/spryker/security-oauth-user/tree/1.0.0"
-            },
-            "time": "2020-12-29T11:30:00+00:00"
-        },
-        {
-            "name": "spryker/security-oauth-user-extension",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/security-oauth-user-extension.git",
-                "reference": "8a081c79a6018e911f64e4d903b582a2dc292819"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-oauth-user-extension/zipball/8a081c79a6018e911f64e4d903b582a2dc292819",
-                "reference": "8a081c79a6018e911f64e4d903b582a2dc292819",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "SecurityOauthUserExtension module",
-            "support": {
-                "source": "https://github.com/spryker/security-oauth-user-extension/tree/1.0.0"
-            },
-            "time": "2020-12-03T13:12:06+00:00"
-        },
-        {
             "name": "spryker/testify",
             "version": "3.39.0",
             "source": {
@@ -54929,53 +54912,6 @@
                 "source": "https://github.com/spryker/testify/tree/3.39.0"
             },
             "time": "2021-05-27T10:33:36+00:00"
-        },
-        {
-            "name": "spryker/user-password-reset-mail",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/user-password-reset-mail.git",
-                "reference": "7b0c52774387a842327718303e8fc46ed23e26dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-password-reset-mail/zipball/7b0c52774387a842327718303e8fc46ed23e26dd",
-                "reference": "7b0c52774387a842327718303e8fc46ed23e26dd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/kernel": "^3.33.0",
-                "spryker/mail": "^4.6.0",
-                "spryker/user-password-reset-extension": "^0.2.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/propel": "*",
-                "spryker/testify": "*",
-                "spryker/user": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "UserPasswordResetMail module",
-            "support": {
-                "source": "https://github.com/spryker/user-password-reset-mail/tree/0.2.0"
-            },
-            "time": "2021-03-19T08:54:29+00:00"
         },
         {
             "name": "spryker/web-profiler",
@@ -56153,6 +56089,96 @@
             "alias_normalized": "202107.0"
         },
         {
+            "package": "spryker-feature/marketplace-inventory-management",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-merchant",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-merchantportal-core",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-order-management",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-product",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-product-offer",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-product-offer-prices",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-product-options",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-promotions-discounts",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-return-management",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-shipment",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-wishlist",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/merchant",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/merchant-category",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/merchant-opening-hours",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
             "package": "spryker-feature/navigation",
             "version": "9999999-dev",
             "alias": "202107.0",
@@ -56436,6 +56462,18 @@
         },
         {
             "package": "spryker-feature/spryker-core",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/spryker-core-back-office",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/spryker-core-back-office",
             "version": "9999999-dev",
             "alias": "202107.0",
             "alias_normalized": "202107.0"
@@ -56514,6 +56552,7 @@
         "spryker-feature/marketplace-return-management": 20,
         "spryker-feature/marketplace-shipment": 20,
         "spryker-feature/marketplace-wishlist": 20,
+        "spryker-feature/merchant": 20,
         "spryker-feature/merchant-category": 20,
         "spryker-feature/merchant-opening-hours": 20,
         "spryker-feature/navigation": 20,
@@ -56540,6 +56579,7 @@
         "spryker-feature/search": 20,
         "spryker-feature/shipment": 20,
         "spryker-feature/spryker-core": 20,
+        "spryker-feature/spryker-core-back-office": 20,
         "spryker-feature/state-machine": 20,
         "spryker-feature/tax": 20,
         "spryker-feature/wishlist": 20,
