@@ -123,6 +123,7 @@
     },
     "resolutions": {
         "typescript": "3.8.3",
-        "fsevents": "2.1.3"
+        "fsevents": "2.1.3",
+        "@spryker/table": "0.2.0-next.36"
     }
 }
