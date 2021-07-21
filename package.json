@@ -31,7 +31,7 @@
         "zed": "node ./node_modules/@spryker/oryx-for-zed/build",
         "zed:watch": "node ./node_modules/@spryker/oryx-for-zed/build --dev",
         "zed:production": "node ./node_modules/@spryker/oryx-for-zed/build --prod",
-        "mp:build": "ng build",
+        "mp:build": "ng build && node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp",
         "mp:build:watch": "ng build --watch",
         "mp:build:production": "ng build --prod",
         "mp:test": "ng test",
