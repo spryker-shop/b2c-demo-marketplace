@@ -123,10 +123,6 @@
     },
     "resolutions": {
         "typescript": "3.8.3",
-        "fsevents": "2.1.3",
-        "@spryker/select": "0.2.0-next.7",
-        "@spryker/table": "0.2.0-next.32",
-        "@spryker/table.feature.editable": "0.1.0-next.4",
-        "@spryker/tree-select": "0.1.0-next.12"
+        "fsevents": "2.1.3"
     }
 }
