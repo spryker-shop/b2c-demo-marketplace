@@ -54,7 +54,7 @@ regions:
   EU:
     services:
       database:
-        database: mp_b2c_stg
+        database: korax_stg_b2c
         username: spryker
         password: secret
 
