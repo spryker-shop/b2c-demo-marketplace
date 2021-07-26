@@ -198,11 +198,15 @@ actions:
   - data_entity: merchant-profile-address
     source: data/import/common/common/marketplace/merchant_profile_address.csv
   - data_entity: merchant-store
-    source: data/import/common/common/marketplace/merchant_store.csv
+    source: data/import/common/DE/marketplace/merchant_store.csv
+  - data_entity: merchant-store
+    source: data/import/common/AT/marketplace/merchant_store.csv
   - data_entity: merchant-product-offer
     source: data/import/common/common/marketplace/merchant_product_offer.csv
   - data_entity: merchant-product-offer-store
-    source: data/import/common/common/marketplace/merchant_product_offer_store.csv
+    source: data/import/common/DE/marketplace/merchant_product_offer_store.csv
+  - data_entity: merchant-product-offer-store
+    source: data/import/common/AT/marketplace/merchant_product_offer_store.csv
   - data_entity: product-offer-validity
     source: data/import/common/common/marketplace/product_offer_validity.csv
   - data_entity: price-product-offer
