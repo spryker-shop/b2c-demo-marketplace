@@ -1,96 +1,26 @@
-{# @var data.order \Generated\Shared\Transfer\OrderTransfer #}
+{% extends view('return-create', '@SprykerShop:SalesReturnPage') %}
 
-{% extends template('page-layout-sales-return', 'SalesReturnPage') %}
+{% block breadcrumbs %}{% endblock %}
 
-{% define data = {
-    form: _view.returnCreateForm,
-    order: _view.order,
-    title: 'return_page.title' | trans,
-} %}
+{% block salesReturnContent %}
+    {% set contentWrapperClass = 'box spacing-top spacing-top--big' %}
 
-{% block breadcrumbs %}
-    {% set breadcrumbExtension = [
-        {
-            label: 'return_page.breadcrumb.create_return' | trans,
-        },
-    ] %}
     {{ parent() }}
 {% endblock %}
 
-{% set contentWrapperClass = 'box' %}
+{% block salesReturnContentHeader %}
+    {% include molecule('return-title-block', 'SalesReturnPage') with {
+        data: {
+            idSalesOrder: data.order.idSalesOrder,
+        },
+    } only %}
+{% endblock %}
 
-{% block salesReturnContent %}
-
-    <div class="{{ contentWrapperClass }}">
-
-        {% block salesReturnContentHeader %}
-            {% set backLinkClass = 'float-right' %}
-
-            {% block backOrderLink %}
-                {% include molecule('order-detail-link', 'CustomerPage') ignore missing with {
-                    class: backLinkClass,
-                    data: {
-                        idSalesOrder: data.order.idSalesOrder,
-                    },
-                } only %}
-            {% endblock %}
-
-            {% block salesReturnPageTitle %}
-                <h5>{{ 'return_page.return.title' | trans }}</h5>
-            {% endblock %}
-
-            {% block salesReturnPageHeaderSeparator %}
-                <hr class="box__separator">
-            {% endblock %}
-        {% endblock %}
-
-        {% set salesReturnOrderListClass = '' %}
-
-        {% block salesReturnOrderInfo %}
-            <ul class="{{ salesReturnOrderListClass }}">
-                {% block salesReturnOrderInfoInner %}
-                    {% set salesReturnItemClass = '' %}
-
-                    {% block salesReturnIdItemInfo %}
-                        <li class="{{ salesReturnItemClass }}">
-                            {% block salesReturnIdItemInfoInner %}
-                                {{ 'return_page.order_reference' | trans }}
-                                <strong>{{ data.order.orderReference }}</strong>
-                            {% endblock %}
-                        </li>
-                    {% endblock %}
-
-                    {% block salesReturnDateItemInfo %}
-                        <li class="{{ salesReturnItemClass }}">
-                            {% block salesReturnDateItemInfoInner %}
-                                {{ 'return_page.order_date' | trans }}
-                                <strong>{{ data.order.createdAt | formatDateTime }}</strong>
-                            {% endblock %}
-                        </li>
-                    {% endblock %}
-                {% endblock %}
-            </ul>
-        {% endblock %}
-
-        {% if widgetGlobalExists('MerchantSalesReturnCreateFormWidget') %}
-            {% widget 'MerchantSalesReturnCreateFormWidget' args [data.form, data.order] only %}{% endwidget %}
-        {% else %}
-            {% include molecule('return-create-form', 'SalesReturnPage') with {
-                data: {
-                    form: data.form,
-                    order: data.order,
-                },
-            } only %}
-        {% endif %}
-
-        {% block buttonsStateHandler %}
-            {% include molecule('order-buttons-disable-toggler', 'SalesReturnPage') with {
-                attributes: {
-                    'trigger-class-name': 'js-return-create__trigger-state-toggler',
-                    'target-class-name': 'js-return-create__target-state-toggler',
-                },
-            } only %}
-        {% endblock %}
-
-    </div>
+{% block salesReturnOrderInfo %}
+    {% include molecule('return-header-information', 'SalesReturnPage') with {
+        data: {
+            orderReference: data.order.orderReference,
+            createdAt: data.order.createdAt,
+        },
+    } only %}
 {% endblock %}

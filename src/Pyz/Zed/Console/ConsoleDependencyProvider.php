@@ -310,9 +310,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new QueueSetupConsole(),
             new SetUserPermissionsConsole(),
 
-            new MaintenanceEnableConsole(),
-            new MaintenanceDisableConsole(),
-
             new DeactivateDiscontinuedProductsConsole(), #ProductDiscontinuedFeature
 
             new PriceProductStoreOptimizeConsole(),
@@ -412,6 +409,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             if (class_exists(SecurityCheckerCommand::class)) {
                 $commands[] = new SecurityCheckerCommand();
             }
+
+            $commands[] = new MaintenanceEnableConsole();
+            $commands[] = new MaintenanceDisableConsole();
         }
 
         return $commands;
