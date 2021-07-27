@@ -3203,9 +3203,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spryker/oryx-for-zed@npm:~2.11.1":
-  version: 2.11.1
-  resolution: "@spryker/oryx-for-zed@npm:2.11.1"
+"@spryker/oryx-for-zed@npm:~2.11.2":
+  version: 2.11.2
+  resolution: "@spryker/oryx-for-zed@npm:2.11.2"
   dependencies:
     "@babel/core": ~7.12.3
     "@babel/preset-env": ~7.12.1
@@ -3228,7 +3228,7 @@ __metadata:
     terser-webpack-plugin: ~4.2.2
     webpack: ~4.27.1
     yargs: ~13.3.0
-  checksum: b60825c767d0e555850ecb692b8a38456cf7a0d8ea1cfee8958d58047b26af27c2edb6f76239fbbfb9ccaf81f58bae118807ec2118be9f89def49a58e314491d
+  checksum: 36814618b59819dea4bfd8b11f9af199371ee21e39ede2fb215f1768c2c64a96a8fdbbe864d577c2c6e52c38fa5741e1486a86f7236d2f484fe502b95819413a
   languageName: node
   linkType: hard
 
@@ -19389,7 +19389,7 @@ resolve@^0.6.1:
     "@spryker/frontend-config.prettier": ~0.0.2
     "@spryker/frontend-config.stylelint": ~0.0.5
     "@spryker/frontend-config.tslint": ~0.0.5
-    "@spryker/oryx-for-zed": ~2.11.1
+    "@spryker/oryx-for-zed": ~2.11.2
     "@spryker/sass-resources-loader": ~2.0.1-spryker.0.1.0
     "@types/jest": ~26.0.23
     "@types/node": ~12.11.7

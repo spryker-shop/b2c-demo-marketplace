@@ -232,6 +232,10 @@
             border-top: rem(1) solid $setting-color-gray-3;
         }
 
+        &--with-vertical-padding {
+            padding: rem(16) 0 rem(14);
+        }
+
         &--mobile-size {
             @include helper-breakpoint-media-max($md-max) {
                 font-size: rem(14);

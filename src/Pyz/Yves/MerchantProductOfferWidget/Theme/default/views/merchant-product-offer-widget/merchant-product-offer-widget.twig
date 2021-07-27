@@ -5,13 +5,25 @@
 } %}
 
 {% block content %}
-    {% include molecule('merchant-block', 'MerchantProductOfferWidget') with {
-        data: {
-            productView: data.productView,
-            radioGroupName: 'product_offer_reference',
-            productOffers: data.productOffers,
-            isRadioButtonVisible: isRadioButtonVisible,
-            isTitleVisible: data.isTitleVisible,
-        },
-    } only %}
+    {% if data.isTitleVisible %}
+        <h2 class="title title--h6 title--uppercase title--with-border title--with-vertical-padding">
+            {{ 'merchant_product_offer.sold_by' | trans }}
+        </h2>
+    {% endif %}
+
+    {% for productOffer in data.productOffers %}
+        {% include molecule('merchant-product-offer-item', 'MerchantProductOfferWidget') with {
+            data: {
+                isChecked: data.productView.productOfferReference is same as(productOffer.productOfferReference),
+                radioGroupName: 'product_offer_reference',
+                productOfferReference: productOffer.productOfferReference | default,
+                merchantName: productOffer.merchantStorage.name | default,
+                merchantUrl: productOffer.merchantStorage.merchantUrl | default,
+                price: productOffer.price.price | default(null),
+                currencyIsoCode: productOffer.price.currency.code | default(null),
+                isRadioButtonVisible: isRadioButtonVisible,
+                currentProductPrice: productOffer.price,
+            },
+        } only %}
+    {% endfor %}
 {% endblock %}

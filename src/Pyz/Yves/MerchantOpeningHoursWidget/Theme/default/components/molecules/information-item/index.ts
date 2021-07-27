@@ -1,1 +1,0 @@
-import './information-item.scss';

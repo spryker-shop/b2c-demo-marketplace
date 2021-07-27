@@ -1,20 +1,4 @@
-{% extends molecule('money-price') %}
-
-{% define config = {
-    name: 'volume-price',
-    tag: 'volume-price',
-} %}
-
-{% define data = {
-    amount: required,
-    originalAmount: null,
-} %}
-
-{% define attributes = {
-    itemscope: '',
-    itemprop: 'offers',
-    itemtype: 'https://schema.org/Offer',
-} %}
+{% extends molecule('volume-price', '@SprykerShop:PriceProductVolumeWidget') %}
 
 {% block body %}
     {% if data.originalAmount is not empty and data.originalAmount > data.amount -%}

@@ -6,6 +6,19 @@
 
 {% block extraClass %}{% endblock %}
 
+{% block contentCol %}
+    <div class="col col--expand col--reset-min-width">
+        {{ block('content') }}
+    </div>
+{% endblock %}
+
+{% block merchantInfoCol %}
+    <div class="col col--expand col--reset-min-width">
+        {{ block('merchantName') }}
+        {{ block('merchantLink') }}
+    </div>
+{% endblock %}
+
 {% block merchantName %}
     <span class="{{ config.name }}__name">{{ data.merchantName }}</span>
 {% endblock %}
