@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a78b092b29452707c389547cf943dcd1",
+    "content-hash": "4bb5b2349fdc740e0704a2c7fcacdb18",
     "packages": [
         {
             "name": "brick/math",
@@ -4038,29 +4038,72 @@
             "time": "2021-04-29T15:05:32+00:00"
         },
         {
+            "name": "spryker-feature/marketplace-cart-notes",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker-feature/marketplace-cart-notes.git",
+                "reference": "654543078115edd2d4de72183e6f7432033cc373"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-cart-notes/zipball/654543078115edd2d4de72183e6f7432033cc373",
+                "reference": "654543078115edd2d4de72183e6f7432033cc373",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/cart-note-merchant-sales-order-gui": "^0.1.0"
+            },
+            "suggest": {
+                "spryker-feature/cart-notes": "Recommended feature dependency.",
+                "spryker-feature/marketplace-order-management": "Recommended feature dependency."
+            },
+            "default-branch": true,
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "202107.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Marketplace Cart Notes [feature]",
+            "support": {
+                "source": "https://github.com/spryker-feature/marketplace-cart-notes/tree/master"
+            },
+            "time": "2021-07-27T13:37:00+00:00"
+        },
+        {
             "name": "spryker-feature/marketplace-inventory-management",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-inventory-management.git",
-                "reference": "f22e5f5be5053fdc1a5587d846e4d8dd612cb438"
+                "reference": "cad7b84c728c08be25060fb5a4cc1f47e8839087"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-inventory-management/zipball/f22e5f5be5053fdc1a5587d846e4d8dd612cb438",
-                "reference": "f22e5f5be5053fdc1a5587d846e4d8dd612cb438",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-inventory-management/zipball/cad7b84c728c08be25060fb5a4cc1f47e8839087",
+                "reference": "cad7b84c728c08be25060fb5a4cc1f47e8839087",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "spryker/merchant-stock": "^0.2.0",
-                "spryker/merchant-stock-data-import": "^0.2.0",
+                "spryker/merchant-stock": "^0.2.3",
+                "spryker/merchant-stock-data-import": "^0.2.1",
                 "spryker/merchant-stock-gui": "^0.1.0",
                 "spryker/product-offer-availability": "^0.7.0",
                 "spryker/product-offer-availability-storage": "^0.8.0",
-                "spryker/product-offer-stock": "^0.5.0",
-                "spryker/product-offer-stock-data-import": "^0.6.0",
+                "spryker/product-offer-stock": "^0.5.1",
+                "spryker/product-offer-stock-data-import": "^0.6.1",
                 "spryker/product-offer-stock-gui": "^0.2.0"
+            },
+            "suggest": {
+                "spryker-feature/inventory-management": "Recommended feature dependency.",
+                "spryker-feature/marketplace-product-offer": "Recommended feature dependency."
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4077,7 +4120,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-inventory-management/tree/master"
             },
-            "time": "2021-07-08T13:46:43+00:00"
+            "time": "2021-07-27T13:43:28+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant",
@@ -4085,12 +4128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant.git",
-                "reference": "369709e5592a710c0c3e67a2c3c3ad96adc4bf69"
+                "reference": "90744921ea63ad53b03bc1032403c9084095b241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/369709e5592a710c0c3e67a2c3c3ad96adc4bf69",
-                "reference": "369709e5592a710c0c3e67a2c3c3ad96adc4bf69",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/90744921ea63ad53b03bc1032403c9084095b241",
+                "reference": "90744921ea63ad53b03bc1032403c9084095b241",
                 "shasum": ""
             },
             "require": {
@@ -4101,10 +4144,10 @@
                 "spryker/merchant-profile": "^0.5.0",
                 "spryker/merchant-profile-data-import": "^0.5.0",
                 "spryker/merchant-profile-gui": "^0.6.0",
-                "spryker/merchant-search": "^0.3.0",
+                "spryker/merchant-search": "^0.3.1",
                 "spryker/merchant-storage": "^0.2.0",
-                "spryker/merchant-user": "^0.7.0",
-                "spryker/merchant-user-gui": "^0.2.0"
+                "spryker/merchant-user": "^0.7.2",
+                "spryker/merchant-user-gui": "^0.2.3"
             },
             "suggest": {
                 "spryker-feature/merchant": "Recommended feature dependency."
@@ -4124,7 +4167,81 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchant/tree/master"
             },
-            "time": "2021-07-08T13:29:01+00:00"
+            "time": "2021-07-26T20:30:11+00:00"
+        },
+        {
+            "name": "spryker-feature/marketplace-merchant-portal-product-management",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker-feature/marketplace-merchant-portal-product-management.git",
+                "reference": "63377c2290f7a911adfa9516a7b249a6074cad8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-portal-product-management/zipball/63377c2290f7a911adfa9516a7b249a6074cad8b",
+                "reference": "63377c2290f7a911adfa9516a7b249a6074cad8b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "suggest": {
+                "spryker-feature/marketplace-product": "Recommended feature dependency."
+            },
+            "default-branch": true,
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "202107.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Marketplace Merchant Portal Product Management [feature]",
+            "support": {
+                "source": "https://github.com/spryker-feature/marketplace-merchant-portal-product-management/tree/master"
+            },
+            "time": "2021-07-27T13:36:16+00:00"
+        },
+        {
+            "name": "spryker-feature/marketplace-merchant-portal-product-offer-management",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker-feature/marketplace-merchant-portal-product-offer-management.git",
+                "reference": "f15d92f7d92a2836392c31a882a44f46a0215847"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-portal-product-offer-management/zipball/f15d92f7d92a2836392c31a882a44f46a0215847",
+                "reference": "f15d92f7d92a2836392c31a882a44f46a0215847",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "suggest": {
+                "spryker-feature/marketplace-product-offer": "Recommended feature dependency."
+            },
+            "default-branch": true,
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "202107.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Marketplace Merchant Portal Product Offer Management [feature]",
+            "support": {
+                "source": "https://github.com/spryker-feature/marketplace-merchant-portal-product-offer-management/tree/master"
+            },
+            "time": "2021-07-27T13:36:38+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchantportal-core",
@@ -4132,19 +4249,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchantportal-core.git",
-                "reference": "c3611201caac4e86354a3bcd7bf36878ac957e9b"
+                "reference": "0a3adc9e5f5719bf24c548ffeda93280b8b56c3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/c3611201caac4e86354a3bcd7bf36878ac957e9b",
-                "reference": "c3611201caac4e86354a3bcd7bf36878ac957e9b",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/0a3adc9e5f5719bf24c548ffeda93280b8b56c3e",
+                "reference": "0a3adc9e5f5719bf24c548ffeda93280b8b56c3e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "spryker/gui-table": "^0.4.6",
+                "spryker/gui-table": "^0.5.0",
                 "spryker/merchant-portal-application": "^0.1.0",
-                "spryker/merchant-user-password-reset-mail": "^0.1.0"
+                "spryker/merchant-user-password-reset-mail": "^0.1.0",
+                "spryker/zed-ui": "^0.6.0"
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4161,7 +4279,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchantportal-core/tree/master"
             },
-            "time": "2021-07-20T16:59:53+00:00"
+            "time": "2021-07-27T13:46:03+00:00"
         },
         {
             "name": "spryker-feature/marketplace-order-management",
@@ -4169,12 +4287,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-order-management.git",
-                "reference": "fe322099321ceee142cedee1863f9609443652a1"
+                "reference": "2a4f9671cb353c29bf513de08295ac883ed1ba01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-order-management/zipball/fe322099321ceee142cedee1863f9609443652a1",
-                "reference": "fe322099321ceee142cedee1863f9609443652a1",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-order-management/zipball/2a4f9671cb353c29bf513de08295ac883ed1ba01",
+                "reference": "2a4f9671cb353c29bf513de08295ac883ed1ba01",
                 "shasum": ""
             },
             "require": {
@@ -4186,7 +4304,6 @@
                 "spryker/merchant-sales-order": "^0.8.2",
                 "spryker/merchant-sales-order-data-export": "^0.1.0",
                 "spryker/merchant-sales-order-merchant-user-gui": "^0.2.6",
-                "spryker/merchant-sales-order-threshold-gui": "^0.1.0",
                 "spryker/oms-product-offer-reservation": "^0.1.0",
                 "spryker/product-offer-reservation-gui": "^0.1.0",
                 "spryker/product-offer-sales": "^0.1.0"
@@ -4211,7 +4328,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-order-management/tree/master"
             },
-            "time": "2021-07-08T13:54:44+00:00"
+            "time": "2021-07-27T12:53:55+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product",
@@ -4219,22 +4336,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product.git",
-                "reference": "90bce8279192bbe006b14d38c9d19bcf2fd60eae"
+                "reference": "ae8a124ea41b9b14e26e7fdf89a488e4326a2150"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product/zipball/90bce8279192bbe006b14d38c9d19bcf2fd60eae",
-                "reference": "90bce8279192bbe006b14d38c9d19bcf2fd60eae",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product/zipball/ae8a124ea41b9b14e26e7fdf89a488e4326a2150",
+                "reference": "ae8a124ea41b9b14e26e7fdf89a488e4326a2150",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker-shop/merchant-product-widget": "^0.3.0",
-                "spryker/merchant-product": "^0.2.4",
+                "spryker/merchant-product": "^0.2.6",
                 "spryker/merchant-product-data-import": "^0.2.1",
                 "spryker/merchant-product-gui": "^0.2.1",
                 "spryker/merchant-product-search": "^0.2.0",
                 "spryker/merchant-product-storage": "^0.1.1"
+            },
+            "suggest": {
+                "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
+                "spryker-feature/product": "Recommended feature dependency."
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4251,7 +4372,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-product/tree/master"
             },
-            "time": "2021-07-08T14:06:22+00:00"
+            "time": "2021-07-27T13:46:05+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product-offer",
@@ -4259,12 +4380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product-offer.git",
-                "reference": "05ad6ba3e4f41a223612afbd2cb38fa1e57854fd"
+                "reference": "cc5e03e0e8bb672470b6bb632654ef3c18b3b007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer/zipball/05ad6ba3e4f41a223612afbd2cb38fa1e57854fd",
-                "reference": "05ad6ba3e4f41a223612afbd2cb38fa1e57854fd",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer/zipball/cc5e03e0e8bb672470b6bb632654ef3c18b3b007",
+                "reference": "cc5e03e0e8bb672470b6bb632654ef3c18b3b007",
                 "shasum": ""
             },
             "require": {
@@ -4272,19 +4393,14 @@
                 "spryker-shop/merchant-product-offer-widget": "^0.14.0",
                 "spryker/merchant-product-offer": "^0.8.0",
                 "spryker/merchant-product-offer-data-import": "^0.10.0",
-                "spryker/merchant-product-offer-gui": "^0.2.0",
+                "spryker/merchant-product-offer-gui": "^0.2.1",
                 "spryker/merchant-product-offer-search": "^0.5.0",
                 "spryker/merchant-product-offer-storage": "^0.13.0",
-                "spryker/product-offer": "^0.7.0",
-                "spryker/product-offer-availability": "^0.7.0",
-                "spryker/product-offer-availability-storage": "^0.8.0",
-                "spryker/product-offer-gui": "^0.2.0",
-                "spryker/product-offer-stock": "^0.5.0",
-                "spryker/product-offer-stock-data-import": "^0.6.0",
-                "spryker/product-offer-stock-gui": "^0.2.0",
-                "spryker/product-offer-validity": "^0.3.0",
+                "spryker/product-offer": "^0.7.1",
+                "spryker/product-offer-gui": "^0.2.2",
+                "spryker/product-offer-validity": "^0.3.1",
                 "spryker/product-offer-validity-data-import": "^0.4.0",
-                "spryker/product-offer-validity-gui": "^0.1.0"
+                "spryker/product-offer-validity-gui": "^0.1.1"
             },
             "suggest": {
                 "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
@@ -4305,7 +4421,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-product-offer/tree/master"
             },
-            "time": "2021-05-21T16:43:05+00:00"
+            "time": "2021-07-26T20:33:13+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product-offer-prices",
@@ -4358,20 +4474,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product-options.git",
-                "reference": "ee71184f13838ef01a7f3a8510c284c47f068c98"
+                "reference": "da9fac5458ba0de8271db1ef9e0c4118a26edd5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-options/zipball/ee71184f13838ef01a7f3a8510c284c47f068c98",
-                "reference": "ee71184f13838ef01a7f3a8510c284c47f068c98",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-options/zipball/da9fac5458ba0de8271db1ef9e0c4118a26edd5c",
+                "reference": "da9fac5458ba0de8271db1ef9e0c4118a26edd5c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "spryker/merchant-product-option": "^0.1.0",
+                "spryker/merchant-product-option": "^0.1.1",
                 "spryker/merchant-product-option-data-import": "^0.1.0",
                 "spryker/merchant-product-option-gui": "^0.1.0",
                 "spryker/merchant-product-option-storage": "^0.1.0"
+            },
+            "suggest": {
+                "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
+                "spryker-feature/product-options": "Recommended feature dependency."
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4388,7 +4508,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-product-options/tree/master"
             },
-            "time": "2021-07-08T13:42:03+00:00"
+            "time": "2021-07-27T13:35:12+00:00"
         },
         {
             "name": "spryker-feature/marketplace-promotions-discounts",
@@ -4436,12 +4556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-return-management.git",
-                "reference": "364870c8605d9aebcb1abef47dbc0a166a52097e"
+                "reference": "b998c61cc7926d22a302bb0cac36592c208b8193"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-return-management/zipball/364870c8605d9aebcb1abef47dbc0a166a52097e",
-                "reference": "364870c8605d9aebcb1abef47dbc0a166a52097e",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-return-management/zipball/b998c61cc7926d22a302bb0cac36592c208b8193",
+                "reference": "b998c61cc7926d22a302bb0cac36592c208b8193",
                 "shasum": ""
             },
             "require": {
@@ -4452,6 +4572,10 @@
                 "spryker/merchant-sales-return-gui": "^0.1.0",
                 "spryker/merchant-sales-return-merchant-user-gui": "^0.1.0",
                 "spryker/sales-return": "^1.1.0"
+            },
+            "suggest": {
+                "spryker-feature/marketplace-order-management": "Recommended feature dependency.",
+                "spryker-feature/return-management": "Recommended feature dependency."
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4468,7 +4592,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-return-management/tree/master"
             },
-            "time": "2021-07-12T16:15:23+00:00"
+            "time": "2021-07-27T13:34:50+00:00"
         },
         {
             "name": "spryker-feature/marketplace-shipment",
@@ -4476,12 +4600,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-shipment.git",
-                "reference": "d728bc9df01de96d547a8990def8dc0c90ea8dfe"
+                "reference": "420f67b3678261e73adc5ed2c10176c95b5c21e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-shipment/zipball/d728bc9df01de96d547a8990def8dc0c90ea8dfe",
-                "reference": "d728bc9df01de96d547a8990def8dc0c90ea8dfe",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-shipment/zipball/420f67b3678261e73adc5ed2c10176c95b5c21e5",
+                "reference": "420f67b3678261e73adc5ed2c10176c95b5c21e5",
                 "shasum": ""
             },
             "require": {
@@ -4490,6 +4614,7 @@
                 "spryker/merchant-shipment-gui": "^0.1.0"
             },
             "suggest": {
+                "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
                 "spryker-feature/shipment": "Recommended feature dependency."
             },
             "default-branch": true,
@@ -4507,7 +4632,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-shipment/tree/master"
             },
-            "time": "2021-07-08T13:56:32+00:00"
+            "time": "2021-07-27T13:32:45+00:00"
         },
         {
             "name": "spryker-feature/marketplace-wishlist",
@@ -4515,12 +4640,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-wishlist.git",
-                "reference": "8bb3b0b11a03e2fb283a997edbcf84d81e40ffe5"
+                "reference": "35afe148cdc8d645509be75b0738efc792817c80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-wishlist/zipball/8bb3b0b11a03e2fb283a997edbcf84d81e40ffe5",
-                "reference": "8bb3b0b11a03e2fb283a997edbcf84d81e40ffe5",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-wishlist/zipball/35afe148cdc8d645509be75b0738efc792817c80",
+                "reference": "35afe148cdc8d645509be75b0738efc792817c80",
                 "shasum": ""
             },
             "require": {
@@ -4530,6 +4655,10 @@
                 "spryker/merchant-product-offer-wishlist": "^0.2.1",
                 "spryker/merchant-product-wishlist": "^0.1.0",
                 "spryker/wishlist": "^8.3.0"
+            },
+            "suggest": {
+                "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
+                "spryker-feature/wishlist": "Recommended feature dependency."
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4546,7 +4675,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-wishlist/tree/master"
             },
-            "time": "2021-07-08T13:45:12+00:00"
+            "time": "2021-07-27T13:34:18+00:00"
         },
         {
             "name": "spryker-feature/merchant",
@@ -4591,12 +4720,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/merchant-category.git",
-                "reference": "b68043f9c5cd1092b99b848bbf4ff9d8f2347ec3"
+                "reference": "9b29f452d04b2833162e54345259b21802b38a0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/merchant-category/zipball/b68043f9c5cd1092b99b848bbf4ff9d8f2347ec3",
-                "reference": "b68043f9c5cd1092b99b848bbf4ff9d8f2347ec3",
+                "url": "https://api.github.com/repos/spryker-feature/merchant-category/zipball/9b29f452d04b2833162e54345259b21802b38a0f",
+                "reference": "9b29f452d04b2833162e54345259b21802b38a0f",
                 "shasum": ""
             },
             "require": {
@@ -4604,6 +4733,10 @@
                 "spryker/merchant-category": "^0.2.1",
                 "spryker/merchant-category-data-import": "^0.2.1",
                 "spryker/merchant-category-search": "^0.1.0"
+            },
+            "suggest": {
+                "spryker-feature/category-management": "Recommended feature dependency.",
+                "spryker-feature/marketplace-merchant": "Recommended feature dependency."
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4620,7 +4753,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/merchant-category/tree/master"
             },
-            "time": "2021-07-08T13:35:22+00:00"
+            "time": "2021-07-27T13:35:54+00:00"
         },
         {
             "name": "spryker-feature/merchant-opening-hours",
@@ -13516,6 +13649,50 @@
                 "source": "https://github.com/spryker/cart-note-merchant-portal-gui/tree/0.1.2"
             },
             "time": "2020-08-31T14:16:02+00:00"
+        },
+        {
+            "name": "spryker/cart-note-merchant-sales-order-gui",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/cart-note-merchant-sales-order-gui.git",
+                "reference": "c737a9f2fc2330e5cee3ae0c755b6c16e29772a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/cart-note-merchant-sales-order-gui/zipball/c737a9f2fc2330e5cee3ae0c755b6c16e29772a0",
+                "reference": "c737a9f2fc2330e5cee3ae0c755b6c16e29772a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/cart-note": "^1.0.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/symfony": "^3.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "CartNoteMerchantSalesOrderGui module",
+            "support": {
+                "source": "https://github.com/spryker/cart-note-merchant-sales-order-gui/tree/0.1.0"
+            },
+            "time": "2020-11-13T15:08:28+00:00"
         },
         {
             "name": "spryker/cart-note-product-bundle-connector",
@@ -22812,16 +22989,16 @@
         },
         {
             "name": "spryker/gui-table",
-            "version": "0.4.6",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/gui-table.git",
-                "reference": "997ce4fda13f4b591add83fbc84a9ade667aa9b8"
+                "reference": "517e64e069ad57e08a4ae27bc44f0319c7b11bd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/gui-table/zipball/997ce4fda13f4b591add83fbc84a9ade667aa9b8",
-                "reference": "997ce4fda13f4b591add83fbc84a9ade667aa9b8",
+                "url": "https://api.github.com/repos/spryker/gui-table/zipball/517e64e069ad57e08a4ae27bc44f0319c7b11bd3",
+                "reference": "517e64e069ad57e08a4ae27bc44f0319c7b11bd3",
                 "shasum": ""
             },
             "require": {
@@ -22861,9 +23038,9 @@
             ],
             "description": "GuiTable module",
             "support": {
-                "source": "https://github.com/spryker/gui-table/tree/0.4.6"
+                "source": "https://github.com/spryker/gui-table/tree/0.5.0"
             },
-            "time": "2021-07-20T13:22:44+00:00"
+            "time": "2021-07-26T08:39:59+00:00"
         },
         {
             "name": "spryker/guzzle",
@@ -25996,48 +26173,6 @@
                 "source": "https://github.com/spryker/merchant-sales-order-merchant-user-gui/tree/0.2.6"
             },
             "time": "2021-06-25T14:18:24+00:00"
-        },
-        {
-            "name": "spryker/merchant-sales-order-threshold-gui",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/merchant-sales-order-threshold-gui.git",
-                "reference": "3af8466cd38175cf5a41981227f3d5feff80f717"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-sales-order-threshold-gui/zipball/3af8466cd38175cf5a41981227f3d5feff80f717",
-                "reference": "3af8466cd38175cf5a41981227f3d5feff80f717",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/sales-order-threshold-gui": "^1.6.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "MerchantSalesOrderThresholdGui module",
-            "support": {
-                "source": "https://github.com/spryker/merchant-sales-order-threshold-gui/tree/0.1.0"
-            },
-            "time": "2020-11-18T08:46:37+00:00"
         },
         {
             "name": "spryker/merchant-sales-return",
@@ -33191,74 +33326,6 @@
             "time": "2020-10-27T13:15:38+00:00"
         },
         {
-            "name": "spryker/product-merchant-portal-gui",
-            "version": "0.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/product-merchant-portal-gui.git",
-                "reference": "247bbe588498d869dd02ddd6e95091a75443fa66"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/247bbe588498d869dd02ddd6e95091a75443fa66",
-                "reference": "247bbe588498d869dd02ddd6e95091a75443fa66",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/category": "^4.21.0 || ^5.0.0",
-                "spryker/currency": "^3.0.0",
-                "spryker/decimal-object": "^1.0.0",
-                "spryker/gui-table": "^0.4.6",
-                "spryker/kernel": "^3.51.0",
-                "spryker/laminas": "^1.0.0",
-                "spryker/locale": "^3.0.0",
-                "spryker/merchant-product": "^0.2.6",
-                "spryker/merchant-stock": "^0.2.1",
-                "spryker/merchant-user": "^0.5.0 || ^0.6.0 || ^0.7.0",
-                "spryker/money": "^1.0.0 || ^2.0.0",
-                "spryker/oms": "^11.7.0",
-                "spryker/price-product": "^4.23.0",
-                "spryker/product": "^6.25.0",
-                "spryker/product-attribute": "^1.8.0",
-                "spryker/product-category": "^4.6.0",
-                "spryker/product-image": "^3.0.0",
-                "spryker/product-merchant-portal-gui-extension": "^0.1.1",
-                "spryker/product-validity": "^1.0.0",
-                "spryker/propel-orm": "^1.0.0",
-                "spryker/store": "^1.1.0",
-                "spryker/symfony": "^3.0.0",
-                "spryker/transfer": "^3.25.0",
-                "spryker/translator": "^1.1.0",
-                "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^0.5.3"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "ProductMerchantPortalGui module",
-            "support": {
-                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/0.8.0"
-            },
-            "time": "2021-07-20T13:22:44+00:00"
-        },
-        {
             "name": "spryker/product-merchant-portal-gui-extension",
             "version": "0.1.1",
             "source": {
@@ -33720,79 +33787,6 @@
                 "source": "https://github.com/spryker/product-offer-gui-extension/tree/master"
             },
             "time": "2020-07-31T12:27:29+00:00"
-        },
-        {
-            "name": "spryker/product-offer-merchant-portal-gui",
-            "version": "0.12.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/product-offer-merchant-portal-gui.git",
-                "reference": "601e7e4065c815a5f623569b916e4a8b3ed9b53c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/601e7e4065c815a5f623569b916e4a8b3ed9b53c",
-                "reference": "601e7e4065c815a5f623569b916e4a8b3ed9b53c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/currency": "^3.1.0",
-                "spryker/dashboard-merchant-portal-gui-extension": "^0.1.0",
-                "spryker/decimal-object": "^1.0.0",
-                "spryker/gui-table": "^0.4.2",
-                "spryker/kernel": "^3.51.0",
-                "spryker/laminas": "^1.0.0",
-                "spryker/locale": "^3.0.0",
-                "spryker/merchant": "^3.0.0",
-                "spryker/merchant-product-offer": "^0.8.0",
-                "spryker/merchant-stock": "^0.2.1",
-                "spryker/merchant-user": "^0.5.0 || ^0.6.0 || ^0.7.0",
-                "spryker/money": "^1.0.0 || ^2.0.0",
-                "spryker/price-product": "^2.0.0 || ^4.0.0",
-                "spryker/price-product-offer": "^0.9.0",
-                "spryker/price-product-offer-volume": "^0.2.0",
-                "spryker/price-product-volume": "^3.2.0",
-                "spryker/product": "^5.0.0 || ^6.0.0",
-                "spryker/product-image": "^3.3.0",
-                "spryker/product-offer": "^0.7.0",
-                "spryker/product-offer-stock": "^0.5.0",
-                "spryker/product-offer-validity": "^0.3.0",
-                "spryker/product-validity": "^1.0.0",
-                "spryker/propel-orm": "^1.0.0",
-                "spryker/router": "^1.13.0",
-                "spryker/sales-merchant-portal-gui-extension": "^0.1.0",
-                "spryker/store": "^1.1.0",
-                "spryker/symfony": "^3.0.0",
-                "spryker/transfer": "^3.25.0",
-                "spryker/translator": "^1.1.0",
-                "spryker/twig": "^3.0.0",
-                "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^0.5.1"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "ProductOfferMerchantPortalGui module",
-            "support": {
-                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/0.12.1"
-            },
-            "time": "2021-07-15T17:31:35+00:00"
         },
         {
             "name": "spryker/product-offer-prices-rest-api",
@@ -37762,23 +37756,23 @@
         },
         {
             "name": "spryker/sales-merchant-portal-gui",
-            "version": "0.8.6",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-merchant-portal-gui.git",
-                "reference": "1b8ab32a75dfff0e9dac06bc3ea842a765a3d37c"
+                "reference": "0bcca6e76b17d4848631008ea0bb9a84f10e5593"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/1b8ab32a75dfff0e9dac06bc3ea842a765a3d37c",
-                "reference": "1b8ab32a75dfff0e9dac06bc3ea842a765a3d37c",
+                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/0bcca6e76b17d4848631008ea0bb9a84f10e5593",
+                "reference": "0bcca6e76b17d4848631008ea0bb9a84f10e5593",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker/currency": "^3.0.0",
                 "spryker/dashboard-merchant-portal-gui-extension": "^0.1.0",
-                "spryker/gui-table": "^0.4.0",
+                "spryker/gui-table": "^0.5.0",
                 "spryker/kernel": "^3.52.0",
                 "spryker/merchant": "^3.0.0",
                 "spryker/merchant-oms": "^0.4.0",
@@ -37796,7 +37790,7 @@
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.0.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^0.4.0 || ^0.5.0"
+                "spryker/zed-ui": "^0.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -37821,9 +37815,9 @@
             ],
             "description": "SalesMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/0.8.6"
+                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/0.9.0"
             },
-            "time": "2021-07-15T17:31:35+00:00"
+            "time": "2021-07-26T08:39:59+00:00"
         },
         {
             "name": "spryker/sales-merchant-portal-gui-extension",
@@ -42965,16 +42959,16 @@
         },
         {
             "name": "spryker/user-merchant-portal-gui",
-            "version": "0.2.4",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/user-merchant-portal-gui.git",
-                "reference": "420798599163f1dd50734f3207f3effe09007852"
+                "reference": "fe2a55e03af5891c4512c77e426e0e69b868eaea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/420798599163f1dd50734f3207f3effe09007852",
-                "reference": "420798599163f1dd50734f3207f3effe09007852",
+                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/fe2a55e03af5891c4512c77e426e0e69b868eaea",
+                "reference": "fe2a55e03af5891c4512c77e426e0e69b868eaea",
                 "shasum": ""
             },
             "require": {
@@ -42988,7 +42982,7 @@
                 "spryker/translator": "^1.1.0",
                 "spryker/user-locale": "^1.0.0",
                 "spryker/user-merchant-portal-gui-extension": "^0.1.0",
-                "spryker/zed-ui": "^0.4.0 || ^0.5.0"
+                "spryker/zed-ui": "^0.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -43011,9 +43005,9 @@
             ],
             "description": "UserMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/0.2.4"
+                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/0.3.0"
             },
-            "time": "2021-07-15T11:58:22+00:00"
+            "time": "2021-07-26T08:39:59+00:00"
         },
         {
             "name": "spryker/user-merchant-portal-gui-extension",
@@ -44500,20 +44494,21 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "0.5.3",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "eaba8f491498a4ce33d734f19941bef51c06cc5b"
+                "reference": "403a50c261752d6a01d501c3c40a7358afccdee3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/eaba8f491498a4ce33d734f19941bef51c06cc5b",
-                "reference": "eaba8f491498a4ce33d734f19941bef51c06cc5b",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/403a50c261752d6a01d501c3c40a7358afccdee3",
+                "reference": "403a50c261752d6a01d501c3c40a7358afccdee3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
+                "spryker/application-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.13.0",
@@ -44546,9 +44541,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/0.5.3"
+                "source": "https://github.com/spryker/zed-ui/tree/0.6.0"
             },
-            "time": "2021-07-20T13:22:44+00:00"
+            "time": "2021-07-26T08:39:59+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -56143,6 +56138,12 @@
             "alias_normalized": "202107.0"
         },
         {
+            "package": "spryker-feature/marketplace-cart-notes",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
             "package": "spryker-feature/marketplace-inventory-management",
             "version": "9999999-dev",
             "alias": "202107.0",
@@ -56150,6 +56151,18 @@
         },
         {
             "package": "spryker-feature/marketplace-merchant",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-merchant-portal-product-management",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-merchant-portal-product-offer-management",
             "version": "9999999-dev",
             "alias": "202107.0",
             "alias_normalized": "202107.0"
@@ -56594,8 +56607,11 @@
         "spryker-feature/inventory-management": 20,
         "spryker-feature/invoice": 20,
         "spryker-feature/mailing-notifications": 20,
+        "spryker-feature/marketplace-cart-notes": 20,
         "spryker-feature/marketplace-inventory-management": 20,
         "spryker-feature/marketplace-merchant": 20,
+        "spryker-feature/marketplace-merchant-portal-product-management": 20,
+        "spryker-feature/marketplace-merchant-portal-product-offer-management": 20,
         "spryker-feature/marketplace-merchantportal-core": 20,
         "spryker-feature/marketplace-order-management": 20,
         "spryker-feature/marketplace-product": 20,
