@@ -32,7 +32,7 @@
             "@mp/zed-ui": ["vendor/spryker/zed-ui/mp.public-api.ts"],
             "@mp/*": ["vendor/spryker/*/mp.public-api.ts"],
             "@mp/polyfills": ["./vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/Presentation/Components/mp.polyfills.ts"],
-            "@mp/gui-table": ["vendor/spryker/spryker/Bundles/GuiTable/mp.public-api.ts"],
+            "@mp/gui-table": ["vendor/spryker/gui-table/mp.public-api.ts"],
             "*": ["*"],
             "ShopUi/*": ["./vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/*"]
         }
