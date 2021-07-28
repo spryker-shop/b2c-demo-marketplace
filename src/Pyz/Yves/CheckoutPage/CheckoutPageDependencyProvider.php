@@ -123,12 +123,12 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
                 new DummyMarketplacePaymentHandlerPlugin(),
                 DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE
             );
+
             return $paymentMethodHandler;
         });
 
         return $container;
     }
-
 
     /**
      * @param \Spryker\Yves\Kernel\Container $container

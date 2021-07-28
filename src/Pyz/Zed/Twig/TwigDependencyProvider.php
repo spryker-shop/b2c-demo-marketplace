@@ -102,7 +102,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
             new ZedUiNavigationTwigPlugin(),
             new BooleanToStringTwigPlugin(),
-            new GuiTableConfigurationTwigPlugin()
+            new GuiTableConfigurationTwigPlugin(),
         ];
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig;
 use Spryker\Shared\DummyPayment\DummyPaymentConfig;
 use Spryker\Shared\Kernel\KernelConstants;
 use Spryker\Shared\Nopayment\NopaymentConfig;
@@ -7,7 +8,6 @@ use Spryker\Shared\Nopayment\NopaymentConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Sales\SalesConstants;
 use Spryker\Zed\GiftCard\GiftCardConfig;
-use Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig;
 
 // ----------------------------------------------------------------------------
 // ------------------------------ OMS -----------------------------------------
