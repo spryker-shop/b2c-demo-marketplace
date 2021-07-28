@@ -1,15 +1,15 @@
-# Spryker B2C Demo Shop
-[![Build Status](https://travis-ci.com/spryker/b2c-demo-shop-internal.svg?token=uuNLarTLvJGpcdGUgqj2&branch=master)](https://travis-ci.com/spryker/b2c-demo-shop-internal)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/spryker-shop/b2c-demo-shop/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/spryker-shop/b2c-demo-shop/?branch=master)
+# Spryker B2C Marketplace Demo Shop
+[![Build Status](https://travis-ci.com/spryker/b2c-demo-marketplace-internal.svg?token=uuNLarTLvJGpcdGUgqj2&branch=master)](https://travis-ci.com/spryker/b2c-demo-marketplace-internal)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/spryker-shop/b2c-demo-shop/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/spryker-shop/b2c-demo-marketplace/?branch=master)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg)](https://php.net/)
 
 ## Description
 
-Spryker B2C Demo Shop is a collection of Spryker B2C-specific features. It suits most projects as a starting point of development and can be used to explore Spryker.
+Spryker B2C Marketplace Demo Shop is a collection of Spryker B2C-specific marketplace features. It suits most projects as a starting point of development and can be used to explore Spryker.
 
-## B2C Demo Shop quick start
+## B2C Marketplace Demo Shop quick start
 
-This section describes how to get started with the B2C Demo Shop quickly.
+This section describes how to get started with the B2C Marketplace Demo Shop quickly.
 
 For detailed installation instructions, see [Installing Spryker with Docker](https://documentation.spryker.com/docs/installing-spryker-with-docker) or [Installing with Development Virtual Machine](https://documentation.spryker.com/docs/dev-getting-started#installing-spryker-with-development-virtual-machine).
 
@@ -27,14 +27,14 @@ Recommended system requirements for MacOS:
 |15'|	4	|6GB|
 |13'|	2	|4GB|
 
-### Installing the B2C Demo Shop
+### Installing the B2C Marketplace Demo Shop
 
-To install the B2C Demo Shop:
+To install the B2C Marketplace Demo Shop:
 
-1. Create a project folder and clone the B2C Demo Shop and the Docker SDK:
+1. Create a project folder and clone the B2C Marketplace Demo Shop and the Docker SDK:
 ```bash
-mkdir spryker-b2c && cd spryker-b2c
-git clone https://github.com/spryker-shop/b2c-demo-shop.git ./
+mkdir spryker-b2c-marketplace && cd spryker-b2c-marketplace
+git clone https://github.com/spryker-shop/b2c-demo-marketplace.git ./
 git clone git@github.com:spryker/docker-sdk.git docker
 ```
 
@@ -72,7 +72,7 @@ docker/sdk up --build --assets --data
 > - `--assets` - build assets
 > - `--data` - get new demo data
 
-You've set up your Spryker B2C Demo Shop and can access your applications.
+You've set up your Spryker B2C Marketplace Demo Shop and can access your applications.
 
 
 ### Setting up a production-like environment
@@ -123,11 +123,11 @@ docker/sdk clean-data && docker/sdk up && docker/sdk console q:w:s -v -s
 ```
 
 
-You've set up your Spryker B2C Demo Shop and can access your applications.
+You've set up your Spryker B2C Marketplace Demo Shop and can access your applications.
 
-## Troubleshooting installation of the B2C Demo Shop
+## Troubleshooting installation of the B2C Marketplace Demo Shop
 
-This section describes the most common issues related to the installation of the B2C Demo Shop.
+This section describes the most common issues related to the installation of the B2C Marketplace Demo Shop.
 
 For a complete troubleshooting, see [Troubleshooting Spryker in Docker issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-docker-issues) or [Troubleshooting Spryker in Vagrant installation issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-vagrant-installation-issues).
 
@@ -165,12 +165,12 @@ docker/sdk boot -s deploy.dev.yml
 docker/sdk up --build --assets --data
 ```
 
-## Installation of B2C Demo Shop with Docker
+## Installation of B2C Marketplace Demo Shop with Docker
 
 For detailed installation instructions of Spryker with Docker, see [Installing Spryker with Docker](https://documentation.spryker.com/docs/installing-spryker-with-docker).
 
 
-## Installation of B2C Demo Shop with Vagrant
+## Installation of B2C Marketplace Demo Shop with Vagrant
 For detailed installation instructions of Spryker with Vagrant, see [Installing with Development Virtual Machine](https://documentation.spryker.com/docs/dev-getting-started#installing-spryker-with-development-virtual-machine).
 
 
