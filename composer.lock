@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d75166a27b86ed0c3689a7a96b989f5",
+    "content-hash": "5f6df3b48cb81a98c92fcf149cfaecca",
     "packages": [
         {
             "name": "brick/math",
@@ -32244,23 +32244,24 @@
         },
         {
             "name": "spryker/product-image",
-            "version": "3.10.1",
+            "version": "3.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-image.git",
-                "reference": "d519d76259030c4e363079881adb0d745fe0c8fb"
+                "reference": "913e0b53fba6180181b1a65efbd3d8583e2dddae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-image/zipball/d519d76259030c4e363079881adb0d745fe0c8fb",
-                "reference": "d519d76259030c4e363079881adb0d745fe0c8fb",
+                "url": "https://api.github.com/repos/spryker/product-image/zipball/913e0b53fba6180181b1a65efbd3d8583e2dddae",
+                "reference": "913e0b53fba6180181b1a65efbd3d8583e2dddae",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/kernel": "^3.30.0",
                 "spryker/locale": "^3.0.0",
                 "spryker/product": "^5.0.0 || ^6.0.0",
+                "spryker/product-extension": "^1.1.0",
                 "spryker/propel-orm": "^1.0.0"
             },
             "require-dev": {
@@ -32286,9 +32287,9 @@
             ],
             "description": "ProductImage module",
             "support": {
-                "source": "https://github.com/spryker/product-image/tree/master"
+                "source": "https://github.com/spryker/product-image/tree/3.11.0"
             },
-            "time": "2020-05-29T13:08:37+00:00"
+            "time": "2021-06-15T13:07:42+00:00"
         },
         {
             "name": "spryker/product-image-cart-connector",
@@ -42153,24 +42154,25 @@
         },
         {
             "name": "spryker/tax-product-connector",
-            "version": "4.3.1",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/tax-product-connector.git",
-                "reference": "19ab00bc18fd44639417e8966b7452cb55e9fc55"
+                "reference": "ea5671523151639fd96ecedabcd742c36ba7d457"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/tax-product-connector/zipball/19ab00bc18fd44639417e8966b7452cb55e9fc55",
-                "reference": "19ab00bc18fd44639417e8966b7452cb55e9fc55",
+                "url": "https://api.github.com/repos/spryker/tax-product-connector/zipball/ea5671523151639fd96ecedabcd742c36ba7d457",
+                "reference": "ea5671523151639fd96ecedabcd742c36ba7d457",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.3",
                 "spryker/calculation-extension": "^1.1.0",
                 "spryker/country": "^3.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product": "^5.0.0 || ^6.0.0",
+                "spryker/product-extension": "^1.1.0",
                 "spryker/propel-orm": "^1.0.0",
                 "spryker/tax": "^4.0.0 || ^5.0.0",
                 "spryker/zed-request": "^3.0.0"
@@ -42201,9 +42203,9 @@
             ],
             "description": "TaxProductConnector module",
             "support": {
-                "source": "https://github.com/spryker/tax-product-connector/tree/4.3.1"
+                "source": "https://github.com/spryker/tax-product-connector/tree/4.4.0"
             },
-            "time": "2020-05-29T13:08:37+00:00"
+            "time": "2021-06-14T20:32:55+00:00"
         },
         {
             "name": "spryker/tax-product-storage",
