@@ -1,4 +1,4 @@
-@mixin merchant-opening-hours-widget-information-item($name: '.information-item') {
+@mixin merchant-opening-hours-widget-merchant-information-item($name: '.merchant-information-item') {
     #{$name} {
         margin-bottom: rem(18);
 
@@ -24,4 +24,4 @@
     }
 }
 
-@include merchant-opening-hours-widget-information-item();
+@include merchant-opening-hours-widget-merchant-information-item();

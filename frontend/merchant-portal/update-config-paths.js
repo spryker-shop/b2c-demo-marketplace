@@ -30,7 +30,7 @@ async function getMPPathsMap() {
 }
 
 async function updateConfigPaths() {
-    const mpPaths = await  getMPPathsMap();
+    const mpPaths = await getMPPathsMap();
 
     for (let i = 0; i < TSCONFIG_FILES.length; i++) {
         const fileName = TSCONFIG_FILES[i];

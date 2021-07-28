@@ -14,12 +14,6 @@
             letter-spacing: rem(0.2);
         }
 
-        &__time {
-            display: block;
-            max-width: rem(100);
-            float: right;
-        }
-
         @content;
     }
 }

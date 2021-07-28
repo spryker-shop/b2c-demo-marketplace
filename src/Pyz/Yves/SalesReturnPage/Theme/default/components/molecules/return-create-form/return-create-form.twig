@@ -32,7 +32,7 @@
         },
     } only %}
         {% block checkboxColumn %}
-            <div class="grid grid--no-wrap col">
+            <div class="grid grid--nowrap col">
                 <div class="col col--middle spacing-right spacing-right--inner">
                     {{ form_row(embed.returnItem.isReturnable, {
                         label: ' ',
@@ -119,7 +119,7 @@
                 {% endblock %}
 
                 {% block imageWrapper %}
-                    <div class="grid grid--no-wrap col">
+                    <div class="grid grid--nowrap col">
                         <div class="col col--middle spacing-right spacing-right--inner">
                             {% for key, productBundle in embed.form.productBundles %}
                                 {% if key == data.productBundle.bundleProduct.bundleItemIdentifier %}
