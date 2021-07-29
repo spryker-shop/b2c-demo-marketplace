@@ -421,6 +421,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ConcreteProductBySkuResourceRelationshipPlugin()
         );
         $resourceRelationshipCollection->addRelationship(
+            WishlistsRestApiConfig::RESOURCE_WISHLIST_ITEMS,
+            new MerchantByMerchantReferenceResourceRelationshipPlugin()
+        );
+        $resourceRelationshipCollection->addRelationship(
             CatalogSearchRestApiConfig::RESOURCE_CATALOG_SEARCH,
             new CatalogSearchAbstractProductsResourceRelationshipPlugin()
         );
@@ -473,8 +477,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ConcreteProductBySkuResourceRelationshipPlugin()
         );
         $resourceRelationshipCollection->addRelationship(
+            CartsRestApiConfig::RESOURCE_CART_ITEMS,
+            new MerchantByMerchantReferenceResourceRelationshipPlugin()
+        );
+        $resourceRelationshipCollection->addRelationship(
             CartsRestApiConfig::RESOURCE_GUEST_CARTS_ITEMS,
             new ConcreteProductBySkuResourceRelationshipPlugin()
+        );
+        $resourceRelationshipCollection->addRelationship(
+            CartsRestApiConfig::RESOURCE_GUEST_CARTS_ITEMS,
+            new MerchantByMerchantReferenceResourceRelationshipPlugin()
         );
         $resourceRelationshipCollection->addRelationship(
             NavigationsRestApiConfig::RESOURCE_NAVIGATIONS,
@@ -551,6 +563,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         $resourceRelationshipCollection->addRelationship(
             SalesReturnsRestApiConfig::RESOURCE_RETURNS,
             new ReturnItemByReturnResourceRelationshipPlugin()
+        );
+        $resourceRelationshipCollection->addRelationship(
+            SalesReturnsRestApiConfig::RESOURCE_RETURNS,
+            new MerchantByMerchantReferenceResourceRelationshipPlugin()
         );
         $resourceRelationshipCollection->addRelationship(
             OrdersRestApiConfig::RESOURCE_ORDERS,
