@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1ef2dab7c829b2b837c85d33651ee10",
+    "content-hash": "9cc0e852f6faf9ab83f9956dbadda04f",
     "packages": [
         {
             "name": "brick/math",
@@ -4128,12 +4128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant.git",
-                "reference": "90744921ea63ad53b03bc1032403c9084095b241"
+                "reference": "f89b180ed117fe2aeef4fe43b46ce42114204036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/90744921ea63ad53b03bc1032403c9084095b241",
-                "reference": "90744921ea63ad53b03bc1032403c9084095b241",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/f89b180ed117fe2aeef4fe43b46ce42114204036",
+                "reference": "f89b180ed117fe2aeef4fe43b46ce42114204036",
                 "shasum": ""
             },
             "require": {
@@ -4147,7 +4147,7 @@
                 "spryker/merchant-search": "^0.3.1",
                 "spryker/merchant-storage": "^0.2.0",
                 "spryker/merchant-user": "^0.7.2",
-                "spryker/merchant-user-gui": "^0.2.3"
+                "spryker/merchant-user-gui": "^0.2.4"
             },
             "suggest": {
                 "spryker-feature/merchant": "Recommended feature dependency."
@@ -4167,7 +4167,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchant/tree/master"
             },
-            "time": "2021-07-26T20:30:11+00:00"
+            "time": "2021-07-29T18:36:33+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant-portal-product-management",
@@ -4254,12 +4254,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchantportal-core.git",
-                "reference": "0a3adc9e5f5719bf24c548ffeda93280b8b56c3e"
+                "reference": "95c73e845a11fd305ef2a4ba3c480f71bfdbbfa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/0a3adc9e5f5719bf24c548ffeda93280b8b56c3e",
-                "reference": "0a3adc9e5f5719bf24c548ffeda93280b8b56c3e",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/95c73e845a11fd305ef2a4ba3c480f71bfdbbfa2",
+                "reference": "95c73e845a11fd305ef2a4ba3c480f71bfdbbfa2",
                 "shasum": ""
             },
             "require": {
@@ -4267,7 +4267,7 @@
                 "spryker/gui-table": "^0.5.0",
                 "spryker/merchant-portal-application": "^0.1.0",
                 "spryker/merchant-user-password-reset-mail": "^0.1.0",
-                "spryker/zed-ui": "^0.6.0"
+                "spryker/zed-ui": "^0.6.1"
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4284,7 +4284,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchantportal-core/tree/master"
             },
-            "time": "2021-07-27T13:46:03+00:00"
+            "time": "2021-07-29T18:37:42+00:00"
         },
         {
             "name": "spryker-feature/marketplace-order-management",
@@ -26793,16 +26793,16 @@
         },
         {
             "name": "spryker/merchant-user-gui",
-            "version": "0.2.3",
+            "version": "0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-user-gui.git",
-                "reference": "20b292182aff5973e963a879f833b107bb948ced"
+                "reference": "92334b02546940bd6c208df1f9aa4400d1b3542f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-user-gui/zipball/20b292182aff5973e963a879f833b107bb948ced",
-                "reference": "20b292182aff5973e963a879f833b107bb948ced",
+                "url": "https://api.github.com/repos/spryker/merchant-user-gui/zipball/92334b02546940bd6c208df1f9aa4400d1b3542f",
+                "reference": "92334b02546940bd6c208df1f9aa4400d1b3542f",
                 "shasum": ""
             },
             "require": {
@@ -26811,7 +26811,7 @@
                 "spryker/kernel": "^3.30.0",
                 "spryker/merchant-gui-extension": "^1.1.0",
                 "spryker/merchant-user": "^0.5.0 || ^0.6.0 || ^0.7.0",
-                "spryker/router": "^1.1.0",
+                "spryker/router": "^1.12.0",
                 "spryker/symfony": "^3.0.0"
             },
             "require-dev": {
@@ -26834,9 +26834,9 @@
             ],
             "description": "MerchantUserGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-user-gui/tree/0.2.3"
+                "source": "https://github.com/spryker/merchant-user-gui/tree/0.2.4"
             },
-            "time": "2021-03-23T11:27:15+00:00"
+            "time": "2021-07-29T07:29:33+00:00"
         },
         {
             "name": "spryker/merchant-user-password-reset-mail",
@@ -44644,16 +44644,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "403a50c261752d6a01d501c3c40a7358afccdee3"
+                "reference": "709a481a521f1c09c8faefe06707bea42ce6f9db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/403a50c261752d6a01d501c3c40a7358afccdee3",
-                "reference": "403a50c261752d6a01d501c3c40a7358afccdee3",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/709a481a521f1c09c8faefe06707bea42ce6f9db",
+                "reference": "709a481a521f1c09c8faefe06707bea42ce6f9db",
                 "shasum": ""
             },
             "require": {
@@ -44691,9 +44691,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/0.6.0"
+                "source": "https://github.com/spryker/zed-ui/tree/0.6.1"
             },
-            "time": "2021-07-26T08:39:59+00:00"
+            "time": "2021-07-29T07:39:45+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

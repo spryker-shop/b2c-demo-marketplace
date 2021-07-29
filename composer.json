@@ -983,7 +983,6 @@
         "spryker/zed-navigation-extension": "1.1.0",
         "spryker/zed-request": "3.17.0",
         "spryker/zed-request-extension": "1.0.0",
-        "spryker/zed-ui": "0.6.0",
         "stecman/symfony-console-completion": "*",
         "swiftmailer/swiftmailer": "6.2.7",
         "symfony-cmf/routing": "2.3.3",
