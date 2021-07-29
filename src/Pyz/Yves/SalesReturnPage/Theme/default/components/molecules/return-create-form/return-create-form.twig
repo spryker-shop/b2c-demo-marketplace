@@ -18,8 +18,6 @@
     {{ parent() }}
 {% endblock %}
 
-{% block checkbox %}{% endblock %}
-
 {% block salesReturnProductItemInfo %}
     {% embed molecule('return-product-item', 'SalesReturnPage') with {
         class: 'grid col col--expand',
@@ -31,7 +29,7 @@
             returnItem: returnItem,
         },
     } only %}
-        {% block checkboxColumn %}
+        {% block checkbox %}
             <div class="grid grid--nowrap col">
                 <div class="col col--middle spacing-right spacing-right--inner">
                     {{ form_row(embed.returnItem.isReturnable, {
