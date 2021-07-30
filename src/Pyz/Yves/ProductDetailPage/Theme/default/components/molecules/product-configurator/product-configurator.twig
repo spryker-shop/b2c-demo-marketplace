@@ -3,32 +3,10 @@
 {% define data = {
     isBundle: null,
     bundleItems: [],
-    maxQuantity: 10,
 } %}
 
-{% set options = [] %}
 {% set productName = data.product.name | default %}
-{% set sku = data.product.sku %}
-{% set availabilityWidget = '' %}
 {% set isProductConcrete = data.product.idProductConcrete is not empty %}
-{% set isDisabled = data.product.idProductConcrete is empty or data.product.price is empty %}
-{% set isProductAvailable = true %}
-
-{% for index in 1..data.maxQuantity %}
-    {% set options = options | merge([{
-        label: index,
-        value: index
-    }]) %}
-{% endfor %}
-
-{% set isAvailable = data.product.idProductConcrete and data.product.available %}
-{% set isDisabled = not isAvailable or isDisabled %}
-
-{% set productDiscontinuedNoteWidget = findWidget('ProductDiscontinuedNoteWidget', [sku]) %}
-{% if productDiscontinuedNoteWidget.isDiscontinued is not null %}
-    {% set isDisabled = productDiscontinuedNoteWidget.isDiscontinued or isDisabled %}
-    {% set isProductAvailable = not productDiscontinuedNoteWidget.isDiscontinued %}
-{% endif %}
 
 {% block body %}
     <h1 itemprop="name" class="title title--product title--h2">{{ productName }}</h1>
