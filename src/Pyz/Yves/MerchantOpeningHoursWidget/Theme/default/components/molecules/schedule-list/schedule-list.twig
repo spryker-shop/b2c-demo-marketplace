@@ -13,7 +13,7 @@
             {% block text %}
                 <div class="{{ config.name }}__text">
                     {% for scheduleItem in embed.scheduleList %}
-                        {% set title = scheduleItem.noteGlossaryKey ? scheduleItem.date ~ ' (' ~ scheduleItem.noteGlossaryKey ~ ')' : scheduleItem.date %}
+                        {% set title = scheduleItem.date ~ (scheduleItem.noteGlossaryKey ? ' (' ~ scheduleItem.noteGlossaryKey ~ ')') %}
                         {% set time = scheduleItem.time ? scheduleItem.time | replace({'|': ''}) %}
 
                         <div class="grid">

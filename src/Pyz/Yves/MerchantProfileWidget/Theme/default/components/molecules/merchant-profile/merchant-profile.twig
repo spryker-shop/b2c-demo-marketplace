@@ -14,17 +14,14 @@
 
 {% block contentInner %}
     <div class="col col--sm-12 col--lg-6 col--spaced-lg">
+        {% set additionaImageClass = '' %}
+        {% set additionaImageModifiers = ['expand'] %}
         {% set bannerUrlGlossaryValue = (data.merchantStorageProfile.bannerUrlGlossaryKey ?: '') | trans %}
         {% set hasBannerUrlTranslation = data.merchantStorageProfile.bannerUrlGlossaryKey
             ? data.merchantStorageProfile.bannerUrlGlossaryKey != bannerUrlGlossaryValue %}
 
         {% if hasBannerUrlTranslation %}
-            {% include molecule('lazy-image') with {
-                modifiers: ['expand'],
-                data: {
-                    imageSrc: bannerUrlGlossaryValue,
-                },
-            } only %}
+            {{ block('image') }}
         {% endif %}
     </div>
 
@@ -48,16 +45,11 @@
         </div>
 
         <div class="col col--sm-3 col--lg-2">
+            {% set additionalLogoClass = 'spacing spacing--reset' %}
+            {% set additionalLogoModifiers = ['thumbnail', 'small'] %}
+
             {% if data.merchantStorageProfile.logoUrl %}
-                {% block logo %}
-                    {% include molecule('lazy-image') with {
-                        class: 'spacing spacing--reset',
-                        modifiers: ['thumbnail', 'small'],
-                        data: {
-                            imageSrc: data.merchantStorageProfile.logoUrl | trans,
-                        },
-                    } only %}
-                {% endblock %}
+                {{ block('logo') }}
             {% endif %}
         </div>
     </div>
@@ -92,6 +84,6 @@
  {% block additionalInformation %}
      <div class="box box--with-border">
          <h4 class="{{ config.name }}__info-title">{{ informationArticle.title }}</h4>
-         <p class="{{ config.name }}__info-text">{{ informationArticle.text | raw }}</p>
+         <div class="{{ config.name }}__info-text">{{ informationArticle.text | raw }}</div>
      </div>
  {% endblock %}
