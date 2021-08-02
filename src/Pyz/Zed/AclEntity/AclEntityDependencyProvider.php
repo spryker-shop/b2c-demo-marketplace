@@ -37,14 +37,4 @@ class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
             new ConsoleAclEntityDisablerPlugin(),
         ];
     }
-
-    /**
-     * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityEnablerPluginInterface[]
-     */
-    protected function getAclEntityEnablerPlugins(): array
-    {
-        return [
-            new AclEntityEnablerPlugin(),
-        ];
-    }
 }
