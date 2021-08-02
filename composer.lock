@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89bb03fc5f26805c703f7b3f78175b86",
+    "content-hash": "b882e249bee8c505e88332befceb9bdc",
     "packages": [
         {
             "name": "brick/math",
@@ -11837,16 +11837,16 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "0.1.0",
+            "version": "dev-beta/mp-5445-merchant-products-are-no-buyable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "563cef27563a6328cbd25f13e11428565165e240"
+                "reference": "e8b16f407a96f14822135854d52abd4155b9a2a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/563cef27563a6328cbd25f13e11428565165e240",
-                "reference": "563cef27563a6328cbd25f13e11428565165e240",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/e8b16f407a96f14822135854d52abd4155b9a2a3",
+                "reference": "e8b16f407a96f14822135854d52abd4155b9a2a3",
                 "shasum": ""
             },
             "require": {
@@ -11875,7 +11875,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Spryker\\": "src/Spryker/"
+                    "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Zed\\AclEntity\\Helper\\": "tests/SprykerTest/Zed/AclEntity/_support/Helper/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -11884,9 +11885,9 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/0.1.0"
+                "source": "https://github.com/spryker/acl-entity/tree/beta/mp-5445-merchant-products-are-no-buyable"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-02T14:09:21+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
@@ -56791,6 +56792,12 @@
     ],
     "aliases": [
         {
+            "package": "spryker-feature/acl",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
             "package": "spryker-feature/agent-assist",
             "version": "9999999-dev",
             "alias": "202107.0",
@@ -57445,6 +57452,12 @@
             "alias_normalized": "202107.0"
         },
         {
+            "package": "spryker/acl-entity",
+            "version": "dev-beta/mp-5445-merchant-products-are-no-buyable",
+            "alias": "0.1.0",
+            "alias_normalized": "0.1.0.0"
+        },
+        {
             "package": "spryker/docker-chromedriver",
             "version": "9999999-dev",
             "alias": "202107.0",
@@ -57517,6 +57530,7 @@
         "spryker-feature/state-machine": 20,
         "spryker-feature/tax": 20,
         "spryker-feature/wishlist": 20,
+        "spryker/acl-entity": 20,
         "spryker-feature/development-tools": 20,
         "spryker-sdk/integrator": 20,
         "spryker/docker-chromedriver": 20

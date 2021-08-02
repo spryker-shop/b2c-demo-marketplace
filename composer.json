@@ -87,6 +87,7 @@
         "spryker/acl": "^3.8",
         "spryker/acl-entity-dummy-product": "^0.1.0",
         "spryker/acl-extension": "^1.1",
+        "spryker/acl-entity": "dev-beta/mp-5445-merchant-products-are-no-buyable as 0.1.0",
         "spryker/agent-auth-rest-api": "^1.0.0",
         "spryker/alternative-products-rest-api": "^1.1.2",
         "spryker/auth-rest-api": "^2.14.0",
