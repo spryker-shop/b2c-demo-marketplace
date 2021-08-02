@@ -12,6 +12,12 @@ use Pyz\Zed\MerchantProductOfferDataImport\Communication\Plugin\CombinedMerchant
 use Pyz\Zed\PriceProductOfferDataImport\Communication\Plugin\CombinedPriceProductOfferDataImportPlugin;
 use Pyz\Zed\ProductOfferStockDataImport\Communication\Plugin\CombinedProductOfferStockDataImportPlugin;
 use Pyz\Zed\ProductOfferValidityDataImport\Communication\Plugin\CombinedProductOfferValidityDataImportPlugin;
+use Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupDataImportPlugin;
+use Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupRoleDataImportPlugin;
+use Spryker\Zed\AclDataImport\Communication\Plugin\AclRoleDataImportPlugin;
+use Spryker\Zed\AclEntityDataImport\Communication\Plugin\AclEntityRuleDataImportPlugin;
+use Spryker\Zed\AclEntityDataImport\Communication\Plugin\AclEntitySegmentConnectorDataImportPlugin;
+use Spryker\Zed\AclEntityDataImport\Communication\Plugin\AclEntitySegmentDataImportPlugin;
 use Spryker\Zed\CategoryDataImport\Communication\Plugin\CategoryDataImportPlugin;
 use Spryker\Zed\CategoryDataImport\Communication\Plugin\DataImport\CategoryStoreDataImportPlugin;
 use Spryker\Zed\CmsPageDataImport\Communication\Plugin\CmsPageDataImportPlugin;
@@ -69,12 +75,6 @@ use Spryker\Zed\ShipmentDataImport\Communication\Plugin\ShipmentMethodStoreDataI
 use Spryker\Zed\StockAddressDataImport\Communication\Plugin\DataImport\StockAddressDataImportPlugin;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockDataImportPlugin;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockStoreDataImportPlugin;
-use Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupDataImportPlugin;
-use Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupRoleDataImportPlugin;
-use Spryker\Zed\AclDataImport\Communication\Plugin\AclRoleDataImportPlugin;
-use Spryker\Zed\AclEntityDataImport\Communication\Plugin\AclEntityRuleDataImportPlugin;
-use Spryker\Zed\AclEntityDataImport\Communication\Plugin\AclEntitySegmentConnectorDataImportPlugin;
-use Spryker\Zed\AclEntityDataImport\Communication\Plugin\AclEntitySegmentDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {

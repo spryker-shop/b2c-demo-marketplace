@@ -7,10 +7,10 @@
 
 namespace Pyz\Zed\DataImport;
 
-use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
-use Spryker\Zed\StockAddressDataImport\StockAddressDataImportConfig;
 use Spryker\Zed\AclDataImport\AclDataImportConfig;
 use Spryker\Zed\AclEntityDataImport\AclEntityDataImportConfig;
+use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
+use Spryker\Zed\StockAddressDataImport\StockAddressDataImportConfig;
 
 /**
  * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
