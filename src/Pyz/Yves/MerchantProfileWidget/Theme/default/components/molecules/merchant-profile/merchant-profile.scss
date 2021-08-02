@@ -22,8 +22,7 @@
             margin-bottom: rem(20);
         }
 
-        &__info-text,
-        p {
+        &__info-text {
             font: fw(light) rem(16) / rem(22) $setting-font-family;
             letter-spacing: rem(0.2);
         }
