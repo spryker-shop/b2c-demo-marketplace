@@ -334,14 +334,6 @@
                 <controller>list</controller>
                 <action>index</action>
             </product-offer-gui>
-            <returns>
-                <label>Returns</label>
-                <title>Returns</title>
-                <bundle>sales-return-gui</bundle>
-                <controller>index</controller>
-                <action>index</action>
-                <visible>1</visible>
-            </returns>
         </pages>
     </marketplace>
     <users>
