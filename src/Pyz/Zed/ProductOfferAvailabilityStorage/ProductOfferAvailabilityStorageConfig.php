@@ -13,6 +13,14 @@ use Spryker\Zed\ProductOfferAvailabilityStorage\ProductOfferAvailabilityStorageC
 class ProductOfferAvailabilityStorageConfig extends SprykerProductOfferAvailabilityStorageConfig
 {
     /**
+     * @return bool
+     */
+    public function isSendingToQueue(): bool
+    {
+        return true;
+    }
+
+    /**
      * @return string|null
      */
     public function getProductOfferAvailabilitySynchronizationPoolName(): ?string
