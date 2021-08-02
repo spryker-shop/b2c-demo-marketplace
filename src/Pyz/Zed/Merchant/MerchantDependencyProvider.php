@@ -8,6 +8,7 @@
 namespace Pyz\Zed\Merchant;
 
 use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependencyProvider;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant\MerchantAclMerchantPostCreatePlugin;
 use Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant\MerchantCategoryMerchantExpanderPlugin;
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileExpanderPlugin;
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMerchantPostCreatePlugin;
@@ -26,6 +27,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
         return [
             new MerchantProfileMerchantPostCreatePlugin(),
             new MerchantStockMerchantPostCreatePlugin(),
+            new MerchantAclMerchantPostCreatePlugin(),
         ];
     }
 

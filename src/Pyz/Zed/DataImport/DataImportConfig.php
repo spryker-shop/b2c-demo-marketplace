@@ -9,6 +9,8 @@ namespace Pyz\Zed\DataImport;
 
 use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
 use Spryker\Zed\StockAddressDataImport\StockAddressDataImportConfig;
+use Spryker\Zed\AclDataImport\AclDataImportConfig;
+use Spryker\Zed\AclEntityDataImport\AclEntityDataImportConfig;
 
 /**
  * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
@@ -70,6 +72,12 @@ class DataImportConfig extends SprykerDataImportConfig
     {
         $customImportTypes = [
             StockAddressDataImportConfig::IMPORT_TYPE_STOCK_ADDRESS,
+            AclDataImportConfig::IMPORT_TYPE_ACL_GROUP,
+            AclDataImportConfig::IMPORT_TYPE_ACL_ROLE,
+            AclDataImportConfig::IMPORT_TYPE_ACL_GROUP_ROLE,
+            AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_RULE,
+            AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT,
+            AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR,
         ];
 
         return array_merge(parent::getFullImportTypes(), $customImportTypes);

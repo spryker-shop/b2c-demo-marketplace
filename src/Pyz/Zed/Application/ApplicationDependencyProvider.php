@@ -73,6 +73,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     protected function getBackendGatewayApplicationPlugins(): array
     {
         return [
+            new SecurityApplicationPlugin(),
             new BackendGatewayEventDispatcherApplicationPlugin(),
             new MockArraySessionApplicationPlugin(),
             new TranslatorApplicationPlugin(),

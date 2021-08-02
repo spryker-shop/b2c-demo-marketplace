@@ -56,15 +56,17 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     }
 
     /**
+     * The order of execution is important to support Inherited scope and sub-entity functionality
+     *
      * @return \Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface[]
      */
     protected function getProductAbstractPostCreatePlugins(): array
     {
         return [
+            new MerchantProductProductAbstractPostCreatePlugin(),
             new ImageSetProductAbstractPostCreatePlugin(),
             new TaxSetProductAbstractPostCreatePlugin(),
             new PriceProductAbstractPostCreatePlugin(),
-            new MerchantProductProductAbstractPostCreatePlugin(),
         ];
     }
 

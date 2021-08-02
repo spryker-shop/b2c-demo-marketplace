@@ -72,6 +72,7 @@ use Pyz\Zed\DataImport\Business\Model\ProductAttributeKey\ProductAttributeKeyWri
 use Pyz\Zed\DataImport\Business\Model\ProductConcrete\ProductConcreteAttributesUniqueCheckStep;
 use Pyz\Zed\DataImport\Business\Model\ProductConcrete\ProductConcreteCheckExistenceStep;
 use Pyz\Zed\DataImport\Business\Model\ProductConcrete\ProductConcreteHydratorStep;
+use Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface;
 use Pyz\Zed\DataImport\Business\Model\ProductConcrete\ProductSkuToIdProductStep;
 use Pyz\Zed\DataImport\Business\Model\ProductConcrete\Writer\ProductConcretePropelDataSetWriter;
 use Pyz\Zed\DataImport\Business\Model\ProductGroup\ProductGroupWriter;
@@ -310,7 +311,9 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
-        $dataSetStepBroker->addStep(new MerchantUserWriterStep());
+        $dataSetStepBroker->addStep(new MerchantUserWriterStep(
+            $this->getMerchantUserFacade()
+        ));
 
         $dataImporter->addDataSetStepBroker($dataSetStepBroker);
 
@@ -1834,5 +1837,13 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     protected function createCombinedProductGroupMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedProductGroupMandatoryColumnCondition();
+    }
+
+    /**
+     * @return \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface
+     */
+    public function getMerchantUserFacade(): MerchantUserFacadeInterface
+    {
+        return $this->getProvidedDependency(DataImportDependencyProvider::FACADE_MERCHANT_USER);
     }
 }
