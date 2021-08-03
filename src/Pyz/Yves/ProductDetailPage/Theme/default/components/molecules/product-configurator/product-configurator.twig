@@ -145,7 +145,7 @@
         {% endblock %}
     {% endwidget %}
 
-    {% set isProductOffer = data.product.productOfferReference %}
+    {% set isProductOffer = data.product.productOfferReference is not empty %}
 
     {% if not isAvailable and isProductConcrete and not isProductOffer %}
         {% widget 'AvailabilityNotificationSubscriptionWidget' args [data.product] only %}{% endwidget %}
