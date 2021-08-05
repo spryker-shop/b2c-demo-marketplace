@@ -33955,16 +33955,16 @@
         },
         {
             "name": "spryker/product-merchant-portal-gui",
-            "version": "0.11.0",
+            "version": "0.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-merchant-portal-gui.git",
-                "reference": "8333db500a018993327da635722d20a489ba6ff4"
+                "reference": "791fffe3a1e74276052e85ac4199ebf7e808a517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/8333db500a018993327da635722d20a489ba6ff4",
-                "reference": "8333db500a018993327da635722d20a489ba6ff4",
+                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/791fffe3a1e74276052e85ac4199ebf7e808a517",
+                "reference": "791fffe3a1e74276052e85ac4199ebf7e808a517",
                 "shasum": ""
             },
             "require": {
@@ -33995,7 +33995,7 @@
                 "spryker/transfer": "^3.25.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^0.7.0"
+                "spryker/zed-ui": "^0.7.1"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -34018,9 +34018,9 @@
             ],
             "description": "ProductMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/0.11.0"
+                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/0.11.1"
             },
-            "time": "2021-08-03T10:44:17+00:00"
+            "time": "2021-08-04T12:09:44+00:00"
         },
         {
             "name": "spryker/product-merchant-portal-gui-extension",
@@ -57554,5 +57554,5 @@
     "platform-overrides": {
         "php": "7.3.15"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
