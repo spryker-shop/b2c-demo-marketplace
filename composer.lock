@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89e941978f88d2f5ba01c201821c8bde",
+    "content-hash": "df5e34c5909d041be288db6da3127901",
     "packages": [
         {
             "name": "brick/math",
@@ -3293,19 +3293,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/acl.git",
-                "reference": "de808f252790285d395ab984012f63cc5b9e63f5"
+                "reference": "928c5e008eeb2b34ad3e3b9d4f177a41e3cc36cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/acl/zipball/de808f252790285d395ab984012f63cc5b9e63f5",
-                "reference": "de808f252790285d395ab984012f63cc5b9e63f5",
+                "url": "https://api.github.com/repos/spryker-feature/acl/zipball/928c5e008eeb2b34ad3e3b9d4f177a41e3cc36cb",
+                "reference": "928c5e008eeb2b34ad3e3b9d4f177a41e3cc36cb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker/acl": "^3.8.0",
                 "spryker/acl-data-import": "^0.1.0",
-                "spryker/acl-entity": "^0.1.0",
+                "spryker/acl-entity": "^0.2.0",
                 "spryker/acl-entity-data-import": "^0.1.0"
             },
             "default-branch": true,
@@ -3323,7 +3323,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/acl/tree/master"
             },
-            "time": "2021-07-30T11:16:05+00:00"
+            "time": "2021-08-09T15:30:37+00:00"
         },
         {
             "name": "spryker-feature/agent-assist",
@@ -11837,23 +11837,24 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "2ff5a7ab84b60c3db0beed7dc03efb12af0c7cfd"
+                "reference": "70e9288d94bbec2b2f5a98abaeab0778758eedc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/2ff5a7ab84b60c3db0beed7dc03efb12af0c7cfd",
-                "reference": "2ff5a7ab84b60c3db0beed7dc03efb12af0c7cfd",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/70e9288d94bbec2b2f5a98abaeab0778758eedc8",
+                "reference": "70e9288d94bbec2b2f5a98abaeab0778758eedc8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker/acl": "^3.8.0",
-                "spryker/acl-entity-extension": "^0.1.0",
+                "spryker/acl-entity-extension": "^0.2.0",
                 "spryker/acl-extension": "^1.1.0",
+                "spryker/application-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/propel-orm": "^1.0.0",
                 "spryker/transfer": "^3.25.0",
@@ -11861,9 +11862,13 @@
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
+                "spryker/container": "*",
                 "spryker/merchant": "*",
                 "spryker/propel": "*",
                 "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/container": "If you want to use AclEntityApplicationPlugin."
             },
             "type": "library",
             "extra": {
@@ -11885,28 +11890,28 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/0.1.1"
+                "source": "https://github.com/spryker/acl-entity/tree/0.2.0"
             },
-            "time": "2021-07-30T14:20:04+00:00"
+            "time": "2021-08-06T07:31:06+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
-            "version": "0.1.0",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity-data-import.git",
-                "reference": "616f1a3a68e7d94050365d2303a28b9ba0b670ca"
+                "reference": "819966cd4f645f4e371a39c18cc7d1008d82a2ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity-data-import/zipball/616f1a3a68e7d94050365d2303a28b9ba0b670ca",
-                "reference": "616f1a3a68e7d94050365d2303a28b9ba0b670ca",
+                "url": "https://api.github.com/repos/spryker/acl-entity-data-import/zipball/819966cd4f645f4e371a39c18cc7d1008d82a2ab",
+                "reference": "819966cd4f645f4e371a39c18cc7d1008d82a2ab",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker/acl": "^3.8.0",
-                "spryker/acl-entity": "^0.1.0",
+                "spryker/acl-entity": "^0.1.0 || ^0.2.0",
                 "spryker/data-import": "^1.14.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/propel-orm": "^1.13.0"
@@ -11935,28 +11940,28 @@
             ],
             "description": "AclEntityDataImport module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity-data-import/tree/0.1.0"
+                "source": "https://github.com/spryker/acl-entity-data-import/tree/0.1.2"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-09T09:45:12+00:00"
         },
         {
             "name": "spryker/acl-entity-dummy-product",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity-dummy-product.git",
-                "reference": "90973d3cbeb939dc40afeda9853745f61b9e857e"
+                "reference": "8fbec688743781add590ddc933908a4a15ffc6d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity-dummy-product/zipball/90973d3cbeb939dc40afeda9853745f61b9e857e",
-                "reference": "90973d3cbeb939dc40afeda9853745f61b9e857e",
+                "url": "https://api.github.com/repos/spryker/acl-entity-dummy-product/zipball/8fbec688743781add590ddc933908a4a15ffc6d0",
+                "reference": "8fbec688743781add590ddc933908a4a15ffc6d0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "spryker/acl-entity": "^0.1.0",
-                "spryker/acl-entity-extension": "^0.1.0",
+                "spryker/acl-entity": "^0.1.0 || ^0.2.0",
+                "spryker/acl-entity-extension": "^0.1.0 || ^0.2.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product": "^6.0.0",
                 "spryker/product-image": "^3.0.0",
@@ -11984,22 +11989,22 @@
             ],
             "description": "AclEntityDummyProduct module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity-dummy-product/tree/0.1.0"
+                "source": "https://github.com/spryker/acl-entity-dummy-product/tree/0.1.1"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-06T07:31:06+00:00"
         },
         {
             "name": "spryker/acl-entity-extension",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity-extension.git",
-                "reference": "b880a52e8d075afbda1b641a96938b2a42ea8708"
+                "reference": "4eb0a39e50d4b787916fdfccd56ce7c1dee5489c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity-extension/zipball/b880a52e8d075afbda1b641a96938b2a42ea8708",
-                "reference": "b880a52e8d075afbda1b641a96938b2a42ea8708",
+                "url": "https://api.github.com/repos/spryker/acl-entity-extension/zipball/4eb0a39e50d4b787916fdfccd56ce7c1dee5489c",
+                "reference": "4eb0a39e50d4b787916fdfccd56ce7c1dee5489c",
                 "shasum": ""
             },
             "require": {
@@ -12025,9 +12030,9 @@
             ],
             "description": "AclEntityExtension module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity-extension/tree/0.1.0"
+                "source": "https://github.com/spryker/acl-entity-extension/tree/0.2.0"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-06T07:31:06+00:00"
         },
         {
             "name": "spryker/acl-extension",
@@ -12072,23 +12077,23 @@
         },
         {
             "name": "spryker/acl-merchant-portal",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-merchant-portal.git",
-                "reference": "986e72c1dd1b1524b761fc3d344b5b30ac7bfa68"
+                "reference": "0ee921d0dd963abb9fbde71c72458be1d39969a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-merchant-portal/zipball/986e72c1dd1b1524b761fc3d344b5b30ac7bfa68",
-                "reference": "986e72c1dd1b1524b761fc3d344b5b30ac7bfa68",
+                "url": "https://api.github.com/repos/spryker/acl-merchant-portal/zipball/0ee921d0dd963abb9fbde71c72458be1d39969a6",
+                "reference": "0ee921d0dd963abb9fbde71c72458be1d39969a6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker/acl": "^3.8.0",
-                "spryker/acl-entity": "^0.1.0",
-                "spryker/acl-entity-extension": "^0.1.0",
+                "spryker/acl-entity": "^0.1.0 || ^0.2.0",
+                "spryker/acl-entity-extension": "^0.1.0 || ^0.2.0",
                 "spryker/availability": "^9.0.0",
                 "spryker/category": "^5.0.0",
                 "spryker/category-image": "^1.0.0",
@@ -12163,9 +12168,9 @@
             ],
             "description": "AclMerchantPortal module",
             "support": {
-                "source": "https://github.com/spryker/acl-merchant-portal/tree/0.1.0"
+                "source": "https://github.com/spryker/acl-merchant-portal/tree/0.1.1"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-06T07:31:06+00:00"
         },
         {
             "name": "spryker/agent",
@@ -34123,16 +34128,16 @@
         },
         {
             "name": "spryker/product-offer",
-            "version": "0.7.2",
+            "version": "0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer.git",
-                "reference": "78acd838416b7b7de0fbb7a9109f7600db6b91b8"
+                "reference": "9def113a99977f6213a80f0664a17f0a3d3afae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer/zipball/78acd838416b7b7de0fbb7a9109f7600db6b91b8",
-                "reference": "78acd838416b7b7de0fbb7a9109f7600db6b91b8",
+                "url": "https://api.github.com/repos/spryker/product-offer/zipball/9def113a99977f6213a80f0664a17f0a3d3afae5",
+                "reference": "9def113a99977f6213a80f0664a17f0a3d3afae5",
                 "shasum": ""
             },
             "require": {
@@ -34174,9 +34179,9 @@
             ],
             "description": "ProductOffer module",
             "support": {
-                "source": "https://github.com/spryker/product-offer/tree/0.7.2"
+                "source": "https://github.com/spryker/product-offer/tree/0.7.3"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-09T09:45:12+00:00"
         },
         {
             "name": "spryker/product-offer-availabilities-rest-api",
