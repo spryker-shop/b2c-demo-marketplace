@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c29f7c8811faba007346c76606ef9d00",
+    "content-hash": "89e941978f88d2f5ba01c201821c8bde",
     "packages": [
         {
             "name": "brick/math",
@@ -11837,16 +11837,16 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "dev-beta/mp-5445-merchant-products-are-no-buyable",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "e8b16f407a96f14822135854d52abd4155b9a2a3"
+                "reference": "2ff5a7ab84b60c3db0beed7dc03efb12af0c7cfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/e8b16f407a96f14822135854d52abd4155b9a2a3",
-                "reference": "e8b16f407a96f14822135854d52abd4155b9a2a3",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/2ff5a7ab84b60c3db0beed7dc03efb12af0c7cfd",
+                "reference": "2ff5a7ab84b60c3db0beed7dc03efb12af0c7cfd",
                 "shasum": ""
             },
             "require": {
@@ -11885,9 +11885,9 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/beta/mp-5445-merchant-products-are-no-buyable"
+                "source": "https://github.com/spryker/acl-entity/tree/0.1.1"
             },
-            "time": "2021-08-02T14:09:21+00:00"
+            "time": "2021-07-30T14:20:04+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
@@ -57452,12 +57452,6 @@
             "alias_normalized": "202107.0"
         },
         {
-            "package": "spryker/acl-entity",
-            "version": "dev-beta/mp-5445-merchant-products-are-no-buyable",
-            "alias": "0.1.0",
-            "alias_normalized": "0.1.0.0"
-        },
-        {
             "package": "spryker/docker-chromedriver",
             "version": "9999999-dev",
             "alias": "202107.0",
@@ -57530,7 +57524,6 @@
         "spryker-feature/state-machine": 20,
         "spryker-feature/tax": 20,
         "spryker-feature/wishlist": 20,
-        "spryker/acl-entity": 20,
         "spryker-feature/development-tools": 20,
         "spryker-sdk/integrator": 20,
         "spryker/docker-chromedriver": 20
