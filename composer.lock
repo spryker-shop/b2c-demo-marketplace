@@ -25216,16 +25216,16 @@
         },
         {
             "name": "spryker/merchant-product",
-            "version": "0.2.6",
+            "version": "0.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product.git",
-                "reference": "979eaaeaf5d792c5d0bd1ca26585335baf23ad2a"
+                "reference": "236585f1bcbf047f4c16101f46a1b697316a36de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product/zipball/979eaaeaf5d792c5d0bd1ca26585335baf23ad2a",
-                "reference": "979eaaeaf5d792c5d0bd1ca26585335baf23ad2a",
+                "url": "https://api.github.com/repos/spryker/merchant-product/zipball/236585f1bcbf047f4c16101f46a1b697316a36de",
+                "reference": "236585f1bcbf047f4c16101f46a1b697316a36de",
                 "shasum": ""
             },
             "require": {
@@ -25264,9 +25264,9 @@
             ],
             "description": "MerchantProduct module",
             "support": {
-                "source": "https://github.com/spryker/merchant-product/tree/0.2.6"
+                "source": "https://github.com/spryker/merchant-product/tree/0.2.7"
             },
-            "time": "2021-07-15T11:58:22+00:00"
+            "time": "2021-07-30T14:20:04+00:00"
         },
         {
             "name": "spryker/merchant-product-data-import",
