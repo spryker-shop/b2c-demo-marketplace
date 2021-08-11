@@ -341,8 +341,8 @@ payment.creditcard,Kreditkarte,de_DE
 payment.creditcard,Credit card,en_US
 payment.invoice,Rechnung,de_DE
 payment.invoice,Invoice,en_US
-dummyMarketplacePaymentInvoice,"Marketplace Invoice",de_DE
-dummyMarketplacePaymentInvoice,"Marketplace Invoice",en_US
+dummyMarketplacePaymentInvoice,"Auf Rechnung (Marktplatz)",de_DE
+dummyMarketplacePaymentInvoice,"Invoice (Marketplace)",en_US
 address.street,Straße,de_DE
 address.street,Street,en_US
 address.street_nr,Nummer,de_DE
