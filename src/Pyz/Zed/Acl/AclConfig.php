@@ -91,7 +91,7 @@ class AclConfig extends SprykerAclConfig
     }
 
     /**
-     * @return array<int, array<string, mixed>>
+     * @return mixed[]
      */
     protected function addInstallerRootRole(): array
     {

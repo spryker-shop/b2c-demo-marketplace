@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the Spryker Suite.
+ * This file is part of the Spryker Commerce OS.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
@@ -17,6 +17,7 @@ use Generated\Shared\Transfer\RoleTransfer;
 use Orm\Zed\Merchant\Persistence\Map\SpyMerchantTableMap;
 use Orm\Zed\Merchant\Persistence\SpyMerchant;
 use Orm\Zed\Merchant\Persistence\SpyMerchantQuery;
+use Pyz\Zed\Merchant\MerchantDependencyProvider;
 use PyzTest\Zed\AclEntity\AclQueryDirectorTester;
 use Spryker\Shared\AclEntity\AclEntityConstants;
 
@@ -46,6 +47,8 @@ class SegmentScopeAclQueryDirectorStrategyTest extends Unit
     protected function setUp(): void
     {
         parent::setUp();
+
+        $this->tester->setDependency(MerchantDependencyProvider::PLUGINS_MERCHANT_POST_CREATE, []);
 
         $this->tester->deleteTestData();
     }

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the Spryker Suite.
+ * This file is part of the Spryker Commerce OS.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
@@ -23,6 +23,7 @@ use Orm\Zed\Product\Persistence\Map\SpyProductAbstractTableMap;
 use Orm\Zed\Product\Persistence\SpyProduct;
 use Orm\Zed\Product\Persistence\SpyProductAbstract;
 use Orm\Zed\Product\Persistence\SpyProductQuery;
+use Pyz\Zed\Merchant\MerchantDependencyProvider;
 use PyzTest\Zed\AclEntity\AclQueryDirectorTester;
 use Spryker\Shared\AclEntity\AclEntityConstants;
 use Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException;
@@ -51,6 +52,8 @@ class RelationHandlingTest extends Unit
     protected function setUp(): void
     {
         parent::setUp();
+
+        $this->tester->setDependency(MerchantDependencyProvider::PLUGINS_MERCHANT_POST_CREATE, []);
 
         $this->tester->deleteTestData();
     }
