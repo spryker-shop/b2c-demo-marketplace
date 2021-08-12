@@ -4294,20 +4294,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchantportal-core.git",
-                "reference": "32c953472d273cb1d03de4d479ae5cd35dda4d88"
+                "reference": "c56035dd382f02835f8364baf43ed5821fe3b5a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/32c953472d273cb1d03de4d479ae5cd35dda4d88",
-                "reference": "32c953472d273cb1d03de4d479ae5cd35dda4d88",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/c56035dd382f02835f8364baf43ed5821fe3b5a9",
+                "reference": "c56035dd382f02835f8364baf43ed5821fe3b5a9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
+                "spryker/acl": "^3.8.0",
+                "spryker/acl-entity": "^0.2.0",
                 "spryker/acl-merchant-portal": "^0.1.0",
                 "spryker/gui-table": "^0.5.0",
                 "spryker/merchant-portal-application": "^0.1.0",
+                "spryker/merchant-user": "^0.8.0",
                 "spryker/merchant-user-password-reset-mail": "^0.1.1",
+                "spryker/navigation": "^2.6.0",
+                "spryker/security-merchant-portal-gui": "^0.5.0",
+                "spryker/user-merchant-portal-gui": "^0.4.0",
                 "spryker/zed-ui": "^0.7.0"
             },
             "default-branch": true,
@@ -4325,7 +4331,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchantportal-core/tree/master"
             },
-            "time": "2021-08-03T12:16:35+00:00"
+            "time": "2021-08-11T10:45:09+00:00"
         },
         {
             "name": "spryker-feature/marketplace-order-management",
@@ -23473,16 +23479,16 @@
         },
         {
             "name": "spryker/gui-table",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/gui-table.git",
-                "reference": "517e64e069ad57e08a4ae27bc44f0319c7b11bd3"
+                "reference": "b149dcd78a8e41b06616c78fcba1db2ee5c0353a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/gui-table/zipball/517e64e069ad57e08a4ae27bc44f0319c7b11bd3",
-                "reference": "517e64e069ad57e08a4ae27bc44f0319c7b11bd3",
+                "url": "https://api.github.com/repos/spryker/gui-table/zipball/b149dcd78a8e41b06616c78fcba1db2ee5c0353a",
+                "reference": "b149dcd78a8e41b06616c78fcba1db2ee5c0353a",
                 "shasum": ""
             },
             "require": {
@@ -23522,9 +23528,9 @@
             ],
             "description": "GuiTable module",
             "support": {
-                "source": "https://github.com/spryker/gui-table/tree/0.5.0"
+                "source": "https://github.com/spryker/gui-table/tree/0.5.1"
             },
-            "time": "2021-07-26T08:39:59+00:00"
+            "time": "2021-08-10T09:35:19+00:00"
         },
         {
             "name": "spryker/guzzle",
@@ -45363,16 +45369,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "0.7.1",
+            "version": "0.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "da80b3496f0b444ca73989c7046e7fca409a1db3"
+                "reference": "c83e95d5c44342301ff1bd3608a9a9e317bdf521"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/da80b3496f0b444ca73989c7046e7fca409a1db3",
-                "reference": "da80b3496f0b444ca73989c7046e7fca409a1db3",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/c83e95d5c44342301ff1bd3608a9a9e317bdf521",
+                "reference": "c83e95d5c44342301ff1bd3608a9a9e317bdf521",
                 "shasum": ""
             },
             "require": {
@@ -45410,9 +45416,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/0.7.1"
+                "source": "https://github.com/spryker/zed-ui/tree/0.7.4"
             },
-            "time": "2021-08-04T12:09:44+00:00"
+            "time": "2021-08-11T12:29:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -57552,5 +57558,5 @@
     "platform-overrides": {
         "php": "7.3.15"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
