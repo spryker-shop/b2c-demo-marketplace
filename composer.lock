@@ -4607,22 +4607,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-return-management.git",
-                "reference": "b998c61cc7926d22a302bb0cac36592c208b8193"
+                "reference": "9dda7cb6a63e3dd636ca06549a0509ddac6bc1bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-return-management/zipball/b998c61cc7926d22a302bb0cac36592c208b8193",
-                "reference": "b998c61cc7926d22a302bb0cac36592c208b8193",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-return-management/zipball/9dda7cb6a63e3dd636ca06549a0509ddac6bc1bf",
+                "reference": "9dda7cb6a63e3dd636ca06549a0509ddac6bc1bf",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker-shop/merchant-sales-return-widget": "^0.2.0",
-                "spryker-shop/sales-return-page": "^1.2.0",
+                "spryker-shop/sales-return-page": "^1.0.0",
                 "spryker/merchant-sales-return": "^0.2.0",
                 "spryker/merchant-sales-return-gui": "^0.1.0",
-                "spryker/merchant-sales-return-merchant-user-gui": "^0.1.0",
-                "spryker/sales-return": "^1.1.0"
+                "spryker/merchant-sales-return-merchant-user-gui": "^0.2.0",
+                "spryker/sales-return": "^1.0.0",
+                "spryker/sales-return-data-import": "^0.2.0",
+                "spryker/sales-return-search": "^1.0.0"
             },
             "suggest": {
                 "spryker-feature/marketplace-order-management": "Recommended feature dependency.",
@@ -4632,7 +4634,7 @@
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202107.x-dev"
+                    "dev-master": "202108.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4643,7 +4645,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-return-management/tree/master"
             },
-            "time": "2021-07-27T13:34:50+00:00"
+            "time": "2021-08-13T10:42:03+00:00"
         },
         {
             "name": "spryker-feature/marketplace-shipment",
@@ -26759,16 +26761,16 @@
         },
         {
             "name": "spryker/merchant-sales-return-merchant-user-gui",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-sales-return-merchant-user-gui.git",
-                "reference": "f5e45dd187f02ccd97d35c9990a9bfa8586f06a3"
+                "reference": "de79e0fafa62bc8fd802bd817720807eabd34062"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-sales-return-merchant-user-gui/zipball/f5e45dd187f02ccd97d35c9990a9bfa8586f06a3",
-                "reference": "f5e45dd187f02ccd97d35c9990a9bfa8586f06a3",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-return-merchant-user-gui/zipball/de79e0fafa62bc8fd802bd817720807eabd34062",
+                "reference": "de79e0fafa62bc8fd802bd817720807eabd34062",
                 "shasum": ""
             },
             "require": {
@@ -26809,9 +26811,9 @@
             ],
             "description": "MerchantSalesReturnMerchantUserGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-sales-return-merchant-user-gui/tree/0.1.1"
+                "source": "https://github.com/spryker/merchant-sales-return-merchant-user-gui/tree/0.2.0"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-05T16:02:36+00:00"
         },
         {
             "name": "spryker/merchant-search",
@@ -57557,5 +57559,5 @@
     "platform-overrides": {
         "php": "7.3.15"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
