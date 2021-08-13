@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e0246603a07c691b1eadb0e24dcbe5d",
+    "content-hash": "d4056676044de6233c0e36612b64c7ba",
     "packages": [
         {
             "name": "brick/math",
@@ -4166,12 +4166,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant.git",
-                "reference": "d47333401864bdb29835e058699fdf9ed05cfa3c"
+                "reference": "c1d8f6bc6d10f14b248904c095eeaea09b67f086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/d47333401864bdb29835e058699fdf9ed05cfa3c",
-                "reference": "d47333401864bdb29835e058699fdf9ed05cfa3c",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/c1d8f6bc6d10f14b248904c095eeaea09b67f086",
+                "reference": "c1d8f6bc6d10f14b248904c095eeaea09b67f086",
                 "shasum": ""
             },
             "require": {
@@ -4179,6 +4179,7 @@
                 "spryker-shop/merchant-page": "^0.2.0",
                 "spryker-shop/merchant-profile-widget": "^0.2.0",
                 "spryker-shop/merchant-widget": "^0.2.0",
+                "spryker/merchant": "^3.3.0",
                 "spryker/merchant-profile": "^0.5.0",
                 "spryker/merchant-profile-data-import": "^0.5.0",
                 "spryker/merchant-profile-gui": "^0.6.0",
@@ -4205,7 +4206,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchant/tree/master"
             },
-            "time": "2021-07-30T12:34:43+00:00"
+            "time": "2021-08-11T10:48:01+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant-portal-product-management",
@@ -25271,16 +25272,16 @@
         },
         {
             "name": "spryker/merchant-portal-application",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-portal-application.git",
-                "reference": "de7d3756b16698a56dfc89d85274f7342423923a"
+                "reference": "ce69f5c3c480f41fe7b248f549a0f821c8d920fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-portal-application/zipball/de7d3756b16698a56dfc89d85274f7342423923a",
-                "reference": "de7d3756b16698a56dfc89d85274f7342423923a",
+                "url": "https://api.github.com/repos/spryker/merchant-portal-application/zipball/ce69f5c3c480f41fe7b248f549a0f821c8d920fa",
+                "reference": "ce69f5c3c480f41fe7b248f549a0f821c8d920fa",
                 "shasum": ""
             },
             "require": {
@@ -25312,9 +25313,9 @@
             ],
             "description": "MerchantPortalApplication module",
             "support": {
-                "source": "https://github.com/spryker/merchant-portal-application/tree/0.1.0"
+                "source": "https://github.com/spryker/merchant-portal-application/tree/0.1.1"
             },
-            "time": "2021-07-15T17:31:35+00:00"
+            "time": "2021-08-13T12:47:42+00:00"
         },
         {
             "name": "spryker/merchant-product",
@@ -27314,16 +27315,16 @@
         },
         {
             "name": "spryker/merchant-user",
-            "version": "0.8.0",
+            "version": "0.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-user.git",
-                "reference": "c7b6318d3177118d75458a9842a9f7922f63cc7c"
+                "reference": "a151487c02c3ebb319692d86141bbcd4ddd81eee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-user/zipball/c7b6318d3177118d75458a9842a9f7922f63cc7c",
-                "reference": "c7b6318d3177118d75458a9842a9f7922f63cc7c",
+                "url": "https://api.github.com/repos/spryker/merchant-user/zipball/a151487c02c3ebb319692d86141bbcd4ddd81eee",
+                "reference": "a151487c02c3ebb319692d86141bbcd4ddd81eee",
                 "shasum": ""
             },
             "require": {
@@ -27335,7 +27336,7 @@
                 "spryker/propel-orm": "^1.5.0",
                 "spryker/transfer": "^3.25.0",
                 "spryker/user": "^3.13.3",
-                "spryker/user-password-reset": "^0.2.0",
+                "spryker/user-password-reset": "^0.2.1",
                 "spryker/util-text": "^1.3.0"
             },
             "require-dev": {
@@ -27362,9 +27363,9 @@
             ],
             "description": "MerchantUser module",
             "support": {
-                "source": "https://github.com/spryker/merchant-user/tree/0.8.0"
+                "source": "https://github.com/spryker/merchant-user/tree/0.8.1"
             },
-            "time": "2021-07-30T05:04:54+00:00"
+            "time": "2021-08-13T12:47:42+00:00"
         },
         {
             "name": "spryker/merchant-user-extension",
@@ -44017,16 +44018,16 @@
         },
         {
             "name": "spryker/user-password-reset",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/user-password-reset.git",
-                "reference": "7817429179e186bf62bd395fb38fa372b8808fcc"
+                "reference": "6ea7c8695a0854976cd04033c7abab3774b3aa6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-password-reset/zipball/7817429179e186bf62bd395fb38fa372b8808fcc",
-                "reference": "7817429179e186bf62bd395fb38fa372b8808fcc",
+                "url": "https://api.github.com/repos/spryker/user-password-reset/zipball/6ea7c8695a0854976cd04033c7abab3774b3aa6c",
+                "reference": "6ea7c8695a0854976cd04033c7abab3774b3aa6c",
                 "shasum": ""
             },
             "require": {
@@ -44058,9 +44059,9 @@
             ],
             "description": "UserPasswordReset module",
             "support": {
-                "source": "https://github.com/spryker/user-password-reset/tree/0.2.0"
+                "source": "https://github.com/spryker/user-password-reset/tree/0.2.1"
             },
-            "time": "2021-03-19T12:56:21+00:00"
+            "time": "2021-08-13T12:47:42+00:00"
         },
         {
             "name": "spryker/user-password-reset-extension",
