@@ -151,5 +151,22 @@
         "source": "\\Spryker\\Zed\\AvailabilityCartConnector\\Communication\\Plugin\\Cart\\CheckAvailabilityPlugin"
       }
     }
+  },
+  "Spryker.SalesProductConfiguration": {
+    "wire-plugin": {
+      "f57349b10d29520c84b66315f809b815cf62ec34": {
+        "target": "\\Spryker\\Zed\\Checkout\\CheckoutDependencyProvider::getCheckoutOrderSavers",
+        "source": "\\Spryker\\Zed\\SalesProductConfiguration\\Communication\\Plugin\\Checkout\\ProductConfigurationOrderSaverPlugin",
+        "poistion": {
+          "after": "\\Spryker\\Zed\\Sales\\Communication\\Plugin\\Checkout\\OrderItemsSaverPlugin"
+        }
+      }
+    },
+    "unwire-plugin": {
+      "17f337123e59867460d0ca4c924b2a8f94b2acd2": {
+        "target": "\\Spryker\\Zed\\Sales\\SalesDependencyProvider::getOrderPostSavePlugins",
+        "source": "\\Spryker\\Zed\\SalesProductConfiguration\\Communication\\Plugin\\Sales\\ProductConfigurationOrderPostSavePlugin"
+      }
+    }
   }
 }
