@@ -3250,9 +3250,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spryker/oryx-for-zed@npm:~2.11.2":
-  version: 2.11.2
-  resolution: "@spryker/oryx-for-zed@npm:2.11.2"
+"@spryker/oryx-for-zed@npm:~2.11.3":
+  version: 2.11.3
+  resolution: "@spryker/oryx-for-zed@npm:2.11.3"
   dependencies:
     "@babel/core": ~7.12.3
     "@babel/preset-env": ~7.12.1
@@ -3275,7 +3275,7 @@ __metadata:
     terser-webpack-plugin: ~4.2.2
     webpack: ~4.27.1
     yargs: ~13.3.0
-  checksum: 36814618b59819dea4bfd8b11f9af199371ee21e39ede2fb215f1768c2c64a96a8fdbbe864d577c2c6e52c38fa5741e1486a86f7236d2f484fe502b95819413a
+  checksum: 04cb21a164672f41d75c3e79edfb837eb0afce43b843c9674b061c335be59c3fbfeb4bbc6787f7eb7a92a2115c783e6b07a58114bfdd8276b25129d0ff6730d7
   languageName: node
   linkType: hard
 
@@ -3882,17 +3882,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spryker/unsaved-changes.monitor.form@npm:^0.1.0-next.1":
-  version: 0.1.0-next.2
-  resolution: "@spryker/unsaved-changes.monitor.form@npm:0.1.0-next.2"
+"@spryker/unsaved-changes.monitor.form@npm:^0.1.3-next.0":
+  version: 0.1.3
+  resolution: "@spryker/unsaved-changes.monitor.form@npm:0.1.3"
   dependencies:
     tslib: ^1.10.0
   peerDependencies:
     "@angular/common": ^9.1.12
     "@angular/core": ^9.1.12
-    "@spryker/interception": "*"
-    "@spryker/unsaved-changes": "*"
-  checksum: 71690c5ecb673a68b216422948054973fa701b4f223a9518b28bccd27b8e11218d9483c8831b47963760ae991f4b795c462f1e547ac48f9cbbd02ba5e9cfc114
+    "@spryker/interception": ^0.1.0
+    "@spryker/unsaved-changes": ^0.1.0
+  checksum: a7cb827923c8f021e7a2434673fcae8b32af7758ebb9a83b4f7cb8b643a88b9322388cd57dceb60faf1870717e8fe978619fd567d1205bafaf965e4e9a83ed98
   languageName: node
   linkType: hard
 
@@ -14643,6 +14643,7 @@ __metadata:
     "@spryker/textarea": ^0.2.0-next.4
     "@spryker/toggle": ^0.2.0-next.4
     "@spryker/tree-select": ^0.1.1-next.0
+    "@spryker/unsaved-changes.monitor.form": ^0.1.3-next.0
     "@spryker/utils": ^0.2.0-next.17
     "@spryker/web-components": ^0.2.1-next.8
     rxjs: ^6.5.4
@@ -19421,7 +19422,7 @@ resolve@^0.6.1:
     "@spryker/frontend-config.prettier": ~0.0.2
     "@spryker/frontend-config.stylelint": ~0.0.5
     "@spryker/frontend-config.tslint": ~0.0.5
-    "@spryker/oryx-for-zed": ~2.11.2
+    "@spryker/oryx-for-zed": ~2.11.3
     "@spryker/sass-resources-loader": ~2.0.1-spryker.0.1.0
     "@types/jest": ~26.0.23
     "@types/node": ~12.11.7
@@ -22540,7 +22541,7 @@ resolve@^0.6.1:
     "@spryker/unsaved-changes.guard.browser": ^0.1.0-next.2
     "@spryker/unsaved-changes.guard.drawer": ^0.1.0-next.2
     "@spryker/unsaved-changes.guard.navigation": ^0.1.0-next.1
-    "@spryker/unsaved-changes.monitor.form": ^0.1.0-next.1
+    "@spryker/unsaved-changes.monitor.form": ^0.1.3-next.0
     "@spryker/user-menu": ^0.1.0-next.0
     "@spryker/utils": ^0.2.0-next.17
     "@spryker/utils.date.adapter.date-fns": ^0.1.0-next.0
