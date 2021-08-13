@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eaafda6fffa9068951302f4c2b5a4556",
+    "content-hash": "d26a3f874c6e20c948e24f052afb3987",
     "packages": [
         {
             "name": "brick/math",
@@ -5810,12 +5810,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/spryker-core.git",
-                "reference": "2fb1e5627e5395fa00a168a360e40616af9efeb5"
+                "reference": "93b8a5310d2d2caa473e55b258da58ae7d501185"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/spryker-core/zipball/2fb1e5627e5395fa00a168a360e40616af9efeb5",
-                "reference": "2fb1e5627e5395fa00a168a360e40616af9efeb5",
+                "url": "https://api.github.com/repos/spryker-feature/spryker-core/zipball/93b8a5310d2d2caa473e55b258da58ae7d501185",
+                "reference": "93b8a5310d2d2caa473e55b258da58ae7d501185",
                 "shasum": ""
             },
             "require": {
@@ -5833,6 +5833,7 @@
                 "spryker-shop/storage-router": "^0.1.0",
                 "spryker/application": "^3.23.0",
                 "spryker/assertion": "^3.0.0",
+                "spryker/authorization": "^1.0.0",
                 "spryker/country": "^3.3.0",
                 "spryker/data-export": "^0.1.3",
                 "spryker/data-import": "^1.11.0",
@@ -5860,7 +5861,7 @@
                 "spryker/scheduler": "^1.1.0",
                 "spryker/security": "^1.2.0",
                 "spryker/security-blocker": "^1.0.0",
-                "spryker/security-system-user": "^0.2.0",
+                "spryker/security-system-user": "^0.3.0",
                 "spryker/session": "^4.7.0",
                 "spryker/session-file": "^1.0.0",
                 "spryker/session-redis": "^1.3.0",
@@ -5896,7 +5897,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/spryker-core/tree/master"
             },
-            "time": "2021-07-30T08:07:13+00:00"
+            "time": "2021-08-11T12:22:11+00:00"
         },
         {
             "name": "spryker-feature/spryker-core-back-office",
@@ -12720,6 +12721,95 @@
                 "source": "https://github.com/spryker/auth-rest-api-extension/tree/1.1.0"
             },
             "time": "2019-09-25T13:31:36+00:00"
+        },
+        {
+            "name": "spryker/authorization",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/authorization.git",
+                "reference": "052579a1d4932d23d39c3e654c869827d128c8ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/authorization/zipball/052579a1d4932d23d39c3e654c869827d128c8ba",
+                "reference": "052579a1d4932d23d39c3e654c869827d128c8ba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "spryker/authorization-extension": "^1.0.0",
+                "spryker/kernel": "^3.33.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/glue-application": "If you want to use the plugins.",
+                "spryker/symfony": "If you want to use the plugins."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Authorization module",
+            "support": {
+                "source": "https://github.com/spryker/authorization/tree/1.0.0"
+            },
+            "time": "2021-08-06T12:09:29+00:00"
+        },
+        {
+            "name": "spryker/authorization-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/authorization-extension.git",
+                "reference": "10c790cef2f11909c2f3edfc3a00608dc0fdb88c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/authorization-extension/zipball/10c790cef2f11909c2f3edfc3a00608dc0fdb88c",
+                "reference": "10c790cef2f11909c2f3edfc3a00608dc0fdb88c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "AuthorizationExtension module",
+            "support": {
+                "source": "https://github.com/spryker/authorization-extension/tree/1.0.0"
+            },
+            "time": "2021-08-06T12:09:29+00:00"
         },
         {
             "name": "spryker/availability",
@@ -40683,21 +40773,20 @@
         },
         {
             "name": "spryker/security-system-user",
-            "version": "0.2.1",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-system-user.git",
-                "reference": "517efd064a61ba687b9a01d5dba3fed5caecdc59"
+                "reference": "a30d66d05108c3dac8c785e5b42fcdc53f33caf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-system-user/zipball/517efd064a61ba687b9a01d5dba3fed5caecdc59",
-                "reference": "517efd064a61ba687b9a01d5dba3fed5caecdc59",
+                "url": "https://api.github.com/repos/spryker/security-system-user/zipball/a30d66d05108c3dac8c785e5b42fcdc53f33caf9",
+                "reference": "a30d66d05108c3dac8c785e5b42fcdc53f33caf9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "spryker/acl-entity-extension": "^0.1.0 || ^0.2.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/security-extension": "^1.0.0",
                 "spryker/session-redis-extension": "^1.0.0",
@@ -40733,9 +40822,9 @@
             ],
             "description": "SecuritySystemUser module",
             "support": {
-                "source": "https://github.com/spryker/security-system-user/tree/0.2.1"
+                "source": "https://github.com/spryker/security-system-user/tree/0.3.0"
             },
-            "time": "2021-08-06T07:31:06+00:00"
+            "time": "2021-08-11T11:07:06+00:00"
         },
         {
             "name": "spryker/sequence-number",
@@ -57557,5 +57646,5 @@
     "platform-overrides": {
         "php": "7.3.15"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
