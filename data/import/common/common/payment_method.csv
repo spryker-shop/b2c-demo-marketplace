@@ -1,3 +1,4 @@
 payment_method_key,payment_method_name,payment_provider_key,payment_provider_name,is_active
-dummyPaymentInvoice,Invoice,dummyPayment,Dummy Payment,1
+dummyPaymentInvoice,Invoice,dummyPayment,Dummy Payment,0
 dummyPaymentCreditCard,Credit Card,dummyPayment,Dummy Payment,1
+dummyMarketplacePaymentInvoice,Invoice (Marketplace),DummyMarketplacePayment,Dummy Marketplace Payment,1

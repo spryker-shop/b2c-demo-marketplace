@@ -341,8 +341,8 @@ payment.creditcard,Kreditkarte,de_DE
 payment.creditcard,Credit card,en_US
 payment.invoice,Rechnung,de_DE
 payment.invoice,Invoice,en_US
-dummyMarketplacePaymentInvoice,"Marketplace Invoice",de_DE
-dummyMarketplacePaymentInvoice,"Marketplace Invoice",en_US
+dummyMarketplacePaymentInvoice,"Auf Rechnung (Marktplatz)",de_DE
+dummyMarketplacePaymentInvoice,"Invoice (Marketplace)",en_US
 address.street,Straße,de_DE
 address.street,Street,en_US
 address.street_nr,Nummer,de_DE
@@ -2972,3 +2972,9 @@ agent_page.error.customer_already_logged_in,"Sie sind bereits als Kunde angemeld
 agent_page.error.customer_already_logged_in,"You are already logged in as customer, please logout first, then proceed",en_US
 customer.login.remember_me,"Remember me",en_US
 customer.login.remember_me,"Behalte mich in Erinnerung",de_DE
+product-offer.info.product-offer-inactive.removed,Inactive item %sku% was removed from your shopping cart.,en_US
+product-offer.info.product-offer-inactive.removed,Der inaktive Artikel %sku% wurde aus Ihrem Warenkorb entfernt.,de_DE
+product-offer.info.reference.invalid,Product offer reference not found for product with SKU '%sku%'.,en_US
+product-offer.info.reference.invalid,Produktangebotsreferenz für Produkt mit SKU '% sku%' nicht gefunden.,de_DE
+product-offer.message.not-active-or-approved,Product offer not active for product with SKU '%sku%'.,en_US
+product-offer.message.not-active-or-approved,Produktangebot ist inaktiv für Produkt mit SKU '% sku%'.,de_DE
