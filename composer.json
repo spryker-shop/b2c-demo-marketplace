@@ -197,6 +197,7 @@
         "spryker/scheduler-jenkins": "^1.2.1",
         "spryker/security-blocker-rest-api": "^1.0.0",
         "spryker/security-merchant-portal-gui": "^0.5.0",
+        "spryker/security-system-user": "^0.3.0",
         "spryker/shipment-cart-connector": "^2.1.1",
         "spryker/shipment-checkout-connector": "^2.0.4",
         "spryker/shipment-discount-connector": "^4.0.5",
