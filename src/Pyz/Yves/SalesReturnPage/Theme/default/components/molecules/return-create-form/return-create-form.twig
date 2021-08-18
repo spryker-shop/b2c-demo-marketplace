@@ -1,5 +1,16 @@
 {% extends molecule('return-create-form', '@SprykerShop:SalesReturnPage') %}
 
+{% define data = {
+    merchantIndex: null,
+} %}
+
+{% block body %}
+    {% set returnCreateStateTogglerJsClass = 'js-return-create__trigger-state-toggler'
+        ~ (data.merchantIndex ? ' js-return-create__merchant-state-toggler-' ~ data.merchantIndex) %}
+
+    {{ parent() }}
+{% endblock %}
+
 {% block salesReturnOrderInfoSeparator %}{% endblock %}
 
 {% block salesReturnProducts %}
@@ -11,7 +22,7 @@
             label: 'return_page.create_return.select_all_checkbox' | trans,
         },
         attributes: {
-            'target-class-name': 'js-return-create__trigger-state-toggler',
+            'target-class-name': returnCreateStateTogglerJsClass,
         },
     } only %}
 
@@ -27,6 +38,7 @@
         },
         embed: {
             returnItem: returnItem,
+            returnCreateStateTogglerJsClass: returnCreateStateTogglerJsClass,
         },
     } only %}
         {% block checkbox %}
@@ -35,7 +47,7 @@
                     {{ form_row(embed.returnItem.isReturnable, {
                         label: ' ',
                         attr: {
-                            class: 'js-return-create__trigger-state-toggler',
+                            class: embed.returnCreateStateTogglerJsClass,
                         },
                         disabled: not data.item.isReturnable,
                         attributes: {
@@ -92,6 +104,7 @@
     {% widget 'OrderItemsProductBundleWidget' args [data.form.vars.value.productBundleItems] with {
         embed: {
             form: data.form,
+            returnCreateStateTogglerJsClass: returnCreateStateTogglerJsClass,
         },
     } only %}
         {% block bundle %}
@@ -103,6 +116,7 @@
                 },
                 embed: {
                     form: embed.form,
+                    returnCreateStateTogglerJsClass: embed.returnCreateStateTogglerJsClass,
                 },
             } only %}
                 {% block contentWrapper %}
@@ -124,7 +138,7 @@
                                     {{ form_row(productBundle.isReturnable, {
                                         label: ' ',
                                         attr: {
-                                            class: 'js-return-create__trigger-state-toggler',
+                                            class: embed.returnCreateStateTogglerJsClass,
                                         },
                                         disabled: not isReturnable,
                                         attributes: {
@@ -188,9 +202,10 @@
          args [orderItems]
          use view('order-returnable-items-configured-bundle-widget', 'SalesConfigurableBundleWidget')
          with {
-           embed: {
-               form: data.form,
-           },
+             embed: {
+                 form: data.form,
+                 returnCreateStateTogglerJsClass: returnCreateStateTogglerJsClass,
+             },
      } only %}
          {% block bundleItem %}
              {% embed molecule('ordered-configured-bundle', 'SalesConfigurableBundleWidget') ignore missing with {
@@ -201,6 +216,7 @@
                  },
                  embed: {
                      form: embed.form,
+                     returnCreateStateTogglerJsClass: embed.returnCreateStateTogglerJsClass,
                  },
              } only %}
                  {% block bundleProductItem %}
@@ -213,6 +229,7 @@
                          },
                          embed: {
                              form: embed.form,
+                             returnCreateStateTogglerJsClass: embed.returnCreateStateTogglerJsClass,
                          },
                      } only %}
                          {% block checkbox %}
@@ -221,7 +238,7 @@
                                      {{ form_row(returnItem.isReturnable, {
                                          label: ' ',
                                          attr: {
-                                             class: 'js-return-create__trigger-state-toggler',
+                                             class: embed.returnCreateStateTogglerJsClass,
                                          },
                                          disabled: not data.product.isReturnable,
                                          attributes: {

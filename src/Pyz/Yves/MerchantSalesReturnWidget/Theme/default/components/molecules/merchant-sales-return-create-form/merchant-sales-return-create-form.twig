@@ -7,6 +7,7 @@
                 form: data.createReturnForm,
                 order: data.order,
                 merchantReference: merchantReference,
+                merchantIndex: loop.index,
                 firstIteration: loop.first,
                 lastIteration: loop.last,
             },
@@ -45,7 +46,9 @@
                 <div class="{{ checkboxWrapperClass }}">
                     {{ form_row(returnItem.isReturnable, {
                         label: ' ',
-                        attr: {'class': 'js-return-create__trigger-state-toggler'},
+                        attr: {
+                            class: returnCreateStateTogglerJsClass,
+                        },
                         attributes: {
                             'merchant-reference': orderItem.merchantReference,
                             'is-returnable': isReturnable,
