@@ -1093,6 +1093,12 @@ mail.customer.restore_password_confirmation.subject,Dein Passwort wurde erfolgre
 mail.customer.restore_password_confirmation.subject,Your password was changed successfully!,en_US
 mail.customer.restore_password_confirmation.text,Dein Passwort wurde erfolgreich geändert!,de_DE
 mail.customer.restore_password_confirmation.text,Your password was changed successfully!,en_US
+mail.merchant.restore_password.subject,Neues Passwort für Ihren Spryker Merchant Portal Account,de_DE
+mail.merchant.restore_password.subject,New password for your Spryker Merchant Portal account,en_US
+mail.merchant.restore_password.text,"""Es wurde ein neues Passwort für Ihren Spryker Merchant Portal Account angefordert. Wenn Sie nicht um um eine Neueinrichtung des Passworts gebeten haben, ignorieren Sie bitte diese Email. Klicken Sie auf den folgedenen Link, um Ihr Passwort zu ändern:""",de_DE
+mail.merchant.restore_password.text,"""Somebody has requested a new password for your Spryker Merchant Portal account. If it's not you, just ignore this email. If it's you, please follow the link bellow:""",en_US
+mail.merchant.restore_password.label,Passwort ändern,de_DE
+mail.merchant.restore_password.label,Change Password,en_US
 mail.newsletter.subscribed.subject,Willkommen beim Spryker Newsletter,de_DE
 mail.newsletter.subscribed.subject,Welcome to Spryker newsletter,en_US
 mail.newsletter.subscribed.text,"Wir freuen uns, dass du dich für unseren Newsletter registriert hast. Wir werden unser bestes geben, um dich mich relevanten und spannenden News und Updates zu versorgen.",de_DE
