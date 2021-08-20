@@ -24,7 +24,7 @@
         </transitions>
 
         <events>
-            <event name="refund" manual="true" command="DummyMarketplacePayment/Refund"/>
+            <event name="refund" manual="true" command="MarketplaceOrder/Refund"/>
         </events>
     </process>
 
