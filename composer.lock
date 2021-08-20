@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa8be68f470ce863433c1e0152c620b9",
+    "content-hash": "c7c3731fa34b559db0eb9af04d1f8235",
     "packages": [
         {
             "name": "brick/math",
@@ -41782,16 +41782,16 @@
         },
         {
             "name": "spryker/state-machine",
-            "version": "2.13.1",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/state-machine.git",
-                "reference": "c94b43e80e88fc107fd0918437c78c32d1647d30"
+                "reference": "2d66b4e9669aa328659d158cef141c7b16ba221b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/state-machine/zipball/c94b43e80e88fc107fd0918437c78c32d1647d30",
-                "reference": "c94b43e80e88fc107fd0918437c78c32d1647d30",
+                "url": "https://api.github.com/repos/spryker/state-machine/zipball/2d66b4e9669aa328659d158cef141c7b16ba221b",
+                "reference": "2d66b4e9669aa328659d158cef141c7b16ba221b",
                 "shasum": ""
             },
             "require": {
@@ -41827,9 +41827,9 @@
             ],
             "description": "StateMachine module",
             "support": {
-                "source": "https://github.com/spryker/state-machine/tree/2.13.1"
+                "source": "https://github.com/spryker/state-machine/tree/2.14.0"
             },
-            "time": "2021-02-25T17:30:23+00:00"
+            "time": "2021-08-18T10:54:16+00:00"
         },
         {
             "name": "spryker/step-engine",
@@ -49488,22 +49488,22 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.3.3",
+            "version": "v5.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "46aa709affb9ad3355bd7a810f9662d71025c384"
+                "reference": "3dd8ddd1e260e58ecc61bb78da3b6584b3bfcba0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/46aa709affb9ad3355bd7a810f9662d71025c384",
-                "reference": "46aa709affb9ad3355bd7a810f9662d71025c384",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/3dd8ddd1e260e58ecc61bb78da3b6584b3bfcba0",
+                "reference": "3dd8ddd1e260e58ecc61bb78da3b6584b3bfcba0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
                 "symfony/polyfill-mbstring": "~1.0",
-                "symfony/polyfill-php80": "^1.15"
+                "symfony/polyfill-php80": "^1.16"
             },
             "conflict": {
                 "phpunit/phpunit": "<5.4.3",
@@ -49556,7 +49556,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.3.3"
+                "source": "https://github.com/symfony/var-dumper/tree/v5.3.6"
             },
             "funding": [
                 {
@@ -49572,7 +49572,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-24T08:13:00+00:00"
+            "time": "2021-07-27T01:56:02+00:00"
         },
         {
             "name": "symfony/yaml",
