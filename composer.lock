@@ -30086,16 +30086,16 @@
         },
         {
             "name": "spryker/price-product-offer",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/price-product-offer.git",
-                "reference": "2d9ede08b5366b2c21a1c6356e1d7b71d1b4d119"
+                "reference": "0bac8775db21fbe69b1d778b544c1b0c2fe4bd7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/price-product-offer/zipball/2d9ede08b5366b2c21a1c6356e1d7b71d1b4d119",
-                "reference": "2d9ede08b5366b2c21a1c6356e1d7b71d1b4d119",
+                "url": "https://api.github.com/repos/spryker/price-product-offer/zipball/0bac8775db21fbe69b1d778b544c1b0c2fe4bd7f",
+                "reference": "0bac8775db21fbe69b1d778b544c1b0c2fe4bd7f",
                 "shasum": ""
             },
             "require": {
@@ -30111,6 +30111,7 @@
                 "spryker/store": "^1.0.0",
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.25.0",
+                "spryker/translator": "^1.1.0",
                 "spryker/wishlist-extension": "^1.2.0"
             },
             "require-dev": {
@@ -30136,9 +30137,9 @@
             ],
             "description": "PriceProductOffer module",
             "support": {
-                "source": "https://github.com/spryker/price-product-offer/tree/1.0.0"
+                "source": "https://github.com/spryker/price-product-offer/tree/1.1.0"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2021-08-19T10:54:56+00:00"
         },
         {
             "name": "spryker/price-product-offer-data-import",
@@ -40604,7 +40605,7 @@
         },
         {
             "name": "spryker/security-merchant-portal-gui",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-merchant-portal-gui.git",
@@ -40662,7 +40663,7 @@
             ],
             "description": "SecurityMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/1.0.0"
+                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/1.0.1"
             },
             "time": "2021-08-16T16:27:47+00:00"
         },
