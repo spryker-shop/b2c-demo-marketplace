@@ -16,15 +16,17 @@
 {% block salesReturnProducts %}
     {% set salesReturnProductItemClass = 'grid grid--justify' %}
 
-    {% include molecule('checkbox-select-all') with {
-        modifiers: ['big'],
-        data: {
-            label: 'return_page.create_return.select_all_checkbox' | trans,
-        },
-        attributes: {
-            'target-class-name': returnCreateStateTogglerJsClass,
-        },
-    } only %}
+    {% block checkboxSelectAll %}
+        {% include molecule('checkbox-select-all') with {
+            modifiers: ['big'],
+            data: {
+                label: 'return_page.create_return.select_all_checkbox' | trans,
+            },
+            attributes: {
+                'target-class-name': returnCreateStateTogglerJsClass,
+            },
+        } only %}
+    {% endblock %}
 
     {{ parent() }}
 {% endblock %}
