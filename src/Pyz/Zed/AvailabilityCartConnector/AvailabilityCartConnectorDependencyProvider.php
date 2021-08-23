@@ -7,10 +7,10 @@
 
 namespace Pyz\Zed\AvailabilityCartConnector;
 
-use Spryker\Zed\AvailabilityCartConnector\AvailabilityCartConnectorDependencyProvider as SprykerAbstractBundleDependencyProvider;
+use Spryker\Zed\AvailabilityCartConnector\AvailabilityCartConnectorDependencyProvider as SprykerAvailabilityCartConnectorDependencyProviderr;
 use Spryker\Zed\ProductOffer\Communication\Plugin\Cart\ProductOfferCartItemQuantityCounterStrategyPlugin;
 
-class AvailabilityCartConnectorDependencyProvider extends SprykerAbstractBundleDependencyProvider
+class AvailabilityCartConnectorDependencyProvider extends SprykerAvailabilityCartConnectorDependencyProviderr
 {
     /**
      * @return \Spryker\Zed\AvailabilityCartConnectorExtension\Dependency\Plugin\CartItemQuantityCounterStrategyPluginInterface[]
