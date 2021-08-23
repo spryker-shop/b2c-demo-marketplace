@@ -43,62 +43,48 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     }
 
     protected disableItem(target: HTMLInputElement): void {
-        const currentMerchantReference = target.getAttribute(this.merchantReference);
-
-        const checkboxesToDisable = this.checkboxes.filter((checkbox) => {
-            return checkbox.getAttribute(this.merchantReference) !== currentMerchantReference;
-        });
-
-        checkboxesToDisable.map((checkbox) => {
-            checkbox.disabled = true;
-            checkbox
-                .closest(`.${this.checkboxComponentClassname}`)
-                .classList.add(this.checkboxDisabledComponentClassname);
-        });
-
+        this.disableItems(target, this.checkboxes, this.checkboxComponentClassname, this.checkboxDisabledComponentClassname);
         this.disableSelectAllItem(target);
     }
 
     protected disableSelectAllItem(target: HTMLInputElement): void {
+        this.disableItems(target, this.selectAllCheckboxes, this.selectAllCheckboxComponentClass, this.checkboxComponentDisabledClass);
+    }
+
+    protected enableAllItems(): void {
+        this.enableItems(this.checkboxes, this.checkboxComponentClassname, this.checkboxDisabledComponentClassname);
+        this.enableSelectAllItems();
+    }
+
+    protected enableSelectAllItems(): void {
+        this.enableItems(this.selectAllCheckboxes, this.selectAllCheckboxComponentClass, this.checkboxComponentDisabledClass);
+    }
+
+    protected disableItems(target: HTMLInputElement, checkboxes: HTMLInputElement[], parentClassName: string, className: string): void {
         const currentMerchantReference = target.getAttribute(this.merchantReference);
 
-        const checkboxesToDisable = this.selectAllCheckboxes.filter((checkbox) => {
+        const checkboxesToDisable = checkboxes.filter((checkbox) => {
             return checkbox.getAttribute(this.merchantReference) !== currentMerchantReference;
         });
 
         checkboxesToDisable.map((checkbox) => {
             checkbox.disabled = true;
             checkbox
-                .closest(`.${this.selectAllCheckboxComponentClass}`)
-                .classList.add(this.checkboxComponentDisabledClass);
+                .closest(`.${parentClassName}`)
+                .classList.add(className);
         });
     }
 
-    protected enableAllItems(): void {
-        this.checkboxes.map((checkbox) => {
+    protected enableItems(checkboxes: HTMLInputElement[], parentClassName: string, className: string): void {
+        checkboxes.map((checkbox) => {
             if (!checkbox.hasAttribute(this.isReturnable)) {
                 return;
             }
 
             checkbox.disabled = false;
             checkbox
-                .closest(`.${this.checkboxComponentClassname}`)
-                .classList.remove(this.checkboxDisabledComponentClassname);
-        });
-
-        this.enableSelectAllItems();
-    }
-
-    protected enableSelectAllItems(): void {
-        this.selectAllCheckboxes.map((checkbox) => {
-            if (!checkbox.hasAttribute(this.isReturnable)) {
-                return;
-            }
-
-            checkbox.disabled = false;
-            checkbox
-                .closest(`.${this.selectAllCheckboxComponentClass}`)
-                .classList.remove(this.checkboxComponentDisabledClass);
+                .closest(`.${parentClassName}`)
+                .classList.remove(className);
         });
     }
 
