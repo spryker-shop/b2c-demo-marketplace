@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dc451d9af14d8d8a751bb94ade11788",
+    "content-hash": "824b731c0a0e9755e68edff87e193be9",
     "packages": [
         {
             "name": "brick/math",
@@ -41783,16 +41783,16 @@
         },
         {
             "name": "spryker/state-machine",
-            "version": "2.13.1",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/state-machine.git",
-                "reference": "c94b43e80e88fc107fd0918437c78c32d1647d30"
+                "reference": "2d66b4e9669aa328659d158cef141c7b16ba221b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/state-machine/zipball/c94b43e80e88fc107fd0918437c78c32d1647d30",
-                "reference": "c94b43e80e88fc107fd0918437c78c32d1647d30",
+                "url": "https://api.github.com/repos/spryker/state-machine/zipball/2d66b4e9669aa328659d158cef141c7b16ba221b",
+                "reference": "2d66b4e9669aa328659d158cef141c7b16ba221b",
                 "shasum": ""
             },
             "require": {
@@ -41828,9 +41828,9 @@
             ],
             "description": "StateMachine module",
             "support": {
-                "source": "https://github.com/spryker/state-machine/tree/2.13.1"
+                "source": "https://github.com/spryker/state-machine/tree/2.14.0"
             },
-            "time": "2021-02-25T17:30:23+00:00"
+            "time": "2021-08-18T10:54:16+00:00"
         },
         {
             "name": "spryker/step-engine",
