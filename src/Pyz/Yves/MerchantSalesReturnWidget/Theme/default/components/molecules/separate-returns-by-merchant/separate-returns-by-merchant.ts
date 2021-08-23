@@ -5,7 +5,9 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     protected checkedSelectAllItems: HTMLInputElement[] = [];
 
     protected init(): void {
-        this.selectAllCheckboxes = <HTMLInputElement[]>Array.from(document.getElementsByClassName(this.selectAllCheckboxClass));
+        this.selectAllCheckboxes = <HTMLInputElement[]>(
+            Array.from(document.getElementsByClassName(this.selectAllCheckboxClass))
+        );
 
         super.init();
     }
@@ -41,12 +43,22 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     }
 
     protected disableItem(target: HTMLInputElement): void {
-        this.disableItems(target, this.checkboxes, this.checkboxComponentClassname, this.checkboxDisabledComponentClassname);
+        this.disableItems(
+            target,
+            this.checkboxes,
+            this.checkboxComponentClassname,
+            this.checkboxDisabledComponentClassname,
+        );
         this.disableSelectAllItem(target);
     }
 
     protected disableSelectAllItem(target: HTMLInputElement): void {
-        this.disableItems(target, this.selectAllCheckboxes, this.selectAllCheckboxComponentClass, this.checkboxComponentDisabledClass);
+        this.disableItems(
+            target,
+            this.selectAllCheckboxes,
+            this.selectAllCheckboxComponentClass,
+            this.checkboxComponentDisabledClass,
+        );
     }
 
     protected enableAllItems(): void {
@@ -55,21 +67,28 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     }
 
     protected enableSelectAllItems(): void {
-        this.enableItems(this.selectAllCheckboxes, this.selectAllCheckboxComponentClass, this.checkboxComponentDisabledClass);
+        this.enableItems(
+            this.selectAllCheckboxes,
+            this.selectAllCheckboxComponentClass,
+            this.checkboxComponentDisabledClass,
+        );
     }
 
-    protected disableItems(target: HTMLInputElement, checkboxes: HTMLInputElement[], parentClassName: string, className: string): void {
+    protected disableItems(
+        target: HTMLInputElement,
+        checkboxes: HTMLInputElement[],
+        parentClassName: string,
+        className: string,
+    ): void {
         const currentMerchantReference = target.getAttribute(this.merchantReference);
 
-        const checkboxesToDisable = checkboxes.filter((checkbox) => (
-            checkbox.getAttribute(this.merchantReference) !== currentMerchantReference
-        ));
+        const checkboxesToDisable = checkboxes.filter(
+            (checkbox) => checkbox.getAttribute(this.merchantReference) !== currentMerchantReference,
+        );
 
         checkboxesToDisable.forEach((checkbox) => {
             checkbox.disabled = true;
-            checkbox
-                .closest(`.${parentClassName}`)
-                .classList.add(className);
+            checkbox.closest(`.${parentClassName}`).classList.add(className);
         });
     }
 
@@ -80,9 +99,7 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
             }
 
             checkbox.disabled = false;
-            checkbox
-                .closest(`.${parentClassName}`)
-                .classList.remove(className);
+            checkbox.closest(`.${parentClassName}`).classList.remove(className);
         });
     }
 

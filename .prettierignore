@@ -4,8 +4,7 @@
 /docker/
 /frontend/
 /vendor/
-/public/Yves/assets/
-/public/Zed/assets/
+/public/
 **/dist/**
 
 /composer.json
