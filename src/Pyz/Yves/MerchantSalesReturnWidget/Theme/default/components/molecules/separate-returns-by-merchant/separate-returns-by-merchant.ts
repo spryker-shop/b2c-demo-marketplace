@@ -31,9 +31,7 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     }
 
     protected onRemoveSelectAllCheckedItems(): void {
-        this.checkedSelectAllItems = this.checkedSelectAllItems.filter((item) => {
-            return item.checked;
-        });
+        this.checkedSelectAllItems = this.checkedSelectAllItems.filter((item) => item.checked);
 
         if (this.checkedSelectAllItems.length) {
             return;
@@ -63,11 +61,11 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     protected disableItems(target: HTMLInputElement, checkboxes: HTMLInputElement[], parentClassName: string, className: string): void {
         const currentMerchantReference = target.getAttribute(this.merchantReference);
 
-        const checkboxesToDisable = checkboxes.filter((checkbox) => {
-            return checkbox.getAttribute(this.merchantReference) !== currentMerchantReference;
-        });
+        const checkboxesToDisable = checkboxes.filter((checkbox) => (
+            checkbox.getAttribute(this.merchantReference) !== currentMerchantReference
+        ));
 
-        checkboxesToDisable.map((checkbox) => {
+        checkboxesToDisable.forEach((checkbox) => {
             checkbox.disabled = true;
             checkbox
                 .closest(`.${parentClassName}`)
@@ -76,7 +74,7 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     }
 
     protected enableItems(checkboxes: HTMLInputElement[], parentClassName: string, className: string): void {
-        checkboxes.map((checkbox) => {
+        checkboxes.forEach((checkbox) => {
             if (!checkbox.hasAttribute(this.isReturnable)) {
                 return;
             }
