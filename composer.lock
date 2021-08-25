@@ -34046,16 +34046,16 @@
         },
         {
             "name": "spryker/product-merchant-portal-gui",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-merchant-portal-gui.git",
-                "reference": "a92ea354c3479fa6317135b0be272ab0596fb513"
+                "reference": "f9e3c38e3025820a30d619b408bb57225de6f8dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/a92ea354c3479fa6317135b0be272ab0596fb513",
-                "reference": "a92ea354c3479fa6317135b0be272ab0596fb513",
+                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/f9e3c38e3025820a30d619b408bb57225de6f8dd",
+                "reference": "f9e3c38e3025820a30d619b408bb57225de6f8dd",
                 "shasum": ""
             },
             "require": {
@@ -34086,7 +34086,7 @@
                 "spryker/transfer": "^3.25.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^1.0.0"
+                "spryker/zed-ui": "^1.1.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -34109,9 +34109,9 @@
             ],
             "description": "ProductMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/1.1.0"
+                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/1.2.0"
             },
-            "time": "2021-08-19T10:29:58+00:00"
+            "time": "2021-08-25T12:10:53+00:00"
         },
         {
             "name": "spryker/product-merchant-portal-gui-extension",
@@ -34580,16 +34580,16 @@
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-merchant-portal-gui.git",
-                "reference": "435d1257ff01de734db18114bb8364c559792a36"
+                "reference": "78131723001360a4324419ce712c56d3b916798f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/435d1257ff01de734db18114bb8364c559792a36",
-                "reference": "435d1257ff01de734db18114bb8364c559792a36",
+                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/78131723001360a4324419ce712c56d3b916798f",
+                "reference": "78131723001360a4324419ce712c56d3b916798f",
                 "shasum": ""
             },
             "require": {
@@ -34647,9 +34647,9 @@
             ],
             "description": "ProductOfferMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.2.0"
+                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.2.1"
             },
-            "time": "2021-08-19T10:54:56+00:00"
+            "time": "2021-08-23T13:12:45+00:00"
         },
         {
             "name": "spryker/product-offer-prices-rest-api",
@@ -45409,16 +45409,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "facb70a95eb6dc3f46f238db490ede4e7374f45d"
+                "reference": "8a124579319c900964d9ccfe5037b387b4e06ea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/facb70a95eb6dc3f46f238db490ede4e7374f45d",
-                "reference": "facb70a95eb6dc3f46f238db490ede4e7374f45d",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/8a124579319c900964d9ccfe5037b387b4e06ea6",
+                "reference": "8a124579319c900964d9ccfe5037b387b4e06ea6",
                 "shasum": ""
             },
             "require": {
@@ -45456,9 +45456,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/1.0.1"
+                "source": "https://github.com/spryker/zed-ui/tree/1.1.0"
             },
-            "time": "2021-08-19T10:23:47+00:00"
+            "time": "2021-08-25T12:10:53+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
