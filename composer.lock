@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "579cdf64fb218c87eccfdb4f58ec810d",
+    "content-hash": "8ea6e95b923c60bce791a0f0b4bf22a1",
     "packages": [
         {
             "name": "brick/math",
@@ -40623,16 +40623,16 @@
         },
         {
             "name": "spryker/security-oauth-user",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-oauth-user.git",
-                "reference": "c1bb77ca1fbd127ae1120910a96f75a640ee03b9"
+                "reference": "fb432f8245ca8d49918be7414f3e313987211e05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-oauth-user/zipball/c1bb77ca1fbd127ae1120910a96f75a640ee03b9",
-                "reference": "c1bb77ca1fbd127ae1120910a96f75a640ee03b9",
+                "url": "https://api.github.com/repos/spryker/security-oauth-user/zipball/fb432f8245ca8d49918be7414f3e313987211e05",
+                "reference": "fb432f8245ca8d49918be7414f3e313987211e05",
                 "shasum": ""
             },
             "require": {
@@ -40678,9 +40678,9 @@
             ],
             "description": "SecurityOauthUser module",
             "support": {
-                "source": "https://github.com/spryker/security-oauth-user/tree/1.0.0"
+                "source": "https://github.com/spryker/security-oauth-user/tree/1.1.0"
             },
-            "time": "2020-12-29T11:30:00+00:00"
+            "time": "2021-08-16T13:49:21+00:00"
         },
         {
             "name": "spryker/security-oauth-user-extension",
