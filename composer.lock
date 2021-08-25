@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ea6e95b923c60bce791a0f0b4bf22a1",
+    "content-hash": "c9acb57df91385eb7c17b2750211977f",
     "packages": [
         {
             "name": "brick/math",
@@ -4076,27 +4076,23 @@
             "time": "2021-04-29T15:05:32+00:00"
         },
         {
-            "name": "spryker-feature/marketplace-cart-notes",
+            "name": "spryker-feature/marketplace-cart",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spryker-feature/marketplace-cart-notes.git",
-                "reference": "7eaaf3b7c7e40b2b862d6045c5c651497158393e"
+                "url": "https://github.com/spryker-feature/marketplace-cart.git",
+                "reference": "10a6be4b1ad474f12ba3a03b42a1ad766dbb40b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-cart-notes/zipball/7eaaf3b7c7e40b2b862d6045c5c651497158393e",
-                "reference": "7eaaf3b7c7e40b2b862d6045c5c651497158393e",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-cart/zipball/10a6be4b1ad474f12ba3a03b42a1ad766dbb40b8",
+                "reference": "10a6be4b1ad474f12ba3a03b42a1ad766dbb40b8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "spryker/cart-note": "^1.0.0",
                 "spryker/cart-note-merchant-sales-order-gui": "^1.0.0"
-            },
-            "suggest": {
-                "spryker-feature/cart-notes": "Recommended feature dependency.",
-                "spryker-feature/marketplace-order-management": "Recommended feature dependency."
             },
             "default-branch": true,
             "type": "metapackage",
@@ -4109,11 +4105,11 @@
             "license": [
                 "proprietary"
             ],
-            "description": "Marketplace Cart Notes [feature]",
+            "description": "Marketplace Cart [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-cart-notes/tree/master"
+                "source": "https://github.com/spryker-feature/marketplace-cart/tree/master"
             },
-            "time": "2021-08-18T08:58:54+00:00"
+            "time": "2021-08-25T17:21:06+00:00"
         },
         {
             "name": "spryker-feature/marketplace-inventory-management",
@@ -57059,12 +57055,6 @@
             "alias_normalized": "202107.0"
         },
         {
-            "package": "spryker-feature/marketplace-cart-notes",
-            "version": "9999999-dev",
-            "alias": "202107.0",
-            "alias_normalized": "202107.0"
-        },
-        {
             "package": "spryker-feature/marketplace-inventory-management",
             "version": "9999999-dev",
             "alias": "202107.0",
@@ -57529,7 +57519,7 @@
         "spryker-feature/inventory-management": 20,
         "spryker-feature/invoice": 20,
         "spryker-feature/mailing-notifications": 20,
-        "spryker-feature/marketplace-cart-notes": 20,
+        "spryker-feature/marketplace-cart": 20,
         "spryker-feature/marketplace-inventory-management": 20,
         "spryker-feature/marketplace-merchant": 20,
         "spryker-feature/marketplace-merchant-portal-product-management": 20,
