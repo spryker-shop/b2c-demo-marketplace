@@ -81,6 +81,8 @@ rm -rf $HOME/chromium-ecosystem/*.zip
 export CHROMEDRIVER_REVISION=814168
 export COMPOSER_IGNORE_CHROMEDRIVER=1
 
+. $HOME/chromium-ecosystem/docker-chromedriver-master/chromium-installer $CHROMEDRIVER_REVISION $HOME/chromium-ecosystem false
+
 sudo ln -s -f "$CHROMIUM_BINARY" /usr/local/bin/chrome
 
 # codeception
