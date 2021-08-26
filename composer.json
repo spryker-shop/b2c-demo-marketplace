@@ -375,7 +375,7 @@
         "spryker-shop/configurable-bundle-widget": "1.5.2",
         "spryker-shop/content-banner-widget": "1.1.0",
         "spryker-shop/content-file-widget": "1.1.0",
-        "spryker-shop/content-navigation-widget": "^1.4",
+        "spryker-shop/content-navigation-widget": "1.4.0",
         "spryker-shop/content-product-set-widget": "1.4.0",
         "spryker-shop/content-product-widget": "1.2.0",
         "spryker-shop/currency-widget": "1.4.2",
