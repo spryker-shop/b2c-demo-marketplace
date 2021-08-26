@@ -1,6 +1,6 @@
 {
-    "name": "spryker/b2c-demo-shop-internal",
-    "description": "Spryker B2C Demo Shop",
+    "name": "spryker/b2c-demo-marketplace-internal",
+    "description": "Spryker B2C Marketplace Demo Shop",
     "license": "proprietary",
     "require": {
         "php": ">=7.3",
