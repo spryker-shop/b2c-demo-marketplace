@@ -12076,16 +12076,16 @@
         },
         {
             "name": "spryker/acl-merchant-portal",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-merchant-portal.git",
-                "reference": "69531a23b46b7796f35a7c91ee4c3a28c109571c"
+                "reference": "f66d4d49b6db8c7729cfb5665a9154a34300283c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-merchant-portal/zipball/69531a23b46b7796f35a7c91ee4c3a28c109571c",
-                "reference": "69531a23b46b7796f35a7c91ee4c3a28c109571c",
+                "url": "https://api.github.com/repos/spryker/acl-merchant-portal/zipball/f66d4d49b6db8c7729cfb5665a9154a34300283c",
+                "reference": "f66d4d49b6db8c7729cfb5665a9154a34300283c",
                 "shasum": ""
             },
             "require": {
@@ -12167,9 +12167,9 @@
             ],
             "description": "AclMerchantPortal module",
             "support": {
-                "source": "https://github.com/spryker/acl-merchant-portal/tree/1.0.0"
+                "source": "https://github.com/spryker/acl-merchant-portal/tree/1.0.1"
             },
-            "time": "2021-08-23T11:19:52+00:00"
+            "time": "2021-08-26T15:42:13+00:00"
         },
         {
             "name": "spryker/agent",
