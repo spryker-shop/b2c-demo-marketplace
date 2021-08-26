@@ -1,6 +1,6 @@
 <VirtualHost *:80>
 
-  DocumentRoot %TRAVIS_BUILD_DIR%/public/BackendGateway
+  DocumentRoot %GITHUB_WORKSPACE%/public/BackendGateway
   ServerName backend-gateway.de.spryker.test
   SetEnv APPLICATION_ENV %APPLICATION_ENV%
   SetEnv POSTGRES_PORT %POSTGRES_PORT%
@@ -9,7 +9,7 @@
   LogLevel debug
   ErrorLog ${APACHE_LOG_DIR}/gateway-error.log
 
-  <Directory "%TRAVIS_BUILD_DIR%">
+  <Directory "%GITHUB_WORKSPACE%">
       Options Indexes FollowSymLinks MultiViews ExecCGI
       AllowOverride All
       Order allow,deny

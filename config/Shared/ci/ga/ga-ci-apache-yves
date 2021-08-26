@@ -1,5 +1,5 @@
 <VirtualHost *:80>
-  DocumentRoot %TRAVIS_BUILD_DIR%/public/Yves
+  DocumentRoot %GITHUB_WORKSPACE%/public/Yves
   ServerName www.de.spryker.test
   SetEnv APPLICATION_ENV %APPLICATION_ENV%
   SetEnv SPRYKER_TESTING_ENABLED 1
@@ -7,7 +7,7 @@
   LogLevel debug
   ErrorLog ${APACHE_LOG_DIR}/yves-error.log
 
-  <Directory "%TRAVIS_BUILD_DIR%">
+  <Directory "%GITHUB_WORKSPACE%">
       Options Indexes FollowSymLinks MultiViews ExecCGI
       AllowOverride All
       Order allow,deny

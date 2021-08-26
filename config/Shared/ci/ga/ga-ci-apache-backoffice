@@ -1,15 +1,16 @@
 <VirtualHost *:80>
 
-  DocumentRoot %TRAVIS_BUILD_DIR%/public/Backoffice
+  DocumentRoot %GITHUB_WORKSPACE%/public/Backoffice
   ServerName backoffice.de.spryker.test
   SetEnv APPLICATION_ENV %APPLICATION_ENV%
   SetEnv POSTGRES_PORT %POSTGRES_PORT%
   SetEnv SPRYKER_TESTING_ENABLED 1
+  SetEnv DB_PASSWORD %DB_PASSWORD%
 
   LogLevel debug
   ErrorLog ${APACHE_LOG_DIR}/zed-error.log
 
-  <Directory "%TRAVIS_BUILD_DIR%">
+  <Directory "%GITHUB_WORKSPACE%">
       Options Indexes FollowSymLinks MultiViews ExecCGI
       AllowOverride All
       Order allow,deny
