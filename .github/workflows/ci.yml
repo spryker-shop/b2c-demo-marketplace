@@ -109,7 +109,7 @@ jobs:
             - name: 'Install project'
               run: vendor/bin/install DE -r ci
             - name: 'Run chromedriver'
-              run: timeout 45m bash -c "${CHROMEDRIVER_BINARY} --port=4444 --whitelisted-ips= --url-base=/wd/hub --log-path=/tmp/chromedriver.log --log-level=DEBUG">/dev/null &
+              run: timeout 45m bash -c "/usr/local/bin/chrome --port=4444 --whitelisted-ips= --url-base=/wd/hub --log-path=/tmp/chromedriver.log --log-level=DEBUG">/dev/null &
             - name: 'Run tests'
               run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter
 
