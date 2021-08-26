@@ -108,7 +108,7 @@ jobs:
               run: config/Shared/ci/ga/acceptance_env.sh
             - name: 'Install project'
               run: vendor/bin/install DE -r ci
-            - name: 'Run phantomjs'
+            - name: 'Run chromedriver'
               run: timeout 45m bash -c "${env.CHROMEDRIVER_BINARY} --port=4444 --whitelisted-ips= --url-base=/wd/hub --log-path=/tmp/chromedriver.log --log-level=DEBUG">/dev/null &
             - name: 'Run tests'
               run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter
@@ -207,8 +207,8 @@ jobs:
               run: config/Shared/ci/ga/acceptance_env.sh
             - name: 'Install project'
               run: vendor/bin/install DE -r ci
-            - name: 'Run phantomjs'
-              run: timeout 45m bash -c "vendor/bin/phantomjs --webdriver=4444 --disk-cache=true --load-images=false --webdriver-logfile=/tmp/phantomjs.log --webdriver-loglevel=DEBUG">/dev/null &
+            - name: 'Run chromedriver'
+              run: timeout 45m bash -c "${env.CHROMEDRIVER_BINARY} --port=4444 --whitelisted-ips= --url-base=/wd/hub --log-path=/tmp/chromedriver.log --log-level=DEBUG">/dev/null &
             - name: 'Run tests'
               run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter
 
