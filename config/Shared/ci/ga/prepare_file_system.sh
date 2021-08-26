@@ -10,6 +10,6 @@ chmod -R 777 data/
 chmod -R 660 config/Zed/dev_only_private.key
 chmod -R 660 config/Zed/dev_only_public.key
 
-echo "composer install --optimize-autoloader --no-interaction"
+echo "composer install --optimize-autoloader --no-interaction --ignore-platform-reqs"
 
-composer install --optimize-autoloader --no-interaction
+composer install --optimize-autoloader --no-interaction --ignore-platform-reqs
