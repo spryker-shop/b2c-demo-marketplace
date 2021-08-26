@@ -162,8 +162,8 @@ jobs:
             - name: 'Run tests'
               run: vendor/bin/codecept run -x EndToEnd -x Presentation --ext DotReporter
 
-    acceptance-7-2-mariadb:
-        name: 'Acceptance tests / PHP 7.2'
+    acceptance-7-3-mariadb:
+        name: 'Acceptance tests / PHP 7.3'
         runs-on: ubuntu-18.04
         env:
             APPLICATION_ENV: ci.mysql
@@ -181,7 +181,7 @@ jobs:
             - uses: actions/checkout@v2
             - uses: shivammathur/setup-php@v2
               with:
-                  php-version: '7.2'
+                  php-version: '7.3'
                   extensions: redis
                   ini-values: memory_limit=-1
             - uses: getong/mariadb-action@v1.1
@@ -212,8 +212,8 @@ jobs:
             - name: 'Run tests'
               run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter
 
-    without-acceptance-7-2-mariadb:
-        name: 'Without acceptance tests / PHP 7.2'
+    without-acceptance-7-3-mariadb:
+        name: 'Without acceptance tests / PHP 7.3'
         runs-on: ubuntu-18.04
         env:
             APPLICATION_ENV: ci.mysql
@@ -230,7 +230,7 @@ jobs:
             - uses: actions/checkout@v2
             - uses: shivammathur/setup-php@v2
               with:
-                  php-version: '7.2'
+                  php-version: '7.3'
                   extensions: redis
                   ini-values: memory_limit=-1
             - uses: getong/mariadb-action@v1.1
@@ -274,12 +274,12 @@ jobs:
             - run: docker/sdk up -t -v
             - run: docker/sdk testing codecept run -c codeception.ci.functional.yml
 
-    functional-via-docker-alpine-php-7-3-postresql-glue:
-        name: "Docker / Alpine / PHP 7.3 / PostgreSQL / Glue"
+    functional-via-docker-alpine-php-7-4-postresql-glue:
+        name: "Docker / Alpine / PHP 7.4 / PostgreSQL / Glue"
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
+            SPRYKER_PLATFORM_IMAGE: spryker/php:7.4-alpine3.12
         steps:
             - uses: actions/checkout@v2
             - run: echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSB9Cg==|base64 -d|sudo tee /etc/docker/daemon.json
@@ -293,12 +293,12 @@ jobs:
             - run: docker/sdk testing console queue:worker:start --stop-when-empty
             - run: docker/sdk testing codecept run -c codeception.api.yml
 
-    functional-via-docker-debian-php-7-3-postgress:
-        name: "Docker / Debian / PHP 7.3 / PostgreSQL / Functional"
+    functional-via-docker-debian-php-7-4-postgress:
+        name: "Docker / Debian / PHP 7.4 / PostgreSQL / Functional"
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-debian
+            SPRYKER_PLATFORM_IMAGE: spryker/php:7.4-debian
         steps:
             - uses: actions/checkout@v2
             - run: echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSB9Cg==|base64 -d|sudo tee /etc/docker/daemon.json
@@ -310,12 +310,12 @@ jobs:
             - run: docker/sdk up -t -v
             - run: docker/sdk testing codecept run -c codeception.ci.functional.yml
 
-    functional-via-docker-alpine-php-7-3-mariadb:
-        name: "Docker / Alpine / PHP 7.3 / MariaDB / Functional"
+    functional-via-docker-alpine-php-7-4-mariadb:
+        name: "Docker / Alpine / PHP 7.4 / MariaDB / Functional"
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
+            SPRYKER_PLATFORM_IMAGE: spryker/php:7.4-alpine3.12
         steps:
             - uses: actions/checkout@v2
             - run: echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSB9Cg==|base64 -d|sudo tee /etc/docker/daemon.json
@@ -332,7 +332,7 @@ jobs:
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
+            SPRYKER_PLATFORM_IMAGE: spryker/php:7.4-alpine3.12
         steps:
             - uses: actions/checkout@v2
             - run: echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSB9Cg==|base64 -d|sudo tee /etc/docker/daemon.json
