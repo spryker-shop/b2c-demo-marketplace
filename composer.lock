@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9acb57df91385eb7c17b2750211977f",
+    "content-hash": "c81245369169775638a30389ae22f69e",
     "packages": [
         {
             "name": "brick/math",
@@ -4298,12 +4298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchantportal-core.git",
-                "reference": "5bf2d67ccdc9d06a70b9d172806f9097efc1af2e"
+                "reference": "909749290dfe2fc6c2e6eff73dc5d9c14484c8dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/5bf2d67ccdc9d06a70b9d172806f9097efc1af2e",
-                "reference": "5bf2d67ccdc9d06a70b9d172806f9097efc1af2e",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/909749290dfe2fc6c2e6eff73dc5d9c14484c8dc",
+                "reference": "909749290dfe2fc6c2e6eff73dc5d9c14484c8dc",
                 "shasum": ""
             },
             "require": {
@@ -4320,6 +4320,9 @@
                 "spryker/user-merchant-portal-gui": "^1.0.0",
                 "spryker/zed-ui": "^1.0.0"
             },
+            "suggest": {
+                "spryker-feature/acl": "Recommended feature dependency."
+            },
             "default-branch": true,
             "type": "metapackage",
             "extra": {
@@ -4335,7 +4338,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchantportal-core/tree/master"
             },
-            "time": "2021-08-23T12:34:44+00:00"
+            "time": "2021-08-25T08:39:17+00:00"
         },
         {
             "name": "spryker-feature/marketplace-order-management",
@@ -23559,16 +23562,16 @@
         },
         {
             "name": "spryker/gui-table",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/gui-table.git",
-                "reference": "9eacf4d15b25ad50939841497d65739bcd0a7727"
+                "reference": "3d5b99d9aaca89ecfe06c0b49c8580c24cb6171b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/gui-table/zipball/9eacf4d15b25ad50939841497d65739bcd0a7727",
-                "reference": "9eacf4d15b25ad50939841497d65739bcd0a7727",
+                "url": "https://api.github.com/repos/spryker/gui-table/zipball/3d5b99d9aaca89ecfe06c0b49c8580c24cb6171b",
+                "reference": "3d5b99d9aaca89ecfe06c0b49c8580c24cb6171b",
                 "shasum": ""
             },
             "require": {
@@ -23608,9 +23611,9 @@
             ],
             "description": "GuiTable module",
             "support": {
-                "source": "https://github.com/spryker/gui-table/tree/1.0.0"
+                "source": "https://github.com/spryker/gui-table/tree/1.0.1"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2021-08-26T06:46:17+00:00"
         },
         {
             "name": "spryker/guzzle",
@@ -34830,16 +34833,16 @@
         },
         {
             "name": "spryker/product-offer-stock",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-stock.git",
-                "reference": "30a28f27329f83f60fc3cbd7585811636b805048"
+                "reference": "e34f2738d6eda127fa88baf1fcf21879040984e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-stock/zipball/30a28f27329f83f60fc3cbd7585811636b805048",
-                "reference": "30a28f27329f83f60fc3cbd7585811636b805048",
+                "url": "https://api.github.com/repos/spryker/product-offer-stock/zipball/e34f2738d6eda127fa88baf1fcf21879040984e0",
+                "reference": "e34f2738d6eda127fa88baf1fcf21879040984e0",
                 "shasum": ""
             },
             "require": {
@@ -34850,7 +34853,7 @@
                 "spryker/product-offer-extension": "^1.0.0",
                 "spryker/propel-orm": "^1.0.0",
                 "spryker/stock": "^7.0.0 || ^8.0.0",
-                "spryker/transfer": "^3.18.0"
+                "spryker/transfer": "^3.25.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -34876,9 +34879,9 @@
             ],
             "description": "ProductOfferStock module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-stock/tree/1.0.0"
+                "source": "https://github.com/spryker/product-offer-stock/tree/1.1.0"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2021-08-23T13:21:20+00:00"
         },
         {
             "name": "spryker/product-offer-stock-data-import",
@@ -57050,6 +57053,12 @@
         },
         {
             "package": "spryker-feature/mailing-notifications",
+            "version": "9999999-dev",
+            "alias": "202107.0",
+            "alias_normalized": "202107.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-cart",
             "version": "9999999-dev",
             "alias": "202107.0",
             "alias_normalized": "202107.0"
