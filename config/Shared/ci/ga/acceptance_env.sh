@@ -73,6 +73,7 @@ sudo apachectl configtest
 sudo service apache2 restart
 
 # install Chromium and Chromedriver symlinks
+mkdir "chromium-ecosystem"
 curl -L "https://github.com/spryker/docker-chromedriver/archive/master.zip" -o $HOME/chromium-ecosystem/docker-chromedriver.zip
 rm -rf $HOME/chromium-ecosystem/docker-chromedriver-master
 unzip -o $HOME/chromium-ecosystem/docker-chromedriver.zip -d $HOME/chromium-ecosystem/
