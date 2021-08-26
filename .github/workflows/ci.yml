@@ -54,7 +54,7 @@ jobs:
             - name: Runs Elasticsearch
               uses: elastic/elastic-github-actions/elasticsearch@master
               with:
-                  stack-version: 6.8.0
+                  stack-version: 7.1.1
             - name: 'Prepare code base'
               run: ./config/Shared/ci/ga/prepare_for_validation.sh
             - name: 'Test'
@@ -101,7 +101,7 @@ jobs:
             - name: Runs Elasticsearch
               uses: elastic/elastic-github-actions/elasticsearch@master
               with:
-                  stack-version: 6.8.0
+                  stack-version: 7.1.1
             - name: 'Prepare file system'
               run: ./config/Shared/ci/ga/prepare_file_system.sh
             - name: 'Configure acceptance env'
@@ -154,7 +154,7 @@ jobs:
             - name: Runs Elasticsearch
               uses: elastic/elastic-github-actions/elasticsearch@master
               with:
-                  stack-version: 6.8.0
+                  stack-version: 7.1.1
             - name: 'Prepare file system'
               run: ./config/Shared/ci/ga/prepare_file_system.sh
             - name: 'Install project'
@@ -200,7 +200,7 @@ jobs:
             - name: Runs Elasticsearch
               uses: elastic/elastic-github-actions/elasticsearch@master
               with:
-                  stack-version: 6.8.0
+                  stack-version: 7.1.1
             - name: 'Prepare file system'
               run: ./config/Shared/ci/ga/prepare_file_system.sh
             - name: 'Configure acceptance env'
@@ -249,7 +249,7 @@ jobs:
             - name: Runs Elasticsearch
               uses: elastic/elastic-github-actions/elasticsearch@master
               with:
-                  stack-version: 6.8.0
+                  stack-version: 7.1.1
             - name: 'Prepare file system'
               run: ./config/Shared/ci/ga/prepare_file_system.sh
             - name: 'Install project'
