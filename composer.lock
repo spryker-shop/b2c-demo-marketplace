@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20664c28a83f88de34b336a9e5f4aec9",
+    "content-hash": "841276da1c1dd2dbd6d051b39623d17c",
     "packages": [
         {
             "name": "brick/math",
@@ -12803,16 +12803,16 @@
         },
         {
             "name": "spryker/availability",
-            "version": "9.12.2",
+            "version": "9.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/availability.git",
-                "reference": "cf373ad3edf7932a6ea20bf98e5bb677ea7c6b66"
+                "reference": "1b292f61a1ba201e5ffb03f04d375d2cca3c8ca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/availability/zipball/cf373ad3edf7932a6ea20bf98e5bb677ea7c6b66",
-                "reference": "cf373ad3edf7932a6ea20bf98e5bb677ea7c6b66",
+                "url": "https://api.github.com/repos/spryker/availability/zipball/1b292f61a1ba201e5ffb03f04d375d2cca3c8ca1",
+                "reference": "1b292f61a1ba201e5ffb03f04d375d2cca3c8ca1",
                 "shasum": ""
             },
             "require": {
@@ -12865,9 +12865,9 @@
             ],
             "description": "Availability module",
             "support": {
-                "source": "https://github.com/spryker/availability/tree/9.12.2"
+                "source": "https://github.com/spryker/availability/tree/9.13.0"
             },
-            "time": "2021-07-09T08:53:21+00:00"
+            "time": "2021-08-23T13:21:20+00:00"
         },
         {
             "name": "spryker/availability-cart-connector",
@@ -14260,16 +14260,16 @@
         },
         {
             "name": "spryker/carts-rest-api",
-            "version": "5.15.0",
+            "version": "5.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/carts-rest-api.git",
-                "reference": "482e37436a0e3caa04b013097025e295b24f6850"
+                "reference": "1812320b87365eaf561c5f1bbbb8a491bda9cd67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/carts-rest-api/zipball/482e37436a0e3caa04b013097025e295b24f6850",
-                "reference": "482e37436a0e3caa04b013097025e295b24f6850",
+                "url": "https://api.github.com/repos/spryker/carts-rest-api/zipball/1812320b87365eaf561c5f1bbbb8a491bda9cd67",
+                "reference": "1812320b87365eaf561c5f1bbbb8a491bda9cd67",
                 "shasum": ""
             },
             "require": {
@@ -14279,6 +14279,7 @@
                 "spryker/carts-rest-api-extension": "^1.6.0",
                 "spryker/customers-rest-api-extension": "^1.2.0",
                 "spryker/glue-application": "^1.18.0",
+                "spryker/glue-application-authorization-connector-extension": "^1.0.0",
                 "spryker/glue-application-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/persistent-cart": "^3.1.0",
@@ -14290,9 +14291,13 @@
                 "spryker/zed-request": "^3.6.0"
             },
             "require-dev": {
+                "spryker/calculation": "*",
                 "spryker/code-sniffer": "*",
                 "spryker/container": "*",
                 "spryker/customer": "*",
+                "spryker/price-cart-connector": "*",
+                "spryker/price-product": "*",
+                "spryker/product": "*",
                 "spryker/propel": "*",
                 "spryker/testify": "*"
             },
@@ -14318,9 +14323,9 @@
             ],
             "description": "CartsRestApi module",
             "support": {
-                "source": "https://github.com/spryker/carts-rest-api/tree/5.15.0"
+                "source": "https://github.com/spryker/carts-rest-api/tree/5.17.0"
             },
-            "time": "2021-05-28T14:12:02+00:00"
+            "time": "2021-08-12T15:14:01+00:00"
         },
         {
             "name": "spryker/carts-rest-api-extension",
@@ -23282,6 +23287,47 @@
             "time": "2021-06-24T12:53:04+00:00"
         },
         {
+            "name": "spryker/glue-application-authorization-connector-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/glue-application-authorization-connector-extension.git",
+                "reference": "65313b896fdeccea2bdf3e517556586d694a7819"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/glue-application-authorization-connector-extension/zipball/65313b896fdeccea2bdf3e517556586d694a7819",
+                "reference": "65313b896fdeccea2bdf3e517556586d694a7819",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "GlueApplicationAuthorizationConnectorExtension module",
+            "support": {
+                "source": "https://github.com/spryker/glue-application-authorization-connector-extension/tree/1.0.0"
+            },
+            "time": "2021-08-06T12:09:29+00:00"
+        },
+        {
             "name": "spryker/glue-application-extension",
             "version": "1.4.0",
             "source": {
@@ -25830,16 +25876,16 @@
         },
         {
             "name": "spryker/merchant-product-offers-rest-api",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product-offers-rest-api.git",
-                "reference": "9e2cf7f0545bb64ee4b5da32af2a4c74753a6a94"
+                "reference": "c59807e35c7a6107d8870cfc76b74f5ce89e7151"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product-offers-rest-api/zipball/9e2cf7f0545bb64ee4b5da32af2a4c74753a6a94",
-                "reference": "9e2cf7f0545bb64ee4b5da32af2a4c74753a6a94",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offers-rest-api/zipball/c59807e35c7a6107d8870cfc76b74f5ce89e7151",
+                "reference": "c59807e35c7a6107d8870cfc76b74f5ce89e7151",
                 "shasum": ""
             },
             "require": {
@@ -25873,9 +25919,9 @@
             ],
             "description": "MerchantProductOffersRestApi module",
             "support": {
-                "source": "https://github.com/spryker/merchant-product-offers-rest-api/tree/1.0.0"
+                "source": "https://github.com/spryker/merchant-product-offers-rest-api/tree/1.1.0"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2021-08-23T13:21:20+00:00"
         },
         {
             "name": "spryker/merchant-product-option",
@@ -34168,16 +34214,16 @@
         },
         {
             "name": "spryker/product-offer-availability",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-availability.git",
-                "reference": "fcae2821ac6d3d72d04672eebde261d123d0dfa1"
+                "reference": "ffed43c2ef34e0e1017d25c3a25141e20a03c8d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-availability/zipball/fcae2821ac6d3d72d04672eebde261d123d0dfa1",
-                "reference": "fcae2821ac6d3d72d04672eebde261d123d0dfa1",
+                "url": "https://api.github.com/repos/spryker/product-offer-availability/zipball/ffed43c2ef34e0e1017d25c3a25141e20a03c8d7",
+                "reference": "ffed43c2ef34e0e1017d25c3a25141e20a03c8d7",
                 "shasum": ""
             },
             "require": {
@@ -34187,7 +34233,7 @@
                 "spryker/kernel": "^3.33.0",
                 "spryker/oms": "^11.7.0",
                 "spryker/product-offer": "^1.0.0",
-                "spryker/product-offer-stock": "^1.0.0",
+                "spryker/product-offer-stock": "^1.1.0",
                 "spryker/transfer": "^3.18.0"
             },
             "require-dev": {
@@ -34214,9 +34260,9 @@
             ],
             "description": "ProductOfferAvailability module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-availability/tree/1.0.0"
+                "source": "https://github.com/spryker/product-offer-availability/tree/1.1.0"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2021-08-23T13:21:20+00:00"
         },
         {
             "name": "spryker/product-offer-availability-storage",
@@ -57483,5 +57529,5 @@
     "platform-overrides": {
         "php": "7.3.15"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
