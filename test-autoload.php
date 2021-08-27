@@ -1,6 +1,7 @@
 <?php
 
 $autoloader = function ($className) {
+
     $className = ltrim($className, '\\');
     $classNameParts = explode('\\', $className);
 

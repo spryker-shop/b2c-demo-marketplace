@@ -239,7 +239,6 @@ class NavigationTreeCest
          * TODO: once we have Selenium, enable this test case.
          */
         return;
-
 //        $i->wantTo('Remove child node.');
 //        $i->expect('Node should be removed from Zed.');
 //

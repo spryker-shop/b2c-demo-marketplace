@@ -157,6 +157,7 @@ class ProductOptionFacadeAggregatorTest extends Test
         SpyOmsOrderProcess $omsProcessEntity,
         SpySalesOrder $salesOrderEntity
     ) {
+
         $salesOrderItemEntity = new SpySalesOrderItem();
         $salesOrderItemEntity->setFkOmsOrderItemState($testStateEntity->getIdOmsOrderItemState());
         $salesOrderItemEntity->setFkOmsOrderProcess($omsProcessEntity->getIdOmsOrderProcess());
