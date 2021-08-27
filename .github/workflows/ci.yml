@@ -111,7 +111,7 @@ jobs:
             - name: 'Run chromedriver'
               run: timeout 45m bash -c "vendor/bin/chromedriver --port=4444 --whitelisted-ips= --url-base=/wd/hub --log-path=/tmp/chromedriver.log --log-level=DEBUG">/dev/null &
             - name: 'Run tests'
-              run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter
+              run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter -c codeception.acceptance.yml
 
     without-acceptance-7-4:
         name: 'Without acceptance tests / PostgreSQL / PHP 7.4'
@@ -210,7 +210,7 @@ jobs:
             - name: 'Run chromedriver'
               run: timeout 45m bash -c "vendor/bin/chromedriver --port=4444 --whitelisted-ips= --url-base=/wd/hub --log-path=/tmp/chromedriver.log --log-level=DEBUG">/dev/null &
             - name: 'Run tests'
-              run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter
+              run: vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter -c codeception.acceptance.yml
 
     without-acceptance-7-3-mariadb:
         name: 'Without acceptance tests / PHP 7.3'
