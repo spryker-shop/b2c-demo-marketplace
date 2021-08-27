@@ -7,6 +7,7 @@
                 form: data.createReturnForm,
                 order: data.order,
                 merchantReference: merchantReference,
+                merchantIndex: loop.index,
                 firstIteration: loop.first,
                 lastIteration: loop.last,
             },
@@ -15,6 +16,27 @@
                 {% if data.firstIteration %}
                     {{ form_start(data.form) }}
                 {% endif %}
+            {% endblock %}
+
+            {% block checkboxSelectAll %}
+                {% set isReturnable = data.form.returnItems[data.merchantIndex].vars.value.orderItem.isReturnable %}
+
+                {% embed molecule('checkbox-select-all') with {
+                    modifiers: ['big'],
+                    data: {
+                        label: 'return_page.create_return.select_all_checkbox' | trans,
+                    },
+                    attributes: {
+                        'target-class-name': returnCreateStateTogglerJsClass,
+                        'merchant-reference': data.merchantReference,
+                        'is-returnable': isReturnable,
+                    },
+                } only %}
+                    {% block inputClass %}
+                        {{ parent() }}
+                        {{ 'js-return-create__trigger-state' }}
+                    {% endblock %}
+                {% endembed %}
             {% endblock %}
 
             {% block salesReturnOrderInfoSeparator %}
@@ -45,7 +67,9 @@
                 <div class="{{ checkboxWrapperClass }}">
                     {{ form_row(returnItem.isReturnable, {
                         label: ' ',
-                        attr: {'class': 'js-return-create__trigger-state-toggler'},
+                        attr: {
+                            class: returnCreateStateTogglerJsClass,
+                        },
                         attributes: {
                             'merchant-reference': orderItem.merchantReference,
                             'is-returnable': isReturnable,

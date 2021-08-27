@@ -325,6 +325,7 @@ class RelationHandlingTest extends Unit
 
         // Act
         $aclQueryDirector->inspectUpdate($productEntity);
+        $aclQueryDirector->inspectUpdate($productAbstractEntity);
     }
 
     /**
