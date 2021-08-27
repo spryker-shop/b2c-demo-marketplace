@@ -11,7 +11,6 @@ paths:
     support: tests/_support
     envs: tests/_envs
 
-bootstrap: _bootstrap.php
 settings:
     suite_class: \PHPUnit_Framework_TestSuite
     colors: true
@@ -21,7 +20,7 @@ settings:
 coverage:
     enabled: true
     remote: true
-    c3_url: 'http://backoffice.de.shop-suite.local'
+    c3_url: 'http://zed.de.shop-suite.local'
     whitelist: { include: ['src/Pyz/*.php'] }
 
 extensions:
@@ -31,17 +30,17 @@ extensions:
     config:
         \SprykerTest\Shared\Testify\Helper\WebDriverHelper:
             suites: ['Presentation']
-            path: "%SPRYKER_TEST_WEB_DRIVER_BIN%"
+            path: '%SPRYKER_TEST_WEB_DRIVER_BIN%'
             whitelisted-ips: ''
-            webdriver-port: "%SPRYKER_TEST_WEB_DRIVER_PORT%"
-            url-base: "/wd/hub"
-            remote-enable: "%SPRYKER_TESTING_ENABLED%"
-            host: "%SPRYKER_TEST_WEB_DRIVER_HOST%"
-            browser: "%SPRYKER_TEST_IN_BROWSER%"
+            webdriver-port: '%SPRYKER_TEST_WEB_DRIVER_PORT%'
+            url-base: '/wd/hub'
+            remote-enable: '%SPRYKER_TESTING_ENABLED%'
+            host: '%SPRYKER_TEST_WEB_DRIVER_HOST%'
+            browser: '%SPRYKER_TEST_IN_BROWSER%'
             capabilities:
-                "goog:chromeOptions":
-                    args: ["--headless", "--no-sandbox", "--disable-dev-shm-usage"]
-                    binary: "%SPRYKER_TEST_BROWSER_BIN%"
+                'goog:chromeOptions':
+                    args: ['--headless', '--no-sandbox', '--disable-dev-shm-usage']
+                    binary: '%SPRYKER_TEST_BROWSER_BIN%'
         \SprykerTest\Shared\Testify\Helper\SuiteFilterHelper:
             inclusive:
                 - Presentation
