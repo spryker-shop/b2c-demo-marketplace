@@ -66,6 +66,9 @@ echo "ADD HOSTS"
 echo "127.0.0.1 backoffice.de.spryker.test" | sudo tee -a /etc/hosts
 echo "127.0.0.1 glue.de.spryker.test" | sudo tee -a /etc/hosts
 echo "127.0.0.1 www.de.spryker.test" | sudo tee -a /etc/hosts
+echo "127.0.0.1 backend-api.de.spryker.test" | sudo tee -a /etc/hosts
+echo "127.0.0.1 backend-gateway.de.spryker.test" | sudo tee -a /etc/hosts
+echo "127.0.0.1 backoffice.de.spryker.test" | sudo tee -a /etc/hosts
 
 echo "RESTART APACHE"
 # apache: check configuration and start service
