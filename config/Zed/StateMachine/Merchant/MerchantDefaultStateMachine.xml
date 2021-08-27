@@ -65,7 +65,7 @@
             <event name="ship" manual="true" command="MarketplaceOrder/ShipOrderItem"/>
             <event name="deliver" manual="true" command="MarketplaceOrder/DeliverOrderItem"/>
             <event name="close"/>
-            <event name="cancel" manual="true" command="MarketplaceOrder/CancelOrderItem"/>
+            <event name="cancel by merchant" manual="true" command="MarketplaceOrder/CancelOrderItem"/>
         </events>
 
         <subprocesses>

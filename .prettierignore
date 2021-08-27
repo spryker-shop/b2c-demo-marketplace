@@ -6,6 +6,8 @@
 /vendor/
 /public/Yves/assets/
 /public/Zed/assets/
+/public/Backoffice/assets/
+/public/MerchantPortal/assets/
 **/dist/**
 
 /composer.json
