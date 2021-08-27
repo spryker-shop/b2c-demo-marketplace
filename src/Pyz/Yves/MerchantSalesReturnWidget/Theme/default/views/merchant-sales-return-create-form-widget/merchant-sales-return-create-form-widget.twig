@@ -1,6 +1,6 @@
 {% extends view('merchant-sales-return-create-form-widget', '@SprykerShop:MerchantSalesReturnWidget') %}
 
-{% block differentMerchantsInfoBox %}
+{% block body %}
     {% if data.merchantReferences | length > 1 %}
         {% include molecule('alert') with {
             data: {
@@ -8,4 +8,21 @@
             },
         } only %}
     {% endif %}
+
+    {% include molecule('separate-returns-by-merchant', 'MerchantSalesReturnWidget') with {
+        attributes: {
+            'select-all-checkbox-classname': 'js-return-create__trigger-state',
+            'checkbox-classname': 'js-return-create__trigger-state-toggler',
+            'merchant-reference-attribute-name': 'merchant-reference',
+            'is-returnable-attribute-name': 'is-returnable',
+        },
+    } only %}
+
+    {% include molecule('merchant-sales-return-create-form', 'MerchantSalesReturnWidget') with {
+        data: {
+            createReturnForm: data.createReturnForm,
+            order: data.order,
+            merchantReferences: data.merchantReferences,
+        },
+    } only %}
 {% endblock %}
