@@ -1,5 +1,5 @@
 {
-    "name": "spryker/b2c-demo-marketplace-internal",
+    "name": "spryker/b2c-demo-marketplace",
     "description": "Spryker B2C Marketplace Demo Shop",
     "license": "proprietary",
     "require": {
