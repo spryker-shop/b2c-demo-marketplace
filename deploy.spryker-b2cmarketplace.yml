@@ -1,11 +1,9 @@
 version: "0.1"
-
 x-real-ip: &real-ip
     real-ip:
         from:
             - 10.0.0.0/8 # AWS VPC network
             - 103.21.244.0/22 # Cloudflare
-
 x-frontend-auth: &frontend-auth
     <<: *real-ip
     auth:
@@ -16,10 +14,8 @@ x-frontend-auth: &frontend-auth
         exclude:
             - '${ALLOWED_IP}' # AWS gateway
             - 185.60.20.0/24 # PayOne
-
 namespace: spryker-cloud
 tag: '1.0'
-
 environment: docker.dev
 image:
     tag: spryker/php:7.3
@@ -35,11 +31,9 @@ image:
         enabled-extensions:
             - blackfire
             - newrelic
-
 composer:
     mode: --no-dev
     autoload: --classmap-authoritative
-
 assets:
     image: fholzer/nginx-brotli:v1.18.0
     mode: production
@@ -49,7 +43,6 @@ assets:
         gzip:
             static: true
             level: 5
-
 regions:
     EU:
         services:
@@ -57,7 +50,6 @@ regions:
                 database: spryker_b2cmarketplace
                 username: spryker
                 password: secret
-
         stores:
             DE:
                 services:
@@ -69,7 +61,6 @@ regions:
                         namespace: de_search
                     session:
                         namespace: 2
-
             AT:
                 services:
                     broker:
@@ -80,7 +71,6 @@ regions:
                         namespace: at_search
                     session:
                         namespace: 4
-
 groups:
     EU:
         region: EU
@@ -88,32 +78,32 @@ groups:
             Redirects:
                 application: static
                 endpoints:
-                    b2c-marketplace2.demo-spryker.com:
+                    b2c-marketplace.demo-spryker.com:
                         store: DE
                         redirect:
                             code: 302
-                            url: www.de.b2c-marketplace2.demo-spryker.com
-                    www.b2c-marketplace2.demo-spryker.com:
+                            url: www.de.b2c-marketplace.demo-spryker.com
+                    www.b2c-marketplace.demo-spryker.com:
                         store: DE
                         redirect:
                             code: 302
-                            url: www.de.b2c-marketplace2.demo-spryker.com
-                    backoffice.b2c-marketplace2.demo-spryker.com:
+                            url: www.de.b2c-marketplace.demo-spryker.com
+                    backoffice.b2c-marketplace.demo-spryker.com:
                         store: DE
                         redirect:
                             code: 302
-                            url:  backoffice.de.b2c-marketplace2.demo-spryker.com                
+                            url:  backoffice.de.b2c-marketplace.demo-spryker.com                
             yves:
                 application: yves
                 endpoints:
-                    date-time-configurator-example.b2c-marketplace2.demo-spryker.com:
+                    date-time-configurator-example.b2c-marketplace.demo-spryker.com:
                         entry-point: Configurator
-                    www.de.b2c-marketplace2.demo-spryker.com:
+                    www.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         services:
                             session:
                                 namespace: 1
-                    www.at.b2c-marketplace2.demo-spryker.com:
+                    www.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         services:
                             session:
@@ -121,20 +111,20 @@ groups:
             glue:
                 application: glue
                 endpoints:
-                    glue.de.b2c-marketplace2.demo-spryker.com:
+                    glue.de.b2c-marketplace.demo-spryker.com:
                         store: DE
-                    glue.at.b2c-marketplace2.demo-spryker.com:
+                    glue.at.b2c-marketplace.demo-spryker.com:
                         store: AT
             boffice:
                 application: backoffice
                 endpoints:
-                    backoffice.de.b2c-marketplace2.demo-spryker.com:
+                    backoffice.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         primal: true
                         services:
                             session:
                                 namespace: 3
-                    backoffice.at.b2c-marketplace2.demo-spryker.com:
+                    backoffice.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         services:
                             session:
@@ -142,32 +132,32 @@ groups:
             backgw:
                 application: backend-gateway
                 endpoints:
-                    backend-gateway.de.b2c-marketplace2.demo-spryker.com:
+                    backend-gateway.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         primal: true
-                    backend-gateway.at.b2c-marketplace2.demo-spryker.com:
+                    backend-gateway.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         primal: true
             backapi:
                 application: zed
                 endpoints:
-                    backend-api.de.b2c-marketplace2.demo-spryker.com:
+                    backend-api.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         entry-point: BackendApi
-                    backend-api.at.b2c-marketplace2.demo-spryker.com:
+                    backend-api.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         entry-point: BackendApi
             mportal:
                 application: merchant-portal
                 endpoints:
-                    mp.de.b2c-marketplace2.demo-spryker.com:
+                    mp.de.b2c-marketplace.demo-spryker.com:
                         entry-point: MerchantPortal
                         store: DE
                         primal: true
                         services:
                             session:
                                 namespace: 5
-                    mp.at.b2c-marketplace2.demo-spryker.com:
+                    mp.at.b2c-marketplace.demo-spryker.com:
                         entry-point: MerchantPortal
                         store: AT
                         services:
@@ -189,7 +179,7 @@ services:
             username: "spryker"
             password: "secret"
         endpoints:
-            queue.b2c-marketplace2.demo-spryker.com:
+            queue.b2c-marketplace.demo-spryker.com:
             localhost:5672:
                 protocol: tcp
     session:
@@ -208,28 +198,22 @@ services:
     scheduler:
         engine: jenkins
         endpoints:
-            scheduler.b2c-marketplace2.demo-spryker.com:
+            scheduler.b2c-marketplace.demo-spryker.com:
     mail_catcher:
         engine: mailhog
         endpoints:
-            mail.b2c-marketplace2.demo-spryker.com:
-
+            mail.b2c-marketplace.demo-spryker.com:
 docker:
-
     blackfire:
         enabled: true
-
     ssl:
         enabled: true
         redirect: true
-
     debug:
         enabled: false
         xdebug:
             enabled: false
-
     testing:
         store: DE
-
     mount:
         baked:
