@@ -78,6 +78,13 @@ groups:
     EU:
         region: EU
         applications:
+            merchant_portal_eu:
+                application: merchant-portal
+                endpoints:
+                    mp.de.example.demo-spryker.com:
+                        entry-point: MerchantPortal
+                        store: DE
+                        primal: true
             yves_eu:
                 application: yves
                 endpoints:
