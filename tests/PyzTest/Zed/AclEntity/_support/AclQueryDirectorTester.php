@@ -149,14 +149,16 @@ class AclQueryDirectorTester extends Actor
             (new AclEntityMetadataTransfer())
                 ->setEntityName(SpyProductImage::class)
                 ->setParent(
-                    (new AclEntityParentMetadataTransfer())
-                        ->setEntityName(SpyProductImageSet::class)
-                        ->setConnection(
-                            (new AclEntityParentConnectionMetadataTransfer())
-                                ->setPivotEntityName(SpyProductImageSetToProductImage::class)
-                                ->setReference('fk_product_image')
-                                ->setReferencedColumn('fk_product_image_set'),
-                        ),
+                    (new AclEntityParentMetadataTransfer())->setEntityName(SpyProductImageSetToProductImage::class),
+                )
+                ->setIsSubEntity(true),
+        );
+        $aclEntityMetadataCollectionTransfer->addAclEntityMetadata(
+            SpyProductImageSetToProductImage::class,
+            (new AclEntityMetadataTransfer())
+                ->setEntityName(SpyProductImageSetToProductImage::class)
+                ->setParent(
+                    (new AclEntityParentMetadataTransfer())->setEntityName(SpyProductImageSet::class),
                 )
                 ->setIsSubEntity(true),
         );
