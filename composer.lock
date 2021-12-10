@@ -11887,16 +11887,16 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "55217f5b3d5608cb97834f80f53e1834da25017b"
+                "reference": "4079f2d5a8d10a2bb94f1487670ff7c85af14353"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/55217f5b3d5608cb97834f80f53e1834da25017b",
-                "reference": "55217f5b3d5608cb97834f80f53e1834da25017b",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/4079f2d5a8d10a2bb94f1487670ff7c85af14353",
+                "reference": "4079f2d5a8d10a2bb94f1487670ff7c85af14353",
                 "shasum": ""
             },
             "require": {
@@ -11941,9 +11941,9 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/1.1.0"
+                "source": "https://github.com/spryker/acl-entity/tree/1.2.0"
             },
-            "time": "2021-11-23T15:36:45+00:00"
+            "time": "2021-12-08T07:49:15+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
