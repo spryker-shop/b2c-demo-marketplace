@@ -94,6 +94,28 @@ groups:
                         redirect:
                             code: 302
                             url: www.us.b2c.cloud.spryker.toys
+            merchant_portal_eu:
+                application: merchant-portal
+                endpoints:
+                    mp.de.b2c.cloud.spryker.toys:
+                        entry-point: MerchantPortal
+                        store: DE
+                        primal: true
+                        services:
+                            session:
+                                namespace: 7
+                    mp.at.b2c.cloud.spryker.toys:
+                        entry-point: MerchantPortal
+                        store: AT
+                        services:
+                            session:
+                                namespace: 8
+                    mp.us.b2c.cloud.spryker.toys:
+                        entry-point: MerchantPortal
+                        store: US
+                        services:
+                            session:
+                                namespace: 9
             Yves:
                 application: yves
                 endpoints:
