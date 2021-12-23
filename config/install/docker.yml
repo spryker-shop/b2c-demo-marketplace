@@ -62,7 +62,7 @@ sections:
 
     build-static:
         merchant-portal-install-dependencies:
-            command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
+            command: 'vendor/bin/console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
 
     build-static-production:
         excluded: true
