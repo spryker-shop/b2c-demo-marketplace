@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a953f004b9d8a46ec7ea489395f29184",
+    "content-hash": "759e23db17cb8bf2573b305ae3d0d28f",
     "packages": [
         {
             "name": "brick/math",
@@ -39092,6 +39092,54 @@
             "time": "2019-02-06T10:10:03+00:00"
         },
         {
+            "name": "spryker/sales-order-thresholds-rest-api",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/sales-order-thresholds-rest-api.git",
+                "reference": "f5f0fd9f88e37157d93085f888b16eb3a6b469ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/sales-order-thresholds-rest-api/zipball/f5f0fd9f88e37157d93085f888b16eb3a6b469ec",
+                "reference": "f5f0fd9f88e37157d93085f888b16eb3a6b469ec",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/carts-rest-api-extension": "^1.7.0",
+                "spryker/checkout-rest-api-extension": "^1.5.0",
+                "spryker/glue-application": "^1.0.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/sales-order-threshold": "^1.6.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SalesOrderThresholdsRestApi module",
+            "support": {
+                "source": "https://github.com/spryker/sales-order-thresholds-rest-api/tree/1.0.0"
+            },
+            "time": "2021-12-23T07:29:07+00:00"
+        },
+        {
             "name": "spryker/sales-payment",
             "version": "1.0.0",
             "source": {
@@ -56974,5 +57022,5 @@
     "platform-overrides": {
         "php": "7.4.20"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
