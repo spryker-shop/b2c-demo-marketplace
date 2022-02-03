@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a3d661e3561580201a47a964bd5be1e",
+    "content-hash": "0d591a1bab4f6a4761e53512ba9ad3d8",
     "packages": [
         {
             "name": "brick/math",
@@ -20236,16 +20236,16 @@
         },
         {
             "name": "spryker/customer",
-            "version": "7.38.0",
+            "version": "7.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/customer.git",
-                "reference": "ad73dfb04b1ed9ce307edd315d444e04347e35aa"
+                "reference": "cd9f2dc080e27c81fa8bf94d0c3d50aea1964069"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/customer/zipball/ad73dfb04b1ed9ce307edd315d444e04347e35aa",
-                "reference": "ad73dfb04b1ed9ce307edd315d444e04347e35aa",
+                "url": "https://api.github.com/repos/spryker/customer/zipball/cd9f2dc080e27c81fa8bf94d0c3d50aea1964069",
+                "reference": "cd9f2dc080e27c81fa8bf94d0c3d50aea1964069",
                 "shasum": ""
             },
             "require": {
@@ -20306,9 +20306,9 @@
             ],
             "description": "Customer module",
             "support": {
-                "source": "https://github.com/spryker/customer/tree/7.38.0"
+                "source": "https://github.com/spryker/customer/tree/7.39.0"
             },
-            "time": "2021-11-17T13:55:38+00:00"
+            "time": "2021-12-30T14:25:08+00:00"
         },
         {
             "name": "spryker/customer-access",
