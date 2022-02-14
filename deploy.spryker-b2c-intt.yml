@@ -39,7 +39,7 @@ regions:
     EU:
         services:
             database:
-                database: b2c_intt_staging #Example: environment_staging
+                database: spryker_b2c_intt #Example: environment_staging
                 username: spryker
                 password: secret
 
