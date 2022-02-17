@@ -1,12 +1,5 @@
 version: "0.1"
 
-x-frontend-auth: &frontend-auth
-    auth:
-        engine: basic
-        users:
-            - username: cloud
-              password: cloud
-
 namespace: spryker-cloud
 tag: '1.0'
 
@@ -74,19 +67,19 @@ groups:
                 endpoints:
                     www.de.b2c.internal-testing.demo-spryker.com:
                         store: DE
-                        <<: *frontend-auth
+                        
                     www.at.b2c.internal-testing.demo-spryker.com:
                         store: AT
-                        <<: *frontend-auth
+                        
             boffice:
                 application: backoffice
                 endpoints:
                     backoffice.de.b2c.internal-testing.demo-spryker.com:
                         store: DE
-                        <<: *frontend-auth
+                        
                     backoffice.at.b2c.internal-testing.demo-spryker.com:
                         store: AT
-                        <<: *frontend-auth
+                        
             backgw:
                 application: backend-gateway
                 endpoints:
