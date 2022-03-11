@@ -5,15 +5,13 @@ use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Shared\Customer\CustomerConstants;
 use Spryker\Shared\DocumentationGeneratorRestApi\DocumentationGeneratorRestApiConstants;
 use Spryker\Shared\ErrorHandler\ErrorHandlerConstants;
-use Spryker\Shared\ErrorHandler\ErrorRenderer\ApiDebugErrorRenderer;
-use Spryker\Shared\ErrorHandler\ErrorRenderer\ApiErrorRenderer;
 use Spryker\Shared\ErrorHandler\ErrorRenderer\WebExceptionErrorRenderer;
 use Spryker\Shared\ErrorHandler\ErrorRenderer\WebHtmlErrorRenderer;
 use Spryker\Shared\Event\EventConstants;
 use Spryker\Shared\GlueApplication\GlueApplicationConstants;
 use Spryker\Shared\Kernel\KernelConstants;
+use Spryker\Shared\Kernel\Store;
 use Spryker\Shared\Log\LogConstants;
-use Spryker\Shared\MerchantPortalApplication\MerchantPortalConstants;
 use Spryker\Shared\Newsletter\NewsletterConstants;
 use Spryker\Shared\ProductManagement\ProductManagementConstants;
 use Spryker\Shared\Propel\PropelConstants;
@@ -23,15 +21,18 @@ use Spryker\Shared\Queue\QueueConstants;
 use Spryker\Shared\Router\RouterConstants;
 use Spryker\Shared\Session\SessionConstants;
 use Spryker\Shared\Testify\TestifyConstants;
+use Spryker\Shared\Twig\TwigConstants;
 use Spryker\Shared\WebProfiler\WebProfilerConstants;
+use Spryker\Shared\ZedNavigation\ZedNavigationConstants;
 use Spryker\Shared\ZedRequest\ZedRequestConstants;
 use SprykerShop\Shared\CalculationPage\CalculationPageConstants;
 use SprykerShop\Shared\ErrorPage\ErrorPageConstants;
 use SprykerShop\Shared\ShopApplication\ShopApplicationConstants;
 use SprykerShop\Shared\WebProfilerWidget\WebProfilerWidgetConstants;
+use Twig\Cache\FilesystemCache;
 
 // ############################################################################
-// ############################## DEVELOPMENT CONFIGURATION ###################
+// ############################## PRODUCTION CONFIGURATION ###################
 // ############################################################################
 
 // ----------------------------------------------------------------------------
@@ -61,9 +62,7 @@ $config[DocumentationGeneratorRestApiConstants::ENABLE_REST_API_DOCUMENTATION_GE
 
 // >>> Error handler
 
-$config[ErrorHandlerConstants::DISPLAY_ERRORS] = true;
 $config[ErrorHandlerConstants::ERROR_RENDERER] = getenv('SPRYKER_DEBUG_ENABLED') ? WebExceptionErrorRenderer::class : WebHtmlErrorRenderer::class;
-$config[ErrorHandlerConstants::API_ERROR_RENDERER] = getenv('SPRYKER_DEBUG_ENABLED') ? ApiDebugErrorRenderer::class : ApiErrorRenderer::class;
 $config[ErrorHandlerConstants::IS_PRETTY_ERROR_HANDLER_ENABLED] = (bool)getenv('SPRYKER_DEBUG_ENABLED');
 $config[ErrorHandlerConstants::ERROR_LEVEL] = getenv('SPRYKER_DEBUG_DEPRECATIONS_ENABLED') ? E_ALL : $config[ErrorHandlerConstants::ERROR_LEVEL];
 
@@ -85,6 +84,10 @@ $config[LogConstants::LOG_LEVEL] = getenv('SPRYKER_DEBUG_ENABLED') ? Logger::INF
 
 $config[ZedRequestConstants::TRANSFER_DEBUG_SESSION_FORWARD_ENABLED] = (bool)getenv('SPRYKER_DEBUG_ENABLED');
 $config[ZedRequestConstants::SET_REPEAT_DATA] = (bool)getenv('SPRYKER_DEBUG_ENABLED');
+
+// >>> ZED NAVIGATION
+
+$config[ZedNavigationConstants::ZED_NAVIGATION_CACHE_ENABLED] = true;
 
 if (!getenv('SPRYKER_SSL_ENABLE')) {
 // ----------------------------------------------------------------------------
@@ -108,17 +111,6 @@ if (!getenv('SPRYKER_SSL_ENABLE')) {
         'http://%s%s',
         getenv('SPRYKER_BE_HOST'),
         $backofficePort !== 80 ? ':' . $backofficePort : ''
-    );
-
-// ----------------------------------------------------------------------------
-// ------------------------------ MERCHANT PORTAL -----------------------------
-// ----------------------------------------------------------------------------
-
-    $merchantPortalPort = (int)(getenv('SPRYKER_MP_PORT')) ?: 80;
-    $config[MerchantPortalConstants::BASE_URL_MP] = sprintf(
-        'http://%s%s',
-        getenv('SPRYKER_MP_HOST'),
-        $merchantPortalPort !== 80 ? ':' . $merchantPortalPort : ''
     );
 
 // ----------------------------------------------------------------------------
@@ -153,6 +145,34 @@ if (!getenv('SPRYKER_SSL_ENABLE')) {
         $config[TestifyConstants::GLUE_APPLICATION_DOMAIN] = $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN];
     }
 }
+
+// ----------------------------------------------------------------------------
+// ------------------------------ Twig -----------------------------------------
+// ----------------------------------------------------------------------------
+
+$CURRENT_STORE = Store::getInstance()->getStoreName();
+
+$config[TwigConstants::ZED_TWIG_OPTIONS] = [
+    'cache' => new FilesystemCache(
+        sprintf(
+            '%s/data/%s/cache/Zed/twig',
+            APPLICATION_ROOT_DIR,
+            $CURRENT_STORE
+        ),
+        FilesystemCache::FORCE_BYTECODE_INVALIDATION
+    ),
+];
+
+$config[TwigConstants::YVES_TWIG_OPTIONS] = [
+    'cache' => new FilesystemCache(
+        sprintf(
+            '%s/data/%s/cache/Yves/twig',
+            APPLICATION_ROOT_DIR,
+            $CURRENT_STORE
+        ),
+        FilesystemCache::FORCE_BYTECODE_INVALIDATION
+    ),
+];
 
 // ----------------------------------------------------------------------------
 // ------------------------------ OMS -----------------------------------------

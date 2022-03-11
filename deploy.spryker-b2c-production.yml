@@ -76,7 +76,7 @@ groups:
     EU:
         region: EU
         applications:
-            Redirects:
+            redirects_eu:
                 application: static
                 endpoints:
                     de.b2c.demo-spryker.com:

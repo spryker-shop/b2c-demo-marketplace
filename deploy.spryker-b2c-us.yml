@@ -93,7 +93,7 @@ groups:
     US:
         region: US
         applications:
-            Yves:
+            yves_us:
                 application: yves
                 endpoints:
                     www.b2c-staging-us.cloud.spryker.toys:

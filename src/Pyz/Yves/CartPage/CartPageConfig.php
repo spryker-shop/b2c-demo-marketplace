@@ -7,10 +7,17 @@
 
 namespace Pyz\Yves\CartPage;
 
-use SprykerShop\Yves\CartPage\CartPageConfig as SprykerShopCartPageConfig;
+use SprykerShop\Yves\CartPage\CartPageConfig as SprykerCartPageConfig;
 
-class CartPageConfig extends SprykerShopCartPageConfig
+class CartPageConfig extends SprykerCartPageConfig
 {
-    public const IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED = true;
-    public const IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED = true;
+    /**
+     * @var bool
+     */
+    protected const IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED = true;
+
+    /**
+     * @var bool
+     */
+    protected const IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED = true;
 }
