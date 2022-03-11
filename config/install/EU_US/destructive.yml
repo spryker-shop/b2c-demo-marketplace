@@ -61,6 +61,9 @@ sections:
         import-eu-region-demodata:
             command: "vendor/bin/console data:import --config=data/import/production/full_EU.yml"
 
+        import-eu-region-us-demodata:
+            command: "vendor/bin/console data:import --config=data/import/production/full_US.yml"
+
         update-product-labels:
             command: "vendor/bin/console product-label:relations:update -vvv --no-ansi"
 
