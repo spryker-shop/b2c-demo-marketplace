@@ -23,6 +23,7 @@ use Propel\Runtime\ActiveQuery\ModelJoin;
 use Pyz\Zed\AclEntity\AclEntityDependencyProvider;
 use PyzTest\Zed\AclEntity\AclQueryDirectorTester;
 use Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalAclEntityMetadataConfigExpanderPlugin;
 use Spryker\Zed\Merchant\MerchantDependencyProvider;
 use Spryker\Zed\ProductOffer\ProductOfferDependencyProvider;
 
@@ -51,11 +52,19 @@ class AclQueryDirectorTest extends Unit
     {
         parent::setUp();
 
-        $this->tester->setDependency(MerchantDependencyProvider::PLUGINS_MERCHANT_POST_CREATE, []);
-        $this->tester->setDependency(ProductOfferDependencyProvider::PLUGINS_PRODUCT_OFFER_POST_CREATE, []);
         $this->tester->setDependency(
             AclEntityDependencyProvider::PLUGINS_ACL_ENTITY_METADATA_COLLECTION_EXPANDER,
-            [$this->tester->getAclEntityMetadataConfigExpander()],
+            [new MerchantPortalAclEntityMetadataConfigExpanderPlugin()],
+        );
+
+        $this->tester->setDependency(
+            MerchantDependencyProvider::PLUGINS_MERCHANT_POST_CREATE,
+            [],
+        );
+
+        $this->tester->setDependency(
+            ProductOfferDependencyProvider::PLUGINS_PRODUCT_OFFER_POST_CREATE,
+            [],
         );
 
         $this->tester->deleteTestData();
@@ -213,6 +222,10 @@ class AclQueryDirectorTest extends Unit
             $rolesTransfer,
             $this->tester->createProductOfferMetadataHierarchy(),
         );
+        $aclModelDirector = $this->tester->createAclModelDirector(
+            $rolesTransfer,
+            $this->tester->createProductOfferMetadataHierarchy(),
+        );
 
         $merchant1ProductOfferEntity = $this->tester->findProductOfferByIdProductOffer(
             $merchant1ProductOfferTransfer->getIdProductOfferOrFail(),
@@ -223,8 +236,8 @@ class AclQueryDirectorTest extends Unit
 
         // Act, Assert
         // User can manage merchant1 and view merchant2 ProductOffer
-        $aclQueryDirector->inspectUpdate($merchant1ProductOfferEntity);
-        $aclQueryDirector->inspectDelete($merchant1ProductOfferEntity);
+        $aclModelDirector->inspectUpdate($merchant1ProductOfferEntity);
+        $aclModelDirector->inspectDelete($merchant1ProductOfferEntity);
         $query = $aclQueryDirector->applyAclRuleOnSelectQuery(
             SpyProductOfferQuery::create()->filterByIdProductOffer_In(
                 [$merchant1ProductOfferTransfer->getIdProductOfferOrFail(), $merchant2ProductOfferTransfer->getIdProductOfferOrFail()],
@@ -237,6 +250,6 @@ class AclQueryDirectorTest extends Unit
         $this->expectExceptionMessage(
             'Operation "update" is restricted for Orm\Zed\ProductOffer\Persistence\SpyProductOffer',
         );
-        $aclQueryDirector->inspectUpdate($merchant2ProductOfferEntity);
+        $aclModelDirector->inspectUpdate($merchant2ProductOfferEntity);
     }
 }
