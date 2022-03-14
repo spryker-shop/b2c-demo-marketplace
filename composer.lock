@@ -21155,16 +21155,16 @@
         },
         {
             "name": "spryker/dashboard-merchant-portal-gui",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/dashboard-merchant-portal-gui.git",
-                "reference": "1b2ef8f49227b010774140edbfffa1aa37e81e95"
+                "reference": "db78110d8fc55a30964c6601036f211bced9fd20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/dashboard-merchant-portal-gui/zipball/1b2ef8f49227b010774140edbfffa1aa37e81e95",
-                "reference": "1b2ef8f49227b010774140edbfffa1aa37e81e95",
+                "url": "https://api.github.com/repos/spryker/dashboard-merchant-portal-gui/zipball/db78110d8fc55a30964c6601036f211bced9fd20",
+                "reference": "db78110d8fc55a30964c6601036f211bced9fd20",
                 "shasum": ""
             },
             "require": {
@@ -21194,9 +21194,9 @@
             ],
             "description": "DashboardMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/dashboard-merchant-portal-gui/tree/1.2.0"
+                "source": "https://github.com/spryker/dashboard-merchant-portal-gui/tree/1.3.0"
             },
-            "time": "2021-11-12T12:54:45+00:00"
+            "time": "2022-02-03T10:07:21+00:00"
         },
         {
             "name": "spryker/dashboard-merchant-portal-gui-extension",
