@@ -5,19 +5,17 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace Pyz\Zed\MerchantProductOfferStorage;
+namespace Pyz\Zed\ProductOfferStorage;
 
 use Pyz\Zed\Synchronization\SynchronizationConfig;
-use Spryker\Zed\MerchantProductOfferStorage\MerchantProductOfferStorageConfig as SprykerMerchantProductOfferStorageConfig;
+use Spryker\Zed\ProductOfferStorage\ProductOfferStorageConfig as SprykerProductOfferStorageConfig;
 
-class MerchantProductOfferStorageConfig extends SprykerMerchantProductOfferStorageConfig
+class ProductOfferStorageConfig extends SprykerProductOfferStorageConfig
 {
     /**
-     * @api
-     *
      * @return string|null
      */
-    public function getMerchantProductOfferSynchronizationPoolName(): ?string
+    public function getProductOfferSynchronizationPoolName(): ?string
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
