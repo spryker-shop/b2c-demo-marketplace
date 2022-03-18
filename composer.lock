@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9fa983bb76d28896061f2d449241f1b",
+    "content-hash": "256ae860017661d64a716cb5b15e5103",
     "packages": [
         {
             "name": "brick/math",
@@ -57877,6 +57877,12 @@
         }
     ],
     "aliases": [
+        {
+            "package": "spryker-feature/marketplace-product-offer",
+            "version": "9999999-dev",
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
+        },
         {
             "package": "spryker/docker-chromedriver",
             "version": "9999999-dev",
