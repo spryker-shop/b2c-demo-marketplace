@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c65a2c5377e3955c5e0ad3f7abf657b",
+    "content-hash": "8d24528afc8907a31c8574ee1a2522c2",
     "packages": [
         {
             "name": "brick/math",
@@ -58101,7 +58101,19 @@
     ],
     "aliases": [
         {
+            "package": "spryker-feature/marketplace-merchant-portal-product-management",
+            "version": "9999999-dev",
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
+        },
+        {
             "package": "spryker-feature/marketplace-product-approval-process",
+            "version": "9999999-dev",
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
+        },
+        {
+            "package": "spryker-feature/product-approval-process",
             "version": "9999999-dev",
             "alias": "202204.0",
             "alias_normalized": "202204.0"
