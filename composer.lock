@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0201d70cf7984b0807d96951a75d4e0",
+    "content-hash": "7c65a2c5377e3955c5e0ad3f7abf657b",
     "packages": [
         {
             "name": "brick/math",
@@ -4678,22 +4678,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product-approval-process.git",
-                "reference": "5efee6f956abe37655d35134e42417c196f81542"
+                "reference": "f3be1242dcc3307ec4e97284e2b17fe4cbc8e16e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-approval-process/zipball/5efee6f956abe37655d35134e42417c196f81542",
-                "reference": "5efee6f956abe37655d35134e42417c196f81542",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-approval-process/zipball/f3be1242dcc3307ec4e97284e2b17fe4cbc8e16e",
+                "reference": "f3be1242dcc3307ec4e97284e2b17fe4cbc8e16e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=7.4",
+                "spryker/merchant-product-approval": "^1.0.0",
+                "spryker/merchant-product-approval-data-import": "^0.1.0"
             },
             "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202108.x-dev"
+                    "dev-master": "202204.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4704,7 +4706,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-product-approval-process/tree/master"
             },
-            "time": "2022-02-10T15:28:27+00:00"
+            "time": "2022-03-15T08:42:03+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product-offer",
@@ -25804,6 +25806,53 @@
             "description": "MerchantProductApproval module",
             "support": {
                 "source": "https://github.com/spryker/merchant-product-approval/tree/1.0.0"
+            },
+            "time": "2022-02-11T12:49:43+00:00"
+        },
+        {
+            "name": "spryker/merchant-product-approval-data-import",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-product-approval-data-import.git",
+                "reference": "9a67213390fbfc4dc60121b7111a5a80d34d2a91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-product-approval-data-import/zipball/9a67213390fbfc4dc60121b7111a5a80d34d2a91",
+                "reference": "9a67213390fbfc4dc60121b7111a5a80d34d2a91",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/data-import": "^1.3.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant": "^3.0.0",
+                "spryker/merchant-product-approval": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "MerchantProductApprovalDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-approval-data-import/tree/0.1.0"
             },
             "time": "2022-02-11T12:49:43+00:00"
         },
@@ -58051,6 +58100,12 @@
         }
     ],
     "aliases": [
+        {
+            "package": "spryker-feature/marketplace-product-approval-process",
+            "version": "9999999-dev",
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
+        },
         {
             "package": "spryker/docker-chromedriver",
             "version": "9999999-dev",

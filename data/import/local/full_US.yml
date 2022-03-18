@@ -57,6 +57,8 @@ actions:
     source: data/import/common/US/product_price_schedule.csv
   - data_entity: product-stock
     source: data/import/common/common/product_stock.csv
+  - data_entity: product-approval-status
+    source: data/import/common/common/product_abstract_approval_status.csv
   # Store relation
   - data_entity: product-abstract-store
     source: data/import/common/US/product_abstract_store.csv
@@ -201,8 +203,6 @@ actions:
     source: data/import/common/US/marketplace/warehouse_store.csv
   - data_entity: product-stock
     source: data/import/common/common/marketplace/product_stock.csv
-  - data_entity: product-approval-status
-    source: data/import/common/common/product_abstract_approval_status.csv
 
   # Acl import
   - data_entity: acl-role
