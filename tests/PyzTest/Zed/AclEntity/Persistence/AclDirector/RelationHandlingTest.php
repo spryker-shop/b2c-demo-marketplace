@@ -320,6 +320,7 @@ class RelationHandlingTest extends Unit
             $productTransfer->getFkProductAbstractOrFail(),
         );
         $productAbstractEntity->setSku($productAbstractEntity->getSku() . time());
+        $productAbstractEntity->addSpyProduct($productEntity);
 
         // Act
         $aclModelDirector->inspectUpdate($productEntity);
