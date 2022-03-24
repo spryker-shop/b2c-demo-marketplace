@@ -8,11 +8,11 @@ image:
     tag: spryker/php:7.4-alpine3.12
     environment:
         SPRYKER_DEFAULT_STORE: "DE"
-        SPRYKER_ACTIVE_STORES: "DE,AT,US"
-        SPRYKER_HOOK_BEFORE_DEPLOY: "vendor/bin/install -r EU_US/pre-deploy -vvv "
+        SPRYKER_ACTIVE_STORES: "DE,AT"
+        SPRYKER_HOOK_BEFORE_DEPLOY: "vendor/bin/install -r EU/pre-deploy -vvv "
         SPRYKER_HOOK_AFTER_DEPLOY: "true"
-        SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU_US/production --no-ansi -vvv"
-        SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU_US/destructive --no-ansi -vvv"
+        SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production --no-ansi -vvv"
+        SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive --no-ansi -vvv"
 
 composer:
     mode: --no-dev
@@ -57,16 +57,6 @@ regions:
                         namespace: at_search
                     session:
                         namespace: 2
-            US:
-                services:
-                    broker:
-                        namespace: us_queue
-                    key_value_store:
-                        namespace: 3
-                    search:
-                        namespace: us_search
-                    session:
-                        namespace: 4
 
 groups:
     EU:
@@ -79,8 +69,6 @@ groups:
                         store: DE
                     www.at.b2c.internal-testing.demo-spryker.com:
                         store: AT
-                    www.us.b2c.internal-testing.demo-spryker.com:
-                        store: US
 
             boffice:
                 application: backoffice
@@ -89,8 +77,6 @@ groups:
                         store: DE
                     backoffice.at.b2c.internal-testing.demo-spryker.com:
                         store: AT
-                    backoffice.us.b2c.internal-testing.demo-spryker.com:
-                        store: US
             backgw:
                 application: backend-gateway
                 endpoints:
@@ -98,8 +84,6 @@ groups:
                         store: DE
                     backend-gateway.at.b2c.internal-testing.demo-spryker.com:
                         store: AT
-                    backend-gateway.us.b2c.internal-testing.demo-spryker.com:
-                        store: US
             backapi:
                 application: zed
                 endpoints:
@@ -109,9 +93,6 @@ groups:
                     backend-api.at.b2c.internal-testing.demo-spryker.com:
                         store: AT
                         entry-point: BackendApi
-                    backend-api.us.b2c.internal-testing.demo-spryker.com:
-                        store: US
-                        entry-point: BackendApi
             Glue:
                 application: glue
                 endpoints:
@@ -119,8 +100,6 @@ groups:
                         store: DE
                     glue.at.b2c.internal-testing.demo-spryker.com:
                         store: AT
-                    glue.us.b2c.internal-testing.demo-spryker.com:
-                        store: US
 services:
     database:
         engine: mysql
