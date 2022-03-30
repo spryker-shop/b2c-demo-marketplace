@@ -25,7 +25,7 @@ class AvailabilityGuiDependencyProvider extends SprykerAvailabilityGuiDependency
     }
 
     /**
-     * @return \Spryker\Zed\AvailabilityGuiExtension\Dependency\Plugin\AvailabilityAbstractTableQueryCriteriaExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\AvailabilityGuiExtension\Dependency\Plugin\AvailabilityAbstractTableQueryCriteriaExpanderPluginInterface>
      */
     protected function getAvailabilityAbstractTableQueryCriteriaExpanderPlugins(): array
     {
