@@ -12,6 +12,7 @@
                         '%total%': loop.length,
                     }) }}
                 </h3>
+                {% widget 'MerchantOrderReferenceForItemsWidget' args [shipmentGroup.items] only %}{% endwidget %}
 
                 {% for item in shipmentGroup.cartItems %}
                     {% set cartItem = item.bundleProduct ?? item %}
