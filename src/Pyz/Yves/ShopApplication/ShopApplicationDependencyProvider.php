@@ -186,7 +186,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             MerchantProductOfferWidget::class,
             SoldByMerchantWidget::class,
             CurrentProductPriceVolumeWidget::class,
-            SoldByMerchantWidget::class,
             MerchantProductWidget::class,
             MerchantOpeningHoursWidget::class,
             MerchantSalesReturnCreateFormWidget::class,
