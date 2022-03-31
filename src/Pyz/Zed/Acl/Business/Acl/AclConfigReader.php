@@ -20,8 +20,7 @@ class AclConfigReader extends SprykerAclConfigReader
         $groupTransfers = [];
         foreach ($this->aclConfig->getInstallerGroups() as $groupData) {
             $groupTransfers[] = (new GroupTransfer())
-                ->setName($groupData[GroupTransfer::NAME])
-                ->setReference($groupData[GroupTransfer::REFERENCE]);
+                ->fromArray($groupData, true);
         }
 
         return $groupTransfers;
