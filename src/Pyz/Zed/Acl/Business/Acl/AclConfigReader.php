@@ -12,6 +12,7 @@ use Spryker\Zed\Acl\Business\Acl\AclConfigReader as SprykerAclConfigReader;
 
 class AclConfigReader extends SprykerAclConfigReader
 {
+    // TODO: Should be removed after MP-6691 integration.
     /**
      * @return array<\Generated\Shared\Transfer\GroupTransfer>
      */
