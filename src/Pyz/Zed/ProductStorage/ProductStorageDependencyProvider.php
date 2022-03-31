@@ -7,7 +7,6 @@
 
 namespace Pyz\Zed\ProductStorage;
 
-use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage\MerchantProductAbstractStorageExpanderPlugin;
 use Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage\MerchantProductConcreteStorageCollectionExpanderPlugin;
 use Spryker\Zed\ProductApproval\Communication\Plugin\ProductStorage\ProductApprovalProductAbstractStorageCollectionFilterPlugin;
@@ -17,37 +16,7 @@ use Spryker\Zed\ProductStorage\ProductStorageDependencyProvider as SprykerProduc
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @var string
-     */
-    public const SERVICE_SYNCHRONIZATION = 'SERVICE_SYNCHRONIZATION';
-
-    /**
-     * @var string
-     */
-    public const CLIENT_QUEUE = 'CLIENT_QUEUE';
-
-    /**
-     * @var string
-     */
-    public const FACADE_PROPEL = 'FACADE_PROPEL';
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    public function provideBusinessLayerDependencies(Container $container): Container
-    {
-        $container = parent::provideBusinessLayerDependencies($container);
-        $container = $this->addSynchronizationService($container);
-        $container = $this->addQueueClient($container);
-        $container = $this->addPropelFacade($container);
-
-        return $container;
-    }
-
-    /**
-     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface>
+     * @return \Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface[]
      */
     protected function getProductAbstractStorageExpanderPlugins(): array
     {
@@ -84,47 +53,5 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
         return [
             new ProductApprovalProductConcreteStorageCollectionFilterPlugin(),
         ];
-    }
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    public function addSynchronizationService(Container $container): Container
-    {
-        $container->set(static::SERVICE_SYNCHRONIZATION, function (Container $container) {
-            return $container->getLocator()->synchronization()->service();
-        });
-
-        return $container;
-    }
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    public function addQueueClient(Container $container): Container
-    {
-        $container->set(static::CLIENT_QUEUE, function (Container $container) {
-            return $container->getLocator()->queue()->client();
-        });
-
-        return $container;
-    }
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    public function addPropelFacade(Container $container): Container
-    {
-        $container->set(static::FACADE_PROPEL, function (Container $container) {
-            return $container->getLocator()->propel()->facade();
-        });
-
-        return $container;
     }
 }
