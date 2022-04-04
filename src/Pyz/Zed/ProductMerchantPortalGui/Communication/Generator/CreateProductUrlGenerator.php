@@ -33,6 +33,7 @@ class CreateProductUrlGenerator extends SprykerCreateProductUrlGenerator
      */
     public function getUpdateProductAbstractApprovalStatusUrl(string $status, int $idProductAbstract): string
     {
+        $getParams = '';
         if ($status === static::STATUS_DRAFT) {
             $getParams = http_build_query(
                 [
@@ -49,6 +50,10 @@ class CreateProductUrlGenerator extends SprykerCreateProductUrlGenerator
                     static::FIELD_ID_PRODUCT_ABSTRACT => $idProductAbstract,
                 ],
             );
+        }
+
+        if (!$getParams) {
+            return parent::getUpdateProductAbstractApprovalStatusUrl($status, $idProductAbstract);
         }
 
         return sprintf(

@@ -14,7 +14,7 @@ use Spryker\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiC
 use Spryker\Zed\ProductMerchantPortalGui\Dependency\Facade\ProductMerchantPortalGuiToProductApprovalFacadeInterface;
 
 /**
- * @method \Pyz\Zed\ProductMerchantPortalGuiProductMerchantPortalGuiConfig getConfig()
+ * @method \Pyz\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiConfig getConfig()
  */
 class ProductMerchantPortalGuiCommunicationFactory extends SprykerProductMerchantPortalGuiCommunicationFactory
 {
