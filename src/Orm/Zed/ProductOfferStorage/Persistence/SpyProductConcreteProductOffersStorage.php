@@ -5,9 +5,9 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace Orm\Zed\MerchantProductOfferStorage\Persistence;
+namespace Orm\Zed\ProductOfferStorage\Persistence;
 
-use Spryker\Zed\MerchantProductOfferStorage\Persistence\Propel\AbstractSpyProductConcreteProductOffersStorage as BaseSpyProductConcreteProductOffersStorage;
+use Spryker\Zed\ProductOfferStorage\Persistence\Propel\AbstractSpyProductConcreteProductOffersStorage as BaseSpyProductConcreteProductOffersStorage;
 
 /**
  * Skeleton subclass for representing a row from the 'spy_product_concrete_product_offers_storage' table.

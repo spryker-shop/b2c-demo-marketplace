@@ -26,6 +26,7 @@ use Pyz\Zed\ProductOffer\ProductOfferDependencyProvider;
 use PyzTest\Zed\AclEntity\AclQueryDirectorTester;
 use Spryker\Shared\AclEntity\AclEntityConstants;
 use Spryker\Zed\AclEntity\AclEntityDependencyProvider;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalAclEntityMetadataConfigExpanderPlugin;
 use Spryker\Zed\PropelOrm\Business\Runtime\ActiveQuery\Criteria;
 
 /**
@@ -36,10 +37,10 @@ use Spryker\Zed\PropelOrm\Business\Runtime\ActiveQuery\Criteria;
  * @group AclEntity
  * @group Persistence
  * @group AclDirector
- * @group InheritedScopeAclQueryDirectorStrategyTest
+ * @group InheritedAclQueryScopeTest
  * Add your own group annotations below this line
  */
-class InheritedScopeAclQueryDirectorStrategyTest extends Unit
+class InheritedAclQueryScopeTest extends Unit
 {
     /**
      * @var string
@@ -87,7 +88,7 @@ class InheritedScopeAclQueryDirectorStrategyTest extends Unit
         $this->tester->setDependency(ProductOfferDependencyProvider::PLUGINS_PRODUCT_OFFER_POST_CREATE, []);
         $this->tester->setDependency(
             AclEntityDependencyProvider::PLUGINS_ACL_ENTITY_METADATA_COLLECTION_EXPANDER,
-            [$this->tester->getAclEntityMetadataConfigExpander()],
+            [new MerchantPortalAclEntityMetadataConfigExpanderPlugin()],
         );
 
         $this->tester->deleteTestData();
@@ -140,13 +141,13 @@ class InheritedScopeAclQueryDirectorStrategyTest extends Unit
         );
 
         $rolesTransfer = (new RolesTransfer())->addRole($roleTransfer);
-        $aclQueryDirector = $this->tester->createAclQueryDirector(
+        $aclModelDirector = $this->tester->createAclModelDirector(
             $rolesTransfer,
             $this->tester->createProductAbstractMerchantMetadataHierarchy(),
         );
 
         // Act, Assert
-        $aclQueryDirector->inspectCreate(new SpyProductAbstract());
+        $aclModelDirector->inspectCreate(new SpyProductAbstract());
     }
 
     /**
@@ -205,13 +206,13 @@ class InheritedScopeAclQueryDirectorStrategyTest extends Unit
         );
 
         $rolesTransfer = (new RolesTransfer())->addRole($roleTransfer);
-        $aclQueryDirector = $this->tester->createAclQueryDirector(
+        $aclModelDirector = $this->tester->createAclModelDirector(
             $rolesTransfer,
             $this->tester->createProductAbstractMerchantMetadataHierarchy(),
         );
 
         // Act, Assert
-        $aclQueryDirector->inspectUpdate(
+        $aclModelDirector->inspectUpdate(
             $this->tester->findProductAbstractByIdProductAbstract(
                 $productAbstractTransfer->getIdProductAbstractOrFail(),
             ),
@@ -264,13 +265,13 @@ class InheritedScopeAclQueryDirectorStrategyTest extends Unit
         );
 
         $rolesTransfer = (new RolesTransfer())->addRole($roleTransfer);
-        $aclQueryDirector = $this->tester->createAclQueryDirector(
+        $aclModelDirector = $this->tester->createAclModelDirector(
             $rolesTransfer,
             $this->tester->createProductAbstractMerchantMetadataHierarchy(),
         );
 
         // Act, Assert
-        $aclQueryDirector->inspectDelete(
+        $aclModelDirector->inspectDelete(
             $this->tester->findProductAbstractByIdProductAbstract(
                 $productAbstractTransfer->getIdProductAbstractOrFail(),
             ),
@@ -363,13 +364,13 @@ class InheritedScopeAclQueryDirectorStrategyTest extends Unit
         );
 
         $rolesTransfer = (new RolesTransfer())->addRole($roleTransfer);
-        $aclQueryDirector = $this->tester->createAclQueryDirector(
+        $aclModelDirector = $this->tester->createAclModelDirector(
             $rolesTransfer,
             $this->tester->createProductOfferMetadataHierarchy(),
         );
 
         // Act, Assert
-        $aclQueryDirector->inspectCreate(new SpyProductOffer());
+        $aclModelDirector->inspectCreate(new SpyProductOffer());
     }
 
     /**
@@ -406,13 +407,13 @@ class InheritedScopeAclQueryDirectorStrategyTest extends Unit
         );
 
         $rolesTransfer = (new RolesTransfer())->addRole($roleTransfer);
-        $aclQueryDirector = $this->tester->createAclQueryDirector(
+        $aclModelDirector = $this->tester->createAclModelDirector(
             $rolesTransfer,
             $this->tester->createProductOfferMetadataHierarchy(),
         );
 
         // Act, Assert
-        $aclQueryDirector->inspectUpdate(
+        $aclModelDirector->inspectUpdate(
             $this->tester->findProductOfferByIdProductOffer($productOfferTransfer->getIdProductOfferOrFail()),
         );
     }
@@ -451,13 +452,13 @@ class InheritedScopeAclQueryDirectorStrategyTest extends Unit
         );
 
         $rolesTransfer = (new RolesTransfer())->addRole($roleTransfer);
-        $aclQueryDirector = $this->tester->createAclQueryDirector(
+        $aclModelDirector = $this->tester->createAclModelDirector(
             $rolesTransfer,
             $this->tester->createProductOfferMetadataHierarchy(),
         );
 
         // Act, Assert
-        $aclQueryDirector->inspectDelete(
+        $aclModelDirector->inspectDelete(
             $this->tester->findProductOfferByIdProductOffer($productOfferTransfer->getIdProductOfferOrFail()),
         );
     }

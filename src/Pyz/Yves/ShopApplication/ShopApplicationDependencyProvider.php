@@ -50,6 +50,7 @@ use SprykerShop\Yves\LanguageSwitcherWidget\Widget\LanguageSwitcherWidget;
 use SprykerShop\Yves\MerchantOpeningHoursWidget\Widget\MerchantOpeningHoursWidget;
 use SprykerShop\Yves\MerchantProductOfferWidget\Widget\MerchantProductOfferWidget;
 use SprykerShop\Yves\MerchantProductWidget\Widget\MerchantProductWidget;
+use SprykerShop\Yves\MerchantSalesOrderWidget\Widget\MerchantOrderReferenceForItemsWidget;
 use SprykerShop\Yves\MerchantSalesReturnWidget\Plugin\MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin;
 use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateFormWidget;
 use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
@@ -185,10 +186,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             MerchantProductOfferWidget::class,
             SoldByMerchantWidget::class,
             CurrentProductPriceVolumeWidget::class,
-            SoldByMerchantWidget::class,
             MerchantProductWidget::class,
             MerchantOpeningHoursWidget::class,
             MerchantSalesReturnCreateFormWidget::class,
+            MerchantOrderReferenceForItemsWidget::class,
         ];
     }
 

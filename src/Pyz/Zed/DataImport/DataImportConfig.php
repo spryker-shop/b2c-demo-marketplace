@@ -10,6 +10,8 @@ namespace Pyz\Zed\DataImport;
 use Spryker\Zed\AclDataImport\AclDataImportConfig;
 use Spryker\Zed\AclEntityDataImport\AclEntityDataImportConfig;
 use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
+use Spryker\Zed\MerchantProductApprovalDataImport\MerchantProductApprovalDataImportConfig;
+use Spryker\Zed\ProductApprovalDataImport\ProductApprovalDataImportConfig;
 use Spryker\Zed\StockAddressDataImport\StockAddressDataImportConfig;
 
 /**
@@ -78,6 +80,8 @@ class DataImportConfig extends SprykerDataImportConfig
             AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_RULE,
             AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT,
             AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR,
+            MerchantProductApprovalDataImportConfig::IMPORT_TYPE_MERCHANT_PRODUCT_APPROVAL_STATUS_DEFAULT,
+            ProductApprovalDataImportConfig::IMPORT_TYPE_PRODUCT_APPROVAL_STATUS,
         ];
 
         return array_merge(parent::getFullImportTypes(), $customImportTypes);

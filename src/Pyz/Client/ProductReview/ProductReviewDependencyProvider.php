@@ -30,7 +30,7 @@ class ProductReviewDependencyProvider extends SprykerProductReviewDependencyProv
     }
 
     /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface[]
+     * @return \Spryker\Client\Search\Dependency\Plugin\ResultFormatterPluginInterface[]|\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface[]
      */
     public function getProductReviewsBulkSearchResultFormatterPlugins(): array
     {

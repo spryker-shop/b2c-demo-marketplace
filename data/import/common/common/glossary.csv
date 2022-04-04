@@ -31,6 +31,8 @@ cart.discounts,Rabatte,de_DE
 cart.discounts,Discounts,en_US
 cart.sales-order-threshold,Mindestbestellwert,de_DE
 cart.sales-order-threshold,Minimum Order Value,en_US
+cart.title.available_discounts,Verfügbare Rabatte,de_DE
+cart.title.available_discounts,Available discounts,en_US
 checkout.sales-order-threshold,Mindestbestellwert,de_DE
 checkout.sales-order-threshold,Minimum Order Value,en_US
 sales-order-threshold.expense.name,Zuschlag,de_DE
@@ -1331,6 +1333,8 @@ product-cart.validation.error.concrete-product-inactive,"Product %sku% is not ac
 product-cart.validation.error.concrete-product-inactive,"Produkt %sku% ist nicht aktiv.",de_DE
 product-cart.info.concrete-product-inactive.removed,"Inactive item %sku% was removed from your shopping cart.",en_US
 product-cart.info.concrete-product-inactive.removed,"Der inaktive Artikel %sku% wurde aus deinem Warenkorb entfernt.",de_DE
+product-approval.message.not-approved,Product sku %sku% is not active.,en_US
+product-approval.message.not-approved,Produkt sku %sku% ist nicht aktiv.,de_DE
 product.filter.label,Label,en_US
 product.filter.label,Label,de_DE
 product.filter.price-default-chf-gross_mode,Preis,de_DE
@@ -2978,9 +2982,15 @@ agent_page.error.customer_already_logged_in,"Sie sind bereits als Kunde angemeld
 agent_page.error.customer_already_logged_in,"You are already logged in as customer, please logout first, then proceed",en_US
 customer.login.remember_me,"Remember me",en_US
 customer.login.remember_me,"Behalte mich in Erinnerung",de_DE
+sales-order-threshold.hard-minimum-threshold.us.usd.message,You should add items for {{threshold}} to pass a recommended threshold. You can't proceed with checkout,en_US
+sales-order-threshold.hard-maximum-threshold.us.usd.message,The cart value cannot be higher than {{threshold}}. Please remove some items to proceed with the order,en_US
+sales-order-threshold.soft-minimum-threshold.us.usd.message,"You need to add items for {{threshold}} to pass a recommended threshold, but if you want can proceed to checkout.",en_US
+countries.iso.US,United States of America,en_US
 product-offer.info.product-offer-inactive.removed,Inactive item %sku% was removed from your shopping cart.,en_US
 product-offer.info.product-offer-inactive.removed,Der inaktive Artikel %sku% wurde aus Ihrem Warenkorb entfernt.,de_DE
 product-offer.info.reference.invalid,Product offer reference not found for product with SKU '%sku%'.,en_US
 product-offer.info.reference.invalid,Produktangebotsreferenz für Produkt mit SKU '% sku%' nicht gefunden.,de_DE
 product-offer.message.not-active-or-approved,Product offer not active for product with SKU '%sku%'.,en_US
 product-offer.message.not-active-or-approved,Produktangebot ist inaktiv für Produkt mit SKU '% sku%'.,de_DE
+merchant_sales_order.merchant_order_id,Merchant Order ID,en_US
+merchant_sales_order.merchant_order_id,Händlerbestell-ID,de_DE

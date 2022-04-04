@@ -216,11 +216,11 @@ class NavigationTreeCest
             ->getNavigationNode()
             ->getIdNavigationNode();
 
+        $i->waitForNavigationTree();
         $i->repeatUnstableActions(function () use ($i, $idNavigationNode, $idTargetNavigationNode) {
             $i->moveNavigationNode($idNavigationNode, $idTargetNavigationNode);
             $i->seeNavigationNodeHierarchy($idTargetNavigationNode, $idNavigationNode);
         });
-
         $i->saveNavigationTreeOrder();
         $i->seeSuccessfulOrderSaveMessage(NavigationPage::MESSAGE_TREE_UPDATE_SUCCESS);
 

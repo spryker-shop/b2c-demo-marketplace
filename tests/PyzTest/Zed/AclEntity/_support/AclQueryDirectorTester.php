@@ -18,6 +18,7 @@ use Generated\Shared\Transfer\AclEntityRuleTransfer;
 use Generated\Shared\Transfer\AclEntitySegmentCriteriaTransfer;
 use Generated\Shared\Transfer\AclEntitySegmentRequestTransfer;
 use Generated\Shared\Transfer\AclRoleCriteriaTransfer;
+use Generated\Shared\Transfer\MerchantProductTransfer;
 use Generated\Shared\Transfer\MerchantTransfer;
 use Generated\Shared\Transfer\RolesTransfer;
 use Generated\Shared\Transfer\RoleTransfer;
@@ -43,11 +44,13 @@ use Spryker\Zed\AclEntity\Dependency\Facade\AclEntityToUserFacadeBridge;
 use Spryker\Zed\AclEntity\Dependency\Facade\AclEntityToUserFacadeBridgeInterface;
 use Spryker\Zed\AclEntity\Persistence\AclEntityPersistenceFactory;
 use Spryker\Zed\AclEntity\Persistence\AclEntityRepository;
+use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclModelDirector;
+use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclModelDirectorInterface;
 use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclQueryDirector;
 use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclQueryDirectorInterface;
-use Spryker\Zed\AclEntity\Persistence\Provider\AclRoleProvider;
-use Spryker\Zed\AclEntity\Persistence\Provider\AclRoleProviderInterface;
-use Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface;
+use Spryker\Zed\AclEntity\Persistence\Propel\Provider\AclEntityRuleProvider;
+use Spryker\Zed\AclEntity\Persistence\Propel\Provider\AclRoleProvider;
+use Spryker\Zed\AclEntity\Persistence\Propel\Provider\AclRoleProviderInterface;
 use Spryker\Zed\Kernel\AbstractBundleConfig;
 
 /**
@@ -149,16 +152,14 @@ class AclQueryDirectorTester extends Actor
             (new AclEntityMetadataTransfer())
                 ->setEntityName(SpyProductImage::class)
                 ->setParent(
-                    (new AclEntityParentMetadataTransfer())->setEntityName(SpyProductImageSetToProductImage::class),
-                )
-                ->setIsSubEntity(true),
-        );
-        $aclEntityMetadataCollectionTransfer->addAclEntityMetadata(
-            SpyProductImageSetToProductImage::class,
-            (new AclEntityMetadataTransfer())
-                ->setEntityName(SpyProductImageSetToProductImage::class)
-                ->setParent(
-                    (new AclEntityParentMetadataTransfer())->setEntityName(SpyProductImageSet::class),
+                    (new AclEntityParentMetadataTransfer())
+                        ->setEntityName(SpyProductImageSet::class)
+                        ->setConnection(
+                            (new AclEntityParentConnectionMetadataTransfer())
+                                ->setPivotEntityName(SpyProductImageSetToProductImage::class)
+                                ->setReference('fk_product_image')
+                                ->setReferencedColumn('fk_product_image_set'),
+                        ),
                 )
                 ->setIsSubEntity(true),
         );
@@ -317,14 +318,46 @@ class AclQueryDirectorTester extends Actor
             $factory->setConfig($bundleConfig);
         }
         $aclEntityMetadataCollectionTransfer = $aclEntityMetadataCollectionTransfer ?: new AclEntityMetadataCollectionTransfer();
+        $aclEntityConfigTransfer = new AclEntityMetadataConfigTransfer();
+        $aclEntityConfigTransfer->setAclEntityMetadataCollection($aclEntityMetadataCollectionTransfer);
 
         return new AclQueryDirector(
-            new AclEntityRepository(),
-            $factory->createAclDirectorStrategyResolver($aclEntityMetadataCollectionTransfer),
-            $factory->createAclEntityMetadataReader($aclEntityMetadataCollectionTransfer),
-            $factory->createRelationResolver($aclEntityMetadataCollectionTransfer),
-            $this->getAclRoleProviderMock($rolesTransfer),
+            $factory->createAclJoinDirector($aclEntityConfigTransfer),
+            new AclEntityRuleProvider($this->getAclRoleProviderMock($rolesTransfer), new AclEntityRepository()),
+            $factory->createAclQueryScopeResolver($aclEntityConfigTransfer),
+            $factory->createAclEntityMetadataReader($aclEntityConfigTransfer),
+            $factory->createAclQueryExpander($aclEntityConfigTransfer),
             $factory->createAclEntityQueryMerger(),
+            $this->createAclModelDirector($rolesTransfer, $aclEntityMetadataCollectionTransfer, $bundleConfig),
+        );
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\RolesTransfer $rolesTransfer
+     * @param \Generated\Shared\Transfer\AclEntityMetadataCollectionTransfer|null $aclEntityMetadataCollectionTransfer
+     * @param \Spryker\Zed\Kernel\AbstractBundleConfig|null $bundleConfig
+     *
+     * @return \Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclModelDirectorInterface
+     */
+    public function createAclModelDirector(
+        RolesTransfer $rolesTransfer,
+        ?AclEntityMetadataCollectionTransfer $aclEntityMetadataCollectionTransfer = null,
+        ?AbstractBundleConfig $bundleConfig = null
+    ): AclModelDirectorInterface {
+        $factory = new AclEntityPersistenceFactory();
+        if ($bundleConfig) {
+            $factory->setConfig($bundleConfig);
+        }
+        $aclEntityMetadataCollectionTransfer = $aclEntityMetadataCollectionTransfer ?: new AclEntityMetadataCollectionTransfer();
+        $aclEntityMetadataConfigTransfer = new AclEntityMetadataConfigTransfer();
+        $aclEntityMetadataConfigTransfer->setAclEntityMetadataCollection($aclEntityMetadataCollectionTransfer);
+
+        return new AclModelDirector(
+            $factory->createAclEntityMetadataReader($aclEntityMetadataConfigTransfer),
+            new AclEntityRuleProvider($this->getAclRoleProviderMock($rolesTransfer), new AclEntityRepository()),
+            $factory->createAclModelScopeResolver($aclEntityMetadataConfigTransfer),
+            $factory->createAclRelationReader($aclEntityMetadataConfigTransfer),
+            $factory->getPropelServiceContainer(),
         );
     }
 
@@ -553,6 +586,22 @@ class AclQueryDirectorTester extends Actor
     }
 
     /**
+     * @return \Generated\Shared\Transfer\MerchantProductTransfer
+     */
+    public function createMerchantProduct(): MerchantProductTransfer
+    {
+        $merchantTransfer = $this->haveMerchant();
+        $productConcreteTransfer = $this->haveProduct();
+
+        return $this->haveMerchantProduct(
+            [
+                MerchantProductTransfer::ID_MERCHANT => $merchantTransfer->getIdMerchantOrFail(),
+                MerchantProductTransfer::ID_PRODUCT_ABSTRACT => $productConcreteTransfer->getFkProductAbstractOrFail(),
+            ],
+        );
+    }
+
+    /**
      * @param string $string
      *
      * @return string
@@ -565,7 +614,7 @@ class AclQueryDirectorTester extends Actor
     /**
      * @param \Generated\Shared\Transfer\RolesTransfer $rolesTransfer
      *
-     * @return \Spryker\Zed\AclEntity\Persistence\Provider\AclRoleProviderInterface
+     * @return \Spryker\Zed\AclEntity\Persistence\Propel\Provider\AclRoleProviderInterface
      */
     protected function getAclRoleProviderMock(RolesTransfer $rolesTransfer): AclRoleProviderInterface
     {
@@ -577,67 +626,5 @@ class AclQueryDirectorTester extends Actor
                 'cache' => null,
             ],
         );
-    }
-
-    /**
-     * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface
-     */
-    public function getAclEntityMetadataConfigExpander(): AclEntityMetadataConfigExpanderPluginInterface
-    {
-        return new class implements AclEntityMetadataConfigExpanderPluginInterface
-        {
-            /**
-             * @param \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
-             *
-             * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
-             */
-            public function expand(
-                AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer
-            ): AclEntityMetadataConfigTransfer {
-                if ($aclEntityMetadataConfigTransfer->getAclEntityMetadataCollection()) {
-                    $aclEntityMetadataConfigTransfer->setAclEntityMetadataCollection(
-                        new AclEntityMetadataCollectionTransfer(),
-                    );
-                }
-                $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollection()->addAclEntityMetadata(
-                    SpyMerchantCategory::class,
-                    (new AclEntityMetadataTransfer())
-                        ->setEntityName(SpyMerchantCategory::class)
-                        ->setParent(
-                            (new AclEntityParentMetadataTransfer())->setEntityName(SpyMerchant::class),
-                        )
-                );
-                $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollection()->addAclEntityMetadata(
-                    SpyProductOffer::class,
-                    (new AclEntityMetadataTransfer())
-                        ->setEntityName(SpyProductOffer::class)
-                        ->setParent(
-                            (new AclEntityParentMetadataTransfer())->setEntityName(SpyMerchant::class),
-                        )
-                );
-                $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollection()->addAclEntityMetadata(
-                    SpyProductAbstract::class,
-                    (new AclEntityMetadataTransfer())
-                        ->setEntityName(SpyProductAbstract::class)
-                        ->setParent(
-                            (new AclEntityParentMetadataTransfer())->setEntityName(SpyMerchantProductAbstract::class),
-                        )
-                );
-                $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollection()->addAclEntityMetadata(
-                    SpyMerchantProductAbstract::class,
-                    (new AclEntityMetadataTransfer())
-                        ->setEntityName(SpyMerchantProductAbstract::class)
-                        ->setParent(
-                            (new AclEntityParentMetadataTransfer())->setEntityName(SpyMerchant::class),
-                        )
-                );
-                $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollection()->addAclEntityMetadata(
-                    SpyMerchant::class,
-                    (new AclEntityMetadataTransfer())->setEntityName(SpyMerchant::class),
-                );
-
-                return $aclEntityMetadataConfigTransfer;
-            }
-        };
     }
 }
