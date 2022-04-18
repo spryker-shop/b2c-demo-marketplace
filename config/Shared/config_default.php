@@ -213,6 +213,10 @@ $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS] = [
     ],
 ];
 
+// >> URL Signer
+
+$config[HttpConstants::URI_SIGNER_SECRET_KEY] = getenv('SPRYKER_ZED_REQUEST_TOKEN') ?: null;
+
 // ACL: Special rules for specific users
 $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
     'yves_system' => [
@@ -449,10 +453,10 @@ foreach ($rabbitConnections as $key => $connection) {
 
 // >>> SCHEDULER
 $config[SchedulerConstants::ENABLED_SCHEDULERS] = [
-    SchedulerConfig::SCHEDULER_JENKINS,
+    SchedulerConfig::PYZ_SCHEDULER_JENKINS,
 ];
 $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
-    SchedulerConfig::SCHEDULER_JENKINS => [
+    SchedulerConfig::PYZ_SCHEDULER_JENKINS => [
         SchedulerJenkinsConfig::SCHEDULER_JENKINS_BASE_URL => sprintf(
             '%s://%s:%s/',
             getenv('SPRYKER_SCHEDULER_PROTOCOL') ?: 'http',
