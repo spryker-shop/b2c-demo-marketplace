@@ -46,8 +46,8 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
-        $container = $this->extendPyzPaymentMethodHandler($container);
-        $container = $this->extendSubFormPluginCollection($container);
+        $container = $this->pyzExtendPaymentMethodHandler($container);
+        $container = $this->pyzExtendSubFormPluginCollection($container);
 
         return $container;
     }
@@ -115,7 +115,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
      *
      * @return \Spryker\Yves\Kernel\Container
      */
-    protected function extendPyzPaymentMethodHandler(Container $container): Container
+    protected function pyzExtendPaymentMethodHandler(Container $container): Container
     {
         $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandler) {
             $paymentMethodHandler->add(new NopaymentHandlerPlugin(), NopaymentConfig::PAYMENT_PROVIDER_NAME);
@@ -135,7 +135,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
      *
      * @return \Spryker\Yves\Kernel\Container
      */
-    protected function extendSubFormPluginCollection(Container $container): Container
+    protected function pyzExtendSubFormPluginCollection(Container $container): Container
     {
         $container->extend(static::PAYMENT_SUB_FORMS, function (SubFormPluginCollection $paymentSubFormPluginCollection) {
             $paymentSubFormPluginCollection->add(new DummyMarketplacePaymentInvoiceSubFormPlugin());

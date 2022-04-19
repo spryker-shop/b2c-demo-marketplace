@@ -32,26 +32,26 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
      */
-    public function getCombinedPriceProductOfferDataImport(): DataImporterInterface
+    public function pyzGetCombinedPriceProductOfferDataImport(): DataImporterInterface
     {
-        $dataImporter = $this->getConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getCombinedPriceProductOfferDataImporterConfiguration()
+        $dataImporter = $this->pyzGetConditionalCsvDataImporterFromConfig(
+            $this->getConfig()->pyzGetCombinedPriceProductOfferDataImporterConfiguration()
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
         $dataSetStepBroker
-            ->addStep($this->createCombinedProductOfferReferenceToProductOfferDataStep())
-            ->addStep($this->createCombinedProductOfferToIdProductStep())
-            ->addStep($this->createCombinedPriceTypeToIdPriceTypeStep())
-            ->addStep($this->createCombinedPriceProductWriterStep())
-            ->addStep($this->createCombinedStoreToIdStoreStep())
-            ->addStep($this->createCombinedCurrencyToIdCurrencyStep())
-            ->addStep($this->createCombinedPreparePriceDataStep())
-            ->addStep($this->createCombinedPriceProductStoreWriterStep())
+            ->addStep($this->pyzCreateCombinedProductOfferReferenceToProductOfferDataStep())
+            ->addStep($this->pyzCreateCombinedProductOfferToIdProductStep())
+            ->addStep($this->pyzCreateCombinedPriceTypeToIdPriceTypeStep())
+            ->addStep($this->pyzCreateCombinedPriceProductWriterStep())
+            ->addStep($this->pyzCreateCombinedStoreToIdStoreStep())
+            ->addStep($this->pyzCreateCombinedCurrencyToIdCurrencyStep())
+            ->addStep($this->pyzCreateCombinedPreparePriceDataStep())
+            ->addStep($this->pyzCreateCombinedPriceProductStoreWriterStep())
             ->addStep($this->createPriceProductOfferWriterStep());
 
         $dataImporter
-            ->setDataSetCondition($this->createCombinedPriceProductOfferMandatoryColumnCondition())
+            ->setDataSetCondition($this->pyzCreateCombinedPriceProductOfferMandatoryColumnCondition())
             ->addDataSetStepBroker($dataSetStepBroker);
 
         return $dataImporter;
@@ -62,12 +62,12 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function getConditionalCsvDataImporterFromConfig(
+    public function pyzGetConditionalCsvDataImporterFromConfig(
         DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
     ): DataImporterConditional {
         $csvReader = $this->createCsvReaderFromConfig($dataImporterConfigurationTransfer->getReaderConfiguration());
 
-        return $this->createDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
+        return $this->pyzCreateDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
     }
 
     /**
@@ -76,7 +76,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function createDataImporterConditional(
+    public function pyzCreateDataImporterConditional(
         string $importType,
         DataReaderInterface $reader
     ): DataImporterConditional {
@@ -86,7 +86,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedProductOfferReferenceToProductOfferDataStep(): DataImportStepInterface
+    public function pyzCreateCombinedProductOfferReferenceToProductOfferDataStep(): DataImportStepInterface
     {
         return new CombinedProductOfferReferenceToProductOfferDataStep();
     }
@@ -94,7 +94,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedProductOfferToIdProductStep(): DataImportStepInterface
+    public function pyzCreateCombinedProductOfferToIdProductStep(): DataImportStepInterface
     {
         return new CombinedProductOfferToIdProductStep();
     }
@@ -102,7 +102,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedPriceTypeToIdPriceTypeStep(): DataImportStepInterface
+    public function pyzCreateCombinedPriceTypeToIdPriceTypeStep(): DataImportStepInterface
     {
         return new CombinedPriceTypeToIdPriceTypeStep();
     }
@@ -110,7 +110,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedPriceProductWriterStep(): DataImportStepInterface
+    public function pyzCreateCombinedPriceProductWriterStep(): DataImportStepInterface
     {
         return new CombinedPriceProductWriterStep();
     }
@@ -118,7 +118,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedStoreToIdStoreStep(): DataImportStepInterface
+    public function pyzCreateCombinedStoreToIdStoreStep(): DataImportStepInterface
     {
         return new CombinedStoreToIdStoreStep();
     }
@@ -126,7 +126,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedCurrencyToIdCurrencyStep(): DataImportStepInterface
+    public function pyzCreateCombinedCurrencyToIdCurrencyStep(): DataImportStepInterface
     {
         return new CombinedCurrencyToIdCurrencyStep();
     }
@@ -134,7 +134,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedPriceProductStoreWriterStep(): DataImportStepInterface
+    public function pyzCreateCombinedPriceProductStoreWriterStep(): DataImportStepInterface
     {
         return new CombinedPriceProductStoreWriterStep();
     }
@@ -142,7 +142,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createCombinedPreparePriceDataStep(): DataImportStepInterface
+    public function pyzCreateCombinedPreparePriceDataStep(): DataImportStepInterface
     {
         return new CombinedPreparePriceDataStep($this->getPriceProductFacade(), $this->getUtilEncodingService());
     }
@@ -150,7 +150,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
      */
-    public function createCombinedPriceProductOfferMandatoryColumnCondition(): DataSetConditionInterface
+    public function pyzCreateCombinedPriceProductOfferMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedPriceProductOfferMandatoryColumnCondition();
     }

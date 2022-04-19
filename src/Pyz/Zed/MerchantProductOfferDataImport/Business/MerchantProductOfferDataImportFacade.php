@@ -21,11 +21,11 @@ class MerchantProductOfferDataImportFacade extends SprykerMerchantProductOfferDa
      *
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
-    public function importCombinedMerchantProductOfferData(
+    public function pyzImportCombinedMerchantProductOfferData(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer {
         return $this->getFactory()
-            ->getCombinedMerchantProductOfferDataImporter()
+            ->pyzGetCombinedMerchantProductOfferDataImporter()
             ->import($dataImporterConfigurationTransfer);
     }
 
@@ -34,11 +34,11 @@ class MerchantProductOfferDataImportFacade extends SprykerMerchantProductOfferDa
      *
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
-    public function importCombinedMerchantProductOfferStoreData(
+    public function pyzImportCombinedMerchantProductOfferStoreData(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer {
         return $this->getFactory()
-            ->getCombinedMerchantProductOfferStoreDataImporter()
+            ->pyzGetCombinedMerchantProductOfferStoreDataImporter()
             ->import($dataImporterConfigurationTransfer);
     }
 }

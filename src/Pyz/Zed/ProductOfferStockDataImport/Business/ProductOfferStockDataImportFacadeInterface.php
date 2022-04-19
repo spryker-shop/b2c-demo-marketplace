@@ -18,7 +18,7 @@ interface ProductOfferStockDataImportFacadeInterface extends SprykerProductOffer
      *
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
-    public function importCombinedProductOfferStock(
+    public function pyzImportCombinedProductOfferStock(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
     ): DataImporterReportTransfer;
 }

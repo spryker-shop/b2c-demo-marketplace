@@ -15,7 +15,7 @@ use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
 
 class AclConfig extends SprykerAclConfig
 {
-    protected const RULE_TYPE_DENY = 'deny';
+    protected const PYZ_RULE_TYPE_DENY = 'deny';
 
     /**
      * @return array
@@ -23,7 +23,7 @@ class AclConfig extends SprykerAclConfig
     public function getInstallerRules(): array
     {
         $installerRules = parent::getInstallerRules();
-        $installerRules = $this->addMerchantPortalInstallerRules($installerRules);
+        $installerRules = $this->pyzAddMerchantPortalInstallerRules($installerRules);
 
         return $installerRules;
     }
@@ -56,7 +56,7 @@ class AclConfig extends SprykerAclConfig
      *
      * @return string[][]
      */
-    protected function addMerchantPortalInstallerRules(array $installerRules): array
+    protected function pyzAddMerchantPortalInstallerRules(array $installerRules): array
     {
         $bundleNames = [
             'dashboard-merchant-portal-gui',
@@ -75,7 +75,7 @@ class AclConfig extends SprykerAclConfig
                 'bundle' => $bundleName,
                 'controller' => AclConstants::VALIDATOR_WILDCARD,
                 'action' => AclConstants::VALIDATOR_WILDCARD,
-                'type' => static::RULE_TYPE_DENY,
+                'type' => static::PYZ_RULE_TYPE_DENY,
                 'role' => AclConstants::ROOT_ROLE,
             ];
         }
@@ -88,13 +88,13 @@ class AclConfig extends SprykerAclConfig
      */
     public function getInstallerRoles(): array
     {
-        return $this->addInstallerRootRole();
+        return $this->pyzAddInstallerRootRole();
     }
 
     /**
      * @return mixed[]
      */
-    protected function addInstallerRootRole(): array
+    protected function pyzAddInstallerRootRole(): array
     {
         $entityRule = new AclEntityRuleTransfer();
         $entityRule->setEntity('*')

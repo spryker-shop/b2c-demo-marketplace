@@ -31,6 +31,6 @@ class ProductMerchantPortalGuiToProductApprovalFacadeBridge implements ProductMe
      */
     public function getApplicableApprovalStatuses(string $currentStatus): array
     {
-        return $this->productMerchantPortalGuiConfig->getApplicableApprovalStatuses($currentStatus);
+        return $this->productMerchantPortalGuiConfig->pyzGetApplicableApprovalStatuses($currentStatus);
     }
 }
