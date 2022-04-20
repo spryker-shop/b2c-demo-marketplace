@@ -66,7 +66,7 @@ class ProductAbstractApprovalController extends SprykerProductAbstractApprovalCo
             return $this->redirectResponse(static::PYZ_URL_PRODUCTS);
         }
 
-        $applicableApprovalStatuses = $this->getConfig()->getPyzApplicableApprovalStatuses($productAbstractTransfer->getApprovalStatus() ?: static::PYZ_STATUS_DRAFT);
+        $applicableApprovalStatuses = $this->getFactory()->getConfig()->getPyzApplicableApprovalStatuses($productAbstractTransfer->getApprovalStatus() ?: static::PYZ_STATUS_DRAFT);
 
         if (!in_array($approvalStatus, $applicableApprovalStatuses, true)) {
             $this->addErrorMessage(static::PYZ_MESSAGE_PRODUCT_ABSTRACT_APPROVAL_STATUS_WAS_NOT_UPDATED);
