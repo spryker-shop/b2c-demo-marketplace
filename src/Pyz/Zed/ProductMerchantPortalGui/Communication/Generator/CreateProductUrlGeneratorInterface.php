@@ -1,8 +1,13 @@
 <?php
 
+/**
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
 namespace Pyz\Zed\ProductMerchantPortalGui\Communication\Generator;
 
-use \Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface as SprykerCreateProductUrlGeneratorInterface;
+use Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface as SprykerCreateProductUrlGeneratorInterface;
 
 interface CreateProductUrlGeneratorInterface extends SprykerCreateProductUrlGeneratorInterface
 {

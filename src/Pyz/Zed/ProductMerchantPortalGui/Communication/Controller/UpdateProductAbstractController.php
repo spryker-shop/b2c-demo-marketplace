@@ -75,7 +75,7 @@ class UpdateProductAbstractController extends SprykerUpdateProductAbstractContro
                         ->getProductCategoryTree(),
                     'urlAddProductConcrete' => static::URL_ADD_PRODUCT_CONCRETE,
                     'urlUpdateApprovalStatus' => $this->getFactory()
-                        ->createCreateProductUrlGenerator()
+                        ->createPyzCreateProductUrlGenerator()
                         ->getPyzUpdateProductAbstractApprovalStatusUrl($productAbstractTransfer->getApprovalStatus(), $productAbstractTransfer->getIdProductAbstractOrFail()),
                 ],
             )->getContent(),

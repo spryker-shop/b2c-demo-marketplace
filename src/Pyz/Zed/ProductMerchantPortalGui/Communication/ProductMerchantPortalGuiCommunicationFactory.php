@@ -7,7 +7,8 @@
 
 namespace Pyz\Zed\ProductMerchantPortalGui\Communication;
 
-use Pyz\Zed\ProductMerchantPortalGui\Dependency\Facade\ProductMerchantPortalGuiToProductApprovalFacadeBridge;
+use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGenerator;
+use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface;
 use Spryker\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiCommunicationFactory as SprykerProductMerchantPortalGuiCommunicationFactory;
 
 /**
@@ -15,4 +16,11 @@ use Spryker\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiC
  */
 class ProductMerchantPortalGuiCommunicationFactory extends SprykerProductMerchantPortalGuiCommunicationFactory
 {
+    /**
+     * @return \Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface
+     */
+    public function createPyzCreateProductUrlGenerator(): CreateProductUrlGeneratorInterface
+    {
+        return new CreateProductUrlGenerator();
+    }
 }
