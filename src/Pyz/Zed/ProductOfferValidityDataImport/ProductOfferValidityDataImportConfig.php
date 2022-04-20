@@ -17,7 +17,7 @@ class ProductOfferValidityDataImportConfig extends SprykerProductOfferValidityDa
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
-    public function pyzGetCombinedProductOfferValidityDataImporterConfiguration(): DataImporterConfigurationTransfer
+    public function getPyzCombinedProductOfferValidityDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         $moduleDataImportDirectory = $this->getDataImportRootPath() . 'common' . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR;
 

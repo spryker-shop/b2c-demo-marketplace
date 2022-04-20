@@ -34,6 +34,6 @@ class CombinedMerchantProductOfferDataImportPlugin extends AbstractPlugin implem
      */
     public function import(?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null): DataImporterReportTransfer
     {
-        return $this->getFacade()->pyzImportCombinedMerchantProductOfferData($dataImporterConfigurationTransfer);
+        return $this->getFacade()->importPyzCombinedMerchantProductOfferData($dataImporterConfigurationTransfer);
     }
 }

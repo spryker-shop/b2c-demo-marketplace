@@ -21,11 +21,11 @@ class PriceProductOfferDataImportFacade extends SprykerPriceProductOfferDataImpo
      *
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
-    public function pyzImportCombinedPriceProductOfferData(
+    public function importPyzCombinedPriceProductOfferData(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer {
         return $this->getFactory()
-            ->pyzGetCombinedPriceProductOfferDataImport()
+            ->getPyzCombinedPriceProductOfferDataImport()
             ->import($dataImporterConfigurationTransfer);
     }
 }

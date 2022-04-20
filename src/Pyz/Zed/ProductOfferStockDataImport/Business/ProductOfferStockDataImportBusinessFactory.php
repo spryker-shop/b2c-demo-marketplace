@@ -27,20 +27,20 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
      */
-    public function pyzGetCombinedProductOfferStockDataImporter(): DataImporterInterface
+    public function getPyzCombinedProductOfferStockDataImporter(): DataImporterInterface
     {
-        $dataImporter = $this->pyzGetConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->pyzGetCombinedProductOfferStockDataImporterConfiguration()
+        $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
+            $this->getConfig()->getPyzCombinedProductOfferStockDataImporterConfiguration()
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
         $dataSetStepBroker
-            ->addStep($this->pyzCreateCombinedProductOfferReferenceToIdProductOfferStep())
-            ->addStep($this->pyzCreateCombinedStockNameToIdStockStep())
-            ->addStep($this->pyzCreateCombinedProductOfferStockWriterStep());
+            ->addStep($this->createPyzCombinedProductOfferReferenceToIdProductOfferStep())
+            ->addStep($this->createPyzCombinedStockNameToIdStockStep())
+            ->addStep($this->createPyzCombinedProductOfferStockWriterStep());
 
         $dataImporter
-            ->setDataSetCondition($this->pyzCreateCombinedProductOfferStockMandatoryColumnCondition())
+            ->setDataSetCondition($this->createPyzCombinedProductOfferStockMandatoryColumnCondition())
             ->addDataSetStepBroker($dataSetStepBroker);
 
         return $dataImporter;
@@ -51,12 +51,12 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function pyzGetConditionalCsvDataImporterFromConfig(
+    public function getPyzConditionalCsvDataImporterFromConfig(
         DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
     ): DataImporterConditional {
         $csvReader = $this->createCsvReaderFromConfig($dataImporterConfigurationTransfer->getReaderConfiguration());
 
-        return $this->pyzCreateDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
+        return $this->createPyzDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
     }
 
     /**
@@ -65,7 +65,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function pyzCreateDataImporterConditional(
+    public function createPyzDataImporterConditional(
         string $importType,
         DataReaderInterface $reader
     ): DataImporterConditional {
@@ -75,7 +75,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function pyzCreateCombinedProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
+    public function createPyzCombinedProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
     {
         return new CombinedProductOfferReferenceToIdProductOfferStep(
             $this->getProductOfferFacade()
@@ -85,7 +85,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function pyzCreateCombinedStockNameToIdStockStep(): DataImportStepInterface
+    public function createPyzCombinedStockNameToIdStockStep(): DataImportStepInterface
     {
         return new CombinedStockNameToIdStockStep();
     }
@@ -93,7 +93,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function pyzCreateCombinedProductOfferStockWriterStep(): DataImportStepInterface
+    public function createPyzCombinedProductOfferStockWriterStep(): DataImportStepInterface
     {
         return new CombinedProductOfferStockWriterStep();
     }
@@ -101,7 +101,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     /**
      * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
      */
-    public function pyzCreateCombinedProductOfferStockMandatoryColumnCondition(): DataSetConditionInterface
+    public function createPyzCombinedProductOfferStockMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedProductOfferStockMandatoryColumnCondition();
     }

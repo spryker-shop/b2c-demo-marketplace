@@ -17,7 +17,7 @@ class PriceProductOfferDataImportConfig extends SprykerPriceProductOfferDataImpo
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
-    public function pyzGetCombinedPriceProductOfferDataImporterConfiguration(): DataImporterConfigurationTransfer
+    public function getPyzCombinedPriceProductOfferDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         $moduleDataImportDirectory = $this->getDataImportRootPath() . 'common' . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR;
 

@@ -35,6 +35,6 @@ class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implement
     public function import(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer {
-        return $this->getFacade()->pyzImportCombinedProductOfferStock($dataImporterConfigurationTransfer);
+        return $this->getFacade()->importPyzCombinedProductOfferStock($dataImporterConfigurationTransfer);
     }
 }

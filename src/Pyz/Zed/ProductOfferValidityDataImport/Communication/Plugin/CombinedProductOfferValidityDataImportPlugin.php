@@ -35,6 +35,6 @@ class CombinedProductOfferValidityDataImportPlugin extends AbstractPlugin implem
     public function import(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer {
-        return $this->getFacade()->pyzImportCombinedProductOfferValidity($dataImporterConfigurationTransfer);
+        return $this->getFacade()->importPyzCombinedProductOfferValidity($dataImporterConfigurationTransfer);
     }
 }

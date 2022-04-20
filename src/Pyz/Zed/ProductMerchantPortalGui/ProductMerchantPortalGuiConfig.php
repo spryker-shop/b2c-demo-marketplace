@@ -17,15 +17,15 @@ class ProductMerchantPortalGuiConfig extends SprykerProductMerchantPortalGuiConf
      *
      * @return array<string>
      */
-    public function pyzGetApplicableApprovalStatuses(string $currentStatus): array
+    public function getPyzApplicableApprovalStatuses(string $currentStatus): array
     {
-        return $this->pyzGetStatusTree()[$currentStatus];
+        return $this->getPyzStatusTree()[$currentStatus];
     }
 
     /**
      * @return array<string, array<string>>
      */
-    protected function pyzGetStatusTree(): array
+    protected function getPyzStatusTree(): array
     {
         return [
             SharedProductApprovalConfig::STATUS_WAITING_FOR_APPROVAL => [

@@ -64,7 +64,7 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
         $itemTransfer = (new ItemTransfer())
             ->setIdSalesOrderItem($orderItem->getIdSalesOrderItem());
 
-        $this->getFactory()->pyzGetSalesReturnFacade()->setOrderItemRemunerationAmount($itemTransfer);
+        $this->getFactory()->getPyzSalesReturnFacade()->setOrderItemRemunerationAmount($itemTransfer);
 
         return [];
     }

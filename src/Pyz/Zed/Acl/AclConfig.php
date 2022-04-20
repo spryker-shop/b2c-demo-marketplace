@@ -23,7 +23,7 @@ class AclConfig extends SprykerAclConfig
     public function getInstallerRules(): array
     {
         $installerRules = parent::getInstallerRules();
-        $installerRules = $this->pyzAddMerchantPortalInstallerRules($installerRules);
+        $installerRules = $this->addPyzMerchantPortalInstallerRules($installerRules);
 
         return $installerRules;
     }
@@ -56,7 +56,7 @@ class AclConfig extends SprykerAclConfig
      *
      * @return string[][]
      */
-    protected function pyzAddMerchantPortalInstallerRules(array $installerRules): array
+    protected function addPyzMerchantPortalInstallerRules(array $installerRules): array
     {
         $bundleNames = [
             'dashboard-merchant-portal-gui',
@@ -88,13 +88,13 @@ class AclConfig extends SprykerAclConfig
      */
     public function getInstallerRoles(): array
     {
-        return $this->pyzAddInstallerRootRole();
+        return $this->addPyzInstallerRootRole();
     }
 
     /**
      * @return mixed[]
      */
-    protected function pyzAddInstallerRootRole(): array
+    protected function addPyzInstallerRootRole(): array
     {
         $entityRule = new AclEntityRuleTransfer();
         $entityRule->setEntity('*')
