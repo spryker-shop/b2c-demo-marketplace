@@ -31,7 +31,7 @@ class CreateProductUrlGenerator extends SprykerCreateProductUrlGenerator
      *
      * @return string
      */
-    public function getUpdateProductAbstractApprovalStatusUrl(string $status, int $idProductAbstract): string
+    public function getPyzUpdateProductAbstractApprovalStatusUrl(string $status, int $idProductAbstract): string
     {
         $getParams = '';
         if ($status === static::PYZ_STATUS_DRAFT) {
