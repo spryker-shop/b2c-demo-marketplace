@@ -43,7 +43,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
             ->addStep($this->createPyzCombinedConcreteSkuValidationStep())
             ->addStep($this->createPyzCombinedMerchantSkuValidationStep())
             ->addStep($this->createPyzCombinedApprovalStatusValidationStep())
-            ->addStep($this->ceatePyzCombinedMerchantProductOfferWriterStep());
+            ->addStep($this->createPyzCombinedMerchantProductOfferWriterStep());
 
         $dataImporter
             ->setDataSetCondition($this->createPyzCombinedMerchantProductOfferMandatoryColumnCondition())
@@ -127,7 +127,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function ceatePyzCombinedMerchantProductOfferWriterStep(): DataImportStepInterface
+    public function createPyzCombinedMerchantProductOfferWriterStep(): DataImportStepInterface
     {
         return new CombinedMerchantProductOfferWriterStep($this->getEventFacade());
     }

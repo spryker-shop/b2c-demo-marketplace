@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
- * Use of this software requires acceptance of the Spryker Marketplace License Agreement. See LICENSE file.
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\ProductMerchantPortalGui\Communication\Controller;
 
+use Spryker\Zed\ProductMerchantPortalGui\Communication\Controller\ProductAbstractApprovalController as SprykerProductAbstractApprovalController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Spryker\Zed\ProductMerchantPortalGui\Communication\Controller\ProductAbstractApprovalController as SprykerProductAbstractApprovalController;
 
 /**
  * @method \Pyz\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiCommunicationFactory getFactory()
