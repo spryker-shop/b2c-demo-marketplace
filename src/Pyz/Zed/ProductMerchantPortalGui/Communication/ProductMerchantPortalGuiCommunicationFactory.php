@@ -17,7 +17,7 @@ use Spryker\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiC
 class ProductMerchantPortalGuiCommunicationFactory extends SprykerProductMerchantPortalGuiCommunicationFactory
 {
     /**
-     * @return \Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface
+     * @return \Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface;
      */
     public function createPyzCreateProductUrlGenerator(): CreateProductUrlGeneratorInterface
     {

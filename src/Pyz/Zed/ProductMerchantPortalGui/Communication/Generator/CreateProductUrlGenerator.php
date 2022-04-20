@@ -9,7 +9,7 @@ namespace Pyz\Zed\ProductMerchantPortalGui\Communication\Generator;
 
 use Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGenerator as SprykerCreateProductUrlGenerator;
 
-class CreateProductUrlGenerator extends SprykerCreateProductUrlGenerator
+class CreateProductUrlGenerator extends SprykerCreateProductUrlGenerator implements CreateProductUrlGeneratorInterface
 {
     /**
      * @uses \Spryker\Shared\ProductApproval\ProductApprovalConfig::STATUS_WAITING_FOR_APPROVAL
