@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6886921cfe6f642613bb2abc6f24bac6",
+    "content-hash": "101457cf192ca8b1a1b4cdf7eb0023c5",
     "packages": [
         {
             "name": "brick/math",
@@ -56996,30 +56996,30 @@
         },
         {
             "name": "spryker/architecture-sniffer",
-            "version": "0.4.2",
+            "version": "0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/architecture-sniffer.git",
-                "reference": "db5f56a25e9903c0409fd3053e8e4bda4af91977"
+                "reference": "69857a799a9fd75f30f6de6ec9d30423b9d071b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/architecture-sniffer/zipball/db5f56a25e9903c0409fd3053e8e4bda4af91977",
-                "reference": "db5f56a25e9903c0409fd3053e8e4bda4af91977",
+                "url": "https://api.github.com/repos/spryker/architecture-sniffer/zipball/69857a799a9fd75f30f6de6ec9d30423b9d071b4",
+                "reference": "69857a799a9fd75f30f6de6ec9d30423b9d071b4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "phpmd/phpmd": "^2.4",
-                "roave/better-reflection": "*",
-                "symfony/finder": "*",
-                "zendframework/zend-config": "*",
-                "zendframework/zend-filter": "*"
+                "laminas/laminas-config": "^2.5.1 || ^3.1.0",
+                "laminas/laminas-filter": "^2.5.1",
+                "ondrejmirtes/better-reflection": "^4.3.0",
+                "php": ">=7.3",
+                "phpmd/phpmd": "^2.10.0",
+                "symfony/finder": "^3.4.0 || ^4.0.0 || ^5.0.0"
             },
             "require-dev": {
-                "codeception/codeception": "^2.4",
-                "phpstan/phpstan": "^0.11.1",
-                "phpunit/phpunit": "~5.2",
+                "codeception/codeception": "^4.1",
+                "codeception/module-asserts": "^1.3",
+                "phpstan/phpstan": "^1.0.0",
                 "spryker/code-sniffer": "*",
                 "symfony/var-dumper": "^4.0"
             },
@@ -57054,7 +57054,7 @@
                 "issues": "https://github.com/spryker/architecture-sniffer/issues",
                 "source": "https://github.com/spryker/architecture-sniffer"
             },
-            "time": "2019-03-14T14:56:25+00:00"
+            "time": "2022-02-14T12:08:27+00:00"
         },
         {
             "name": "spryker/code-generator",
