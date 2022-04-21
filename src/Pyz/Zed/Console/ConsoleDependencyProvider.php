@@ -63,6 +63,8 @@ use Spryker\Zed\Maintenance\Communication\Console\MaintenanceDisableConsole;
 use Spryker\Zed\Maintenance\Communication\Console\MaintenanceEnableConsole;
 use Spryker\Zed\MerchantOms\Communication\Console\TriggerEventFromCsvFileConsole;
 use Spryker\Zed\MerchantProductApprovalDataImport\MerchantProductApprovalDataImportConfig;
+use Spryker\Zed\MessageBroker\Communication\Plugin\Console\MessageBrokerDebugConsole;
+use Spryker\Zed\MessageBroker\Communication\Plugin\Console\MessageBrokerWorkerConsole;
 use Spryker\Zed\Monitoring\Communication\Plugin\Console\MonitoringConsolePlugin;
 use Spryker\Zed\Oauth\Communication\Console\OauthTokenConsole;
 use Spryker\Zed\Oms\Communication\Console\CheckConditionConsole as OmsCheckConditionConsole;
@@ -363,6 +365,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
             new MerchantPortalBuildFrontendConsole(),
             new MerchantPortalInstallDependenciesConsole(),
+            new MessageBrokerWorkerConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
@@ -418,6 +421,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             $commands[] = new ComposerConstraintConsole();
 
             $commands[] = new ModuleInstallerConsole();
+
+            $commands[] = new MessageBrokerDebugConsole();
 
             if (class_exists(SecurityCheckerCommand::class)) {
                 $commands[] = new SecurityCheckerCommand();

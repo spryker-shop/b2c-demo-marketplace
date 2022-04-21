@@ -8,6 +8,7 @@
 namespace Pyz\Client\RabbitMq;
 
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+use Spryker\Shared\AssetStorage\AssetStorageConfig;
 use Spryker\Shared\AvailabilityStorage\AvailabilityStorageConfig;
 use Spryker\Shared\AvailabilityStorage\AvailabilityStorageConstants;
 use Spryker\Shared\CategoryPageSearch\CategoryPageSearchConstants;
@@ -133,6 +134,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             PriceProductOfferStorageConfig::PRICE_PRODUCT_OFFER_OFFER_SYNC_STORAGE_QUEUE,
             ProductOfferAvailabilityStorageConfig::PRODUCT_OFFER_AVAILABILITY_SYNC_STORAGE_QUEUE,
             MerchantOpeningHoursStorageConfig::MERCHANT_OPENING_HOURS_SYNC_STORAGE_QUEUE,
+            AssetStorageConfig::ASSET_SYNC_STORAGE_QUEUE,
         ];
     }
 
