@@ -16,7 +16,7 @@ class MerchantSalesOrderCommunicationFactory extends AbstractCommunicationFactor
     /**
      * @return \Spryker\Zed\MerchantSalesOrder\Dependency\Facade\MerchantSalesOrderToSalesFacadeInterface
      */
-    public function getSalesFacade(): MerchantSalesOrderToSalesFacadeInterface
+    public function getPyzSalesFacade(): MerchantSalesOrderToSalesFacadeInterface
     {
         return $this->getProvidedDependency(MerchantSalesOrderDependencyProvider::FACADE_SALES);
     }

@@ -7,11 +7,9 @@
 
 namespace Pyz\Zed\ProductMerchantPortalGui\Communication;
 
-use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGenerator;
-use Pyz\Zed\ProductMerchantPortalGui\Dependency\Facade\ProductMerchantPortalGuiToProductApprovalFacadeBridge;
-use Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface;
+use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreatePyzPyzProductUrlGenerator;
+use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreatePyzProductUrlGeneratorInterface;
 use Spryker\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiCommunicationFactory as SprykerProductMerchantPortalGuiCommunicationFactory;
-use Spryker\Zed\ProductMerchantPortalGui\Dependency\Facade\ProductMerchantPortalGuiToProductApprovalFacadeInterface;
 
 /**
  * @method \Pyz\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiConfig getConfig()
@@ -19,18 +17,10 @@ use Spryker\Zed\ProductMerchantPortalGui\Dependency\Facade\ProductMerchantPortal
 class ProductMerchantPortalGuiCommunicationFactory extends SprykerProductMerchantPortalGuiCommunicationFactory
 {
     /**
-     * @return \Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface
+     * @return \Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreatePyzProductUrlGeneratorInterface;
      */
-    public function createCreateProductUrlGenerator(): CreateProductUrlGeneratorInterface
+    public function createPyzCreateProductUrlGenerator(): CreatePyzProductUrlGeneratorInterface
     {
-        return new CreateProductUrlGenerator();
-    }
-
-    /**
-     * @return \Spryker\Zed\ProductMerchantPortalGui\Dependency\Facade\ProductMerchantPortalGuiToProductApprovalFacadeInterface
-     */
-    public function getProductApprovalFacade(): ProductMerchantPortalGuiToProductApprovalFacadeInterface
-    {
-        return new ProductMerchantPortalGuiToProductApprovalFacadeBridge($this->getConfig());
+        return new CreatePyzPyzProductUrlGenerator();
     }
 }

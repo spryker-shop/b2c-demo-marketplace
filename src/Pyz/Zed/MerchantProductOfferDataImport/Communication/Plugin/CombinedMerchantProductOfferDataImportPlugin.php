@@ -24,7 +24,7 @@ class CombinedMerchantProductOfferDataImportPlugin extends AbstractPlugin implem
      */
     public function getImportType(): string
     {
-        return MerchantProductOfferDataImportConfig::IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER;
+        return MerchantProductOfferDataImportConfig::PYZ_IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER;
     }
 
     /**
@@ -34,6 +34,6 @@ class CombinedMerchantProductOfferDataImportPlugin extends AbstractPlugin implem
      */
     public function import(?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null): DataImporterReportTransfer
     {
-        return $this->getFacade()->importCombinedMerchantProductOfferData($dataImporterConfigurationTransfer);
+        return $this->getFacade()->importPyzCombinedMerchantProductOfferData($dataImporterConfigurationTransfer);
     }
 }

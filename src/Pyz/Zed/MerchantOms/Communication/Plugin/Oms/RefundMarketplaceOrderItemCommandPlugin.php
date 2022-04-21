@@ -9,13 +9,13 @@ namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
 
 class RefundMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
 {
-    protected const EVENT_REFUND = 'refund';
+    protected const PYZ_EVENT_REFUND = 'refund';
 
     /**
      * @return string
      */
     public function getEventName(): string
     {
-        return static::EVENT_REFUND;
+        return static::PYZ_EVENT_REFUND;
     }
 }

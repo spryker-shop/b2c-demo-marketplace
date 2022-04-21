@@ -17,15 +17,15 @@ class ProductMerchantPortalGuiConfig extends SprykerProductMerchantPortalGuiConf
      *
      * @return array<string>
      */
-    public function getApplicableApprovalStatuses(string $currentStatus): array
+    public function getPyzApplicableApprovalStatuses(string $currentStatus): array
     {
-        return $this->getStatusTree()[$currentStatus];
+        return $this->getPyzStatusTree()[$currentStatus];
     }
 
     /**
      * @return array<string, array<string>>
      */
-    protected function getStatusTree(): array
+    protected function getPyzStatusTree(): array
     {
         return [
             SharedProductApprovalConfig::STATUS_WAITING_FOR_APPROVAL => [

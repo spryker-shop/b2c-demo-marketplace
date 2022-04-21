@@ -9,21 +9,21 @@ namespace Pyz\Zed\ProductMerchantPortalGui\Communication\Generator;
 
 use Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGenerator as SprykerCreateProductUrlGenerator;
 
-class CreateProductUrlGenerator extends SprykerCreateProductUrlGenerator
+class CreatePyzPyzProductUrlGenerator extends SprykerCreateProductUrlGenerator implements CreatePyzProductUrlGeneratorInterface
 {
     /**
      * @uses \Spryker\Shared\ProductApproval\ProductApprovalConfig::STATUS_WAITING_FOR_APPROVAL
      *
      * @var string
      */
-    protected const STATUS_WAITING_FOR_APPROVAL = 'waiting_for_approval';
+    protected const PYZ_STATUS_WAITING_FOR_APPROVAL = 'waiting_for_approval';
 
     /**
      * @uses \Spryker\Shared\ProductApproval\ProductApprovalConfig::STATUS_DRAFT
      *
      * @var string
      */
-    protected const STATUS_DRAFT = 'draft';
+    protected const PYZ_STATUS_DRAFT = 'draft';
 
     /**
      * @param string $status
@@ -31,22 +31,22 @@ class CreateProductUrlGenerator extends SprykerCreateProductUrlGenerator
      *
      * @return string
      */
-    public function getUpdateProductAbstractApprovalStatusUrl(string $status, int $idProductAbstract): string
+    public function getPyzUpdateProductAbstractApprovalStatusUrl(string $status, int $idProductAbstract): string
     {
         $getParams = '';
-        if ($status === static::STATUS_DRAFT) {
+        if ($status === static::PYZ_STATUS_DRAFT) {
             $getParams = http_build_query(
                 [
-                    static::FIELD_APPROVAL_STATUS => static::STATUS_WAITING_FOR_APPROVAL,
+                    static::FIELD_APPROVAL_STATUS => static::PYZ_STATUS_WAITING_FOR_APPROVAL,
                     static::FIELD_ID_PRODUCT_ABSTRACT => $idProductAbstract,
                 ],
             );
         }
 
-        if ($status === static::STATUS_WAITING_FOR_APPROVAL) {
+        if ($status === static::PYZ_STATUS_WAITING_FOR_APPROVAL) {
             $getParams = http_build_query(
                 [
-                    static::FIELD_APPROVAL_STATUS => static::STATUS_DRAFT,
+                    static::FIELD_APPROVAL_STATUS => static::PYZ_STATUS_DRAFT,
                     static::FIELD_ID_PRODUCT_ABSTRACT => $idProductAbstract,
                 ],
             );
