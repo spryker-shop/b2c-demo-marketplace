@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5902e8a67e7d23953d7734b8a10835e5",
+    "content-hash": "28d9aae2a9237ecab796d66b5d345889",
     "packages": [
         {
             "name": "brick/math",
@@ -65,55 +65,6 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
-        },
-        {
-            "name": "codeitnowin/barcode",
-            "version": "3.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/codeitnowin/barcode-generator.git",
-                "reference": "68e6f0f9eac16a20e20ed0e8258d4d9765800878"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/codeitnowin/barcode-generator/zipball/68e6f0f9eac16a20e20ed0e8258d4d9765800878",
-                "reference": "68e6f0f9eac16a20e20ed0e8258d4d9765800878",
-                "shasum": ""
-            },
-            "require": {
-                "ext-gd": "*",
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "CodeItNow\\": "CodeItNow/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Akhtar Khan",
-                    "email": "er.akhtarkhan@gmail.com"
-                }
-            ],
-            "description": "Barcode & Qr Code generator library by http://www.codeitnow.in. You can use it with Custom PHP application or any PHP Framework such as Laravel, Cakephp, Yii, Codeigneter etc.",
-            "homepage": "http://www.codeitnow.in",
-            "keywords": [
-                "Symfony2",
-                "barcode",
-                "cakephp",
-                "code",
-                "generator",
-                "laravel",
-                "qr",
-                "qrcode",
-                "symfony"
-            ],
-            "time": "2021-08-20T15:46:10+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -18575,54 +18526,6 @@
                 "source": "https://github.com/spryker/cms-user-connector/tree/1.1.1"
             },
             "time": "2020-05-29T13:08:37+00:00"
-        },
-        {
-            "name": "spryker/code-it-now",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/code-it-now.git",
-                "reference": "9b29d0e4d357d5252bee01d1fb06572812bac924"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/code-it-now/zipball/9b29d0e4d357d5252bee01d1fb06572812bac924",
-                "reference": "9b29d0e4d357d5252bee01d1fb06572812bac924",
-                "shasum": ""
-            },
-            "require": {
-                "codeitnowin/barcode": "^3.0.0",
-                "php": ">=7.1",
-                "spryker/barcode-extension": "^1.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/kernel": "^3.1.0",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/kernel": "for testing"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CodeItNow module",
-            "support": {
-                "source": "https://github.com/spryker/code-it-now/tree/master"
-            },
-            "time": "2018-05-16T13:57:10+00:00"
         },
         {
             "name": "spryker/collector",
@@ -57110,6 +57013,53 @@
             "time": "2021-04-21T11:18:01+00:00"
         },
         {
+            "name": "spryker/code-it-now",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/code-it-now.git",
+                "reference": "5b640c417967df863f1537c1336e19d50c0df3c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/code-it-now/zipball/5b640c417967df863f1537c1336e19d50c0df3c9",
+                "reference": "5b640c417967df863f1537c1336e19d50c0df3c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/barcode-extension": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/kernel": "^3.1.0",
+                "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/kernel": "for testing"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "CodeItNow module",
+            "support": {
+                "source": "https://github.com/spryker/code-it-now/tree/1.0.1"
+            },
+            "time": "2022-04-21T13:32:43+00:00"
+        },
+        {
             "name": "spryker/code-sniffer",
             "version": "0.15.9",
             "source": {
@@ -58550,6 +58500,12 @@
         },
         {
             "package": "spryker-feature/product",
+            "version": "9999999-dev",
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
+        },
+        {
+            "package": "spryker-feature/product-approval-process",
             "version": "9999999-dev",
             "alias": "202204.0",
             "alias_normalized": "202204.0"
