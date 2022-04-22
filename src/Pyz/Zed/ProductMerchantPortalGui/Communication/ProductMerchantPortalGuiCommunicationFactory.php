@@ -7,8 +7,8 @@
 
 namespace Pyz\Zed\ProductMerchantPortalGui\Communication;
 
-use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreatePyzProductUrlGeneratorInterface;
 use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreatePyzProductUrlGenerator;
+use Pyz\Zed\ProductMerchantPortalGui\Communication\Generator\CreatePyzProductUrlGeneratorInterface;
 use Spryker\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiCommunicationFactory as SprykerProductMerchantPortalGuiCommunicationFactory;
 
 /**

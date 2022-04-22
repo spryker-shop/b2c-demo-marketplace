@@ -10,7 +10,7 @@ namespace Pyz\Zed\Acl\Business\Acl;
 use Generated\Shared\Transfer\GroupTransfer;
 use Spryker\Zed\Acl\Business\Acl\AclConfigReader as SprykerAclConfigReader;
 
-class AclConfigReader extends SprykerAclConfigReader
+class pyzAclConfigReader extends SprykerAclConfigReader implements pyzAclConfigReaderInterface
 {
     // TODO: Should be removed after MP-6740 integration.
     /**
