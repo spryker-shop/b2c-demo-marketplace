@@ -110,3 +110,4 @@ weight,text,yes,,"63.5 g, 118 g, 125 g, 132 g, 141 g, 152 g, 155 g, 168 g, 18 g,
 white_balance,text,no,,"auto, manual",White balance,Weißabgleich,"Auto, Manual","Auto, Manuell"
 wi_fi,text,no,no,"yes, no",Wi-Fi,WLAN,"yes, no","ja, nein"
 width,text,yes,no,"4.2 cm, 3.6 cm, 4 cm",Width,Breite,,
+upcs,select,yes,yes,,UPCs,UPCs,,
