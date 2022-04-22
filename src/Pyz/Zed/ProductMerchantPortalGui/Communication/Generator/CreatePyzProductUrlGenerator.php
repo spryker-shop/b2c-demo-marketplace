@@ -7,9 +7,10 @@
 
 namespace Pyz\Zed\ProductMerchantPortalGui\Communication\Generator;
 
-use Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGenerator as SprykerCreateProductUrlGenerator;
-
-class CreatePyzPyzProductUrlGenerator extends SprykerCreateProductUrlGenerator implements CreatePyzProductUrlGeneratorInterface
+/**
+ * @method \Pyz\Zed\ProductMerchantPortalGui\Communication\ProductMerchantPortalGuiCommunicationFactory getFactory()
+ */
+class CreatePyzProductUrlGenerator implements CreatePyzProductUrlGeneratorInterface
 {
     /**
      * @uses \Spryker\Shared\ProductApproval\ProductApprovalConfig::STATUS_WAITING_FOR_APPROVAL
@@ -24,6 +25,27 @@ class CreatePyzPyzProductUrlGenerator extends SprykerCreateProductUrlGenerator i
      * @var string
      */
     protected const PYZ_STATUS_DRAFT = 'draft';
+
+    /**
+     * @uses \Spryker\Shared\ProductApproval\ProductApprovalConfig::FIELD_APPROVAL_STATUS
+     *
+     * @var string
+     */
+    protected const FIELD_APPROVAL_STATUS = 'approval-status';
+
+    /**
+     * @uses \Spryker\Shared\ProductApproval\ProductApprovalConfig::FIELD_ID_PRODUCT_ABSTRACT
+     *
+     * @var string
+     */
+    protected const FIELD_ID_PRODUCT_ABSTRACT = 'id-product-abstract';
+
+    /**
+     * @uses \Spryker\Shared\ProductApproval\ProductApprovalConfig::URL_UPDATE_APPROVAL_STATUS
+     *
+     * @var string
+     */
+    protected const URL_UPDATE_APPROVAL_STATUS = '/product-merchant-portal-gui/product-abstract-approval';
 
     /**
      * @param string $status
@@ -53,7 +75,7 @@ class CreatePyzPyzProductUrlGenerator extends SprykerCreateProductUrlGenerator i
         }
 
         if (!$getParams) {
-            return parent::getUpdateProductAbstractApprovalStatusUrl($status, $idProductAbstract);
+            $this->getFactory()->createCreateProductUrlGenerator()->getUpdateProductAbstractApprovalStatusUrl($status, $idProductAbstract);
         }
 
         return sprintf(

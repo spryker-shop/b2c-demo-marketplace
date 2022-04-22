@@ -7,9 +7,7 @@
 
 namespace Pyz\Zed\ProductMerchantPortalGui\Communication\Generator;
 
-use Spryker\Zed\ProductMerchantPortalGui\Communication\Generator\CreateProductUrlGeneratorInterface as SprykerCreateProductUrlGeneratorInterface;
-
-interface CreatePyzProductUrlGeneratorInterface extends SprykerCreateProductUrlGeneratorInterface
+interface CreatePyzProductUrlGeneratorInterface
 {
     /**
      * @param string $status
