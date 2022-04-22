@@ -15,13 +15,6 @@ use Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser\ProductViewe
 class AclDependencyProvider extends SprykerAclDependencyProvider
 {
     /**
-     * @uses \Spryker\Zed\Acl\AclDependencyProvider::FACADE_USER
-     *
-     * @var string
-     */
-    public const PYZ_FACADE_USER = 'user facade';
-
-    /**
      * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclRolesExpanderPluginInterface[]
      */
     protected function getAclRolesExpanderPlugins(): array
