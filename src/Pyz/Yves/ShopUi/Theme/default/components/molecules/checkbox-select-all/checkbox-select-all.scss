@@ -51,6 +51,17 @@
                 }
             }
         }
+
+        &[disabled],
+        &--disabled {
+            #{$name}__container {
+                cursor: not-allowed;
+            }
+
+            #{$name}__box {
+                background-color: $setting-color-gray-3;
+            }
+        }
     }
 
     @content;

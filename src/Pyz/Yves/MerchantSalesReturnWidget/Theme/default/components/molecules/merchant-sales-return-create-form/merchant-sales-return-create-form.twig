@@ -12,6 +12,13 @@
                 lastIteration: loop.last,
             },
         } only %}
+            {% block salesReturnContentForm %}
+                {% set returnCreateStateTogglerJsClass = 'js-return-create__trigger-state-toggler'
+                    ~ (data.merchantIndex ? ' js-return-create__merchant-state-toggler-' ~ data.merchantIndex) %}
+
+                {{ parent() }}
+            {% endblock %}
+
             {% block formStart %}
                 {% if data.firstIteration %}
                     {{ form_start(data.form) }}
@@ -19,10 +26,18 @@
             {% endblock %}
 
             {% block checkboxSelectAll %}
-                {% set isReturnable = data.form.returnItems[data.merchantIndex].vars.value.orderItem.isReturnable %}
+                {% set isReturnable = false %}
+
+                {% for returnItem in data.form.returnItems %}
+                    {% set orderItem = returnItem.vars.value.orderItem %}
+
+                    {% if data.merchantReference == orderItem.merchantReference %}
+                        {% set isReturnable = orderItem.isReturnable %}
+                    {% endif %}
+                {% endfor %}
 
                 {% embed molecule('checkbox-select-all') with {
-                    modifiers: ['big'],
+                    modifiers: ['big', not isReturnable ? 'disabled'],
                     data: {
                         label: 'return_page.create_return.select_all_checkbox' | trans,
                     },
@@ -41,9 +56,12 @@
 
             {% block salesReturnOrderInfoSeparator %}
                 {{ parent() }}
+
                 {% set alreadyRendered = false %}
+
                 {% for returnItem in data.form.returnItems %}
                     {% set orderItem = returnItem.vars.value.orderItem %}
+
                     {% if not alreadyRendered and orderItem.getMerchantReference() == data.merchantReference %}
                         {% widget 'SoldByMerchantWidget' args [orderItem] only %}
                             {% block soldBy %}
@@ -52,6 +70,7 @@
                                 {{ parent() }}
                             {% endblock %}
                         {% endwidget %}
+
                         {% set alreadyRendered = true %}
                     {% endif %}
                 {% endfor %}
@@ -63,20 +82,91 @@
                 {% endif %}
             {% endblock %}
 
-            {% block checkbox %}
-                <div class="{{ checkboxWrapperClass }}">
-                    {{ form_row(returnItem.isReturnable, {
-                        label: ' ',
-                        attr: {
-                            class: returnCreateStateTogglerJsClass,
+            {% block salesReturnProductItemInfo %}
+                {% embed molecule('return-product-item', 'SalesReturnPage') with {
+                    class: 'grid col col--expand',
+                    modifiers: [orderItem.productOptions ? 'with-options'],
+                    data: {
+                        item: orderItem,
+                    },
+                    embed: {
+                        returnItem: returnItem,
+                        returnCreateStateTogglerJsClass: returnCreateStateTogglerJsClass,
+                    },
+                } only %}
+                    {% block checkboxColumn %}
+                        <div class="grid grid--nowrap col">
+                            <div class="col col--middle spacing-right spacing-right--inner">
+                                {{ form_row(embed.returnItem.isReturnable, {
+                                    label: ' ',
+                                    attr: {
+                                        class: embed.returnCreateStateTogglerJsClass,
+                                    },
+                                    disabled: not data.item.isReturnable,
+                                    attributes: {
+                                        additionalModifier: 'big',
+                                        'merchant-reference': data.item.merchantReference,
+                                        'is-returnable': data.item.isReturnable,
+                                    },
+                                }) }}
+                            </div>
+
+                            {{ parent() }}
+                        </div>
+                    {% endblock %}
+
+                    {% block productItemInfoInner %}
+                        <div class="spacing-bottom">
+                            {% set isItemReturnable = data.item.isReturnable %}
+
+                            {% if isItemReturnable %}
+                                {% for returnPolicyMessage in data.item.returnPolicyMessages %}
+                                    <div class="badge spacing-bottom spacing-bottom--small">
+                                        {{ returnPolicyMessage.value | trans(returnPolicyMessage.parameters) }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if not isItemReturnable %}
+                                <div class="badge">
+                                    {{ 'return_page.returnable_state' | trans }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        {{ parent() }}
+
+                        {% embed molecule('return-product-reason', 'SalesReturnPage') with {
+                            data: {
+                                returnItem: embed.returnItem,
+                                isReturnable: embed.returnItem.vars.value.orderItem.isReturnable,
+                            },
+                            embed: {
+                                orderItem: data.item,
+                            },
+                        } only %}
+                            {% block dropdown %}
+                                {{ form_row(data.returnItem.reason, {
+                                    disabled: not data.isReturnable,
+                                    attr: {
+                                        class: reasonSelectClass,
+                                        'merchant-reference': embed.orderItem.merchantReference,
+                                        'is-returnable': data.isReturnable,
+                                    },
+                                }) }}
+                            {% endblock %}
+                        {% endembed %}
+                    {% endblock %}
+                {% endembed %}
+
+                {% if orderItem.productOptions %}
+                    {% include molecule('product-item-summary') with {
+                        modifiers: ['alternative'],
+                        data: {
+                            productItem: orderItem,
                         },
-                        attributes: {
-                            'merchant-reference': orderItem.merchantReference,
-                            'is-returnable': isReturnable,
-                        },
-                        disabled: not isReturnable,
-                    }) }}
-                </div>
+                    } only %}
+                {% endif %}
             {% endblock %}
 
             {% block salesReturnPageActions %}

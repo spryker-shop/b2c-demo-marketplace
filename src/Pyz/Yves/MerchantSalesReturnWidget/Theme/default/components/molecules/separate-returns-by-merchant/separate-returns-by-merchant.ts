@@ -3,11 +3,17 @@ import SeparateReturnsByMerchantCore from 'MerchantSalesReturnWidget/components/
 export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchantCore {
     protected selectAllCheckboxes: HTMLInputElement[];
     protected checkedSelectAllItems: HTMLInputElement[] = [];
+    protected returnReasonDropdowns: HTMLSelectElement[];
 
     protected init(): void {
         this.selectAllCheckboxes = <HTMLInputElement[]>(
             Array.from(document.getElementsByClassName(this.selectAllCheckboxClass))
         );
+        if (this.returnReasonDropdownClass) {
+            this.returnReasonDropdowns = <HTMLSelectElement[]>(
+                Array.from(document.getElementsByClassName(this.returnReasonDropdownClass))
+            );
+        }
 
         super.init();
     }
@@ -86,10 +92,16 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
             (checkbox) => checkbox.getAttribute(this.merchantReference) !== currentMerchantReference,
         );
 
+        const dropdownsToDisable = this.returnReasonDropdowns.filter(
+            (dropdown) => dropdown.getAttribute(this.merchantReference) !== currentMerchantReference,
+        );
+
         checkboxesToDisable.forEach((checkbox) => {
             checkbox.disabled = true;
             checkbox.closest(`.${parentClassName}`).classList.add(className);
         });
+
+        dropdownsToDisable.forEach((dropdown) => (dropdown.disabled = true));
     }
 
     protected enableItems(checkboxes: HTMLInputElement[], parentClassName: string, className: string): void {
@@ -100,6 +112,14 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
 
             checkbox.disabled = false;
             checkbox.closest(`.${parentClassName}`).classList.remove(className);
+        });
+
+        this.returnReasonDropdowns.forEach((dropdown) => {
+            if (!dropdown.hasAttribute(this.isReturnable)) {
+                return;
+            }
+
+            dropdown.disabled = false;
         });
     }
 
@@ -117,5 +137,9 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
 
     protected get checkboxComponentDisabledClass(): string {
         return this.getAttribute('select-all-checkbox-component-disabled-classname');
+    }
+
+    protected get returnReasonDropdownClass(): string {
+        return this.getAttribute('return-reason-dropdown-classname');
     }
 }
