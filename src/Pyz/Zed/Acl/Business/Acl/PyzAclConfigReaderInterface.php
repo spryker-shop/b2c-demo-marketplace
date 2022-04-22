@@ -7,7 +7,7 @@
 
 namespace Pyz\Zed\Acl\Business\Acl;
 
-interface pyzAclConfigReaderInterface
+interface PyzAclConfigReaderInterface
 {
     /**
      * @return array<\Generated\Shared\Transfer\GroupTransfer>

@@ -8,11 +8,11 @@
 namespace Pyz\Zed\Acl\Business;
 
 use Pyz\Zed\Acl\AclDependencyProvider;
-use Pyz\Zed\Acl\Business\Acl\pyzAclConfigReader;
-use Pyz\Zed\Acl\Business\Acl\pyzAclConfigReaderInterface;
+use Pyz\Zed\Acl\Business\Acl\PyzAclConfigReader;
+use Pyz\Zed\Acl\Business\Acl\PyzAclConfigReaderInterface;
+use Pyz\Zed\Acl\Business\Model\PyzInstaller;
+use Pyz\Zed\Acl\Business\Model\PyzInstallerInterface;
 use Spryker\Zed\Acl\Business\AclBusinessFactory as SprykerAclBusinessFactory;
-use Pyz\Zed\Acl\Business\Model\Installer;
-use Spryker\Zed\Acl\Business\Model\InstallerInterface;
 
 class AclBusinessFactory extends SprykerAclBusinessFactory
 {
@@ -24,20 +24,20 @@ class AclBusinessFactory extends SprykerAclBusinessFactory
     public const PYZ_FACADE_USER = 'user facade';
 
     /**
-     * @return \Pyz\Zed\Acl\Business\Acl\pyzAclConfigReader
+     * @return \Pyz\Zed\Acl\Business\Acl\PyzAclConfigReader
      */
-    public function createPyzAclConfigReader(): pyzAclConfigReaderInterface
+    public function createPyzAclConfigReader(): PyzAclConfigReaderInterface
     {
-        return new pyzAclConfigReader($this->getConfig());
+        return new PyzAclConfigReader($this->getConfig());
     }
 
-    public function createPyzInstallerModel(): InstallerInterface
+    public function createPyzInstallerModel(): PyzInstallerInterface
     {
-        return new Installer(
+        return new PyzInstaller(
             $this->createGroupModel(),
             $this->createRoleModel(),
             $this->createRuleModel(),
-            $this->getProvidedDependency(AclDependencyProvider::PYZ_FACADE_USER ),
+            $this->getProvidedDependency(AclDependencyProvider::PYZ_FACADE_USER),
             $this->createPyzAclConfigReader(),
             $this->createRoleWriter(),
             $this->getAclInstallerPlugins(),

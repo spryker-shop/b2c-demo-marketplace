@@ -13,9 +13,7 @@ use Generated\Shared\Transfer\RuleTransfer;
 use Generated\Shared\Transfer\UserTransfer;
 use Spryker\Zed\Acl\AclConfig;
 
-//use Spryker\Zed\Acl\Business\Acl\AclConfigReader as SprykerAclConfigReader;
-
-class pyzAclConfigReader implements pyzAclConfigReaderInterface
+class PyzAclConfigReader implements PyzAclConfigReaderInterface
 {
     /**
      * @var string
