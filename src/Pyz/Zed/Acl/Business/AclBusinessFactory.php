@@ -31,6 +31,9 @@ class AclBusinessFactory extends SprykerAclBusinessFactory
         return new PyzAclConfigReader($this->getConfig());
     }
 
+    /**
+     * @return \Pyz\Zed\Acl\Business\Model\PyzInstallerInterface
+     */
     public function createPyzInstallerModel(): PyzInstallerInterface
     {
         return new PyzInstaller(

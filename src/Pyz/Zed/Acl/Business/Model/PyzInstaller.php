@@ -12,13 +12,14 @@ use Generated\Shared\Transfer\RuleTransfer;
 use Pyz\Zed\Acl\Business\Acl\PyzAclConfigReaderInterface;
 use Spryker\Zed\Acl\Business\Exception\GroupNotFoundException;
 use Spryker\Zed\Acl\Business\Model\GroupInterface;
+use Spryker\Zed\Acl\Business\Model\InstallerInterface;
 use Spryker\Zed\Acl\Business\Model\RoleInterface;
 use Spryker\Zed\Acl\Business\Model\RuleInterface;
 use Spryker\Zed\Acl\Business\Writer\RoleWriterInterface;
 use Spryker\Zed\Acl\Dependency\Facade\AclToUserInterface;
 use Spryker\Zed\User\Business\Exception\UserNotFoundException;
 
-class PyzInstaller implements PyzInstallerInterface
+class PyzInstaller implements InstallerInterface
 {
     /**
      * @var \Spryker\Zed\Acl\Business\Model\GroupInterface
