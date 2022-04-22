@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\RoleTransfer;
 use Generated\Shared\Transfer\RuleTransfer;
 use Pyz\Zed\Acl\Business\Acl\PyzAclConfigReaderInterface;
 use Spryker\Zed\Acl\Business\Exception\GroupNotFoundException;
-use Spryker\Zed\Acl\Business\Model\GroupInterface;
-use Spryker\Zed\Acl\Business\Model\RoleInterface;
-use Spryker\Zed\Acl\Business\Model\RuleInterface;
-use Spryker\Zed\Acl\Business\Writer\RoleWriterInterface;
-use Spryker\Zed\Acl\Dependency\Facade\AclToUserInterface;
 use Spryker\Zed\User\Business\Exception\UserNotFoundException;
 
 class PyzInstaller implements PyzInstallerInterface
@@ -56,21 +51,21 @@ class PyzInstaller implements PyzInstallerInterface
     protected $roleWriter;
 
     /**
-     * @param \Spryker\Zed\Acl\Business\Model\GroupInterface $group
-     * @param \Spryker\Zed\Acl\Business\Model\RoleInterface $role
-     * @param \Spryker\Zed\Acl\Business\Model\RuleInterface $rule
-     * @param \Spryker\Zed\Acl\Dependency\Facade\AclToUserInterface $userFacade
+     * @param \Pyz\Zed\Acl\Business\Model\PyzGroupInterface $group
+     * @param \Pyz\Zed\Acl\Business\Model\PyzRoleInterface $role
+     * @param \Pyz\Zed\Acl\Business\Model\PyzRuleInterface $rule
+     * @param \Pyz\Zed\Acl\Business\Model\PyzAclToUserInterface $userFacade
      * @param \Pyz\Zed\Acl\Business\Acl\PyzAclConfigReaderInterface $aclConfigReader
-     * @param \Spryker\Zed\Acl\Business\Writer\RoleWriterInterface $roleWriter
+     * @param \Pyz\Zed\Acl\Business\Model\PyzRoleWriterInterface $roleWriter
      * @param array<\Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface> $aclInstallerPlugins
      */
     public function __construct(
-        GroupInterface $group,
-        RoleInterface $role,
-        RuleInterface $rule,
-        AclToUserInterface $userFacade,
+        PyzGroupInterface $group,
+        PyzRoleInterface $role,
+        PyzRuleInterface $rule,
+        PyzAclToUserInterface $userFacade,
         PyzAclConfigReaderInterface $aclConfigReader,
-        RoleWriterInterface $roleWriter,
+        PyzRoleWriterInterface $roleWriter,
         array $aclInstallerPlugins
     ) {
         $this->group = $group;
