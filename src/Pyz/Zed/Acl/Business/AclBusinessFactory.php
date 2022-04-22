@@ -10,8 +10,16 @@ namespace Pyz\Zed\Acl\Business;
 use Pyz\Zed\Acl\AclDependencyProvider;
 use Pyz\Zed\Acl\Business\Acl\PyzAclConfigReader;
 use Pyz\Zed\Acl\Business\Acl\PyzAclConfigReaderInterface;
+use Pyz\Zed\Acl\Business\Model\PyzGroup;
+use Pyz\Zed\Acl\Business\Model\PyzGroupInterface;
 use Pyz\Zed\Acl\Business\Model\PyzInstaller;
 use Pyz\Zed\Acl\Business\Model\PyzInstallerInterface;
+use Pyz\Zed\Acl\Business\Model\PyzRole;
+use Pyz\Zed\Acl\Business\Model\PyzRoleInterface;
+use Pyz\Zed\Acl\Business\Model\PyzRoleWriter;
+use Pyz\Zed\Acl\Business\Model\PyzRoleWriterInterface;
+use Pyz\Zed\Acl\Business\Model\PyzRule;
+use Pyz\Zed\Acl\Business\Model\PyzRuleInterface;
 use Spryker\Zed\Acl\Business\AclBusinessFactory as SprykerAclBusinessFactory;
 
 class AclBusinessFactory extends SprykerAclBusinessFactory
@@ -37,13 +45,60 @@ class AclBusinessFactory extends SprykerAclBusinessFactory
     public function createPyzInstallerModel(): PyzInstallerInterface
     {
         return new PyzInstaller(
-            $this->createGroupModel(),
-            $this->createRoleModel(),
-            $this->createRuleModel(),
+            $this->createPyzGroupModel(),
+            $this->createPyzRoleModel(),
+            $this->createPyzRuleModel(),
             $this->getProvidedDependency(AclDependencyProvider::PYZ_FACADE_USER),
             $this->createPyzAclConfigReader(),
-            $this->createRoleWriter(),
+            $this->createPyzRoleWriter(),
             $this->getAclInstallerPlugins(),
+        );
+    }
+
+    /**
+     * @return \Spryker\Zed\Acl\Business\Model\GroupInterface
+     */
+    public function createPyzGroupModel(): PyzGroupInterface
+    {
+        return new PyzGroup($this->getQueryContainer());
+    }
+
+    /**
+     * @return \Pyz\Zed\Acl\Business\Model\PyzRoleInterface
+     */
+    public function createPyzRoleModel(): PyzRoleInterface
+    {
+        return new PyzRole(
+            $this->createGroupModel(),
+            $this->getQueryContainer(),
+            $this->getAclRolesExpanderPlugins(),
+            $this->getAclRolePostSavePlugins(),
+        );
+    }
+
+    /**
+     * @return \Pyz\Zed\Acl\Business\Model\PyzRuleInterface
+     */
+    public function createPyzRuleModel(): PyzRuleInterface
+    {
+        return new PyzRule(
+            $this->createGroupModel(),
+            $this->getQueryContainer(),
+            $this->getProvidedDependency(AclDependencyProvider::PYZ_FACADE_USER),
+            $this->createRuleValidatorHelper(),
+            $this->getConfig(),
+        );
+    }
+
+    /**
+     * @return \Pyz\Zed\Acl\Business\Model\PyzRoleWriterInterface
+     */
+    public function createPyzRoleWriter(): PyzRoleWriterInterface
+    {
+        return new PyzRoleWriter(
+            $this->getEntityManager(),
+            $this->getRepository(),
+            $this->getAclRolePostSavePlugins(),
         );
     }
 }
