@@ -11,7 +11,7 @@ use Pyz\Zed\Acl\AclDependencyProvider;
 use Pyz\Zed\Acl\Business\Acl\pyzAclConfigReader;
 use Pyz\Zed\Acl\Business\Acl\pyzAclConfigReaderInterface;
 use Spryker\Zed\Acl\Business\AclBusinessFactory as SprykerAclBusinessFactory;
-use Spryker\Zed\Acl\Business\Model\Installer;
+use Pyz\Zed\Acl\Business\Model\Installer;
 use Spryker\Zed\Acl\Business\Model\InstallerInterface;
 
 class AclBusinessFactory extends SprykerAclBusinessFactory
@@ -37,7 +37,7 @@ class AclBusinessFactory extends SprykerAclBusinessFactory
             $this->createGroupModel(),
             $this->createRoleModel(),
             $this->createRuleModel(),
-            $this->getProvidedDependency(AclDependencyProvider::PYZ_FACADE_USER),
+            $this->getProvidedDependency(AclDependencyProvider::PYZ_FACADE_USER ),
             $this->createPyzAclConfigReader(),
             $this->createRoleWriter(),
             $this->getAclInstallerPlugins(),
