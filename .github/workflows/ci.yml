@@ -142,7 +142,7 @@ jobs:
               run: yarn mp:test
 
             - name: Front-end MP Build
-              run: yarn mp:build -e production
+              run: yarn mp:build:production
 
             - name: Validate propel files
               run: |
