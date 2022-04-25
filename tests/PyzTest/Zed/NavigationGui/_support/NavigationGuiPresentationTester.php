@@ -242,8 +242,7 @@ class NavigationGuiPresentationTester extends Actor
             self::NODE_CHILD_SELECTOR,
             $idParentNavigationNode,
             $idChildNavigationNode,
-            1
-        ));
+        ), 1);
     }
 
     /**
@@ -540,10 +539,7 @@ class NavigationGuiPresentationTester extends Actor
 
                 break;
             } catch (Exception $exception) {
-                $count++;
-                if ($verbose) {
-                    echo "Try: {$count}: ";
-                }
+                codecept_debug(sprintf('Unstable action repeat count: %d', ++$count));
             }
         }
     }
