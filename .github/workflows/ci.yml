@@ -188,12 +188,12 @@ jobs:
                   docker/sdk testing codecept fixtures
                   docker/sdk testing console queue:worker:start --stop-when-empty
                   docker/sdk testing codecept run -c codeception.api.yml
-    php-73-postgresql-acceptance-alpine:
-        name: "PHP 7.3 / PostgreSQL / Acceptance / Alpine"
+    php-74-postgresql-acceptance-alpine:
+        name: "PHP 7.4 / PostgreSQL / Acceptance / Alpine"
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:7.3
+            SPRYKER_PLATFORM_IMAGE: spryker/php:7.4
             TRAVIS: 1
 
         steps:
@@ -213,12 +213,12 @@ jobs:
                   docker/sdk up -t
                   docker/sdk testing console queue:worker:start --stop-when-empty
                   docker/sdk testing codecept run -c codeception.acceptance.yml
-    php-73-postgresql-functional-alpine:
-        name: "PHP 7.3 / PostgreSQL / Functional / Alpine"
+    php-74-postgresql-functional-alpine:
+        name: "PHP 7.4 / PostgreSQL / Functional / Alpine"
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:7.3
+            SPRYKER_PLATFORM_IMAGE: spryker/php:7.4
             TRAVIS: 1
 
         steps:
@@ -287,12 +287,12 @@ jobs:
                   docker/sdk boot deploy.ci.functional.mariadb.yml -v
                   docker/sdk up -t -v
                   docker/sdk testing codecept run -c codeception.functional.yml
-    php-73-postgres-functional-debian:
-        name: "PHP 7.3 / PostgreSQL / Functional / Debian"
+    php-74-postgres-functional-debian:
+        name: "PHP 7.4 / PostgreSQL / Functional / Debian"
         runs-on: ubuntu-18.04
         env:
             PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-debian
+            SPRYKER_PLATFORM_IMAGE: spryker/php:7.4-debian
             TRAVIS: 1
 
         steps:
