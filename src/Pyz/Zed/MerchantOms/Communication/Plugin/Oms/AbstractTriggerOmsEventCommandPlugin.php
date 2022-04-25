@@ -48,7 +48,7 @@ abstract class AbstractTriggerOmsEventCommandPlugin extends AbstractPlugin imple
         }
 
         $result = $this->getFactory()
-            ->getOmsFacade()
+            ->getPyzOmsFacade()
             ->triggerEventForOneOrderItem($this->getEventName(), $merchantOrderItemTransfer->getIdOrderItem());
 
         if ($result === null) {

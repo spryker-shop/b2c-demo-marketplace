@@ -23,8 +23,8 @@ use Spryker\Zed\MerchantOms\MerchantOmsDependencyProvider as SprykerMerchantOmsD
  */
 class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 {
-    public const FACADE_OMS = 'FACADE_OMS';
-    public const FACADE_SALES_RETURN = 'FACADE_SALES_RETURN';
+    public const PYZ_FACADE_OMS = 'FACADE_OMS';
+    public const PYZ_FACADE_SALES_RETURN = 'FACADE_SALES_RETURN';
 
     /**
      * @return \Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface[]
@@ -52,8 +52,8 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     {
         $container = parent::provideCommunicationLayerDependencies($container);
 
-        $container = $this->addOmsFacade($container);
-        $container = $this->addSalesReturnFacade($container);
+        $container = $this->addPyzOmsFacade($container);
+        $container = $this->addPyzSalesReturnFacade($container);
 
         return $container;
     }
@@ -63,9 +63,9 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    public function addOmsFacade(Container $container): Container
+    public function addPyzOmsFacade(Container $container): Container
     {
-        $container->set(static::FACADE_OMS, function (Container $container) {
+        $container->set(static::PYZ_FACADE_OMS, function (Container $container) {
             return $container->getLocator()->oms()->facade();
         });
 
@@ -77,9 +77,9 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    public function addSalesReturnFacade(Container $container): Container
+    public function addPyzSalesReturnFacade(Container $container): Container
     {
-        $container->set(static::FACADE_SALES_RETURN, function (Container $container) {
+        $container->set(static::PYZ_FACADE_SALES_RETURN, function (Container $container) {
             return $container->getLocator()->salesReturn()->facade();
         });
 

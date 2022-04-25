@@ -15,7 +15,7 @@ use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
 
 class AclConfig extends SprykerAclConfig
 {
-    protected const RULE_TYPE_DENY = 'deny';
+    protected const PYZ_RULE_TYPE_DENY = 'deny';
 
     /**
      * @return array
@@ -23,7 +23,7 @@ class AclConfig extends SprykerAclConfig
     public function getInstallerRules(): array
     {
         $installerRules = parent::getInstallerRules();
-        $installerRules = $this->addMerchantPortalInstallerRules($installerRules);
+        $installerRules = $this->addPyzMerchantPortalInstallerRules($installerRules);
 
         return $installerRules;
     }
@@ -56,7 +56,7 @@ class AclConfig extends SprykerAclConfig
      *
      * @return string[][]
      */
-    protected function addMerchantPortalInstallerRules(array $installerRules): array
+    protected function addPyzMerchantPortalInstallerRules(array $installerRules): array
     {
         $bundleNames = [
             'dashboard-merchant-portal-gui',
@@ -67,6 +67,7 @@ class AclConfig extends SprykerAclConfig
             'sales-merchant-portal-gui',
             'user-merchant-portal-gui',
             'dummy-merchant-portal-gui',
+            'price-product-merchant-relationship-merchant-portal-gui',
         ];
 
         foreach ($bundleNames as $bundleName) {
@@ -74,7 +75,7 @@ class AclConfig extends SprykerAclConfig
                 'bundle' => $bundleName,
                 'controller' => AclConstants::VALIDATOR_WILDCARD,
                 'action' => AclConstants::VALIDATOR_WILDCARD,
-                'type' => static::RULE_TYPE_DENY,
+                'type' => static::PYZ_RULE_TYPE_DENY,
                 'role' => AclConstants::ROOT_ROLE,
             ];
         }
@@ -87,13 +88,13 @@ class AclConfig extends SprykerAclConfig
      */
     public function getInstallerRoles(): array
     {
-        return $this->addInstallerRootRole();
+        return $this->addPyzInstallerRootRole();
     }
 
     /**
      * @return mixed[]
      */
-    protected function addInstallerRootRole(): array
+    protected function addPyzInstallerRootRole(): array
     {
         $entityRule = new AclEntityRuleTransfer();
         $entityRule->setEntity('*')
@@ -112,6 +113,19 @@ class AclConfig extends SprykerAclConfig
                 'group' => AclConstants::ROOT_GROUP,
                 'aclEntityRules' => new ArrayObject([$entityRule]),
                 'aclRules' => new ArrayObject([$rule]),
+            ],
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public function getInstallerGroups(): array
+    {
+        return [
+            [
+                'name' => AclConstants::ROOT_GROUP,
+                'reference' => AclConstants::ROOT_GROUP,
             ],
         ];
     }

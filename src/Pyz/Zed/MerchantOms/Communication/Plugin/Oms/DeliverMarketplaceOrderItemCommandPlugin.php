@@ -9,13 +9,13 @@ namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
 
 class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
 {
-    protected const EVENT_DELIVER = 'deliver';
+    protected const PYZ_EVENT_DELIVER = 'deliver';
 
     /**
      * @return string
      */
     public function getEventName(): string
     {
-        return static::EVENT_DELIVER;
+        return static::PYZ_EVENT_DELIVER;
     }
 }
