@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6940843eb7d986e0eed9682a415a1ee9",
+    "content-hash": "2ec784f994cc0bfdd9d3ec63c9eba84e",
     "packages": [
         {
             "name": "async-aws/core",
@@ -36273,16 +36273,16 @@
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui",
-            "version": "1.7.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-merchant-portal-gui.git",
-                "reference": "de3f0a7e5e7ff9b39471e30e5233d727868a88f4"
+                "reference": "0e1faa94ed79b37ff304f136882f1a21bd4e64ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/de3f0a7e5e7ff9b39471e30e5233d727868a88f4",
-                "reference": "de3f0a7e5e7ff9b39471e30e5233d727868a88f4",
+                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/0e1faa94ed79b37ff304f136882f1a21bd4e64ba",
+                "reference": "0e1faa94ed79b37ff304f136882f1a21bd4e64ba",
                 "shasum": ""
             },
             "require": {
@@ -36341,9 +36341,9 @@
             ],
             "description": "ProductOfferMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.7.0"
+                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.8.1"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-04-26T14:08:21+00:00"
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui-extension",
