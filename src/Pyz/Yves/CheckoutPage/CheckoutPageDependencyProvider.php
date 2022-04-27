@@ -7,8 +7,8 @@
 
 namespace Pyz\Yves\CheckoutPage;
 
-use Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig;
 use Generated\Shared\Transfer\PaymentTransfer;
+use Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig;
 use Spryker\Shared\Kernel\Container\GlobalContainer;
 use Spryker\Shared\Nopayment\NopaymentConfig;
 use Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\DummyMarketplacePaymentHandlerPlugin;
