@@ -761,7 +761,7 @@
         "spryker/merchant-user-password-reset-mail": "1.0.0",
         "spryker/merchants-rest-api": "1.0.0",
         "spryker/merchants-rest-api-extension": "1.0.0",
-        "spryker/message-broker": "1.1.1",
+        "spryker/message-broker": "1.1.0",
         "spryker/message-broker-aws": "1.1.0",
         "spryker/message-broker-extension": "1.0.0",
         "spryker/messenger": "3.6.2",
