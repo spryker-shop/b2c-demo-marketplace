@@ -89,16 +89,20 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
         const currentMerchantReference = target.getAttribute(this.merchantReference);
 
         checkboxes.forEach((checkbox) => {
-            if (checkbox.getAttribute(this.merchantReference) !== currentMerchantReference) {
-                checkbox.disabled = true;
-                checkbox.closest(`.${parentClassName}`).classList.add(className);
+            if (checkbox.getAttribute(this.merchantReference) === currentMerchantReference) {
+                return;
             }
+
+            checkbox.disabled = true;
+            checkbox.closest(`.${parentClassName}`).classList.add(className);
         });
 
         this.returnReasonDropdowns.forEach((dropdown) => {
-            if (dropdown.getAttribute(this.merchantReference) !== currentMerchantReference) {
-                dropdown.disabled = true;
+            if (dropdown.getAttribute(this.merchantReference) === currentMerchantReference) {
+                return;
             }
+
+            dropdown.disabled = true;
         });
     }
 
