@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66582620998e33f388c1bbc0fce6de0e",
+    "content-hash": "ff9399b7e7f8b2324a533f323bdec7de",
     "packages": [
         {
             "name": "async-aws/core",
@@ -11428,21 +11428,22 @@
         },
         {
             "name": "spryker-shop/product-search-widget",
-            "version": "3.2.5",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/product-search-widget.git",
-                "reference": "7c55301f1102eec7234513a82ed6646332625613"
+                "reference": "4607d6f6931de4577e1e7af300aa6f8877a85ce0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/product-search-widget/zipball/7c55301f1102eec7234513a82ed6646332625613",
-                "reference": "7c55301f1102eec7234513a82ed6646332625613",
+                "url": "https://api.github.com/repos/spryker-shop/product-search-widget/zipball/4607d6f6931de4577e1e7af300aa6f8877a85ce0",
+                "reference": "4607d6f6931de4577e1e7af300aa6f8877a85ce0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
-                "spryker-shop/shop-ui": "^1.28.1",
+                "php": ">=7.4",
+                "spryker-shop/product-search-widget-extension": "^1.0.0",
+                "spryker-shop/shop-ui": "^1.58.0",
                 "spryker/application": "^3.0.0",
                 "spryker/catalog": "^5.5.0",
                 "spryker/kernel": "^3.52.0",
@@ -11478,9 +11479,9 @@
             ],
             "description": "ProductSearchWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/product-search-widget/tree/3.2.5"
+                "source": "https://github.com/spryker-shop/product-search-widget/tree/3.3.0"
             },
-            "time": "2021-04-20T14:23:29+00:00"
+            "time": "2022-04-04T15:20:02+00:00"
         },
         {
             "name": "spryker-shop/product-search-widget-extension",
@@ -25194,16 +25195,16 @@
         },
         {
             "name": "spryker/gui-table",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/gui-table.git",
-                "reference": "f3fc02dd6bc172335199419556053402812ed928"
+                "reference": "3a2284b496dfdd47e2e8c9aa0a6b7fcce7651d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/gui-table/zipball/f3fc02dd6bc172335199419556053402812ed928",
-                "reference": "f3fc02dd6bc172335199419556053402812ed928",
+                "url": "https://api.github.com/repos/spryker/gui-table/zipball/3a2284b496dfdd47e2e8c9aa0a6b7fcce7651d9b",
+                "reference": "3a2284b496dfdd47e2e8c9aa0a6b7fcce7651d9b",
                 "shasum": ""
             },
             "require": {
@@ -25244,9 +25245,9 @@
             ],
             "description": "GuiTable module",
             "support": {
-                "source": "https://github.com/spryker/gui-table/tree/1.4.0"
+                "source": "https://github.com/spryker/gui-table/tree/1.5.0"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-04-15T13:47:42+00:00"
         },
         {
             "name": "spryker/guzzle",
@@ -32451,23 +32452,23 @@
         },
         {
             "name": "spryker/price-product-schedule",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/price-product-schedule.git",
-                "reference": "3360dc0b6d566b3deb1a7c73582ac6141475ad5d"
+                "reference": "53fb152dc5466bdf17a9a5ac3003605770c1e2d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/price-product-schedule/zipball/3360dc0b6d566b3deb1a7c73582ac6141475ad5d",
-                "reference": "3360dc0b6d566b3deb1a7c73582ac6141475ad5d",
+                "url": "https://api.github.com/repos/spryker/price-product-schedule/zipball/53fb152dc5466bdf17a9a5ac3003605770c1e2d8",
+                "reference": "53fb152dc5466bdf17a9a5ac3003605770c1e2d8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
                 "spryker/currency": "^3.8.0",
                 "spryker/kernel": "^3.32.0",
-                "spryker/price-product": "^4.6.0",
+                "spryker/price-product": "^4.35.0",
                 "spryker/product": "^6.9.0",
                 "spryker/propel": "^3.8.0",
                 "spryker/propel-orm": "^1.8.0",
@@ -32498,7 +32499,10 @@
                 "proprietary"
             ],
             "description": "PriceProductSchedule module",
-            "time": "2021-11-09T18:30:55+00:00"
+            "support": {
+                "source": "https://github.com/spryker/price-product-schedule/tree/2.5.0"
+            },
+            "time": "2022-04-15T13:47:42+00:00"
         },
         {
             "name": "spryker/price-product-schedule-data-import",
@@ -36953,20 +36957,20 @@
         },
         {
             "name": "spryker/product-offer-stock",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-stock.git",
-                "reference": "e34f2738d6eda127fa88baf1fcf21879040984e0"
+                "reference": "5c61bca287fba19548ba6b4d4651e2eaed80a2ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-stock/zipball/e34f2738d6eda127fa88baf1fcf21879040984e0",
-                "reference": "e34f2738d6eda127fa88baf1fcf21879040984e0",
+                "url": "https://api.github.com/repos/spryker/product-offer-stock/zipball/5c61bca287fba19548ba6b4d4651e2eaed80a2ca",
+                "reference": "5c61bca287fba19548ba6b4d4651e2eaed80a2ca",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/decimal-object": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product-offer": "^1.0.0",
@@ -36977,6 +36981,7 @@
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
+                "spryker/product": "*",
                 "spryker/propel": "*",
                 "spryker/store": "*",
                 "spryker/testify": "*"
@@ -36999,9 +37004,9 @@
             ],
             "description": "ProductOfferStock module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-stock/tree/1.1.0"
+                "source": "https://github.com/spryker/product-offer-stock/tree/1.1.1"
             },
-            "time": "2021-08-23T13:21:20+00:00"
+            "time": "2022-04-26T16:30:57+00:00"
         },
         {
             "name": "spryker/product-offer-stock-data-import",
