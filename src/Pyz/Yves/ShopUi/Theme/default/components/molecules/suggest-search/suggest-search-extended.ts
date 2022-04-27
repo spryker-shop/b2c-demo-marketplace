@@ -16,9 +16,7 @@ export default class SuggestSearchExtended extends SuggestSearch {
         this.overlayOpenButtons = <HTMLElement[]>Array.from(document.getElementsByClassName(`${this.jsName}__show`));
         this.overlayCloseTriggers = <HTMLElement[]>Array.from(document.getElementsByClassName(`${this.jsName}__hide`));
 
-        /* tslint:disable: deprecation */
-        super.readyCallback();
-        /* tslint:enable: deprecation */
+        super.init();
     }
 
     protected mapEvents(): void {

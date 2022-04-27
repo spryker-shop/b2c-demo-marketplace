@@ -6,9 +6,12 @@
         padding: rem(15) 0;
         margin-bottom: rem(20);
         width: 100%;
+        line-height: 1;
 
         &__container {
             position: relative;
+            display: inline-flex;
+            vertical-align: top;
         }
 
         &__minus {
@@ -50,6 +53,10 @@
                     display: none;
                 }
             }
+        }
+
+        &__box {
+            flex-shrink: 0;
         }
 
         &[disabled],

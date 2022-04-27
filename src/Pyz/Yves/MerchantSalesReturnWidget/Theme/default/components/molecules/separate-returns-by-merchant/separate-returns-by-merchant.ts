@@ -7,11 +7,11 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
 
     protected init(): void {
         this.selectAllCheckboxes = <HTMLInputElement[]>(
-            Array.from(document.getElementsByClassName(this.selectAllCheckboxClass))
+            Array.from(document.getElementsByClassName(this.selectAllCheckboxesClassName))
         );
-        if (this.returnReasonDropdownClass) {
+        if (this.returnReasonDropdownClassName) {
             this.returnReasonDropdowns = <HTMLSelectElement[]>(
-                Array.from(document.getElementsByClassName(this.returnReasonDropdownClass))
+                Array.from(document.getElementsByClassName(this.returnReasonDropdownClassName))
             );
         }
 
@@ -28,12 +28,12 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
         this.selectAllCheckboxes.map((checkbox) => {
             checkbox.addEventListener('change', (event) => {
                 const target = <HTMLInputElement>event.target;
-                target.checked ? this.onAddSelectAllCheckedItem(target) : this.onRemoveSelectAllCheckedItems();
+                target.checked ? this.onAddSelectAllCheckedItems(target) : this.onRemoveSelectAllCheckedItems();
             });
         });
     }
 
-    protected onAddSelectAllCheckedItem(item: HTMLInputElement): void {
+    protected onAddSelectAllCheckedItems(item: HTMLInputElement): void {
         this.checkedSelectAllItems.push(item);
         this.disableSelectAllItem(item);
     }
@@ -62,8 +62,8 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
         this.disableItems(
             target,
             this.selectAllCheckboxes,
-            this.selectAllCheckboxComponentClass,
-            this.checkboxComponentDisabledClass,
+            this.selectAllCheckboxesComponentClassName,
+            this.selectAllCheckboxesComponentDisabledClassName,
         );
     }
 
@@ -75,8 +75,8 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     protected enableSelectAllItems(): void {
         this.enableItems(
             this.selectAllCheckboxes,
-            this.selectAllCheckboxComponentClass,
-            this.checkboxComponentDisabledClass,
+            this.selectAllCheckboxesComponentClassName,
+            this.selectAllCheckboxesComponentDisabledClassName,
         );
     }
 
@@ -88,20 +88,18 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
     ): void {
         const currentMerchantReference = target.getAttribute(this.merchantReference);
 
-        const checkboxesToDisable = checkboxes.filter(
-            (checkbox) => checkbox.getAttribute(this.merchantReference) !== currentMerchantReference,
-        );
-
-        const dropdownsToDisable = this.returnReasonDropdowns.filter(
-            (dropdown) => dropdown.getAttribute(this.merchantReference) !== currentMerchantReference,
-        );
-
-        checkboxesToDisable.forEach((checkbox) => {
-            checkbox.disabled = true;
-            checkbox.closest(`.${parentClassName}`).classList.add(className);
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.getAttribute(this.merchantReference) !== currentMerchantReference) {
+                checkbox.disabled = true;
+                checkbox.closest(`.${parentClassName}`).classList.add(className);
+            }
         });
 
-        dropdownsToDisable.forEach((dropdown) => (dropdown.disabled = true));
+        this.returnReasonDropdowns.forEach((dropdown) => {
+            if (dropdown.getAttribute(this.merchantReference) !== currentMerchantReference) {
+                dropdown.disabled = true;
+            }
+        });
     }
 
     protected enableItems(checkboxes: HTMLInputElement[], parentClassName: string, className: string): void {
@@ -127,19 +125,19 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
         return this.getAttribute('checkbox-component-disabled-classname');
     }
 
-    protected get selectAllCheckboxClass(): string {
-        return this.getAttribute('select-all-checkbox-classname');
+    protected get selectAllCheckboxesClassName(): string {
+        return this.getAttribute('select-all-checkboxes-classname');
     }
 
-    protected get selectAllCheckboxComponentClass(): string {
-        return this.getAttribute('select-all-checkbox-component-classname');
+    protected get selectAllCheckboxesComponentClassName(): string {
+        return this.getAttribute('select-all-checkboxes-component-classname');
     }
 
-    protected get checkboxComponentDisabledClass(): string {
-        return this.getAttribute('select-all-checkbox-component-disabled-classname');
+    protected get selectAllCheckboxesComponentDisabledClassName(): string {
+        return this.getAttribute('select-all-checkboxes-component-disabled-classname');
     }
 
-    protected get returnReasonDropdownClass(): string {
+    protected get returnReasonDropdownClassName(): string {
         return this.getAttribute('return-reason-dropdown-classname');
     }
 }
