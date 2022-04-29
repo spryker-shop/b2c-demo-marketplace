@@ -1,10 +1,13 @@
 <?php
 
 use Monolog\Logger;
+use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
 use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Shared\Customer\CustomerConstants;
 use Spryker\Shared\DocumentationGeneratorRestApi\DocumentationGeneratorRestApiConstants;
 use Spryker\Shared\ErrorHandler\ErrorHandlerConstants;
+use Spryker\Shared\ErrorHandler\ErrorRenderer\ApiDebugErrorRenderer;
+use Spryker\Shared\ErrorHandler\ErrorRenderer\ApiErrorRenderer;
 use Spryker\Shared\ErrorHandler\ErrorRenderer\WebExceptionErrorRenderer;
 use Spryker\Shared\ErrorHandler\ErrorRenderer\WebHtmlErrorRenderer;
 use Spryker\Shared\Event\EventConstants;
@@ -13,6 +16,7 @@ use Spryker\Shared\Kernel\KernelConstants;
 use Spryker\Shared\Log\LogConstants;
 use Spryker\Shared\MerchantPortalApplication\MerchantPortalConstants;
 use Spryker\Shared\Newsletter\NewsletterConstants;
+use Spryker\Shared\OauthClient\OauthClientConstants;
 use Spryker\Shared\ProductManagement\ProductManagementConstants;
 use Spryker\Shared\Propel\PropelConstants;
 use Spryker\Shared\PropelOrm\PropelOrmConstants;
@@ -23,6 +27,7 @@ use Spryker\Shared\Session\SessionConstants;
 use Spryker\Shared\Testify\TestifyConstants;
 use Spryker\Shared\WebProfiler\WebProfilerConstants;
 use Spryker\Shared\ZedRequest\ZedRequestConstants;
+use Spryker\Zed\OauthDummy\OauthDummyConfig;
 use SprykerShop\Shared\CalculationPage\CalculationPageConstants;
 use SprykerShop\Shared\ErrorPage\ErrorPageConstants;
 use SprykerShop\Shared\ShopApplication\ShopApplicationConstants;
@@ -61,6 +66,7 @@ $config[DocumentationGeneratorRestApiConstants::ENABLE_REST_API_DOCUMENTATION_GE
 
 $config[ErrorHandlerConstants::DISPLAY_ERRORS] = true;
 $config[ErrorHandlerConstants::ERROR_RENDERER] = getenv('SPRYKER_DEBUG_ENABLED') ? WebExceptionErrorRenderer::class : WebHtmlErrorRenderer::class;
+$config[ErrorHandlerConstants::API_ERROR_RENDERER] = getenv('SPRYKER_DEBUG_ENABLED') ? ApiDebugErrorRenderer::class : ApiErrorRenderer::class;
 $config[ErrorHandlerConstants::IS_PRETTY_ERROR_HANDLER_ENABLED] = (bool)getenv('SPRYKER_DEBUG_ENABLED');
 $config[ErrorHandlerConstants::ERROR_LEVEL] = getenv('SPRYKER_DEBUG_DEPRECATIONS_ENABLED') ? E_ALL : $config[ErrorHandlerConstants::ERROR_LEVEL];
 
@@ -156,3 +162,10 @@ if (!getenv('SPRYKER_SSL_ENABLE')) {
 // ----------------------------------------------------------------------------
 
 require 'common/config_oms-development.php';
+
+// ----------------------------------------------------------------------------
+// ------------------------------ OAUTH ---------------------------------------
+// ----------------------------------------------------------------------------
+$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_MESSAGE_BROKER] = OauthDummyConfig::PROVIDER_NAME;
+$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = OauthDummyConfig::PROVIDER_NAME;
+$config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthDummyConfig::PROVIDER_NAME;

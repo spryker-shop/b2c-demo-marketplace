@@ -24,7 +24,7 @@ class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implement
      */
     public function getImportType(): string
     {
-        return ProductOfferStockDataImportConfig::IMPORT_TYPE_COMBINED_PRODUCT_OFFER_STOCK;
+        return ProductOfferStockDataImportConfig::PYZ_IMPORT_TYPE_COMBINED_PRODUCT_OFFER_STOCK;
     }
 
     /**
@@ -35,6 +35,6 @@ class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implement
     public function import(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer {
-        return $this->getFacade()->importCombinedProductOfferStock($dataImporterConfigurationTransfer);
+        return $this->getFacade()->importPyzCombinedProductOfferStock($dataImporterConfigurationTransfer);
     }
 }

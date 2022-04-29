@@ -18,7 +18,7 @@ interface ProductOfferValidityDataImportFacadeInterface extends SprykerProductOf
      *
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
-    public function importCombinedProductOfferValidity(
+    public function importPyzCombinedProductOfferValidity(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterReportTransfer;
 }

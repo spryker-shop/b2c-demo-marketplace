@@ -23,7 +23,7 @@ use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByItemInterface;
  */
 class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements CommandByItemInterface
 {
-    protected const EVENT_START_RETURN = 'start-return';
+    protected const PYZ_EVENT_START_RETURN = 'start-return';
 
     /**
      * {@inheritDoc}
@@ -48,7 +48,7 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
         }
 
         $merchantOmsTriggerRequestTransfer = (new MerchantOmsTriggerRequestTransfer())
-            ->setMerchantOmsEventName(static::EVENT_START_RETURN)
+            ->setMerchantOmsEventName(static::PYZ_EVENT_START_RETURN)
             ->addMerchantOrderItem($merchantOrderItemTransfer);
 
         $transitionCount = $this->getFacade()->triggerEventForMerchantOrderItems($merchantOmsTriggerRequestTransfer);
@@ -57,14 +57,14 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
             throw new LogicException(sprintf(
                 'Merchant Order Item #%s transition for event "%s" has not happened.',
                 $merchantOrderItemTransfer->getIdMerchantOrderItem(),
-                static::EVENT_START_RETURN
+                static::PYZ_EVENT_START_RETURN
             ));
         }
 
         $itemTransfer = (new ItemTransfer())
             ->setIdSalesOrderItem($orderItem->getIdSalesOrderItem());
 
-        $this->getFactory()->getSalesReturnFacade()->setOrderItemRemunerationAmount($itemTransfer);
+        $this->getFactory()->getPyzSalesReturnFacade()->setOrderItemRemunerationAmount($itemTransfer);
 
         return [];
     }

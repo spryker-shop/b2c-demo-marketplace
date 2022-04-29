@@ -57,6 +57,8 @@ actions:
     source: data/import/common/US/product_price_schedule.csv
   - data_entity: product-stock
     source: data/import/common/common/product_stock.csv
+  - data_entity: product-approval-status
+    source: data/import/common/common/product_abstract_approval_status.csv
   # Store relation
   - data_entity: product-abstract-store
     source: data/import/common/US/product_abstract_store.csv
@@ -193,6 +195,8 @@ actions:
     source: data/import/common/common/marketplace/merchant_product_option_group.csv
   - data_entity: merchant-category
     source: data/import/common/common/marketplace/merchant_category.csv
+  - data_entity: merchant-product-approval-status-default
+    source: data/import/common/common/marketplace/merchant_product_approval_status_default.csv
   - data_entity: stock-address
     source: data/import/common/common/marketplace/warehouse_address.csv
   - data_entity: stock-store

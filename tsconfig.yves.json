@@ -1,22 +1,6 @@
 {
+    "extends": "./tsconfig.base.json",
     "compilerOptions": {
-        "sourceMap": true,
-        "noImplicitAny": false,
-        "declaration": false,
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "noEmitHelpers": true,
-        "importHelpers": true,
-        "skipLibCheck": true,
-        "skipDefaultLibCheck": true,
-        "target": "es2015",
-        "module": "esnext",
-        "typeRoots": ["node_modules/@types"],
-        "lib": ["dom", "esnext"],
-        "baseUrl": ".",
-        "removeComments": true,
-        "rootDir": ".",
         "paths": {
             "*": ["*"],
             "ShopUiProject/*": ["./src/Pyz/Yves/ShopUi/Theme/default/*"],

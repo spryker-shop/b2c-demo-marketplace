@@ -62,6 +62,9 @@ use Spryker\Zed\Log\Communication\Console\DeleteLogFilesConsole;
 use Spryker\Zed\Maintenance\Communication\Console\MaintenanceDisableConsole;
 use Spryker\Zed\Maintenance\Communication\Console\MaintenanceEnableConsole;
 use Spryker\Zed\MerchantOms\Communication\Console\TriggerEventFromCsvFileConsole;
+use Spryker\Zed\MerchantProductApprovalDataImport\MerchantProductApprovalDataImportConfig;
+use Spryker\Zed\MessageBroker\Communication\Plugin\Console\MessageBrokerDebugConsole;
+use Spryker\Zed\MessageBroker\Communication\Plugin\Console\MessageBrokerWorkerConsole;
 use Spryker\Zed\Monitoring\Communication\Plugin\Console\MonitoringConsolePlugin;
 use Spryker\Zed\Oauth\Communication\Console\OauthTokenConsole;
 use Spryker\Zed\Oms\Communication\Console\CheckConditionConsole as OmsCheckConditionConsole;
@@ -74,6 +77,7 @@ use Spryker\Zed\PriceProductSchedule\Communication\Console\PriceProductScheduleA
 use Spryker\Zed\PriceProductSchedule\Communication\Console\PriceProductScheduleCleanupConsole;
 use Spryker\Zed\PriceProductScheduleDataImport\PriceProductScheduleDataImportConfig;
 use Spryker\Zed\ProductAlternativeDataImport\ProductAlternativeDataImportConfig;
+use Spryker\Zed\ProductApprovalDataImport\ProductApprovalDataImportConfig;
 use Spryker\Zed\ProductDiscontinued\Communication\Console\DeactivateDiscontinuedProductsConsole;
 use Spryker\Zed\ProductDiscontinuedDataImport\ProductDiscontinuedDataImportConfig;
 use Spryker\Zed\ProductLabel\Communication\Console\ProductLabelRelationUpdaterConsole;
@@ -171,7 +175,10 @@ use Stecman\Component\Symfony\Console\BashCompletion\CompletionCommand;
  */
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
-    protected const COMMAND_SEPARATOR = ':';
+    /**
+     * @var string
+     */
+    protected const PYZ_COMMAND_SEPARATOR = ':';
 
     /**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -215,7 +222,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . DataImportConfig::IMPORT_TYPE_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . DataImportConfig::IMPORT_TYPE_CURRENCY),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . CategoryDataImportConfig::IMPORT_TYPE_CATEGORY),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . CategoryDataImportConfig::IMPORT_TYPE_CATEGORY_STORE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . CategoryDataImportConfig::IMPORT_TYPE_CATEGORY_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . DataImportConfig::IMPORT_TYPE_CATEGORY_TEMPLATE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . DataImportConfig::IMPORT_TYPE_CUSTOMER),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . DataImportConfig::IMPORT_TYPE_GLOSSARY),
@@ -267,12 +274,14 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . ProductQuantityDataImportConfig::IMPORT_TYPE_PRODUCT_QUANTITY),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . ProductRelationDataImportConfig::IMPORT_TYPE_PRODUCT_RELATION),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . ProductRelationDataImportConfig::IMPORT_TYPE_PRODUCT_RELATION_STORE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_ROLE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP_ROLE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_RULE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_ROLE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP_ROLE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_RULE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . MerchantProductApprovalDataImportConfig::IMPORT_TYPE_MERCHANT_PRODUCT_APPROVAL_STATUS_DEFAULT),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::PYZ_COMMAND_SEPARATOR . ProductApprovalDataImportConfig::IMPORT_TYPE_PRODUCT_APPROVAL_STATUS),
 
             // Publish and Synchronization
             new EventBehaviorTriggerTimeoutConsole(),
@@ -355,12 +364,13 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
             new MerchantPortalBuildFrontendConsole(),
             new MerchantPortalInstallDependenciesConsole(),
+            new MessageBrokerWorkerConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
         $commands = array_merge($commands, $propelCommands);
 
-        if ($this->getConfig()->isDevelopmentConsoleCommandsEnabled()) {
+        if ($this->getConfig()->isPyzDevelopmentConsoleCommandsEnabled()) {
             $commands[] = new CodeTestConsole();
             $commands[] = new CodeFixturesConsole();
             $commands[] = new AcceptanceCodeTestConsole();
@@ -408,6 +418,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             $commands[] = new SprykDumpConsole();
             $commands[] = new SprykBuildConsole();
             $commands[] = new ComposerConstraintConsole();
+
+            $commands[] = new MessageBrokerDebugConsole();
 
             if (class_exists(SecurityCheckerCommand::class)) {
                 $commands[] = new SecurityCheckerCommand();

@@ -12,18 +12,18 @@ use Spryker\Zed\ProductOfferValidityDataImport\ProductOfferValidityDataImportCon
 
 class ProductOfferValidityDataImportConfig extends SprykerProductOfferValidityDataImportConfig
 {
-    public const IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY = 'combined-product-offer-validity';
+    public const PYZ_IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY = 'combined-product-offer-validity';
 
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
-    public function getCombinedProductOfferValidityDataImporterConfiguration(): DataImporterConfigurationTransfer
+    public function getPyzCombinedProductOfferValidityDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         $moduleDataImportDirectory = $this->getDataImportRootPath() . 'common' . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR;
 
         return $this->buildImporterConfiguration(
             $moduleDataImportDirectory . 'combined_merchant_product_offer.csv',
-            static::IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY
+            static::PYZ_IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY
         );
     }
 }
