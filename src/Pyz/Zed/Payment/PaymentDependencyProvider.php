@@ -36,4 +36,14 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
             new AccessTokenPaymentAuthorizeRequestExpanderPlugin(),
         ];
     }
+
+    /**
+     * @return array<int, \Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentAuthorizeRequestExpanderPluginInterface>
+     */
+    protected function getPaymentAuthorizeRequestExpanderPlugins(): array
+    {
+        return [
+            new AccessTokenPaymentAuthorizeRequestExpanderPlugin(),
+        ];
+    }
 }
