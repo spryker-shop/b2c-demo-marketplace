@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "333982122ffd5d7cd489c0f412e86c47",
+    "content-hash": "d0b3ebdd69598dad9c2a7167a28c6fe1",
     "packages": [
         {
             "name": "async-aws/core",
@@ -4258,7 +4258,7 @@
         },
         {
             "name": "spryker-feature/cart",
-            "version": "dev-master",
+            "version": "202204.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/cart.git",
@@ -4280,7 +4280,6 @@
                 "spryker/cart-variant": "^2.0.0",
                 "spryker/persistent-cart": "^3.5.0"
             },
-            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -5786,7 +5785,7 @@
         },
         {
             "name": "spryker-feature/order-management",
-            "version": "dev-master",
+            "version": "202204.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/order-management.git",
@@ -5814,7 +5813,6 @@
                 "spryker/sales-quantity": "^3.2.0",
                 "spryker/sales-split": "^5.1.0"
             },
-            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -58862,12 +58860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-sdk/integrator.git",
-                "reference": "3fd423c67c1786305c54c61bedd7ebb882730cb5"
+                "reference": "315027a971e6bc124562e99494e5693709dd57e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-sdk/integrator/zipball/3fd423c67c1786305c54c61bedd7ebb882730cb5",
-                "reference": "3fd423c67c1786305c54c61bedd7ebb882730cb5",
+                "url": "https://api.github.com/repos/spryker-sdk/integrator/zipball/315027a971e6bc124562e99494e5693709dd57e7",
+                "reference": "315027a971e6bc124562e99494e5693709dd57e7",
                 "shasum": ""
             },
             "require": {
@@ -58911,7 +58909,7 @@
                 "issues": "https://github.com/spryker-sdk/integrator/issues",
                 "source": "https://github.com/spryker-sdk/integrator/tree/master"
             },
-            "time": "2022-03-30T11:23:53+00:00"
+            "time": "2022-04-28T13:35:53+00:00"
         },
         {
             "name": "spryker-sdk/phpstan-spryker",
@@ -59461,12 +59459,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/docker-chromedriver.git",
-                "reference": "acc17f3698859e4f0e0d9191fdbd2cef30460acd"
+                "reference": "168af541f83c205884f5ed3dc01c5b6eb115eef2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/docker-chromedriver/zipball/acc17f3698859e4f0e0d9191fdbd2cef30460acd",
-                "reference": "acc17f3698859e4f0e0d9191fdbd2cef30460acd",
+                "url": "https://api.github.com/repos/spryker/docker-chromedriver/zipball/168af541f83c205884f5ed3dc01c5b6eb115eef2",
+                "reference": "168af541f83c205884f5ed3dc01c5b6eb115eef2",
                 "shasum": ""
             },
             "default-branch": true,
@@ -59491,7 +59489,7 @@
                 "issues": "https://github.com/spryker/docker-chromedriver/issues",
                 "source": "https://github.com/spryker/docker-chromedriver/tree/master"
             },
-            "time": "2020-10-07T09:58:21+00:00"
+            "time": "2022-04-11T08:49:47+00:00"
         },
         {
             "name": "spryker/module-finder",
@@ -60555,9 +60553,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "spryker-feature/cart": 20,
-        "spryker-feature/order-management": 20,
-        "spryker-sdk/integrator": 20
+        "spryker-sdk/integrator": 20,
+        "spryker/docker-chromedriver": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
