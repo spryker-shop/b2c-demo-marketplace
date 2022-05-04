@@ -22,7 +22,9 @@ export default class AutocompleteForm extends AutocompleteFormCore {
         }
 
         if (!this.textInput) {
-            super.init();
+            /* tslint:disable: deprecation */
+            super.readyCallback();
+            /* tslint:enable: deprecation */
         }
     }
 
