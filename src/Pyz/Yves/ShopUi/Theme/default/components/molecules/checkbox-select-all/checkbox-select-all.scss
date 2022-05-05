@@ -6,9 +6,12 @@
         padding: rem(15) 0;
         margin-bottom: rem(20);
         width: 100%;
+        line-height: 1;
 
         &__container {
             position: relative;
+            display: inline-flex;
+            vertical-align: top;
         }
 
         &__minus {
@@ -49,6 +52,21 @@
                 & ~ #{$name}__check {
                     display: none;
                 }
+            }
+        }
+
+        &__box {
+            flex-shrink: 0;
+        }
+
+        &[disabled],
+        &--disabled {
+            #{$name}__container {
+                cursor: not-allowed;
+            }
+
+            #{$name}__box {
+                background-color: $setting-color-gray-3;
             }
         }
     }
