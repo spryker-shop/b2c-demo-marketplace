@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42dee25eb1dc37bfe6fe11e0511ad3e4",
+    "content-hash": "3790e18d1e8eafea4a59f61668addf2a",
     "packages": [
         {
             "name": "async-aws/core",
@@ -47922,16 +47922,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "9dab3b953328250e9ed46740622d87420d7ee045"
+                "reference": "b4ec757ca7173ddaecbb832769676074329a62d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/9dab3b953328250e9ed46740622d87420d7ee045",
-                "reference": "9dab3b953328250e9ed46740622d87420d7ee045",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/b4ec757ca7173ddaecbb832769676074329a62d9",
+                "reference": "b4ec757ca7173ddaecbb832769676074329a62d9",
                 "shasum": ""
             },
             "require": {
@@ -47969,9 +47969,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/1.5.0"
+                "source": "https://github.com/spryker/zed-ui/tree/1.5.1"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-05-12T09:33:24+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
