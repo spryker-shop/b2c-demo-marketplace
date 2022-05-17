@@ -116,17 +116,4 @@ class AclConfig extends SprykerAclConfig
             ],
         ];
     }
-
-    /**
-     * @return array
-     */
-    public function getInstallerGroups(): array
-    {
-        return [
-            [
-                'name' => AclConstants::ROOT_GROUP,
-                'reference' => AclConstants::ROOT_GROUP,
-            ],
-        ];
-    }
 }
