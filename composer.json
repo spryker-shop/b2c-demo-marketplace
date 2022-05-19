@@ -1130,7 +1130,7 @@
         "spryker/zed-navigation-extension": "1.1.0",
         "spryker/zed-request": "3.18.0",
         "spryker/zed-request-extension": "1.0.0",
-        "spryker/zed-ui": "1.5.0",
+        "spryker/zed-ui": "1.5.1",
         "stecman/symfony-console-completion": "*",
         "swiftmailer/swiftmailer": "6.3.0",
         "symfony-cmf/routing": "2.3.4",
