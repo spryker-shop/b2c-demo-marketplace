@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f85fc6f83c9590c35cbd174c6e6acf9",
+    "content-hash": "400d5779d86452a8570f0e9955184308",
     "packages": [
         {
             "name": "async-aws/core",
@@ -13100,16 +13100,16 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "b7317aa401e87302374b537c620be7610fa7e871"
+                "reference": "c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/b7317aa401e87302374b537c620be7610fa7e871",
-                "reference": "b7317aa401e87302374b537c620be7610fa7e871",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b",
+                "reference": "c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b",
                 "shasum": ""
             },
             "require": {
@@ -13154,9 +13154,9 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/1.4.0"
+                "source": "https://github.com/spryker/acl-entity/tree/1.4.1"
             },
-            "time": "2022-04-15T13:47:42+00:00"
+            "time": "2022-05-30T12:50:35+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
@@ -13282,6 +13282,9 @@
                 "proprietary"
             ],
             "description": "AclExtension module",
+            "support": {
+                "source": "https://github.com/spryker/acl-extension/tree/1.1.0"
+            },
             "time": "2021-07-30T05:04:54+00:00"
         },
         {
@@ -32196,6 +32199,9 @@
                 "proprietary"
             ],
             "description": "PriceProductOfferExtension module",
+            "support": {
+                "source": "https://github.com/spryker/price-product-offer-extension/tree/1.0.0"
+            },
             "time": "2021-07-12T07:32:25+00:00"
         },
         {
@@ -36617,16 +36623,16 @@
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui",
-            "version": "1.10.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-merchant-portal-gui.git",
-                "reference": "bb3e16b1475c6b96ca0e86b02e593684ce17854e"
+                "reference": "0732e9221418ff08c4cc5abfa65dbdca28bb8781"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/bb3e16b1475c6b96ca0e86b02e593684ce17854e",
-                "reference": "bb3e16b1475c6b96ca0e86b02e593684ce17854e",
+                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/0732e9221418ff08c4cc5abfa65dbdca28bb8781",
+                "reference": "0732e9221418ff08c4cc5abfa65dbdca28bb8781",
                 "shasum": ""
             },
             "require": {
@@ -36685,9 +36691,9 @@
             ],
             "description": "ProductOfferMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.10.0"
+                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.10.1"
             },
-            "time": "2022-05-23T11:14:13+00:00"
+            "time": "2022-05-30T12:50:35+00:00"
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui-extension",
@@ -47609,6 +47615,9 @@
                 "proprietary"
             ],
             "description": "WishlistExtension module",
+            "support": {
+                "source": "https://github.com/spryker/wishlist-extension/tree/1.3.0"
+            },
             "time": "2021-10-29T06:02:31+00:00"
         },
         {
@@ -48480,6 +48489,9 @@
                 "console",
                 "terminal"
             ],
+            "support": {
+                "source": "https://github.com/symfony/console/tree/v5.4.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
