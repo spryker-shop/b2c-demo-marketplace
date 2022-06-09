@@ -124,11 +124,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getMerchantProductPlugins(),
             $this->getMerchantOpeningHoursStoragePlugins(),
             $this->getMerchantProductOptionStoragePlugins(),
-            $this->getMerchantProductOfferStoragePlugins(),
             $this->getMerchantCategoryPublisherPlugins(),
             $this->getPriceProductOfferStoragePlugins(),
             $this->getMerchantProductSearchPlugins(),
             $this->getProductOfferStoragePlugins(),
+            $this->getMerchantProductOfferStoragePlugins(),
         );
     }
 
