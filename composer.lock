@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c543cbb8a1ce393bb172b874af58dd3",
+    "content-hash": "9f2f40df85ebc92e69b764855791f62d",
     "packages": [
         {
             "name": "async-aws/core",
@@ -631,6 +631,10 @@
                 "parser",
                 "php"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/lexer/issues",
+                "source": "https://github.com/doctrine/lexer/tree/1.2.3"
+            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -703,6 +707,10 @@
                 "validation",
                 "validator"
             ],
+            "support": {
+                "issues": "https://github.com/egulias/EmailValidator/issues",
+                "source": "https://github.com/egulias/EmailValidator/tree/3.1.2"
+            },
             "funding": [
                 {
                     "url": "https://github.com/egulias",
@@ -772,6 +780,10 @@
                 "elasticsearch",
                 "search"
             ],
+            "support": {
+                "issues": "https://github.com/elastic/elasticsearch-php/issues",
+                "source": "https://github.com/elastic/elasticsearch-php/tree/v7.17.0"
+            },
             "time": "2022-02-03T13:40:04+00:00"
         },
         {
@@ -1065,6 +1077,9 @@
                 }
             ],
             "description": "Fork of guzzle/RingPHP (abandoned) to be used with elasticsearch-php",
+            "support": {
+                "source": "https://github.com/ezimuel/ringphp/tree/1.2.0"
+            },
             "time": "2021-11-16T11:51:30+00:00"
         },
         {
@@ -1171,6 +1186,10 @@
                 "rest",
                 "web service"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/guzzle/issues",
+                "source": "https://github.com/guzzle/guzzle/tree/7.4.3"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -1251,6 +1270,10 @@
             "keywords": [
                 "promise"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/promises/issues",
+                "source": "https://github.com/guzzle/promises/tree/1.5.1"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -1438,6 +1461,14 @@
                 "config",
                 "laminas"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-config/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-config/issues",
+                "rss": "https://github.com/laminas/laminas-config/releases.atom",
+                "source": "https://github.com/laminas/laminas-config"
+            },
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1512,6 +1543,14 @@
                 "filter",
                 "laminas"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-filter/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-filter/issues",
+                "rss": "https://github.com/laminas/laminas-filter/releases.atom",
+                "source": "https://github.com/laminas/laminas-filter"
+            },
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1590,6 +1629,14 @@
                 "service-manager",
                 "servicemanager"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-servicemanager/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-servicemanager/issues",
+                "rss": "https://github.com/laminas/laminas-servicemanager/releases.atom",
+                "source": "https://github.com/laminas/laminas-servicemanager"
+            },
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1641,6 +1688,14 @@
                 "laminas",
                 "stdlib"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-stdlib/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-stdlib/issues",
+                "rss": "https://github.com/laminas/laminas-stdlib/releases.atom",
+                "source": "https://github.com/laminas/laminas-stdlib"
+            },
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1697,6 +1752,12 @@
                 "laminas",
                 "zf"
             ],
+            "support": {
+                "forum": "https://discourse.laminas.dev/",
+                "issues": "https://github.com/laminas/laminas-zendframework-bridge/issues",
+                "rss": "https://github.com/laminas/laminas-zendframework-bridge/releases.atom",
+                "source": "https://github.com/laminas/laminas-zendframework-bridge"
+            },
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -2614,6 +2675,10 @@
                 "dsn parser",
                 "parser"
             ],
+            "support": {
+                "issues": "https://github.com/Nyholm/dsn/issues",
+                "source": "https://github.com/Nyholm/dsn/tree/2.0.1"
+            },
             "funding": [
                 {
                     "url": "https://github.com/Nyholm",
@@ -3023,6 +3088,10 @@
                 "predis",
                 "redis"
             ],
+            "support": {
+                "issues": "https://github.com/predis/predis/issues",
+                "source": "https://github.com/predis/predis/tree/v1.1.10"
+            },
             "funding": [
                 {
                     "url": "https://github.com/sponsors/tillkruss",
@@ -3100,6 +3169,10 @@
                 "orm",
                 "persistence"
             ],
+            "support": {
+                "issues": "https://github.com/propelorm/Propel2/issues",
+                "source": "https://github.com/propelorm/Propel2/tree/2.0.0-beta1"
+            },
             "time": "2021-09-05T12:51:18+00:00"
         },
         {
@@ -3193,6 +3266,10 @@
                 "container-interop",
                 "psr"
             ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/1.1.2"
+            },
             "time": "2021-11-05T16:50:12+00:00"
         },
         {
@@ -3347,6 +3424,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/master"
+            },
             "time": "2019-04-30T12:38:16+00:00"
         },
         {
@@ -3725,6 +3805,10 @@
                 "promise",
                 "promises"
             ],
+            "support": {
+                "issues": "https://github.com/reactphp/promise/issues",
+                "source": "https://github.com/reactphp/promise/tree/v2.9.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/WyriHaximus",
@@ -3906,6 +3990,10 @@
                 "sigterm",
                 "unix"
             ],
+            "support": {
+                "issues": "https://github.com/Seldaek/signal-handler/issues",
+                "source": "https://github.com/Seldaek/signal-handler/tree/1.3.0"
+            },
             "time": "2022-02-17T20:38:26+00:00"
         },
         {
@@ -5127,12 +5215,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product-offer.git",
-                "reference": "545d10a8a5d59fbccf3dc1d0c8b63fe3d01240c9"
+                "reference": "8cd0e6b48da3cb224225a7f566ad89874bab0dca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer/zipball/545d10a8a5d59fbccf3dc1d0c8b63fe3d01240c9",
-                "reference": "545d10a8a5d59fbccf3dc1d0c8b63fe3d01240c9",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer/zipball/8cd0e6b48da3cb224225a7f566ad89874bab0dca",
+                "reference": "8cd0e6b48da3cb224225a7f566ad89874bab0dca",
                 "shasum": ""
             },
             "require": {
@@ -5156,6 +5244,7 @@
                 "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
                 "spryker-feature/product": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -5168,9 +5257,9 @@
             ],
             "description": "Marketplace Product Offer [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-product-offer/tree/master"
+                "source": "https://github.com/spryker-feature/marketplace-product-offer/tree/202204.0"
             },
-            "time": "2022-04-13T13:17:37+00:00"
+            "time": "2022-04-18T15:12:02+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product-offer-prices",
@@ -7489,6 +7578,9 @@
                 "proprietary"
             ],
             "description": "CartPageExtension module",
+            "support": {
+                "source": "https://github.com/spryker-shop/cart-page-extension/tree/1.1.0"
+            },
             "time": "2022-02-01T08:28:45+00:00"
         },
         {
@@ -13468,9 +13560,9 @@
             "autoload": {
                 "psr-4": {
                     "Spryker\\": "src/Spryker/",
-                    "SprykerTest\\Shared\\Application\\Helper\\": "tests/SprykerTest/Shared/Application/_support/Helper/",
+                    "SprykerTest\\Zed\\Application\\Helper\\": "tests/SprykerTest/Zed/Application/_support/Helper/",
                     "SprykerTest\\Yves\\Application\\Helper\\": "tests/SprykerTest/Yves/Application/_support/Helper/",
-                    "SprykerTest\\Zed\\Application\\Helper\\": "tests/SprykerTest/Zed/Application/_support/Helper/"
+                    "SprykerTest\\Shared\\Application\\Helper\\": "tests/SprykerTest/Shared/Application/_support/Helper/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -13876,6 +13968,9 @@
                 "proprietary"
             ],
             "description": "AuthorizationExtension module",
+            "support": {
+                "source": "https://github.com/spryker/authorization-extension/tree/1.0.0"
+            },
             "time": "2021-08-06T12:09:29+00:00"
         },
         {
@@ -19243,6 +19338,9 @@
                 "proprietary"
             ],
             "description": "Collector module",
+            "support": {
+                "source": "https://github.com/spryker/collector/tree/6.7.0"
+            },
             "time": "2022-01-04T12:43:20+00:00"
         },
         {
@@ -20025,6 +20123,9 @@
                 "proprietary"
             ],
             "description": "Container module",
+            "support": {
+                "source": "https://github.com/spryker/container/tree/1.4.5"
+            },
             "time": "2021-10-26T15:19:01+00:00"
         },
         {
@@ -21179,6 +21280,9 @@
                 "proprietary"
             ],
             "description": "Currency module",
+            "support": {
+                "source": "https://github.com/spryker/currency/tree/3.14.0"
+            },
             "time": "2021-10-29T12:16:10+00:00"
         },
         {
@@ -21296,6 +21400,9 @@
                 "proprietary"
             ],
             "description": "Customer module",
+            "support": {
+                "source": "https://github.com/spryker/customer/tree/7.41.0"
+            },
             "time": "2022-03-11T12:09:21+00:00"
         },
         {
@@ -22365,6 +22472,10 @@
                 }
             ],
             "description": "PHP decimal handling as value object",
+            "support": {
+                "issues": "https://github.com/spryker/decimal-object/issues",
+                "source": "https://github.com/spryker/decimal-object/tree/1.0.2"
+            },
             "time": "2021-07-30T15:32:04+00:00"
         },
         {
@@ -22987,6 +23098,9 @@
                 "proprietary"
             ],
             "description": "Egulias module",
+            "support": {
+                "source": "https://github.com/spryker/egulias/tree/1.1.1"
+            },
             "time": "2021-08-30T13:35:56+00:00"
         },
         {
@@ -23172,6 +23286,9 @@
                 "proprietary"
             ],
             "description": "ErrorHandler module",
+            "support": {
+                "source": "https://github.com/spryker/error-handler/tree/2.7.0"
+            },
             "time": "2021-09-03T16:43:04+00:00"
         },
         {
@@ -23214,6 +23331,9 @@
                 "proprietary"
             ],
             "description": "ErrorHandlerExtension module",
+            "support": {
+                "source": "https://github.com/spryker/error-handler-extension/tree/1.0.0"
+            },
             "time": "2021-08-19T11:49:45+00:00"
         },
         {
@@ -23263,6 +23383,9 @@
                 "proprietary"
             ],
             "description": "Event module",
+            "support": {
+                "source": "https://github.com/spryker/event/tree/2.9.2"
+            },
             "time": "2021-12-15T15:02:47+00:00"
         },
         {
@@ -23329,6 +23452,9 @@
                 "proprietary"
             ],
             "description": "EventBehavior module",
+            "support": {
+                "source": "https://github.com/spryker/event-behavior"
+            },
             "time": "2021-10-22T06:26:54+00:00"
         },
         {
@@ -24254,6 +24380,9 @@
                 "proprietary"
             ],
             "description": "Glossary module",
+            "support": {
+                "source": "https://github.com/spryker/glossary/tree/3.11.5"
+            },
             "time": "2021-12-15T15:02:47+00:00"
         },
         {
@@ -25458,6 +25587,9 @@
                 "proprietary"
             ],
             "description": "KeyBuilder module",
+            "support": {
+                "source": "https://github.com/spryker/key-builder/tree/1.1.0"
+            },
             "time": "2022-01-04T12:43:20+00:00"
         },
         {
@@ -25553,6 +25685,9 @@
                 "proprietary"
             ],
             "description": "Locale module",
+            "support": {
+                "source": "https://github.com/spryker/locale/tree/3.8.1"
+            },
             "time": "2022-02-23T20:58:33+00:00"
         },
         {
@@ -25653,6 +25788,9 @@
                 "proprietary"
             ],
             "description": "Log module",
+            "support": {
+                "source": "https://github.com/spryker/log/tree/3.13.0"
+            },
             "time": "2022-02-17T09:19:06+00:00"
         },
         {
@@ -25698,6 +25836,9 @@
                 "proprietary"
             ],
             "description": "Mail module",
+            "support": {
+                "source": "https://github.com/spryker/mail/tree/4.8.0"
+            },
             "time": "2022-01-04T12:43:20+00:00"
         },
         {
@@ -25838,6 +25979,9 @@
                 "proprietary"
             ],
             "description": "Merchant module",
+            "support": {
+                "source": "https://github.com/spryker/merchant/tree/3.5.1"
+            },
             "time": "2022-02-22T13:01:19+00:00"
         },
         {
@@ -26106,6 +26250,9 @@
                 "proprietary"
             ],
             "description": "MerchantExtension module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-extension/tree/1.1.0"
+            },
             "time": "2020-01-29T09:34:23+00:00"
         },
         {
@@ -26910,6 +27057,9 @@
                 "MIT"
             ],
             "description": "MerchantProductOfferDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-offer-data-import/tree/1.0.0"
+            },
             "time": "2022-02-24T16:37:46+00:00"
         },
         {
@@ -26956,6 +27106,9 @@
                 "proprietary"
             ],
             "description": "MerchantProductOfferGui module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-offer-gui/tree/1.0.1"
+            },
             "time": "2021-08-19T10:54:56+00:00"
         },
         {
@@ -27079,6 +27232,9 @@
                 "proprietary"
             ],
             "description": "MerchantProductOfferStorage module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-offer-storage/tree/2.0.0"
+            },
             "time": "2022-02-24T16:37:46+00:00"
         },
         {
@@ -27117,6 +27273,9 @@
                 "proprietary"
             ],
             "description": "MerchantProductOfferStorageExtension module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-offer-storage-extension/tree/1.1.0"
+            },
             "time": "2022-02-24T16:37:46+00:00"
         },
         {
@@ -28564,6 +28723,9 @@
                 "proprietary"
             ],
             "description": "MerchantStorage module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-storage/tree/1.1.0"
+            },
             "time": "2022-02-24T16:37:46+00:00"
         },
         {
@@ -29045,6 +29207,9 @@
                 "proprietary"
             ],
             "description": "Messenger module",
+            "support": {
+                "source": "https://github.com/spryker/messenger/tree/3.6.2"
+            },
             "time": "2021-07-28T15:07:53+00:00"
         },
         {
@@ -29145,6 +29310,9 @@
                 "proprietary"
             ],
             "description": "Money module",
+            "support": {
+                "source": "https://github.com/spryker/money/tree/2.10.0"
+            },
             "time": "2022-01-04T12:43:20+00:00"
         },
         {
@@ -29198,6 +29366,9 @@
                 "proprietary"
             ],
             "description": "Monitoring module",
+            "support": {
+                "source": "https://github.com/spryker/monitoring/tree/2.4.0"
+            },
             "time": "2022-01-04T12:43:20+00:00"
         },
         {
@@ -31663,6 +31834,9 @@
                 "proprietary"
             ],
             "description": "PriceProductMerchantRelationshipStorageExtension module",
+            "support": {
+                "source": "https://github.com/spryker/price-product-merchant-relationship-storage-extension/tree/1.0.0"
+            },
             "time": "2021-09-30T13:33:17+00:00"
         },
         {
@@ -32319,6 +32493,9 @@
                 "proprietary"
             ],
             "description": "PriceProductStorageExtension module",
+            "support": {
+                "source": "https://github.com/spryker/price-product-storage-extension/tree/1.3.0"
+            },
             "time": "2021-10-29T06:02:31+00:00"
         },
         {
@@ -32515,6 +32692,9 @@
                 "proprietary"
             ],
             "description": "Product module",
+            "support": {
+                "source": "https://github.com/spryker/product/tree/6.28.0"
+            },
             "time": "2022-02-22T13:01:19+00:00"
         },
         {
@@ -34470,6 +34650,9 @@
                 "proprietary"
             ],
             "description": "ProductExtension module",
+            "support": {
+                "source": "https://github.com/spryker/product-extension/tree/1.3.0"
+            },
             "time": "2022-02-22T13:01:19+00:00"
         },
         {
@@ -34630,6 +34813,9 @@
                 "proprietary"
             ],
             "description": "ProductImage module",
+            "support": {
+                "source": "https://github.com/spryker/product-image/tree/3.12.0"
+            },
             "time": "2022-02-22T13:01:19+00:00"
         },
         {
@@ -36718,16 +36904,16 @@
         },
         {
             "name": "spryker/product-offer-storage",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-storage.git",
-                "reference": "0e4b8d904e6319622ca98fcfd97488fc2c76966e"
+                "reference": "cd6a3d5ec31532760988fdb8db92b7f4e691eb58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-storage/zipball/0e4b8d904e6319622ca98fcfd97488fc2c76966e",
-                "reference": "0e4b8d904e6319622ca98fcfd97488fc2c76966e",
+                "url": "https://api.github.com/repos/spryker/product-offer-storage/zipball/cd6a3d5ec31532760988fdb8db92b7f4e691eb58",
+                "reference": "cd6a3d5ec31532760988fdb8db92b7f4e691eb58",
                 "shasum": ""
             },
             "require": {
@@ -36745,6 +36931,7 @@
                 "spryker/synchronization": "^1.0.0",
                 "spryker/synchronization-behavior": "^1.0.0",
                 "spryker/synchronization-extension": "^1.1.0",
+                "spryker/transfer": "^3.25.0",
                 "spryker/util-encoding": "^2.0.0"
             },
             "require-dev": {
@@ -36772,7 +36959,10 @@
                 "proprietary"
             ],
             "description": "ProductOfferStorage module",
-            "time": "2022-02-24T16:37:46+00:00"
+            "support": {
+                "source": "https://github.com/spryker/product-offer-storage/tree/1.1.0"
+            },
+            "time": "2022-06-08T15:22:39+00:00"
         },
         {
             "name": "spryker/product-offer-storage-extension",
@@ -36810,6 +37000,9 @@
                 "proprietary"
             ],
             "description": "ProductOfferStorageExtension module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-storage-extension/tree/1.0.0"
+            },
             "time": "2022-02-24T16:37:46+00:00"
         },
         {
@@ -36905,6 +37098,9 @@
                 "MIT"
             ],
             "description": "ProductOfferValidityDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-validity-data-import/tree/0.5.0"
+            },
             "time": "2021-08-16T16:27:47+00:00"
         },
         {
@@ -37480,6 +37676,9 @@
                 "proprietary"
             ],
             "description": "ProductPageSearchExtension module",
+            "support": {
+                "source": "https://github.com/spryker/product-page-search-extension/tree/1.6.0"
+            },
             "time": "2022-02-11T12:49:43+00:00"
         },
         {
@@ -38361,6 +38560,9 @@
                 "proprietary"
             ],
             "description": "ProductSearch module",
+            "support": {
+                "source": "https://github.com/spryker/product-search/tree/5.15.0"
+            },
             "time": "2022-02-22T13:01:19+00:00"
         },
         {
@@ -38757,6 +38959,9 @@
                 "proprietary"
             ],
             "description": "ProductStorageExtension module",
+            "support": {
+                "source": "https://github.com/spryker/product-storage-extension/tree/1.7.0"
+            },
             "time": "2022-02-11T12:49:43+00:00"
         },
         {
@@ -39054,6 +39259,9 @@
                 "proprietary"
             ],
             "description": "Propel module",
+            "support": {
+                "source": "https://github.com/spryker/propel/tree/3.34.2"
+            },
             "time": "2022-02-22T13:01:19+00:00"
         },
         {
@@ -39497,6 +39705,9 @@
                 "proprietary"
             ],
             "description": "Queue module",
+            "support": {
+                "source": "https://github.com/spryker/queue/tree/1.9.1"
+            },
             "time": "2021-10-05T10:02:48+00:00"
         },
         {
@@ -45534,6 +45745,9 @@
                 "proprietary"
             ],
             "description": "Url module",
+            "support": {
+                "source": "https://github.com/spryker/url/tree/3.8.0"
+            },
             "time": "2022-01-04T12:43:20+00:00"
         },
         {
@@ -46196,6 +46410,9 @@
                 "proprietary"
             ],
             "description": "UtilDataReader module",
+            "support": {
+                "source": "https://github.com/spryker/util-data-reader/tree/1.2.4"
+            },
             "time": "2021-10-26T15:19:01+00:00"
         },
         {
@@ -47091,6 +47308,9 @@
                 "proprietary"
             ],
             "description": "WishlistExtension module",
+            "support": {
+                "source": "https://github.com/spryker/wishlist-extension/tree/1.3.0"
+            },
             "time": "2021-10-29T06:02:31+00:00"
         },
         {
@@ -47356,6 +47576,9 @@
                 "proprietary"
             ],
             "description": "ZedRequest module",
+            "support": {
+                "source": "https://github.com/spryker/zed-request/tree/3.18.0"
+            },
             "time": "2022-01-04T12:43:20+00:00"
         },
         {
@@ -47511,6 +47734,10 @@
                 "mail",
                 "mailer"
             ],
+            "support": {
+                "issues": "https://github.com/swiftmailer/swiftmailer/issues",
+                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.3.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/fabpot",
@@ -47581,6 +47808,10 @@
                 "database",
                 "routing"
             ],
+            "support": {
+                "issues": "https://github.com/symfony-cmf/Routing/issues",
+                "source": "https://github.com/symfony-cmf/Routing/tree/2.3.4"
+            },
             "time": "2021-11-08T16:33:10+00:00"
         },
         {
@@ -47951,6 +48182,9 @@
                 "console",
                 "terminal"
             ],
+            "support": {
+                "source": "https://github.com/symfony/console/tree/v5.4.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -48016,6 +48250,9 @@
             ],
             "description": "Provides tools to ease debugging PHP code",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/debug/tree/v4.4.37"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -48081,6 +48318,9 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -48379,6 +48619,9 @@
             ],
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -48455,6 +48698,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v2.5.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -48579,6 +48825,9 @@
             ],
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/finder/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -48844,6 +49093,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/http-client-contracts/tree/v2.5.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -48914,6 +49166,9 @@
             ],
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/http-foundation/tree/v5.4.6"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49111,6 +49366,9 @@
                 "l10n",
                 "localization"
             ],
+            "support": {
+                "source": "https://github.com/symfony/intl/tree/v5.4.5"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49350,6 +49608,9 @@
                 "configuration",
                 "options"
             ],
+            "support": {
+                "source": "https://github.com/symfony/options-resolver/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49420,6 +49681,9 @@
                 "hashing",
                 "password"
             ],
+            "support": {
+                "source": "https://github.com/symfony/password-hasher/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49499,6 +49763,9 @@
                 "polyfill",
                 "portable"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49579,6 +49846,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49657,6 +49927,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49741,6 +50014,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-icu/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49825,6 +50101,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49906,6 +50185,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -49986,6 +50268,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50059,6 +50344,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50135,6 +50423,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50215,6 +50506,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50291,6 +50585,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.25.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50679,6 +50976,9 @@
                 "uri",
                 "url"
             ],
+            "support": {
+                "source": "https://github.com/symfony/routing/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50841,6 +51141,9 @@
             ],
             "description": "Symfony Security Component - CSRF Library",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/security-csrf/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50905,6 +51208,9 @@
             ],
             "description": "Symfony Security Component - Guard",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/security-guard/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -50987,6 +51293,9 @@
             ],
             "description": "Symfony Security Component - HTTP Integration",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/security-http/tree/v5.4.5"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -51170,6 +51479,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/service-contracts/tree/v2.5.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -51229,6 +51541,9 @@
             ],
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/stopwatch/tree/v5.4.5"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -51312,6 +51627,9 @@
                 "utf-8",
                 "utf8"
             ],
+            "support": {
+                "source": "https://github.com/symfony/string/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -51484,6 +51802,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/translation-contracts/tree/v2.5.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -51804,6 +52125,9 @@
                 "debug",
                 "dump"
             ],
+            "support": {
+                "source": "https://github.com/symfony/var-dumper/tree/v5.4.6"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -51876,6 +52200,9 @@
             ],
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v5.4.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -52023,6 +52350,10 @@
                 "security",
                 "xss"
             ],
+            "support": {
+                "issues": "https://github.com/voku/anti-xss/issues",
+                "source": "https://github.com/voku/anti-xss/tree/4.1.39"
+            },
             "funding": [
                 {
                     "url": "https://www.paypal.me/moelleken",
@@ -52093,6 +52424,10 @@
                 "clean",
                 "php"
             ],
+            "support": {
+                "issues": "https://github.com/voku/portable-ascii/issues",
+                "source": "https://github.com/voku/portable-ascii/tree/2.0.1"
+            },
             "funding": [
                 {
                     "url": "https://www.paypal.me/moelleken",
@@ -52188,6 +52523,10 @@
                 "utf-8",
                 "utf8"
             ],
+            "support": {
+                "issues": "https://github.com/voku/portable-utf8/issues",
+                "source": "https://github.com/voku/portable-utf8/tree/6.0.4"
+            },
             "funding": [
                 {
                     "url": "https://www.paypal.me/moelleken",
@@ -52314,6 +52653,10 @@
                 }
             ],
             "description": "A PHP implementation of Ant's glob.",
+            "support": {
+                "issues": "https://github.com/webmozarts/glob/issues",
+                "source": "https://github.com/webmozarts/glob/tree/4.4.0"
+            },
             "time": "2021-10-07T16:13:08+00:00"
         },
         {
@@ -59297,388 +59640,388 @@
     ],
     "aliases": [
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/acl",
             "version": "9999999-dev",
-            "package": "spryker-feature/acl"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/agent-assist",
             "version": "9999999-dev",
-            "package": "spryker-feature/agent-assist"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/alternative-products",
             "version": "9999999-dev",
-            "package": "spryker-feature/alternative-products"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/availability-notification",
             "version": "9999999-dev",
-            "package": "spryker-feature/availability-notification"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/catalog",
             "version": "9999999-dev",
-            "package": "spryker-feature/catalog"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/category-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/category-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/checkout",
             "version": "9999999-dev",
-            "package": "spryker-feature/checkout"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/cms",
             "version": "9999999-dev",
-            "package": "spryker-feature/cms"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/configurable-bundle",
             "version": "9999999-dev",
-            "package": "spryker-feature/configurable-bundle"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/customer-access",
             "version": "9999999-dev",
-            "package": "spryker-feature/customer-access"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/customer-account-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/customer-account-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/deployment-tools",
             "version": "9999999-dev",
-            "package": "spryker-feature/deployment-tools"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/development-tools",
             "version": "9999999-dev",
-            "package": "spryker-feature/file-manager"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/file-manager",
             "version": "9999999-dev",
-            "package": "spryker-feature/gift-cards"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/gift-cards",
             "version": "9999999-dev",
-            "package": "spryker-feature/inventory-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/inventory-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/invoice"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/invoice",
             "version": "9999999-dev",
-            "package": "spryker-feature/mailing-notifications"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/mailing-notifications",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-cart"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-cart",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-inventory-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-inventory-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-merchant"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-merchant",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-merchant-portal-product-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-merchant-portal-product-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-merchant-portal-product-offer-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-merchant-portal-product-offer-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-merchantportal-core"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-merchantportal-core",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-order-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-order-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-product"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-product",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-product-approval-process"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-product-approval-process",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-product-offer"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-product-offer",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-product-offer-prices"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-product-offer-prices",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-product-options"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-product-options",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-promotions-discounts"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-promotions-discounts",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-return-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-return-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-shipment"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-shipment",
             "version": "9999999-dev",
-            "package": "spryker-feature/marketplace-wishlist"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/marketplace-wishlist",
             "version": "9999999-dev",
-            "package": "spryker-feature/merchant"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/merchant",
             "version": "9999999-dev",
-            "package": "spryker-feature/merchant-category"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/merchant-category",
             "version": "9999999-dev",
-            "package": "spryker-feature/merchant-opening-hours"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/merchant-opening-hours",
             "version": "9999999-dev",
-            "package": "spryker-feature/navigation"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/navigation",
             "version": "9999999-dev",
-            "package": "spryker-feature/non-splittable-products"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/non-splittable-products",
             "version": "9999999-dev",
-            "package": "spryker-feature/payments"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/payments",
             "version": "9999999-dev",
-            "package": "spryker-feature/prices"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/prices",
             "version": "9999999-dev",
-            "package": "spryker-feature/product"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-approval-process"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-approval-process",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-barcode"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-barcode",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-bundles"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-bundles",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-groups"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-groups",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-labels"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-labels",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-lists"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-lists",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-options"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-options",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-rating-reviews"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-rating-reviews",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-relations"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-relations",
             "version": "9999999-dev",
-            "package": "spryker-feature/product-sets"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/product-sets",
             "version": "9999999-dev",
-            "package": "spryker-feature/reclamations"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/reclamations",
             "version": "9999999-dev",
-            "package": "spryker-feature/refunds"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/refunds",
             "version": "9999999-dev",
-            "package": "spryker-feature/reorder"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/reorder",
             "version": "9999999-dev",
-            "package": "spryker-feature/return-management"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/return-management",
             "version": "9999999-dev",
-            "package": "spryker-feature/scheduled-prices"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/scheduled-prices",
             "version": "9999999-dev",
-            "package": "spryker-feature/search"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/search",
             "version": "9999999-dev",
-            "package": "spryker-feature/shipment"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/shipment",
             "version": "9999999-dev",
-            "package": "spryker-feature/spryker-core"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/spryker-core",
             "version": "9999999-dev",
-            "package": "spryker-feature/state-machine"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/state-machine",
             "version": "9999999-dev",
-            "package": "spryker-feature/tax"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/tax",
             "version": "9999999-dev",
-            "package": "spryker-feature/wishlist"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker-feature/wishlist",
             "version": "9999999-dev",
-            "package": "spryker-feature/development-tools"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
-            "alias": "202204.0",
-            "alias_normalized": "202204.0",
+            "package": "spryker/docker-chromedriver",
             "version": "9999999-dev",
-            "package": "spryker/docker-chromedriver"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         }
     ],
     "minimum-stability": "dev",
@@ -59772,5 +60115,5 @@
     "platform-overrides": {
         "php": "7.4.20"
     },
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.2.0"
 }
