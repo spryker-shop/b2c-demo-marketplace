@@ -255,6 +255,8 @@ $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
     ],
 ];
 
+$config[HttpConstants::URI_SIGNER_SECRET_KEY] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
+
 /**
  * Zed Navigation Cache
  * The cache should always be activated. Refresh/build with CLI command:

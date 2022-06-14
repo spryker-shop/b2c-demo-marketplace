@@ -1,12 +1,7 @@
 {% extends molecule('return-create-form', '@SprykerShop:SalesReturnPage') %}
 
-{% define data = {
-    merchantIndex: '',
-} %}
-
 {% block body %}
-    {% set returnCreateStateTogglerJsClass = 'js-return-create__trigger-state-toggler'
-        ~ (data.merchantIndex ? ' js-return-create__merchant-state-toggler-' ~ data.merchantIndex) %}
+    {% set returnCreateStateTogglerJsClass = 'js-return-create__trigger-state-toggler' %}
 
     {{ parent() }}
 {% endblock %}
@@ -31,6 +26,8 @@
     {{ parent() }}
 {% endblock %}
 
+{% block checkbox %}{% endblock %}
+
 {% block salesReturnProductItemInfo %}
     {% embed molecule('return-product-item', 'SalesReturnPage') with {
         class: 'grid col col--expand',
@@ -43,7 +40,7 @@
             returnCreateStateTogglerJsClass: returnCreateStateTogglerJsClass,
         },
     } only %}
-        {% block checkbox %}
+        {% block checkboxColumn %}
             <div class="grid grid--nowrap col">
                 <div class="col col--middle spacing-right spacing-right--inner">
                     {{ form_row(embed.returnItem.isReturnable, {

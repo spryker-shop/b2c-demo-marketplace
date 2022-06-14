@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d51e03f7c4ab1f64c54340b398b1d0e",
+    "content-hash": "d5519e172fc2e42dfd8eab8db7919abf",
     "packages": [
         {
             "name": "async-aws/core",
@@ -389,224 +389,6 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
-        },
-        {
-            "name": "composer/pcre",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/pcre.git",
-                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/67a32d7d6f9f560b726ab25a061b38ff3a80c560",
-                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.2 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.3",
-                "phpstan/phpstan-strict-rules": "^1.1",
-                "symfony/phpunit-bridge": "^4.2 || ^5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Pcre\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "PCRE wrapping library that offers type-safe preg_* replacements.",
-            "keywords": [
-                "PCRE",
-                "preg",
-                "regex",
-                "regular expression"
-            ],
-            "support": {
-                "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/1.0.1"
-            },
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-01-21T20:24:37+00:00"
-        },
-        {
-            "name": "composer/semver",
-            "version": "3.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/semver.git",
-                "reference": "3953f23262f2bff1919fc82183ad9acb13ff62c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/3953f23262f2bff1919fc82183ad9acb13ff62c9",
-                "reference": "3953f23262f2bff1919fc82183ad9acb13ff62c9",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.2 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.4",
-                "symfony/phpunit-bridge": "^4.2 || ^5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Semver\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nils Adermann",
-                    "email": "naderman@naderman.de",
-                    "homepage": "http://www.naderman.de"
-                },
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                },
-                {
-                    "name": "Rob Bast",
-                    "email": "rob.bast@gmail.com",
-                    "homepage": "http://robbast.nl"
-                }
-            ],
-            "description": "Semver library that offers utilities, version constraint parsing and validation.",
-            "keywords": [
-                "semantic",
-                "semver",
-                "validation",
-                "versioning"
-            ],
-            "support": {
-                "irc": "irc://irc.freenode.org/composer",
-                "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.3.2"
-            },
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-04-01T19:23:25+00:00"
-        },
-        {
-            "name": "composer/xdebug-handler",
-            "version": "2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "9e36aeed4616366d2b690bdce11f71e9178c579a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/9e36aeed4616366d2b690bdce11f71e9178c579a",
-                "reference": "9e36aeed4616366d2b690bdce11f71e9178c579a",
-                "shasum": ""
-            },
-            "require": {
-                "composer/pcre": "^1",
-                "php": "^5.3.2 || ^7.0 || ^8.0",
-                "psr/log": "^1 || ^2 || ^3"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.1",
-                "symfony/phpunit-bridge": "^4.2 || ^5.0 || ^6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Composer\\XdebugHandler\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "John Stevenson",
-                    "email": "john-stevenson@blueyonder.co.uk"
-                }
-            ],
-            "description": "Restarts a process without Xdebug.",
-            "keywords": [
-                "Xdebug",
-                "performance"
-            ],
-            "support": {
-                "irc": "irc://irc.freenode.org/composer",
-                "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/2.0.5"
-            },
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-02-24T20:20:32+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -1310,16 +1092,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.4.2",
+            "version": "7.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ac1ec1cd9b5624694c3a40be801d94137afb12b4"
+                "reference": "e3ff079b22820c2029d4c2a87796b6a0b8716ad8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ac1ec1cd9b5624694c3a40be801d94137afb12b4",
-                "reference": "ac1ec1cd9b5624694c3a40be801d94137afb12b4",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/e3ff079b22820c2029d4c2a87796b6a0b8716ad8",
+                "reference": "e3ff079b22820c2029d4c2a87796b6a0b8716ad8",
                 "shasum": ""
             },
             "require": {
@@ -1414,7 +1196,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.4.2"
+                "source": "https://github.com/guzzle/guzzle/tree/7.4.4"
             },
             "funding": [
                 {
@@ -1430,7 +1212,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-20T14:16:28+00:00"
+            "time": "2022-06-09T21:39:15+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1630,53 +1412,6 @@
                 }
             ],
             "time": "2022-03-20T21:55:58+00:00"
-        },
-        {
-            "name": "jetbrains/phpstorm-stubs",
-            "version": "v2019.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "883b6facd78e01c0743b554af86fa590c2573f40"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/883b6facd78e01c0743b554af86fa590c2573f40",
-                "reference": "883b6facd78e01c0743b554af86fa590c2573f40",
-                "shasum": ""
-            },
-            "require-dev": {
-                "nikic/php-parser": "^4",
-                "php": "^7.1",
-                "phpdocumentor/reflection-docblock": "^4.3",
-                "phpunit/phpunit": "^7"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "PhpStormStubsMap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "PHP runtime & extensions header files for PhpStorm",
-            "homepage": "https://www.jetbrains.com/phpstorm",
-            "keywords": [
-                "autocomplete",
-                "code",
-                "inference",
-                "inspection",
-                "jetbrains",
-                "phpstorm",
-                "stubs",
-                "type"
-            ],
-            "support": {
-                "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
-            },
-            "time": "2019-12-05T16:56:26+00:00"
         },
         {
             "name": "laminas/laminas-barcode",
@@ -3072,554 +2807,6 @@
             "time": "2021-06-14T00:11:39+00:00"
         },
         {
-            "name": "nette/di",
-            "version": "v3.0.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/di.git",
-                "reference": "11c236b9f7bbfc5a95e7b24742ad8847936feeb5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/di/zipball/11c236b9f7bbfc5a95e7b24742ad8847936feeb5",
-                "reference": "11c236b9f7bbfc5a95e7b24742ad8847936feeb5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "nette/neon": "^3.3",
-                "nette/php-generator": "^3.5.4",
-                "nette/robot-loader": "^3.2",
-                "nette/schema": "^1.1",
-                "nette/utils": "^3.1.6",
-                "php": ">=7.1 <8.2"
-            },
-            "conflict": {
-                "nette/bootstrap": "<3.0"
-            },
-            "require-dev": {
-                "nette/tester": "^2.2",
-                "phpstan/phpstan": "^0.12",
-                "tracy/tracy": "^2.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "💎 Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP features.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "compiled",
-                "di",
-                "dic",
-                "factory",
-                "ioc",
-                "nette",
-                "static"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/di/issues",
-                "source": "https://github.com/nette/di/tree/v3.0.12"
-            },
-            "time": "2021-12-15T21:05:11+00:00"
-        },
-        {
-            "name": "nette/finder",
-            "version": "v2.5.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/finder.git",
-                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/finder/zipball/64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
-                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
-                "shasum": ""
-            },
-            "require": {
-                "nette/utils": "^2.4 || ^3.0",
-                "php": ">=7.1"
-            },
-            "conflict": {
-                "nette/nette": "<2.2"
-            },
-            "require-dev": {
-                "nette/tester": "^2.0",
-                "phpstan/phpstan": "^0.12",
-                "tracy/tracy": "^2.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "filesystem",
-                "glob",
-                "iterator",
-                "nette"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/finder/issues",
-                "source": "https://github.com/nette/finder/tree/v2.5.3"
-            },
-            "time": "2021-12-12T17:43:24+00:00"
-        },
-        {
-            "name": "nette/neon",
-            "version": "v3.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/neon.git",
-                "reference": "54b287d8c2cdbe577b02e28ca1713e275b05ece2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/neon/zipball/54b287d8c2cdbe577b02e28ca1713e275b05ece2",
-                "reference": "54b287d8c2cdbe577b02e28ca1713e275b05ece2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "nette/tester": "^2.0",
-                "phpstan/phpstan": "^0.12",
-                "tracy/tracy": "^2.7"
-            },
-            "bin": [
-                "bin/neon-lint"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "🍸 Nette NEON: encodes and decodes NEON file format.",
-            "homepage": "https://ne-on.org",
-            "keywords": [
-                "export",
-                "import",
-                "neon",
-                "nette",
-                "yaml"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/neon/issues",
-                "source": "https://github.com/nette/neon/tree/v3.3.2"
-            },
-            "time": "2021-11-25T15:57:41+00:00"
-        },
-        {
-            "name": "nette/php-generator",
-            "version": "v3.6.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/php-generator.git",
-                "reference": "9370403f9d9c25b51c4596ded1fbfe70347f7c82"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/9370403f9d9c25b51c4596ded1fbfe70347f7c82",
-                "reference": "9370403f9d9c25b51c4596ded1fbfe70347f7c82",
-                "shasum": ""
-            },
-            "require": {
-                "nette/utils": "^3.1.2",
-                "php": ">=7.2 <8.2"
-            },
-            "require-dev": {
-                "nette/tester": "^2.4",
-                "nikic/php-parser": "^4.13",
-                "phpstan/phpstan": "^0.12",
-                "tracy/tracy": "^2.8"
-            },
-            "suggest": {
-                "nikic/php-parser": "to use ClassType::withBodiesFrom() & GlobalFunction::withBodyFrom()"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.6-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 8.1 features.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "code",
-                "nette",
-                "php",
-                "scaffolding"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/php-generator/issues",
-                "source": "https://github.com/nette/php-generator/tree/v3.6.5"
-            },
-            "time": "2021-11-24T16:23:44+00:00"
-        },
-        {
-            "name": "nette/robot-loader",
-            "version": "v3.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/robot-loader.git",
-                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/robot-loader/zipball/e2adc334cb958164c050f485d99c44c430f51fe2",
-                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "nette/finder": "^2.5 || ^3.0",
-                "nette/utils": "^3.0",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "nette/tester": "^2.0",
-                "phpstan/phpstan": "^0.12",
-                "tracy/tracy": "^2.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "🍀 Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "autoload",
-                "class",
-                "interface",
-                "nette",
-                "trait"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/robot-loader/issues",
-                "source": "https://github.com/nette/robot-loader/tree/v3.4.1"
-            },
-            "time": "2021-08-25T15:53:54+00:00"
-        },
-        {
-            "name": "nette/schema",
-            "version": "v1.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/schema.git",
-                "reference": "9a39cef03a5b34c7de64f551538cbba05c2be5df"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/9a39cef03a5b34c7de64f551538cbba05c2be5df",
-                "reference": "9a39cef03a5b34c7de64f551538cbba05c2be5df",
-                "shasum": ""
-            },
-            "require": {
-                "nette/utils": "^2.5.7 || ^3.1.5 ||  ^4.0",
-                "php": ">=7.1 <8.2"
-            },
-            "require-dev": {
-                "nette/tester": "^2.3 || ^2.4",
-                "phpstan/phpstan-nette": "^0.12",
-                "tracy/tracy": "^2.7"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "📐 Nette Schema: validating data structures against a given Schema.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "config",
-                "nette"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.2.2"
-            },
-            "time": "2021-10-15T11:40:02+00:00"
-        },
-        {
-            "name": "nette/utils",
-            "version": "v3.2.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/utils.git",
-                "reference": "2f261e55bd6a12057442045bf2c249806abc1d02"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/2f261e55bd6a12057442045bf2c249806abc1d02",
-                "reference": "2f261e55bd6a12057442045bf2c249806abc1d02",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2 <8.2"
-            },
-            "conflict": {
-                "nette/di": "<3.0.6"
-            },
-            "require-dev": {
-                "nette/tester": "~2.0",
-                "phpstan/phpstan": "^1.0",
-                "tracy/tracy": "^2.3"
-            },
-            "suggest": {
-                "ext-gd": "to use Image",
-                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
-                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
-                "ext-json": "to use Nette\\Utils\\Json",
-                "ext-mbstring": "to use Strings::lower() etc...",
-                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
-                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "array",
-                "core",
-                "datetime",
-                "images",
-                "json",
-                "nette",
-                "paginator",
-                "password",
-                "slugify",
-                "string",
-                "unicode",
-                "utf-8",
-                "utility",
-                "validation"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.6"
-            },
-            "time": "2021-11-24T15:47:23+00:00"
-        },
-        {
-            "name": "nikic/php-parser",
-            "version": "v4.13.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/210577fe3cf7badcc5814d99455df46564f3c077",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "ircmaxell/php-yacc": "^0.0.7",
-                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
-            },
-            "bin": [
-                "bin/php-parse"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "PhpParser\\": "lib/PhpParser"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nikita Popov"
-                }
-            ],
-            "description": "A PHP parser written in PHP",
-            "keywords": [
-                "parser",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
-            },
-            "time": "2021-11-30T19:35:32+00:00"
-        },
-        {
             "name": "nyholm/dsn",
             "version": "2.0.1",
             "source": {
@@ -3679,82 +2866,6 @@
                 }
             ],
             "time": "2021-11-18T09:23:29+00:00"
-        },
-        {
-            "name": "ondrejmirtes/better-reflection",
-            "version": "4.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ondrejmirtes/BetterReflection.git",
-                "reference": "5b4d1c53768e2a3bc32ab348752663733fd70546"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ondrejmirtes/BetterReflection/zipball/5b4d1c53768e2a3bc32ab348752663733fd70546",
-                "reference": "5b4d1c53768e2a3bc32ab348752663733fd70546",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "jetbrains/phpstorm-stubs": "2019.3",
-                "nikic/php-parser": "^4.6.0",
-                "php": ">=7.4.1,<7.5.0",
-                "phpdocumentor/reflection-docblock": "^5.2.0",
-                "phpdocumentor/type-resolver": "^1.3.0",
-                "roave/signature": "^1.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^8.1.0",
-                "infection/infection": "^0.16.4",
-                "phpstan/phpstan": "^0.12.25",
-                "phpunit/phpunit": "^9.2.6",
-                "vimeo/psalm": "3.13.1"
-            },
-            "suggest": {
-                "composer/composer": "Required to use the ComposerSourceLocator"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Roave\\BetterReflection\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "James Titcumb",
-                    "email": "james@asgrim.com",
-                    "homepage": "https://github.com/asgrim"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com",
-                    "homepage": "https://ocramius.github.io/"
-                },
-                {
-                    "name": "Gary Hockin",
-                    "email": "gary@roave.com",
-                    "homepage": "https://github.com/geeh"
-                },
-                {
-                    "name": "Jaroslav Hanslík",
-                    "email": "kukulich@kukulich.cz",
-                    "homepage": "https://github.com/kukulich"
-                }
-            ],
-            "description": "Better Reflection - an improved code reflection API",
-            "support": {
-                "source": "https://github.com/ondrejmirtes/BetterReflection/tree/4.10.0"
-            },
-            "time": "2020-10-01T10:56:39+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -3872,63 +2983,6 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
-        },
-        {
-            "name": "pdepend/pdepend",
-            "version": "2.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pdepend/pdepend.git",
-                "reference": "1fd30f4352b630ad53fec3fd5e8b8ba760f85596"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/1fd30f4352b630ad53fec3fd5e8b8ba760f85596",
-                "reference": "1fd30f4352b630ad53fec3fd5e8b8ba760f85596",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.7",
-                "symfony/config": "^2.3.0|^3|^4|^5",
-                "symfony/dependency-injection": "^2.3.0|^3|^4|^5",
-                "symfony/filesystem": "^2.3.0|^3|^4|^5"
-            },
-            "require-dev": {
-                "easy-doc/easy-doc": "0.0.0|^1.2.3",
-                "gregwar/rst": "^1.0",
-                "phpunit/phpunit": "^4.8.36|^5.7.27",
-                "squizlabs/php_codesniffer": "^2.0.0"
-            },
-            "bin": [
-                "src/bin/pdepend"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "PDepend\\": "src/main/php/PDepend"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Official version of pdepend to be handled with Composer",
-            "support": {
-                "issues": "https://github.com/pdepend/pdepend/issues",
-                "source": "https://github.com/pdepend/pdepend/tree/2.10.0"
-            },
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/pdepend/pdepend",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-07-20T09:56:09+00:00"
         },
         {
             "name": "php-amqplib/php-amqplib",
@@ -4063,249 +3117,6 @@
                 "source": "https://github.com/phpDocumentor/GraphViz/tree/2.1.0"
             },
             "time": "2021-12-13T19:03:21+00:00"
-        },
-        {
-            "name": "phpdocumentor/reflection-common",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/1d01c49d4ed62f25aa84a747ad35d5a16924662b",
-                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jaap van Otterdijk",
-                    "email": "opensource@ijaap.nl"
-                }
-            ],
-            "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
-            "homepage": "http://www.phpdoc.org",
-            "keywords": [
-                "FQSEN",
-                "phpDocumentor",
-                "phpdoc",
-                "reflection",
-                "static analysis"
-            ],
-            "support": {
-                "issues": "https://github.com/phpDocumentor/ReflectionCommon/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionCommon/tree/2.x"
-            },
-            "time": "2020-06-27T09:03:43+00:00"
-        },
-        {
-            "name": "phpdocumentor/reflection-docblock",
-            "version": "5.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "622548b623e81ca6d78b721c5e029f4ce664f170"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/622548b623e81ca6d78b721c5e029f4ce664f170",
-                "reference": "622548b623e81ca6d78b721c5e029f4ce664f170",
-                "shasum": ""
-            },
-            "require": {
-                "ext-filter": "*",
-                "php": "^7.2 || ^8.0",
-                "phpdocumentor/reflection-common": "^2.2",
-                "phpdocumentor/type-resolver": "^1.3",
-                "webmozart/assert": "^1.9.1"
-            },
-            "require-dev": {
-                "mockery/mockery": "~1.3.2",
-                "psalm/phar": "^4.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "me@mikevanriel.com"
-                },
-                {
-                    "name": "Jaap van Otterdijk",
-                    "email": "account@ijaap.nl"
-                }
-            ],
-            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "support": {
-                "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.3.0"
-            },
-            "time": "2021-10-19T17:43:47+00:00"
-        },
-        {
-            "name": "phpdocumentor/type-resolver",
-            "version": "1.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "77a32518733312af16a44300404e945338981de3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/77a32518733312af16a44300404e945338981de3",
-                "reference": "77a32518733312af16a44300404e945338981de3",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0",
-                "phpdocumentor/reflection-common": "^2.0"
-            },
-            "require-dev": {
-                "ext-tokenizer": "*",
-                "psalm/phar": "^4.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "me@mikevanriel.com"
-                }
-            ],
-            "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "support": {
-                "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
-            },
-            "time": "2022-03-15T21:29:03+00:00"
-        },
-        {
-            "name": "phpmd/phpmd",
-            "version": "2.10.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpmd/phpmd.git",
-                "reference": "1bc74db7cf834662d83abebae265be11bb2eec3a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/1bc74db7cf834662d83abebae265be11bb2eec3a",
-                "reference": "1bc74db7cf834662d83abebae265be11bb2eec3a",
-                "shasum": ""
-            },
-            "require": {
-                "composer/xdebug-handler": "^1.0 || ^2.0",
-                "ext-xml": "*",
-                "pdepend/pdepend": "^2.10.0",
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "easy-doc/easy-doc": "0.0.0 || ^1.3.2",
-                "ext-json": "*",
-                "ext-simplexml": "*",
-                "gregwar/rst": "^1.0",
-                "mikey179/vfsstream": "^1.6.8",
-                "phpunit/phpunit": "^4.8.36 || ^5.7.27",
-                "squizlabs/php_codesniffer": "^2.0"
-            },
-            "bin": [
-                "src/bin/phpmd"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "PHPMD\\": "src/main/php"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Manuel Pichler",
-                    "email": "github@manuel-pichler.de",
-                    "homepage": "https://github.com/manuelpichler",
-                    "role": "Project Founder"
-                },
-                {
-                    "name": "Marc Würth",
-                    "email": "ravage@bluewin.ch",
-                    "homepage": "https://github.com/ravage84",
-                    "role": "Project Maintainer"
-                },
-                {
-                    "name": "Other contributors",
-                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
-                    "role": "Contributors"
-                }
-            ],
-            "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
-            "homepage": "https://phpmd.org/",
-            "keywords": [
-                "mess detection",
-                "mess detector",
-                "pdepend",
-                "phpmd",
-                "pmd"
-            ],
-            "support": {
-                "irc": "irc://irc.freenode.org/phpmd",
-                "issues": "https://github.com/phpmd/phpmd/issues",
-                "source": "https://github.com/phpmd/phpmd/tree/2.10.2"
-            },
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpmd/phpmd",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-07-22T09:56:23+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -5265,46 +4076,6 @@
             "time": "2021-11-10T11:41:07+00:00"
         },
         {
-            "name": "roave/signature",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Roave/Signature.git",
-                "reference": "577ee14d2abaeb315a5cd2d86d7e3df46a7dac56"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Roave/Signature/zipball/577ee14d2abaeb315a5cd2d86d7e3df46a7dac56",
-                "reference": "577ee14d2abaeb315a5cd2d86d7e3df46a7dac56",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.3 || ^7.4"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^8.1",
-                "infection/infection": "^0.17.5",
-                "phpunit/phpunit": "^9.3",
-                "vimeo/psalm": "^3.16"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Roave\\Signature\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Sign and verify stuff",
-            "support": {
-                "issues": "https://github.com/Roave/Signature/issues",
-                "source": "https://github.com/Roave/Signature/tree/1.2.0"
-            },
-            "time": "2020-10-01T08:18:39+00:00"
-        },
-        {
             "name": "ruflin/elastica",
             "version": "7.1.5",
             "source": {
@@ -5371,72 +4142,6 @@
                 "source": "https://github.com/ruflin/Elastica/tree/7.1.5"
             },
             "time": "2022-03-29T15:37:28+00:00"
-        },
-        {
-            "name": "sebastian/diff",
-            "version": "4.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "3461e3fccc7cfdfc2720be910d3bd73c69be590d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/3461e3fccc7cfdfc2720be910d3bd73c69be590d",
-                "reference": "3461e3fccc7cfdfc2720be910d3bd73c69be590d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.3",
-                "symfony/process": "^4.2 || ^5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                },
-                {
-                    "name": "Kore Nordmann",
-                    "email": "mail@kore-nordmann.de"
-                }
-            ],
-            "description": "Diff implementation",
-            "homepage": "https://github.com/sebastianbergmann/diff",
-            "keywords": [
-                "diff",
-                "udiff",
-                "unidiff",
-                "unified diff"
-            ],
-            "support": {
-                "issues": "https://github.com/sebastianbergmann/diff/issues",
-                "source": "https://github.com/sebastianbergmann/diff/tree/4.0.4"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sebastianbergmann",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-10-26T13:10:38+00:00"
         },
         {
             "name": "seld/signal-handler",
@@ -8414,88 +7119,6 @@
                 "source": "https://github.com/spryker-sdk/async-api/tree/0.1.0"
             },
             "time": "2022-01-26T07:19:27+00:00"
-        },
-        {
-            "name": "spryker-sdk/spryk",
-            "version": "0.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-sdk/spryk.git",
-                "reference": "3b84913605da52d1483a2ea2f747f9462003a444"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-sdk/spryk/zipball/3b84913605da52d1483a2ea2f747f9462003a444",
-                "reference": "3b84913605da52d1483a2ea2f747f9462003a444",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "ext-simplexml": "*",
-                "ondrejmirtes/better-reflection": "^4.3.19",
-                "php": ">=7.4",
-                "spryker/config": "^3.0.0",
-                "spryker/console": "^3.0.0 || ^4.0.0",
-                "spryker/doctrine-inflector": "^1.1.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/laminas": "^1.0.0",
-                "symfony/console": "^3.4.0 || ^4.0.0 || ^5.0.0",
-                "symfony/filesystem": "^3.4.0 || ^4.0.0 || ^5.0.0",
-                "symfony/finder": "^3.4.0 || ^4.0.0 || ^5.0.0",
-                "symfony/yaml": "^3.4.9 || ^4.0.0 || ^5.0.0",
-                "twig/twig": "^1.41 || ^2.0.0 || ^3.0.0"
-            },
-            "require-dev": {
-                "codeception/codeception": "^4.0.0",
-                "phpstan/phpstan": "^0.12.98",
-                "phpunit/phpunit": "^9.5.0",
-                "spryker/checkout-extension": "^1.3.0",
-                "spryker/code-sniffer": "*",
-                "spryker/data-import": "^1.1.0",
-                "spryker/glue-application-extension": "^1.1.0",
-                "spryker/oms": "^10.0.0 || ^11.0.0",
-                "spryker/payment-extension": "^1.0.0",
-                "spryker/router": "^1.1.0",
-                "spryker/sales-payment-extension": "^1.0.0",
-                "spryker/step-engine": "^3.3.0",
-                "spryker/testify": "^3.40.0"
-            },
-            "suggest": {
-                "spryker/checkout-extension": "If you want to use Payment spryks, minimum required version: 1.3.0",
-                "spryker/data-import": "If you want to use DataImport spryks, minimum required version: 1.0.0",
-                "spryker/glue-application-extension": "If you want to use Glue spryks, minimum required version: 1.1.0",
-                "spryker/oms": "If you want to use Payment spryks, minimum required version: 6.0.0",
-                "spryker/payment-extension": "If you want to use Payment spryks, minimum required version: 1.0.0",
-                "spryker/router": "If you want to use Route spryks, minimum required version: 1.1.0",
-                "spryker/sales-payment-extension": "If you want to use Payment spryks, minimum required version: 1.0.0",
-                "spryker/step-engine": "If you want to use Payment spryks, minimum required version: 1.0.0"
-            },
-            "bin": [
-                "bin/spryk-run",
-                "bin/spryk-dump",
-                "bin/spryk-build"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SprykerSdk\\": "src/SprykerSdk/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Spryk module",
-            "support": {
-                "issues": "https://github.com/spryker-sdk/spryk/issues",
-                "source": "https://github.com/spryker-sdk/spryk/tree/0.3.3"
-            },
-            "time": "2021-12-31T09:49:51+00:00"
         },
         {
             "name": "spryker-shop/agent-page",
@@ -14642,16 +13265,16 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "b7317aa401e87302374b537c620be7610fa7e871"
+                "reference": "c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/b7317aa401e87302374b537c620be7610fa7e871",
-                "reference": "b7317aa401e87302374b537c620be7610fa7e871",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b",
+                "reference": "c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b",
                 "shasum": ""
             },
             "require": {
@@ -14696,9 +13319,9 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/1.4.0"
+                "source": "https://github.com/spryker/acl-entity/tree/1.4.1"
             },
-            "time": "2022-04-15T13:47:42+00:00"
+            "time": "2022-05-30T12:50:35+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
@@ -21031,6 +19654,55 @@
             "time": "2020-05-29T13:08:37+00:00"
         },
         {
+            "name": "spryker/code-it-now",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/code-it-now.git",
+                "reference": "e823462f7ca0531d5d1e6d74194cdca787f093ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/code-it-now/zipball/e823462f7ca0531d5d1e6d74194cdca787f093ff",
+                "reference": "e823462f7ca0531d5d1e6d74194cdca787f093ff",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-barcode": "^2.8.0",
+                "php": ">=7.4",
+                "spryker/barcode-extension": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/kernel": "^3.1.0",
+                "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/kernel": "for testing"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "CodeItNow module",
+            "support": {
+                "source": "https://github.com/spryker/code-it-now/tree/1.1.1"
+            },
+            "abandoned": "spryker/barcode-laminas",
+            "time": "2022-05-11T08:36:06+00:00"
+        },
+        {
             "name": "spryker/collector",
             "version": "6.7.0",
             "source": {
@@ -23923,16 +22595,16 @@
         },
         {
             "name": "spryker/dashboard-merchant-portal-gui",
-            "version": "1.4.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/dashboard-merchant-portal-gui.git",
-                "reference": "d709c486364ff8c0dbb63ca6b39e09ceb19a5d20"
+                "reference": "0c25753660029c9b3f69b20e6f4b23d0a9d2da34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/dashboard-merchant-portal-gui/zipball/d709c486364ff8c0dbb63ca6b39e09ceb19a5d20",
-                "reference": "d709c486364ff8c0dbb63ca6b39e09ceb19a5d20",
+                "url": "https://api.github.com/repos/spryker/dashboard-merchant-portal-gui/zipball/0c25753660029c9b3f69b20e6f4b23d0a9d2da34",
+                "reference": "0c25753660029c9b3f69b20e6f4b23d0a9d2da34",
                 "shasum": ""
             },
             "require": {
@@ -23940,7 +22612,7 @@
                 "spryker/dashboard-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/symfony": "^3.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*"
@@ -23962,9 +22634,9 @@
             ],
             "description": "DashboardMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/dashboard-merchant-portal-gui/tree/1.4.0"
+                "source": "https://github.com/spryker/dashboard-merchant-portal-gui/tree/1.5.1"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-06-02T11:32:03+00:00"
         },
         {
             "name": "spryker/dashboard-merchant-portal-gui-extension",
@@ -24259,144 +22931,17 @@
             "time": "2021-07-30T15:32:04+00:00"
         },
         {
-            "name": "spryker/development",
-            "version": "3.32.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/development.git",
-                "reference": "fb703ab9577b5e8f4232dc0978215d8a6a93c889"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/development/zipball/fb703ab9577b5e8f4232dc0978215d8a6a93c889",
-                "reference": "fb703ab9577b5e8f4232dc0978215d8a6a93c889",
-                "shasum": ""
-            },
-            "require": {
-                "nette/di": "^2.4.7 || ^3.0.0",
-                "php": ">=7.4",
-                "phpmd/phpmd": "^2.0.0",
-                "spryker/config": "^3.0.0",
-                "spryker/graph": "^3.0.0",
-                "spryker/kernel": "^3.52.0",
-                "spryker/laminas": "^1.0.0",
-                "spryker/module-finder": "^1.0.0",
-                "spryker/symfony": "^3.0.0",
-                "spryker/twig": "^3.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/propel": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "tests/dd.php"
-                ],
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/",
-                    "SprykerTest\\Zed\\Development\\Helper\\": "tests/SprykerTest/Zed/Development/_support/Helper/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Development module",
-            "support": {
-                "source": "https://github.com/spryker/development/tree/3.32.3"
-            },
-            "time": "2022-04-14T07:53:41+00:00"
-        },
-        {
-            "name": "spryker/development-core",
-            "version": "dev-feature/composer-auto-rising",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:spryker/development-core.git",
-                "reference": "baf386cb2f6e2b261b0b6c205ac4b55c8aa2ac9f"
-            },
-            "require": {
-                "composer/semver": "^1.0.0 || ^2.0.0 || ^3.0.0",
-                "php": ">=7.4",
-                "sebastian/diff": "^3.0.0 || ^4.0.0",
-                "spryker-sdk/spryk": "^0.3.3",
-                "spryker/development": "@stable",
-                "spryker/kernel": "^3.30.0",
-                "spryker/laminas": "^1.0.0",
-                "spryker/log": "^3.0.0",
-                "spryker/propel": "^3.0.0",
-                "spryker/propel-orm": "^1.0.0",
-                "spryker/symfony": "^3.0.0",
-                "spryker/transfer": "^3.7.0",
-                "spryker/twig": "^3.0.0"
-            },
-            "require-dev": {
-                "codeception/module-asserts": "^1.3.0",
-                "codeception/stub": "^3.6.1",
-                "spryker/code-sniffer": "dev-master",
-                "spryker/testify": "^3.40.0"
-            },
-            "bin": [
-                "bin/spryker-dev-console"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "SprykerTest\\": "tests/SprykerTest/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/codecept run"
-                ],
-                "cs-check": [
-                    "phpcs -p -s --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/ tests/"
-                ],
-                "cs-fix": [
-                    "phpcbf -p --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/ tests/"
-                ],
-                "stan-setup": [
-                    "cp composer.json composer.backup && composer require --dev phpstan/phpstan:^1.0.0 && mv composer.backup composer.json"
-                ],
-                "stan": [
-                    "./vendor/bin/phpstan analyse"
-                ]
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "DevelopmentCore module",
-            "time": "2022-04-29T12:59:09+00:00"
-        },
-        {
             "name": "spryker/discount",
-            "version": "9.25.1",
+            "version": "9.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/discount.git",
-                "reference": "f0e78b601fc6e3e2316b9d01ad5c437cc3913ee5"
+                "reference": "3ec656fff0877f891c5c760c16d963e4518b3d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/discount/zipball/f0e78b601fc6e3e2316b9d01ad5c437cc3913ee5",
-                "reference": "f0e78b601fc6e3e2316b9d01ad5c437cc3913ee5",
+                "url": "https://api.github.com/repos/spryker/discount/zipball/3ec656fff0877f891c5c760c16d963e4518b3d30",
+                "reference": "3ec656fff0877f891c5c760c16d963e4518b3d30",
                 "shasum": ""
             },
             "require": {
@@ -24404,7 +22949,7 @@
                 "spryker/cart-code-extension": "^1.1.0",
                 "spryker/cart-extension": "^1.0.0 || ^2.0.0 || ^4.0.0",
                 "spryker/currency": "^3.1.0",
-                "spryker/discount-extension": "^1.2.0",
+                "spryker/discount-extension": "^1.3.0",
                 "spryker/gui": "^3.41.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/log": "^3.0.0",
@@ -24457,9 +23002,9 @@
             ],
             "description": "Discount module",
             "support": {
-                "source": "https://github.com/spryker/discount/tree/9.25.1"
+                "source": "https://github.com/spryker/discount/tree/9.27.0"
             },
-            "time": "2022-04-29T09:14:16+00:00"
+            "time": "2022-05-25T07:35:12+00:00"
         },
         {
             "name": "spryker/discount-calculation-connector",
@@ -24517,16 +23062,16 @@
         },
         {
             "name": "spryker/discount-extension",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/discount-extension.git",
-                "reference": "db01b70e1148748be36d6c124177cd1120a5a1c1"
+                "reference": "739f63113dc8cb476f495a7535fa90b30a5a7ecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/discount-extension/zipball/db01b70e1148748be36d6c124177cd1120a5a1c1",
-                "reference": "db01b70e1148748be36d6c124177cd1120a5a1c1",
+                "url": "https://api.github.com/repos/spryker/discount-extension/zipball/739f63113dc8cb476f495a7535fa90b30a5a7ecf",
+                "reference": "739f63113dc8cb476f495a7535fa90b30a5a7ecf",
                 "shasum": ""
             },
             "require": {
@@ -24552,9 +23097,9 @@
             ],
             "description": "DiscountExtension module",
             "support": {
-                "source": "https://github.com/spryker/discount-extension/tree/1.2.0"
+                "source": "https://github.com/spryker/discount-extension/tree/1.3.0"
             },
-            "time": "2021-12-06T13:29:28+00:00"
+            "time": "2022-05-16T12:57:55+00:00"
         },
         {
             "name": "spryker/discount-merchant-sales-order",
@@ -26974,16 +25519,16 @@
         },
         {
             "name": "spryker/gui-table",
-            "version": "1.5.0",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/gui-table.git",
-                "reference": "3a2284b496dfdd47e2e8c9aa0a6b7fcce7651d9b"
+                "reference": "bd06da677ecebcb09bfa05da2d056e5d5b47087d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/gui-table/zipball/3a2284b496dfdd47e2e8c9aa0a6b7fcce7651d9b",
-                "reference": "3a2284b496dfdd47e2e8c9aa0a6b7fcce7651d9b",
+                "url": "https://api.github.com/repos/spryker/gui-table/zipball/bd06da677ecebcb09bfa05da2d056e5d5b47087d",
+                "reference": "bd06da677ecebcb09bfa05da2d056e5d5b47087d",
                 "shasum": ""
             },
             "require": {
@@ -26996,7 +25541,7 @@
                 "spryker/twig": "^3.13.0",
                 "spryker/util-date-time": "^1.2.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -27024,9 +25569,9 @@
             ],
             "description": "GuiTable module",
             "support": {
-                "source": "https://github.com/spryker/gui-table/tree/1.5.0"
+                "source": "https://github.com/spryker/gui-table/tree/1.7.2"
             },
-            "time": "2022-04-15T13:47:42+00:00"
+            "time": "2022-06-02T11:32:03+00:00"
         },
         {
             "name": "spryker/guzzle",
@@ -30004,16 +28549,16 @@
         },
         {
             "name": "spryker/merchant-profile-merchant-portal-gui",
-            "version": "1.4.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-profile-merchant-portal-gui.git",
-                "reference": "2c664b4109a39e5df73225e89b8f9f8eef6212bf"
+                "reference": "9b9a3261e9dbf26ec2bfa19b7597c4ee38e6efd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-profile-merchant-portal-gui/zipball/2c664b4109a39e5df73225e89b8f9f8eef6212bf",
-                "reference": "2c664b4109a39e5df73225e89b8f9f8eef6212bf",
+                "url": "https://api.github.com/repos/spryker/merchant-profile-merchant-portal-gui/zipball/9b9a3261e9dbf26ec2bfa19b7597c4ee38e6efd5",
+                "reference": "9b9a3261e9dbf26ec2bfa19b7597c4ee38e6efd5",
                 "shasum": ""
             },
             "require": {
@@ -30028,7 +28573,7 @@
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.25.0",
                 "spryker/url": "^3.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*"
@@ -30050,9 +28595,9 @@
             ],
             "description": "MerchantProfileMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-profile-merchant-portal-gui/tree/1.4.0"
+                "source": "https://github.com/spryker/merchant-profile-merchant-portal-gui/tree/1.5.1"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-06-02T11:32:03+00:00"
         },
         {
             "name": "spryker/merchant-sales-order",
@@ -31367,51 +29912,6 @@
                 "source": "https://github.com/spryker/messenger-extension/tree/master"
             },
             "time": "2019-02-07T14:46:07+00:00"
-        },
-        {
-            "name": "spryker/module-finder",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/module-finder.git",
-                "reference": "ee25ba055d2b4af7c80b2c7d3d8800c7d21a78fa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/module-finder/zipball/ee25ba055d2b4af7c80b2c7d3d8800c7d21a78fa",
-                "reference": "ee25ba055d2b4af7c80b2c7d3d8800c7d21a78fa",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "spryker/kernel": "^3.33.0",
-                "spryker/laminas": "^1.0.0",
-                "spryker/symfony": "^3.2.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "ModuleFinder module",
-            "support": {
-                "source": "https://github.com/spryker/module-finder/tree/1.2.0"
-            },
-            "time": "2021-10-21T12:10:34+00:00"
         },
         {
             "name": "spryker/money",
@@ -38076,16 +36576,16 @@
         },
         {
             "name": "spryker/product-merchant-portal-gui",
-            "version": "2.4.0",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-merchant-portal-gui.git",
-                "reference": "7c3de7470ab1221b7ed1c212446c8638ed18c985"
+                "reference": "501156b29c59fe7a5746cddfc54f4736a22f380a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/7c3de7470ab1221b7ed1c212446c8638ed18c985",
-                "reference": "7c3de7470ab1221b7ed1c212446c8638ed18c985",
+                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/501156b29c59fe7a5746cddfc54f4736a22f380a",
+                "reference": "501156b29c59fe7a5746cddfc54f4736a22f380a",
                 "shasum": ""
             },
             "require": {
@@ -38093,7 +36593,7 @@
                 "spryker/category": "^4.21.0 || ^5.0.0",
                 "spryker/currency": "^3.0.0",
                 "spryker/decimal-object": "^1.0.0",
-                "spryker/gui-table": "^1.4.0",
+                "spryker/gui-table": "^1.7.0",
                 "spryker/kernel": "^3.51.0",
                 "spryker/laminas": "^1.0.0",
                 "spryker/locale": "^3.0.0",
@@ -38119,7 +36619,7 @@
                 "spryker/transfer": "^3.25.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -38142,9 +36642,9 @@
             ],
             "description": "ProductMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/2.4.0"
+                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/2.6.2"
             },
-            "time": "2022-04-28T17:37:07+00:00"
+            "time": "2022-06-08T09:18:06+00:00"
         },
         {
             "name": "spryker/product-merchant-portal-gui-extension",
@@ -38618,16 +37118,16 @@
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui",
-            "version": "1.8.1",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-merchant-portal-gui.git",
-                "reference": "0e1faa94ed79b37ff304f136882f1a21bd4e64ba"
+                "reference": "0d116deeda2be633563c153e242b12d5dc4ffef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/0e1faa94ed79b37ff304f136882f1a21bd4e64ba",
-                "reference": "0e1faa94ed79b37ff304f136882f1a21bd4e64ba",
+                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/0d116deeda2be633563c153e242b12d5dc4ffef0",
+                "reference": "0d116deeda2be633563c153e242b12d5dc4ffef0",
                 "shasum": ""
             },
             "require": {
@@ -38635,7 +37135,7 @@
                 "spryker/currency": "^3.1.0",
                 "spryker/dashboard-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/decimal-object": "^1.0.0",
-                "spryker/gui-table": "^1.4.0",
+                "spryker/gui-table": "^1.7.0",
                 "spryker/kernel": "^3.51.0",
                 "spryker/laminas": "^1.0.0",
                 "spryker/locale": "^3.0.0",
@@ -38664,7 +37164,7 @@
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.0.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*"
@@ -38686,9 +37186,9 @@
             ],
             "description": "ProductOfferMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.8.1"
+                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/1.10.2"
             },
-            "time": "2022-04-26T14:08:21+00:00"
+            "time": "2022-06-02T11:32:03+00:00"
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui-extension",
@@ -39147,16 +37647,16 @@
         },
         {
             "name": "spryker/product-offer-storage",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-storage.git",
-                "reference": "0e4b8d904e6319622ca98fcfd97488fc2c76966e"
+                "reference": "cd6a3d5ec31532760988fdb8db92b7f4e691eb58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-storage/zipball/0e4b8d904e6319622ca98fcfd97488fc2c76966e",
-                "reference": "0e4b8d904e6319622ca98fcfd97488fc2c76966e",
+                "url": "https://api.github.com/repos/spryker/product-offer-storage/zipball/cd6a3d5ec31532760988fdb8db92b7f4e691eb58",
+                "reference": "cd6a3d5ec31532760988fdb8db92b7f4e691eb58",
                 "shasum": ""
             },
             "require": {
@@ -39174,6 +37674,7 @@
                 "spryker/synchronization": "^1.0.0",
                 "spryker/synchronization-behavior": "^1.0.0",
                 "spryker/synchronization-extension": "^1.1.0",
+                "spryker/transfer": "^3.25.0",
                 "spryker/util-encoding": "^2.0.0"
             },
             "require-dev": {
@@ -39202,9 +37703,9 @@
             ],
             "description": "ProductOfferStorage module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-storage/tree/1.0.0"
+                "source": "https://github.com/spryker/product-offer-storage/tree/1.1.0"
             },
-            "time": "2022-02-24T16:37:46+00:00"
+            "time": "2022-06-08T15:22:39+00:00"
         },
         {
             "name": "spryker/product-offer-storage-extension",
@@ -42905,23 +41406,23 @@
         },
         {
             "name": "spryker/sales-merchant-portal-gui",
-            "version": "1.6.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-merchant-portal-gui.git",
-                "reference": "561c55b62033c150aa8bfd93186564f2c0c7a7c3"
+                "reference": "d90e5a9139346884c779ec9cbc2c85e414fa89df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/561c55b62033c150aa8bfd93186564f2c0c7a7c3",
-                "reference": "561c55b62033c150aa8bfd93186564f2c0c7a7c3",
+                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/d90e5a9139346884c779ec9cbc2c85e414fa89df",
+                "reference": "d90e5a9139346884c779ec9cbc2c85e414fa89df",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
                 "spryker/currency": "^3.0.0",
                 "spryker/dashboard-merchant-portal-gui-extension": "^1.0.0",
-                "spryker/gui-table": "^1.4.0",
+                "spryker/gui-table": "^1.7.0",
                 "spryker/kernel": "^3.52.0",
                 "spryker/merchant": "^3.0.0",
                 "spryker/merchant-oms": "^1.0.0",
@@ -42939,7 +41440,7 @@
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.0.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -42964,9 +41465,9 @@
             ],
             "description": "SalesMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/1.6.0"
+                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/1.8.1"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-06-02T11:32:03+00:00"
         },
         {
             "name": "spryker/sales-merchant-portal-gui-extension",
@@ -45027,16 +43528,16 @@
         },
         {
             "name": "spryker/security-merchant-portal-gui",
-            "version": "1.4.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-merchant-portal-gui.git",
-                "reference": "8c9b9626bfbf5c39c23df3ee92ec31f7e63230b4"
+                "reference": "50e7bef50a21d071950b9d47d3d5356b76e77f29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/8c9b9626bfbf5c39c23df3ee92ec31f7e63230b4",
-                "reference": "8c9b9626bfbf5c39c23df3ee92ec31f7e63230b4",
+                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/50e7bef50a21d071950b9d47d3d5356b76e77f29",
+                "reference": "50e7bef50a21d071950b9d47d3d5356b76e77f29",
                 "shasum": ""
             },
             "require": {
@@ -45048,7 +43549,7 @@
                 "spryker/security-extension": "^1.0.0",
                 "spryker/symfony": "^3.5.0",
                 "spryker/user-merchant-portal-gui-extension": "^1.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/application": "*",
@@ -45085,9 +43586,9 @@
             ],
             "description": "SecurityMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/1.4.0"
+                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/1.5.1"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-06-02T11:32:03+00:00"
         },
         {
             "name": "spryker/security-oauth-user",
@@ -48482,16 +46983,16 @@
         },
         {
             "name": "spryker/user-merchant-portal-gui",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/user-merchant-portal-gui.git",
-                "reference": "772f8083d4bc8a690cc640bf8e4fe91fc5affcf9"
+                "reference": "fccbd2b568ff682ce263a754670fca4901753bdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/772f8083d4bc8a690cc640bf8e4fe91fc5affcf9",
-                "reference": "772f8083d4bc8a690cc640bf8e4fe91fc5affcf9",
+                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/fccbd2b568ff682ce263a754670fca4901753bdd",
+                "reference": "fccbd2b568ff682ce263a754670fca4901753bdd",
                 "shasum": ""
             },
             "require": {
@@ -48505,7 +47006,7 @@
                 "spryker/translator": "^1.1.0",
                 "spryker/user-locale": "^1.0.0",
                 "spryker/user-merchant-portal-gui-extension": "^1.0.0",
-                "spryker/zed-ui": "^1.5.0"
+                "spryker/zed-ui": "^1.6.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -48528,9 +47029,9 @@
             ],
             "description": "UserMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/1.3.0"
+                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/1.4.0"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-05-23T11:14:13+00:00"
         },
         {
             "name": "spryker/user-merchant-portal-gui-extension",
@@ -50020,16 +48521,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "1.5.0",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "9dab3b953328250e9ed46740622d87420d7ee045"
+                "reference": "a9dfb2cf448df226d74596dcd3888badf13f1e1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/9dab3b953328250e9ed46740622d87420d7ee045",
-                "reference": "9dab3b953328250e9ed46740622d87420d7ee045",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/a9dfb2cf448df226d74596dcd3888badf13f1e1b",
+                "reference": "a9dfb2cf448df226d74596dcd3888badf13f1e1b",
                 "shasum": ""
             },
             "require": {
@@ -50067,9 +48568,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/1.5.0"
+                "source": "https://github.com/spryker/zed-ui/tree/1.6.2"
             },
-            "time": "2022-03-28T12:53:35+00:00"
+            "time": "2022-06-02T11:32:03+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -50667,95 +49168,6 @@
                 }
             ],
             "time": "2022-01-02T09:41:36+00:00"
-        },
-        {
-            "name": "symfony/dependency-injection",
-            "version": "v5.4.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "35588b2afb08ea3a142d62fefdcad4cb09be06ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/35588b2afb08ea3a142d62fefdcad4cb09be06ed",
-                "reference": "35588b2afb08ea3a142d62fefdcad4cb09be06ed",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "psr/container": "^1.1.1",
-                "symfony/deprecation-contracts": "^2.1|^3",
-                "symfony/polyfill-php80": "^1.16",
-                "symfony/polyfill-php81": "^1.22",
-                "symfony/service-contracts": "^1.1.6|^2"
-            },
-            "conflict": {
-                "ext-psr": "<1.1|>=2",
-                "symfony/config": "<5.3",
-                "symfony/finder": "<4.4",
-                "symfony/proxy-manager-bridge": "<4.4",
-                "symfony/yaml": "<4.4.26"
-            },
-            "provide": {
-                "psr/container-implementation": "1.0",
-                "symfony/service-implementation": "1.0|2.0"
-            },
-            "require-dev": {
-                "symfony/config": "^5.3|^6.0",
-                "symfony/expression-language": "^4.4|^5.0|^6.0",
-                "symfony/yaml": "^4.4.26|^5.0|^6.0"
-            },
-            "suggest": {
-                "symfony/config": "",
-                "symfony/expression-language": "For using expressions in service container configuration",
-                "symfony/finder": "For using double-star glob patterns or when GLOB_BRACE portability is required",
-                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
-                "symfony/yaml": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\DependencyInjection\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Allows you to standardize and centralize the way objects are constructed in your application",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/dependency-injection/tree/v5.4.7"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-03-08T15:43:06+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -56267,6 +54679,158 @@
             "time": "2021-09-13T08:41:34+00:00"
         },
         {
+            "name": "composer/pcre",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/pcre.git",
+                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/67a32d7d6f9f560b726ab25a061b38ff3a80c560",
+                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.3",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Pcre\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "PCRE wrapping library that offers type-safe preg_* replacements.",
+            "keywords": [
+                "PCRE",
+                "preg",
+                "regex",
+                "regular expression"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/pcre/issues",
+                "source": "https://github.com/composer/pcre/tree/1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-01-21T20:24:37+00:00"
+        },
+        {
+            "name": "composer/semver",
+            "version": "3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/semver.git",
+                "reference": "3953f23262f2bff1919fc82183ad9acb13ff62c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/semver/zipball/3953f23262f2bff1919fc82183ad9acb13ff62c9",
+                "reference": "3953f23262f2bff1919fc82183ad9acb13ff62c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.4",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Semver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
+                }
+            ],
+            "description": "Semver library that offers utilities, version constraint parsing and validation.",
+            "keywords": [
+                "semantic",
+                "semver",
+                "validation",
+                "versioning"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/semver/issues",
+                "source": "https://github.com/composer/semver/tree/3.3.2"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-04-01T19:23:25+00:00"
+        },
+        {
             "name": "composer/spdx-licenses",
             "version": "1.5.6",
             "source": {
@@ -56345,6 +54909,72 @@
                 }
             ],
             "time": "2021-11-18T10:14:14+00:00"
+        },
+        {
+            "name": "composer/xdebug-handler",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/xdebug-handler.git",
+                "reference": "9e36aeed4616366d2b690bdce11f71e9178c579a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/9e36aeed4616366d2b690bdce11f71e9178c579a",
+                "reference": "9e36aeed4616366d2b690bdce11f71e9178c579a",
+                "shasum": ""
+            },
+            "require": {
+                "composer/pcre": "^1",
+                "php": "^5.3.2 || ^7.0 || ^8.0",
+                "psr/log": "^1 || ^2 || ^3"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "symfony/phpunit-bridge": "^4.2 || ^5.0 || ^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Composer\\XdebugHandler\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Stevenson",
+                    "email": "john-stevenson@blueyonder.co.uk"
+                }
+            ],
+            "description": "Restarts a process without Xdebug.",
+            "keywords": [
+                "Xdebug",
+                "performance"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/xdebug-handler/issues",
+                "source": "https://github.com/composer/xdebug-handler/tree/2.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-24T20:20:32+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -56465,78 +55095,6 @@
                 "source": "https://github.com/rdohms/phpunit-arraysubset-asserts/tree/v0.3.1"
             },
             "time": "2021-10-17T18:50:58+00:00"
-        },
-        {
-            "name": "doctrine/annotations",
-            "version": "1.13.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/annotations.git",
-                "reference": "5b668aef16090008790395c02c893b1ba13f7e08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5b668aef16090008790395c02c893b1ba13f7e08",
-                "reference": "5b668aef16090008790395c02c893b1ba13f7e08",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/lexer": "1.*",
-                "ext-tokenizer": "*",
-                "php": "^7.1 || ^8.0",
-                "psr/cache": "^1 || ^2 || ^3"
-            },
-            "require-dev": {
-                "doctrine/cache": "^1.11 || ^2.0",
-                "doctrine/coding-standard": "^6.0 || ^8.1",
-                "phpstan/phpstan": "^0.12.20",
-                "phpunit/phpunit": "^7.5 || ^8.0 || ^9.1.5",
-                "symfony/cache": "^4.4 || ^5.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Docblock Annotations Parser",
-            "homepage": "https://www.doctrine-project.org/projects/annotations.html",
-            "keywords": [
-                "annotations",
-                "docblock",
-                "parser"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.13.2"
-            },
-            "time": "2021-08-05T19:00:23+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -56747,6 +55305,53 @@
             "time": "2021-10-03T12:00:00+00:00"
         },
         {
+            "name": "jetbrains/phpstorm-stubs",
+            "version": "v2019.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JetBrains/phpstorm-stubs.git",
+                "reference": "883b6facd78e01c0743b554af86fa590c2573f40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/883b6facd78e01c0743b554af86fa590c2573f40",
+                "reference": "883b6facd78e01c0743b554af86fa590c2573f40",
+                "shasum": ""
+            },
+            "require-dev": {
+                "nikic/php-parser": "^4",
+                "php": "^7.1",
+                "phpdocumentor/reflection-docblock": "^4.3",
+                "phpunit/phpunit": "^7"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "PhpStormStubsMap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "PHP runtime & extensions header files for PhpStorm",
+            "homepage": "https://www.jetbrains.com/phpstorm",
+            "keywords": [
+                "autocomplete",
+                "code",
+                "inference",
+                "inspection",
+                "jetbrains",
+                "phpstorm",
+                "stubs",
+                "type"
+            ],
+            "support": {
+                "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
+            },
+            "time": "2019-12-05T16:56:26+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.11",
             "source": {
@@ -56921,6 +55526,687 @@
                 }
             ],
             "time": "2020-11-13T09:40:50+00:00"
+        },
+        {
+            "name": "nette/di",
+            "version": "v3.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/di.git",
+                "reference": "11c236b9f7bbfc5a95e7b24742ad8847936feeb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/di/zipball/11c236b9f7bbfc5a95e7b24742ad8847936feeb5",
+                "reference": "11c236b9f7bbfc5a95e7b24742ad8847936feeb5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "nette/neon": "^3.3",
+                "nette/php-generator": "^3.5.4",
+                "nette/robot-loader": "^3.2",
+                "nette/schema": "^1.1",
+                "nette/utils": "^3.1.6",
+                "php": ">=7.1 <8.2"
+            },
+            "conflict": {
+                "nette/bootstrap": "<3.0"
+            },
+            "require-dev": {
+                "nette/tester": "^2.2",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "💎 Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP features.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "compiled",
+                "di",
+                "dic",
+                "factory",
+                "ioc",
+                "nette",
+                "static"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/di/issues",
+                "source": "https://github.com/nette/di/tree/v3.0.12"
+            },
+            "time": "2021-12-15T21:05:11+00:00"
+        },
+        {
+            "name": "nette/finder",
+            "version": "v2.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/finder.git",
+                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/finder/zipball/64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
+                "reference": "64dc25b7929b731e72a1bc84a9e57727f5d5d3e8",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^2.4 || ^3.0",
+                "php": ">=7.1"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "filesystem",
+                "glob",
+                "iterator",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/finder/issues",
+                "source": "https://github.com/nette/finder/tree/v2.5.3"
+            },
+            "time": "2021-12-12T17:43:24+00:00"
+        },
+        {
+            "name": "nette/neon",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/neon.git",
+                "reference": "54b287d8c2cdbe577b02e28ca1713e275b05ece2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/neon/zipball/54b287d8c2cdbe577b02e28ca1713e275b05ece2",
+                "reference": "54b287d8c2cdbe577b02e28ca1713e275b05ece2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.7"
+            },
+            "bin": [
+                "bin/neon-lint"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🍸 Nette NEON: encodes and decodes NEON file format.",
+            "homepage": "https://ne-on.org",
+            "keywords": [
+                "export",
+                "import",
+                "neon",
+                "nette",
+                "yaml"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/neon/issues",
+                "source": "https://github.com/nette/neon/tree/v3.3.2"
+            },
+            "time": "2021-11-25T15:57:41+00:00"
+        },
+        {
+            "name": "nette/php-generator",
+            "version": "v3.6.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/php-generator.git",
+                "reference": "9370403f9d9c25b51c4596ded1fbfe70347f7c82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/9370403f9d9c25b51c4596ded1fbfe70347f7c82",
+                "reference": "9370403f9d9c25b51c4596ded1fbfe70347f7c82",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^3.1.2",
+                "php": ">=7.2 <8.2"
+            },
+            "require-dev": {
+                "nette/tester": "^2.4",
+                "nikic/php-parser": "^4.13",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.8"
+            },
+            "suggest": {
+                "nikic/php-parser": "to use ClassType::withBodiesFrom() & GlobalFunction::withBodyFrom()"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.6-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 8.1 features.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "code",
+                "nette",
+                "php",
+                "scaffolding"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/php-generator/issues",
+                "source": "https://github.com/nette/php-generator/tree/v3.6.5"
+            },
+            "time": "2021-11-24T16:23:44+00:00"
+        },
+        {
+            "name": "nette/robot-loader",
+            "version": "v3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/robot-loader.git",
+                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/robot-loader/zipball/e2adc334cb958164c050f485d99c44c430f51fe2",
+                "reference": "e2adc334cb958164c050f485d99c44c430f51fe2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "nette/finder": "^2.5 || ^3.0",
+                "nette/utils": "^3.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🍀 Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "autoload",
+                "class",
+                "interface",
+                "nette",
+                "trait"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/robot-loader/issues",
+                "source": "https://github.com/nette/robot-loader/tree/v3.4.1"
+            },
+            "time": "2021-08-25T15:53:54+00:00"
+        },
+        {
+            "name": "nette/schema",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/schema.git",
+                "reference": "9a39cef03a5b34c7de64f551538cbba05c2be5df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/schema/zipball/9a39cef03a5b34c7de64f551538cbba05c2be5df",
+                "reference": "9a39cef03a5b34c7de64f551538cbba05c2be5df",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^2.5.7 || ^3.1.5 ||  ^4.0",
+                "php": ">=7.1 <8.2"
+            },
+            "require-dev": {
+                "nette/tester": "^2.3 || ^2.4",
+                "phpstan/phpstan-nette": "^0.12",
+                "tracy/tracy": "^2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "📐 Nette Schema: validating data structures against a given Schema.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "config",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/schema/issues",
+                "source": "https://github.com/nette/schema/tree/v1.2.2"
+            },
+            "time": "2021-10-15T11:40:02+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v3.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "2f261e55bd6a12057442045bf2c249806abc1d02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/2f261e55bd6a12057442045bf2c249806abc1d02",
+                "reference": "2f261e55bd6a12057442045bf2c249806abc1d02",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2 <8.2"
+            },
+            "conflict": {
+                "nette/di": "<3.0.6"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "phpstan/phpstan": "^1.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "array",
+                "core",
+                "datetime",
+                "images",
+                "json",
+                "nette",
+                "paginator",
+                "password",
+                "slugify",
+                "string",
+                "unicode",
+                "utf-8",
+                "utility",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/utils/issues",
+                "source": "https://github.com/nette/utils/tree/v3.2.6"
+            },
+            "time": "2021-11-24T15:47:23+00:00"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "v4.13.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "210577fe3cf7badcc5814d99455df46564f3c077"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/210577fe3cf7badcc5814d99455df46564f3c077",
+                "reference": "210577fe3cf7badcc5814d99455df46564f3c077",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "ircmaxell/php-yacc": "^0.0.7",
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
+            },
+            "bin": [
+                "bin/php-parse"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpParser\\": "lib/PhpParser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/nikic/PHP-Parser/issues",
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
+            },
+            "time": "2021-11-30T19:35:32+00:00"
+        },
+        {
+            "name": "ondrejmirtes/better-reflection",
+            "version": "4.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ondrejmirtes/BetterReflection.git",
+                "reference": "5b4d1c53768e2a3bc32ab348752663733fd70546"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ondrejmirtes/BetterReflection/zipball/5b4d1c53768e2a3bc32ab348752663733fd70546",
+                "reference": "5b4d1c53768e2a3bc32ab348752663733fd70546",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "jetbrains/phpstorm-stubs": "2019.3",
+                "nikic/php-parser": "^4.6.0",
+                "php": ">=7.4.1,<7.5.0",
+                "phpdocumentor/reflection-docblock": "^5.2.0",
+                "phpdocumentor/type-resolver": "^1.3.0",
+                "roave/signature": "^1.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^8.1.0",
+                "infection/infection": "^0.16.4",
+                "phpstan/phpstan": "^0.12.25",
+                "phpunit/phpunit": "^9.2.6",
+                "vimeo/psalm": "3.13.1"
+            },
+            "suggest": {
+                "composer/composer": "Required to use the ComposerSourceLocator"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Roave\\BetterReflection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Titcumb",
+                    "email": "james@asgrim.com",
+                    "homepage": "https://github.com/asgrim"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "https://ocramius.github.io/"
+                },
+                {
+                    "name": "Gary Hockin",
+                    "email": "gary@roave.com",
+                    "homepage": "https://github.com/geeh"
+                },
+                {
+                    "name": "Jaroslav Hanslík",
+                    "email": "kukulich@kukulich.cz",
+                    "homepage": "https://github.com/kukulich"
+                }
+            ],
+            "description": "Better Reflection - an improved code reflection API",
+            "support": {
+                "source": "https://github.com/ondrejmirtes/BetterReflection/tree/4.10.0"
+            },
+            "time": "2020-10-01T10:56:39+00:00"
+        },
+        {
+            "name": "pdepend/pdepend",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pdepend/pdepend.git",
+                "reference": "1fd30f4352b630ad53fec3fd5e8b8ba760f85596"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/1fd30f4352b630ad53fec3fd5e8b8ba760f85596",
+                "reference": "1fd30f4352b630ad53fec3fd5e8b8ba760f85596",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.7",
+                "symfony/config": "^2.3.0|^3|^4|^5",
+                "symfony/dependency-injection": "^2.3.0|^3|^4|^5",
+                "symfony/filesystem": "^2.3.0|^3|^4|^5"
+            },
+            "require-dev": {
+                "easy-doc/easy-doc": "0.0.0|^1.2.3",
+                "gregwar/rst": "^1.0",
+                "phpunit/phpunit": "^4.8.36|^5.7.27",
+                "squizlabs/php_codesniffer": "^2.0.0"
+            },
+            "bin": [
+                "src/bin/pdepend"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PDepend\\": "src/main/php/PDepend"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Official version of pdepend to be handled with Composer",
+            "support": {
+                "issues": "https://github.com/pdepend/pdepend/issues",
+                "source": "https://github.com/pdepend/pdepend/tree/2.10.0"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/pdepend/pdepend",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-07-20T09:56:09+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -57099,37 +56385,31 @@
             "time": "2021-10-14T09:30:02+00:00"
         },
         {
-            "name": "phpbench/container",
+            "name": "phpdocumentor/reflection-common",
             "version": "2.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpbench/container.git",
-                "reference": "4af6c2619296e95b72409fd6244f000276277047"
+                "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
+                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpbench/container/zipball/4af6c2619296e95b72409fd6244f000276277047",
-                "reference": "4af6c2619296e95b72409fd6244f000276277047",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/1d01c49d4ed62f25aa84a747ad35d5a16924662b",
+                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b",
                 "shasum": ""
             },
             "require": {
-                "psr/container": "^1.0|^2.0",
-                "symfony/options-resolver": "^4.2 || ^5.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "phpstan/phpstan": "^0.12.52",
-                "phpunit/phpunit": "^8"
+                "php": "^7.2 || ^8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-2.x": "2.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "PhpBench\\DependencyInjection\\": "lib/"
+                    "phpDocumentor\\Reflection\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -57138,49 +56418,59 @@
             ],
             "authors": [
                 {
-                    "name": "Daniel Leech",
-                    "email": "daniel@dantleech.com"
+                    "name": "Jaap van Otterdijk",
+                    "email": "opensource@ijaap.nl"
                 }
             ],
-            "description": "Simple, configurable, service container.",
+            "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
+            "homepage": "http://www.phpdoc.org",
+            "keywords": [
+                "FQSEN",
+                "phpDocumentor",
+                "phpdoc",
+                "reflection",
+                "static analysis"
+            ],
             "support": {
-                "issues": "https://github.com/phpbench/container/issues",
-                "source": "https://github.com/phpbench/container/tree/2.2.0"
+                "issues": "https://github.com/phpDocumentor/ReflectionCommon/issues",
+                "source": "https://github.com/phpDocumentor/ReflectionCommon/tree/2.x"
             },
-            "time": "2021-07-14T20:56:29+00:00"
+            "time": "2020-06-27T09:03:43+00:00"
         },
         {
-            "name": "phpbench/dom",
-            "version": "0.3.2",
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpbench/dom.git",
-                "reference": "b013b717832ddbaadf2a40984b04bc66af9a7110"
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "622548b623e81ca6d78b721c5e029f4ce664f170"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpbench/dom/zipball/b013b717832ddbaadf2a40984b04bc66af9a7110",
-                "reference": "b013b717832ddbaadf2a40984b04bc66af9a7110",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/622548b623e81ca6d78b721c5e029f4ce664f170",
+                "reference": "622548b623e81ca6d78b721c5e029f4ce664f170",
                 "shasum": ""
             },
             "require": {
-                "ext-dom": "*",
-                "php": "^7.2||^8.0"
+                "ext-filter": "*",
+                "php": "^7.2 || ^8.0",
+                "phpdocumentor/reflection-common": "^2.2",
+                "phpdocumentor/type-resolver": "^1.3",
+                "webmozart/assert": "^1.9.1"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.18",
-                "phpstan/phpstan": "^0.12.83",
-                "phpunit/phpunit": "^8.0||^9.0"
+                "mockery/mockery": "~1.3.2",
+                "psalm/phar": "^4.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "5.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "PhpBench\\Dom\\": "lib/"
+                    "phpDocumentor\\Reflection\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -57189,104 +56479,153 @@
             ],
             "authors": [
                 {
-                    "name": "Daniel Leech",
-                    "email": "daniel@dantleech.com"
+                    "name": "Mike van Riel",
+                    "email": "me@mikevanriel.com"
+                },
+                {
+                    "name": "Jaap van Otterdijk",
+                    "email": "account@ijaap.nl"
                 }
             ],
-            "description": "DOM wrapper to simplify working with the PHP DOM implementation",
+            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
-                "issues": "https://github.com/phpbench/dom/issues",
-                "source": "https://github.com/phpbench/dom/tree/0.3.2"
+                "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.3.0"
             },
-            "time": "2021-09-24T15:26:07+00:00"
+            "time": "2021-10-19T17:43:47+00:00"
         },
         {
-            "name": "phpbench/phpbench",
-            "version": "1.2.2",
+            "name": "phpdocumentor/type-resolver",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpbench/phpbench.git",
-                "reference": "0799479fcb4d4bf01d2320c2ea051c04e55adf39"
+                "url": "https://github.com/phpDocumentor/TypeResolver.git",
+                "reference": "77a32518733312af16a44300404e945338981de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpbench/phpbench/zipball/0799479fcb4d4bf01d2320c2ea051c04e55adf39",
-                "reference": "0799479fcb4d4bf01d2320c2ea051c04e55adf39",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/77a32518733312af16a44300404e945338981de3",
+                "reference": "77a32518733312af16a44300404e945338981de3",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "^1.13",
-                "ext-dom": "*",
-                "ext-json": "*",
-                "ext-pcre": "*",
-                "ext-reflection": "*",
-                "ext-spl": "*",
+                "php": "^7.2 || ^8.0",
+                "phpdocumentor/reflection-common": "^2.0"
+            },
+            "require-dev": {
                 "ext-tokenizer": "*",
-                "php": "^7.3 || ^8.0",
-                "phpbench/container": "^2.1",
-                "phpbench/dom": "~0.3.1",
-                "psr/log": "^1.1",
-                "seld/jsonlint": "^1.1",
-                "symfony/console": "^4.2 || ^5.0  || ^6.0",
-                "symfony/filesystem": "^4.2 || ^5.0 || ^6.0",
-                "symfony/finder": "^4.2 || ^5.0 || ^6.0",
-                "symfony/options-resolver": "^4.2 || ^5.0 || ^6.0",
-                "symfony/process": "^4.2 || ^5.0 || ^6.0",
-                "webmozart/path-util": "^2.3"
+                "psalm/phar": "^4.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "me@mikevanriel.com"
+                }
+            ],
+            "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
+            "support": {
+                "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
+            },
+            "time": "2022-03-15T21:29:03+00:00"
+        },
+        {
+            "name": "phpmd/phpmd",
+            "version": "2.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmd/phpmd.git",
+                "reference": "1bc74db7cf834662d83abebae265be11bb2eec3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/1bc74db7cf834662d83abebae265be11bb2eec3a",
+                "reference": "1bc74db7cf834662d83abebae265be11bb2eec3a",
+                "shasum": ""
+            },
+            "require": {
+                "composer/xdebug-handler": "^1.0 || ^2.0",
+                "ext-xml": "*",
+                "pdepend/pdepend": "^2.10.0",
+                "php": ">=5.3.9"
             },
             "require-dev": {
-                "dantleech/invoke": "^2.0",
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "jangregor/phpstan-prophecy": "^0.8.1",
-                "phpspec/prophecy": "^1.12",
-                "phpstan/phpstan": "^0.12.7",
-                "phpunit/phpunit": "^8.5.8 || ^9.0",
-                "symfony/error-handler": "^5.2 || ^6.0",
-                "symfony/var-dumper": "^4.0 || ^5.0 || ^6.0"
-            },
-            "suggest": {
-                "ext-xdebug": "For Xdebug profiling extension."
+                "easy-doc/easy-doc": "0.0.0 || ^1.3.2",
+                "ext-json": "*",
+                "ext-simplexml": "*",
+                "gregwar/rst": "^1.0",
+                "mikey179/vfsstream": "^1.6.8",
+                "phpunit/phpunit": "^4.8.36 || ^5.7.27",
+                "squizlabs/php_codesniffer": "^2.0"
             },
             "bin": [
-                "bin/phpbench"
+                "src/bin/phpmd"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
             "autoload": {
-                "files": [
-                    "lib/Report/Func/functions.php"
-                ],
-                "psr-4": {
-                    "PhpBench\\": "lib/",
-                    "PhpBench\\Extensions\\XDebug\\": "extensions/xdebug/lib/"
+                "psr-0": {
+                    "PHPMD\\": "src/main/php"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Daniel Leech",
-                    "email": "daniel@dantleech.com"
+                    "name": "Manuel Pichler",
+                    "email": "github@manuel-pichler.de",
+                    "homepage": "https://github.com/manuelpichler",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Marc Würth",
+                    "email": "ravage@bluewin.ch",
+                    "homepage": "https://github.com/ravage84",
+                    "role": "Project Maintainer"
+                },
+                {
+                    "name": "Other contributors",
+                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
+                    "role": "Contributors"
                 }
             ],
-            "description": "PHP Benchmarking Framework",
+            "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
+            "homepage": "https://phpmd.org/",
+            "keywords": [
+                "mess detection",
+                "mess detector",
+                "pdepend",
+                "phpmd",
+                "pmd"
+            ],
             "support": {
-                "issues": "https://github.com/phpbench/phpbench/issues",
-                "source": "https://github.com/phpbench/phpbench/tree/1.2.2"
+                "irc": "irc://irc.freenode.org/phpmd",
+                "issues": "https://github.com/phpmd/phpmd/issues",
+                "source": "https://github.com/phpmd/phpmd/tree/2.10.2"
             },
             "funding": [
                 {
-                    "url": "https://github.com/dantleech",
-                    "type": "github"
+                    "url": "https://tidelift.com/funding/github/packagist/phpmd/phpmd",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2021-12-11T20:52:22+00:00"
+            "time": "2021-07-22T09:56:23+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -57965,6 +57304,46 @@
             "time": "2020-05-28T14:10:32+00:00"
         },
         {
+            "name": "roave/signature",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Roave/Signature.git",
+                "reference": "577ee14d2abaeb315a5cd2d86d7e3df46a7dac56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roave/Signature/zipball/577ee14d2abaeb315a5cd2d86d7e3df46a7dac56",
+                "reference": "577ee14d2abaeb315a5cd2d86d7e3df46a7dac56",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^7.4"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^8.1",
+                "infection/infection": "^0.17.5",
+                "phpunit/phpunit": "^9.3",
+                "vimeo/psalm": "^3.16"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Roave\\Signature\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Sign and verify stuff",
+            "support": {
+                "issues": "https://github.com/Roave/Signature/issues",
+                "source": "https://github.com/Roave/Signature/tree/1.2.0"
+            },
+            "time": "2020-10-01T08:18:39+00:00"
+        },
+        {
             "name": "sebastian/cli-parser",
             "version": "1.0.1",
             "source": {
@@ -58261,6 +57640,72 @@
                 }
             ],
             "time": "2020-10-26T15:52:27+00:00"
+        },
+        {
+            "name": "sebastian/diff",
+            "version": "4.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/diff.git",
+                "reference": "3461e3fccc7cfdfc2720be910d3bd73c69be590d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/3461e3fccc7cfdfc2720be910d3bd73c69be590d",
+                "reference": "3461e3fccc7cfdfc2720be910d3bd73c69be590d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3",
+                "symfony/process": "^4.2 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
+                    "name": "Kore Nordmann",
+                    "email": "mail@kore-nordmann.de"
+                }
+            ],
+            "description": "Diff implementation",
+            "homepage": "https://github.com/sebastianbergmann/diff",
+            "keywords": [
+                "diff",
+                "udiff",
+                "unidiff",
+                "unified diff"
+            ],
+            "support": {
+                "issues": "https://github.com/sebastianbergmann/diff/issues",
+                "source": "https://github.com/sebastianbergmann/diff/tree/4.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sebastianbergmann",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-26T13:10:38+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -59208,144 +58653,6 @@
             "time": "2021-06-02T22:15:26+00:00"
         },
         {
-            "name": "spryker-feature/development-tools",
-            "version": "202204.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-feature/development-tools.git",
-                "reference": "422c131479bf97d5da2c818f28e6a2331d566f92"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/development-tools/zipball/422c131479bf97d5da2c818f28e6a2331d566f92",
-                "reference": "422c131479bf97d5da2c818f28e6a2331d566f92",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "spryker-sdk/benchmark": "^0.2.0",
-                "spryker-sdk/composer-constrainer": "^0.2.0",
-                "spryker-sdk/spryk": "^0.3.0",
-                "spryker-sdk/spryk-gui": "^0.2.0",
-                "spryker-shop/web-profiler-widget": "^1.4.0",
-                "spryker/code-generator": "^0.3.7",
-                "spryker/development": "^3.32.0",
-                "spryker/web-profiler": "^1.6.0"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "202204.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Development tools [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/development-tools/tree/202204.0"
-            },
-            "time": "2022-04-29T14:07:44+00:00"
-        },
-        {
-            "name": "spryker-sdk/benchmark",
-            "version": "0.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-sdk/benchmark.git",
-                "reference": "f81809189fba2cb4a3f107efa3a358dd0412976f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-sdk/benchmark/zipball/f81809189fba2cb4a3f107efa3a358dd0412976f",
-                "reference": "f81809189fba2cb4a3f107efa3a358dd0412976f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "phpbench/phpbench": "^1.0.0",
-                "psr/http-message": "^1.0.0",
-                "spryker/guzzle": "^2.1.0",
-                "spryker/kernel": "^3.54.0",
-                "spryker/symfony": "^3.3.2",
-                "spryker/util-encoding": "^2.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/config": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SprykerSdk\\": "src/SprykerSdk/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Benchmark module",
-            "support": {
-                "issues": "https://github.com/spryker-sdk/benchmark/issues",
-                "source": "https://github.com/spryker-sdk/benchmark/tree/0.2.2"
-            },
-            "time": "2021-10-13T18:35:39+00:00"
-        },
-        {
-            "name": "spryker-sdk/composer-constrainer",
-            "version": "0.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-sdk/composer-constrainer.git",
-                "reference": "d649aa33894d5cc2c996f249b68fa9bf470d813e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-sdk/composer-constrainer/zipball/d649aa33894d5cc2c996f249b68fa9bf470d813e",
-                "reference": "d649aa33894d5cc2c996f249b68fa9bf470d813e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "roave/better-reflection": "^4.3.0",
-                "spryker/kernel": "^3.33.0",
-                "spryker/laminas": "^1.0.0",
-                "spryker/symfony": "^3.2.2"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/console": "*",
-                "spryker/testify": "^3.15.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SprykerSdk\\": "src/SprykerSdk/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "ComposerConstrainer module",
-            "support": {
-                "issues": "https://github.com/spryker-sdk/composer-constrainer/issues",
-                "source": "https://github.com/spryker-sdk/composer-constrainer/tree/0.2.3"
-            },
-            "time": "2021-01-19T13:42:20+00:00"
-        },
-        {
             "name": "spryker-sdk/integrator",
             "version": "dev-master",
             "source": {
@@ -59516,50 +58823,65 @@
             "time": "2021-01-26T13:25:24+00:00"
         },
         {
-            "name": "spryker-sdk/spryk-gui",
-            "version": "0.2.1",
+            "name": "spryker-sdk/spryk",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spryker-sdk/spryk-gui.git",
-                "reference": "7ab967d418215064794b12c97434d6f958bd65b9"
+                "url": "https://github.com/spryker-sdk/spryk.git",
+                "reference": "3b84913605da52d1483a2ea2f747f9462003a444"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-sdk/spryk-gui/zipball/7ab967d418215064794b12c97434d6f958bd65b9",
-                "reference": "7ab967d418215064794b12c97434d6f958bd65b9",
+                "url": "https://api.github.com/repos/spryker-sdk/spryk/zipball/3b84913605da52d1483a2ea2f747f9462003a444",
+                "reference": "3b84913605da52d1483a2ea2f747f9462003a444",
                 "shasum": ""
             },
             "require": {
-                "ondrejmirtes/better-reflection": "^4.3.0",
-                "php": ">=7.3",
-                "spryker-sdk/spryk": "^0.3.1",
-                "spryker/development": "^3.12.0",
-                "spryker/graph": "^3.0.0",
+                "ext-dom": "*",
+                "ext-simplexml": "*",
+                "ondrejmirtes/better-reflection": "^4.3.19",
+                "php": ">=7.4",
+                "spryker/config": "^3.0.0",
+                "spryker/console": "^3.0.0 || ^4.0.0",
+                "spryker/doctrine-inflector": "^1.1.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/laminas": "^1.0.0",
-                "spryker/symfony": "^3.5.0",
-                "spryker/transfer": "^3.25.0"
+                "symfony/console": "^3.4.0 || ^4.0.0 || ^5.0.0",
+                "symfony/filesystem": "^3.4.0 || ^4.0.0 || ^5.0.0",
+                "symfony/finder": "^3.4.0 || ^4.0.0 || ^5.0.0",
+                "symfony/yaml": "^3.4.9 || ^4.0.0 || ^5.0.0",
+                "twig/twig": "^1.41 || ^2.0.0 || ^3.0.0"
             },
             "require-dev": {
-                "codeception/module-asserts": "^1.3",
-                "codeception/module-phpbrowser": "^1.0",
-                "phpstan/phpstan": "^0.12.0",
-                "spryker/application": "^3.28.0",
+                "codeception/codeception": "^4.0.0",
+                "phpstan/phpstan": "^0.12.98",
+                "phpunit/phpunit": "^9.5.0",
+                "spryker/checkout-extension": "^1.3.0",
                 "spryker/code-sniffer": "*",
-                "spryker/config": "^3.5.0",
-                "spryker/container": "^1.4.2",
-                "spryker/event-dispatcher": "^1.2.0",
-                "spryker/form": "^1.0.0",
-                "spryker/gui": "^3.40.0",
-                "spryker/http": "^1.5.0",
-                "spryker/propel": "^3.30.0",
-                "spryker/router": "^1.12.0",
-                "spryker/testify": "^3.40.0",
-                "spryker/translator": "^1.8.0",
-                "spryker/twig": "^3.13.0",
-                "spryker/validator": "^1.1.0",
-                "spryker/zed-navigation": "^1.5.0"
+                "spryker/data-import": "^1.1.0",
+                "spryker/glue-application-extension": "^1.1.0",
+                "spryker/oms": "^10.0.0 || ^11.0.0",
+                "spryker/payment-extension": "^1.0.0",
+                "spryker/router": "^1.1.0",
+                "spryker/sales-payment-extension": "^1.0.0",
+                "spryker/step-engine": "^3.3.0",
+                "spryker/testify": "^3.40.0"
             },
+            "suggest": {
+                "spryker/checkout-extension": "If you want to use Payment spryks, minimum required version: 1.3.0",
+                "spryker/data-import": "If you want to use DataImport spryks, minimum required version: 1.0.0",
+                "spryker/glue-application-extension": "If you want to use Glue spryks, minimum required version: 1.1.0",
+                "spryker/oms": "If you want to use Payment spryks, minimum required version: 6.0.0",
+                "spryker/payment-extension": "If you want to use Payment spryks, minimum required version: 1.0.0",
+                "spryker/router": "If you want to use Route spryks, minimum required version: 1.1.0",
+                "spryker/sales-payment-extension": "If you want to use Payment spryks, minimum required version: 1.0.0",
+                "spryker/step-engine": "If you want to use Payment spryks, minimum required version: 1.0.0"
+            },
+            "bin": [
+                "bin/spryk-run",
+                "bin/spryk-dump",
+                "bin/spryk-build"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -59575,68 +58897,12 @@
             "license": [
                 "proprietary"
             ],
-            "description": "SprykGui module",
+            "description": "Spryk module",
             "support": {
-                "issues": "https://github.com/spryker-sdk/spryk-gui/issues",
-                "source": "https://github.com/spryker-sdk/spryk-gui/tree/0.2.1"
+                "issues": "https://github.com/spryker-sdk/spryk/issues",
+                "source": "https://github.com/spryker-sdk/spryk/tree/0.3.3"
             },
-            "time": "2021-09-28T13:48:23+00:00"
-        },
-        {
-            "name": "spryker-shop/web-profiler-widget",
-            "version": "1.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-shop/web-profiler-widget.git",
-                "reference": "0602f5369756a1fed4232c4a3562a5f0fa80a95a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/web-profiler-widget/zipball/0602f5369756a1fed4232c4a3562a5f0fa80a95a",
-                "reference": "0602f5369756a1fed4232c4a3562a5f0fa80a95a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "spryker/application-extension": "^1.0.0",
-                "spryker/form-extension": "^1.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/symfony": "^3.3.5",
-                "spryker/twig": "^3.3.0",
-                "spryker/twig-extension": "^1.0.0",
-                "spryker/web-profiler-extension": "^1.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/container": "*",
-                "spryker/event-dispatcher": "*",
-                "spryker/silex": "*"
-            },
-            "suggest": {
-                "spryker/container": "Add this module when using plugins from this module.",
-                "spryker/event-dispatcher": "Add this module when using plugins from this module.",
-                "spryker/silex": "Add this module when using plugins that need Silex dependencies."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SprykerShop\\": "src/SprykerShop/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "WebProfilerWidget module",
-            "support": {
-                "source": "https://github.com/spryker-shop/web-profiler-widget/tree/1.4.2"
-            },
-            "time": "2020-10-02T11:19:24+00:00"
+            "time": "2021-12-31T09:49:51+00:00"
         },
         {
             "name": "spryker/architecture-sniffer",
@@ -59701,54 +58967,6 @@
             "time": "2019-03-14T14:56:25+00:00"
         },
         {
-            "name": "spryker/code-generator",
-            "version": "0.3.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/code-generator.git",
-                "reference": "e51dfc15bd713423954ee3efe658d98882500d03"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/code-generator/zipball/e51dfc15bd713423954ee3efe658d98882500d03",
-                "reference": "e51dfc15bd713423954ee3efe658d98882500d03",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/kernel": "^3.30.0",
-                "spryker/laminas": "^1.0.0",
-                "spryker/symfony": "^3.0.0",
-                "spryker/twig": "^3.0.0"
-            },
-            "require-dev": {
-                "codeception/codeception": "^4.1",
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "CodeGenerator module",
-            "support": {
-                "issues": "https://github.com/spryker/code-generator/issues",
-                "source": "https://github.com/spryker/code-generator/tree/0.3.10"
-            },
-            "time": "2021-04-21T11:18:01+00:00"
-        },
-        {
             "name": "spryker/code-sniffer",
             "version": "0.15.9",
             "source": {
@@ -59807,6 +59025,62 @@
             "time": "2021-05-04T09:55:03+00:00"
         },
         {
+            "name": "spryker/development",
+            "version": "3.32.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/development.git",
+                "reference": "fb703ab9577b5e8f4232dc0978215d8a6a93c889"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/development/zipball/fb703ab9577b5e8f4232dc0978215d8a6a93c889",
+                "reference": "fb703ab9577b5e8f4232dc0978215d8a6a93c889",
+                "shasum": ""
+            },
+            "require": {
+                "nette/di": "^2.4.7 || ^3.0.0",
+                "php": ">=7.4",
+                "phpmd/phpmd": "^2.0.0",
+                "spryker/config": "^3.0.0",
+                "spryker/graph": "^3.0.0",
+                "spryker/kernel": "^3.52.0",
+                "spryker/laminas": "^1.0.0",
+                "spryker/module-finder": "^1.0.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/twig": "^3.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "tests/dd.php"
+                ],
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Zed\\Development\\Helper\\": "tests/SprykerTest/Zed/Development/_support/Helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Development module",
+            "support": {
+                "source": "https://github.com/spryker/development/tree/3.32.3"
+            },
+            "time": "2022-04-14T07:53:41+00:00"
+        },
+        {
             "name": "spryker/docker-chromedriver",
             "version": "dev-master",
             "source": {
@@ -59843,6 +59117,51 @@
                 "source": "https://github.com/spryker/docker-chromedriver/tree/master"
             },
             "time": "2022-04-11T08:49:47+00:00"
+        },
+        {
+            "name": "spryker/module-finder",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/module-finder.git",
+                "reference": "ee25ba055d2b4af7c80b2c7d3d8800c7d21a78fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/module-finder/zipball/ee25ba055d2b4af7c80b2c7d3d8800c7d21a78fa",
+                "reference": "ee25ba055d2b4af7c80b2c7d3d8800c7d21a78fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/kernel": "^3.33.0",
+                "spryker/laminas": "^1.0.0",
+                "spryker/symfony": "^3.2.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ModuleFinder module",
+            "support": {
+                "source": "https://github.com/spryker/module-finder/tree/1.2.0"
+            },
+            "time": "2021-10-21T12:10:34+00:00"
         },
         {
             "name": "spryker/testify",
@@ -59916,65 +59235,6 @@
                 "source": "https://github.com/spryker/testify/tree/3.43.0"
             },
             "time": "2021-12-15T11:26:41+00:00"
-        },
-        {
-            "name": "spryker/web-profiler",
-            "version": "1.6.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/web-profiler.git",
-                "reference": "94be8602a96c71a1f5488135602beb19759a690c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/web-profiler/zipball/94be8602a96c71a1f5488135602beb19759a690c",
-                "reference": "94be8602a96c71a1f5488135602beb19759a690c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "spryker/application-extension": "^1.0.0",
-                "spryker/form-extension": "^1.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/symfony": "^3.2.0",
-                "spryker/twig": "^3.4.0",
-                "spryker/twig-extension": "^1.0.0",
-                "spryker/web-profiler-extension": "^1.0.0",
-                "symfony/web-profiler-bundle": "^3.0.0 || ^4.0.0 || ^5.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/config": "^3.0.0",
-                "spryker/container": "*",
-                "spryker/event-dispatcher": "*",
-                "spryker/silex": "*"
-            },
-            "suggest": {
-                "spryker/config": "If you want to use ServiceProvider plugins.",
-                "spryker/container": "If you want to use the Router module.",
-                "spryker/event-dispatcher": "If you want to use the EventDispatcher module.",
-                "spryker/silex": "If you want to use ServiceProvider plugins."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "WebProfiler module",
-            "support": {
-                "source": "https://github.com/spryker/web-profiler/tree/1.6.4"
-            },
-            "time": "2020-10-09T09:26:41+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -60322,6 +59582,95 @@
                 }
             ],
             "time": "2022-01-02T09:53:40+00:00"
+        },
+        {
+            "name": "symfony/dependency-injection",
+            "version": "v5.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dependency-injection.git",
+                "reference": "35588b2afb08ea3a142d62fefdcad4cb09be06ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/35588b2afb08ea3a142d62fefdcad4cb09be06ed",
+                "reference": "35588b2afb08ea3a142d62fefdcad4cb09be06ed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/container": "^1.1.1",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/polyfill-php80": "^1.16",
+                "symfony/polyfill-php81": "^1.22",
+                "symfony/service-contracts": "^1.1.6|^2"
+            },
+            "conflict": {
+                "ext-psr": "<1.1|>=2",
+                "symfony/config": "<5.3",
+                "symfony/finder": "<4.4",
+                "symfony/proxy-manager-bridge": "<4.4",
+                "symfony/yaml": "<4.4.26"
+            },
+            "provide": {
+                "psr/container-implementation": "1.0",
+                "symfony/service-implementation": "1.0|2.0"
+            },
+            "require-dev": {
+                "symfony/config": "^5.3|^6.0",
+                "symfony/expression-language": "^4.4|^5.0|^6.0",
+                "symfony/yaml": "^4.4.26|^5.0|^6.0"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/expression-language": "For using expressions in service container configuration",
+                "symfony/finder": "For using double-star glob patterns or when GLOB_BRACE portability is required",
+                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\DependencyInjection\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Allows you to standardize and centralize the way objects are constructed in your application",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/dependency-injection/tree/v5.4.7"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-08T15:43:06+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -60772,7 +60121,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "spryker/development-core": 20,
         "spryker-sdk/integrator": 20,
         "spryker/docker-chromedriver": 20
     },
