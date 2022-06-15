@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2ff60dc8b89712309fe8138593e19f3",
+    "content-hash": "7f44dec652775bd171ab0ea5e2eb85aa",
     "packages": [
         {
             "name": "async-aws/core",
@@ -9243,21 +9243,21 @@
         },
         {
             "name": "spryker-shop/customer-reorder-widget",
-            "version": "6.11.0",
+            "version": "6.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-reorder-widget.git",
-                "reference": "8523031250e46df89bdb43a88d9a68e0b6573822"
+                "reference": "c250eb056a380f76ff0bafa3391c3a49ba14a369"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-reorder-widget/zipball/8523031250e46df89bdb43a88d9a68e0b6573822",
-                "reference": "8523031250e46df89bdb43a88d9a68e0b6573822",
+                "url": "https://api.github.com/repos/spryker-shop/customer-reorder-widget/zipball/c250eb056a380f76ff0bafa3391c3a49ba14a369",
+                "reference": "c250eb056a380f76ff0bafa3391c3a49ba14a369",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
-                "spryker-shop/customer-reorder-widget-extension": "^1.1.0",
+                "php": ">=7.4",
+                "spryker-shop/customer-reorder-widget-extension": "^1.2.0",
                 "spryker-shop/shop-application": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.0.0",
                 "spryker/application": "^3.0.0",
@@ -9303,9 +9303,9 @@
             ],
             "description": "CustomerReorderWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/customer-reorder-widget/tree/6.11.0"
+                "source": "https://github.com/spryker-shop/customer-reorder-widget/tree/6.12.0"
             },
-            "time": "2021-04-01T16:38:52+00:00"
+            "time": "2022-06-06T12:44:49+00:00"
         },
         {
             "name": "spryker-shop/customer-reorder-widget-extension",
@@ -11082,16 +11082,16 @@
         },
         {
             "name": "spryker-shop/product-group-widget",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/product-group-widget.git",
-                "reference": "59e1444f59973d5d34f2680d0ecb98a0d7734635"
+                "reference": "f766b97e18b36fbf960c0a180a1befe6630546b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/product-group-widget/zipball/59e1444f59973d5d34f2680d0ecb98a0d7734635",
-                "reference": "59e1444f59973d5d34f2680d0ecb98a0d7734635",
+                "url": "https://api.github.com/repos/spryker-shop/product-group-widget/zipball/f766b97e18b36fbf960c0a180a1befe6630546b9",
+                "reference": "f766b97e18b36fbf960c0a180a1befe6630546b9",
                 "shasum": ""
             },
             "require": {
@@ -11122,9 +11122,9 @@
             ],
             "description": "ProductGroupWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/product-group-widget/tree/1.9.0"
+                "source": "https://github.com/spryker-shop/product-group-widget/tree/1.9.1"
             },
-            "time": "2022-04-14T07:53:43+00:00"
+            "time": "2022-05-31T08:35:00+00:00"
         },
         {
             "name": "spryker-shop/product-group-widget-extension",
@@ -17076,66 +17076,6 @@
                 "source": "https://github.com/spryker/checkout-extension/tree/1.3.0"
             },
             "time": "2021-05-13T09:05:30+00:00"
-        },
-        {
-            "name": "spryker/checkout-rest-api",
-            "version": "3.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/checkout-rest-api.git",
-                "reference": "4bedee1fd8985d0830924c1d8215f60bdd58a6a4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/checkout-rest-api/zipball/4bedee1fd8985d0830924c1d8215f60bdd58a6a4",
-                "reference": "4bedee1fd8985d0830924c1d8215f60bdd58a6a4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/calculation": "^4.0.0",
-                "spryker/cart": "^5.0.0 || ^7.0.0",
-                "spryker/carts-rest-api": "^2.2.0 || ^3.0.0 || ^5.0.0",
-                "spryker/checkout": "^4.0.0 || ^6.0.0",
-                "spryker/checkout-rest-api-extension": "^1.5.0",
-                "spryker/customer": "^7.11.0",
-                "spryker/glossary-storage": "^1.0.0",
-                "spryker/glue-application": "^1.2.0",
-                "spryker/glue-application-extension": "^1.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/payment": "^5.0.0",
-                "spryker/quote": "^2.0.0",
-                "spryker/shipment": "^7.0.0 || ^8.0.0",
-                "spryker/symfony": "^3.0.0",
-                "spryker/zed-request": "^3.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/product": "*",
-                "spryker/propel": "*",
-                "spryker/stock": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CheckoutRestApi module",
-            "support": {
-                "source": "https://github.com/spryker/checkout-rest-api/tree/3.7.1"
-            },
-            "time": "2021-07-21T12:51:52+00:00"
         },
         {
             "name": "spryker/checkout-rest-api-extension",
@@ -31585,16 +31525,16 @@
         },
         {
             "name": "spryker/payment",
-            "version": "5.6.0",
+            "version": "5.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/payment.git",
-                "reference": "31cb40c4462b2537ae8daa739dcaee3c8e2e3c8a"
+                "reference": "03e36eaf3e1975ac316169d985652407ea73f717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/payment/zipball/31cb40c4462b2537ae8daa739dcaee3c8e2e3c8a",
-                "reference": "31cb40c4462b2537ae8daa739dcaee3c8e2e3c8a",
+                "url": "https://api.github.com/repos/spryker/payment/zipball/03e36eaf3e1975ac316169d985652407ea73f717",
+                "reference": "03e36eaf3e1975ac316169d985652407ea73f717",
                 "shasum": ""
             },
             "require": {
@@ -31648,9 +31588,9 @@
             ],
             "description": "Payment module",
             "support": {
-                "source": "https://github.com/spryker/payment/tree/5.6.0"
+                "source": "https://github.com/spryker/payment/tree/5.8.0"
             },
-            "time": "2022-04-26T12:27:56+00:00"
+            "time": "2022-06-06T09:11:06+00:00"
         },
         {
             "name": "spryker/payment-cart-connector",
@@ -43133,55 +43073,6 @@
             "time": "2022-04-14T07:53:41+00:00"
         },
         {
-            "name": "spryker/secrets-manager-aws",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/secrets-manager-aws.git",
-                "reference": "fda004f63b8a5887354efebedb59319d53112628"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/secrets-manager-aws/zipball/fda004f63b8a5887354efebedb59319d53112628",
-                "reference": "fda004f63b8a5887354efebedb59319d53112628",
-                "shasum": ""
-            },
-            "require": {
-                "aws/aws-sdk-php": "^3.0.0",
-                "php": ">=7.4",
-                "spryker/kernel": "^3.30.0",
-                "spryker/log": "^1.0.0 || ^2.0.0 || ^3.0.0",
-                "spryker/secrets-manager-extension": "^1.0.0",
-                "spryker/transfer": "^3.25.0",
-                "spryker/util-text": "^1.1.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/",
-                    "SprykerTest\\Client\\SecretsManagerAws\\Helper\\": "tests/SprykerTest/Client/SecretsManagerAws/_support/Helper/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "SecretsManagerAws module",
-            "support": {
-                "source": "https://github.com/spryker/secrets-manager-aws/tree/1.0.0"
-            },
-            "time": "2022-04-14T07:53:41+00:00"
-        },
-        {
             "name": "spryker/secrets-manager-extension",
             "version": "1.0.0",
             "source": {
@@ -47076,20 +46967,20 @@
         },
         {
             "name": "spryker/user-password-reset",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/user-password-reset.git",
-                "reference": "460f27ef102da4007902371d9ba206f2be016cdc"
+                "reference": "9a004a50471a643fd1c438625f397ea6764d130e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-password-reset/zipball/460f27ef102da4007902371d9ba206f2be016cdc",
-                "reference": "460f27ef102da4007902371d9ba206f2be016cdc",
+                "url": "https://api.github.com/repos/spryker/user-password-reset/zipball/9a004a50471a643fd1c438625f397ea6764d130e",
+                "reference": "9a004a50471a643fd1c438625f397ea6764d130e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/kernel": "^3.30.0",
                 "spryker/user": "^3.9.0",
                 "spryker/user-password-reset-extension": "^1.0.0",
@@ -47117,9 +47008,9 @@
             ],
             "description": "UserPasswordReset module",
             "support": {
-                "source": "https://github.com/spryker/user-password-reset/tree/1.0.0"
+                "source": "https://github.com/spryker/user-password-reset/tree/1.1.0"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2022-05-26T12:51:48+00:00"
         },
         {
             "name": "spryker/user-password-reset-extension",
@@ -59493,6 +59384,66 @@
             "time": "2019-03-14T14:56:25+00:00"
         },
         {
+            "name": "spryker/checkout-rest-api",
+            "version": "3.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/checkout-rest-api.git",
+                "reference": "54a2983c03999610ab20f768b245d947bb84a4c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/checkout-rest-api/zipball/54a2983c03999610ab20f768b245d947bb84a4c6",
+                "reference": "54a2983c03999610ab20f768b245d947bb84a4c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/calculation": "^4.0.0",
+                "spryker/cart": "^5.0.0 || ^7.0.0",
+                "spryker/carts-rest-api": "^2.2.0 || ^3.0.0 || ^5.0.0",
+                "spryker/checkout": "^4.0.0 || ^6.0.0",
+                "spryker/checkout-rest-api-extension": "^1.5.0",
+                "spryker/customer": "^7.11.0",
+                "spryker/glossary-storage": "^1.0.0",
+                "spryker/glue-application": "^1.2.0",
+                "spryker/glue-application-extension": "^1.0.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/payment": "^5.0.0",
+                "spryker/quote": "^2.0.0",
+                "spryker/shipment": "^7.0.0 || ^8.0.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/zed-request": "^3.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/product": "*",
+                "spryker/propel": "*",
+                "spryker/stock": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "CheckoutRestApi module",
+            "support": {
+                "source": "https://github.com/spryker/checkout-rest-api/tree/3.7.2"
+            },
+            "time": "2022-06-01T08:53:47+00:00"
+        },
+        {
             "name": "spryker/code-generator",
             "version": "0.3.10",
             "source": {
@@ -59736,6 +59687,55 @@
                 "source": "https://github.com/spryker/module-finder/tree/1.2.0"
             },
             "time": "2021-10-21T12:10:34+00:00"
+        },
+        {
+            "name": "spryker/secrets-manager-aws",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/secrets-manager-aws.git",
+                "reference": "82f1ebe2990c9662646148c4233504c4bb629780"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/secrets-manager-aws/zipball/82f1ebe2990c9662646148c4233504c4bb629780",
+                "reference": "82f1ebe2990c9662646148c4233504c4bb629780",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "^3.0.0",
+                "php": ">=7.4",
+                "spryker/kernel": "^3.30.0",
+                "spryker/log": "^1.0.0 || ^2.0.0 || ^3.0.0",
+                "spryker/secrets-manager-extension": "^1.0.0",
+                "spryker/transfer": "^3.25.0",
+                "spryker/util-text": "^1.1.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Client\\SecretsManagerAws\\Helper\\": "tests/SprykerTest/Client/SecretsManagerAws/_support/Helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SecretsManagerAws module",
+            "support": {
+                "source": "https://github.com/spryker/secrets-manager-aws/tree/1.0.1"
+            },
+            "time": "2022-05-18T16:18:58+00:00"
         },
         {
             "name": "spryker/testify",
