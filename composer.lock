@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f44dec652775bd171ab0ea5e2eb85aa",
+    "content-hash": "572116371af41660006fd9b99de1b2f9",
     "packages": [
         {
             "name": "async-aws/core",
@@ -9855,16 +9855,16 @@
         },
         {
             "name": "spryker-shop/merchant-product-offer-widget",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/merchant-product-offer-widget.git",
-                "reference": "c8fa49a67594390a8a329ca7ca13edc2a25c23b9"
+                "reference": "1a90462d149c55ef1295caa547268b7a47da7abd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/merchant-product-offer-widget/zipball/c8fa49a67594390a8a329ca7ca13edc2a25c23b9",
-                "reference": "c8fa49a67594390a8a329ca7ca13edc2a25c23b9",
+                "url": "https://api.github.com/repos/spryker-shop/merchant-product-offer-widget/zipball/1a90462d149c55ef1295caa547268b7a47da7abd",
+                "reference": "1a90462d149c55ef1295caa547268b7a47da7abd",
                 "shasum": ""
             },
             "require": {
@@ -9906,9 +9906,9 @@
             ],
             "description": "MerchantProductOfferWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/merchant-product-offer-widget/tree/2.1.0"
+                "source": "https://github.com/spryker-shop/merchant-product-offer-widget/tree/2.2.0"
             },
-            "time": "2022-04-04T15:20:02+00:00"
+            "time": "2022-05-11T14:59:17+00:00"
         },
         {
             "name": "spryker-shop/merchant-product-offer-widget-extension",
@@ -19592,55 +19592,6 @@
                 "source": "https://github.com/spryker/cms-user-connector/tree/1.1.1"
             },
             "time": "2020-05-29T13:08:37+00:00"
-        },
-        {
-            "name": "spryker/code-it-now",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/code-it-now.git",
-                "reference": "e823462f7ca0531d5d1e6d74194cdca787f093ff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/code-it-now/zipball/e823462f7ca0531d5d1e6d74194cdca787f093ff",
-                "reference": "e823462f7ca0531d5d1e6d74194cdca787f093ff",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-barcode": "^2.8.0",
-                "php": ">=7.4",
-                "spryker/barcode-extension": "^1.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/kernel": "^3.1.0",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/kernel": "for testing"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CodeItNow module",
-            "support": {
-                "source": "https://github.com/spryker/code-it-now/tree/1.1.1"
-            },
-            "abandoned": "spryker/barcode-laminas",
-            "time": "2022-05-11T08:36:06+00:00"
         },
         {
             "name": "spryker/collector",
