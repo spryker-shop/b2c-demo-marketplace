@@ -337,6 +337,7 @@
         "seld/signal-handler": "1.3.0",
         "sllh/composer-versions-check": "^2.0.2",
         "spryker-eco/loggly": "0.1.1",
+        "spryker-feature/development-tools": "^202204.0",
         "spryker-sdk/async-api": "0.1.0",
         "spryker-sdk/integrator": "dev-master",
         "spryker-sdk/phpstan-spryker": "^0.4.0",
