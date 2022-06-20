@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a75a0d3b6fbed94e85a06cb25e011e90",
+    "content-hash": "a3496bb31748ba063870d86ae8f22ff0",
     "packages": [
         {
             "name": "async-aws/core",
@@ -4029,9 +4029,6 @@
                 "proprietary"
             ],
             "description": "Agent Assist [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/agent-assist/tree/master"
-            },
             "time": "2022-04-15T15:15:03+00:00"
         },
         {
@@ -4071,9 +4068,6 @@
                 "proprietary"
             ],
             "description": "Alternative Products [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/alternative-products/tree/master"
-            },
             "time": "2022-04-15T15:15:22+00:00"
         },
         {
@@ -4525,9 +4519,6 @@
                 "proprietary"
             ],
             "description": "Deployment tools [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/deployment-tools/tree/master"
-            },
             "time": "2022-04-15T15:56:22+00:00"
         },
         {
@@ -4605,9 +4596,6 @@
                 "proprietary"
             ],
             "description": "Gift cards [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/gift-cards/tree/master"
-            },
             "time": "2022-04-15T15:44:43+00:00"
         },
         {
@@ -4688,9 +4676,6 @@
                 "proprietary"
             ],
             "description": "Invoice [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/invoice/tree/master"
-            },
             "time": "2022-04-15T15:45:28+00:00"
         },
         {
@@ -4760,9 +4745,6 @@
                 "proprietary"
             ],
             "description": "Marketplace Cart [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-cart/tree/master"
-            },
             "time": "2022-04-13T11:32:02+00:00"
         },
         {
@@ -4812,9 +4794,6 @@
                 "proprietary"
             ],
             "description": "Marketplace Inventory Management [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-inventory-management/tree/master"
-            },
             "time": "2022-04-13T13:04:13+00:00"
         },
         {
@@ -4860,9 +4839,6 @@
                 "proprietary"
             ],
             "description": "Marketplace Merchant [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-merchant/tree/master"
-            },
             "time": "2022-04-13T13:15:54+00:00"
         },
         {
@@ -5310,9 +5286,6 @@
                 "proprietary"
             ],
             "description": "Marketplace Promotions & Discounts [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-promotions-discounts/tree/master"
-            },
             "time": "2022-04-13T13:05:25+00:00"
         },
         {
@@ -5355,9 +5328,6 @@
                 "proprietary"
             ],
             "description": "Marketplace Return Management [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-return-management/tree/master"
-            },
             "time": "2022-04-13T13:01:13+00:00"
         },
         {
@@ -5397,9 +5367,6 @@
                 "proprietary"
             ],
             "description": "Marketplace Shipment [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-shipment/tree/master"
-            },
             "time": "2022-04-13T13:07:54+00:00"
         },
         {
@@ -5439,9 +5406,6 @@
                 "proprietary"
             ],
             "description": "Marketplace Wishlist [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-wishlist/tree/master"
-            },
             "time": "2022-04-13T13:02:56+00:00"
         },
         {
@@ -5557,9 +5521,6 @@
                 "proprietary"
             ],
             "description": "Merchant Opening Hours [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/merchant-opening-hours/tree/master"
-            },
             "time": "2022-04-13T13:10:37+00:00"
         },
         {
@@ -5600,9 +5561,6 @@
                 "proprietary"
             ],
             "description": "Navigation [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/navigation/tree/master"
-            },
             "time": "2022-04-15T15:46:13+00:00"
         },
         {
@@ -5639,9 +5597,6 @@
                 "proprietary"
             ],
             "description": "Non-splittable Products [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/non-splittable-products/tree/master"
-            },
             "time": "2022-04-15T15:46:54+00:00"
         },
         {
@@ -5910,9 +5865,6 @@
                 "proprietary"
             ],
             "description": "Product Barcode [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/product-barcode/tree/master"
-            },
             "time": "2022-04-15T15:47:46+00:00"
         },
         {
@@ -6074,9 +6026,6 @@
                 "proprietary"
             ],
             "description": "Product Lists [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/product-lists/tree/master"
-            },
             "time": "2022-04-15T15:49:09+00:00"
         },
         {
@@ -6192,9 +6141,6 @@
                 "proprietary"
             ],
             "description": "Product Relations [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/product-relations/tree/master"
-            },
             "time": "2022-04-15T15:50:01+00:00"
         },
         {
@@ -6235,9 +6181,6 @@
                 "proprietary"
             ],
             "description": "Product Sets [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/product-sets/tree/master"
-            },
             "time": "2022-04-15T15:50:19+00:00"
         },
         {
@@ -6309,9 +6252,6 @@
                 "proprietary"
             ],
             "description": "Reclamations [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/reclamations/tree/master"
-            },
             "time": "2022-04-15T15:51:03+00:00"
         },
         {
@@ -6343,9 +6283,6 @@
                 "proprietary"
             ],
             "description": "Refunds [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/refunds/tree/master"
-            },
             "time": "2022-04-15T15:51:14+00:00"
         },
         {
@@ -6380,9 +6317,6 @@
                 "proprietary"
             ],
             "description": "Reorder [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/reorder/tree/master"
-            },
             "time": "2022-04-15T15:51:46+00:00"
         },
         {
@@ -6421,9 +6355,6 @@
                 "proprietary"
             ],
             "description": "Return Management [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/return-management/tree/master"
-            },
             "time": "2022-04-15T15:51:58+00:00"
         },
         {
@@ -6705,9 +6636,6 @@
                 "proprietary"
             ],
             "description": "State Machine [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/state-machine/tree/master"
-            },
             "time": "2022-04-15T15:52:55+00:00"
         },
         {
@@ -6741,9 +6669,6 @@
                 "proprietary"
             ],
             "description": "Tax [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/tax/tree/master"
-            },
             "time": "2022-04-15T15:53:13+00:00"
         },
         {
@@ -12625,16 +12550,16 @@
         },
         {
             "name": "spryker-shop/wishlist-page",
-            "version": "1.10.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/wishlist-page.git",
-                "reference": "9e937b6d2b709e30608b409525e83b089ed123bd"
+                "reference": "86976baebb333a3099ad0832084f37356ed81b54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/wishlist-page/zipball/9e937b6d2b709e30608b409525e83b089ed123bd",
-                "reference": "9e937b6d2b709e30608b409525e83b089ed123bd",
+                "url": "https://api.github.com/repos/spryker-shop/wishlist-page/zipball/86976baebb333a3099ad0832084f37356ed81b54",
+                "reference": "86976baebb333a3099ad0832084f37356ed81b54",
                 "shasum": ""
             },
             "require": {
@@ -12683,7 +12608,7 @@
                 "proprietary"
             ],
             "description": "WishlistPage module",
-            "time": "2021-10-29T06:02:33+00:00"
+            "time": "2022-04-22T12:08:32+00:00"
         },
         {
             "name": "spryker-shop/wishlist-page-extension",
@@ -59305,388 +59230,388 @@
     ],
     "aliases": [
         {
-            "package": "spryker-feature/acl",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/acl"
         },
         {
-            "package": "spryker-feature/agent-assist",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/agent-assist"
         },
         {
-            "package": "spryker-feature/alternative-products",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/alternative-products"
         },
         {
-            "package": "spryker-feature/availability-notification",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/availability-notification"
         },
         {
-            "package": "spryker-feature/catalog",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/catalog"
         },
         {
-            "package": "spryker-feature/category-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/category-management"
         },
         {
-            "package": "spryker-feature/checkout",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/checkout"
         },
         {
-            "package": "spryker-feature/cms",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/cms"
         },
         {
-            "package": "spryker-feature/configurable-bundle",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/configurable-bundle"
         },
         {
-            "package": "spryker-feature/customer-access",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/customer-access"
         },
         {
-            "package": "spryker-feature/customer-account-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/customer-account-management"
         },
         {
-            "package": "spryker-feature/deployment-tools",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/deployment-tools"
         },
         {
-            "package": "spryker-feature/development-tools",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/file-manager"
         },
         {
-            "package": "spryker-feature/file-manager",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/gift-cards"
         },
         {
-            "package": "spryker-feature/gift-cards",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/inventory-management"
         },
         {
-            "package": "spryker-feature/inventory-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/invoice"
         },
         {
-            "package": "spryker-feature/invoice",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/mailing-notifications"
         },
         {
-            "package": "spryker-feature/mailing-notifications",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-cart"
         },
         {
-            "package": "spryker-feature/marketplace-cart",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-inventory-management"
         },
         {
-            "package": "spryker-feature/marketplace-inventory-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-merchant"
         },
         {
-            "package": "spryker-feature/marketplace-merchant",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-merchant-portal-product-management"
         },
         {
-            "package": "spryker-feature/marketplace-merchant-portal-product-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-merchant-portal-product-offer-management"
         },
         {
-            "package": "spryker-feature/marketplace-merchant-portal-product-offer-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-merchantportal-core"
         },
         {
-            "package": "spryker-feature/marketplace-merchantportal-core",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-order-management"
         },
         {
-            "package": "spryker-feature/marketplace-order-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-product"
         },
         {
-            "package": "spryker-feature/marketplace-product",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-product-approval-process"
         },
         {
-            "package": "spryker-feature/marketplace-product-approval-process",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-product-offer"
         },
         {
-            "package": "spryker-feature/marketplace-product-offer",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-product-offer-prices"
         },
         {
-            "package": "spryker-feature/marketplace-product-offer-prices",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-product-options"
         },
         {
-            "package": "spryker-feature/marketplace-product-options",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-promotions-discounts"
         },
         {
-            "package": "spryker-feature/marketplace-promotions-discounts",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-return-management"
         },
         {
-            "package": "spryker-feature/marketplace-return-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-shipment"
         },
         {
-            "package": "spryker-feature/marketplace-shipment",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/marketplace-wishlist"
         },
         {
-            "package": "spryker-feature/marketplace-wishlist",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/merchant"
         },
         {
-            "package": "spryker-feature/merchant",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/merchant-category"
         },
         {
-            "package": "spryker-feature/merchant-category",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/merchant-opening-hours"
         },
         {
-            "package": "spryker-feature/merchant-opening-hours",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/navigation"
         },
         {
-            "package": "spryker-feature/navigation",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/non-splittable-products"
         },
         {
-            "package": "spryker-feature/non-splittable-products",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/payments"
         },
         {
-            "package": "spryker-feature/payments",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/prices"
         },
         {
-            "package": "spryker-feature/prices",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product"
         },
         {
-            "package": "spryker-feature/product",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-approval-process"
         },
         {
-            "package": "spryker-feature/product-approval-process",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-barcode"
         },
         {
-            "package": "spryker-feature/product-barcode",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-bundles"
         },
         {
-            "package": "spryker-feature/product-bundles",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-groups"
         },
         {
-            "package": "spryker-feature/product-groups",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-labels"
         },
         {
-            "package": "spryker-feature/product-labels",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-lists"
         },
         {
-            "package": "spryker-feature/product-lists",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-options"
         },
         {
-            "package": "spryker-feature/product-options",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-rating-reviews"
         },
         {
-            "package": "spryker-feature/product-rating-reviews",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-relations"
         },
         {
-            "package": "spryker-feature/product-relations",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/product-sets"
         },
         {
-            "package": "spryker-feature/product-sets",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/reclamations"
         },
         {
-            "package": "spryker-feature/reclamations",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/refunds"
         },
         {
-            "package": "spryker-feature/refunds",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/reorder"
         },
         {
-            "package": "spryker-feature/reorder",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/return-management"
         },
         {
-            "package": "spryker-feature/return-management",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/scheduled-prices"
         },
         {
-            "package": "spryker-feature/scheduled-prices",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/search"
         },
         {
-            "package": "spryker-feature/search",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/shipment"
         },
         {
-            "package": "spryker-feature/shipment",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/spryker-core"
         },
         {
-            "package": "spryker-feature/spryker-core",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/state-machine"
         },
         {
-            "package": "spryker-feature/state-machine",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/tax"
         },
         {
-            "package": "spryker-feature/tax",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/wishlist"
         },
         {
-            "package": "spryker-feature/wishlist",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker-feature/development-tools"
         },
         {
-            "package": "spryker/docker-chromedriver",
-            "version": "9999999-dev",
             "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias_normalized": "202204.0",
+            "version": "9999999-dev",
+            "package": "spryker/docker-chromedriver"
         }
     ],
     "minimum-stability": "dev",
@@ -59780,5 +59705,5 @@
     "platform-overrides": {
         "php": "7.4.20"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "1.1.0"
 }
