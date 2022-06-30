@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc3c445780e669a639f783a03be4a962",
+    "content-hash": "2874fd3c0ea00fa2cfd54a4706b3b8bf",
     "packages": [
         {
             "name": "async-aws/core",
@@ -25131,6 +25131,7 @@
             "support": {
                 "source": "https://github.com/spryker/glue-backend-api-application-extension/tree/1.0.0"
             },
+            "abandoned": "https://github.com/spryker/glue-application",
             "time": "2022-03-01T14:38:47+00:00"
         },
         {
@@ -25280,6 +25281,7 @@
             "support": {
                 "source": "https://github.com/spryker/glue-storefront-api-application-extension/tree/1.0.0"
             },
+            "abandoned": "spryker/glue-application",
             "time": "2022-03-01T14:38:47+00:00"
         },
         {
@@ -59060,7 +59062,7 @@
             "description": "Integrator module",
             "support": {
                 "issues": "https://github.com/spryker-sdk/integrator/issues",
-                "source": "https://github.com/spryker-sdk/integrator/tree/master"
+                "source": "https://github.com/spryker-sdk/integrator/tree/hotfix/incorrect-manifest-path"
             },
             "time": "2022-04-28T13:35:53+00:00"
         },
