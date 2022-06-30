@@ -269,7 +269,7 @@
         "filp/whoops": "^2.7",
         "guzzlehttp/guzzle": "7.4.4",
         "guzzlehttp/promises": "1.5.1",
-        "guzzlehttp/psr7": "2.2.1",
+        "guzzlehttp/psr7": "2.4.0",
         "jetbrains/phpstorm-stubs": "2019.3",
         "laminas/laminas-barcode": "2.11.0",
         "laminas/laminas-config": "3.5.1",
