@@ -41036,16 +41036,16 @@
         },
         {
             "name": "spryker/sales",
-            "version": "11.30.0",
+            "version": "11.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales.git",
-                "reference": "0ee43170dacc05dc42521e16c7b7496d2884fdc8"
+                "reference": "00fa65ac8e687e569d7148bca9622b75e4775411"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales/zipball/0ee43170dacc05dc42521e16c7b7496d2884fdc8",
-                "reference": "0ee43170dacc05dc42521e16c7b7496d2884fdc8",
+                "url": "https://api.github.com/repos/spryker/sales/zipball/00fa65ac8e687e569d7148bca9622b75e4775411",
+                "reference": "00fa65ac8e687e569d7148bca9622b75e4775411",
                 "shasum": ""
             },
             "require": {
@@ -41108,9 +41108,9 @@
             ],
             "description": "Sales module",
             "support": {
-                "source": "https://github.com/spryker/sales/tree/11.30.0"
+                "source": "https://github.com/spryker/sales/tree/11.30.1"
             },
-            "time": "2022-04-14T07:53:41+00:00"
+            "time": "2022-06-24T12:51:34+00:00"
         },
         {
             "name": "spryker/sales-configurable-bundle",
