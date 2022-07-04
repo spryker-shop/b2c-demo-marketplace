@@ -9,6 +9,8 @@ namespace Pyz\Zed\Publisher;
 
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Shared\PublishAndSynchronizeHealthCheck\PublishAndSynchronizeHealthCheckConfig;
+use Spryker\Zed\AssetStorage\Communication\Plugin\Publisher\Asset\AssetDeletePublisherPlugin;
+use Spryker\Zed\AssetStorage\Communication\Plugin\Publisher\Asset\AssetWritePublisherPlugin;
 use Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher\Category\CategoryDeletePublisherPlugin as CategoryPageSearchCategoryDeletePublisherPlugin;
 use Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher\Category\CategoryWritePublisherPlugin as CategoryPageSearchCategoryWritePublisherPlugin;
 use Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher\CategoryAttribute\CategoryAttributeDeletePublisherPlugin as CategoryPageSearchCategoryAttributeDeletePublisherPlugin;
@@ -81,8 +83,12 @@ use Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelD
 use Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionaryPublisherTriggerPlugin;
 use Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelProductAbstract\ProductLabelProductAbstractWritePublisherPlugin as ProductLabelProductAbstractStorageWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersDeletePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersStoreDeletePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersStoreWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferDeletePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferStoreDeletePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferStoreWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferWritePublisherPlugin;
 use Spryker\Zed\ProductRelationStorage\Communication\Plugin\Publisher\ProductRelation\ProductRelationWriteForPublishingPublisherPlugin;
 use Spryker\Zed\ProductRelationStorage\Communication\Plugin\Publisher\ProductRelation\ProductRelationWritePublisherPlugin;
@@ -125,6 +131,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getMerchantProductSearchPlugins(),
             $this->getProductOfferStoragePlugins(),
             $this->getMerchantProductOfferStoragePlugins(),
+            $this->getAssetStoragePlugins(),
         );
     }
 
@@ -392,6 +399,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductConcreteProductOffersWritePublisherPlugin(),
             new ProductOfferDeletePublisherPlugin(),
             new ProductOfferWritePublisherPlugin(),
+            new ProductOfferStoreWritePublisherPlugin(),
+            new ProductOfferStoreDeletePublisherPlugin(),
+            new ProductConcreteProductOffersStoreWritePublisherPlugin(),
+            new ProductConcreteProductOffersStoreDeletePublisherPlugin(),
         ];
     }
 
@@ -403,6 +414,17 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new MerchantProductConcreteProductOfferWritePublisherPlugin(),
             new MerchantProductOfferWritePublisherPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    protected function getAssetStoragePlugins(): array
+    {
+        return [
+            new AssetWritePublisherPlugin(),
+            new AssetDeletePublisherPlugin(),
         ];
     }
 }

@@ -163,6 +163,7 @@ use Spryker\Zed\Twig\Communication\Plugin\Application\TwigApplicationPlugin;
 use Spryker\Zed\Uuid\Communication\Console\UuidGeneratorConsole;
 use Spryker\Zed\ZedNavigation\Communication\Console\BuildNavigationConsole;
 use Spryker\Zed\ZedNavigation\Communication\Console\RemoveNavigationCacheConsole;
+use SprykerSdk\Integrator\Console\ModuleInstallerConsole;
 use SprykerSdk\Spryk\Console\SprykBuildConsole;
 use SprykerSdk\Spryk\Console\SprykDumpConsole;
 use SprykerSdk\Spryk\Console\SprykRunConsole;
@@ -418,6 +419,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             $commands[] = new SprykDumpConsole();
             $commands[] = new SprykBuildConsole();
             $commands[] = new ComposerConstraintConsole();
+
+            $commands[] = new ModuleInstallerConsole();
 
             $commands[] = new MessageBrokerDebugConsole();
 
