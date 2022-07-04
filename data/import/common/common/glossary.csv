@@ -351,6 +351,8 @@ payment_foreign.success.order.placement.message,Deine Bestellung ist erfolgreich
 payment_foreign.success.order.placement.message,Your order has been paid successfully. You will receive your order confirmation email in a few minutes. You can check and track your order in your account.,en_US
 dummyMarketplacePaymentInvoice,"Auf Rechnung (Marktplatz)",de_DE
 dummyMarketplacePaymentInvoice,"Invoice (Marketplace)",en_US
+checkout.payment.provider.DummyMarketplacePayment,Dummy Marketplace Payment,en_US
+checkout.payment.provider.DummyMarketplacePayment,Beispiel Marktplatz Zahlungsmethode,de_DE
 address.street,Straße,de_DE
 address.street,Street,en_US
 address.street_nr,Nummer,de_DE
