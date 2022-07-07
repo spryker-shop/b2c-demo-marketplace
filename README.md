@@ -1,5 +1,5 @@
 # Spryker B2C Demo Marketplace
-[![Build Status](https://travis-ci.com/spryker/b2c-demo-marketplace-internal.svg?token=uuNLarTLvJGpcdGUgqj2&branch=master)](https://travis-ci.com/spryker/b2c-demo-marketplace-internal)
+[![Build Status](https://github.com/spryker-shop/b2c-demo-marketplace/workflows/CI/badge.svg)](https://github.com/spryker-shop/b2c-demo-marketplace/actions?query=workflow%3ACI)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/spryker-shop/b2c-demo-marketplace/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/spryker-shop/b2c-demo-marketplace/?branch=master)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
 

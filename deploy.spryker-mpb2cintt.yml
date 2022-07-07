@@ -64,16 +64,6 @@ regions:
                         namespace: at_search
                     session:
                         namespace: 2
-            # US:
-            #     services:
-            #         broker:
-            #             namespace: us_queue
-            #         key_value_store:
-            #             namespace: 1
-            #         search:
-            #             namespace: us_search
-            #         session:
-            #             namespace: 2
 
 groups:
     EU:
@@ -92,11 +82,6 @@ groups:
                         redirect:
                             code: 302
                             url: www.at.mp-b2c.internal-testing.demo-spryker.com
-                    # us.mp-b2c.internal-testing.demo-spryker.com:
-                    #     store: US
-                    #     redirect:
-                    #         code: 302
-                    #         url: www.us.mp-b2c.internal-testing.demo-spryker.com
             Yves:
                 application: yves
                 endpoints:
@@ -104,8 +89,6 @@ groups:
                         store: DE
                     www.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
-                    # www.us.mp-b2c.internal-testing.demo-spryker.com:
-                    #     store: US
             boffice:
                 application: backoffice
                 endpoints:
@@ -115,9 +98,6 @@ groups:
                     backoffice.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
                         <<: *frontend-auth
-                    # backoffice.us.mp-b2c.internal-testing.demo-spryker.com:
-                    #     store: US
-                    #     <<: *frontend-auth
             backgw:
                 application: backend-gateway
                 endpoints:
@@ -125,8 +105,6 @@ groups:
                         store: DE
                     backend-gateway.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
-                    # backend-gateway.us.mp-b2c.internal-testing.demo-spryker.com:
-                    #     store: US
             backapi:
                 application: zed
                 endpoints:
@@ -136,9 +114,6 @@ groups:
                     backend-api.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
                         entry-point: BackendApi
-                    # backend-api.us.mp-b2c.internal-testing.demo-spryker.com:
-                    #     store: US
-                    #     entry-point: BackendApi
             Glue:
                 application: glue
                 endpoints:
@@ -146,8 +121,22 @@ groups:
                         store: DE
                     glue.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
-                    # glue.us.mp-b2c.internal-testing.demo-spryker.com:
-                    #     store: US
+            mportal:
+                application: merchant-portal
+                endpoints:
+                    mp.de.mp-b2c.internal-testing.demo-spryker.com:
+                        entry-point: MerchantPortal
+                        store: DE
+                        primal: true
+                        services:
+                            session:
+                                namespace: 7
+                    mp.at.mp-b2c.internal-testing.demo-spryker.com:
+                        entry-point: MerchantPortal
+                        store: AT
+                        services:
+                            session:
+                                namespace: 8
 services:
     database:
         engine: mysql
@@ -160,6 +149,7 @@ services:
                 protocol: tcp
     broker:
         engine: rabbitmq
+        version: '3.9'
         api:
             username: "spryker"
             password: "secret"
@@ -182,6 +172,8 @@ services:
                 protocol: tcp
     scheduler:
         engine: jenkins
+        version: '2.324'
+        csrf-protection-enabled: true
         endpoints:
             scheduler.mp-b2c.internal-testing.demo-spryker.com:
     mail_catcher:
