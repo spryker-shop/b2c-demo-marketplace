@@ -1,0 +1,536 @@
+_DOCKER_BEFORE_INSTALL: &DOCKER_BEFORE_INSTALL
+    - |
+        ./config/Shared/ci/travis/download-and-cache-file.sh  \
+          https://github.com/docker/docker-credential-helpers/releases/download/v0.6.3/docker-credential-pass-v0.6.3-amd64.tar.gz \
+          $HOME/other-download
+
+_DOCKER_BEFORE_SCRIPT: &DOCKER_BEFORE_SCRIPT
+    - ./config/Shared/ci/travis/docker-credentials.sh
+    - sudo systemctl start docker
+
+language: php
+
+git:
+  depth: 3
+
+env:
+  global:
+    - APPLICATION_ENV=ci.pgsql
+    - SPRYKER_TESTING_ENABLED=1
+    - APPLICATION_STORE=DE
+    - PROJECT=suite
+    - POSTGRES_PORT="5433"
+
+os: linux
+dist: bionic
+
+#Possible travis events (push, pull_request, cron, or api)
+jobs:
+  fast_finish: true
+
+  allow_failures: []
+
+  include:
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - MP_TEST=1
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - VALIDATION=1
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - VALIDATION=1
+        - PREFER_LOWEST=1
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - TEST_GROUP=acceptance
+
+    - php: "7.4"
+      dist: focal
+      env:
+        - TEST_GROUP=acceptance
+        - PREFER_MID=1
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - TEST_GROUP=without-acceptance
+
+    - php: "7.4"
+      dist: focal
+      env:
+        - TEST_GROUP=without-acceptance
+        - PREFER_MID=1
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - TEST_GROUP=acceptance
+        - DB_ENGINE=mysql
+        - APPLICATION_ENV=ci.mysql
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - TEST_GROUP=without-acceptance
+        - DB_ENGINE=mysql
+        - APPLICATION_ENV=ci.mysql
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - TEST_GROUP=acceptance
+        - ON_EVENTS=push,cron
+        - DB_ENGINE=mysql
+        - PREFER_LOWEST=1
+
+    - php: "7.4"
+      dist: bionic
+      env:
+        - TEST_GROUP=without-acceptance
+        - ON_EVENTS=cron,push
+        - DB_ENGINE=mysql
+        - PREFER_LOWEST=1
+
+    - name: Security check
+      php: "7.4"
+      os: linux
+      dist: bionic
+      script:
+        - vendor/bin/console security:check
+
+    - name: Upgradability check
+      php: "7.4"
+      os: linux
+      dist: bionic
+      env:
+        - VALIDATION=1
+      script:
+        - docker pull spryker/php-sdk
+        - docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:test -c 'cd /data/project && if [[ ! -d reports ]]; then mkdir -p reports; fi && php -d memory_limit=2048M ../bin/console analyze:php:code-compliance --format=yaml || true && ../bin/console analyze:php:code-compliance-report && LINES_COUNT_IN_REPORT_FILE=$(cat reports/analyze\:php\:code-compliance.violations.yaml | wc -l) && [ $LINES_COUNT_IN_REPORT_FILE -eq 4 ] && exit 0 || exit 1'
+
+    - name: Docker / Alpine / PHP 7.4 / PostgreSQL / Functional
+      os: linux
+      dist: bionic
+      language: shell
+      env:
+        - PROGRESS_TYPE=plain
+        - SPRYKER_PLATFORM_IMAGE=spryker/php:7.4-alpine3.12
+        - TRAVIS=1
+      addons:
+        hosts:
+          - backend-api.de.spryker.local
+          - backend-gateway.de.spryker.local
+          - backoffice.de.spryker.local
+          - glue.de.spryker.local
+          - yves.de.spryker.local
+        apt:
+          packages:
+            - apache2-utils
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg-agent
+            - pigz
+            - software-properties-common
+          sources:
+            - sourceline: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+              key_url: https://download.docker.com/linux/ubuntu/gpg
+      install:
+        - echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSwgImlwdjYiOiBmYWxzZSwgIm10dSI6IDE0NTB9|base64 -d|sudo tee /etc/docker/daemon.json
+        - sudo apt-get install --only-upgrade docker-ce -y
+        - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        - sudo chmod +x /usr/local/bin/docker-compose
+      script:
+        - git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
+        - docker/sdk boot deploy.ci.functional.yml -v
+        - docker/sdk up -t -v
+        - docker/sdk testing codecept run -c codeception.ci.functional.yml
+      before_install:
+          - *DOCKER_BEFORE_INSTALL
+      before_script:
+          - *DOCKER_BEFORE_SCRIPT
+      after_script: skip
+
+    - name: Docker / Alpine / PHP 7.4 / PostgreSQL / Glue
+      os: linux
+      dist: bionic
+      language: shell
+      env:
+        - PROGRESS_TYPE=plain
+        - SPRYKER_PLATFORM_IMAGE=spryker/php:7.4-alpine3.12
+        - TRAVIS=1
+      addons:
+        hosts:
+          - backend-api.de.spryker.local
+          - backend-gateway.de.spryker.local
+          - backoffice.de.spryker.local
+          - glue.de.spryker.local
+          - yves.de.spryker.local
+        apt:
+          packages:
+            - apache2-utils
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg-agent
+            - pigz
+            - software-properties-common
+          sources:
+            - sourceline: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+              key_url: https://download.docker.com/linux/ubuntu/gpg
+      install:
+        - echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSwgImlwdjYiOiBmYWxzZSwgIm10dSI6IDE0NTB9|base64 -d|sudo tee /etc/docker/daemon.json
+        - sudo apt-get install --only-upgrade docker-ce -y
+        - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        - sudo chmod +x /usr/local/bin/docker-compose
+      script:
+        - git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
+        - docker/sdk boot deploy.ci.api.yml -v
+        - docker/sdk up -t -v
+        - docker/sdk testing codecept fixtures
+        - docker/sdk testing console queue:worker:start --stop-when-empty
+        - docker/sdk testing codecept run -c codeception.api.yml
+      before_install:
+          - *DOCKER_BEFORE_INSTALL
+      before_script:
+          - *DOCKER_BEFORE_SCRIPT
+      after_script: skip
+
+    - name: Docker / Alpine / PHP 7.4 / MariaDB / Functional
+      os: linux
+      dist: bionic
+      language: shell
+      env:
+        - PROGRESS_TYPE=plain
+        - SPRYKER_PLATFORM_IMAGE=spryker/php:7.4-alpine3.12
+        - TRAVIS=1
+      addons:
+        hosts:
+          - backend-api.de.spryker.local
+          - backend-gateway.de.spryker.local
+          - backoffice.de.spryker.local
+          - zed.de.spryker.local
+          - yves.de.spryker.local
+        apt:
+          packages:
+            - apache2-utils
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg-agent
+            - pigz
+            - software-properties-common
+          sources:
+            - sourceline: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+              key_url: https://download.docker.com/linux/ubuntu/gpg
+      install:
+        - echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSwgImlwdjYiOiBmYWxzZSwgIm10dSI6IDE0NTB9|base64 -d|sudo tee /etc/docker/daemon.json
+        - sudo apt-get install --only-upgrade docker-ce -y
+        - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        - sudo chmod +x /usr/local/bin/docker-compose
+      script:
+        - git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
+        - docker/sdk boot deploy.ci.functional.mariadb.yml -v
+        - docker/sdk up -t -v
+        - docker/sdk testing codecept run -c codeception.ci.functional.yml
+      before_install:
+          - *DOCKER_BEFORE_INSTALL
+      before_script:
+          - *DOCKER_BEFORE_SCRIPT
+      after_script: skip
+
+    - name: Docker / Debian / PHP 7.4 / PostgreSQL / Functional
+      os: linux
+      dist: bionic
+      language: shell
+      env:
+        - PROGRESS_TYPE=plain
+        - SPRYKER_PLATFORM_IMAGE=spryker/php:7.4-debian
+        - TRAVIS=1
+      addons:
+        hosts:
+          - backend-api.de.spryker.local
+          - backend-gateway.de.spryker.local
+          - backoffice.de.spryker.local
+          - glue.de.spryker.local
+          - yves.de.spryker.local
+        apt:
+          packages:
+            - apache2-utils
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg-agent
+            - pigz
+            - software-properties-common
+          sources:
+            - sourceline: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+              key_url: https://download.docker.com/linux/ubuntu/gpg
+      install:
+        - echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSwgImlwdjYiOiBmYWxzZSwgIm10dSI6IDE0NTB9|base64 -d|sudo tee /etc/docker/daemon.json
+        - sudo apt-get install --only-upgrade docker-ce -y
+        - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        - sudo chmod +x /usr/local/bin/docker-compose
+      script:
+        - git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
+        - docker/sdk boot deploy.ci.functional.yml -v
+        - docker/sdk up -t -v
+        - docker/sdk testing codecept run -c codeception.ci.functional.yml
+      before_install:
+          - *DOCKER_BEFORE_INSTALL
+      before_script:
+          - *DOCKER_BEFORE_SCRIPT
+      after_script: skip
+
+    - name: Docker / Alpine / PHP 7.4 / MariaDB / Acceptance
+      os: linux
+      dist: bionic
+      language: shell
+      env:
+        - PROGRESS_TYPE=plain
+        - SPRYKER_PLATFORM_IMAGE=spryker/php:7.4
+        - TRAVIS=1
+      addons:
+        hosts:
+          - backend-api.de.spryker.local
+          - backend-gateway.de.spryker.local
+          - backoffice.de.spryker.local
+          - glue.de.spryker.local
+          - yves.de.spryker.local
+        apt:
+          packages:
+            - apache2-utils
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg-agent
+            - pigz
+            - software-properties-common
+          sources:
+            - sourceline: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+              key_url: https://download.docker.com/linux/ubuntu/gpg
+      install:
+          - echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSwgImlwdjYiOiBmYWxzZSwgIm10dSI6IDE0NTB9|base64 -d|sudo tee /etc/docker/daemon.json
+          - sudo apt-get install --only-upgrade docker-ce -y
+          - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          - sudo chmod +x /usr/local/bin/docker-compose
+      script:
+          - git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
+          - docker/sdk boot -v deploy.ci.acceptance.mariadb.yml
+          - docker/sdk up -t
+          - docker/sdk testing console queue:worker:start --stop-when-empty
+          - docker/sdk testing codecept run -c codeception.acceptance.yml
+      before_install:
+          - *DOCKER_BEFORE_INSTALL
+      before_script:
+          - *DOCKER_BEFORE_SCRIPT
+      after_script: skip
+
+    - name: Docker / Alpine / PHP 7.4 / PostgreSQL / Acceptance
+      os: linux
+      dist: bionic
+      language: shell
+      env:
+        - PROGRESS_TYPE=plain
+        - SPRYKER_PLATFORM_IMAGE=spryker/php:7.4
+        - TRAVIS=1
+      addons:
+        hosts:
+          - backend-api.de.spryker.local
+          - backend-gateway.de.spryker.local
+          - backoffice.de.spryker.local
+          - glue.de.spryker.local
+          - yves.de.spryker.local
+        apt:
+          packages:
+            - apache2-utils
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg-agent
+            - pigz
+            - software-properties-common
+          sources:
+            - sourceline: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+              key_url: https://download.docker.com/linux/ubuntu/gpg
+      install:
+          - echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSwgImlwdjYiOiBmYWxzZSwgIm10dSI6IDE0NTB9|base64 -d|sudo tee /etc/docker/daemon.json
+          - sudo apt-get install --only-upgrade docker-ce -y
+          - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          - sudo chmod +x /usr/local/bin/docker-compose
+      script:
+          - git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
+          - docker/sdk boot -v deploy.ci.acceptance.yml
+          - docker/sdk up -t
+          - docker/sdk testing console queue:worker:start --stop-when-empty
+          - docker/sdk testing codecept run -c codeception.acceptance.yml
+      before_install:
+          - *DOCKER_BEFORE_INSTALL
+      before_script:
+          - *DOCKER_BEFORE_SCRIPT
+      after_script: skip
+
+    - name: Docker / Alpine / PHP 7.4 / Frontend & Assets
+      os: linux
+      dist: bionic
+      language: shell
+      env:
+        - PROGRESS_TYPE=plain
+        - SPRYKER_PLATFORM_IMAGE=spryker/php:7.4-alpine3.12
+        - TRAVIS=1
+      addons:
+        hosts:
+          - backend-api.de.spryker.local
+          - backend-gateway.de.spryker.local
+          - backoffice.de.spryker.local
+          - glue.de.spryker.local
+          - yves.de.spryker.local
+        apt:
+          packages:
+            - apache2-utils
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg-agent
+            - pigz
+            - software-properties-common
+          sources:
+            - sourceline: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+              key_url: https://download.docker.com/linux/ubuntu/gpg
+      install:
+        - echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSwgImlwdjYiOiBmYWxzZSwgIm10dSI6IDE0NTB9|base64 -d|sudo tee /etc/docker/daemon.json
+        - sudo apt-get install --only-upgrade docker-ce -y
+        - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        - sudo chmod +x /usr/local/bin/docker-compose
+      script:
+        - git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
+        - docker/sdk boot deploy.yml
+        - SPRYKER_BUILD_HASH=myhash docker/sdk export images
+        - docker run -it --rm -e SPRYKER_NGINX_CGI_HOST_YVES_EU=localhost -e SPRYKER_NGINX_CGI_HOST_BACKOFFICE_EU=localhost -e SPRYKER_NGINX_CGI_HOST_BACKEND_GATEWAY_EU=localhost -e SPRYKER_NGINX_CGI_HOST_BACKEND_API_EU=localhost -e SPRYKER_NGINX_CGI_HOST_GLUE_EU=localhost -e SPRYKER_NGINX_CGI_HOST_CONFIGURATOR_EU=localhost -e SPRYKER_NGINX_CGI_HOST_YVES_US=localhost -e SPRYKER_NGINX_CGI_HOST_GLUE_US=localhost -e SPRYKER_NGINX_CGI_HOST_BACKOFFICE_US=localhost -e SPRYKER_NGINX_CGI_HOST_BACKEND_GATEWAY_US=localhost -e SPRYKER_NGINX_CGI_HOST_BACKEND_API_US=localhost -e ALLOWED_IP=127.0.0.1 spryker_b2c_marketplace_frontend:1.0-frontend nginx -t
+        - docker run -it --rm --entrypoint='' spryker_b2c_marketplace_frontend:1.0-frontend ls -al /data/public/Yves/assets/myhash
+        - docker run -it --rm --entrypoint='' spryker_b2c_marketplace_frontend:1.0-frontend ls -al /data/public/Zed/assets/
+      before_install:
+          - *DOCKER_BEFORE_INSTALL
+      before_script:
+          - *DOCKER_BEFORE_SCRIPT
+      after_script: skip
+
+addons:
+  apt:
+    update: false
+    sources:
+      - sourceline: ppa:chris-lea/redis-server
+      - sourceline: ppa:ondrej/php
+    packages:
+      - redis-tools
+      - redis-server
+      - rabbitmq-server
+      - graphviz
+      - libzip-dev
+      - postgresql-12
+      - postgresql-client-12
+      - postgresql-server-dev-12
+      - rabbitmq-server
+  postgresql: "12"
+  mariadb: "10.3"
+
+  hosts:
+    - backend-api.de.spryker.test
+    - backend-gateway.de.spryker.test
+    - backoffice.de.spryker.test
+    - glue.de.spryker.test
+    - www.de.spryker.test
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+    - $HOME/.rvm/gems # Mailcatcher is a ruby gem, takes 5 minutes to install.
+    - $HOME/.nvm/.cache
+    - /tmp/pear/cache/
+    - $HOME/.yarn/cache
+    - ./node_modules
+    - $HOME/chromium-ecosystem
+
+services:
+  - postgresql
+  - redis
+
+before_install:
+  - phpenv config-add config/Shared/ci/travis/travis.php.ini
+  - echo "extension = redis.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - phpenv config-rm xdebug.ini
+  # Chromedriver section
+  - curl -L "https://github.com/spryker/docker-chromedriver/archive/master.zip" -o $HOME/chromium-ecosystem/docker-chromedriver.zip
+  - rm -rf $HOME/chromium-ecosystem/docker-chromedriver-master
+  - unzip -o $HOME/chromium-ecosystem/docker-chromedriver.zip -d $HOME/chromium-ecosystem/
+  - rm -rf $HOME/chromium-ecosystem/*.zip
+  - export CHROMEDRIVER_REVISION=814168
+  - export COMPOSER_IGNORE_CHROMEDRIVER=1
+  - nvm use 12
+
+install:
+  - chmod -R a+x config/Shared/ci/travis/
+  - composer self-update 2.1.14
+  - composer install --optimize-autoloader --no-interaction --prefer-install=auto
+  - composer config github-oauth.github.com ${GITHUB_TOKEN}
+  - if [[ $PREFER_LOWEST == 1 ]] ; then composer require "spryker-feature/search:202009.0" "spryker/elastica:^5.0.0" "ruflin/elastica:^6.0.0" "elasticsearch/elasticsearch:^6.0.0" --with-dependencies --dev --optimize-autoloader --no-plugins ; fi
+  - if [[ $PREFER_LOWEST == 1 ]] ; then config/Shared/ci/travis/install_elasticsearch_6_8.sh ; else config/Shared/ci/travis/install_elasticsearch_7_6.sh ; fi
+  - if [[ $PREFER_MID == 1 ]] ; then composer prefer-mid ; fi
+  - config/Shared/ci/travis/install_mailcatcher.sh
+  - if [[ -z $MP_TEST ]] ; then config/Shared/ci/travis/configure_postgres.sh ; fi
+  # Exposes ${CHROMEDRIVER_BINARY} and ${CHROMIUM_BINARY}
+  - . $HOME/chromium-ecosystem/docker-chromedriver-master/chromium-installer $CHROMEDRIVER_REVISION $HOME/chromium-ecosystem false
+
+before_script:
+  - mkdir -p shared/data/common/jenkins
+  - mkdir -p shared/data/common/jenkins/jobs
+  - mkdir -p data/cache -m 0777
+  - mkdir -p data/logs -m 0777
+  - chmod -R 777 data/
+  - chmod -R 660 config/Zed/dev_only_private.key
+  - chmod -R 660 config/Zed/dev_only_public.key
+  - if [[ $VALIDATION == 1 ]] ; then npm install speccy@0.11.0 -g ; fi
+
+  - if [[ $TEST_GROUP == 'acceptance' || $TEST_GROUP == 'without-acceptance' ]] ; then config/Shared/ci/travis/acceptance_env.sh ; fi
+  - if [[ $TEST_GROUP == 'acceptance' ]] ; then vendor/bin/install DE -r ci ; fi
+  - if [[ $TEST_GROUP == 'without-acceptance' ]] ; then vendor/bin/install DE -r ci -x frontend -x fixtures ; fi
+
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console transfer:generate ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console propel:install ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console dev:ide-auto-completion:generate ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/codecept build --ansi ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console transfer:databuilder:generate ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console setup:search ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console rest-api:generate:documentation ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console frontend:project:install-dependencies ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console frontend:yves:install-dependencies ; fi
+  - composer dump-autoload -o -a
+
+script:
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console propel:schema:validate ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console propel:schema:validate-xml-names ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console transfer:validate ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/console code:sniff:style ; fi
+  - if [[ $VALIDATION == 1 ]] ; then speccy lint src/Generated/Glue/Specification/spryker_rest_api.schema.yml --rules=default ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/phpmd src/ text vendor/spryker/architecture-sniffer/src/ruleset.xml --minimumpriority 2 ; fi
+  - if [[ $VALIDATION == 1 ]] ; then vendor/bin/phpstan analyze -c phpstan.neon src/ -l 4 ; fi
+
+  - timeout 45m bash -c "${CHROMEDRIVER_BINARY} --port=4444 --whitelisted-ips= --url-base=/wd/hub --log-path=/tmp/chromedriver.log --log-level=DEBUG">/dev/null &
+  - if [[ $TEST_GROUP == 'without-acceptance' ]] ; then vendor/bin/codecept run -x EndToEnd -x Presentation --ext DotReporter ; fi
+  - if [[ $TEST_GROUP == 'acceptance' ]] ; then vendor/bin/codecept run -g EndToEnd -g Presentation -x DockerOnly --ext DotReporter ; fi
+
+  - if [[ $VALIDATION == 1 ]] ; then node ./frontend/libs/stylelint ; fi
+  - if [[ $VALIDATION == 1 ]] ; then node ./frontend/libs/tslint --format stylish ; fi
+  - if [[ $VALIDATION == 1 ]] ; then node ./frontend/libs/formatter ; fi
+
+notifications:
+  email: false
