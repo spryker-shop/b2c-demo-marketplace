@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78dfc07fff99c3bc45e9ef5324ba7ada",
+    "content-hash": "1687ad7f4376dfcd7c0d0a213c69dd65",
     "packages": [
         {
             "name": "async-aws/core",
@@ -1391,6 +1391,66 @@
             "time": "2022-03-20T21:55:58+00:00"
         },
         {
+            "name": "laminas/laminas-barcode",
+            "version": "2.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-barcode.git",
+                "reference": "e2a4b56e2f6c800992fe1c7e7cc0da851dcfdfa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-barcode/zipball/e2a4b56e2f6c800992fe1c7e7cc0da851dcfdfa0",
+                "reference": "e2a4b56e2f6c800992fe1c7e7cc0da851dcfdfa0",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-servicemanager": "^3.10.0",
+                "laminas/laminas-stdlib": "^3.6.0",
+                "laminas/laminas-validator": "^2.15.1",
+                "php": "~7.4.0 || ~8.0.0 || ~8.1.0"
+            },
+            "conflict": {
+                "zendframework/zend-barcode": "*"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~2.3.0",
+                "laminas/laminas-config": "^3.7.0",
+                "phpunit/phpunit": "^9.3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Barcode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Programmatically create and render barcodes as images or in PDFs",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "barcode",
+                "laminas"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-barcode/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-barcode/issues",
+                "rss": "https://github.com/laminas/laminas-barcode/releases.atom",
+                "source": "https://github.com/laminas/laminas-barcode"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2022-01-04T14:26:00+00:00"
+        },
+        {
             "name": "laminas/laminas-config",
             "version": "3.5.1",
             "source": {
@@ -1688,6 +1748,96 @@
                 }
             ],
             "time": "2022-01-21T15:50:46+00:00"
+        },
+        {
+            "name": "laminas/laminas-validator",
+            "version": "2.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-validator.git",
+                "reference": "bdd503adc83d814a5c94e598ea0eb9fc7ca56339"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/bdd503adc83d814a5c94e598ea0eb9fc7ca56339",
+                "reference": "bdd503adc83d814a5c94e598ea0eb9fc7ca56339",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.1",
+                "laminas/laminas-stdlib": "^3.6",
+                "php": "^7.3 || ~8.0.0 || ~8.1.0"
+            },
+            "conflict": {
+                "zendframework/zend-validator": "*"
+            },
+            "require-dev": {
+                "laminas/laminas-cache": "^2.6.1",
+                "laminas/laminas-coding-standard": "~2.2.1",
+                "laminas/laminas-db": "^2.7",
+                "laminas/laminas-filter": "^2.6",
+                "laminas/laminas-http": "^2.14.2",
+                "laminas/laminas-i18n": "^2.6",
+                "laminas/laminas-math": "^2.6",
+                "laminas/laminas-servicemanager": "^2.7.11 || ^3.0.3",
+                "laminas/laminas-session": "^2.8",
+                "laminas/laminas-uri": "^2.7",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.5.5",
+                "psalm/plugin-phpunit": "^0.15.0",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0",
+                "vimeo/psalm": "^4.3"
+            },
+            "suggest": {
+                "laminas/laminas-db": "Laminas\\Db component, required by the (No)RecordExists validator",
+                "laminas/laminas-filter": "Laminas\\Filter component, required by the Digits validator",
+                "laminas/laminas-i18n": "Laminas\\I18n component to allow translation of validation error messages",
+                "laminas/laminas-i18n-resources": "Translations of validator messages",
+                "laminas/laminas-math": "Laminas\\Math component, required by the Csrf validator",
+                "laminas/laminas-servicemanager": "Laminas\\ServiceManager component to allow using the ValidatorPluginManager and validator chains",
+                "laminas/laminas-session": "Laminas\\Session component, ^2.8; required by the Csrf validator",
+                "laminas/laminas-uri": "Laminas\\Uri component, required by the Uri and Sitemap\\Loc validators",
+                "psr/http-message": "psr/http-message, required when validating PSR-7 UploadedFileInterface instances via the Upload and UploadFile validators"
+            },
+            "type": "library",
+            "extra": {
+                "laminas": {
+                    "component": "Laminas\\Validator",
+                    "config-provider": "Laminas\\Validator\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Validator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Validation classes for a wide range of domains, and the ability to chain validators to create complex validation criteria",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "laminas",
+                "validator"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-validator/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-validator/issues",
+                "rss": "https://github.com/laminas/laminas-validator/releases.atom",
+                "source": "https://github.com/laminas/laminas-validator"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2022-03-08T18:16:51+00:00"
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
@@ -13357,16 +13507,16 @@
         },
         {
             "name": "spryker/app-catalog-gui",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/app-catalog-gui.git",
-                "reference": "42550deda0878d381af1225690bb5459873fe67e"
+                "reference": "af71cb06a65ce30ea124baeb529170df31205521"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/app-catalog-gui/zipball/42550deda0878d381af1225690bb5459873fe67e",
-                "reference": "42550deda0878d381af1225690bb5459873fe67e",
+                "url": "https://api.github.com/repos/spryker/app-catalog-gui/zipball/af71cb06a65ce30ea124baeb529170df31205521",
+                "reference": "af71cb06a65ce30ea124baeb529170df31205521",
                 "shasum": ""
             },
             "require": {
@@ -13403,9 +13553,9 @@
             ],
             "description": "AppCatalogGui module",
             "support": {
-                "source": "https://github.com/spryker/app-catalog-gui/tree/1.0.0"
+                "source": "https://github.com/spryker/app-catalog-gui/tree/1.0.1"
             },
-            "time": "2022-04-26T12:27:56+00:00"
+            "time": "2022-05-17T13:56:00+00:00"
         },
         {
             "name": "spryker/application",
@@ -13571,20 +13721,21 @@
         },
         {
             "name": "spryker/asset",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/asset.git",
-                "reference": "14765c1586896e75633990c233ccb1ea7720631a"
+                "reference": "96d9e5819a9ca2dbd2a42923eedeca9abdec4a8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/asset/zipball/14765c1586896e75633990c233ccb1ea7720631a",
-                "reference": "14765c1586896e75633990c233ccb1ea7720631a",
+                "url": "https://api.github.com/repos/spryker/asset/zipball/96d9e5819a9ca2dbd2a42923eedeca9abdec4a8c",
+                "reference": "96d9e5819a9ca2dbd2a42923eedeca9abdec4a8c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
+                "spryker/event": "^2.1.0",
                 "spryker/event-behavior": "^1.23.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/message-broker-extension": "^1.0.0",
@@ -13598,9 +13749,6 @@
                 "spryker/propel": "*",
                 "spryker/ramsey-uuid": "*",
                 "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/event": "If you want to use Event plugins, minimum required version: 2.1.0"
             },
             "type": "library",
             "extra": {
@@ -13620,22 +13768,22 @@
             ],
             "description": "Asset module",
             "support": {
-                "source": "https://github.com/spryker/asset/tree/1.1.0"
+                "source": "https://github.com/spryker/asset/tree/1.2.0"
             },
-            "time": "2022-04-26T12:27:56+00:00"
+            "time": "2022-05-12T13:39:48+00:00"
         },
         {
             "name": "spryker/asset-storage",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/asset-storage.git",
-                "reference": "71370464f4972dd1b287aaa15665dd80c9e287b0"
+                "reference": "ef751ebc6871e06ef7b1cd5cc3a452720f833266"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/asset-storage/zipball/71370464f4972dd1b287aaa15665dd80c9e287b0",
-                "reference": "71370464f4972dd1b287aaa15665dd80c9e287b0",
+                "url": "https://api.github.com/repos/spryker/asset-storage/zipball/ef751ebc6871e06ef7b1cd5cc3a452720f833266",
+                "reference": "ef751ebc6871e06ef7b1cd5cc3a452720f833266",
                 "shasum": ""
             },
             "require": {
@@ -13643,6 +13791,7 @@
                 "spryker/asset": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/propel-orm": "^1.3.0",
+                "spryker/publisher-extension": "^1.0.0",
                 "spryker/storage": "^3.0.0",
                 "spryker/store": "^1.0.0",
                 "spryker/synchronization": "^1.0.0",
@@ -13679,9 +13828,9 @@
             ],
             "description": "AssetStorage module",
             "support": {
-                "source": "https://github.com/spryker/asset-storage/tree/1.0.0"
+                "source": "https://github.com/spryker/asset-storage/tree/1.1.0"
             },
-            "time": "2022-04-14T07:53:41+00:00"
+            "time": "2022-05-12T13:39:48+00:00"
         },
         {
             "name": "spryker/auth-rest-api",
@@ -14577,6 +14726,52 @@
             "time": "2019-04-23T09:58:16+00:00"
         },
         {
+            "name": "spryker/barcode-laminas",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/barcode-laminas.git",
+                "reference": "5401ad3b262aee35290be345bc48e892e86f9dee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/barcode-laminas/zipball/5401ad3b262aee35290be345bc48e892e86f9dee",
+                "reference": "5401ad3b262aee35290be345bc48e892e86f9dee",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-barcode": "^2.8.0",
+                "php": ">=7.4",
+                "spryker/barcode-extension": "^1.0.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "BarcodeLaminas module",
+            "support": {
+                "source": "https://github.com/spryker/barcode-laminas/tree/1.1.0"
+            },
+            "time": "2022-05-11T08:36:06+00:00"
+        },
+        {
             "name": "spryker/cache",
             "version": "3.5.0",
             "source": {
@@ -14864,20 +15059,20 @@
         },
         {
             "name": "spryker/cart-codes-rest-api",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cart-codes-rest-api.git",
-                "reference": "889a23935c6b30e0fb5a738007bfc95485b65d16"
+                "reference": "81fa710fa2c78db30054d667fadfe1356769592a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/cart-codes-rest-api/zipball/889a23935c6b30e0fb5a738007bfc95485b65d16",
-                "reference": "889a23935c6b30e0fb5a738007bfc95485b65d16",
+                "url": "https://api.github.com/repos/spryker/cart-codes-rest-api/zipball/81fa710fa2c78db30054d667fadfe1356769592a",
+                "reference": "81fa710fa2c78db30054d667fadfe1356769592a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.4",
                 "spryker/cart-code": "^1.1.0",
                 "spryker/cart-codes-rest-api-extension": "^1.0.0",
                 "spryker/carts-rest-api": "^5.7.0",
@@ -14911,7 +15106,10 @@
                 "proprietary"
             ],
             "description": "CartCodesRestApi module",
-            "time": "2020-05-29T10:03:55+00:00"
+            "support": {
+                "source": "https://github.com/spryker/cart-codes-rest-api/tree/1.4.0"
+            },
+            "time": "2022-06-21T16:34:19+00:00"
         },
         {
             "name": "spryker/cart-codes-rest-api-extension",
@@ -16588,20 +16786,20 @@
         },
         {
             "name": "spryker/checkout-rest-api",
-            "version": "3.7.1",
+            "version": "3.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/checkout-rest-api.git",
-                "reference": "4bedee1fd8985d0830924c1d8215f60bdd58a6a4"
+                "reference": "54a2983c03999610ab20f768b245d947bb84a4c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/checkout-rest-api/zipball/4bedee1fd8985d0830924c1d8215f60bdd58a6a4",
-                "reference": "4bedee1fd8985d0830924c1d8215f60bdd58a6a4",
+                "url": "https://api.github.com/repos/spryker/checkout-rest-api/zipball/54a2983c03999610ab20f768b245d947bb84a4c6",
+                "reference": "54a2983c03999610ab20f768b245d947bb84a4c6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/calculation": "^4.0.0",
                 "spryker/cart": "^5.0.0 || ^7.0.0",
                 "spryker/carts-rest-api": "^2.2.0 || ^3.0.0 || ^5.0.0",
@@ -16641,7 +16839,10 @@
                 "proprietary"
             ],
             "description": "CheckoutRestApi module",
-            "time": "2021-07-21T12:51:52+00:00"
+            "support": {
+                "source": "https://github.com/spryker/checkout-rest-api/tree/3.7.2"
+            },
+            "time": "2022-06-01T08:53:47+00:00"
         },
         {
             "name": "spryker/checkout-rest-api-extension",
@@ -19131,54 +19332,6 @@
                 "source": "https://github.com/spryker/cms-user-connector/tree/1.1.1"
             },
             "time": "2020-05-29T13:08:37+00:00"
-        },
-        {
-            "name": "spryker/code-it-now",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/code-it-now.git",
-                "reference": "5b640c417967df863f1537c1336e19d50c0df3c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/code-it-now/zipball/5b640c417967df863f1537c1336e19d50c0df3c9",
-                "reference": "5b640c417967df863f1537c1336e19d50c0df3c9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "spryker/barcode-extension": "^1.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/kernel": "^3.1.0",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/kernel": "for testing"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CodeItNow module",
-            "support": {
-                "source": "https://github.com/spryker/code-it-now/tree/1.0.1"
-            },
-            "abandoned": "spryker/barcode-laminas",
-            "time": "2022-04-21T13:32:43+00:00"
         },
         {
             "name": "spryker/collector",
@@ -22761,20 +22914,20 @@
         },
         {
             "name": "spryker/documentation-generator-rest-api",
-            "version": "1.12.1",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/documentation-generator-rest-api.git",
-                "reference": "c1642b651baa6b48b413805700c9d20a919e824b"
+                "reference": "489cbcc6a1bd5268d05fde55ef9ce9094d15d2f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/documentation-generator-rest-api/zipball/c1642b651baa6b48b413805700c9d20a919e824b",
-                "reference": "c1642b651baa6b48b413805700c9d20a919e824b",
+                "url": "https://api.github.com/repos/spryker/documentation-generator-rest-api/zipball/489cbcc6a1bd5268d05fde55ef9ce9094d15d2f3",
+                "reference": "489cbcc6a1bd5268d05fde55ef9ce9094d15d2f3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/doctrine-inflector": "^1.0.0 || ^2.0.0",
                 "spryker/documentation-generator-rest-api-extension": "^1.0.0",
                 "spryker/glue-application": "^1.3.0",
@@ -22804,7 +22957,10 @@
                 "proprietary"
             ],
             "description": "DocumentationGeneratorRestApi module",
-            "time": "2021-03-26T16:57:26+00:00"
+            "support": {
+                "source": "https://github.com/spryker/documentation-generator-rest-api/tree/1.15.0"
+            },
+            "time": "2022-06-06T15:18:19+00:00"
         },
         {
             "name": "spryker/documentation-generator-rest-api-extension",
@@ -42143,16 +42299,16 @@
         },
         {
             "name": "spryker/secrets-manager-aws",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/secrets-manager-aws.git",
-                "reference": "fda004f63b8a5887354efebedb59319d53112628"
+                "reference": "82f1ebe2990c9662646148c4233504c4bb629780"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/secrets-manager-aws/zipball/fda004f63b8a5887354efebedb59319d53112628",
-                "reference": "fda004f63b8a5887354efebedb59319d53112628",
+                "url": "https://api.github.com/repos/spryker/secrets-manager-aws/zipball/82f1ebe2990c9662646148c4233504c4bb629780",
+                "reference": "82f1ebe2990c9662646148c4233504c4bb629780",
                 "shasum": ""
             },
             "require": {
@@ -42186,9 +42342,9 @@
             ],
             "description": "SecretsManagerAws module",
             "support": {
-                "source": "https://github.com/spryker/secrets-manager-aws/tree/1.0.0"
+                "source": "https://github.com/spryker/secrets-manager-aws/tree/1.0.1"
             },
-            "time": "2022-04-14T07:53:41+00:00"
+            "time": "2022-05-18T16:18:58+00:00"
         },
         {
             "name": "spryker/secrets-manager-extension",
@@ -59582,12 +59738,6 @@
             "alias_normalized": "202204.0"
         },
         {
-            "package": "spryker-feature/development-tools",
-            "version": "9999999-dev",
-            "alias": "202204.0",
-            "alias_normalized": "202204.0"
-        },
-        {
             "package": "spryker-feature/file-manager",
             "version": "9999999-dev",
             "alias": "202204.0",
@@ -59962,7 +60112,6 @@
         "spryker-feature/state-machine": 20,
         "spryker-feature/tax": 20,
         "spryker-feature/wishlist": 20,
-        "spryker-feature/development-tools": 20,
         "spryker-sdk/integrator": 20,
         "spryker/docker-chromedriver": 20
     },
