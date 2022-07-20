@@ -20,7 +20,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
     {
         return [
             new ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin(),
-            new EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin(),
         ];
     }
 }
