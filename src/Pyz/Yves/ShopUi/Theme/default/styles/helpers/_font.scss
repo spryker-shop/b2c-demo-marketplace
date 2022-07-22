@@ -3,7 +3,7 @@
 }
 
 @mixin helper-font-letter-spacing($spacing) {
-    letter-spacing: calc(map-get($setting-font-letter-spacing, $spacing));
+    letter-spacing: map-get($setting-font-letter-spacing, $spacing);
 }
 
 @mixin helper-font-reduced-letter-spacing($spacing) {

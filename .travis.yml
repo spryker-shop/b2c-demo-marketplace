@@ -474,6 +474,7 @@ before_install:
   - rm -rf $HOME/chromium-ecosystem/*.zip
   - export CHROMEDRIVER_REVISION=814168
   - export COMPOSER_IGNORE_CHROMEDRIVER=1
+  - nvm install 16 > /dev/null
   - nvm use 16
 
 install:

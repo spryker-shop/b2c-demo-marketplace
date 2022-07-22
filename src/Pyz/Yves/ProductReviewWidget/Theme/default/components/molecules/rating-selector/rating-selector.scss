@@ -89,7 +89,7 @@ $product-review-rating-selector-icon-size-smallest: rem(12, number);
         &--smallest {
             #{$name}__step {
                 &--half {
-                    width: $product-review-rating-selector-icon-size-smallest / 2;
+                    width: calc(#{$product-review-rating-selector-icon-size-smallest} / 2);
                     height: $product-review-rating-selector-icon-size-smallest;
 
                     &:nth-child(odd) {
