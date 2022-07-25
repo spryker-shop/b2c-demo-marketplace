@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db413fa56d598837054919e14df9a1c9",
+    "content-hash": "842d543d9bf0674469c974973ee1f23d",
     "packages": [
         {
             "name": "async-aws/core",
@@ -5362,12 +5362,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product-offer-prices.git",
-                "reference": "681c8acfb6da3f8b5f52daf31d2921e11362e8d5"
+                "reference": "d04900313fe1e43ce45b88641241c18f80ef47f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer-prices/zipball/681c8acfb6da3f8b5f52daf31d2921e11362e8d5",
-                "reference": "681c8acfb6da3f8b5f52daf31d2921e11362e8d5",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer-prices/zipball/d04900313fe1e43ce45b88641241c18f80ef47f4",
+                "reference": "d04900313fe1e43ce45b88641241c18f80ef47f4",
                 "shasum": ""
             },
             "require": {
@@ -5375,7 +5375,7 @@
                 "spryker-shop/price-product-volume-widget": "^1.6.0",
                 "spryker-shop/price-widget": "^1.4.0",
                 "spryker/price": "^5.6.0",
-                "spryker/price-product": "^4.34.0",
+                "spryker/price-product": "^4.35.0",
                 "spryker/price-product-data-import": "^0.1.0",
                 "spryker/price-product-offer": "^1.1.0",
                 "spryker/price-product-offer-data-import": "^0.7.0",
@@ -5383,13 +5383,14 @@
                 "spryker/price-product-offer-storage": "^1.1.0",
                 "spryker/price-product-offer-volume": "^1.0.0",
                 "spryker/price-product-offer-volume-gui": "^1.0.0",
-                "spryker/price-product-storage": "^4.8.0",
+                "spryker/price-product-storage": "^4.9.0",
                 "spryker/price-product-volume": "^3.3.0"
             },
             "suggest": {
                 "spryker-feature/marketplace-product-offer": "Recommended feature dependency.",
                 "spryker-feature/prices": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -5402,9 +5403,9 @@
             ],
             "description": "Marketplace Product Offer Prices [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-product-offer-prices/tree/master"
+                "source": "https://github.com/spryker-feature/marketplace-product-offer-prices/tree/202204.0"
             },
-            "time": "2022-04-13T13:09:44+00:00"
+            "time": "2022-04-29T14:08:46+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product-options",
@@ -32023,16 +32024,16 @@
         },
         {
             "name": "spryker/price-product-offer-gui",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/price-product-offer-gui.git",
-                "reference": "fa68f02f3cb7b57cb62726945920108d766ac184"
+                "reference": "aad4f8e74833f9187fe962131b85cd4adf21f941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/price-product-offer-gui/zipball/fa68f02f3cb7b57cb62726945920108d766ac184",
-                "reference": "fa68f02f3cb7b57cb62726945920108d766ac184",
+                "url": "https://api.github.com/repos/spryker/price-product-offer-gui/zipball/aad4f8e74833f9187fe962131b85cd4adf21f941",
+                "reference": "aad4f8e74833f9187fe962131b85cd4adf21f941",
                 "shasum": ""
             },
             "require": {
@@ -32040,11 +32041,17 @@
                 "spryker/kernel": "^3.33.0",
                 "spryker/price": "^5.6.0",
                 "spryker/price-product": "^4.16.0",
+                "spryker/product-merchant-portal-gui-extension": "^1.1.0",
                 "spryker/product-offer-gui-extension": "^1.0.0",
+                "spryker/transfer": "^3.25.0",
                 "spryker/util-encoding": "^2.1.0"
             },
             "require-dev": {
-                "spryker/code-sniffer": "*"
+                "spryker/code-sniffer": "*",
+                "spryker/product": "*",
+                "spryker/product-offer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
             },
             "type": "library",
             "extra": {
@@ -32063,9 +32070,9 @@
             ],
             "description": "PriceProductOfferGui module",
             "support": {
-                "source": "https://github.com/spryker/price-product-offer-gui/tree/1.0.1"
+                "source": "https://github.com/spryker/price-product-offer-gui/tree/1.1.0"
             },
-            "time": "2022-04-26T16:30:57+00:00"
+            "time": "2022-07-14T11:12:48+00:00"
         },
         {
             "name": "spryker/price-product-offer-storage",
