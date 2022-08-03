@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "842d543d9bf0674469c974973ee1f23d",
+    "content-hash": "1fd06dd3102f7838541269a44792ceff",
     "packages": [
         {
             "name": "async-aws/core",
@@ -27325,23 +27325,24 @@
         },
         {
             "name": "spryker/merchant-product-offer-wishlist",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product-offer-wishlist.git",
-                "reference": "c9cd2173b9cdc8d8908a3ccd1447baf436f06187"
+                "reference": "f8e8206bc2a3c9cdacc0d0f771db0e90ee127b3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product-offer-wishlist/zipball/c9cd2173b9cdc8d8908a3ccd1447baf436f06187",
-                "reference": "c9cd2173b9cdc8d8908a3ccd1447baf436f06187",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offer-wishlist/zipball/f8e8206bc2a3c9cdacc0d0f771db0e90ee127b3c",
+                "reference": "f8e8206bc2a3c9cdacc0d0f771db0e90ee127b3c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
                 "spryker/kernel": "^3.33.0",
-                "spryker/merchant": "^3.0.0",
+                "spryker/merchant": "^3.1.0",
                 "spryker/product-offer": "^1.0.0",
+                "spryker/transfer": "^3.25.0",
                 "spryker/wishlist-extension": "^1.3.0"
             },
             "require-dev": {
@@ -27368,7 +27369,10 @@
                 "proprietary"
             ],
             "description": "MerchantProductOfferWishlist module",
-            "time": "2021-10-29T06:02:31+00:00"
+            "support": {
+                "source": "https://github.com/spryker/merchant-product-offer-wishlist/tree/1.2.0"
+            },
+            "time": "2022-07-14T13:56:41+00:00"
         },
         {
             "name": "spryker/merchant-product-offer-wishlist-rest-api",
@@ -33695,6 +33699,61 @@
             "time": "2020-09-22T10:39:54+00:00"
         },
         {
+            "name": "spryker/product-bundle-discount-connector",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-bundle-discount-connector.git",
+                "reference": "8526619be331a77731197ca282e904864b24327b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-bundle-discount-connector/zipball/8526619be331a77731197ca282e904864b24327b",
+                "reference": "8526619be331a77731197ca282e904864b24327b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/discount": "^9.0.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/locale": "^3.0.0",
+                "spryker/product": "^6.0.0",
+                "spryker/product-bundle": "^7.0.0",
+                "spryker/product-discount-connector-extension": "^1.0.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/availability": "*",
+                "spryker/code-sniffer": "*",
+                "spryker/currency": "*",
+                "spryker/price-product": "*",
+                "spryker/propel": "*",
+                "spryker/stock": "*",
+                "spryker/store": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductBundleDiscountConnector module",
+            "support": {
+                "source": "https://github.com/spryker/product-bundle-discount-connector/tree/1.0.0"
+            },
+            "time": "2022-06-24T14:09:57+00:00"
+        },
+        {
             "name": "spryker/product-bundle-storage",
             "version": "1.0.0",
             "source": {
@@ -34610,24 +34669,25 @@
         },
         {
             "name": "spryker/product-discount-connector",
-            "version": "5.0.2",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-discount-connector.git",
-                "reference": "0040965c69a3c6bd2df359326f0a635baef9b095"
+                "reference": "c4ff368905cf1bf47a476e0b05a8ab3afb36a281"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-discount-connector/zipball/0040965c69a3c6bd2df359326f0a635baef9b095",
-                "reference": "0040965c69a3c6bd2df359326f0a635baef9b095",
+                "url": "https://api.github.com/repos/spryker/product-discount-connector/zipball/c4ff368905cf1bf47a476e0b05a8ab3afb36a281",
+                "reference": "c4ff368905cf1bf47a476e0b05a8ab3afb36a281",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=7.4",
                 "spryker/discount": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^9.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/locale": "^3.0.0",
-                "spryker/product": "^5.0.0 || ^6.0.0"
+                "spryker/product": "^5.0.0 || ^6.0.0",
+                "spryker/product-discount-connector-extension": "^1.0.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -34652,9 +34712,50 @@
             ],
             "description": "ProductDiscountConnector module",
             "support": {
-                "source": "https://github.com/spryker/product-discount-connector/tree/5.0.2"
+                "source": "https://github.com/spryker/product-discount-connector/tree/5.1.0"
             },
-            "time": "2020-05-29T13:08:37+00:00"
+            "time": "2022-06-24T14:09:57+00:00"
+        },
+        {
+            "name": "spryker/product-discount-connector-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-discount-connector-extension.git",
+                "reference": "6c11d6e1116f1ea9277bbf13b82a7821c2a2d205"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-discount-connector-extension/zipball/6c11d6e1116f1ea9277bbf13b82a7821c2a2d205",
+                "reference": "6c11d6e1116f1ea9277bbf13b82a7821c2a2d205",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductDiscountConnectorExtension module",
+            "support": {
+                "source": "https://github.com/spryker/product-discount-connector-extension/tree/1.0.0"
+            },
+            "time": "2022-06-24T14:09:57+00:00"
         },
         {
             "name": "spryker/product-extension",
@@ -60216,5 +60317,5 @@
     "platform-overrides": {
         "php": "7.4.20"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
