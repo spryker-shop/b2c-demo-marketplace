@@ -8,6 +8,7 @@
 namespace Pyz\Zed\ProductMerchantPortalGui;
 
 use Spryker\Zed\AvailabilityMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\TotalProductAvailabilityProductConcreteTableExpanderPlugin;
+use Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductMerchantPortalGui\PriceProductOfferPriceProductTableFilterPlugin;
 use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider as SprykerProductMerchantPortalGuiDependencyProvider;
 use Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\TaxProductAbstractFormExpanderPlugin;
 
@@ -30,6 +31,16 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
     {
         return [
             new TotalProductAvailabilityProductConcreteTableExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductTableFilterPluginInterface>
+     */
+    protected function getPriceProductTableFilterPlugins(): array
+    {
+        return [
+            new PriceProductOfferPriceProductTableFilterPlugin(),
         ];
     }
 }

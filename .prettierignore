@@ -1,10 +1,9 @@
 # Ignore paths
 /.github/
-/.yarn/
 /docker/
 /frontend/
 /vendor/
-/public/*/assets/**
+/public/*/assets/
 **/dist/**
 
 /composer.json
