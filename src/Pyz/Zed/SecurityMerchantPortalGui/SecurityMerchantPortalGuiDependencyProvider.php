@@ -10,7 +10,6 @@ namespace Pyz\Zed\SecurityMerchantPortalGui;
 use Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui\AclGroupMerchantUserLoginRestrictionPlugin;
 use Spryker\Zed\SecurityMerchantPortalGui\SecurityMerchantPortalGuiDependencyProvider as SprykerSecurityMerchantPortalGuiDependencyProvider;
 
-
 class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchantPortalGuiDependencyProvider
 {
     /**
