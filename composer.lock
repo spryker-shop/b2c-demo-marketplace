@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbee6081e491992a5c7ba21bbd51e7eb",
+    "content-hash": "1fd06dd3102f7838541269a44792ceff",
     "packages": [
         {
             "name": "async-aws/core",
@@ -5129,20 +5129,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchantportal-core.git",
-                "reference": "11aaec4a487d6bb32d30848f42b54fa82e0a14af"
+                "reference": "c19fca74006bf5a7b2c8b84c5d1589dfc9534f9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/11aaec4a487d6bb32d30848f42b54fa82e0a14af",
-                "reference": "11aaec4a487d6bb32d30848f42b54fa82e0a14af",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchantportal-core/zipball/c19fca74006bf5a7b2c8b84c5d1589dfc9534f9c",
+                "reference": "c19fca74006bf5a7b2c8b84c5d1589dfc9534f9c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
-                "spryker/acl": "^3.12.0",
-                "spryker/acl-entity": "^1.4.0",
-                "spryker/acl-merchant-portal": "^1.7.0",
-                "spryker/gui-table": "^1.5.0",
+                "spryker/acl": "^3.10.0",
+                "spryker/acl-entity": "^1.3.0",
+                "spryker/acl-merchant-portal": "^1.5.0",
+                "spryker/gui-table": "^1.4.0",
                 "spryker/merchant-portal-application": "^1.0.0",
                 "spryker/merchant-user": "^1.1.0",
                 "spryker/merchant-user-password-reset-mail": "^1.0.0",
@@ -5154,11 +5154,10 @@
             "suggest": {
                 "spryker-feature/acl": "Recommended feature dependency."
             },
-            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202210.x-dev"
+                    "dev-master": "202204.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5169,7 +5168,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchantportal-core/tree/master"
             },
-            "time": "2022-08-18T13:32:13+00:00"
+            "time": "2022-04-13T13:12:43+00:00"
         },
         {
             "name": "spryker-feature/marketplace-order-management",
@@ -60030,8 +60029,8 @@
         {
             "package": "spryker-feature/marketplace-merchantportal-core",
             "version": "9999999-dev",
-            "alias": "202210.0",
-            "alias_normalized": "202210.0"
+            "alias": "202204.0",
+            "alias_normalized": "202204.0"
         },
         {
             "package": "spryker-feature/marketplace-order-management",
