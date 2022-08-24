@@ -9,7 +9,6 @@ namespace Pyz\Zed\CartsRestApi;
 
 use Spryker\Zed\CartsRestApi\CartsRestApiConfig as SprykerCartsRestApiConfig;
 
-
 class CartsRestApiConfig extends SprykerCartsRestApiConfig
 {
     /**
