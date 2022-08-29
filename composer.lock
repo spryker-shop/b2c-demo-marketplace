@@ -13039,16 +13039,16 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "1.4.1",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b"
+                "reference": "058f9d1327ebd9b9ee0fcdbffe96a94dcfffc9d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b",
-                "reference": "c0b3bc2c3cc21fe07e3a2313b93b4e56d8a2431b",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/058f9d1327ebd9b9ee0fcdbffe96a94dcfffc9d9",
+                "reference": "058f9d1327ebd9b9ee0fcdbffe96a94dcfffc9d9",
                 "shasum": ""
             },
             "require": {
@@ -13058,7 +13058,7 @@
                 "spryker/acl-extension": "^1.1.0",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
-                "spryker/propel-orm": "^1.0.0",
+                "spryker/propel-orm": "^1.16.0",
                 "spryker/transfer": "^3.25.0",
                 "spryker/user": "^3.0.0"
             },
@@ -13093,9 +13093,9 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/1.4.1"
+                "source": "https://github.com/spryker/acl-entity/tree/1.5.0"
             },
-            "time": "2022-05-30T12:50:35+00:00"
+            "time": "2022-06-17T12:20:42+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
