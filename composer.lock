@@ -33733,16 +33733,16 @@
         },
         {
             "name": "spryker/product-bundle",
-            "version": "7.11.0",
+            "version": "7.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-bundle.git",
-                "reference": "386298bdaf44908eeb6f95bbd63ee7c171805721"
+                "reference": "3e8be539ddc40ad27ecc5c3e82eccbdae9ea60ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-bundle/zipball/386298bdaf44908eeb6f95bbd63ee7c171805721",
-                "reference": "386298bdaf44908eeb6f95bbd63ee7c171805721",
+                "url": "https://api.github.com/repos/spryker/product-bundle/zipball/3e8be539ddc40ad27ecc5c3e82eccbdae9ea60ef",
+                "reference": "3e8be539ddc40ad27ecc5c3e82eccbdae9ea60ef",
                 "shasum": ""
             },
             "require": {
@@ -33761,7 +33761,7 @@
                 "spryker/product": "^5.0.0 || ^6.0.0",
                 "spryker/product-extension": "^1.3.0",
                 "spryker/product-image": "^3.3.0",
-                "spryker/propel-orm": "^1.0.0",
+                "spryker/propel-orm": "^1.16.0",
                 "spryker/sales": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^10.0.0 || ^11.0.0",
                 "spryker/sales-extension": "^1.6.0",
                 "spryker/sales-return-gui-extension": "^1.0.0",
@@ -33805,7 +33805,10 @@
                 "proprietary"
             ],
             "description": "ProductBundle module",
-            "time": "2022-02-22T13:01:19+00:00"
+            "support": {
+                "source": "https://github.com/spryker/product-bundle/tree/7.13.0"
+            },
+            "time": "2022-07-01T12:54:10+00:00"
         },
         {
             "name": "spryker/product-bundle-carts-rest-api",
