@@ -45216,29 +45216,28 @@
         },
         {
             "name": "spryker/synchronization-behavior",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/synchronization-behavior.git",
-                "reference": "5dc4046d039db48800b436e7a78f4a689a402d9d"
+                "reference": "f9f9dd276794409fc80d031f89ee905b3067d0df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/synchronization-behavior/zipball/5dc4046d039db48800b436e7a78f4a689a402d9d",
-                "reference": "5dc4046d039db48800b436e7a78f4a689a402d9d",
+                "url": "https://api.github.com/repos/spryker/synchronization-behavior/zipball/f9f9dd276794409fc80d031f89ee905b3067d0df",
+                "reference": "f9f9dd276794409fc80d031f89ee905b3067d0df",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/kernel": "^3.30.0",
                 "spryker/laminas": "^1.0.0",
-                "spryker/propel-orm": "^1.6.0",
+                "spryker/propel-orm": "^1.16.0",
                 "spryker/queue": "^1.1.2",
                 "spryker/synchronization": "^0.1.0 || ^0.2.0 || ^1.0.0"
             },
             "require-dev": {
                 "codeception/module-asserts": "^1.0.0",
-                "phpstan/phpstan": "^0.12.57",
                 "spryker/code-sniffer": "*",
                 "spryker/testify": "^3.35.0"
             },
@@ -45266,7 +45265,7 @@
             "support": {
                 "source": "https://github.com/spryker/synchronization-behavior"
             },
-            "time": "2021-04-23T06:17:15+00:00"
+            "time": "2022-07-01T12:54:12+00:00"
         },
         {
             "name": "spryker/synchronization-extension",
