@@ -147,6 +147,7 @@
         "spryker/documentation-generator-rest-api": "^1.15.0",
         "spryker/dummy-marketplace-payment": "^0.2.3",
         "spryker/entity-tags-rest-api": "^1.0.2",
+        "spryker/event-behavior": "1.24.0",
         "spryker/flysystem": "^2.1.0",
         "spryker/flysystem-ftp-file-system": "^2.0.0",
         "spryker/flysystem-local-file-system": "^2.0.0",
