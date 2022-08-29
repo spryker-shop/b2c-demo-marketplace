@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acf78a38720ce67aff14d8e8278e58ef",
+    "content-hash": "74153b8b2f3d38ff8f8c0854d0cda7d5",
     "packages": [
         {
             "name": "async-aws/core",
@@ -39391,16 +39391,16 @@
         },
         {
             "name": "spryker/propel",
-            "version": "3.34.2",
+            "version": "3.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/propel.git",
-                "reference": "f8fa58f9fc2e734507b773028c386bf89ec544a2"
+                "reference": "8814020da7fb5a9d15690dedf60c8f55c5445795"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/propel/zipball/f8fa58f9fc2e734507b773028c386bf89ec544a2",
-                "reference": "f8fa58f9fc2e734507b773028c386bf89ec544a2",
+                "url": "https://api.github.com/repos/spryker/propel/zipball/8814020da7fb5a9d15690dedf60c8f55c5445795",
+                "reference": "8814020da7fb5a9d15690dedf60c8f55c5445795",
                 "shasum": ""
             },
             "require": {
@@ -39411,7 +39411,7 @@
                 "spryker/kernel": "^3.48.0",
                 "spryker/log": "^3.0.0",
                 "spryker/monolog": "^2.0.0",
-                "spryker/propel-orm": "^1.14.0",
+                "spryker/propel-orm": "^1.16.0",
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.12.0",
                 "spryker/util-encoding": "^2.0.0",
@@ -39446,9 +39446,9 @@
             ],
             "description": "Propel module",
             "support": {
-                "source": "https://github.com/spryker/propel/tree/3.34.2"
+                "source": "https://github.com/spryker/propel/tree/3.35.0"
             },
-            "time": "2022-02-22T13:01:19+00:00"
+            "time": "2022-06-17T16:37:38+00:00"
         },
         {
             "name": "spryker/propel-orm",
