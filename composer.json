@@ -229,6 +229,7 @@
         "spryker/shipments-rest-api": "^1.5.0",
         "spryker/store-reference": "^1.1.0",
         "spryker/stores-rest-api": "^1.0.4",
+        "spryker/synchronization-behavior": "1.9.0",
         "spryker/tax-merchant-portal-gui": "^1.0.1",
         "spryker/tax-product-connector": "^4.4.0",
         "spryker/up-selling-products-rest-api": "^1.2.2",
