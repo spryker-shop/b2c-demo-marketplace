@@ -45306,28 +45306,29 @@
         },
         {
             "name": "spryker/synchronization",
-            "version": "1.13.1",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/synchronization.git",
-                "reference": "e73f8e71c1ecbad429e3f475c52abb6955f2e829"
+                "reference": "e89d3db56612f6616ae5c93fd5adbbb133a22d27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/synchronization/zipball/e73f8e71c1ecbad429e3f475c52abb6955f2e829",
-                "reference": "e73f8e71c1ecbad429e3f475c52abb6955f2e829",
+                "url": "https://api.github.com/repos/spryker/synchronization/zipball/e89d3db56612f6616ae5c93fd5adbbb133a22d27",
+                "reference": "e89d3db56612f6616ae5c93fd5adbbb133a22d27",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/elastica": "^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
                 "spryker/kernel": "^3.49.0",
-                "spryker/propel-orm": "^1.0.0",
+                "spryker/propel-orm": "^1.16.0",
                 "spryker/queue": "^1.0.0",
                 "spryker/search": "^8.3.0",
                 "spryker/storage": "^3.4.1",
                 "spryker/symfony": "^3.1.0",
                 "spryker/synchronization-extension": "^1.2.0",
+                "spryker/transfer": "^3.25.0",
                 "spryker/util-encoding": "^2.0.0"
             },
             "require-dev": {
@@ -45380,9 +45381,9 @@
             ],
             "description": "Synchronization module",
             "support": {
-                "source": "https://github.com/spryker/synchronization/tree/1.13.1"
+                "source": "https://github.com/spryker/synchronization/tree/1.14.0"
             },
-            "time": "2021-03-11T11:37:43+00:00"
+            "time": "2022-06-17T12:20:42+00:00"
         },
         {
             "name": "spryker/synchronization-behavior",
