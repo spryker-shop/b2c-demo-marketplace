@@ -44351,23 +44351,23 @@
         },
         {
             "name": "spryker/state-machine",
-            "version": "2.14.0",
+            "version": "2.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/state-machine.git",
-                "reference": "2d66b4e9669aa328659d158cef141c7b16ba221b"
+                "reference": "09b84f069f59e97a1703600a8703b1c7994143c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/state-machine/zipball/2d66b4e9669aa328659d158cef141c7b16ba221b",
-                "reference": "2d66b4e9669aa328659d158cef141c7b16ba221b",
+                "url": "https://api.github.com/repos/spryker/state-machine/zipball/09b84f069f59e97a1703600a8703b1c7994143c2",
+                "reference": "09b84f069f59e97a1703600a8703b1c7994143c2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/graph": "^3.0.0",
                 "spryker/kernel": "^3.30.0",
-                "spryker/propel-orm": "^1.0.0",
+                "spryker/propel-orm": "^1.16.0",
                 "spryker/symfony": "^3.0.0",
                 "spryker/util-network": "^1.1.0",
                 "spryker/util-text": "^1.1.0"
@@ -44396,9 +44396,9 @@
             ],
             "description": "StateMachine module",
             "support": {
-                "source": "https://github.com/spryker/state-machine/tree/2.14.0"
+                "source": "https://github.com/spryker/state-machine/tree/2.16.1"
             },
-            "time": "2021-08-18T10:54:16+00:00"
+            "time": "2022-08-22T09:49:27+00:00"
         },
         {
             "name": "spryker/step-engine",
@@ -60607,5 +60607,5 @@
     "platform-overrides": {
         "php": "7.4.20"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
