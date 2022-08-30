@@ -266,7 +266,7 @@
         "spryker/architecture-sniffer": "^0.4.0",
         "spryker/code-sniffer": "^0.15.9",
         "spryker/docker-chromedriver": "dev-master as 202204.0",
-        "spryker/propel-orm": "~1.15.1",
+        "spryker/propel-orm": "^1.16.0",
         "spryker/testify": "^3.41.0",
         "stecman/symfony-console-completion": "*",
         "symfony/web-profiler-bundle": "*"
