@@ -15,6 +15,7 @@
         "ext-readline": "*",
         "ext-redis": "*",
         "league/flysystem": "^2.4.4",
+        "propel/propel": "2.0.0-beta2",
         "spryker-eco/loggly": "^0.1.1",
         "spryker-feature/acl": "dev-master as 202204.0",
         "spryker-feature/agent-assist": "dev-master as 202204.0",
@@ -266,7 +267,6 @@
         "spryker/architecture-sniffer": "^0.4.0",
         "spryker/code-sniffer": "^0.15.9",
         "spryker/docker-chromedriver": "dev-master as 202204.0",
-        "spryker/propel-orm": "^1.16.0",
         "spryker/testify": "^3.41.0",
         "stecman/symfony-console-completion": "*",
         "symfony/web-profiler-bundle": "*"
