@@ -5,7 +5,6 @@ const filePathFilter = require('@jsdevtools/file-path-filter');
 const { findComponentEntryPoints, findComponentStyles, findAppEntryPoint } = require('../libs/finder');
 const { getAliasList } = require('../libs/alias');
 const { getAssetsConfig } = require('../libs/assets-configurator');
-const { buildVariantSettings } = require('../settings');
 
 let isImagesOptimizationEnabled = false;
 let imagesOptimization = null;
