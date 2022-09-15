@@ -44,7 +44,6 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
     protected function getDefaultAddressChangePlugins()
     {
         return [
-            new CustomerAddressSessionUpdatePlugin(),
             new CustomerAddressDefaultAddressChangePlugin(),
         ];
     }
