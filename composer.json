@@ -16,7 +16,7 @@
         "ext-redis": "*",
         "league/flysystem": "^2.4.4",
         "spryker-eco/loggly": "^0.1.1",
-        "spryker-feature/acl": "dev-master as 202204.0",
+        "spryker-feature/acl": "dev-master as 202210.0",
         "spryker-feature/agent-assist": "dev-master as 202204.0",
         "spryker-feature/alternative-products": "dev-master as 202204.0",
         "spryker-feature/availability-notification": "dev-master as 202204.0",
