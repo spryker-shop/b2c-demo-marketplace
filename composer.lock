@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9f47b68b4681de3dbaed0335eed09c6",
+    "content-hash": "635f3522e33a576dc8b29956f7afbbf1",
     "packages": [
         {
             "name": "async-aws/core",
@@ -4208,21 +4208,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/acl.git",
-                "reference": "82e67f41983e52578144351fc3e0241961e810e4"
+                "reference": "9cd04d6af6eaee1d84260f832c8d12b513141287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/acl/zipball/82e67f41983e52578144351fc3e0241961e810e4",
-                "reference": "82e67f41983e52578144351fc3e0241961e810e4",
+                "url": "https://api.github.com/repos/spryker-feature/acl/zipball/9cd04d6af6eaee1d84260f832c8d12b513141287",
+                "reference": "9cd04d6af6eaee1d84260f832c8d12b513141287",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
-                "spryker/acl": "^3.10.0",
+                "spryker/acl": "^3.12.0",
                 "spryker/acl-data-import": "^0.1.0",
-                "spryker/acl-entity": "^1.3.0",
+                "spryker/acl-entity": "^1.4.0",
                 "spryker/acl-entity-data-import": "^0.2.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -4235,9 +4236,9 @@
             ],
             "description": "ACL [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/acl/tree/master"
+                "source": "https://github.com/spryker-feature/acl/tree/202204.0"
             },
-            "time": "2022-04-13T11:32:56+00:00"
+            "time": "2022-04-29T14:08:23+00:00"
         },
         {
             "name": "spryker-feature/agent-assist",
@@ -60177,8 +60178,8 @@
         {
             "package": "spryker-feature/acl",
             "version": "9999999-dev",
-            "alias": "202204.0",
-            "alias_normalized": "202204.0"
+            "alias": "202210.0",
+            "alias_normalized": "202210.0"
         },
         {
             "package": "spryker-feature/agent-assist",

@@ -7,6 +7,7 @@
 
 namespace Pyz\Zed\PriceProduct;
 
+use Spryker\Zed\AclEntity\Communication\Plugin\PriceProduct\AclEntityOrphanPriceProductStoreRemovalVoterPlugin;
 use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionConcreteSaverPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct\PriceProductOfferPriceDimensionQueryCriteriaPlugin;
@@ -69,6 +70,16 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     {
         return [
             new PriceProductVolumeValidatorPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\PriceProductExtension\Dependency\Plugin\OrphanPriceProductStoreRemovalVoterPluginInterface>
+     */
+    protected function getOrphanPriceProductStoreRemovalVoterPlugins(): array
+    {
+        return [
+            new AclEntityOrphanPriceProductStoreRemovalVoterPlugin(),
         ];
     }
 }
