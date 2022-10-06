@@ -51,6 +51,15 @@
         {% endembed %}
     {% endif %}
 
+    {% block bundleProducts %}
+        {% widget 'ProductBundleProductDetailPageItemsListWidget' args [data.product] only %}
+            {% block body %}
+                <hr>
+                {{ parent() }}
+            {% endblock %}
+        {% endwidget %}
+    {% endblock %}
+
     {% block colors %}
         {% widget 'ProductGroupColorWidget' args [data.product.idProductAbstract, data.product.selectedAttributes ?? []] use view('product-detail-color-selector', 'ProductGroupWidget') only %}{% endwidget %}
     {% endblock %}
