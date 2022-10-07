@@ -1,10 +1,5 @@
 {% extends molecule('product-configurator', '@SprykerShop:ProductDetailPage') %}
 
-{% define data = {
-    isBundle: null,
-    bundleItems: [],
-} %}
-
 {% set productName = data.product.name | default %}
 {% set isProductConcrete = data.product.idProductConcrete is not empty %}
 
@@ -28,28 +23,6 @@
         {% endwidget %}
 
     </div>
-    {% if data.isBundle != null %}
-        {% embed molecule('toggler-item') with {
-            modifiers: ['with-top-border', 'option'],
-            data: {
-                title: 'bundle.title' | trans,
-                triggerClass: config.jsName ~ '__trigger-bundle',
-                targetClass: config.jsName ~ '__target-bundle',
-                isActive: true,
-            },
-            embed: {
-                bundleItems: data.bundleItems,
-            }
-        } only %}
-            {% block contentText %}
-                {% include molecule('bundle-option-list', 'ProductDetailPage') with {
-                    data: {
-                        bundleItems: embed.bundleItems,
-                    }
-                } only %}
-            {% endblock %}
-        {% endembed %}
-    {% endif %}
 
     {% block bundleProducts %}
         {% widget 'ProductBundleProductDetailPageItemsListWidget' args [data.product] only %}
