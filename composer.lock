@@ -21493,16 +21493,16 @@
         },
         {
             "name": "spryker/customer",
-            "version": "7.45.0",
+            "version": "7.47.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/customer.git",
-                "reference": "dcaa103abd4c57dec08ac82854dc3414376fc4dd"
+                "reference": "d34787e9a31dfed5e72a218863a185af60be2fe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/customer/zipball/dcaa103abd4c57dec08ac82854dc3414376fc4dd",
-                "reference": "dcaa103abd4c57dec08ac82854dc3414376fc4dd",
+                "url": "https://api.github.com/repos/spryker/customer/zipball/d34787e9a31dfed5e72a218863a185af60be2fe9",
+                "reference": "d34787e9a31dfed5e72a218863a185af60be2fe9",
                 "shasum": ""
             },
             "require": {
@@ -21522,6 +21522,7 @@
                 "spryker/session": "^3.0.0 || ^4.0.0",
                 "spryker/store": "^1.4.0",
                 "spryker/symfony": "^3.0.0",
+                "spryker/tax-product-connector-extension": "^1.0.0",
                 "spryker/transfer": "^3.25.0",
                 "spryker/util-date-time": "^1.0.0",
                 "spryker/util-encoding": "^2.0.0",
@@ -21566,9 +21567,9 @@
             ],
             "description": "Customer module",
             "support": {
-                "source": "https://github.com/spryker/customer/tree/7.45.0"
+                "source": "https://github.com/spryker/customer/tree/7.47.0"
             },
-            "time": "2022-08-01T18:28:45+00:00"
+            "time": "2022-09-28T12:34:39+00:00"
         },
         {
             "name": "spryker/customer-access",
@@ -45611,20 +45612,20 @@
         },
         {
             "name": "spryker/tax-product-connector",
-            "version": "4.4.0",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/tax-product-connector.git",
-                "reference": "ea5671523151639fd96ecedabcd742c36ba7d457"
+                "reference": "7dd36255700fceabc705513e3909697824149574"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/tax-product-connector/zipball/ea5671523151639fd96ecedabcd742c36ba7d457",
-                "reference": "ea5671523151639fd96ecedabcd742c36ba7d457",
+                "url": "https://api.github.com/repos/spryker/tax-product-connector/zipball/7dd36255700fceabc705513e3909697824149574",
+                "reference": "7dd36255700fceabc705513e3909697824149574",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.4",
                 "spryker/calculation-extension": "^1.1.0",
                 "spryker/country": "^3.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -45632,6 +45633,7 @@
                 "spryker/product-extension": "^1.1.0",
                 "spryker/propel-orm": "^1.0.0",
                 "spryker/tax": "^4.0.0 || ^5.0.0",
+                "spryker/tax-product-connector-extension": "^1.0.0",
                 "spryker/zed-request": "^3.0.0"
             },
             "require-dev": {
@@ -45660,9 +45662,50 @@
             ],
             "description": "TaxProductConnector module",
             "support": {
-                "source": "https://github.com/spryker/tax-product-connector/tree/4.4.0"
+                "source": "https://github.com/spryker/tax-product-connector/tree/4.5.0"
             },
-            "time": "2021-06-14T20:32:55+00:00"
+            "time": "2022-09-28T12:34:39+00:00"
+        },
+        {
+            "name": "spryker/tax-product-connector-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/tax-product-connector-extension.git",
+                "reference": "f5c4e50c64973d155943dd6dd70aba11b14e7996"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/tax-product-connector-extension/zipball/f5c4e50c64973d155943dd6dd70aba11b14e7996",
+                "reference": "f5c4e50c64973d155943dd6dd70aba11b14e7996",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "TaxProductConnectorExtension module",
+            "support": {
+                "source": "https://github.com/spryker/tax-product-connector-extension/tree/1.0.0"
+            },
+            "time": "2022-09-28T12:34:39+00:00"
         },
         {
             "name": "spryker/tax-product-storage",
@@ -58414,12 +58457,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-sdk/integrator.git",
-                "reference": "3fd423c67c1786305c54c61bedd7ebb882730cb5"
+                "reference": "2a7735cf8e6a6fab389eea3fdef717a1f288c9af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-sdk/integrator/zipball/3fd423c67c1786305c54c61bedd7ebb882730cb5",
-                "reference": "3fd423c67c1786305c54c61bedd7ebb882730cb5",
+                "url": "https://api.github.com/repos/spryker-sdk/integrator/zipball/2a7735cf8e6a6fab389eea3fdef717a1f288c9af",
+                "reference": "2a7735cf8e6a6fab389eea3fdef717a1f288c9af",
                 "shasum": ""
             },
             "require": {
@@ -58435,18 +58478,18 @@
             "require-dev": {
                 "phpstan/phpstan": "^1.0.0",
                 "phpunit/phpunit": "^9.5.0",
-                "spryker/code-sniffer": "@stable",
+                "spryker/code-sniffer": "dev-master",
                 "symfony/filesystem": "^5.3.0"
             },
+            "default-branch": true,
             "bin": [
                 "bin/integrator"
             ],
-            "type": "composer-plugin",
+            "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
-                },
-                "class": "SprykerSdk\\Integrator\\Plugin\\Composer\\InstallerComposerPlugin"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -58462,7 +58505,7 @@
                 "issues": "https://github.com/spryker-sdk/integrator/issues",
                 "source": "https://github.com/spryker-sdk/integrator/tree/master"
             },
-            "time": "2022-03-30T11:23:53+00:00"
+            "time": "2022-10-04T13:41:02+00:00"
         },
         {
             "name": "spryker-sdk/phpstan-spryker",
