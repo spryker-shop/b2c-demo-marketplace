@@ -3064,8 +3064,6 @@ product_configurator_gateway_page.item_group_key_required,"Group Key is required
 product_configurator_gateway_page.item_group_key_required,"Gruppenschlüssel ist erforderlicher Parameter",de_DE
 product_configurator_gateway_page.wishlist_item_id_required,"Wishlist item ID is required parameter.",en_US
 product_configurator_gateway_page.wishlist_item_id_required,"Die ID des Wunschartikels ist ein erforderlicher Parameter.",de_DE
-product_configurator_gateway_page.shopping_list_item_uuid_required,"Shopping List item ID is required parameter.",en_US
-product_configurator_gateway_page.shopping_list_item_uuid_required,"Die Artikel-ID der Einkaufsliste ist ein erforderlicher Parameter.",de_DE
 product_configurator_gateway_page.configurator_key_is_not_supported,"Configurator key is not supported.",en_US
 product_configurator_gateway_page.configurator_key_is_not_supported,"Konfiguratorschlüssel wird nicht unterstützt.",de_DE
 demo_date_time_configurator_page.checkout.validation.error.price_is_not_valid,"Product configuration price is not valid",en_US
