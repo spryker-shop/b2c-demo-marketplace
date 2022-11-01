@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fad8dbbf8ecb02cb3087abf48f19c7d",
+    "content-hash": "f33e9f533682632944a21f3b5006a0e1",
     "packages": [
         {
             "name": "async-aws/core",
@@ -35711,6 +35711,58 @@
                 "source": "https://github.com/spryker/product-configuration-wishlist/tree/0.1.1"
             },
             "time": "2022-09-09T11:38:53+00:00"
+        },
+        {
+            "name": "spryker/product-configuration-wishlists-rest-api",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-configuration-wishlists-rest-api.git",
+                "reference": "b8cd6c3d9f3748a66e78a97a9e48161229f91c28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-configuration-wishlists-rest-api/zipball/b8cd6c3d9f3748a66e78a97a9e48161229f91c28",
+                "reference": "b8cd6c3d9f3748a66e78a97a9e48161229f91c28",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/kernel": "^3.30.0",
+                "spryker/product-configuration": "^0.2.0",
+                "spryker/product-configuration-wishlists-rest-api-extension": "^0.1.0",
+                "spryker/transfer": "^3.25.0",
+                "spryker/wishlist": "^8.6.0",
+                "spryker/wishlists-rest-api-extension": "^1.1.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/customer": "*",
+                "spryker/product": "*",
+                "spryker/product-configuration-wishlist": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductConfigurationWishlistsRestApi module",
+            "support": {
+                "source": "https://github.com/spryker/product-configuration-wishlists-rest-api/tree/0.1.0"
+            },
+            "time": "2021-10-29T06:02:31+00:00"
         },
         {
             "name": "spryker/product-configuration-wishlists-rest-api-extension",

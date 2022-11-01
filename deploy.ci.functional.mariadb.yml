@@ -54,6 +54,8 @@ groups:
             yves_eu:
                 application: yves
                 endpoints:
+                    date-time-configurator-example.spryker.local:
+                        entry-point: Configurator
                     yves.de.spryker.local:
                         store: DE
                         services:

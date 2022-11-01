@@ -190,6 +190,7 @@
         "spryker/product-bundles-rest-api": "^1.0.1",
         "spryker/product-cart-connector": "^4.9.0",
         "spryker/product-configuration-wishlist": "^0.1.0",
+        "spryker/product-configuration-wishlists-rest-api": "^0.1.0",
         "spryker/product-configurations-price-product-volumes-rest-api": "^0.2.0",
         "spryker/product-configurations-rest-api": "^0.2.0",
         "spryker/product-discontinued-product-bundle-connector": "^1.2.2",
