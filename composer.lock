@@ -45901,47 +45901,6 @@
             "time": "2022-09-28T12:34:39+00:00"
         },
         {
-            "name": "spryker/tax-product-connector-extension",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/tax-product-connector-extension.git",
-                "reference": "f5c4e50c64973d155943dd6dd70aba11b14e7996"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/tax-product-connector-extension/zipball/f5c4e50c64973d155943dd6dd70aba11b14e7996",
-                "reference": "f5c4e50c64973d155943dd6dd70aba11b14e7996",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "TaxProductConnectorExtension module",
-            "support": {
-                "source": "https://github.com/spryker/tax-product-connector-extension/tree/1.0.0"
-            },
-            "time": "2022-09-28T12:34:39+00:00"
-        },
-        {
             "name": "spryker/tax-product-storage",
             "version": "1.1.0",
             "source": {
