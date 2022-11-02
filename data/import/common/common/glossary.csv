@@ -3018,3 +3018,5 @@ product-offer.message.not-active-or-approved,Product offer not active for produc
 product-offer.message.not-active-or-approved,Produktangebot ist inaktiv für Produkt mit SKU '% sku%'.,de_DE
 merchant_sales_order.merchant_order_id,Merchant Order ID,en_US
 merchant_sales_order.merchant_order_id,Händlerbestell-ID,de_DE
+product_bundle_product_detail_page_items_list_widget.title.bundle_includes,Bundle includes,en_US
+product_bundle_product_detail_page_items_list_widget.title.bundle_includes,Bündel beinhaltet,de_DE
