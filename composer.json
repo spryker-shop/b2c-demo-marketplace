@@ -141,7 +141,6 @@
         "spryker/customer-user-connector-gui": "^1.4.0",
         "spryker/customers-rest-api": "^1.21.1",
         "spryker/dashboard-merchant-portal-gui": "^1.5.4",
-        "spryker/development-core": "dev-feature/composer-auto-rising",
         "spryker/discount-calculation-connector": "^5.3.0",
         "spryker/discount-promotions-rest-api": "^1.4.0",
         "spryker/documentation-generator-rest-api": "^1.15.0",
@@ -1301,11 +1300,5 @@
         "prefer-mid": [
             "COMPOSER_MEMORY_LIMIT=-1 composer require twig/twig:\"^2.9.0\""
         ]
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:spryker/development-core.git"
-        }
-    ]
+    }
 }
