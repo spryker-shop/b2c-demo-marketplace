@@ -151,6 +151,22 @@ groups:
                         store: AT
                     # glue.us.mp-b2c.internal-testing.demo-spryker.com:
                     #     store: US
+            mportal:
+                application: merchant-portal
+                endpoints:
+                    mp.de.mp-b2c.internal-testing.demo-spryker.com:
+                        entry-point: MerchantPortal
+                        store: DE
+                        primal: true
+                        services:
+                            session:
+                                namespace: 7
+                    mp.at.mp-b2c.internal-testing.demo-spryker.com:
+                        entry-point: MerchantPortal
+                        store: AT
+                        services:
+                            session:
+                                namespace: 8
 services:
     database:
         engine: mysql
