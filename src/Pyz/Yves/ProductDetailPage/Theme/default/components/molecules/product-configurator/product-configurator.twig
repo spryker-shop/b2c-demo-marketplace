@@ -1,10 +1,5 @@
 {% extends molecule('product-configurator', '@SprykerShop:ProductDetailPage') %}
 
-{% define data = {
-    isBundle: null,
-    bundleItems: [],
-} %}
-
 {% set productName = data.product.name | default %}
 {% set isProductConcrete = data.product.idProductConcrete is not empty %}
 
@@ -26,34 +21,10 @@
                 } only %}
             </div>
         {% endwidget %}
-
     </div>
-    {% if data.isBundle != null %}
-        {% embed molecule('toggler-item') with {
-            modifiers: ['with-top-border', 'option'],
-            data: {
-                title: 'bundle.title' | trans,
-                triggerClass: config.jsName ~ '__trigger-bundle',
-                targetClass: config.jsName ~ '__target-bundle',
-                isActive: true,
-            },
-            embed: {
-                bundleItems: data.bundleItems,
-            }
-        } only %}
-            {% block contentText %}
-                {% include molecule('bundle-option-list', 'ProductDetailPage') with {
-                    data: {
-                        bundleItems: embed.bundleItems,
-                    }
-                } only %}
-            {% endblock %}
-        {% endembed %}
-    {% endif %}
 
-    {% block colors %}
-        {% widget 'ProductGroupColorWidget' args [data.product.idProductAbstract, data.product.selectedAttributes ?? []] use view('product-detail-color-selector', 'ProductGroupWidget') only %}{% endwidget %}
-    {% endblock %}
+    {{ block('bundleProducts') }}
+    {{ block('colors') }}
 
     {% include molecule('variant-configurator', 'ProductDetailPage') with {
         data: {
