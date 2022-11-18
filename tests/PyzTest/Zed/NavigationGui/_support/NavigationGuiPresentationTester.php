@@ -495,8 +495,8 @@ class NavigationGuiPresentationTester extends Actor
      */
     protected function createNavigationNodesRecursively(
         NavigationTreeNodeTransfer $navigationTreeNodeTransfer,
-                                   $idNavigation,
-                                   $idParentNavigationNode = null
+        $idNavigation,
+        $idParentNavigationNode = null
     ): void {
         $navigationNodeTransfer = $navigationTreeNodeTransfer->getNavigationNode();
         $navigationNodeTransfer
