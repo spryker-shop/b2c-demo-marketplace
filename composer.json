@@ -220,6 +220,8 @@
         "spryker/security-blocker-rest-api": "^1.0.0",
         "spryker/security-merchant-portal-gui": "^1.6.0",
         "spryker/security-system-user": "^1.0.0",
+        "spryker/session-customer-validation": "^1.0.1",
+        "spryker/session-customer-validation-extension": "^1.0.0",
         "spryker/shipment-cart-connector": "^2.1.1",
         "spryker/shipment-checkout-connector": "^2.0.4",
         "spryker/shipment-discount-connector": "^4.0.5",

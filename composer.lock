@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c2e30d50ac7d81ead4b03477f6769d2",
+    "content-hash": "423f43b8dbc190ba9d5d83c65d061149",
     "packages": [
         {
             "name": "async-aws/core",
@@ -44890,6 +44890,60 @@
             "time": "2022-05-25T15:18:35+00:00"
         },
         {
+            "name": "spryker/session-customer-validation",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/session-customer-validation.git",
+                "reference": "09bad6fd4141834f5d64e15054b25ec631846675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/session-customer-validation/zipball/09bad6fd4141834f5d64e15054b25ec631846675",
+                "reference": "09bad6fd4141834f5d64e15054b25ec631846675",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "spryker/customer": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/security-extension": "^1.0.0",
+                "spryker/session-customer-validation-extension": "^1.0.0",
+                "spryker/symfony": "^3.8.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/container": "Add this module if you want to use security plugins.",
+                "spryker/event-dispatcher": "Add this module if you want to use security plugins."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SessionCustomerValidation module",
+            "support": {
+                "source": "https://github.com/spryker/session-customer-validation/tree/1.0.1"
+            },
+            "time": "2022-11-08T12:42:27+00:00"
+        },
+        {
             "name": "spryker/session-customer-validation-extension",
             "version": "1.0.0",
             "source": {
@@ -60092,60 +60146,6 @@
                 "source": "https://github.com/spryker/module-finder/tree/1.2.0"
             },
             "time": "2021-10-21T12:10:34+00:00"
-        },
-        {
-            "name": "spryker/session-customer-validation",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/session-customer-validation.git",
-                "reference": "09bad6fd4141834f5d64e15054b25ec631846675"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/session-customer-validation/zipball/09bad6fd4141834f5d64e15054b25ec631846675",
-                "reference": "09bad6fd4141834f5d64e15054b25ec631846675",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0",
-                "spryker/customer": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/security-extension": "^1.0.0",
-                "spryker/session-customer-validation-extension": "^1.0.0",
-                "spryker/symfony": "^3.8.0",
-                "spryker/transfer": "^3.25.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/container": "*",
-                "spryker/propel": "*",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/container": "Add this module if you want to use security plugins.",
-                "spryker/event-dispatcher": "Add this module if you want to use security plugins."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "SessionCustomerValidation module",
-            "support": {
-                "source": "https://github.com/spryker/session-customer-validation/tree/1.0.1"
-            },
-            "time": "2022-11-08T12:42:27+00:00"
         },
         {
             "name": "spryker/session-user-validation",
