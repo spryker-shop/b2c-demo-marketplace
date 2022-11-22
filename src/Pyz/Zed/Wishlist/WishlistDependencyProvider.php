@@ -9,7 +9,8 @@ namespace Pyz\Zed\Wishlist;
 
 use Spryker\Zed\Availability\Communication\Plugin\Wishlist\AvailabilityWishlistItemExpanderPlugin;
 use Spryker\Zed\Availability\Communication\Plugin\Wishlist\SellableWishlistItemExpanderPlugin;
-use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\MerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\ValidMerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\ValidMerchantProductOfferUpdateItemPreCheckPlugin;
 use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\WishlistProductOfferPreAddItemPlugin;
 use Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist\WishlistMerchantProductPreAddItemPlugin;
 use Spryker\Zed\PriceProduct\Communication\Plugin\Wishlist\PriceProductWishlistItemExpanderPlugin;
@@ -26,7 +27,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     {
         return [
             new ProductDiscontinuedAddItemPreCheckPlugin(), #ProductDiscontinuedFeature
-            new MerchantProductOfferAddItemPreCheckPlugin(),
+            new ValidMerchantProductOfferAddItemPreCheckPlugin(),
         ];
     }
 
@@ -51,6 +52,16 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
             new PriceProductOfferWishlistItemExpanderPlugin(),
             new AvailabilityWishlistItemExpanderPlugin(),
             new SellableWishlistItemExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\UpdateItemPreCheckPluginInterface>
+     */
+    protected function getUpdateItemPreCheckPlugins(): array
+    {
+        return [
+            new ValidMerchantProductOfferUpdateItemPreCheckPlugin(),
         ];
     }
 }
