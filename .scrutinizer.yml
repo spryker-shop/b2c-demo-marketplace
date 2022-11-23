@@ -6,6 +6,10 @@ build:
         override:
             - true # disable test execution on scrutinizer
 
+    dependencies:
+        override:
+            - true
+
     nodes:
         analysis:
             tests:
