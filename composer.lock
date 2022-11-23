@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91a2dcdd17aff587b6c84dc0428250a3",
+    "content-hash": "80cf2dcb80d33d7544a18039389acb7d",
     "packages": [
         {
             "name": "async-aws/core",
@@ -4832,20 +4832,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/configurable-product.git",
-                "reference": "f47c3c507eaf487713b7775accf901c9e4f77d1a"
+                "reference": "98aa335a4e8ef70f5af71580fcb495f53a1e22e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/configurable-product/zipball/f47c3c507eaf487713b7775accf901c9e4f77d1a",
-                "reference": "f47c3c507eaf487713b7775accf901c9e4f77d1a",
+                "url": "https://api.github.com/repos/spryker-feature/configurable-product/zipball/98aa335a4e8ef70f5af71580fcb495f53a1e22e6",
+                "reference": "98aa335a4e8ef70f5af71580fcb495f53a1e22e6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.0",
                 "spryker-shop/product-configuration-cart-widget": "^1.0.0",
-                "spryker-shop/product-configuration-shopping-list-widget": "^1.0.0",
                 "spryker-shop/product-configuration-widget": "^1.0.0",
-                "spryker-shop/product-configuration-wishlist-widget": "^1.0.0",
                 "spryker-shop/product-configurator-gateway-page": "^1.0.0",
                 "spryker-shop/sales-product-configuration-widget": "^1.0.0",
                 "spryker/product-configuration": "^1.0.0",
@@ -4853,9 +4851,7 @@
                 "spryker/product-configuration-data-import": "^0.2.0",
                 "spryker/product-configuration-gui": "^1.0.0",
                 "spryker/product-configuration-persistent-cart": "^1.0.0",
-                "spryker/product-configuration-shopping-list": "^1.0.0",
                 "spryker/product-configuration-storage": "^1.0.0",
-                "spryker/product-configuration-wishlist": "^1.0.0",
                 "spryker/sales-product-configuration": "^1.0.0",
                 "spryker/sales-product-configuration-gui": "^1.0.0"
             },
@@ -4874,7 +4870,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/configurable-product/tree/master"
             },
-            "time": "2022-11-23T11:05:44+00:00"
+            "time": "2022-11-23T13:48:54+00:00"
         },
         {
             "name": "spryker-feature/customer-access",
@@ -11136,55 +11132,6 @@
                 "source": "https://github.com/spryker-shop/product-configuration-cart-widget-extension/tree/1.0.0"
             },
             "time": "2022-10-18T17:47:18+00:00"
-        },
-        {
-            "name": "spryker-shop/product-configuration-shopping-list-widget",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-shop/product-configuration-shopping-list-widget.git",
-                "reference": "27cc4f2c3024f64fa728cc2619ac83926545e9e2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/product-configuration-shopping-list-widget/zipball/27cc4f2c3024f64fa728cc2619ac83926545e9e2",
-                "reference": "27cc4f2c3024f64fa728cc2619ac83926545e9e2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0",
-                "spryker-shop/product-configuration-shopping-list-widget-extension": "^1.0.0",
-                "spryker-shop/product-configurator-gateway-page-extension": "^1.0.0",
-                "spryker-shop/shop-ui": "^1.54.0",
-                "spryker/application": "^3.8.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/product-configuration-shopping-list": "^1.0.0",
-                "spryker/symfony": "^3.1.0",
-                "spryker/transfer": "^3.25.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SprykerShop\\": "src/SprykerShop/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "ProductConfigurationShoppingListWidget module",
-            "support": {
-                "source": "https://github.com/spryker-shop/product-configuration-shopping-list-widget/tree/1.0.0"
-            },
-            "time": "2022-11-23T07:38:29+00:00"
         },
         {
             "name": "spryker-shop/product-configuration-shopping-list-widget-extension",
@@ -20356,293 +20303,6 @@
                 "source": "https://github.com/spryker/comment-extension/tree/1.0.0"
             },
             "time": "2022-06-21T09:05:42+00:00"
-        },
-        {
-            "name": "spryker/company",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/company.git",
-                "reference": "9ebcb4294f19faf01f9c3cf975d7df7f2470f547"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/company/zipball/9ebcb4294f19faf01f9c3cf975d7df7f2470f547",
-                "reference": "9ebcb4294f19faf01f9c3cf975d7df7f2470f547",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "spryker/company-extension": "^1.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/propel-orm": "^1.13.0",
-                "spryker/store": "^1.0.0",
-                "spryker/zed-request": "^3.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/propel": "*",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/mail": "If you want to use mail plugins."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/",
-                    "SprykerTest\\Zed\\Company\\Helper\\": "tests/SprykerTest/Zed/Company/_support/Helper/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Company module",
-            "support": {
-                "source": "https://github.com/spryker/company/tree/1.5.0"
-            },
-            "time": "2021-05-11T10:29:37+00:00"
-        },
-        {
-            "name": "spryker/company-business-unit",
-            "version": "2.14.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/company-business-unit.git",
-                "reference": "9ac58cae96066f6fdfe8acfbf8df6b3b5e97fc94"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/company-business-unit/zipball/9ac58cae96066f6fdfe8acfbf8df6b3b5e97fc94",
-                "reference": "9ac58cae96066f6fdfe8acfbf8df6b3b5e97fc94",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "spryker/company": "^1.0.0",
-                "spryker/company-business-unit-extension": "^1.2.0",
-                "spryker/company-extension": "^1.0.0",
-                "spryker/company-user": "^1.0.0 || ^2.0.0",
-                "spryker/company-user-extension": "^1.2.0",
-                "spryker/customer": "^7.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/propel-orm": "^1.0.0",
-                "spryker/zed-request": "^3.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/propel": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/",
-                    "SprykerTest\\Zed\\CompanyBusinessUnit\\Helper\\": "tests/SprykerTest/Zed/CompanyBusinessUnit/_support/Helper/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CompanyBusinessUnit module",
-            "support": {
-                "source": "https://github.com/spryker/company-business-unit/tree/2.14.1"
-            },
-            "time": "2022-08-10T18:42:04+00:00"
-        },
-        {
-            "name": "spryker/company-business-unit-extension",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/company-business-unit-extension.git",
-                "reference": "aad8e102dfef3daa04fd743b9b4d3861c69d6311"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/company-business-unit-extension/zipball/aad8e102dfef3daa04fd743b9b4d3861c69d6311",
-                "reference": "aad8e102dfef3daa04fd743b9b4d3861c69d6311",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CompanyBusinessUnitExtension module",
-            "support": {
-                "source": "https://github.com/spryker/company-business-unit-extension/tree/master"
-            },
-            "time": "2018-10-26T10:31:11+00:00"
-        },
-        {
-            "name": "spryker/company-extension",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/company-extension.git",
-                "reference": "1be7153b1c666ca4858a83c775b761c9bddcb99f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/company-extension/zipball/1be7153b1c666ca4858a83c775b761c9bddcb99f",
-                "reference": "1be7153b1c666ca4858a83c775b761c9bddcb99f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CompanyExtension module",
-            "support": {
-                "source": "https://github.com/spryker/company-extension/tree/master"
-            },
-            "time": "2018-03-13T18:47:20+00:00"
-        },
-        {
-            "name": "spryker/company-user",
-            "version": "2.15.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/company-user.git",
-                "reference": "cef791a4673e415e0fa28d69f7012936c1a05afd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/company-user/zipball/cef791a4673e415e0fa28d69f7012936c1a05afd",
-                "reference": "cef791a4673e415e0fa28d69f7012936c1a05afd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "spryker/company": "^1.0.0",
-                "spryker/company-extension": "^1.0.0",
-                "spryker/company-user-extension": "^1.2.0",
-                "spryker/customer": "^7.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/permission-extension": "^1.0.0",
-                "spryker/propel-orm": "^1.0.0",
-                "spryker/transfer": "^3.25.0",
-                "spryker/zed-request": "^3.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/propel": "*",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/permission": "Permission ^1.0.0 to have possibility use user permissions."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/",
-                    "SprykerTest\\Shared\\CompanyUser\\Helper\\": "tests/SprykerTest/Shared/CompanyUser/_support/Helper/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CompanyUser module",
-            "support": {
-                "source": "https://github.com/spryker/company-user/tree/2.15.1"
-            },
-            "time": "2022-07-19T12:59:07+00:00"
-        },
-        {
-            "name": "spryker/company-user-extension",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/company-user-extension.git",
-                "reference": "44fc4eea5c1cb31d381bfabae585d0c03ce84e58"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/company-user-extension/zipball/44fc4eea5c1cb31d381bfabae585d0c03ce84e58",
-                "reference": "44fc4eea5c1cb31d381bfabae585d0c03ce84e58",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "CompanyUserExtension module",
-            "support": {
-                "source": "https://github.com/spryker/company-user-extension/tree/master"
-            },
-            "time": "2019-02-26T13:05:25+00:00"
         },
         {
             "name": "spryker/config",
@@ -35901,64 +35561,6 @@
             "time": "2022-11-23T07:38:27+00:00"
         },
         {
-            "name": "spryker/product-configuration-shopping-list",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/product-configuration-shopping-list.git",
-                "reference": "0b92deec2189485a54acaef1859a785e901abfd3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-configuration-shopping-list/zipball/0b92deec2189485a54acaef1859a785e901abfd3",
-                "reference": "0b92deec2189485a54acaef1859a785e901abfd3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0",
-                "spryker/customer": "^7.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/log": "^3.7.0",
-                "spryker/product-configuration": "^1.0.0",
-                "spryker/product-configuration-storage": "^1.0.0",
-                "spryker/shopping-list": "^4.10.0",
-                "spryker/shopping-list-extension": "^1.5.0",
-                "spryker/transfer": "^3.25.0",
-                "spryker/util-encoding": "^2.0.0",
-                "spryker/uuid-behavior": "^1.0.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/company": "*",
-                "spryker/company-business-unit": "*",
-                "spryker/company-user": "*",
-                "spryker/product": "*",
-                "spryker/propel": "*",
-                "spryker/quote": "*",
-                "spryker/testify": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "ProductConfigurationShoppingList module",
-            "support": {
-                "source": "https://github.com/spryker/product-configuration-shopping-list/tree/1.0.0"
-            },
-            "time": "2022-11-23T07:38:27+00:00"
-        },
-        {
             "name": "spryker/product-configuration-shopping-lists-rest-api-extension",
             "version": "1.0.0",
             "source": {
@@ -46383,77 +45985,6 @@
                 "source": "https://github.com/spryker/shipments-rest-api-extension/tree/1.0.0"
             },
             "time": "2020-11-27T08:11:49+00:00"
-        },
-        {
-            "name": "spryker/shopping-list",
-            "version": "4.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/shopping-list.git",
-                "reference": "b9a4057c6562fac95e42327dc4781cbb409817f8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker/shopping-list/zipball/b9a4057c6562fac95e42327dc4781cbb409817f8",
-                "reference": "b9a4057c6562fac95e42327dc4781cbb409817f8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "spryker/cart": "^5.1.0 || ^7.0.0",
-                "spryker/company-business-unit": "^1.0.0 || ^2.0.0",
-                "spryker/company-business-unit-extension": "^1.1.0",
-                "spryker/company-user": "^1.0.0 || ^2.0.0",
-                "spryker/company-user-extension": "^1.1.0",
-                "spryker/customer": "^7.0.0",
-                "spryker/event": "^1.0.0 || ^2.0.0",
-                "spryker/kernel": "^3.30.0",
-                "spryker/messenger": "^3.0.0",
-                "spryker/permission": "^1.1.0",
-                "spryker/permission-extension": "^1.1.0",
-                "spryker/persistent-cart": "^0.1.0 || ^1.0.0 || ^3.0.0",
-                "spryker/price-product": "^1.0.0 || ^2.0.0 || ^4.0.0",
-                "spryker/product": "^6.6.0",
-                "spryker/propel-orm": "^1.0.0",
-                "spryker/session": "^4.0.0",
-                "spryker/shopping-list-extension": "^1.5.0",
-                "spryker/store": "^1.1.0",
-                "spryker/transfer": "^3.25.0",
-                "spryker/zed-request": "^3.6.0"
-            },
-            "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/company": "*",
-                "spryker/installer": "*",
-                "spryker/propel": "*",
-                "spryker/quote": "*",
-                "spryker/stock": "*",
-                "spryker/testify": "*"
-            },
-            "suggest": {
-                "spryker/installer": "If ShoppingListPermissionsInstallerPlugin is to be used, minimum version is 4.0.04"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spryker\\": "src/Spryker/",
-                    "SprykerTest\\Shared\\ShoppingList\\Helper\\": "tests/SprykerTest/Shared/ShoppingList/_support/Helper/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "ShoppingList module",
-            "support": {
-                "source": "https://github.com/spryker/shopping-list/tree/4.10.0"
-            },
-            "time": "2022-09-09T11:38:53+00:00"
         },
         {
             "name": "spryker/shopping-list-extension",
@@ -62209,8 +61740,8 @@
         {
             "package": "spryker-feature/configurable-product",
             "version": "9999999-dev",
-            "alias": "202211.0",
-            "alias_normalized": "202211.0"
+            "alias": "202212.0",
+            "alias_normalized": "202212.0"
         },
         {
             "package": "spryker-feature/customer-access",
