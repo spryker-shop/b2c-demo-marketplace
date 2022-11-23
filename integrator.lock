@@ -38,5 +38,13 @@
         "source": "\\Spryker\\Zed\\Customer\\Communication\\Plugin\\TaxProductConnector\\CustomerAddressShippingAddressValidatorPlugin"
       }
     }
+  },
+  "Spryker.Wishlist": {
+    "wire-plugin": {
+      "cb71204d8acb701fdd79fd6b7d8617717667716b": {
+        "target": "\\Spryker\\Zed\\Wishlist\\WishlistDependencyProvider::getAddItemPreCheckPlugins",
+        "source": "\\Spryker\\Zed\\Wishlist\\Communication\\Plugin\\Wishlist\\WishlistItemAddItemPreCheckPlugin"
+      }
+    }
   }
 }
