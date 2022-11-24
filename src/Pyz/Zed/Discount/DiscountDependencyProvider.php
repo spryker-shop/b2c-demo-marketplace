@@ -24,6 +24,7 @@ use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotio
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\PromotionCollectedDiscountGroupingStrategyPlugin;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardDiscountableItemFilterPlugin;
 use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
+use Spryker\Zed\Money\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
 use Spryker\Zed\ProductDiscountConnector\Communication\Plugin\Collector\ProductAttributeCollectorPlugin;
 use Spryker\Zed\ProductDiscountConnector\Communication\Plugin\DecisionRule\ProductAttributeDecisionRulePlugin;
 use Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\Collector\ProductLabelCollectorPlugin;
@@ -188,5 +189,13 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
     protected function getStoreRelationFormTypePlugin(): FormTypeInterface
     {
         return new StoreRelationToggleFormTypePlugin();
+    }
+
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    protected function getMoneyCollectionFormTypePlugin(): FormTypeInterface
+    {
+        return new MoneyCollectionFormTypePlugin();
     }
 }
