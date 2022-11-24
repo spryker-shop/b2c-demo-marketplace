@@ -34,7 +34,7 @@
                     <div class="{{ config.name }}__progress-status" style="left: -{{ ratingReviewPercent }}%;"></div>
                 </div>
             </td>
-            <td class="{{ config.name }}__cell">{{ ratingReview }}</td>
+            <td class="{{ config.name }}__cell">{{ ratingReview | executeFilterIfExists('formatInt', app.locale) }}</td>
         </tr>
     {% endfor %}
 {% endblock %}

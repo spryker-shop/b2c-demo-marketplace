@@ -51,7 +51,7 @@
         </ul>
 
         <input type="hidden" value="{{ data.productItem.groupKey }}" name="groupKey" />
-        <input type="hidden" value="{{ data.productItem.quantity }}" name="quantity" />
+        <input type="hidden" value="{{ data.productItem.quantity | executeFilterIfExists('formatInt', app.locale) }}" name="quantity" />
 
         {% if data.productItem.productOptions is not empty %}
             {% for productOption in data.productItem.productOptions %}
