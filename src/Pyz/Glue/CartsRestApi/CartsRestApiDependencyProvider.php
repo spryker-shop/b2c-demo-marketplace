@@ -28,6 +28,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
         return [
             new ProductOptionRestCartItemsAttributesMapperPlugin(),
             new ConfiguredBundleItemsAttributesMapperPlugin(),
+            new ProductConfigurationRestCartItemsAttributesMapperPlugin(),
         ];
     }
 
@@ -61,7 +62,6 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     {
         return [
             new SalesOrderThresholdRestCartAttributesMapperPlugin(),
-            new ProductConfigurationRestCartItemsAttributesMapperPlugin(),
         ];
     }
 }
