@@ -225,6 +225,7 @@
         "spryker/shipment-checkout-connector": "^2.0.4",
         "spryker/shipment-discount-connector": "^4.0.5",
         "spryker/shipments-rest-api": "^1.5.0",
+        "spryker/storage-gui": "^1.0.0",
         "spryker/store-reference": "^1.1.0",
         "spryker/stores-rest-api": "^1.0.4",
         "spryker/tax-merchant-portal-gui": "^1.0.1",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42b8dcf9c05ff6f14acdf8c55ed5ee76",
+    "content-hash": "54fa8854559ee571467a6646d88501f6",
     "packages": [
         {
             "name": "async-aws/core",
@@ -45358,6 +45358,54 @@
                 "source": "https://github.com/spryker/storage-extension/tree/1.1.0"
             },
             "time": "2019-08-06T14:36:17+00:00"
+        },
+        {
+            "name": "spryker/storage-gui",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/storage-gui.git",
+                "reference": "060b5141eb760c971589cffc1db37acd69d47e17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/storage-gui/zipball/060b5141eb760c971589cffc1db37acd69d47e17",
+                "reference": "060b5141eb760c971589cffc1db37acd69d47e17",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "spryker/gui": "^3.45.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/storage": "^3.9.0",
+                "spryker/symfony": "^3.5.0",
+                "spryker/twig": "^3.16.0",
+                "spryker/util-sanitize": "^2.0.0",
+                "spryker/util-text": "^1.1.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "StorageGui module",
+            "support": {
+                "source": "https://github.com/spryker/storage-gui/tree/1.0.0"
+            },
+            "time": "2022-09-19T06:48:51+00:00"
         },
         {
             "name": "spryker/storage-redis",
