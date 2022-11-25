@@ -233,6 +233,7 @@
         "spryker/up-selling-products-rest-api": "^1.2.2",
         "spryker/urls-rest-api": "^1.0.2",
         "spryker/user-merchant-portal-gui": "^1.4.1",
+        "spryker/util-number": "^1.0.0",
         "spryker/uuid": "^1.0.1",
         "spryker/wishlists-rest-api": "^1.6.0",
         "symfony/browser-kit": "^5.4.0",
