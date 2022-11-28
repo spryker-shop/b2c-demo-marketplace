@@ -453,8 +453,8 @@ global.quantity_symbol,x,en_US
 global.quantity_symbol,x,de_DE
 global.partners,Partners,en_US
 global.partners,Partner,de_DE
-global.show,Show,en_US
-global.show,Show,de_DE
+global.show,Show All,en_US
+global.show,Show All,de_DE
 global.hide,Hide,en_US
 global.hide,Ausblenden,de_DE
 error.404,Error 404,de_DE
