@@ -219,7 +219,7 @@
         "spryker/shipment-checkout-connector": "^2.0.4",
         "spryker/shipment-discount-connector": "^4.0.5",
         "spryker/shipments-rest-api": "^1.6.0",
-        "spryker/store-reference": "^1.1.0",
+        "spryker/store": "^1.16.0",
         "spryker/stores-rest-api": "^1.0.4",
         "spryker/tax-merchant-portal-gui": "^1.0.1",
         "spryker/tax-product-connector": "^4.5.0",
@@ -255,7 +255,7 @@
         "spryker/architecture-sniffer": "^0.5.5",
         "spryker/code-sniffer": "^0.15.9",
         "spryker/docker-chromedriver": "dev-master",
-        "spryker/testify": "^3.44.0",
+        "spryker/testify": "^3.46.1",
         "stecman/symfony-console-completion": "*",
         "symfony/web-profiler-bundle": "*"
     },
