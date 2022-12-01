@@ -13,7 +13,7 @@ image:
         SPRYKER_HOOK_AFTER_DEPLOY: "true"
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production --no-ansi -vvv"
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive --no-ansi -vvv"
-        SPRYKER_PRODUCT_CONFIGURATOR_HOST: demo-date-time-configurator.b2c.internal-security.demo-spryker.com
+        SPRYKER_PRODUCT_CONFIGURATOR_HOST: date-time-configurator.b2c-mp.security.demo-spryker.com
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 80
     node:
         version: 16
@@ -68,7 +68,7 @@ groups:
             Yves:
                 application: yves
                 endpoints:
-                    demo-date-time-configurator.b2c.internal-security.demo-spryker.com:
+                    date-time-configurator.b2c-mp.security.demo-spryker.com:
                         entry-point: Configurator
                     www.de.b2c.internal-security.demo-spryker.com:
                         store: DE
