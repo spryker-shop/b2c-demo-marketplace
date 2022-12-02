@@ -20525,20 +20525,20 @@
         },
         {
             "name": "spryker/configurable-bundle-gui",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/configurable-bundle-gui.git",
-                "reference": "b8a920d602afa69faf2abc635527efdef7fc3f62"
+                "reference": "259af616724fa2b5b02b8ca2b8feca6034661eed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/configurable-bundle-gui/zipball/b8a920d602afa69faf2abc635527efdef7fc3f62",
-                "reference": "b8a920d602afa69faf2abc635527efdef7fc3f62",
+                "url": "https://api.github.com/repos/spryker/configurable-bundle-gui/zipball/259af616724fa2b5b02b8ca2b8feca6034661eed",
+                "reference": "259af616724fa2b5b02b8ca2b8feca6034661eed",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.0",
                 "spryker/configurable-bundle": "^2.0.0",
                 "spryker/configurable-bundle-gui-extension": "^1.0.0",
                 "spryker/glossary": "^3.0.0",
@@ -20576,9 +20576,9 @@
             ],
             "description": "ConfigurableBundleGui module",
             "support": {
-                "source": "https://github.com/spryker/configurable-bundle-gui/tree/1.2.0"
+                "source": "https://github.com/spryker/configurable-bundle-gui/tree/1.3.0"
             },
-            "time": "2022-09-19T06:48:51+00:00"
+            "time": "2022-12-02T08:21:18+00:00"
         },
         {
             "name": "spryker/configurable-bundle-gui-extension",
