@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb6e3c6797f23449112c66b5ff56498c",
+    "content-hash": "7b5de525c65fa7d48f1faffd9c24d207",
     "packages": [
         {
             "name": "async-aws/core",
@@ -4961,6 +4961,45 @@
                 "source": "https://github.com/spryker-feature/configurable-product/tree/master"
             },
             "time": "2022-11-23T13:48:54+00:00"
+        },
+        {
+            "name": "spryker-feature/configurable-product-wishlist",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker-feature/configurable-product-wishlist.git",
+                "reference": "4d124850dfcbc3614d9622da40415c4c80606f0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker-feature/configurable-product-wishlist/zipball/4d124850dfcbc3614d9622da40415c4c80606f0b",
+                "reference": "4d124850dfcbc3614d9622da40415c4c80606f0b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "spryker-shop/product-configuration-wishlist-widget": "^1.0.0",
+                "spryker/product-configuration-wishlist": "^1.0.0"
+            },
+            "suggest": {
+                "spryker-feature/wishlist": "Recommended feature dependency."
+            },
+            "default-branch": true,
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "202212.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Configurable Product Wishlist [feature]",
+            "support": {
+                "source": "https://github.com/spryker-feature/configurable-product-wishlist/tree/master"
+            },
+            "time": "2022-12-02T09:59:04+00:00"
         },
         {
             "name": "spryker-feature/customer-access",
@@ -63165,6 +63204,7 @@
         "spryker-feature/cms": 20,
         "spryker-feature/configurable-bundle": 20,
         "spryker-feature/configurable-product": 20,
+        "spryker-feature/configurable-product-wishlist": 20,
         "spryker-feature/customer-access": 20,
         "spryker-feature/customer-account-management": 20,
         "spryker-feature/deployment-tools": 20,
