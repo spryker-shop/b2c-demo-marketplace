@@ -27,7 +27,7 @@
         "spryker-feature/cms": "dev-master as 202212.0",
         "spryker-feature/configurable-bundle": "dev-master as 202212.0",
         "spryker-feature/configurable-product": "dev-master as 202212.0",
-        "spryker-feature/configurable-product-wishlist": "dev-master",
+        "spryker-feature/configurable-product-wishlist": "dev-master as 202212.0",
         "spryker-feature/customer-access": "dev-master as 202212.0",
         "spryker-feature/customer-account-management": "dev-master as 202212.0",
         "spryker-feature/deployment-tools": "dev-master as 202212.0",
