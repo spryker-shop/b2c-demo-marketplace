@@ -22,7 +22,7 @@ export default class QuantityCounter extends Component {
     }
 
     protected mapEvents(): void {
-        this.quantityInput.addEventListener('input', (event: Event) => this.triggerInputEvent());
+        this.quantityInput.addEventListener('input', () => this.triggerInputEvent());
         this.quantityInput.addEventListener('change', () => this.autoUpdateOnChange());
         this.decrButton.addEventListener('click', () => this.onDecrementButtonClick());
         this.incrButton.addEventListener('click', () => this.onIncrementButtonClick());
@@ -30,6 +30,10 @@ export default class QuantityCounter extends Component {
 
     protected onDecrementButtonClick(): void {
         const value: number = +this.quantityInput.value;
+
+        if (this.isDisabled) {
+            return;
+        }
 
         if (value > this.minQuantity) {
             this.quantityInput.value = (value - 1).toString();
@@ -41,6 +45,10 @@ export default class QuantityCounter extends Component {
 
     protected onIncrementButtonClick(): void {
         const value: number = Number(this.quantityInput.value);
+
+        if (this.isDisabled) {
+            return;
+        }
 
         if (value < this.maxQuantity) {
             this.quantityInput.value = (value + 1).toString();
@@ -83,8 +91,12 @@ export default class QuantityCounter extends Component {
         return +this.quantityInput.getAttribute('data-min-quantity');
     }
 
-    protected get autoUpdate(): string {
-        return this.quantityInput.getAttribute('data-auto-update');
+    protected get autoUpdate(): boolean {
+        return this.quantityInput.hasAttribute('data-auto-update');
+    }
+
+    protected get isDisabled(): boolean {
+        return this.quantityInput.hasAttribute('disabled');
     }
 
     protected get getValue(): number {

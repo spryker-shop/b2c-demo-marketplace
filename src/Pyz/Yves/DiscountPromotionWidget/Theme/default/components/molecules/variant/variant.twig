@@ -18,7 +18,7 @@
     {% if data.selectedValue is null %}
         {% if data.isAvailable %}
             {% embed molecule('custom-select') with {
-                modifiers: ['hollow'],
+                modifiers: ['hollow', 'discount'],
                 attributes: {
                     name: data.formName,
                     'config-theme': 'small',
