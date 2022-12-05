@@ -8,6 +8,7 @@ export default class QuantityCounter extends Component {
     protected duration: number = 1000;
     protected timeout: number = 0;
     protected inputChange: Event = new Event('change');
+    protected unformattedValueRegExp: RegExp = new RegExp(`[^0-9${this.decimalSeparator}-]+`, 'g');
 
     protected readyCallback(): void {}
 
@@ -29,7 +30,7 @@ export default class QuantityCounter extends Component {
     }
 
     protected onDecrementButtonClick(): void {
-        const value: number = +this.quantityInput.value;
+        const value = this.getUnformattedNumber(this.quantityInput.value);
 
         if (this.isDisabled) {
             return;
@@ -44,7 +45,7 @@ export default class QuantityCounter extends Component {
     }
 
     protected onIncrementButtonClick(): void {
-        const value: number = Number(this.quantityInput.value);
+        const value = this.getUnformattedNumber(this.quantityInput.value);
 
         if (this.isDisabled) {
             return;
@@ -77,10 +78,18 @@ export default class QuantityCounter extends Component {
         }, this.duration);
     }
 
+    protected getUnformattedNumber(value: string): number {
+        return Number(value.replace(this.unformattedValueRegExp, '')) || Number(0);
+    }
+
     protected setMaxQuantityToInfinity(): void {
         if (!this.maxQuantity) {
             this.quantityInput.setAttribute('data-max-quantity', 'Infinity');
         }
+    }
+
+    protected get decimalSeparator(): string {
+        return this.getAttribute('decimal-separator');
     }
 
     protected get maxQuantity(): number {

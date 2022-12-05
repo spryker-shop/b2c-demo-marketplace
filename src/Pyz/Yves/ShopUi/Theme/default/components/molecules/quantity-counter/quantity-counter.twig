@@ -19,6 +19,10 @@
     },
 } %}
 
+{% define attributes = {
+    'decimal-separator': getNumberFormatConfig(app.locale).toArray()['decimal_separator_symbol'],
+} %}
+
 {% set maxQuantity = data.maxQuantity < 0 or data.maxQuantity < data.minQuantity ? false : data.maxQuantity %}
 {% set inputAttributes = {
     'data-max-quantity': maxQuantity,
