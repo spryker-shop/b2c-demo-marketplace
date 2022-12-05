@@ -20,8 +20,8 @@ image:
         SPRYKER_HOOK_AFTER_DEPLOY: "true"
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production --no-ansi -vvv"
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive --no-ansi -vvv"
-        SPRYKER_PRODUCT_CONFIGURATOR_HOST: date-time-configurator.mp-b2c.testing.demo-spryker.com
-        SPRYKER_PRODUCT_CONFIGURATOR_PORT: 80
+        SPRYKER_PRODUCT_CONFIGURATOR_HOST: dtc.mp-b2c.internal-testing.demo-spryker.com
+        SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
     node:
         version: 16
         npm: 8
@@ -85,7 +85,7 @@ groups:
             Redirects:
                 application: static
                 endpoints:
-                    date-time-configurator.mp-b2c.testing.demo-spryker.com:
+                    dtc.mp-b2c.internal-testing.demo-spryker.com:
                         entry-point: Configurator
                     de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
