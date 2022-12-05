@@ -14,7 +14,7 @@
     disabled: false,
     autoUpdate: false,
     inputAttributes: {
-        class: 'input',
+        class: '',
         name: 'quantity',
     },
 } %}
@@ -42,11 +42,11 @@
 } %}
 
 {% block body %}
-    {% set inputClassName = component.renderClass(config.name ~ '__input', modifiers) ~ ' ' ~ config.jsName ~ '__input js-volume-price__quantity' %}
+    {% set inputClassName = data.inputAttributes.class ~ ' ' ~ component.renderClass(config.name ~ '__input', modifiers) ~ ' ' ~ config.jsName ~ '__input js-volume-price__quantity' %}
     {% set buttonDisabledClassName = data.minQuantity == maxQuantity or data.disabled ? 'button--disabled' %}
 
     <div class="{{ component.renderClass(config.name ~ '__container', modifiers) }} grid grid--middle">
-        {% block decrButton %}
+        {% block decreaseButton %}
             <div class="col">
                 <div class="{{ component.renderClass('button', modifiers) }} {{ buttonDisabledClassName }} button--quantity {{ config.jsName }}__decr">-</div>
             </div>
@@ -57,7 +57,7 @@
                 {% include molecule('formatted-number-input') with {
                     data: {
                         inputName: data.inputAttributes.name,
-                        inputExtraClasses: data.inputAttributes.class ~ ' ' ~ inputClassName,
+                        inputExtraClasses: inputClassName,
                         inputValue: data.value,
                         inputAttributes: inputAttributes,
                         hiddenInputAttributes: hiddenInputAttributes,
@@ -67,7 +67,7 @@
             </div>
         {% endblock %}
 
-        {% block incrButton %}
+        {% block increaseButton %}
             <div class="col">
                 <div class="{{ component.renderClass('button', modifiers) }} {{ buttonDisabledClassName }} button--quantity {{ config.jsName }}__incr">+</div>
             </div>

@@ -30,11 +30,11 @@ export default class QuantityCounter extends Component {
     }
 
     protected onDecrementButtonClick(): void {
-        const value = this.getUnformattedNumber(this.quantityInput.value);
-
         if (this.isDisabled) {
             return;
         }
+
+        const value = this.getUnformattedNumber(this.quantityInput.value);
 
         if (value > this.minQuantity) {
             this.quantityInput.value = (value - 1).toString();
@@ -45,11 +45,11 @@ export default class QuantityCounter extends Component {
     }
 
     protected onIncrementButtonClick(): void {
-        const value = this.getUnformattedNumber(this.quantityInput.value);
-
         if (this.isDisabled) {
             return;
         }
+
+        const value = this.getUnformattedNumber(this.quantityInput.value);
 
         if (value < this.maxQuantity) {
             this.quantityInput.value = (value + 1).toString();
