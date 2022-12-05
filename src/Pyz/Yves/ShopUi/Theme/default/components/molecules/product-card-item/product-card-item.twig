@@ -113,14 +113,14 @@
                                                         },
                                                     } only %}
 
-                                                    <input type="hidden" value="{{ data.cartItem.groupKey }}" name="groupKey">
-                                                {% endblock %}
-                                            {% endwidget %}
-                                        {% else %}
-                                            {{ 'cart.item_quantity' | trans }}: {{ data.productItem.quantity }}
-                                        {% endif %}
-                                    {% endblock %}
-                                </div>
+                                                <input type="hidden" value="{{ data.cartItem.groupKey }}" name="groupKey">
+                                            {% endblock %}
+                                        {% endwidget %}
+                                    {% else %}
+                                        {{ 'cart.item_quantity' | trans }}: {{ data.productItem.quantity | executeFilterIfExists('formatInt', app.locale) }}
+                                    {% endif %}
+                                {% endblock %}
+                            </div>
 
                                 {% block state %}{% endblock %}
                             </div>
