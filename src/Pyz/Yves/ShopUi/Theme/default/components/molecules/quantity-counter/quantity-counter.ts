@@ -79,7 +79,7 @@ export default class QuantityCounter extends Component {
     }
 
     protected getUnformattedNumber(value: string): number {
-        return Number(value.replace(this.unformattedValueRegExp, '')) || Number(0);
+        return Number(value.replace(this.unformattedValueRegExp, '')) || 0;
     }
 
     protected setMaxQuantityToInfinity(): void {
