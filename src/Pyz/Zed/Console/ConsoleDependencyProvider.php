@@ -165,6 +165,7 @@ use SprykerSdk\Spryk\Console\SprykBuildConsole;
 use SprykerSdk\Spryk\Console\SprykDumpConsole;
 use SprykerSdk\Spryk\Console\SprykRunConsole;
 use SprykerSdk\Zed\ComposerConstrainer\Communication\Console\ComposerConstraintConsole;
+use SprykerShop\Zed\DateTimeConfiguratorPageExample\Communication\Console\DateTimeProductConfiguratorBuildFrontendConsole;
 use Stecman\Component\Symfony\Console\BashCompletion\CompletionCommand;
 
 /**
@@ -363,6 +364,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new MerchantPortalBuildFrontendConsole(),
             new MerchantPortalInstallDependenciesConsole(),
             new MessageBrokerWorkerConsole(),
+            new DateTimeProductConfiguratorBuildFrontendConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
