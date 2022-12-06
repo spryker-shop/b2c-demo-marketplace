@@ -17,10 +17,7 @@
         class: '',
         name: 'quantity',
     },
-} %}
-
-{% define attributes = {
-    'decimal-separator': getNumberFormatConfig(app.locale).toArray()['decimal_separator_symbol'],
+    numberFormatConfig: {},
 } %}
 
 {% set maxQuantity = data.maxQuantity < 0 or data.maxQuantity < data.minQuantity ? false : data.maxQuantity %}
@@ -39,7 +36,7 @@
     'watch-external-changes': true,
     max: maxQuantity,
     min: data.minQuantity,
-} %}
+} | merge(data.numberFormatConfig) %}
 
 {% block body %}
     {% set inputClassName = data.inputAttributes.class ~ ' ' ~ component.renderClass(config.name ~ '__input', modifiers) ~ ' ' ~ config.jsName ~ '__input js-volume-price__quantity' %}
@@ -61,6 +58,7 @@
                         inputValue: data.value,
                         inputAttributes: inputAttributes,
                         hiddenInputAttributes: hiddenInputAttributes,
+                        hiddenInputExtraClasses: config.jsName ~ '__input-hidden',
                     },
                     attributes: formatAttributes,
                 } only %}

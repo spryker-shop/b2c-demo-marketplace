@@ -6,6 +6,7 @@
             maxQuantity: cartItem.maxQuantity,
             value: cartItem.quantity,
             readOnly: data.readOnly,
+            numberFormatConfig: numberFormatConfig,
         },
     } only %}
     <input type="hidden" value="{{ cartItem.groupKey }}" name="groupKey">

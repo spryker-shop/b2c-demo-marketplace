@@ -2,18 +2,19 @@ import Component from 'ShopUi/models/component';
 
 export default class QuantityCounter extends Component {
     protected quantityInput: HTMLInputElement;
+    protected quantityHiddenInput: HTMLInputElement;
     protected decrButton: HTMLButtonElement;
     protected incrButton: HTMLButtonElement;
     protected value: number;
     protected duration: number = 1000;
     protected timeout: number = 0;
     protected inputChange: Event = new Event('change');
-    protected unformattedValueRegExp: RegExp = new RegExp(`[^0-9${this.decimalSeparator}-]+`, 'g');
 
     protected readyCallback(): void {}
 
     protected init(): void {
         this.quantityInput = <HTMLInputElement>this.getElementsByClassName(`${this.jsName}__input`)[0];
+        this.quantityHiddenInput = <HTMLInputElement>this.getElementsByClassName(`${this.jsName}__input-hidden`)[0];
         this.decrButton = <HTMLButtonElement>this.getElementsByClassName(`${this.jsName}__decr`)[0];
         this.incrButton = <HTMLButtonElement>this.getElementsByClassName(`${this.jsName}__incr`)[0];
         this.value = this.getValue;
@@ -34,7 +35,7 @@ export default class QuantityCounter extends Component {
             return;
         }
 
-        const value = this.getUnformattedNumber(this.quantityInput.value);
+        const value = Number(this.quantityHiddenInput.value);
 
         if (value > this.minQuantity) {
             this.quantityInput.value = (value - 1).toString();
@@ -49,7 +50,7 @@ export default class QuantityCounter extends Component {
             return;
         }
 
-        const value = this.getUnformattedNumber(this.quantityInput.value);
+        const value = Number(this.quantityHiddenInput.value);
 
         if (value < this.maxQuantity) {
             this.quantityInput.value = (value + 1).toString();
@@ -78,18 +79,10 @@ export default class QuantityCounter extends Component {
         }, this.duration);
     }
 
-    protected getUnformattedNumber(value: string): number {
-        return Number(value.replace(this.unformattedValueRegExp, '')) || Number(0);
-    }
-
     protected setMaxQuantityToInfinity(): void {
         if (!this.maxQuantity) {
             this.quantityInput.setAttribute('data-max-quantity', 'Infinity');
         }
-    }
-
-    protected get decimalSeparator(): string {
-        return this.getAttribute('decimal-separator');
     }
 
     protected get maxQuantity(): number {
