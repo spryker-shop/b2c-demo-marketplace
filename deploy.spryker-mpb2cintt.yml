@@ -85,8 +85,6 @@ groups:
             Redirects:
                 application: static
                 endpoints:
-                    dtc.mp-b2c.internal-testing.demo-spryker.com:
-                        entry-point: Configurator
                     de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
                         redirect:
@@ -105,6 +103,8 @@ groups:
             Yves:
                 application: yves
                 endpoints:
+                    dtc.mp-b2c.internal-testing.demo-spryker.com:
+                        entry-point: Configurator
                     www.de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
                     www.at.mp-b2c.internal-testing.demo-spryker.com:
