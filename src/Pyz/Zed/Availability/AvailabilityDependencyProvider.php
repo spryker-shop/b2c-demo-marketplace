@@ -46,8 +46,8 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
     protected function getCartItemQuantityCounterStrategyPlugins(): array
     {
         return [
-            new ProductOfferCartItemQuantityCounterStrategyPlugin(),
             new ProductConfigurationCartItemQuantityCounterStrategyPlugin(),
+            new ProductOfferCartItemQuantityCounterStrategyPlugin(),
         ];
     }
 }
