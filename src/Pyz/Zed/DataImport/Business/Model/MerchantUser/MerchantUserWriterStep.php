@@ -19,7 +19,13 @@ use Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface;
 
 class MerchantUserWriterStep implements DataImportStepInterface
 {
+    /**
+     * @var string
+     */
     protected const MERCHANT_REFERENCE = 'merchant_reference';
+    /**
+     * @var string
+     */
     protected const USERNAME = 'username';
 
     /**

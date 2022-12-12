@@ -22,7 +22,7 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
     protected function getBatchAvailabilityStrategyPlugins(): array
     {
         return [
-            /**
+            /*
              * ProductConcreteBatchAvailabilityStrategyPlugin needs to be after all other implementations.
              */
             new ProductConcreteBatchAvailabilityStrategyPlugin(),
@@ -46,8 +46,8 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
     protected function getCartItemQuantityCounterStrategyPlugins(): array
     {
         return [
-            new ProductOfferCartItemQuantityCounterStrategyPlugin(),
             new ProductConfigurationCartItemQuantityCounterStrategyPlugin(),
+            new ProductOfferCartItemQuantityCounterStrategyPlugin(),
         ];
     }
 }
