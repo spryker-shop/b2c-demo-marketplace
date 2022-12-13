@@ -89,7 +89,7 @@
                                 {% endembed %}
 
                                 {% block orderCancelButton %}
-                                    {% widget 'OrderCancelButtonWidget'  args [order, data.requestUri] only %}
+                                    {% widget 'OrderCancelButtonWidget' args [order, data.requestUri] only %}
                                         {% set buttonClasses = 'menu__link' %}
                                         {% block body %}
                                             <li class="menu__item">
