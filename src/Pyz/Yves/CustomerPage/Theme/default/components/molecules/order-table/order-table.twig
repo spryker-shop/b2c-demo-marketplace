@@ -90,8 +90,8 @@
 
                                 {% block orderCancelButton %}
                                     {% widget 'OrderCancelButtonWidget' args [order, data.requestUri] only %}
-                                        {% set buttonClasses = 'menu__link' %}
                                         {% block body %}
+                                            {% set buttonClasses = 'menu__link' %}
                                             <li class="menu__item">
                                                 {% include molecule('remote-form-submit') with {
                                                     data: {
