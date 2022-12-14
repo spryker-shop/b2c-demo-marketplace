@@ -13,7 +13,7 @@ use SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage\CustomerUpda
 class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
 {
     /**
-     * @return list<\SprykerShop\Yves\AgentPageExtension\Dependency\Plugin\SessionPostImpersonationPluginInterface>
+     * @return array<string, \SprykerShop\Yves\AgentPageExtension\Dependency\Plugin\SessionPostImpersonationPluginInterface>
      */
     protected function getSessionPostImpersonationPlugins(): array
     {
