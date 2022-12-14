@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b8d64d18832c0ae4b31b5c35edf6312",
+    "content-hash": "5bb3323f1c53ca46de237ddb414d905b",
     "packages": [
         {
             "name": "async-aws/core",
@@ -46599,20 +46599,20 @@
         },
         {
             "name": "spryker/session-customer-validation-extension",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/session-customer-validation-extension.git",
-                "reference": "3f1744a6b39bc8af10b26dbeeaa904d90dfa506f"
+                "reference": "f3274fff96880a2e0f0ce2fc562950ca6c529627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/session-customer-validation-extension/zipball/3f1744a6b39bc8af10b26dbeeaa904d90dfa506f",
-                "reference": "3f1744a6b39bc8af10b26dbeeaa904d90dfa506f",
+                "url": "https://api.github.com/repos/spryker/session-customer-validation-extension/zipball/f3274fff96880a2e0f0ce2fc562950ca6c529627",
+                "reference": "f3274fff96880a2e0f0ce2fc562950ca6c529627",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=8.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*"
@@ -46634,9 +46634,9 @@
             ],
             "description": "SessionCustomerValidationExtension module",
             "support": {
-                "source": "https://github.com/spryker/session-customer-validation-extension/tree/1.0.0"
+                "source": "https://github.com/spryker/session-customer-validation-extension/tree/1.1.0"
             },
-            "time": "2022-03-16T14:26:53+00:00"
+            "time": "2022-12-13T15:22:29+00:00"
         },
         {
             "name": "spryker/session-extension",
