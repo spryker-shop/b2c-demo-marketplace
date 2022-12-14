@@ -4546,12 +4546,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/agent-assist.git",
-                "reference": "ca7679ec7506d0a03f27132b5f9d200c9a9635b9"
+                "reference": "998489e66c13fd92caf9514a3852a196632de995"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/agent-assist/zipball/ca7679ec7506d0a03f27132b5f9d200c9a9635b9",
-                "reference": "ca7679ec7506d0a03f27132b5f9d200c9a9635b9",
+                "url": "https://api.github.com/repos/spryker-feature/agent-assist/zipball/998489e66c13fd92caf9514a3852a196632de995",
+                "reference": "998489e66c13fd92caf9514a3852a196632de995",
                 "shasum": ""
             },
             "require": {
@@ -4566,7 +4566,7 @@
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202211.x-dev"
+                    "dev-master": "202212.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4575,9 +4575,9 @@
             ],
             "description": "Agent Assist [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/agent-assist/tree/202211.0"
+                "source": "https://github.com/spryker-feature/agent-assist/tree/master"
             },
-            "time": "2022-11-23T20:29:45+00:00"
+            "time": "2022-12-14T09:12:25+00:00"
         },
         {
             "name": "spryker-feature/alternative-products",
