@@ -15,6 +15,9 @@ use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
 
 class AclConfig extends SprykerAclConfig
 {
+    /**
+     * @var string
+     */
     protected const PYZ_RULE_TYPE_DENY = 'deny';
 
     /**

@@ -22,6 +22,9 @@ use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByItemInterface;
  */
 class CloseMerchantOrderItemCommandPlugin extends AbstractPlugin implements CommandByItemInterface
 {
+    /**
+     * @var string
+     */
     protected const PYZ_EVENT_CLOSE = 'close';
 
     /**
