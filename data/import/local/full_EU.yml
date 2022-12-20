@@ -77,6 +77,8 @@ actions:
     source: data/import/common/common/product_stock.csv
   - data_entity: product-approval-status
     source: data/import/common/common/product_abstract_approval_status.csv
+  - data_entity: product-configuration
+    source: data/import/common/common/product_configuration.csv
   # Store relation
   - data_entity: product-abstract-store
     source: data/import/common/AT/product_abstract_store.csv
