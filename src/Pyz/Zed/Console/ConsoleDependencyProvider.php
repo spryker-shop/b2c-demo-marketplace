@@ -17,12 +17,6 @@ use Spryker\Zed\AclDataImport\AclDataImportConfig;
 use Spryker\Zed\AclEntityDataImport\AclEntityDataImportConfig;
 use Spryker\Zed\Cache\Communication\Console\EmptyAllCachesConsole;
 use Spryker\Zed\CategoryDataImport\CategoryDataImportConfig;
-use Spryker\Zed\CodeGenerator\Communication\Console\BundleClientCodeGeneratorConsole;
-use Spryker\Zed\CodeGenerator\Communication\Console\BundleCodeGeneratorConsole;
-use Spryker\Zed\CodeGenerator\Communication\Console\BundleServiceCodeGeneratorConsole;
-use Spryker\Zed\CodeGenerator\Communication\Console\BundleSharedCodeGeneratorConsole;
-use Spryker\Zed\CodeGenerator\Communication\Console\BundleYvesCodeGeneratorConsole;
-use Spryker\Zed\CodeGenerator\Communication\Console\BundleZedCodeGeneratorConsole;
 use Spryker\Zed\Console\Communication\Plugin\ConsoleLogPlugin;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\ContentNavigationDataImport\ContentNavigationDataImportConfig;
@@ -65,6 +59,9 @@ use Spryker\Zed\MerchantOms\Communication\Console\TriggerEventFromCsvFileConsole
 use Spryker\Zed\MerchantProductApprovalDataImport\MerchantProductApprovalDataImportConfig;
 use Spryker\Zed\MessageBroker\Communication\Plugin\Console\MessageBrokerDebugConsole;
 use Spryker\Zed\MessageBroker\Communication\Plugin\Console\MessageBrokerWorkerConsole;
+use Spryker\Zed\MessageBrokerAws\Communication\Console\MessageBrokerAwsSnsTopicsCreatorConsole;
+use Spryker\Zed\MessageBrokerAws\Communication\Console\MessageBrokerAwsSqsQueuesCreatorConsole;
+use Spryker\Zed\MessageBrokerAws\Communication\Console\MessageBrokerSqsToSnsSubscriberConsole;
 use Spryker\Zed\Monitoring\Communication\Plugin\Console\MonitoringConsolePlugin;
 use Spryker\Zed\Oauth\Communication\Console\OauthTokenConsole;
 use Spryker\Zed\Oms\Communication\Console\CheckConditionConsole as OmsCheckConditionConsole;
@@ -168,6 +165,7 @@ use SprykerSdk\Spryk\Console\SprykBuildConsole;
 use SprykerSdk\Spryk\Console\SprykDumpConsole;
 use SprykerSdk\Spryk\Console\SprykRunConsole;
 use SprykerSdk\Zed\ComposerConstrainer\Communication\Console\ComposerConstraintConsole;
+use SprykerShop\Zed\DateTimeConfiguratorPageExample\Communication\Console\DateTimeProductConfiguratorBuildFrontendConsole;
 use Stecman\Component\Symfony\Console\BashCompletion\CompletionCommand;
 
 /**
@@ -366,6 +364,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new MerchantPortalBuildFrontendConsole(),
             new MerchantPortalInstallDependenciesConsole(),
             new MessageBrokerWorkerConsole(),
+            new DateTimeProductConfiguratorBuildFrontendConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
@@ -381,12 +380,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             $commands[] = new CodeArchitectureSnifferConsole();
             $commands[] = new CodePhpstanConsole();
             $commands[] = new ValidatorConsole();
-            $commands[] = new BundleCodeGeneratorConsole();
-            $commands[] = new BundleYvesCodeGeneratorConsole();
-            $commands[] = new BundleZedCodeGeneratorConsole();
-            $commands[] = new BundleServiceCodeGeneratorConsole();
-            $commands[] = new BundleSharedCodeGeneratorConsole();
-            $commands[] = new BundleClientCodeGeneratorConsole();
             $commands[] = new GenerateZedIdeAutoCompletionConsole();
             $commands[] = new RemoveZedIdeAutoCompletionConsole();
             $commands[] = new GenerateClientIdeAutoCompletionConsole();
@@ -423,6 +416,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             $commands[] = new ModuleInstallerConsole();
 
             $commands[] = new MessageBrokerDebugConsole();
+            $commands[] = new MessageBrokerAwsSqsQueuesCreatorConsole();
+            $commands[] = new MessageBrokerAwsSnsTopicsCreatorConsole();
+            $commands[] = new MessageBrokerSqsToSnsSubscriberConsole();
 
             if (class_exists(SecurityCheckerCommand::class)) {
                 $commands[] = new SecurityCheckerCommand();

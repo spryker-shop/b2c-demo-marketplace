@@ -1,10 +1,5 @@
 {% extends molecule('product-configurator', '@SprykerShop:ProductDetailPage') %}
 
-{% define data = {
-    isBundle: null,
-    bundleItems: [],
-} %}
-
 {% set productName = data.product.name | default %}
 {% set isProductConcrete = data.product.idProductConcrete is not empty %}
 
@@ -26,34 +21,10 @@
                 } only %}
             </div>
         {% endwidget %}
-
     </div>
-    {% if data.isBundle != null %}
-        {% embed molecule('toggler-item') with {
-            modifiers: ['with-top-border', 'option'],
-            data: {
-                title: 'bundle.title' | trans,
-                triggerClass: config.jsName ~ '__trigger-bundle',
-                targetClass: config.jsName ~ '__target-bundle',
-                isActive: true,
-            },
-            embed: {
-                bundleItems: data.bundleItems,
-            }
-        } only %}
-            {% block contentText %}
-                {% include molecule('bundle-option-list', 'ProductDetailPage') with {
-                    data: {
-                        bundleItems: embed.bundleItems,
-                    }
-                } only %}
-            {% endblock %}
-        {% endembed %}
-    {% endif %}
 
-    {% block colors %}
-        {% widget 'ProductGroupColorWidget' args [data.product.idProductAbstract, data.product.selectedAttributes ?? []] use view('product-detail-color-selector', 'ProductGroupWidget') only %}{% endwidget %}
-    {% endblock %}
+    {{ block('bundleProducts') }}
+    {{ block('colors') }}
 
     {% include molecule('variant-configurator', 'ProductDetailPage') with {
         data: {
@@ -62,6 +33,12 @@
             availableAttributes: data.product.availableAttributes
         }
     } only %}
+
+    {% widget 'ProductConfigurationProductViewDisplayWidget' args [data.product] only %}{% endwidget %}
+
+    {% widget 'ProductConfigurationProductDetailPageButtonWidget' args [data.product] only %}{% endwidget %}
+
+    <hr>
 
     {% widget 'AddToCartFormWidget' args [config, data.product, isDisabled, options] only %}
         {% block embeddedData %}
@@ -77,10 +54,16 @@
                     },
                 } only %}
                     {% block contentText %}
+                        {% set numberFormatConfig = {} %}
+                        {% for key, value in getNumberFormatConfig(app.locale).toArray() %}
+                            {% set numberFormatConfig = numberFormatConfig | merge({ (key | replace({'_symbol': '', '_': '-'})): value }) %}
+                        {% endfor %}
+
                         {% include molecule('quantity-counter') with {
                             modifiers: ['quantity-large', 'no-spacing'],
                             data: {
                                 readOnly: true,
+                                numberFormatConfig: numberFormatConfig,
                             },
                         } only %}
                     {% endblock %}
@@ -117,31 +100,24 @@
                 isRadioButtonVisible,
                 isChecked
             ]) %}
-            {% set hasMerchantProduct = merchantProductWidget and merchantProductWidget.merchantProductView ?? false %}
+            {% set hasMerchantProduct = merchantProductWidget.merchantProductView is defined %}
 
-            {% if merchantProductWidget %}
-                {% widget merchantProductWidget %}{% endwidget %}
-            {% endif %}
+            {% widget merchantProductWidget %}{% endwidget %}
+            {% widget merchantProductOfferWidget with {
+                data: {
+                    isTitleVisible: not hasMerchantProduct,
+                },
+                embed: {
+                    hasMerchantProduct: hasMerchantProduct,
+                    productOffersCount: merchantProductOfferWidget.productOffers | length,
+                },
+            } %}
+                {% block content %}
+                    {% set isRadioButtonVisible = embed.productOffersCount > 1 or embed.hasMerchantProduct %}
 
-            {% if merchantProductOfferWidget %}
-                {% widget merchantProductOfferWidget with
-                    {
-                        data: {
-                            isTitleVisible: not hasMerchantProduct,
-                        },
-                        embed: {
-                            hasMerchantProduct: hasMerchantProduct,
-                            productOffersCount: merchantProductOfferWidget.productOffers | length,
-                        },
-                    }
-                %}
-                    {% block content %}
-                        {% set isRadioButtonVisible = embed.productOffersCount + embed.hasMerchantProduct > 1 %}
-
-                        {{ parent() }}
-                    {% endblock %}
-                {% endwidget %}
-            {% endif %}
+                    {{ parent() }}
+                {% endblock %}
+            {% endwidget %}
         {% endblock %}
     {% endwidget %}
 

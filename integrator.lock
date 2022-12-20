@@ -30,5 +30,21 @@
         "source": "\\Spryker\\Zed\\CmsContentWidgetProductSetConnector\\Communication\\Plugin\\Cms\\CmsProductSetKeyMapperPlugin"
       }
     }
+  },
+  "Spryker.Customer": {
+    "wire-plugin": {
+      "7312de66a8237a9de3c86c4dc68fb7f136a39e96": {
+        "target": "\\Spryker\\Zed\\TaxProductConnector\\TaxProductConnectorDependencyProvider::getShippingAddressValidatorPlugins",
+        "source": "\\Spryker\\Zed\\Customer\\Communication\\Plugin\\TaxProductConnector\\CustomerAddressShippingAddressValidatorPlugin"
+      }
+    }
+  },
+  "Spryker.Wishlist": {
+    "wire-plugin": {
+      "cb71204d8acb701fdd79fd6b7d8617717667716b": {
+        "target": "\\Spryker\\Zed\\Wishlist\\WishlistDependencyProvider::getAddItemPreCheckPlugins",
+        "source": "\\Spryker\\Zed\\Wishlist\\Communication\\Plugin\\Wishlist\\WishlistItemAddItemPreCheckPlugin"
+      }
+    }
   }
 }

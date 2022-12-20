@@ -8,6 +8,7 @@
 namespace Pyz\Zed\AvailabilityCartConnector;
 
 use Spryker\Zed\AvailabilityCartConnector\AvailabilityCartConnectorDependencyProvider as SprykerAvailabilityCartConnectorDependencyProviderr;
+use Spryker\Zed\ProductConfigurationCart\Communication\Plugin\AvailabilityCartConnector\ProductConfigurationCartItemQuantityCounterStrategyPlugin;
 use Spryker\Zed\ProductOffer\Communication\Plugin\Cart\ProductOfferCartItemQuantityCounterStrategyPlugin;
 
 class AvailabilityCartConnectorDependencyProvider extends SprykerAvailabilityCartConnectorDependencyProviderr
@@ -18,6 +19,7 @@ class AvailabilityCartConnectorDependencyProvider extends SprykerAvailabilityCar
     public function getCartItemQuantityCounterStrategyPlugins(): array
     {
         return [
+            new ProductConfigurationCartItemQuantityCounterStrategyPlugin(),
             new ProductOfferCartItemQuantityCounterStrategyPlugin(),
         ];
     }

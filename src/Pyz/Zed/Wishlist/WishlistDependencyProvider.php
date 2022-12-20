@@ -9,16 +9,35 @@ namespace Pyz\Zed\Wishlist;
 
 use Spryker\Zed\Availability\Communication\Plugin\Wishlist\AvailabilityWishlistItemExpanderPlugin;
 use Spryker\Zed\Availability\Communication\Plugin\Wishlist\SellableWishlistItemExpanderPlugin;
-use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\MerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\ValidMerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\ValidMerchantProductOfferUpdateItemPreCheckPlugin;
 use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\WishlistProductOfferPreAddItemPlugin;
 use Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist\WishlistMerchantProductPreAddItemPlugin;
 use Spryker\Zed\PriceProduct\Communication\Plugin\Wishlist\PriceProductWishlistItemExpanderPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\Wishlist\PriceProductOfferWishlistItemExpanderPlugin;
+use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationItemExpanderPlugin;
+use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationWishlistAddItemPreCheckPlugin;
+use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationWishlistItemExpanderPlugin;
+use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationWishlistPreAddItemPlugin;
+use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationWishlistPreUpdateItemPlugin;
+use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationWishlistReloadItemsPlugin;
+use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationWishlistUpdateItemPreCheckPlugin;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Wishlist\ProductDiscontinuedAddItemPreCheckPlugin;
+use Spryker\Zed\Wishlist\Communication\Plugin\Wishlist\WishlistItemAddItemPreCheckPlugin;
 use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependencyProvider;
 
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
+    /**
+     * @return array<\Spryker\Zed\Wishlist\Dependency\Plugin\ItemExpanderPluginInterface>
+     */
+    protected function getItemExpanderPlugins(): array
+    {
+        return [
+            new ProductConfigurationItemExpanderPlugin(),
+        ];
+    }
+
     /**
      * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\AddItemPreCheckPluginInterface[]
      */
@@ -26,7 +45,19 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     {
         return [
             new ProductDiscontinuedAddItemPreCheckPlugin(), #ProductDiscontinuedFeature
-            new MerchantProductOfferAddItemPreCheckPlugin(),
+            new ValidMerchantProductOfferAddItemPreCheckPlugin(),
+            new WishlistItemAddItemPreCheckPlugin(),
+            new ProductConfigurationWishlistAddItemPreCheckPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistReloadItemsPluginInterface>
+     */
+    protected function getWishlistReloadItemsPlugins(): array
+    {
+        return [
+            new ProductConfigurationWishlistReloadItemsPlugin(),
         ];
     }
 
@@ -38,6 +69,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
         return [
             new WishlistMerchantProductPreAddItemPlugin(),
             new WishlistProductOfferPreAddItemPlugin(),
+            new ProductConfigurationWishlistPreAddItemPlugin(),
         ];
     }
 
@@ -51,6 +83,28 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
             new PriceProductOfferWishlistItemExpanderPlugin(),
             new AvailabilityWishlistItemExpanderPlugin(),
             new SellableWishlistItemExpanderPlugin(),
+            new ProductConfigurationWishlistItemExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistPreUpdateItemPluginInterface>
+     */
+    protected function getWishlistPreUpdateItemPlugins(): array
+    {
+        return [
+            new ProductConfigurationWishlistPreUpdateItemPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\UpdateItemPreCheckPluginInterface>
+     */
+    protected function getUpdateItemPreCheckPlugins(): array
+    {
+        return [
+            new ValidMerchantProductOfferUpdateItemPreCheckPlugin(),
+            new ProductConfigurationWishlistUpdateItemPreCheckPlugin(),
         ];
     }
 }
