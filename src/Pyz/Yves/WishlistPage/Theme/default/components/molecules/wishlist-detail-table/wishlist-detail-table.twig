@@ -62,6 +62,14 @@
                                     <li>{{ ('product.attribute.' ~ attribute) | trans }}: <span class="title title--medium">{{ item.attributes[attribute] }}</span></li>
                                 {% endif %}
                             {% endfor %}
+
+                            {% set wishlistItem = data.indexedWishlistItems[idWishlistItem] | default %}
+                            {% if wishlistItem %}
+                                <li class="spacing-top">
+                                    {% widget 'ProductConfigurationWishlistItemDisplayWidget' args [wishlistItem] only %}{% endwidget %}
+                                    {% widget 'ProductConfigurationWishlistPageButtonWidget' args [wishlistItem] only %}{% endwidget %}
+                                </li>
+                            {% endif %}
                         </ul>
                     </td>
                     <td nowrap="nowrap">

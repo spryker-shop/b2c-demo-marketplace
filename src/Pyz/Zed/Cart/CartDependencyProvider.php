@@ -44,6 +44,7 @@ use Spryker\Zed\ProductCartConnector\Communication\Plugin\ProductCartPlugin;
 use Spryker\Zed\ProductCartConnector\Communication\Plugin\ProductExistsCartPreCheckPlugin;
 use Spryker\Zed\ProductCartConnector\Communication\Plugin\ProductUrlItemExpanderPlugin;
 use Spryker\Zed\ProductCartConnector\Communication\Plugin\RemoveInactiveItemsPreReloadPlugin;
+use Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Cart\ProductConfigurationGroupKeyItemExpanderPlugin;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Cart\ProductDiscontinuedCartPreCheckPlugin;
 use Spryker\Zed\ProductImageCartConnector\Communication\Plugin\ProductImageCartPlugin;
 use Spryker\Zed\ProductList\Communication\Plugin\CartExtension\ProductListRestrictedItemsPreCheckPlugin;
@@ -94,6 +95,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new SanitizeCartShipmentItemExpanderPlugin(),
             new ProductOfferGroupKeyItemExpanderPlugin(),
             new MerchantShipmentItemExpanderPlugin(),
+            new ProductConfigurationGroupKeyItemExpanderPlugin(),
         ];
     }
 

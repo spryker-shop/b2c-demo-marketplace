@@ -12,7 +12,10 @@ tag: '1.0'
 
 environment: docker.staging
 image:
-    tag: spryker/php:8.0
+    tag: spryker/php:8.1
+    environment:
+        SPRYKER_PRODUCT_CONFIGURATOR_HOST: demo-date-time-configurator.b2c.cloud.spryker.toys
+        SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
     php:
         enabled-extensions:
             - blackfire
@@ -26,13 +29,11 @@ composer:
     autoload: --classmap-authoritative
 
 assets:
-    image: fholzer/nginx-brotli:v1.18.0
+    image: spryker/nginx-brotli:latest
     mode: production
     compression:
         brotli:
-            static: only
-        gzip:
-            static: true
+            static: on
             level: 5
 
 regions:
@@ -82,6 +83,8 @@ groups:
             redirects_eu:
                 application: static
                 endpoints:
+                    demo-date-time-configurator.b2c.cloud.spryker.toys:
+                        entry-point: Configurator
                     de.b2c.cloud.spryker.toys:
                         store: DE
                         redirect:
@@ -179,7 +182,7 @@ services:
                 protocol: tcp
     search:
         engine: elastic
-        version: 7.6
+        version: '7.10'
         endpoints:
             localhost:9200:
                 protocol: tcp
