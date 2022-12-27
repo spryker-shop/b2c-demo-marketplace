@@ -248,7 +248,7 @@
         "phpstan/phpstan": "^1.9.2",
         "phpunit/phpunit": "^9.5.2",
         "sllh/composer-versions-check": "^2.0.5",
-        "spryker-feature/development-tools": "^202212.0",
+        "spryker-feature/development-tools": "dev-master",
         "spryker-sdk/integrator": "dev-master",
         "spryker-sdk/phpstan-spryker": "^0.4.0",
         "spryker-sdk/security-checker": "^0.1.0",
@@ -257,7 +257,8 @@
         "spryker/docker-chromedriver": "dev-master",
         "spryker/testify": "^3.47.0",
         "stecman/symfony-console-completion": "*",
-        "symfony/web-profiler-bundle": "*"
+        "symfony/web-profiler-bundle": "*",
+        "spryker-sdk/spryk": "^0.4.7"
     },
     "autoload": {
         "psr-4": {
