@@ -10,13 +10,14 @@
         "importHelpers": true,
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
-        "target": "es2015",
+        "target": "es2020",
         "module": "esnext",
         "typeRoots": ["node_modules/@types"],
         "lib": ["dom", "esnext"],
         "baseUrl": ".",
-        "removeComments": true,
         "rootDir": ".",
+        "removeComments": true,
+        "useDefineForClassFields": false,
         "paths": {
             "@mp/dashboard-merchant-portal-gui": ["vendor/spryker/dashboard-merchant-portal-gui/mp.public-api.ts"],
             "@mp/merchant-profile-merchant-portal-gui": [
