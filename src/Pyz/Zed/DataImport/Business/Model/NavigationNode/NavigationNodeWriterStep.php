@@ -189,9 +189,9 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      * @param \Orm\Zed\Navigation\Persistence\SpyNavigationNode $navigationNodeEntity
      * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
      *
-     * @return int
+     * @return int|null
      */
-    protected function getPosition(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet): int
+    protected function getPosition(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet): ?int
     {
         if (isset($dataSet[static::KEY_POSITION]) && !empty($dataSet[static::KEY_POSITION])) {
             return (int)$dataSet[static::KEY_POSITION];
