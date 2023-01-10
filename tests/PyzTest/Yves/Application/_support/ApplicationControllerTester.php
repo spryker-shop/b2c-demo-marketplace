@@ -5,7 +5,9 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace PyzTest\Zed\Console;
+declare(strict_types = 1);
+
+namespace PyzTest\Yves\Application;
 
 use Codeception\Actor;
 
@@ -21,13 +23,13 @@ use Codeception\Actor;
  * @method void am($role)
  * @method void lookForwardTo($achieveValue)
  * @method void comment($description)
- * @method \Codeception\Lib\Friend haveFriend($name, $actorClass = NULL)
+ * @method void pause($vars = [])
  *
  * @SuppressWarnings(PHPMD)
  */
-class CalculationBusinessTester extends Actor
+class ApplicationControllerTester extends Actor
 {
-    use _generated\CalculationBusinessTesterActions;
+    use _generated\ApplicationControllerTesterActions;
 
     /**
      * Define custom actions here
