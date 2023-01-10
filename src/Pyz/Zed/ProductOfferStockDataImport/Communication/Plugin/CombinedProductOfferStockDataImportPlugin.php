@@ -15,7 +15,7 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 /**
  * @method \Pyz\Zed\ProductOfferStockDataImport\ProductOfferStockDataImportConfig getConfig()
- * @method \Pyz\Zed\ProductOfferStockDataImport\Business\ProductOfferStockDataImportFacade getFacade()
+ * @method \Pyz\Zed\ProductOfferStockDataImport\Business\ProductOfferStockDataImportFacadeInterface getFacade()
  */
 class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implements DataImportPluginInterface
 {
@@ -33,7 +33,7 @@ class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implement
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
     public function import(
-        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
+        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer {
         return $this->getFacade()->importPyzCombinedProductOfferStock($dataImporterConfigurationTransfer);
     }

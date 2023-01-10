@@ -31,42 +31,52 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      * @var string
      */
     public const KEY_NAVIGATION_KEY = 'navigation_key';
+
     /**
      * @var string
      */
     public const KEY_NODE_KEY = 'node_key';
+
     /**
      * @var string
      */
     public const KEY_PARENT_NODE_KEY = 'parent_node_key';
+
     /**
      * @var string
      */
     public const KEY_POSITION = 'position';
+
     /**
      * @var string
      */
     public const KEY_NODE_TYPE = 'node_type';
+
     /**
      * @var string
      */
     public const KEY_TITLE = 'title';
+
     /**
      * @var string
      */
     public const KEY_URL = 'url';
+
     /**
      * @var string
      */
     public const KEY_IS_ACTIVE = 'is_active';
+
     /**
      * @var string
      */
     public const KEY_CSS_CLASS = 'css_class';
+
     /**
      * @var string
      */
     public const KEY_VALID_FROM = 'valid_from';
+
     /**
      * @var string
      */
@@ -76,14 +86,17 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      * @var string
      */
     public const NODE_TYPE_LINK = 'link';
+
     /**
      * @var string
      */
     public const NODE_TYPE_EXTERNAL_URL = 'external_url';
+
     /**
      * @var string
      */
     public const NODE_TYPE_CATEGORY = 'category';
+
     /**
      * @var string
      */
@@ -94,7 +107,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return void
      */
-    public function execute(DataSetInterface $dataSet)
+    public function execute(DataSetInterface $dataSet): void
     {
         $navigationNodeEntity = SpyNavigationNodeQuery::create()
             ->filterByFkNavigation($dataSet[NavigationKeyToIdNavigationStep::KEY_TARGET])
@@ -116,7 +129,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
 
         if (!empty($dataSet[static::KEY_PARENT_NODE_KEY])) {
             $navigationNodeEntity->setFkParentNavigationNode(
-                $this->getFkParentNavigationNode($dataSet[static::KEY_PARENT_NODE_KEY])
+                $this->getFkParentNavigationNode($dataSet[static::KEY_PARENT_NODE_KEY]),
             );
         }
 
@@ -157,7 +170,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return int
      */
-    protected function getFkParentNavigationNode($nodeKey)
+    protected function getFkParentNavigationNode($nodeKey): int
     {
         $parentNavigationNodeEntity = SpyNavigationNodeQuery::create()
             ->findOneByNodeKey($nodeKey);
@@ -165,7 +178,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
         if (!$parentNavigationNodeEntity) {
             throw new NavigationNodeByKeyNotFoundException(sprintf(
                 'NavigationNode with key "%s" not found',
-                $nodeKey
+                $nodeKey,
             ));
         }
 
@@ -178,7 +191,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return int
      */
-    protected function getPosition(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet)
+    protected function getPosition(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet): int
     {
         if (isset($dataSet[static::KEY_POSITION]) && !empty($dataSet[static::KEY_POSITION])) {
             return (int)$dataSet[static::KEY_POSITION];
@@ -193,7 +206,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return bool
      */
-    protected function isActive(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet)
+    protected function isActive(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet): bool
     {
         if (isset($dataSet[static::KEY_IS_ACTIVE]) && !empty($dataSet[static::KEY_IS_ACTIVE])) {
             return (bool)$dataSet[static::KEY_IS_ACTIVE];
@@ -208,7 +221,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return string
      */
-    protected function getNodeType(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet)
+    protected function getNodeType(SpyNavigationNode $navigationNodeEntity, DataSetInterface $dataSet): string
     {
         if (isset($dataSet[static::KEY_NODE_TYPE]) && !empty($dataSet[static::KEY_NODE_TYPE])) {
             return $dataSet[static::KEY_NODE_TYPE];
@@ -223,7 +236,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return string
      */
-    protected function getTitle(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes)
+    protected function getTitle(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes): string
     {
         if (isset($localizedAttributes[static::KEY_TITLE]) && !empty($localizedAttributes[static::KEY_TITLE])) {
             return $localizedAttributes[static::KEY_TITLE];
@@ -238,7 +251,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return string
      */
-    protected function getLink(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes)
+    protected function getLink(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes): string
     {
         if (isset($localizedAttributes[static::KEY_URL]) && !empty($localizedAttributes[static::KEY_URL])) {
             return $localizedAttributes[static::KEY_URL];
@@ -253,7 +266,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return string
      */
-    protected function getExternalUrl(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes)
+    protected function getExternalUrl(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes): string
     {
         if (isset($localizedAttributes[static::KEY_URL]) && !empty($localizedAttributes[static::KEY_URL])) {
             return $localizedAttributes[static::KEY_URL];
@@ -269,7 +282,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return int
      */
-    protected function getFkUrl(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes, $idLocale)
+    protected function getFkUrl(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes, $idLocale): int
     {
         if (isset($localizedAttributes[static::KEY_URL]) && !empty($localizedAttributes[static::KEY_URL])) {
             $urlEntity = SpyUrlQuery::create()
@@ -291,7 +304,7 @@ class NavigationNodeWriterStep extends PublishAwareStep implements DataImportSte
      *
      * @return string
      */
-    protected function getCssClass(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes)
+    protected function getCssClass(SpyNavigationNodeLocalizedAttributes $navigationNodeLocalizedAttributes, array $localizedAttributes): string
     {
         if (isset($localizedAttributes[static::KEY_CSS_CLASS]) && !empty($localizedAttributes[static::KEY_CSS_CLASS])) {
             return $localizedAttributes[static::KEY_CSS_CLASS];

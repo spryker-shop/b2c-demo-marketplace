@@ -17,7 +17,7 @@ use SprykerShop\Zed\DateTimeConfiguratorPageExample\Communication\Plugin\Availab
 class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AvailabilityExtension\Dependency\Plugin\BatchAvailabilityStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\AvailabilityExtension\Dependency\Plugin\BatchAvailabilityStrategyPluginInterface>
      */
     protected function getBatchAvailabilityStrategyPlugins(): array
     {
@@ -30,7 +30,7 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\AvailabilityExtension\Dependency\Plugin\AvailabilityStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\AvailabilityExtension\Dependency\Plugin\AvailabilityStrategyPluginInterface>
      */
     protected function getAvailabilityStrategyPlugins(): array
     {
@@ -41,7 +41,7 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\AvailabilityExtension\Dependency\Plugin\CartItemQuantityCounterStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\AvailabilityExtension\Dependency\Plugin\CartItemQuantityCounterStrategyPluginInterface>
      */
     protected function getCartItemQuantityCounterStrategyPlugins(): array
     {

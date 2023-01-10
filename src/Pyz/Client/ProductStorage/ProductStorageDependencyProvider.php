@@ -27,11 +27,11 @@ use Spryker\Client\ProductStorage\ProductStorageDependencyProvider as SprykerPro
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface>
      */
-    protected function getProductViewExpanderPlugins()
+    protected function getProductViewExpanderPlugins(): array
     {
-        /** @var \Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface[] $plugins */
+        /** @var array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface> $plugins */
         $plugins = [
             new ProductViewDiscontinuedOptionsExpanderPlugin(),
             new ProductVariantProductViewExpanderPlugin(),
@@ -50,7 +50,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     }
 
     /**
-     * @return \Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductAbstractRestrictionPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductAbstractRestrictionPluginInterface>
      */
     protected function getProductAbstractRestrictionPlugins(): array
     {
@@ -60,7 +60,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     }
 
     /**
-     * @return \Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductConcreteRestrictionPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductConcreteRestrictionPluginInterface>
      */
     protected function getProductConcreteRestrictionPlugins(): array
     {
@@ -70,7 +70,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     }
 
     /**
-     * @return \Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductAbstractRestrictionFilterPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductAbstractRestrictionFilterPluginInterface>
      */
     protected function getProductAbstractRestrictionFilterPlugins(): array
     {
@@ -80,7 +80,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     }
 
     /**
-     * @return \Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductConcreteRestrictionFilterPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorageExtension\Dependency\Plugin\ProductConcreteRestrictionFilterPluginInterface>
      */
     protected function getProductConcreteRestrictionFilterPlugins(): array
     {

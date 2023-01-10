@@ -30,7 +30,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     public function getPyzCombinedProductOfferStockDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getPyzCombinedProductOfferStockDataImporterConfiguration()
+            $this->getConfig()->getPyzCombinedProductOfferStockDataImporterConfiguration(),
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
@@ -52,7 +52,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
     public function getPyzConditionalCsvDataImporterFromConfig(
-        DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
+        DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterConditional {
         $csvReader = $this->createCsvReaderFromConfig($dataImporterConfigurationTransfer->getReaderConfiguration());
 
@@ -67,7 +67,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
      */
     public function createPyzDataImporterConditional(
         string $importType,
-        DataReaderInterface $reader
+        DataReaderInterface $reader,
     ): DataImporterConditional {
         return new DataImporterConditional($importType, $reader, $this->getGracefulRunnerFacade());
     }
@@ -78,7 +78,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     public function createPyzCombinedProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
     {
         return new CombinedProductOfferReferenceToIdProductOfferStep(
-            $this->getProductOfferFacade()
+            $this->getProductOfferFacade(),
         );
     }
 

@@ -27,13 +27,14 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
      * @var string
      */
     public const PYZ_FACADE_OMS = 'FACADE_OMS';
+
     /**
      * @var string
      */
     public const PYZ_FACADE_SALES_RETURN = 'FACADE_SALES_RETURN';
 
     /**
-     * @return \Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface[]
+     * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface>
      */
     protected function getStateMachineCommandPlugins(): array
     {
