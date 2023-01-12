@@ -201,7 +201,7 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
     protected function mapProductSearchEntityToEventEntityTransfer(
         SpyProductSearch $productSearchEntity,
         bool $isNewProductSearchEntity,
-        EventEntityTransfer $eventEntityTransfer,
+        EventEntityTransfer $eventEntityTransfer
     ): EventEntityTransfer {
         return $eventEntityTransfer
             ->setId($productSearchEntity->getIdProductSearch())
