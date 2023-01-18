@@ -18,7 +18,7 @@ use Spryker\Zed\Store\Communication\Plugin\Quote\QuoteStoreValidatorPlugin;
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteValidatorPluginInterface[]
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteValidatorPluginInterface>
      */
     protected function getQuoteValidatorPlugins(): array
     {
@@ -30,7 +30,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpandBeforeCreatePluginInterface[]
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpandBeforeCreatePluginInterface>
      */
     protected function getQuoteExpandBeforeCreatePlugins(): array
     {
@@ -40,7 +40,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteFieldsAllowedForSavingProviderPluginInterface[]
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteFieldsAllowedForSavingProviderPluginInterface>
      */
     protected function getQuoteFieldsAllowedForSavingProviderPlugins(): array
     {
@@ -50,7 +50,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface>
      */
     protected function getQuoteExpanderPlugins(): array
     {

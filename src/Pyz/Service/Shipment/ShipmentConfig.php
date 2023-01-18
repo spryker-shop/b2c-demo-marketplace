@@ -13,7 +13,7 @@ use Spryker\Service\Shipment\ShipmentConfig as SprykerShipmentConfig;
 class ShipmentConfig extends SprykerShipmentConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getShipmentHashFields(): array
     {

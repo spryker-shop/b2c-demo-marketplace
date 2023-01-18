@@ -19,7 +19,7 @@ interface MerchantProductOfferDataImportFacadeInterface extends SprykerMerchantP
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
     public function importPyzCombinedMerchantProductOfferData(
-        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
+        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer;
 
     /**
@@ -28,6 +28,6 @@ interface MerchantProductOfferDataImportFacadeInterface extends SprykerMerchantP
      * @return \Generated\Shared\Transfer\DataImporterReportTransfer
      */
     public function importPyzCombinedMerchantProductOfferStoreData(
-        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
+        ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer;
 }

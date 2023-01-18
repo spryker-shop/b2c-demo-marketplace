@@ -11,6 +11,12 @@ use Pyz\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider;
 use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 use Spryker\Zed\MerchantSalesOrder\Dependency\Facade\MerchantSalesOrderToSalesFacadeInterface;
 
+/**
+ * @method \Spryker\Zed\MerchantSalesOrder\Persistence\MerchantSalesOrderEntityManagerInterface getEntityManager()
+ * @method \Spryker\Zed\MerchantSalesOrder\Business\MerchantSalesOrderFacadeInterface getFacade()
+ * @method \Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderConfig getConfig()
+ * @method \Spryker\Zed\MerchantSalesOrder\Persistence\MerchantSalesOrderRepositoryInterface getRepository()
+ */
 class MerchantSalesOrderCommunicationFactory extends AbstractCommunicationFactory
 {
     /**

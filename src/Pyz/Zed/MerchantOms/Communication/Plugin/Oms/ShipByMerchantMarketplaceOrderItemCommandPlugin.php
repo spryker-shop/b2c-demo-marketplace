@@ -7,6 +7,11 @@
 
 namespace Pyz\Zed\MerchantOms\Communication\Plugin\Oms;
 
+/**
+ * @method \Spryker\Zed\MerchantOms\Business\MerchantOmsFacadeInterface getFacade()
+ * @method \Pyz\Zed\MerchantOms\MerchantOmsConfig getConfig()
+ * @method \Pyz\Zed\MerchantOms\Communication\MerchantOmsCommunicationFactory getFactory()
+ */
 class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCommandPlugin
 {
     /**

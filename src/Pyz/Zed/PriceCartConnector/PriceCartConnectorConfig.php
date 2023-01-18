@@ -18,7 +18,7 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
     protected const IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS = false;
 
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getItemFieldsForIsSameItemComparison(): array
     {
