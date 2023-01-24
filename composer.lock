@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "389d1ef619ab49d2a519d5675a731bb6",
+    "content-hash": "a4aa67722b98a32cc4e880c0adea9ff6",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6881,7 +6881,7 @@
         },
         {
             "name": "spryker-feature/promotions-discounts",
-            "version": "dev-master",
+            "version": "202212.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/promotions-discounts.git",
@@ -6902,7 +6902,6 @@
                 "spryker/discount": "^9.28.0",
                 "spryker/discount-promotion": "^4.9.0"
             },
-            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -62976,12 +62975,6 @@
             "alias_normalized": "202304.0"
         },
         {
-            "package": "spryker-feature/promotions-discounts",
-            "version": "9999999-dev",
-            "alias": "202304.0",
-            "alias_normalized": "202304.0"
-        },
-        {
             "package": "spryker-feature/tax",
             "version": "9999999-dev",
             "alias": "202304.0",
@@ -63001,7 +62994,6 @@
         "spryker-feature/product": 20,
         "spryker-feature/product-labels": 20,
         "spryker-feature/product-lists": 20,
-        "spryker-feature/promotions-discounts": 20,
         "spryker-feature/tax": 20,
         "spryker-feature/development-tools": 20,
         "spryker-sdk/integrator": 20,
