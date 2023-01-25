@@ -56,7 +56,7 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
 
         $this->productRepository->addProductConcrete(
             $productConcreteEntity,
-            $dataSet[static::COLUMN_ABSTRACT_SKU]
+            $dataSet[static::COLUMN_ABSTRACT_SKU],
         );
 
         $this->createOrUpdateProductConcreteLocalizedAttributesEntities($dataSet, $productConcreteEntity->getIdProduct());
@@ -137,7 +137,7 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
      */
     protected function createOrUpdateProductConcreteLocalizedAttributesEntities(
         DataSetInterface $dataSet,
-        int $idProduct
+        int $idProduct,
     ): void {
         $productConcreteLocalizedTransfers = $this->getProductConcreteLocalizedTransfers($dataSet);
 
@@ -167,7 +167,7 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
      */
     protected function createOrUpdateProductConcreteSearchEntities(
         int $idProduct,
-        SpyProductSearchEntityTransfer $productSearchEntityTransfer
+        SpyProductSearchEntityTransfer $productSearchEntityTransfer,
     ): void {
         $productSearchEntity = SpyProductSearchQuery::create()
             ->filterByFkProduct($idProduct)
