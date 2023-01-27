@@ -16,7 +16,7 @@ use Spryker\Zed\ProductStorage\ProductStorageDependencyProvider as SprykerProduc
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface>
      */
     protected function getProductAbstractStorageExpanderPlugins(): array
     {

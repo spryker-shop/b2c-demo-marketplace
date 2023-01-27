@@ -179,7 +179,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -430,7 +430,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
      *
      * @return array
      */
-    public function getConsolePostRunHookPlugins(Container $container)
+    public function getConsolePostRunHookPlugins(Container $container): array
     {
         return [
             new EventBehaviorPostHookPlugin(),
@@ -440,7 +440,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     public function getApplicationPlugins(Container $container): array
     {
@@ -454,7 +454,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\EventDispatcher\EventSubscriberInterface[]
+     * @return array<\Symfony\Component\EventDispatcher\EventSubscriberInterface>
      */
     public function getEventSubscriber(Container $container): array
     {

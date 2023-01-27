@@ -34,7 +34,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     public function getPyzCombinedMerchantProductOfferDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getPyzCombinedMerchantProductOfferDataImporterConfiguration()
+            $this->getConfig()->getPyzCombinedMerchantProductOfferDataImporterConfiguration(),
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
@@ -58,7 +58,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     public function getPyzCombinedMerchantProductOfferStoreDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getPyzCombinedMerchantProductOfferStoreDataImporterConfiguration()
+            $this->getConfig()->getPyzCombinedMerchantProductOfferStoreDataImporterConfiguration(),
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
@@ -80,7 +80,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
     public function getPyzConditionalCsvDataImporterFromConfig(
-        DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
+        DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterConditional {
         $csvReader = $this->createCsvReaderFromConfig($dataImporterConfigurationTransfer->getReaderConfiguration());
 
@@ -95,7 +95,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
      */
     public function createPyzDataImporterConditional(
         string $importType,
-        DataReaderInterface $reader
+        DataReaderInterface $reader,
     ): DataImporterConditional {
         return new DataImporterConditional($importType, $reader, $this->getGracefulRunnerFacade());
     }

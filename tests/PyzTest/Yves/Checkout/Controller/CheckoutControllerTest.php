@@ -51,18 +51,22 @@ class CheckoutControllerTest extends Unit
      * @var string
      */
     public const CUSTOMER_URL = '/checkout/customer';
+
     /**
      * @var string
      */
     public const CUSTOMER_ACTION = 'customerAction';
+
     /**
      * @var string
      */
     public const CUSTOMER_ROUTE = 'checkout-customer';
+
     /**
      * @var string
      */
     public const GUEST_FORM = 'guestForm';
+
     /**
      * @var string
      */
@@ -72,14 +76,17 @@ class CheckoutControllerTest extends Unit
      * @var string
      */
     public const ADDRESS_URL = '/checkout/address';
+
     /**
      * @var string
      */
     public const ADDRESS_ACTION = 'addressAction';
+
     /**
      * @var string
      */
     public const ADDRESS_ROUTE = 'checkout-address';
+
     /**
      * @var string
      */
@@ -89,14 +96,17 @@ class CheckoutControllerTest extends Unit
      * @var string
      */
     public const SHIPMENT_URL = '/checkout/shipment';
+
     /**
      * @var string
      */
     public const SHIPMENT_ACTION = 'shipmentAction';
+
     /**
      * @var string
      */
     public const SHIPMENT_ROUTE = 'checkout-shipment';
+
     /**
      * @var string
      */
@@ -106,14 +116,17 @@ class CheckoutControllerTest extends Unit
      * @var string
      */
     public const PAYMENT_URL = '/checkout/payment';
+
     /**
      * @var string
      */
     public const PAYMENT_ACTION = 'paymentAction';
+
     /**
      * @var string
      */
     public const PAYMENT_ROUTE = 'checkout-payment';
+
     /**
      * @var string
      */
@@ -123,14 +136,17 @@ class CheckoutControllerTest extends Unit
      * @var string
      */
     public const SUMMARY_URL = '/checkout/summary';
+
     /**
      * @var string
      */
     public const SUMMARY_ACTION = 'summaryAction';
+
     /**
      * @var string
      */
     public const SUMMARY_ROUTE = 'checkout-summary';
+
     /**
      * @var string
      */
@@ -140,10 +156,12 @@ class CheckoutControllerTest extends Unit
      * @var string
      */
     public const PLACE_ORDER_URL = '/checkout/place-order';
+
     /**
      * @var string
      */
     public const PLACE_ORDER_ACTION = 'placeOrderAction';
+
     /**
      * @var string
      */
@@ -174,7 +192,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    protected function skipIfCi()
+    protected function skipIfCi(): void
     {
         if (getenv('CIRCLECI') || getenv('TRAVIS')) {
             $this->markTestSkipped('CircleCi/Travis not set up properly');
@@ -184,7 +202,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testIndexAction()
+    public function testIndexAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $checkoutController = new CheckoutController();
@@ -202,7 +220,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testCustomerActionShouldRenderRegisterAndLoginForms()
+    public function testCustomerActionShouldRenderRegisterAndLoginForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $request = Request::createFromGlobals();
@@ -218,7 +236,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testCustomerAction()
+    public function testCustomerAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->setQuoteForCustomer();
@@ -246,7 +264,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testAddressActionShouldRenderAddressForms()
+    public function testAddressActionShouldRenderAddressForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->setQuoteForAddress();
@@ -263,7 +281,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testAddressAction()
+    public function testAddressAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->setQuoteForAddress();
@@ -297,7 +315,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testShipmentActionShouldRenderShipmentForms()
+    public function testShipmentActionShouldRenderShipmentForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->setQuoteForShipment();
@@ -314,7 +332,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testShipmentAction()
+    public function testShipmentAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->setQuoteForShipment();
@@ -337,7 +355,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testPaymentActionShouldRenderPaymentForms()
+    public function testPaymentActionShouldRenderPaymentForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->allowMoreThenOneRequestToZed();
@@ -358,7 +376,7 @@ class CheckoutControllerTest extends Unit
      *
      * @return void
      */
-    public function testPaymentAction()
+    public function testPaymentAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->allowMoreThenOneRequestToZed();
@@ -388,7 +406,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testSummaryActionShouldRenderSummaryPage()
+    public function testSummaryActionShouldRenderSummaryPage(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->setQuoteForSummary();
@@ -406,7 +424,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testSummaryAction()
+    public function testSummaryAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->allowMoreThenOneRequestToZed();
@@ -430,7 +448,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    public function testPlaceOrder()
+    public function testPlaceOrder(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
         $this->markTestIncomplete('Request data missing');
@@ -447,7 +465,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    private function setQuoteForCustomer()
+    private function setQuoteForCustomer(): void
     {
         $quoteTransfer = new QuoteTransfer();
         $quoteTransfer->setPriceMode(PriceConfig::PRICE_MODE_GROSS);
@@ -462,7 +480,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    private function setQuoteForAddress()
+    private function setQuoteForAddress(): void
     {
         $quoteTransfer = new QuoteTransfer();
         $quoteTransfer->setPriceMode(PriceConfig::PRICE_MODE_GROSS);
@@ -481,7 +499,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    private function setQuoteForShipment()
+    private function setQuoteForShipment(): void
     {
         $quoteTransfer = new QuoteTransfer();
         $quoteTransfer->setPriceMode(PriceConfig::PRICE_MODE_GROSS);
@@ -515,7 +533,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    private function setQuoteForPayment()
+    private function setQuoteForPayment(): void
     {
         $quoteTransfer = new QuoteTransfer();
         $quoteTransfer->setPriceMode(PriceConfig::PRICE_MODE_GROSS);
@@ -561,7 +579,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    private function setQuoteForSummary()
+    private function setQuoteForSummary(): void
     {
         $quoteTransfer = new QuoteTransfer();
         $quoteTransfer->setPriceMode(PriceConfig::PRICE_MODE_GROSS);
@@ -617,7 +635,7 @@ class CheckoutControllerTest extends Unit
      *
      * @return array
      */
-    protected function getFormData($url, $actionName, $routeName, $formName)
+    protected function getFormData($url, $actionName, $routeName, $formName): array
     {
         $request = Request::create($url, 'GET');
         $request->request->set('_route', $routeName);
@@ -632,7 +650,7 @@ class CheckoutControllerTest extends Unit
      *
      * @return array
      */
-    protected function getFormDataFromResult(FormView $formView)
+    protected function getFormDataFromResult(FormView $formView): array
     {
         $customerData = [];
         foreach ($formView->getIterator() as $item) {
@@ -645,7 +663,7 @@ class CheckoutControllerTest extends Unit
     /**
      * @return void
      */
-    protected function allowMoreThenOneRequestToZed()
+    protected function allowMoreThenOneRequestToZed(): void
     {
         $reflectionProperty = new ReflectionProperty(HttpClient::class, 'alreadyRequested');
         $reflectionProperty->setAccessible(true);
