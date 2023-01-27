@@ -20,9 +20,9 @@ use SprykerShop\Yves\WishlistPage\WishlistPageDependencyProvider as SprykerWishl
 class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvider
 {
     /**
-     * @return \Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface>
      */
-    protected function getWishlistItemExpanderPlugins()
+    protected function getWishlistItemExpanderPlugins(): array
     {
         return [
             new ProductViewPriceExpanderPlugin(),
@@ -32,7 +32,7 @@ class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvid
     }
 
     /**
-     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemRequestExpanderPluginInterface[]
+     * @return array<\SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemRequestExpanderPluginInterface>
      */
     protected function getWishlistItemRequestExpanderPlugins(): array
     {
@@ -44,7 +44,7 @@ class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvid
     }
 
     /**
-     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemMetaFormExpanderPluginInterface[]
+     * @return array<\SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemMetaFormExpanderPluginInterface>
      */
     protected function getWishlistItemMetaFormExpanderPlugins(): array
     {

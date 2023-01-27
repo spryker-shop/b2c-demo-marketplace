@@ -55,9 +55,9 @@ class AclConfig extends SprykerAclConfig
     }
 
     /**
-     * @param string[][] $installerRules
+     * @param array<array<string>> $installerRules
      *
-     * @return string[][]
+     * @return array<array<string>>
      */
     protected function addPyzMerchantPortalInstallerRules(array $installerRules): array
     {
@@ -95,7 +95,7 @@ class AclConfig extends SprykerAclConfig
     }
 
     /**
-     * @return mixed[]
+     * @return array<mixed>
      */
     protected function addPyzInstallerRootRole(): array
     {
