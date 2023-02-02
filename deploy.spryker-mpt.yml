@@ -1,11 +1,9 @@
 version: "0.1"
-
 x-real-ip: &real-ip
     real-ip:
         from:
             - 10.0.0.0/8 # AWS VPC network
             - 103.21.244.0/22 # Cloudflare
-
 x-frontend-auth: &frontend-auth
     <<: *real-ip
     auth:
@@ -16,13 +14,11 @@ x-frontend-auth: &frontend-auth
         exclude:
             - '${ALLOWED_IP}' # AWS gateway
             - 185.60.20.0/24 # PayOne
-
 namespace: spryker-cloud
 tag: '1.0'
-
 environment: docker.dev
 image:
-    tag: spryker/php:7.4-alpine3.12
+    tag: spryker/php:8.1
     environment:
         SPRYKER_DNS_RESOLVER_IP: "10.105.0.2"
         SPRYKER_DEFAULT_STORE: "DE"
@@ -31,15 +27,18 @@ image:
         SPRYKER_HOOK_AFTER_DEPLOY: "true"
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production --no-ansi -vvv"
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive --no-ansi -vvv"
+        SPRYKER_PRODUCT_CONFIGURATOR_HOST: dtc.mp-t.demo-spryker.com
+        SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
     php:
         enabled-extensions:
             - blackfire
             - newrelic
-
+    node:
+        version: 16
+        npm: 8
 composer:
     mode: --no-dev
     autoload: --classmap-authoritative
-
 assets:
     image: fholzer/nginx-brotli:v1.18.0
     mode: production
@@ -49,7 +48,6 @@ assets:
         gzip:
             static: true
             level: 5
-
 regions:
     EU:
         services:
@@ -57,7 +55,6 @@ regions:
                 database: spryker_mpt
                 username: spryker
                 password: secret
-
         stores:
             DE:
                 services:
@@ -69,7 +66,6 @@ regions:
                         namespace: de_search
                     session:
                         namespace: 2
-
             AT:
                 services:
                     broker:
@@ -80,15 +76,32 @@ regions:
                         namespace: at_search
                     session:
                         namespace: 4
-
 groups:
     EU:
         region: EU
         applications:
+            Redirects:
+                application: static
+                endpoints:
+                    mp-t.demo-spryker.com:
+                        store: DE
+                        redirect:
+                            code: 302
+                            url: www.de.mp-t.demo-spryker.com
+                    www.mp-t.demo-spryker.com:
+                        store: DE
+                        redirect:
+                            code: 302
+                            url: www.de.mp-t.demo-spryker.com
+                    backoffice.mp-t.demo-spryker.com:
+                        store: DE
+                        redirect:
+                            code: 302
+                            url:  backoffice.de.mp-t.demo-spryker.com
             yves:
                 application: yves
                 endpoints:
-                    date-time-configurator-example.mp-t.demo-spryker.com:
+                    dtc.mp-t.demo-spryker.com:
                         entry-point: Configurator
                     www.de.mp-t.demo-spryker.com:
                         store: DE
@@ -148,13 +161,13 @@ groups:
                         primal: true
                         services:
                             session:
-                                namespace: 7
+                                namespace: 5
                     mp.at.mp-t.demo-spryker.com:
                         entry-point: MerchantPortal
                         store: AT
                         services:
                             session:
-                                namespace: 8
+                                namespace: 6
 services:
     database:
         engine: mysql
@@ -195,23 +208,17 @@ services:
         engine: mailhog
         endpoints:
             mail.mp-t.demo-spryker.com:
-
 docker:
-
     blackfire:
         enabled: true
-
     ssl:
         enabled: true
         redirect: true
-
     debug:
         enabled: false
         xdebug:
             enabled: false
-
     testing:
         store: DE
-
     mount:
         baked:
