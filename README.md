@@ -34,7 +34,7 @@ To install the B2C Demo Marketplace:
 1. Create a project folder and clone the B2C Demo Marketplace and the Docker SDK:
 ```bash
 mkdir spryker-b2c-marketplace && cd spryker-b2c-marketplace
-git clone https://github.com/spryker-shop/b2c-demo-marketplace.git ./
+git clone https://github.com/spryker/b2c-demo-marketplace-internal.git ./
 git clone git@github.com:spryker/docker-sdk.git docker
 ```
 
