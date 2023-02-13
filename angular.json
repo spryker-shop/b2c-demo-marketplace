@@ -102,13 +102,15 @@
                         "jestConfig": "frontend/merchant-portal/jest.config.ts",
                         "passWithNoTests": true
                     },
-                    "outputs": ["coverage/."]
+                    "outputs": ["{projectRoot}/coverage"]
                 }
             }
         }
     },
     "cli": {
-        "analytics": false
-    },
-    "defaultProject": "merchant-portal"
+        "analytics": false,
+        "cache": {
+            "enabled": false
+        }
+    }
 }

@@ -16,11 +16,13 @@ const getCopyConfig = (appSettings) =>
                 noErrorOnMissing: true,
             });
         }
+
         return copyConfig;
     }, []);
 
 const getCopyStaticConfig = (appSettings) => {
     const staticAssetsPath = appSettings.paths.assets.staticAssets;
+
     if (fs.existsSync(staticAssetsPath)) {
         return [
             {
@@ -30,6 +32,7 @@ const getCopyStaticConfig = (appSettings) => {
             },
         ];
     }
+
     return [];
 };
 
