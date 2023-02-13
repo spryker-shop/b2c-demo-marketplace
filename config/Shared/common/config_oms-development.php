@@ -52,5 +52,5 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = array_replace(
         NopaymentConfig::PAYMENT_PROVIDER_NAME => 'Nopayment01',
         GiftCardConfig::PROVIDER_NAME => 'DummyPayment01',
         DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE => 'MarketplacePayment01',
-    ]
+    ],
 );

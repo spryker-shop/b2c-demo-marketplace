@@ -26,7 +26,7 @@ class ProductOfferValidityDataImportConfig extends SprykerProductOfferValidityDa
 
         return $this->buildImporterConfiguration(
             $moduleDataImportDirectory . 'combined_merchant_product_offer.csv',
-            static::PYZ_IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY
+            static::PYZ_IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY,
         );
     }
 }
