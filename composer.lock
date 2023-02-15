@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e644ec5acf578d9daa2ebedcd1301066",
+    "content-hash": "578ac2e93a71e6c67648ede0e144eb6b",
     "packages": [
         {
             "name": "async-aws/core",
@@ -29850,20 +29850,20 @@
         },
         {
             "name": "spryker/merchant-profile",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-profile.git",
-                "reference": "32436d94c3c264ffcd08914a8afb27340c4c925f"
+                "reference": "1b684ffd19550d3c03458463bd858bbc7d63c35f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-profile/zipball/32436d94c3c264ffcd08914a8afb27340c4c925f",
-                "reference": "32436d94c3c264ffcd08914a8afb27340c4c925f",
+                "url": "https://api.github.com/repos/spryker/merchant-profile/zipball/1b684ffd19550d3c03458463bd858bbc7d63c35f",
+                "reference": "1b684ffd19550d3c03458463bd858bbc7d63c35f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.0",
                 "spryker/country": "^3.0.0",
                 "spryker/glossary": "^3.0.0",
                 "spryker/kernel": "^3.33.0",
@@ -29896,9 +29896,9 @@
             ],
             "description": "MerchantProfile module",
             "support": {
-                "source": "https://github.com/spryker/merchant-profile/tree/1.0.1"
+                "source": "https://github.com/spryker/merchant-profile/tree/1.0.2"
             },
-            "time": "2021-12-15T15:02:47+00:00"
+            "time": "2022-12-29T12:04:01+00:00"
         },
         {
             "name": "spryker/merchant-profile-data-import",
