@@ -219,7 +219,6 @@
         "spryker/secrets-manager-aws": "^1.0.1",
         "spryker/security-blocker-rest-api": "^1.0.0",
         "spryker/security-merchant-portal-gui": "^2.0.0",
-        "spryker/security-oauth-user": "^1.1.2",
         "spryker/security-system-user": "^1.0.0",
         "spryker/shipment-cart-connector": "^2.1.1",
         "spryker/shipment-checkout-connector": "^2.0.4",
