@@ -96,3 +96,6 @@ c3.php
 .phpstorm.meta.php
 .githook_local
 /architecture-baseline.json
+
+# angular
+/.angular/
