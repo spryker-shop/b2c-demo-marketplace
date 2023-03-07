@@ -248,7 +248,6 @@
         "filp/whoops": "^2.7",
         "phpstan/phpstan": "^1.9.2",
         "phpunit/phpunit": "^9.5.2",
-        "sllh/composer-versions-check": "^2.0.5",
         "spryker-feature/development-tools": "dev-master as 202304.0",
         "spryker-sdk/integrator": "dev-master",
         "spryker-sdk/phpstan-spryker": "^0.4.0",
@@ -290,15 +289,12 @@
         },
         "use-include-path": true,
         "sort-packages": true,
-        "github-protocols": [
-            "https"
-        ],
+        "github-protocols": ["https"],
         "process-timeout": 900,
         "chromium-revision": 814168,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "composer/package-versions-deprecated": true,
-            "sllh/composer-versions-check": true,
             "spryker-sdk/integrator": true
         }
     },
