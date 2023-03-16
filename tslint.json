@@ -6,6 +6,11 @@
         }
     },
     "linterOptions": {
-        "exclude": ["vendor/**", "**/DateTimeConfiguratorPageExample/**", "**/node_modules/**"]
+        "exclude": [
+            "vendor/**",
+            "**/node_modules/**",
+            "src/Pyz/Zed/*/Presentation/Components/**",
+            "**/DateTimeConfiguratorPageExample/**"
+        ]
     }
 }
