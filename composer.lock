@@ -14607,6 +14607,47 @@
             "time": "2022-08-16T17:27:05+00:00"
         },
         {
+            "name": "spryker/acl-merchant-portal-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/acl-merchant-portal-extension.git",
+                "reference": "d850f2b7a8d94e696f037b62b7e0da0b64e1db62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/acl-merchant-portal-extension/zipball/d850f2b7a8d94e696f037b62b7e0da0b64e1db62",
+                "reference": "d850f2b7a8d94e696f037b62b7e0da0b64e1db62",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "AclMerchantPortalExtension module",
+            "support": {
+                "source": "https://github.com/spryker/acl-merchant-portal-extension/tree/1.0.0"
+            },
+            "time": "2023-03-10T14:11:16+00:00"
+        },
+        {
             "name": "spryker/agent",
             "version": "1.5.1",
             "source": {
@@ -43936,20 +43977,21 @@
         },
         {
             "name": "spryker/sales-merchant-portal-gui",
-            "version": "2.0.1",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-merchant-portal-gui.git",
-                "reference": "265546ee7f45e458153e0488043604b6d0455cc6"
+                "reference": "724bb1e391efff3a16319de45abc5f85469874df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/265546ee7f45e458153e0488043604b6d0455cc6",
-                "reference": "265546ee7f45e458153e0488043604b6d0455cc6",
+                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/724bb1e391efff3a16319de45abc5f85469874df",
+                "reference": "724bb1e391efff3a16319de45abc5f85469874df",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
+                "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/currency": "^3.0.0",
                 "spryker/dashboard-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/gui-table": "^2.0.0",
@@ -43995,9 +44037,9 @@
             ],
             "description": "SalesMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/2.0.1"
+                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/2.1.1"
             },
-            "time": "2023-02-20T09:40:44+00:00"
+            "time": "2023-03-15T14:30:14+00:00"
         },
         {
             "name": "spryker/sales-merchant-portal-gui-extension",
@@ -51464,22 +51506,23 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "2.0.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "d9985b0ca900be6fe8c25e19856ac26746e2abaf"
+                "reference": "8c3419df906a2a377ec3e3644b80901d160ede22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/d9985b0ca900be6fe8c25e19856ac26746e2abaf",
-                "reference": "d9985b0ca900be6fe8c25e19856ac26746e2abaf",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/8c3419df906a2a377ec3e3644b80901d160ede22",
+                "reference": "8c3419df906a2a377ec3e3644b80901d160ede22",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
+                "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.13.0",
@@ -51512,9 +51555,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/2.0.0"
+                "source": "https://github.com/spryker/zed-ui/tree/2.1.1"
             },
-            "time": "2023-02-10T12:12:31+00:00"
+            "time": "2023-03-15T14:30:14+00:00"
         },
         {
             "name": "stella-maris/clock",
