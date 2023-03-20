@@ -51584,22 +51584,23 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "2.0.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "d9985b0ca900be6fe8c25e19856ac26746e2abaf"
+                "reference": "8c3419df906a2a377ec3e3644b80901d160ede22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/d9985b0ca900be6fe8c25e19856ac26746e2abaf",
-                "reference": "d9985b0ca900be6fe8c25e19856ac26746e2abaf",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/8c3419df906a2a377ec3e3644b80901d160ede22",
+                "reference": "8c3419df906a2a377ec3e3644b80901d160ede22",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
+                "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.13.0",
@@ -51632,9 +51633,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/2.0.0"
+                "source": "https://github.com/spryker/zed-ui/tree/2.1.1"
             },
-            "time": "2023-02-10T12:12:31+00:00"
+            "time": "2023-03-15T14:30:14+00:00"
         },
         {
             "name": "stella-maris/clock",
