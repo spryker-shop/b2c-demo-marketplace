@@ -105,7 +105,7 @@ sections:
             command: 'vendor/bin/console data:import --config=data/import/local/full_EU.yml'
 
         apply-scheduled-prices:
-            command: 'vendor/bin/console console price-product-schedule:apply'
+            command: 'vendor/bin/console price-product-schedule:apply'
 
         update-product-labels:
             command: 'vendor/bin/console product-label:relations:update'
