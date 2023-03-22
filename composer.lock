@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "038e6baa942ea27d3dcebb4206a025ff",
+    "content-hash": "dc068e1620363298807f78be92e12ac7",
     "packages": [
         {
             "name": "async-aws/core",
@@ -23381,23 +23381,24 @@
         },
         {
             "name": "spryker/customer-access-storage",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/customer-access-storage.git",
-                "reference": "56b2696a9b6862c88f1eb1ab5283e210e87d132b"
+                "reference": "b503a8c134d60ca49a1010efb8f332cec79993a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/customer-access-storage/zipball/56b2696a9b6862c88f1eb1ab5283e210e87d132b",
-                "reference": "56b2696a9b6862c88f1eb1ab5283e210e87d132b",
+                "url": "https://api.github.com/repos/spryker/customer-access-storage/zipball/b503a8c134d60ca49a1010efb8f332cec79993a5",
+                "reference": "b503a8c134d60ca49a1010efb8f332cec79993a5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
+                "php": ">=8.0",
                 "spryker/customer-access": "^1.0.0",
                 "spryker/kernel": "^3.37.0",
                 "spryker/propel-orm": "^1.5.0",
+                "spryker/publisher-extension": "^1.0.0",
                 "spryker/storage": "^3.0.0",
                 "spryker/synchronization": "^0.2.0 || ^1.0.0",
                 "spryker/synchronization-behavior": "^1.0.0",
@@ -23430,9 +23431,9 @@
             ],
             "description": "CustomerAccessStorage module",
             "support": {
-                "source": "https://github.com/spryker/customer-access-storage/tree/master"
+                "source": "https://github.com/spryker/customer-access-storage/tree/1.8.0"
             },
-            "time": "2020-07-03T07:32:24+00:00"
+            "time": "2023-03-20T11:46:22+00:00"
         },
         {
             "name": "spryker/customer-extension",
@@ -34575,20 +34576,20 @@
         },
         {
             "name": "spryker/price-product-schedule",
-            "version": "2.5.0",
+            "version": "2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/price-product-schedule.git",
-                "reference": "53fb152dc5466bdf17a9a5ac3003605770c1e2d8"
+                "reference": "66adb058e3c660b3a101c3cf6afde62cedac40d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/price-product-schedule/zipball/53fb152dc5466bdf17a9a5ac3003605770c1e2d8",
-                "reference": "53fb152dc5466bdf17a9a5ac3003605770c1e2d8",
+                "url": "https://api.github.com/repos/spryker/price-product-schedule/zipball/66adb058e3c660b3a101c3cf6afde62cedac40d1",
+                "reference": "66adb058e3c660b3a101c3cf6afde62cedac40d1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.0",
                 "spryker/currency": "^3.8.0",
                 "spryker/kernel": "^3.32.0",
                 "spryker/price-product": "^4.35.0",
@@ -34623,9 +34624,9 @@
             ],
             "description": "PriceProductSchedule module",
             "support": {
-                "source": "https://github.com/spryker/price-product-schedule/tree/2.5.0"
+                "source": "https://github.com/spryker/price-product-schedule/tree/2.5.1"
             },
-            "time": "2022-04-15T13:47:42+00:00"
+            "time": "2023-03-14T10:34:11+00:00"
         },
         {
             "name": "spryker/price-product-schedule-data-import",
@@ -44042,16 +44043,16 @@
         },
         {
             "name": "spryker/sales-merchant-portal-gui",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-merchant-portal-gui.git",
-                "reference": "266140fd960e78feb91bf8aef2430663955a0a9e"
+                "reference": "724bb1e391efff3a16319de45abc5f85469874df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/266140fd960e78feb91bf8aef2430663955a0a9e",
-                "reference": "266140fd960e78feb91bf8aef2430663955a0a9e",
+                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/724bb1e391efff3a16319de45abc5f85469874df",
+                "reference": "724bb1e391efff3a16319de45abc5f85469874df",
                 "shasum": ""
             },
             "require": {
@@ -44102,9 +44103,9 @@
             ],
             "description": "SalesMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/2.1.0"
+                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/2.1.1"
             },
-            "time": "2023-03-10T14:11:16+00:00"
+            "time": "2023-03-15T14:30:14+00:00"
         },
         {
             "name": "spryker/sales-merchant-portal-gui-extension",
@@ -51584,22 +51585,23 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "2.0.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "d9985b0ca900be6fe8c25e19856ac26746e2abaf"
+                "reference": "8c3419df906a2a377ec3e3644b80901d160ede22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/d9985b0ca900be6fe8c25e19856ac26746e2abaf",
-                "reference": "d9985b0ca900be6fe8c25e19856ac26746e2abaf",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/8c3419df906a2a377ec3e3644b80901d160ede22",
+                "reference": "8c3419df906a2a377ec3e3644b80901d160ede22",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
+                "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.13.0",
@@ -51632,9 +51634,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/2.0.0"
+                "source": "https://github.com/spryker/zed-ui/tree/2.1.1"
             },
-            "time": "2023-02-10T12:12:31+00:00"
+            "time": "2023-03-15T14:30:14+00:00"
         },
         {
             "name": "stella-maris/clock",
@@ -63166,5 +63168,5 @@
     "platform-overrides": {
         "php": "8.0.9"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
