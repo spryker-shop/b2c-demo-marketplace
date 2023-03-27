@@ -175,7 +175,7 @@
         "spryker/orders-rest-api": "^4.11.0",
         "spryker/payment-cart-connector": "^1.0.1",
         "spryker/payments-rest-api": "^1.1.1",
-        "spryker/price-cart-connector": "^6.8.0",
+        "spryker/price-cart-connector": "^6.9.0",
         "spryker/price-product-offer-volumes-rest-api": "^1.0.1",
         "spryker/price-product-volumes-rest-api": "^1.1.0",
         "spryker/product-alternative-product-label-connector": "^1.1.1",
@@ -295,8 +295,7 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "composer/package-versions-deprecated": true,
-            "spryker-sdk/integrator": true,
-            "sllh/composer-versions-check": true
+            "spryker-sdk/integrator": true
         }
     },
     "scripts": {
