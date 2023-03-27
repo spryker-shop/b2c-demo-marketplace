@@ -15,6 +15,8 @@ image:
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive --no-ansi -vvv"
         SPRYKER_PRODUCT_CONFIGURATOR_HOST: date-time-configurator.b2c-mp.security.demo-spryker.com
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
+        SPRYKER_YVES_HOST_DE: www.de.b2c.internal-security.demo-spryker.com
+        SPRYKER_YVES_HOST_AT: www.at.b2c.internal-security.demo-spryker.com
     node:
         version: 16
         npm: 8
