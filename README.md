@@ -129,7 +129,7 @@ You've set up your Spryker B2C Demo Marketplace and can access your applications
 
 This section describes the most common issues related to the installation of the B2C Demo Marketplace.
 
-For a complete troubleshooting, see [Troubleshooting Spryker in Docker issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-docker-issues) or [Troubleshooting Spryker in Vagrant installation issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-vagrant-installation-issues).
+For a complete troubleshooting, see [Troubleshooting Spryker in Docker issues](https://documentation.spryker.com/docs/troubleshooting-spryker-in-docker-issues).
 
 **when**
 
@@ -168,12 +168,6 @@ docker/sdk up --build --assets --data
 ## Installation of B2C Demo Marketplace with Docker
 
 For detailed installation instructions of Spryker with Docker, see [Installing Spryker with Docker](https://documentation.spryker.com/docs/installing-spryker-with-docker).
-
-
-## Installation of B2C Demo Marketplace with Vagrant
-For detailed installation instructions of Spryker with Vagrant, see [Installing with Development Virtual Machine](https://documentation.spryker.com/docs/dev-getting-started#installing-spryker-with-development-virtual-machine).
-
-
 
 ## Glue API reference
 

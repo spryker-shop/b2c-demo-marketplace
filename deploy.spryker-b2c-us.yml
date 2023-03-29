@@ -50,6 +50,7 @@ image:
         SPRYKER_HOOK_AFTER_DEPLOY: "true"
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r US/production --no-ansi -vvv"
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r US/destructive --no-ansi -vvv"
+        SPRYKER_YVES_HOST_US: www.b2c-staging-us.cloud.spryker.toys
     php:
         enabled-extensions:
             - blackfire
