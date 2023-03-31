@@ -9,6 +9,11 @@ namespace PyzTest\Zed\ProductRelation;
 
 use Codeception\Actor;
 use Codeception\Scenario;
+use Orm\Zed\Product\Persistence\SpyProductAbstractQuery;
+use Orm\Zed\ProductRelation\Persistence\SpyProductRelationProductAbstractQuery;
+use Orm\Zed\ProductRelation\Persistence\SpyProductRelationQuery;
+use Orm\Zed\ProductRelation\Persistence\SpyProductRelationStoreQuery;
+use PyzTest\Zed\ProductRelation\PageObject\ProductRelationTablePage;
 
 /**
  * Inherited Methods
@@ -121,6 +126,38 @@ class ProductRelationPresentationTester extends Actor
         $this->waitForElement($buttonElementId, self::ELEMENT_TIMEOUT);
 
         $this->click($buttonElementId);
+
+        return $this;
+    }
+
+    /**
+     * @param string $sku
+     *
+     * @return $this
+     */
+    public function cleanupProductRelationEntities(string $sku)
+    {
+        $productAbstractEntity = SpyProductAbstractQuery::create()->filterBySku($sku)->findOne();
+        $productRelationEntity = SpyProductRelationQuery::create()->filterByFkProductAbstract($productAbstractEntity->getIdProductAbstract())->findOne();
+
+        if ($productRelationEntity) {
+            SpyProductRelationProductAbstractQuery::create()->filterByFkProductRelation($productRelationEntity->getIdProductRelation())->delete();
+            SpyProductRelationStoreQuery::create()->filterByFkProductRelation($productRelationEntity->getIdProductRelation())->delete();
+            $productRelationEntity->delete();
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $productRelationKey
+     *
+     * @return $this
+     */
+    public function checkProductRelationWasCreated(string $productRelationKey)
+    {
+        $this->amOnPage(ProductRelationTablePage::URL);
+        $this->waitForText($productRelationKey, static::ELEMENT_TIMEOUT);
 
         return $this;
     }
