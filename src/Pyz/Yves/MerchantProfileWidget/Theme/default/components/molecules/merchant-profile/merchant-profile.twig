@@ -5,8 +5,16 @@
 {% endblock %}
 
 {% block body %}
-    <div class="{{ config.name }}__top-block grid">
+    <div class="{{ config.name }}__top-block grid" itemscope itemtype="https://schema.org/Organization">
+        <meta itemprop="identifier" content="{{ data.merchantReference }}"/>
+        <meta itemprop="name" content="{{ data.merchantName }}"/>
+        {% if data.merchantStorageProfile.logoUrl %}
+            <meta itemprop="logo" content="{{ data.merchantStorageProfile.logoUrl | trans }}"/>
+        {% endif %}
+
         {{ block('contentInner') }}
+
+        <section class="col col--sm-12 col--lg-12 merchant-review-summary"></section>
     </div>
 
     {{ block('additional') }}
@@ -35,6 +43,8 @@
 {% block detailInner %}
     <div class="col col--sm-12 grid spacing-bottom spacing-bottom--big">
         <div class="col col--sm-9 col--lg-10">
+            <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating"></section>
+
             {% set descriptionGlossaryValue = (data.merchantStorageProfile.descriptionGlossaryKey ?: '') | trans %}
             {% set hasDescriptionTranslation = data.merchantStorageProfile.descriptionGlossaryKey
                 ? data.merchantStorageProfile.descriptionGlossaryKey != descriptionGlossaryValue %}

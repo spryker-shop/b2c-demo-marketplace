@@ -175,9 +175,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      */
     protected function addAvailabilityFacade(Container $container): Container
     {
-        $container[static::FACADE_AVAILABILITY] = function (Container $container) {
+        $container->set(static::FACADE_AVAILABILITY, function (Container $container) {
             return $container->getLocator()->availability()->facade();
-        };
+        });
 
         return $container;
     }
@@ -231,9 +231,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      */
     protected function addProductRelationFacade(Container $container): Container
     {
-        $container[static::FACADE_PRODUCT_RELATION] = function (Container $container) {
+        $container->set(static::FACADE_PRODUCT_RELATION, function (Container $container) {
             return $container->getLocator()->productRelation()->facade();
-        };
+        });
 
         return $container;
     }
