@@ -1,6 +1,7 @@
 # Ignore paths
 /.angular/
 /.github/
+/.idea/
 /docker/
 /vendor/
 /public/*/assets/
