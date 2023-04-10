@@ -48,7 +48,7 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     {
         return [
             new ProductSearchConfigExpanderPlugin(),
-            new MerchantProductMerchantNameSearchConfigExpanderPlugin(), # Marketplace only
+            new MerchantProductMerchantNameSearchConfigExpanderPlugin(),
         ];
     }
 }
