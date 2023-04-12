@@ -44,6 +44,7 @@ use Spryker\Shared\PublishAndSynchronizeHealthCheckSearch\PublishAndSynchronizeH
 use Spryker\Shared\PublishAndSynchronizeHealthCheckStorage\PublishAndSynchronizeHealthCheckStorageConfig;
 use Spryker\Shared\Publisher\PublisherConfig;
 use Spryker\Shared\SalesReturnSearch\SalesReturnSearchConfig;
+use Spryker\Shared\SearchHttp\SearchHttpConfig;
 use Spryker\Shared\TaxProductStorage\TaxProductStorageConfig;
 use Spryker\Shared\TaxStorage\TaxStorageConfig;
 use Spryker\Shared\UrlStorage\UrlStorageConfig;
@@ -140,6 +141,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             MerchantOpeningHoursStorageConfig::MERCHANT_OPENING_HOURS_SYNC_STORAGE_QUEUE,
             AssetStorageConfig::ASSET_SYNC_STORAGE_QUEUE,
             ProductConfigurationStorageConfig::PRODUCT_CONFIGURATION_SYNC_STORAGE_QUEUE,
+            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE,
         ];
     }
 
