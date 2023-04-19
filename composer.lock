@@ -27904,20 +27904,21 @@
         },
         {
             "name": "spryker/merchant",
-            "version": "3.5.1",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant.git",
-                "reference": "0a768f2334191f8c5cec7eb3f8405cb548a89406"
+                "reference": "6dcf160e3a7ebdd1e9d7551f216954aa7efb9e3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant/zipball/0a768f2334191f8c5cec7eb3f8405cb548a89406",
-                "reference": "0a768f2334191f8c5cec7eb3f8405cb548a89406",
+                "url": "https://api.github.com/repos/spryker/merchant/zipball/6dcf160e3a7ebdd1e9d7551f216954aa7efb9e3d",
+                "reference": "6dcf160e3a7ebdd1e9d7551f216954aa7efb9e3d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.0",
+                "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/cart-extension": "^4.0.0",
                 "spryker/checkout-extension": "^1.2.0",
                 "spryker/event": "^2.0.0",
@@ -27954,9 +27955,9 @@
             ],
             "description": "Merchant module",
             "support": {
-                "source": "https://github.com/spryker/merchant/tree/3.5.1"
+                "source": "https://github.com/spryker/merchant/tree/3.6.0"
             },
-            "time": "2022-02-22T13:01:19+00:00"
+            "time": "2023-03-10T14:11:16+00:00"
         },
         {
             "name": "spryker/merchant-categories-rest-api",
