@@ -30302,16 +30302,16 @@
         },
         {
             "name": "spryker/merchant-sales-order",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-sales-order.git",
-                "reference": "fb3cf611314a5e061553eccf967b29370c1f4e02"
+                "reference": "e807869f851879765654e9a81b06bae0b5fed9a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-sales-order/zipball/fb3cf611314a5e061553eccf967b29370c1f4e02",
-                "reference": "fb3cf611314a5e061553eccf967b29370c1f4e02",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-order/zipball/e807869f851879765654e9a81b06bae0b5fed9a1",
+                "reference": "e807869f851879765654e9a81b06bae0b5fed9a1",
                 "shasum": ""
             },
             "require": {
@@ -30326,13 +30326,15 @@
                 "spryker/sales": "^11.18.0",
                 "spryker/sales-extension": "^1.1.0",
                 "spryker/shipment-extension": "^1.1.0",
-                "spryker/transfer": "^3.25.0"
+                "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
+                "spryker/container": "*",
                 "spryker/oms": "*",
                 "spryker/product-offer": "*",
                 "spryker/propel": "*",
+                "spryker/store": "*",
                 "spryker/testify": "*"
             },
             "type": "library",
@@ -30353,9 +30355,9 @@
             ],
             "description": "MerchantSalesOrder module",
             "support": {
-                "source": "https://github.com/spryker/merchant-sales-order/tree/1.2.0"
+                "source": "https://github.com/spryker/merchant-sales-order/tree/1.3.0"
             },
-            "time": "2023-03-10T14:11:16+00:00"
+            "time": "2023-04-19T11:02:07+00:00"
         },
         {
             "name": "spryker/merchant-sales-order-data-export",
@@ -30567,24 +30569,26 @@
         },
         {
             "name": "spryker/merchant-sales-return-gui",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-sales-return-gui.git",
-                "reference": "d46984c7de8d956aba5440226ecba0ce0a844508"
+                "reference": "8238738335aa80e68ccc02f6484836eec465c09c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-sales-return-gui/zipball/d46984c7de8d956aba5440226ecba0ce0a844508",
-                "reference": "d46984c7de8d956aba5440226ecba0ce0a844508",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-return-gui/zipball/8238738335aa80e68ccc02f6484836eec465c09c",
+                "reference": "8238738335aa80e68ccc02f6484836eec465c09c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=8.0",
                 "spryker/kernel": "^3.33.0",
-                "spryker/merchant-sales-order": "^1.0.0",
+                "spryker/merchant-sales-order": "^1.3.0",
                 "spryker/merchant-sales-return": "^1.0.0",
-                "spryker/sales-return-gui-extension": "^1.1.0"
+                "spryker/sales-return-gui-extension": "^1.1.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*"
@@ -30606,9 +30610,9 @@
             ],
             "description": "MerchantSalesReturnGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-sales-return-gui/tree/1.0.1"
+                "source": "https://github.com/spryker/merchant-sales-return-gui/tree/1.1.0"
             },
-            "time": "2021-08-19T10:54:56+00:00"
+            "time": "2023-04-19T11:02:07+00:00"
         },
         {
             "name": "spryker/merchant-sales-return-merchant-user-gui",
@@ -32867,16 +32871,16 @@
         },
         {
             "name": "spryker/oms",
-            "version": "11.25.0",
+            "version": "11.26.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/oms.git",
-                "reference": "6a0d263d50fc8e86bb339ff4b6f2a9f648ff8774"
+                "reference": "36c06c92e3990f5c75c75780a50b03fd2960909f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/oms/zipball/6a0d263d50fc8e86bb339ff4b6f2a9f648ff8774",
-                "reference": "6a0d263d50fc8e86bb339ff4b6f2a9f648ff8774",
+                "url": "https://api.github.com/repos/spryker/oms/zipball/36c06c92e3990f5c75c75780a50b03fd2960909f",
+                "reference": "36c06c92e3990f5c75c75780a50b03fd2960909f",
                 "shasum": ""
             },
             "require": {
@@ -32906,6 +32910,7 @@
                 "spryker/application": "*",
                 "spryker/checkout": "*",
                 "spryker/code-sniffer": "*",
+                "spryker/container": "*",
                 "spryker/customer": "*",
                 "spryker/sales-payment": "*",
                 "spryker/testify": "*"
@@ -32931,9 +32936,9 @@
             ],
             "description": "Oms module",
             "support": {
-                "source": "https://github.com/spryker/oms/tree/11.25.0"
+                "source": "https://github.com/spryker/oms/tree/11.26.1"
             },
-            "time": "2023-03-29T08:35:49+00:00"
+            "time": "2023-04-19T11:02:07+00:00"
         },
         {
             "name": "spryker/oms-discount-connector",
@@ -45411,16 +45416,16 @@
         },
         {
             "name": "spryker/sales-return-gui",
-            "version": "1.4.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-return-gui.git",
-                "reference": "0ce2e7f8bbc132e1c8200dac342bfc3e1519a8d9"
+                "reference": "acb9b425485cacefaa501e9c2cb794b2a653dacc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-return-gui/zipball/0ce2e7f8bbc132e1c8200dac342bfc3e1519a8d9",
-                "reference": "0ce2e7f8bbc132e1c8200dac342bfc3e1519a8d9",
+                "url": "https://api.github.com/repos/spryker/sales-return-gui/zipball/acb9b425485cacefaa501e9c2cb794b2a653dacc",
+                "reference": "acb9b425485cacefaa501e9c2cb794b2a653dacc",
                 "shasum": ""
             },
             "require": {
@@ -45430,7 +45435,7 @@
                 "spryker/glossary": "^3.0.0",
                 "spryker/gui": "^3.45.0",
                 "spryker/kernel": "^3.30.0",
-                "spryker/locale": "^3.0.0",
+                "spryker/locale": "^3.0.0 || ^4.0.0",
                 "spryker/money": "^2.0.0",
                 "spryker/oms": "^11.6.0",
                 "spryker/propel-orm": "^1.0.0",
@@ -45469,26 +45474,26 @@
             ],
             "description": "SalesReturnGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-return-gui/tree/1.4.0"
+                "source": "https://github.com/spryker/sales-return-gui/tree/1.8.0"
             },
-            "time": "2022-10-27T13:58:34+00:00"
+            "time": "2023-04-19T11:02:07+00:00"
         },
         {
             "name": "spryker/sales-return-gui-extension",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-return-gui-extension.git",
-                "reference": "ce2ec459611e94f1981f7dedf055ab02df38b5c6"
+                "reference": "7d8d821091baa8bd8c1b5d684ff17aa6133f5d8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-return-gui-extension/zipball/ce2ec459611e94f1981f7dedf055ab02df38b5c6",
-                "reference": "ce2ec459611e94f1981f7dedf055ab02df38b5c6",
+                "url": "https://api.github.com/repos/spryker/sales-return-gui-extension/zipball/7d8d821091baa8bd8c1b5d684ff17aa6133f5d8b",
+                "reference": "7d8d821091baa8bd8c1b5d684ff17aa6133f5d8b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3"
+                "php": ">=8.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -45514,9 +45519,9 @@
             ],
             "description": "SalesReturnGuiExtension module",
             "support": {
-                "source": "https://github.com/spryker/sales-return-gui-extension/tree/1.1.0"
+                "source": "https://github.com/spryker/sales-return-gui-extension/tree/1.2.0"
             },
-            "time": "2021-04-16T13:31:11+00:00"
+            "time": "2023-04-19T11:02:07+00:00"
         },
         {
             "name": "spryker/sales-return-search",
