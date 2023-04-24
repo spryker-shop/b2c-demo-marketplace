@@ -1,16 +1,10 @@
 {% extends molecule('collapsible-list', 'SprykerShop:ShopUi') %}
 
-{% define data = {
-    itemsShown: 0,
-} %}
-
-{% define attributes = {
-    'list-trigger-class': 'is-hidden-sm-md',
-} %}
-
 {% macro listItem(label, value, configName) %}
-    <div class="{{ configName }}__name">{{ label }}</div>
-    <div class="{{ configName }}__value">{{ value }}</div>
+    <div>
+        <strong class="{{ configName }}__name">{{ label }}: </strong>
+        <span class="{{ configName }}__value">{{ value }}</span>
+    </div>
 {% endmacro %}
 
 {% block body %}
