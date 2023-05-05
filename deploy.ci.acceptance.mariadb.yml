@@ -12,6 +12,7 @@ image:
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 80
         SPRYKER_YVES_HOST_DE: yves.de.spryker.local
         SPRYKER_YVES_HOST_AT: yves.at.spryker.local
+        SPRYKER_DEBUG_ENABLED: true
     node:
         version: 16
         npm: 8
