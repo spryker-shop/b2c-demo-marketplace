@@ -10,9 +10,7 @@ namespace Pyz\Zed\Checkout;
 use Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin;
 use Spryker\Zed\CartNote\Communication\Plugin\Checkout\CartNoteSaverPlugin;
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
-use Spryker\Zed\Customer\Communication\Plugin\Checkout\CustomerAddressSalutationCheckoutPreConditionPlugin;
 use Spryker\Zed\Customer\Communication\Plugin\Checkout\CustomerOrderSavePlugin;
-use Spryker\Zed\Customer\Communication\Plugin\Checkout\CustomerSalutationCheckoutPreConditionPlugin;
 use Spryker\Zed\Customer\Communication\Plugin\CustomerPreConditionCheckerPlugin;
 use Spryker\Zed\Discount\Communication\Plugin\Checkout\DiscountOrderSavePlugin;
 use Spryker\Zed\Discount\Communication\Plugin\Checkout\VoucherDiscountMaxUsageCheckoutPreConditionPlugin;
@@ -55,7 +53,6 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     {
         return [
             new CustomerPreConditionCheckerPlugin(),
-            new CustomerAddressSalutationCheckoutPreConditionPlugin(),
             new ProductsAvailableCheckoutPreConditionPlugin(),
             new ProductBundleAvailabilityCheckoutPreConditionPlugin(),
             new GiftCardCheckoutPreConditionPlugin(),
