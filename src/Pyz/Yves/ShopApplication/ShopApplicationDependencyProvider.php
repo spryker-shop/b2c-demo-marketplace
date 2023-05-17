@@ -7,6 +7,7 @@
 
 namespace Pyz\Yves\ShopApplication;
 
+use SprykerShop\Yves\StoreWidget\Widget\StoreSwitcherWidget;
 use Pyz\Yves\ProductReviewWidget\Widget\ProductDetailPageReviewWidget;
 use Spryker\Yves\ErrorHandler\Plugin\Application\ErrorHandlerApplicationPlugin;
 use Spryker\Yves\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
@@ -215,6 +216,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             ProductConfigurationWishlistFormWidget::class,
             ProductConfigurationWishlistItemDisplayWidget::class,
             ProductConfigurationWishlistPageButtonWidget::class,
+            StoreSwitcherWidget::class,
         ];
     }
 
@@ -246,6 +248,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getApplicationPlugins(): array
     {
         $applicationPlugins = [
+            new HttpApplicationPlugin(),
             new TwigApplicationPlugin(),
             new EventDispatcherApplicationPlugin(),
             new ShopApplicationApplicationPlugin(),
@@ -254,7 +257,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             new TranslatorApplicationPlugin(),
             new RouterApplicationPlugin(),
             new SessionApplicationPlugin(),
-            new HttpApplicationPlugin(),
             new ErrorHandlerApplicationPlugin(),
             new FlashMessengerApplicationPlugin(),
             new FormApplicationPlugin(),

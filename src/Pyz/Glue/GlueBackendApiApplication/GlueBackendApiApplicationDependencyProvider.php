@@ -19,6 +19,7 @@ use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\OauthBackendApiTokenReso
 use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\UserRequestValidatorPlugin;
 use Spryker\Glue\OauthBackendApi\Plugin\GlueBackendApiApplication\UserRequestBuilderPlugin;
 use Spryker\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin;
+use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
@@ -29,6 +30,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     {
         return [
             new PropelApplicationPlugin(),
+            new StoreHttpHeaderApplicationPlugin(),
         ];
     }
 

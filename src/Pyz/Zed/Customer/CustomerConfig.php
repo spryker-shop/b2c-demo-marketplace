@@ -87,4 +87,15 @@ class CustomerConfig extends SprykerCustomerConfig
             'notes' => '/customer-note-gui/index/index',
         ] + parent::getCustomerDetailExternalBlocksUrls();
     }
+
+
+    /**
+     * {@inheritDoc}
+     *
+     * @return string|null
+     */
+    public function getCustomerSequenceNumberPrefix(): ?string
+    {
+        return 'customer';
+    }
 }

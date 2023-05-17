@@ -7,6 +7,11 @@
 
 namespace Pyz\Zed\Application;
 
+use Spryker\Zed\ZedRequest\Communication\Plugin\Application\RequestBackendGatewayApplicationPlugin;
+use Spryker\Zed\Store\Communication\Plugin\Application\BackofficeStoreApplicationPlugin;
+use Spryker\Zed\Store\Communication\Plugin\Application\StoreBackendGatewayApplicationPlugin;
+use Spryker\Zed\Locale\Communication\Plugin\Application\LocaleBackendGatewayApplicationPlugin;
+use Spryker\Zed\Currency\Communication\Plugin\Application\CurrencyBackendGatewayApplicationPlugin;
 use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
 use Spryker\Zed\ErrorHandler\Communication\Plugin\Application\ErrorHandlerApplicationPlugin;
 use Spryker\Zed\EventDispatcher\Communication\Plugin\Application\BackendApiEventDispatcherApplicationPlugin;
@@ -61,6 +66,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
             new ValidatorApplicationPlugin(),
             new SecurityApplicationPlugin(),
             new NumberFormatterApplicationPlugin(),
+            new BackofficeStoreApplicationPlugin(),
         ];
         if (class_exists(WebProfilerApplicationPlugin::class)) {
             $plugins[] = new WebProfilerApplicationPlugin();
@@ -77,6 +83,10 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
         return [
             new SecurityApplicationPlugin(),
             new BackendGatewayEventDispatcherApplicationPlugin(),
+            new RequestBackendGatewayApplicationPlugin(),
+            new StoreBackendGatewayApplicationPlugin(),
+            new LocaleBackendGatewayApplicationPlugin(),
+            new CurrencyBackendGatewayApplicationPlugin(),
             new MockArraySessionApplicationPlugin(),
             new TranslatorApplicationPlugin(),
             new TwigApplicationPlugin(),

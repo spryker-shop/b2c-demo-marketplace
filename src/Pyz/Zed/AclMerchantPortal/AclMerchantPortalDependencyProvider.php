@@ -7,6 +7,9 @@
 
 namespace Pyz\Zed\AclMerchantPortal;
 
+use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleStoreAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyStoreAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryStoreAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Acl\Communication\Plugin\AclMerchantPortal\AclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\AclEntity\Communication\Plugin\AclMerchantPortal\AclEntityAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
@@ -161,12 +164,15 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new CategoryImageAclEntityConfigurationExpanderPlugin(),
             new CmsBlockAclEntityConfigurationExpanderPlugin(),
             new CountryAclEntityConfigurationExpanderPlugin(),
+            new CountryStoreAclEntityConfigurationExpanderPlugin(),
             new CurrencyAclEntityConfigurationExpanderPlugin(),
+            new CurrencyStoreAclEntityConfigurationExpanderPlugin(),
             new DiscountAclEntityConfigurationExpanderPlugin(),
             new DiscountPromotionAclEntityConfigurationExpanderPlugin(),
             new GiftCardAclEntityConfigurationExpanderPlugin(),
             new GlossaryAclEntityConfigurationExpanderPlugin(),
             new LocaleAclEntityConfigurationExpanderPlugin(),
+            new LocaleStoreAclEntityConfigurationExpanderPlugin(),
             new MerchantAclEntityConfigurationExpanderPlugin(),
             new MerchantCategoryAclEntityConfigurationExpanderPlugin(),
             new MerchantProductAclEntityConfigurationExpanderPlugin(),

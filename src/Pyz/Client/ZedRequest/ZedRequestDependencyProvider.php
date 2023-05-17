@@ -12,6 +12,8 @@ use Spryker\Client\ZedRequest\Plugin\AcceptEncodingHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\Plugin\AuthTokenHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\Plugin\RequestIdHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\ZedRequestDependencyProvider as SprykerZedRequestDependencyProvider;
+use Spryker\Client\Locale\Plugin\ZedRequest\LocaleMetaDataProviderPlugin;
+use Spryker\Client\Store\Plugin\ZedRequest\StoreMetaDataProviderPlugin;
 
 class ZedRequestDependencyProvider extends SprykerZedRequestDependencyProvider
 {
@@ -22,6 +24,8 @@ class ZedRequestDependencyProvider extends SprykerZedRequestDependencyProvider
     {
         return [
             'currency' => new ZedRequestMetaDataProviderPlugin(),
+            'store' => new StoreMetaDataProviderPlugin(),
+            'locale' => new LocaleMetaDataProviderPlugin(),
         ];
     }
 
