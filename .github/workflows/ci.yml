@@ -154,8 +154,8 @@ jobs:
             - name: Run PHPStan
               run: vendor/bin/phpstan analyze -l 5 -c phpstan.neon src/
 
-            - name: Run Security check
-              run: vendor/bin/console security:check
+            - name: Run Evaluator check
+              run: vendor/bin/evaluator evaluator
 
     php-81-mariadb-glue-alpine:
         name: "PHP 8.1 / MariaDB / Glue / Alpine"
