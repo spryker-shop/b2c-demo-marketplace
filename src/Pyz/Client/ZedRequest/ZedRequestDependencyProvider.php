@@ -8,12 +8,12 @@
 namespace Pyz\Client\ZedRequest;
 
 use Spryker\Client\Currency\Plugin\ZedRequestMetaDataProviderPlugin;
+use Spryker\Client\Locale\Plugin\ZedRequest\LocaleMetaDataProviderPlugin;
+use Spryker\Client\Store\Plugin\ZedRequest\StoreMetaDataProviderPlugin;
 use Spryker\Client\ZedRequest\Plugin\AcceptEncodingHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\Plugin\AuthTokenHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\Plugin\RequestIdHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\ZedRequestDependencyProvider as SprykerZedRequestDependencyProvider;
-use Spryker\Client\Locale\Plugin\ZedRequest\LocaleMetaDataProviderPlugin;
-use Spryker\Client\Store\Plugin\ZedRequest\StoreMetaDataProviderPlugin;
 
 class ZedRequestDependencyProvider extends SprykerZedRequestDependencyProvider
 {

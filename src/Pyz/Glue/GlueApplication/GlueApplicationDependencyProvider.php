@@ -112,6 +112,7 @@ use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\StorefrontR
 use Spryker\Glue\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\GlueApplication\IsProtectedTableColumnExpanderPlugin as StorefrontIsProtectedTableColumnExpanderPlugin;
 use Spryker\Glue\HealthCheck\Plugin\HealthCheckResourceRoutePlugin;
 use Spryker\Glue\Http\Plugin\Application\HttpApplicationPlugin;
+use Spryker\Glue\Locale\Plugin\Application\LocaleApplicationPlugin;
 use Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication\MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin;
 use Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication\MerchantOpeningHoursResourceRoutePlugin;
 use Spryker\Glue\MerchantProductOffersRestApi\MerchantProductOffersRestApiConfig;
@@ -196,6 +197,7 @@ use Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication\OrderShipmentByOrderRes
 use Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication\ShipmentMethodsByShipmentResourceRelationshipPlugin;
 use Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication\ShipmentsByCheckoutDataResourceRelationshipPlugin;
 use Spryker\Glue\ShipmentsRestApi\ShipmentsRestApiConfig;
+use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
 use Spryker\Glue\StoresRestApi\Plugin\StoresResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\CartUpSellingProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\GuestCartUpSellingProductsResourceRoutePlugin;
@@ -204,8 +206,6 @@ use Spryker\Glue\WishlistsRestApi\Plugin\WishlistItemsResourceRoutePlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistRelationshipByResourceIdPlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistsResourceRoutePlugin;
 use Spryker\Glue\WishlistsRestApi\WishlistsRestApiConfig;
-use Spryker\Glue\Locale\Plugin\Application\LocaleApplicationPlugin;
-use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
 
 /**
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)

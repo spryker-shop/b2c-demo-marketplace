@@ -7,7 +7,6 @@
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\StoreWidget\Widget\StoreSwitcherWidget;
 use Pyz\Yves\ProductReviewWidget\Widget\ProductDetailPageReviewWidget;
 use Spryker\Yves\ErrorHandler\Plugin\Application\ErrorHandlerApplicationPlugin;
 use Spryker\Yves\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
@@ -113,6 +112,7 @@ use SprykerShop\Yves\SalesProductBundleWidget\Widget\OrderItemsProductBundleWidg
 use SprykerShop\Yves\SalesProductConfigurationWidget\Widget\ProductConfigurationOrderItemDisplayWidget;
 use SprykerShop\Yves\ShopApplication\Plugin\Application\ShopApplicationApplicationPlugin;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+use SprykerShop\Yves\StoreWidget\Widget\StoreSwitcherWidget;
 use SprykerShop\Yves\TabsWidget\Widget\FullTextSearchTabsWidget;
 use SprykerShop\Yves\WebProfilerWidget\Plugin\Application\WebProfilerApplicationPlugin;
 use SprykerShop\Yves\WishlistWidget\Widget\WishlistMenuItemWidget;

@@ -88,7 +88,6 @@ class CustomerConfig extends SprykerCustomerConfig
         ] + parent::getCustomerDetailExternalBlocksUrls();
     }
 
-
     /**
      * {@inheritDoc}
      *

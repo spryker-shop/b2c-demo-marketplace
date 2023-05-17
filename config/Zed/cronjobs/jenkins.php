@@ -15,7 +15,7 @@ $jobs[] = [
     'name' => 'check-product-validity',
     'command' => '$PHP_BIN vendor/bin/console product:check-validity',
     'schedule' => '0 6 * * *',
-    'enable' => true
+    'enable' => true,
 ];
 
 /* ProductLabel */
@@ -23,7 +23,7 @@ $jobs[] = [
     'name' => 'check-product-label-validity',
     'command' => '$PHP_BIN vendor/bin/console product-label:validity',
     'schedule' => '0 6 * * *',
-    'enable' => true
+    'enable' => true,
 ];
 $jobs[] = [
     'name' => 'update-product-label-relations',
