@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "async-aws/core",
-            "version": "1.18.0",
+            "version": "1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/core.git",
-                "reference": "43dbecd0fa9f515a7057e8d5d79c8d7e559769bb"
+                "reference": "fd09655f15b8b2d16799ec46a792dcdbb4e460fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/43dbecd0fa9f515a7057e8d5d79c8d7e559769bb",
-                "reference": "43dbecd0fa9f515a7057e8d5d79c8d7e559769bb",
+                "url": "https://api.github.com/repos/async-aws/core/zipball/fd09655f15b8b2d16799ec46a792dcdbb4e460fb",
+                "reference": "fd09655f15b8b2d16799ec46a792dcdbb4e460fb",
                 "shasum": ""
             },
             "require": {
@@ -38,7 +38,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-master": "1.19-dev"
                 }
             },
             "autoload": {
@@ -59,7 +59,7 @@
                 "sts"
             ],
             "support": {
-                "source": "https://github.com/async-aws/core/tree/1.18.0"
+                "source": "https://github.com/async-aws/core/tree/1.18.1"
             },
             "funding": [
                 {
@@ -71,7 +71,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-11-30T08:14:25+00:00"
+            "time": "2023-02-28T16:31:16+00:00"
         },
         {
             "name": "async-aws/sns",
@@ -191,23 +191,27 @@
         },
         {
             "name": "aws/aws-crt-php",
-            "version": "v1.0.2",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awslabs/aws-crt-php.git",
-                "reference": "3942776a8c99209908ee0b287746263725685732"
+                "reference": "1926277fc71d253dfa820271ac5987bdb193ccf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/3942776a8c99209908ee0b287746263725685732",
-                "reference": "3942776a8c99209908ee0b287746263725685732",
+                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/1926277fc71d253dfa820271ac5987bdb193ccf5",
+                "reference": "1926277fc71d253dfa820271ac5987bdb193ccf5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35|^5.4.3"
+                "phpunit/phpunit": "^4.8.35||^5.6.3||^9.5",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "ext-awscrt": "Make sure you install awscrt native extension to use any of the functionality."
             },
             "type": "library",
             "autoload": {
@@ -226,7 +230,7 @@
                 }
             ],
             "description": "AWS Common Runtime for PHP",
-            "homepage": "http://aws.amazon.com/sdkforphp",
+            "homepage": "https://github.com/awslabs/aws-crt-php",
             "keywords": [
                 "amazon",
                 "aws",
@@ -235,34 +239,35 @@
             ],
             "support": {
                 "issues": "https://github.com/awslabs/aws-crt-php/issues",
-                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.0.2"
+                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.2.1"
             },
-            "time": "2021-09-03T22:57:30+00:00"
+            "time": "2023-03-24T20:22:19+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.258.2",
+            "version": "3.270.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ed1bede7fe80a5e1528d6cff530341ad2018a128"
+                "reference": "efc5a281bcdfb49bc1c608bb1f892403631da077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ed1bede7fe80a5e1528d6cff530341ad2018a128",
-                "reference": "ed1bede7fe80a5e1528d6cff530341ad2018a128",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/efc5a281bcdfb49bc1c608bb1f892403631da077",
+                "reference": "efc5a281bcdfb49bc1c608bb1f892403631da077",
                 "shasum": ""
             },
             "require": {
-                "aws/aws-crt-php": "^1.0.2",
+                "aws/aws-crt-php": "^1.0.4",
                 "ext-json": "*",
                 "ext-pcre": "*",
                 "ext-simplexml": "*",
                 "guzzlehttp/guzzle": "^6.5.8 || ^7.4.5",
                 "guzzlehttp/promises": "^1.4.0",
-                "guzzlehttp/psr7": "^1.8.5 || ^2.3",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
                 "mtdowling/jmespath.php": "^2.6",
-                "php": ">=5.5"
+                "php": ">=5.5",
+                "psr/http-message": "^1.0"
             },
             "require-dev": {
                 "andrewsville/php-token-reflection": "^1.4",
@@ -329,9 +334,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.258.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.270.1"
             },
-            "time": "2023-02-02T19:41:58+00:00"
+            "time": "2023-05-22T18:23:05+00:00"
         },
         {
             "name": "brick/math",
@@ -25183,16 +25188,16 @@
         },
         {
             "name": "spryker/discount-promotions-rest-api",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/discount-promotions-rest-api.git",
-                "reference": "f6085d6fa6e0b57ae8fd15cb640a855a9015f551"
+                "reference": "13bbf9066f19f7d3ade1d18bf5aa52ddb8702d3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/discount-promotions-rest-api/zipball/f6085d6fa6e0b57ae8fd15cb640a855a9015f551",
-                "reference": "f6085d6fa6e0b57ae8fd15cb640a855a9015f551",
+                "url": "https://api.github.com/repos/spryker/discount-promotions-rest-api/zipball/13bbf9066f19f7d3ade1d18bf5aa52ddb8702d3c",
+                "reference": "13bbf9066f19f7d3ade1d18bf5aa52ddb8702d3c",
                 "shasum": ""
             },
             "require": {
@@ -25229,9 +25234,9 @@
             ],
             "description": "DiscountPromotionsRestApi module",
             "support": {
-                "source": "https://github.com/spryker/discount-promotions-rest-api/tree/1.4.1"
+                "source": "https://github.com/spryker/discount-promotions-rest-api/tree/1.4.2"
             },
-            "time": "2022-12-29T12:04:01+00:00"
+            "time": "2023-05-05T18:20:59+00:00"
         },
         {
             "name": "spryker/doctrine-inflector",
@@ -32257,16 +32262,16 @@
         },
         {
             "name": "spryker/message-broker-aws",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/message-broker-aws.git",
-                "reference": "b4c4de089b516fa22624bf256525f5fb6c2669f5"
+                "reference": "f720e73bf61f810faa1c80ef766fe0d706fa8964"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/message-broker-aws/zipball/b4c4de089b516fa22624bf256525f5fb6c2669f5",
-                "reference": "b4c4de089b516fa22624bf256525f5fb6c2669f5",
+                "url": "https://api.github.com/repos/spryker/message-broker-aws/zipball/f720e73bf61f810faa1c80ef766fe0d706fa8964",
+                "reference": "f720e73bf61f810faa1c80ef766fe0d706fa8964",
                 "shasum": ""
             },
             "require": {
@@ -32311,9 +32316,9 @@
             ],
             "description": "MessageBrokerAws module",
             "support": {
-                "source": "https://github.com/spryker/message-broker-aws/tree/1.4.1"
+                "source": "https://github.com/spryker/message-broker-aws/tree/1.4.2"
             },
-            "time": "2023-03-14T08:26:09+00:00"
+            "time": "2023-05-05T18:20:59+00:00"
         },
         {
             "name": "spryker/message-broker-extension",
@@ -49229,16 +49234,16 @@
         },
         {
             "name": "spryker/shipments-rest-api",
-            "version": "1.6.1",
+            "version": "1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/shipments-rest-api.git",
-                "reference": "64f89724897034b5595f1aeb06437a13d0106f1f"
+                "reference": "d541aee6e5c5a8e411818eaccecb6e2c11153a59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/shipments-rest-api/zipball/64f89724897034b5595f1aeb06437a13d0106f1f",
-                "reference": "64f89724897034b5595f1aeb06437a13d0106f1f",
+                "url": "https://api.github.com/repos/spryker/shipments-rest-api/zipball/d541aee6e5c5a8e411818eaccecb6e2c11153a59",
+                "reference": "d541aee6e5c5a8e411818eaccecb6e2c11153a59",
                 "shasum": ""
             },
             "require": {
@@ -49249,7 +49254,7 @@
                 "spryker/kernel": "^3.30.0",
                 "spryker/orders-rest-api-extension": "^1.1.0",
                 "spryker/quote-requests-rest-api-extension": "^1.0.0",
-                "spryker/shipment": "^6.11.0 || ^7.0.0 || ^8.0.0",
+                "spryker/shipment": "^6.11.0 || ^7.3.0 || ^8.12.0",
                 "spryker/shipments-rest-api-extension": "^1.0.0",
                 "spryker/symfony": "^3.3.0"
             },
@@ -49276,9 +49281,9 @@
             ],
             "description": "ShipmentsRestApi module",
             "support": {
-                "source": "https://github.com/spryker/shipments-rest-api/tree/1.6.1"
+                "source": "https://github.com/spryker/shipments-rest-api/tree/1.7.1"
             },
-            "time": "2022-12-29T12:04:01+00:00"
+            "time": "2023-05-05T18:20:59+00:00"
         },
         {
             "name": "spryker/shipments-rest-api-extension",
@@ -53819,16 +53824,16 @@
         },
         {
             "name": "symfony/amazon-sqs-messenger",
-            "version": "v6.0.3",
+            "version": "v6.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/amazon-sqs-messenger.git",
-                "reference": "4ad134905958d52b52a36f06ddb5d244fcbc4d9d"
+                "reference": "1127e989fb8ce0dbf921ab1d72b1942d2afa2809"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/amazon-sqs-messenger/zipball/4ad134905958d52b52a36f06ddb5d244fcbc4d9d",
-                "reference": "4ad134905958d52b52a36f06ddb5d244fcbc4d9d",
+                "url": "https://api.github.com/repos/symfony/amazon-sqs-messenger/zipball/1127e989fb8ce0dbf921ab1d72b1942d2afa2809",
+                "reference": "1127e989fb8ce0dbf921ab1d72b1942d2afa2809",
                 "shasum": ""
             },
             "require": {
@@ -53870,7 +53875,7 @@
             "description": "Symfony Amazon SQS extension Messenger Bridge",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/amazon-sqs-messenger/tree/v6.0.3"
+                "source": "https://github.com/symfony/amazon-sqs-messenger/tree/v6.0.19"
             },
             "funding": [
                 {
@@ -53886,7 +53891,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:55:41+00:00"
+            "time": "2023-01-01T08:36:10+00:00"
         },
         {
             "name": "symfony/config",
