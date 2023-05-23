@@ -26,7 +26,7 @@ class ExampleProductSalePageDependencyProvider extends AbstractBundleDependencyP
     /**
      * @var string
      */
-    public const PYZ_STORE = 'PYZ_STORE';
+    public const PYZ_CLIENT_STORE = 'PYZ_CLIENT_STORE';
 
     /**
      * @var string
