@@ -5,7 +5,7 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace Pyz\Client\ExampleProductSalePage\Dependency\Client;
+namespace Pyz\Yves\ExampleProductSalePage\Dependency\Client;
 
 use Generated\Shared\Transfer\StoreTransfer;
 
