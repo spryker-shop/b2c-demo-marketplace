@@ -19,6 +19,7 @@ use Spryker\Shared\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConf
 use Spryker\Shared\ConfigurableBundleStorage\ConfigurableBundleStorageConfig;
 use Spryker\Shared\ContentStorage\ContentStorageConfig;
 use Spryker\Shared\CustomerAccessStorage\CustomerAccessStorageConstants;
+use Spryker\Shared\CustomerStorage\CustomerStorageConfig;
 use Spryker\Shared\Event\EventConfig;
 use Spryker\Shared\Event\EventConstants;
 use Spryker\Shared\FileManagerStorage\FileManagerStorageConstants;
@@ -43,6 +44,7 @@ use Spryker\Shared\PublishAndSynchronizeHealthCheckSearch\PublishAndSynchronizeH
 use Spryker\Shared\PublishAndSynchronizeHealthCheckStorage\PublishAndSynchronizeHealthCheckStorageConfig;
 use Spryker\Shared\Publisher\PublisherConfig;
 use Spryker\Shared\SalesReturnSearch\SalesReturnSearchConfig;
+use Spryker\Shared\SearchHttp\SearchHttpConfig;
 use Spryker\Shared\TaxProductStorage\TaxProductStorageConfig;
 use Spryker\Shared\TaxStorage\TaxStorageConfig;
 use Spryker\Shared\UrlStorage\UrlStorageConfig;
@@ -100,6 +102,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             ProductPageSearchConfig::PUBLISH_PRODUCT_CONCRETE_PAGE,
             ProductStorageConfig::PUBLISH_PRODUCT_ABSTRACT,
             ProductStorageConfig::PUBLISH_PRODUCT_CONCRETE,
+            CustomerStorageConfig::PUBLISH_CUSTOMER_INVALIDATED,
         ];
     }
 
@@ -115,6 +118,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             UrlStorageConstants::URL_SYNC_STORAGE_QUEUE,
             AvailabilityStorageConstants::AVAILABILITY_SYNC_STORAGE_QUEUE,
             CustomerAccessStorageConstants::CUSTOMER_ACCESS_SYNC_STORAGE_QUEUE,
+            CustomerStorageConfig::CUSTOMER_INVALIDATED_SYNC_STORAGE_QUEUE,
             CategoryStorageConstants::CATEGORY_SYNC_STORAGE_QUEUE,
             ProductStorageConstants::PRODUCT_SYNC_STORAGE_QUEUE,
             PriceProductStorageConstants::PRICE_SYNC_STORAGE_QUEUE,
@@ -137,6 +141,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             MerchantOpeningHoursStorageConfig::MERCHANT_OPENING_HOURS_SYNC_STORAGE_QUEUE,
             AssetStorageConfig::ASSET_SYNC_STORAGE_QUEUE,
             ProductConfigurationStorageConfig::PRODUCT_CONFIGURATION_SYNC_STORAGE_QUEUE,
+            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE,
         ];
     }
 
