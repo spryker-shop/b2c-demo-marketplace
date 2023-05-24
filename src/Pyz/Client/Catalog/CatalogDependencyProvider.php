@@ -27,7 +27,6 @@ use Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareSuggestionBy
 use Spryker\Client\CatalogPriceProductConnector\Plugin\ProductPriceQueryExpanderPlugin;
 use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategoryTreeFilterSearchHttpResultFormatterPlugin;
 use Spryker\Client\CategoryStorage\Plugin\Elasticsearch\ResultFormatter\CategoryTreeFilterPageSearchResultFormatterPlugin;
-use Spryker\Client\MerchantProductOfferSearch\Plugin\Catalog\MerchantReferenceSearchHttpQueryExpanderPlugin;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\Search\MerchantReferenceQueryExpanderPlugin;
 use Spryker\Client\ProductLabelStorage\Plugin\Catalog\ProductLabelSearchHttpFacetConfigTransferBuilderPlugin;
 use Spryker\Client\ProductLabelStorage\Plugin\ProductLabelFacetConfigTransferBuilderPlugin;
@@ -259,7 +258,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             SearchHttpConfig::TYPE_SEARCH_HTTP => [
                 new BasicSearchHttpQueryExpanderPlugin(),
                 new ProductPriceSearchHttpQueryExpanderPlugin(),
-                new MerchantReferenceSearchHttpQueryExpanderPlugin(),
                 new FacetSearchHttpQueryExpanderPlugin(),
             ],
         ];
