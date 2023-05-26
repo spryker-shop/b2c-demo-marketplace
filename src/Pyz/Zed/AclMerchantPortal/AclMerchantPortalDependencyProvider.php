@@ -16,8 +16,10 @@ use Spryker\Zed\CategoryImage\Communication\Plugin\AclMerchantPortal\CategoryIma
 use Spryker\Zed\CmsBlock\Communication\Plugin\AclMerchantPortal\CmsBlockAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryStoreAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyStoreAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Customer\Communication\Plugin\AclMerchantPortal\CustomerMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\DashboardMerchantPortalGui\Communication\Plugin\AclMerchantPortal\DashboardMerchantPortalGuiMerchantAclRuleExpanderPlugin;
 use Spryker\Zed\Discount\Communication\Plugin\AclMerchantPortal\DiscountAclEntityConfigurationExpanderPlugin;
@@ -28,6 +30,7 @@ use Spryker\Zed\GiftCard\Communication\Plugin\AclMerchantPortal\GiftCardAclEntit
 use Spryker\Zed\Glossary\Communication\Plugin\AclMerchantPortal\GlossaryAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleStoreAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Merchant\Communication\Plugin\AclMerchantPortal\MerchantAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Merchant\Communication\Plugin\AclMerchantPortal\MerchantMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\MerchantCategory\Communication\Plugin\AclMerchantPortal\MerchantCategoryAclEntityConfigurationExpanderPlugin;
@@ -161,12 +164,15 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new CategoryImageAclEntityConfigurationExpanderPlugin(),
             new CmsBlockAclEntityConfigurationExpanderPlugin(),
             new CountryAclEntityConfigurationExpanderPlugin(),
+            new CountryStoreAclEntityConfigurationExpanderPlugin(),
             new CurrencyAclEntityConfigurationExpanderPlugin(),
+            new CurrencyStoreAclEntityConfigurationExpanderPlugin(),
             new DiscountAclEntityConfigurationExpanderPlugin(),
             new DiscountPromotionAclEntityConfigurationExpanderPlugin(),
             new GiftCardAclEntityConfigurationExpanderPlugin(),
             new GlossaryAclEntityConfigurationExpanderPlugin(),
             new LocaleAclEntityConfigurationExpanderPlugin(),
+            new LocaleStoreAclEntityConfigurationExpanderPlugin(),
             new MerchantAclEntityConfigurationExpanderPlugin(),
             new MerchantCategoryAclEntityConfigurationExpanderPlugin(),
             new MerchantProductAclEntityConfigurationExpanderPlugin(),
