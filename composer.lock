@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cb1d24828f44f21864c45cecd88cffc",
+    "content-hash": "edae5aa3ec9f643eaf9ed90cbcc1d1f2",
     "packages": [
         {
             "name": "async-aws/core",
@@ -64840,6 +64840,12 @@
     ],
     "aliases": [
         {
+            "package": "spryker-feature/agent-assist",
+            "version": "9999999-dev",
+            "alias": "202304.0",
+            "alias_normalized": "202304.0"
+        },
+        {
             "package": "spryker-feature/alternative-products",
             "version": "9999999-dev",
             "alias": "202304.0",
@@ -64973,6 +64979,12 @@
         },
         {
             "package": "spryker-feature/spryker-core",
+            "version": "9999999-dev",
+            "alias": "202304.0",
+            "alias_normalized": "202304.0"
+        },
+        {
+            "package": "spryker-feature/spryker-core-back-office",
             "version": "9999999-dev",
             "alias": "202304.0",
             "alias_normalized": "202304.0"
