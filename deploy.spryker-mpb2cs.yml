@@ -19,7 +19,7 @@ composer:
     autoload: --classmap-authoritative
 
 assets:
-    image: spryker/nginx-brotli:latest
+    image: fholzer/nginx-brotli:v1.18.0
     mode: production
     compression:
         brotli:
