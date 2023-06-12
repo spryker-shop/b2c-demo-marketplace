@@ -28,6 +28,9 @@ sections:
         controller-cache-warmup:
             command: 'vendor/bin/glue glue-api:controller:cache:warm-up'
 
+        router-cache-warmup-merchant-portal:
+            command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
+
         propel-copy-schema:
             command: 'vendor/bin/console propel:schema:copy'
 
@@ -74,12 +77,20 @@ sections:
         zed-build-frontend:
             command: 'vendor/bin/console frontend:zed:build -e production'
 
+        merchant-portal-build-frontend:
+            command: 'vendor/bin/console frontend:mp:build -e production'
+            timeout: 1600
+
     build-static-development:
         yves-build-frontend:
             command: 'vendor/bin/console frontend:yves:build'
 
         zed-build-frontend:
             command: 'vendor/bin/console frontend:zed:build'
+
+        merchant-portal-build-frontend:
+            command: 'vendor/bin/console frontend:mp:build'
+            timeout: 1600
 
     init-storages-per-store:
         queue-setup:
