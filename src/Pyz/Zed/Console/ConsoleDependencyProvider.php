@@ -12,12 +12,10 @@ use Pyz\Zed\Development\Communication\Console\AcceptanceCodeTestConsole;
 use Pyz\Zed\Development\Communication\Console\ApiCodeTestConsole;
 use Pyz\Zed\Development\Communication\Console\FunctionalCodeTestConsole;
 use SecurityChecker\Command\SecurityCheckerCommand;
-use Spryker\Shared\Config\Environment;
 use Spryker\Zed\AclDataImport\AclDataImportConfig;
 use Spryker\Zed\AclEntityDataImport\AclEntityDataImportConfig;
 use Spryker\Zed\Cache\Communication\Console\EmptyAllCachesConsole;
 use Spryker\Zed\CategoryDataImport\CategoryDataImportConfig;
-use Spryker\Zed\Console\Communication\Plugin\ConsoleLogPlugin;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\ContentNavigationDataImport\ContentNavigationDataImportConfig;
 use Spryker\Zed\CountryDataImport\CountryDataImportConfig;
@@ -475,11 +473,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     public function getEventSubscriber(Container $container): array
     {
         $eventSubscriber = parent::getEventSubscriber($container);
-
-        if (!Environment::isDevelopment()) {
-            $eventSubscriber[] = new ConsoleLogPlugin();
-            $eventSubscriber[] = new MonitoringConsolePlugin();
-        }
+        $eventSubscriber[] = new MonitoringConsolePlugin();
 
         return $eventSubscriber;
     }
