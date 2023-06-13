@@ -163,7 +163,7 @@
         "spryker/merchant-products-rest-api": "^1.0.0",
         "spryker/merchant-profile-merchant-portal-gui": "^2.1.0",
         "spryker/merchants-rest-api": "^1.0.0",
-        "spryker/message-broker": "^1.4.0",
+        "spryker/message-broker": "^1.6.1",
         "spryker/message-broker-aws": "^1.4.0",
         "spryker/money-gui": "^1.0.0",
         "spryker/navigations-category-nodes-resource-relationship": "^1.0.1",
