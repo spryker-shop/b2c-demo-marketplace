@@ -3,7 +3,11 @@
 use Generated\Shared\Transfer\AssetAddedTransfer;
 use Generated\Shared\Transfer\AssetDeletedTransfer;
 use Generated\Shared\Transfer\AssetUpdatedTransfer;
+use Generated\Shared\Transfer\ExportMerchantsTransfer;
 use Generated\Shared\Transfer\InitializeProductExportTransfer;
+use Generated\Shared\Transfer\MerchantCreatedTransfer;
+use Generated\Shared\Transfer\MerchantExportedTransfer;
+use Generated\Shared\Transfer\MerchantUpdatedTransfer;
 use Generated\Shared\Transfer\PaymentCancelReservationFailedTransfer;
 use Generated\Shared\Transfer\PaymentCancelReservationRequestedTransfer;
 use Generated\Shared\Transfer\PaymentConfirmationFailedTransfer;
@@ -679,19 +683,32 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     ProductUpdatedTransfer::class => 'product',
     ProductDeletedTransfer::class => 'product',
     InitializeProductExportTransfer::class => 'product',
+    ExportMerchantsTransfer::class => 'merchant-commands',
+    MerchantExportedTransfer::class => 'merchant-events',
+    MerchantCreatedTransfer::class => 'merchant-events',
+    MerchantUpdatedTransfer::class => 'merchant-events',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     'payment' => MessageBrokerAwsConfig::SQS_TRANSPORT,
     'assets' => MessageBrokerAwsConfig::SQS_TRANSPORT,
     'product' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'merchant-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+];
+
+$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
+    'payment' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'assets' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'merchant-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'merchant-events' => 'http',
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     'payment' => 'http',
     'assets' => 'http',
     'product' => 'http',
+    'merchant-events' => 'http',
 ];
 
 $aopInfrastructureConfiguration = json_decode(html_entity_decode((string)getenv('SPRYKER_AOP_INFRASTRUCTURE')), true);
