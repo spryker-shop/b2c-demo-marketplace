@@ -1,15 +1,10 @@
-const fs = require("fs");
-const path = require("path");
-const { spawnSync } = require("child_process");
-const {
-    SPRYKER_CORE_DIR,
-    MP_CORE_ENTRY_POINT_FILE,
-    MP_PUBLIC_API_FILE,
-    ROOT_DIR,
-} = require("./mp-paths");
-const { getMPEntryPoints, entryPointPathToName } = require("./utils");
+const fs = require('fs');
+const path = require('path');
+const { spawnSync } = require('child_process');
+const { SPRYKER_CORE_DIR, MP_CORE_ENTRY_POINT_FILE, MP_PUBLIC_API_FILE, ROOT_DIR } = require('./mp-paths');
+const { getMPEntryPoints, entryPointPathToName } = require('./utils');
 
-const TSCONFIG_FILES = ["tsconfig.base.json", "tsconfig.mp.json"];
+const TSCONFIG_FILES = ['tsconfig.mp.json'];
 
 async function getMPPathsMap() {
     const entryPoints = await getMPEntryPoints(SPRYKER_CORE_DIR, MP_CORE_ENTRY_POINT_FILE);
@@ -17,15 +12,11 @@ async function getMPPathsMap() {
     return entryPoints.reduce(
         (acc, entryPoint) => ({
             ...acc,
-            [entryPointPathToName("@mp/", entryPoint)]: [
-                path.join(
-                    SPRYKER_CORE_DIR,
-                    entryPoint.split("/src")[0],
-                    MP_PUBLIC_API_FILE,
-                )
-            ]
+            [entryPointPathToName('@mp/', entryPoint)]: [
+                path.join(SPRYKER_CORE_DIR, entryPoint.split('/src')[0], MP_PUBLIC_API_FILE),
+            ],
         }),
-        {}
+        {},
     );
 }
 
@@ -43,15 +34,11 @@ async function updateConfigPaths() {
 
         fs.writeFileSync(fileName, JSON.stringify(config));
 
-        spawnSync(
-            'node',
-            ['./frontend/libs/formatter', '-f', '-p', fileName],
-            { stdio: 'inherit', cwd: ROOT_DIR },
-        );
+        spawnSync('node', ['./frontend/libs/formatter', '-f', '-p', fileName], { stdio: 'inherit', cwd: ROOT_DIR });
     }
 }
 
-updateConfigPaths().catch(error => {
+updateConfigPaths().catch((error) => {
     console.error(error);
     process.exit(1);
 });

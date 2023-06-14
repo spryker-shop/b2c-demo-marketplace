@@ -18,6 +18,7 @@ use Spryker\Zed\Http\Communication\Plugin\EventDispatcher\FragmentEventDispatche
 use Spryker\Zed\Http\Communication\Plugin\EventDispatcher\HeaderEventDispatcherPlugin;
 use Spryker\Zed\Http\Communication\Plugin\EventDispatcher\HstsHeaderEventDispatcher;
 use Spryker\Zed\Kernel\Communication\Plugin\AutoloaderCacheEventDispatcherPlugin;
+use Spryker\Zed\Kernel\Communication\Plugin\EventDispatcher\RedirectUrlValidationEventDispatcherPlugin;
 use Spryker\Zed\Locale\Communication\Plugin\EventDispatcher\LocaleEventDispatcherPlugin;
 use Spryker\Zed\Monitoring\Communication\Plugin\EventDispatcher\GatewayMonitoringRequestTransactionEventDispatcherPlugin;
 use Spryker\Zed\Monitoring\Communication\Plugin\EventDispatcher\MonitoringRequestTransactionEventDispatcherPlugin;
@@ -25,6 +26,8 @@ use Spryker\Zed\Router\Communication\Plugin\EventDispatcher\RequestAttributesEve
 use Spryker\Zed\Router\Communication\Plugin\EventDispatcher\RouterListenerEventDispatcherPlugin;
 use Spryker\Zed\Router\Communication\Plugin\EventDispatcher\RouterLocaleEventDispatcherPlugin;
 use Spryker\Zed\Router\Communication\Plugin\EventDispatcher\RouterSslRedirectEventDispatcherPlugin;
+use Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher\SecurityBlockerBackofficeUserEventDispatcherPlugin;
+use Spryker\Zed\SecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher\SecurityBlockerMerchantPortalUserEventDispatcherPlugin;
 use Spryker\Zed\Session\Communication\Plugin\EventDispatcher\SaveSessionEventDispatcherPlugin;
 use Spryker\Zed\Session\Communication\Plugin\EventDispatcher\SessionEventDispatcherPlugin;
 use Spryker\Zed\Twig\Communication\Plugin\EventDispatcher\TwigEventDispatcherPlugin;
@@ -57,6 +60,9 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
             new RequestAttributesEventDispatcherPlugin(),
             new ResponseListenerEventDispatcherPlugin(),
             new ErrorPageEventDispatcherPlugin(),
+            new RedirectUrlValidationEventDispatcherPlugin(),
+            new SecurityBlockerBackofficeUserEventDispatcherPlugin(),
+            new SecurityBlockerMerchantPortalUserEventDispatcherPlugin(),
         ];
     }
 
