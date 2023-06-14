@@ -29114,16 +29114,16 @@
         },
         {
             "name": "spryker/merchant",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant.git",
-                "reference": "6dcf160e3a7ebdd1e9d7551f216954aa7efb9e3d"
+                "reference": "e6013c11278d692f2bb2ed40eb5d870de22634ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant/zipball/6dcf160e3a7ebdd1e9d7551f216954aa7efb9e3d",
-                "reference": "6dcf160e3a7ebdd1e9d7551f216954aa7efb9e3d",
+                "url": "https://api.github.com/repos/spryker/merchant/zipball/e6013c11278d692f2bb2ed40eb5d870de22634ef",
+                "reference": "e6013c11278d692f2bb2ed40eb5d870de22634ef",
                 "shasum": ""
             },
             "require": {
@@ -29131,19 +29131,24 @@
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/cart-extension": "^4.0.0",
                 "spryker/checkout-extension": "^1.2.0",
-                "spryker/event": "^2.0.0",
+                "spryker/event": "^2.3.0",
                 "spryker/kernel": "^3.33.0",
+                "spryker/log": "^3.0.0",
                 "spryker/merchant-extension": "^1.1.0",
+                "spryker/message-broker": "^1.5.0",
+                "spryker/message-broker-extension": "^1.0.0",
                 "spryker/price-product-merchant-relationship-storage-extension": "^1.0.0",
                 "spryker/propel-orm": "^1.0.0",
+                "spryker/publisher-extension": "^1.0.0",
                 "spryker/shopping-list-extension": "^1.2.0",
-                "spryker/store": "^1.1.0",
-                "spryker/transfer": "^3.25.0",
+                "spryker/store": "^1.20.0",
+                "spryker/transfer": "^3.27.0",
                 "spryker/url": "^3.0.0",
                 "spryker/util-text": "^1.0.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
+                "spryker/container": "*",
                 "spryker/propel": "*",
                 "spryker/testify": "*"
             },
@@ -29165,9 +29170,9 @@
             ],
             "description": "Merchant module",
             "support": {
-                "source": "https://github.com/spryker/merchant/tree/3.6.0"
+                "source": "https://github.com/spryker/merchant/tree/3.7.0"
             },
-            "time": "2023-03-10T14:11:16+00:00"
+            "time": "2023-05-22T19:10:17+00:00"
         },
         {
             "name": "spryker/merchant-categories-rest-api",
