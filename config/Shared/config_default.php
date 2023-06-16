@@ -743,17 +743,6 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     SearchEndpointRemovedTransfer::class => 'search-commands',
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-method-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'asset-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'order-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-];
-
 $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
     'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
     'payment-method-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
@@ -764,6 +753,17 @@ $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
     'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
     'order-events' => 'http',
     'product-events' => 'http',
+];
+
+$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'payment-method-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'payment-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'payment-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'asset-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'order-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
