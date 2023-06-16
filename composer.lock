@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af869e641acc525611452272eb540893",
+    "content-hash": "9e0757dc5f0523a7717955c8302187cc",
     "packages": [
         {
             "name": "async-aws/core",
@@ -64330,7 +64330,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:spryker/robotframework-suite-tests.git",
+                "url": "https://github.com/spryker/robotframework-suite-tests.git",
                 "reference": "da51efd1fe87d3db409eb42933a60eb26971ce58"
             },
             "default-branch": true,
