@@ -3078,3 +3078,7 @@ wishlist.validation.error.wishlist_item_cannot_be_updated,Wishlist item cannot b
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wunschliste kann nicht aktualisiert werden.,de_DE
 store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
+company_page.validation.error.company_user.unauthorized_request,Unauthorized request.,en_US
+company_page.validation.error.company_user.unauthorized_request,Unerlaubte Anfrage.,de_DE
+permission.name.SeeCompanyUsersPermissionPlugin,View company users,en_US
+permission.name.SeeCompanyUsersPermissionPlugin,Firmenbenutzer anzeigen,de_DE

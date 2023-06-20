@@ -14,6 +14,7 @@ use Spryker\Zed\Availability\Communication\Plugin\AclMerchantPortal\Availability
 use Spryker\Zed\Category\Communication\Plugin\AclMerchantPortal\CategoryAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\CategoryImage\Communication\Plugin\AclMerchantPortal\CategoryImageAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\CmsBlock\Communication\Plugin\AclMerchantPortal\CmsBlockAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\CompanyBusinessUnit\Communication\Plugin\AclMerchantPortal\CompanyBusinessUnitAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryStoreAclEntityConfigurationExpanderPlugin;
@@ -207,6 +208,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new TaxAclEntityConfigurationExpanderPlugin(),
             new UrlAclEntityConfigurationExpanderPlugin(),
             new UserPasswordResetAclEntityConfigurationExpanderPlugin(),
+            new CompanyBusinessUnitAclEntityConfigurationExpanderPlugin(),
         ];
     }
 }

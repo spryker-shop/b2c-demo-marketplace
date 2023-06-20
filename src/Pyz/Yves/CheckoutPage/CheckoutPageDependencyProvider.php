@@ -22,6 +22,7 @@ use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollectio
 use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginInterface;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 use SprykerShop\Yves\CheckoutPage\Plugin\StepEngine\PaymentForeignHandlerPlugin;
+use SprykerShop\Yves\CompanyPage\Plugin\CheckoutPage\CompanyUnitAddressExpanderPlugin;
 use SprykerShop\Yves\CustomerPage\Form\CheckoutAddressCollectionForm;
 use SprykerShop\Yves\CustomerPage\Form\CustomerCheckoutForm;
 use SprykerShop\Yves\CustomerPage\Form\GuestForm;
@@ -159,7 +160,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     protected function getAddressStepExecutorAddressExpanderPlugins(): array
     {
         return [
-            new CustomerAddressExpanderPlugin(),
+            new CustomerAddressExpanderPlugin(), new CompanyUnitAddressExpanderPlugin(),
         ];
     }
 
