@@ -809,6 +809,7 @@ $config[GlueBackendApiApplicationConstants::GLUE_BACKEND_API_HOST] = $sprykerGlu
 $config[GlueBackendApiApplicationConstants::PROJECT_NAMESPACES] = [
     'Pyz',
 ];
+$config[GlueBackendApiApplicationConstants::GLUE_BACKEND_CORS_ALLOW_ORIGIN] = getenv('SPRYKER_GLUE_APPLICATION_CORS_ALLOW_ORIGIN') ?: '*';
 
 // ----------------------------------------------------------------------------
 // ------------------------------ Glue Storefront API -------------------------------
@@ -820,3 +821,4 @@ $config[GlueJsonApiConventionConstants::GLUE_DOMAIN] = sprintf(
     'https://%s',
     $sprykerGlueStorefrontHost ?: $sprykerGlueBackendHost ?: 'localhost',
 );
+$config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_CORS_ALLOW_ORIGIN] = getenv('SPRYKER_GLUE_APPLICATION_CORS_ALLOW_ORIGIN') ?: '*';
