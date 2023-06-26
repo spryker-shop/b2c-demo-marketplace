@@ -30,6 +30,8 @@ class CartCodeDependencyProvider extends SprykerCartCodeDependencyProvider
      */
     protected function getCartCodePostAddPlugins(): array
     {
-        new NopaymentCartCodePostAddPlugin(),
+        return [
+            new NopaymentCartCodePostAddPlugin(),
+        ];
     }
 }
