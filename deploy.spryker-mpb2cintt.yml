@@ -87,7 +87,7 @@ groups:
                         redirect:
                             code: 302
                             url: www.at.mp-b2c.internal-testing.demo-spryker.com
-            Yves:
+            yves:
                 application: yves
                 endpoints:
                     dtc.mp-b2c.internal-testing.demo-spryker.com:
@@ -121,21 +121,21 @@ groups:
                     backend-api.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
                         entry-point: BackendApi
-            Glue:
+            glue:
                 application: glue
                 endpoints:
                     glue.de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
                     glue.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
-            glue_storefront:
+            gluestorefront:
                 application: glue-storefront
                 endpoints:
                     glue-storefront.de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
                     glue-storefront.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
-            glue_backend:
+            gluebackend:
                 application: glue-backend
                 endpoints:
                     glue-backend.de.mp-b2c.internal-testing.demo-spryker.com:
