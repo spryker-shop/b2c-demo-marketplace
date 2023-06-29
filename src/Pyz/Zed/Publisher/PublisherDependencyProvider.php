@@ -46,6 +46,9 @@ use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\Gloss
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\GlossaryWritePublisherPlugin as GlossaryKeyWriterPublisherPlugin;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryPublisherTriggerPlugin;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryTranslation\GlossaryWritePublisherPlugin as GlossaryTranslationWritePublisherPlugin;
+use Spryker\Zed\Merchant\Communication\Plugin\Publisher\MerchantCreatedMessageBrokerPublisherPlugin;
+use Spryker\Zed\Merchant\Communication\Plugin\Publisher\MerchantExportedMessageBrokerPublisherPlugin;
+use Spryker\Zed\Merchant\Communication\Plugin\Publisher\MerchantUpdatedMessageBrokerPublisherPlugin;
 use Spryker\Zed\MerchantCategory\Communication\Plugin\Publisher\Category\CategoryWritePublisherPlugin;
 use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursWritePublisherPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\MerchantProductOfferSearchPublisherTriggerPlugin;
@@ -174,6 +177,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getProductExportPlugins(),
             $this->getProductConfigurationStoragePlugins(),
             $this->getProductOfferAvailabilityStoragePlugins(),
+            $this->getMerchantExportPlugins(),
         );
     }
 
@@ -557,6 +561,18 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new ProductConfigurationWritePublisherPlugin(),
             new ProductConfigurationDeletePublisherPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    protected function getMerchantExportPlugins(): array
+    {
+        return [
+            new MerchantExportedMessageBrokerPublisherPlugin(),
+            new MerchantCreatedMessageBrokerPublisherPlugin(),
+            new MerchantUpdatedMessageBrokerPublisherPlugin(),
         ];
     }
 }
