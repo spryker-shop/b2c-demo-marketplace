@@ -43,6 +43,10 @@ assets:
 regions:
     EU:
         services:
+            mail:
+                sender:
+                    name: Spryker No-Reply
+                    email: no-reply@mp-b2c.internal-testing.demo-spryker.com
             database:
                 database: spryker_mpb2cintt
                 username: spryker
