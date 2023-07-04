@@ -300,7 +300,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 
     /**
-     * @return array
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
      */
     protected function getDataImporterPlugins(): array
     {
@@ -381,7 +381,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 
     /**
-     * @return array
+     * @return array<\Spryker\Zed\DataImport\Business\Model\DataImporterPluginCollectionInterface|\Spryker\Zed\DataImport\Business\Model\DataImporterCollectionInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportBeforeImportHookInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportAfterImportHookInterface>
      */
     protected function getDataImportBeforeImportHookPlugins(): array
     {
@@ -391,7 +391,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 
     /**
-     * @return array
+     * @return array<\Spryker\Zed\DataImport\Business\Model\DataImporterPluginCollectionInterface|\Spryker\Zed\DataImport\Business\Model\DataImporterCollectionInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportBeforeImportHookInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportAfterImportHookInterface>
      */
     protected function getDataImportAfterImportHookPlugins(): array
     {

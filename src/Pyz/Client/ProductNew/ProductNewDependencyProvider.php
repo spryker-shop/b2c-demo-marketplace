@@ -23,7 +23,7 @@ use Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SortedResultFormat
 class ProductNewDependencyProvider extends SprykerProductNewDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
     protected function getNewProductsQueryExpanderPlugins(): array
     {
