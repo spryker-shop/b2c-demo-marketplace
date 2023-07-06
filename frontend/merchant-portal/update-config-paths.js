@@ -26,15 +26,25 @@ async function updateConfigPaths() {
     for (let i = 0; i < TSCONFIG_FILES.length; i++) {
         const fileName = TSCONFIG_FILES[i];
         const config = require(path.join(ROOT_DIR, fileName));
-
-        config.compilerOptions.paths = {
+        const configPaths = {
             ...mpPaths,
             ...config.compilerOptions.paths,
         };
 
+        config.compilerOptions.paths = Object.keys(configPaths)
+            .sort()
+            .reduce((collection, path) => {
+                collection[path] = configPaths[path];
+
+                return collection;
+            }, {});
+
         fs.writeFileSync(fileName, JSON.stringify(config));
 
-        spawnSync('node', ['./frontend/libs/formatter', '-f', '-p', fileName], { stdio: 'inherit', cwd: ROOT_DIR });
+        spawnSync('npx', ['prettier', '--write', fileName], {
+            stdio: 'inherit',
+            cwd: ROOT_DIR,
+        });
     }
 }
 
