@@ -9,7 +9,7 @@ const TSCONFIG_FILES = ['tsconfig.mp.json'];
 async function getMPPathsMap() {
     const entryPoints = await getMPEntryPoints(SPRYKER_CORE_DIR, MP_CORE_ENTRY_POINT_FILE);
 
-    return entryPoints.reduce(
+    return entryPoints.sort().reduce(
         (acc, entryPoint) => ({
             ...acc,
             [entryPointPathToName('@mp/', entryPoint)]: [
@@ -26,18 +26,11 @@ async function updateConfigPaths() {
     for (let i = 0; i < TSCONFIG_FILES.length; i++) {
         const fileName = TSCONFIG_FILES[i];
         const config = require(path.join(ROOT_DIR, fileName));
-        const configPaths = {
+
+        config.compilerOptions.paths = {
             ...mpPaths,
             ...config.compilerOptions.paths,
         };
-
-        config.compilerOptions.paths = Object.keys(configPaths)
-            .sort()
-            .reduce((collection, path) => {
-                collection[path] = configPaths[path];
-
-                return collection;
-            }, {});
 
         fs.writeFileSync(fileName, JSON.stringify(config));
 
