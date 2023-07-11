@@ -130,22 +130,28 @@ groups:
                 endpoints:
                     glue.de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
+                        cors-allow-origin: '*'
                     glue.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
+                        cors-allow-origin: '*'
             gluestorefront:
                 application: glue-storefront
                 endpoints:
                     glue-storefront.de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
+                        cors-allow-origin: '*'
                     glue-storefront.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
+                        cors-allow-origin: '*'
             gluebackend:
                 application: glue-backend
                 endpoints:
                     glue-backend.de.mp-b2c.internal-testing.demo-spryker.com:
                         store: DE
+                        cors-allow-origin: '*'
                     glue-backend.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
+                        cors-allow-origin: '*'
             mportal:
                 application: merchant-portal
                 endpoints:
