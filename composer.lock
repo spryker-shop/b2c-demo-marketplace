@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58960d2349f32dd7909462e93d7ee8bd",
+    "content-hash": "845fa3384f4727df199f7c482a549783",
     "packages": [
         {
             "name": "async-aws/core",
@@ -15101,16 +15101,16 @@
         },
         {
             "name": "spryker/agent",
-            "version": "1.5.2",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/agent.git",
-                "reference": "29660eca7c02a00f53eb9dbb5543370b55209f8c"
+                "reference": "6dd2143aaf193f08356d3df0e9a2a431df0bce78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/agent/zipball/29660eca7c02a00f53eb9dbb5543370b55209f8c",
-                "reference": "29660eca7c02a00f53eb9dbb5543370b55209f8c",
+                "url": "https://api.github.com/repos/spryker/agent/zipball/6dd2143aaf193f08356d3df0e9a2a431df0bce78",
+                "reference": "6dd2143aaf193f08356d3df0e9a2a431df0bce78",
                 "shasum": ""
             },
             "require": {
@@ -15149,9 +15149,9 @@
             ],
             "description": "Agent module",
             "support": {
-                "source": "https://github.com/spryker/agent/tree/1.5.2"
+                "source": "https://github.com/spryker/agent/tree/1.6.0"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2023-07-13T08:31:14+00:00"
         },
         {
             "name": "spryker/agent-auth-rest-api",
@@ -64743,22 +64743,6 @@
                 "source": "https://github.com/spryker/code-sniffer"
             },
             "time": "2023-01-03T16:08:22+00:00"
-        },
-        {
-            "name": "spryker/commerce-k6-performance-tests",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/commerce-k6-performance-tests.git",
-                "reference": "a62bc9b053f5722ad33b829fe477c8f0ceb23bab"
-            },
-            "default-branch": true,
-            "type": "library",
-            "license": [
-                "MIT"
-            ],
-            "description": "K6 performance tests",
-            "time": "2023-07-13T09:47:57+00:00"
         },
         {
             "name": "spryker/development",
