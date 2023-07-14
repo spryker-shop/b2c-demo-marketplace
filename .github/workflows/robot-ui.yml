@@ -31,7 +31,7 @@ jobs:
                   git config --global user.email "github-actions[bot]@users.noreply.github.com"
                   git config --global user.name "github-actions[bot]"
                   git fetch origin
-                  git pull origin internal --no-ff
+                  git pull origin internal --no-ff --allow-unrelated-histories
 
             - name: Install packages
               run: |

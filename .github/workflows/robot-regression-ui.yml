@@ -30,7 +30,7 @@ jobs:
                   git config --global user.name "github-actions[bot]"
                   git fetch origin
                   git config pull.ff only
-                  git pull origin internal --no-ff
+                  git pull origin internal --no-ff --allow-unrelated-histories
 
             - name: Install packages
               run: |
