@@ -2,6 +2,8 @@ name: CI Robot Regression UI
 
 on:
     workflow_dispatch:
+        branches:
+            - internal-robot-ui
     push:
         branches:
             - internal-robot-ui
@@ -24,6 +26,15 @@ jobs:
             - uses: actions/setup-python@v4
               with:
                   python-version: '3.9'
+
+            - name: Up-merge fresh `internal` branch
+              run: |
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --global user.name "github-actions[bot]"
+                  git checkout internal
+                  git pull origin internal
+                  git checkout internal-robot-ui
+                  git merge internal --no-edit
 
             - name: Install packages
               run: |
