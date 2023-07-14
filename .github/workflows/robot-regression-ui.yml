@@ -1,9 +1,6 @@
 name: CI Robot Regression UI
 
 on:
-    workflow_dispatch:
-        branches:
-            - internal-robot-ui
     push:
         branches:
             - internal-robot-ui
