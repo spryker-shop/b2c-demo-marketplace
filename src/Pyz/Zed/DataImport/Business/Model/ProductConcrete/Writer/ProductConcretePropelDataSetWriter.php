@@ -223,7 +223,7 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
     /**
      * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
      *
-     * @return array
+     * @return array<string, mixed>
      */
     protected function getProductConcreteBundleData(DataSetInterface $dataSet): array
     {
@@ -233,7 +233,7 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
     /**
      * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
      *
-     * @return array
+     * @return array<string, mixed>
      */
     protected function getProductConcreteLocalizedTransfers(DataSetInterface $dataSet): array
     {

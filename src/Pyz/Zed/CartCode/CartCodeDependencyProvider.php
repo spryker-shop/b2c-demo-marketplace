@@ -15,7 +15,7 @@ use Spryker\Zed\Nopayment\Communication\Plugin\CartCode\NopaymentCartCodePostAdd
 class CartCodeDependencyProvider extends SprykerCartCodeDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\CartCodeExtension\Dependency\Plugin\CartCodePluginInterface>
+     * @return list<\Spryker\Zed\CartCodeExtension\Dependency\Plugin\CartCodePluginInterface>
      */
     protected function getCartCodePlugins(): array
     {
