@@ -3078,3 +3078,5 @@ wishlist.validation.error.wishlist_item_cannot_be_updated,Wishlist item cannot b
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wunschliste kann nicht aktualisiert werden.,de_DE
 store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
+store.validation.store_not_found,Store not found,en_US
+store.validation.store_not_found,Store nicht gefunden,de_DE
