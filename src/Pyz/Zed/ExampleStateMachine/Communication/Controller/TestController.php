@@ -20,12 +20,14 @@ use Symfony\Component\HttpFoundation\Request;
 class TestController extends AbstractController
 {
     /**
+     * @return array<string, mixed>
+     *
      * @var string
      */
     public const PYZ_STATE_MACHINE_NAME = 'Test';
 
     /**
-     * @return array
+     * @return array<string, mixed>
      */
     public function listPyzAction(): array
     {
