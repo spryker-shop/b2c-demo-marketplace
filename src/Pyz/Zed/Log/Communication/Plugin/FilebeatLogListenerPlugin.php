@@ -13,8 +13,8 @@ use Symfony\Component\Process\Process;
 
 /**
  * @method \Spryker\Zed\Log\Communication\LogCommunicationFactory getFactory()
- * @method \Spryker\Zed\Log\Business\LogFacadeInterface getFacade()
  * @method \Spryker\Zed\Log\LogConfig getConfig()
+ * @method \Spryker\Zed\Log\Business\LogFacadeInterface getFacade()
  */
 class FilebeatLogListenerPlugin extends AbstractPlugin implements LogListenerInterface
 {

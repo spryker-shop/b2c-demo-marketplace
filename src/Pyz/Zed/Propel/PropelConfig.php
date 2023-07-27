@@ -12,7 +12,7 @@ use Spryker\Zed\Propel\PropelConfig as SprykerPropelConfig;
 class PropelConfig extends SprykerPropelConfig
 {
     /**
-     * @return array
+     * @return list<string>
      */
     public function getProjectPropelSchemaPathPatterns(): array
     {

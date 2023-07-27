@@ -13,7 +13,7 @@ use Spryker\Service\ProductConfiguration\ProductConfigurationConfig as SprykerPr
 class ProductConfigurationConfig extends SprykerProductConfigurationConfig
 {
     /**
-     * @return array<string>
+     * @return list<string>
      */
     public function getConfigurationFieldsNotAllowedForEncoding(): array
     {
