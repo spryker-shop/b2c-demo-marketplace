@@ -98,7 +98,6 @@
         "spryker/asset-storage": "^1.2.1",
         "spryker/auth-rest-api": "^2.14.2",
         "spryker/availability-cart-connector": "^7.3.0",
-        "spryker/availability-gui": "^6.8.0",
         "spryker/availability-merchant-portal-gui": "^1.0.0",
         "spryker/availability-notifications-rest-api": "^1.2.0",
         "spryker/barcode-laminas": "^1.1.0",
