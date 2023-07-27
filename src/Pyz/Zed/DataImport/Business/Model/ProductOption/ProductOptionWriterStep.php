@@ -108,6 +108,7 @@ class ProductOptionWriterStep extends PublishAwareStep implements DataImportStep
         if (!empty($dataSet[static::KEY_ABSTRACT_PRODUCT_SKUS])) {
             $abstractProductSkuCollection = explode(',', $dataSet[static::KEY_ABSTRACT_PRODUCT_SKUS]);
 
+            /** @var array<int> $abstractProductIdCollection */
             $abstractProductIdCollection = SpyProductAbstractQuery::create()
                 ->select([SpyProductAbstractTableMap::COL_ID_PRODUCT_ABSTRACT])
                 ->filterBySku($abstractProductSkuCollection, Criteria::IN)
@@ -125,6 +126,10 @@ class ProductOptionWriterStep extends PublishAwareStep implements DataImportStep
         }
 
         foreach ($dataSet[ProductLocalizedAttributesExtractorStep::KEY_LOCALIZED_ATTRIBUTES] as $idLocale => $attributes) {
+            if (!isset($attributes[static::KEY_OPTION_NAME])) {
+                continue;
+            }
+
             $this->findOrCreateTranslation($dataSet[static::KEY_OPTION_NAME_TRANSLATION_KEY], $attributes[static::KEY_OPTION_NAME], $idLocale);
             $this->findOrCreateTranslation($dataSet[static::KEY_GROUP_NAME_TRANSLATION_KEY], $attributes[static::KEY_GROUP_NAME], $idLocale);
         }

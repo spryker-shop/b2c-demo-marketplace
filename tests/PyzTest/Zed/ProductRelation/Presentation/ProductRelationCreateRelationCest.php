@@ -36,19 +36,20 @@ class ProductRelationCreateRelationCest
         $i->amOnPage(ProductRelationCreatePage::URL);
 
         $i->waitForElement('//*[@id="product_relation_productRelationKey"]');
-        $key = uniqid('key-', false);
-        $i->fillField('//*[@id="product_relation_productRelationKey"]', $key);
+        $productRelationKey = uniqid('key-', false);
+        $i->fillField('//*[@id="product_relation_productRelationKey"]', $productRelationKey);
 
         $i->selectRelationType(ProductRelationTypes::TYPE_RELATED_PRODUCTS);
-        $i->filterProductsByName('Samsung Bundle');
-        $i->selectProduct(214);
+        $i->filterProductsByName(ProductRelationCreatePage::PRODUCT_RELATION_PRODUCT_1_NAME);
+        $i->selectProduct(ProductRelationCreatePage::PRODUCT_RELATION_PRODUCT_1_SKU);
 
         $i->switchToAssignProductsTab();
 
-        $i->selectProductRule('product_sku', 'equal', '123');
+        $i->selectProductRule('product_sku', 'equal', ProductRelationCreatePage::PRODUCT_RELATION_PRODUCT_2_SKU);
 
         $i->clickSaveButton();
 
-        $i->seeInPageSource(sprintf('%s %s', ProductRelationCreatePage::EDIT_PRODUCT_RELATION_TEXT, $key));
+        $i->waitForText(sprintf('%s %s', ProductRelationCreatePage::EDIT_PRODUCT_RELATION_TEXT, $productRelationKey), 20);
+        $i->seeInPageSource(sprintf('%s %s', ProductRelationCreatePage::EDIT_PRODUCT_RELATION_TEXT, $productRelationKey));
     }
 }
