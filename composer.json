@@ -225,7 +225,6 @@
         "spryker/secrets-manager-aws": "^1.0.2",
         "spryker/security-blocker-merchant-portal-gui": "^1.0.0",
         "spryker/security-blocker-rest-api": "^1.0.0",
-        "spryker/security-merchant-portal-gui": "^2.1.0",
         "spryker/security-system-user": "^1.0.0",
         "spryker/shipment-cart-connector": "^2.1.2",
         "spryker/shipment-checkout-connector": "^2.0.5",
