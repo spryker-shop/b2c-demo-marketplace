@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e1c4ba00ae25999397b33879c3638b1",
+    "content-hash": "f1505ec717d33ea52b4f516d9131fefa",
     "packages": [
         {
             "name": "async-aws/core",
@@ -65616,8 +65616,8 @@
         {
             "package": "spryker-feature/marketplace-inventory-management",
             "version": "9999999-dev",
-            "alias": "202307.0",
-            "alias_normalized": "202307.0"
+            "alias": "202400.0",
+            "alias_normalized": "202400.0"
         }
     ],
     "minimum-stability": "dev",
