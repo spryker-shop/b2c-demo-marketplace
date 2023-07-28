@@ -25,7 +25,7 @@ use Codeception\Actor;
  * @method void comment($description)
  * @method void pause($vars = [])
  *
- * @SuppressWarnings(PHPMD)
+ * @SuppressWarnings(\PyzTest\Yves\Application\PHPMD)
  */
 class ApplicationControllerTester extends Actor
 {

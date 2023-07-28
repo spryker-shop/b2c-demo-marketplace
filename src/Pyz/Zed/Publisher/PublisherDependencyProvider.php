@@ -184,7 +184,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return array
+     * @return array<string, array<int, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>>
      */
     protected function getPublishAndSynchronizeHealthCheckPlugins(): array
     {
@@ -238,7 +238,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return array
+     * @return array<string, array<int, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>>
      */
     protected function getGlossaryStoragePlugins(): array
     {
