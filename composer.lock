@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e09e0152ed030b56040a74060bd9afbc",
+    "content-hash": "4e1c4ba00ae25999397b33879c3638b1",
     "packages": [
         {
             "name": "async-aws/core",
@@ -5534,16 +5534,16 @@
         },
         {
             "name": "spryker-feature/marketplace-inventory-management",
-            "version": "202307.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-inventory-management.git",
-                "reference": "a1691d291db3a4e99725c1c230c5d9f6fff58539"
+                "reference": "b9dca9afc45d1d4847551c07bc3102c5bc527d65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-inventory-management/zipball/a1691d291db3a4e99725c1c230c5d9f6fff58539",
-                "reference": "a1691d291db3a4e99725c1c230c5d9f6fff58539",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-inventory-management/zipball/b9dca9afc45d1d4847551c07bc3102c5bc527d65",
+                "reference": "b9dca9afc45d1d4847551c07bc3102c5bc527d65",
                 "shasum": ""
             },
             "require": {
@@ -5568,6 +5568,7 @@
                 "spryker-feature/inventory-management": "Recommended feature dependency.",
                 "spryker-feature/marketplace-product-offer": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -5580,9 +5581,9 @@
             ],
             "description": "Marketplace Inventory Management [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-inventory-management/tree/202307.0"
+                "source": "https://github.com/spryker-feature/marketplace-inventory-management/tree/master"
             },
-            "time": "2023-07-26T14:50:34+00:00"
+            "time": "2023-07-27T11:23:39+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant",
@@ -65611,9 +65612,17 @@
             "time": "2022-06-03T18:03:27+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "spryker-feature/marketplace-inventory-management",
+            "version": "9999999-dev",
+            "alias": "202307.0",
+            "alias_normalized": "202307.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "spryker-feature/marketplace-inventory-management": 20,
         "spryker/docker-chromedriver": 20,
         "spryker/robotframework-suite-tests": 20
     },
