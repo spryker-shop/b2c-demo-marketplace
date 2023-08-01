@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1505ec717d33ea52b4f516d9131fefa",
+    "content-hash": "12c4757a49ed3dfd08c9978ee3b2ac0d",
     "packages": [
         {
             "name": "async-aws/core",
@@ -5376,16 +5376,16 @@
         },
         {
             "name": "spryker-feature/inventory-management",
-            "version": "202307.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/inventory-management.git",
-                "reference": "5001ee7d6e6a1d77899ec6e665304bd1ed319440"
+                "reference": "dbc53c59323d3eef4198f6edc75c3dc2d699a4c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/inventory-management/zipball/5001ee7d6e6a1d77899ec6e665304bd1ed319440",
-                "reference": "5001ee7d6e6a1d77899ec6e665304bd1ed319440",
+                "url": "https://api.github.com/repos/spryker-feature/inventory-management/zipball/dbc53c59323d3eef4198f6edc75c3dc2d699a4c2",
+                "reference": "dbc53c59323d3eef4198f6edc75c3dc2d699a4c2",
                 "shasum": ""
             },
             "require": {
@@ -5406,6 +5406,7 @@
             "suggest": {
                 "spryker-feature/product": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -5418,9 +5419,9 @@
             ],
             "description": "Inventory Management [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/inventory-management/tree/202307.0"
+                "source": "https://github.com/spryker-feature/inventory-management/tree/master"
             },
-            "time": "2023-07-26T14:50:32+00:00"
+            "time": "2023-07-27T11:42:22+00:00"
         },
         {
             "name": "spryker-feature/invoice",
@@ -65614,6 +65615,12 @@
     ],
     "aliases": [
         {
+            "package": "spryker-feature/inventory-management",
+            "version": "9999999-dev",
+            "alias": "202400.0",
+            "alias_normalized": "202400.0"
+        },
+        {
             "package": "spryker-feature/marketplace-inventory-management",
             "version": "9999999-dev",
             "alias": "202400.0",
@@ -65622,6 +65629,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "spryker-feature/inventory-management": 20,
         "spryker-feature/marketplace-inventory-management": 20,
         "spryker/docker-chromedriver": 20,
         "spryker/robotframework-suite-tests": 20
