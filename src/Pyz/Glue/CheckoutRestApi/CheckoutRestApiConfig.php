@@ -15,7 +15,6 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
      * @var array<string, array<string>>
      */
     protected const PAYMENT_METHOD_REQUIRED_FIELDS = [
-        'dummyPaymentInvoice' => ['dummyPaymentInvoice.dateOfBirth'],
         'dummyPaymentCreditCard' => [
             'dummyPaymentCreditCard.cardType',
             'dummyPaymentCreditCard.cardNumber',
@@ -34,25 +33,11 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     protected const PYZ_DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
 
     /**
-     * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_INVOICE
-     *
-     * @var string
-     */
-    protected const PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE = 'Invoice';
-
-    /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_CREDIT_CARD
      *
      * @var string
      */
     protected const PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'Credit Card';
-
-    /**
-     * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_INVOICE
-     *
-     * @var string
-     */
-    protected const PYZ_PAYMENT_METHOD_INVOICE = 'dummyPaymentInvoice';
 
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_CREDIT_CARD
@@ -74,7 +59,6 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
         return [
             static::PYZ_DUMMY_PAYMENT_PROVIDER_NAME => [
                 static::PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD => static::PYZ_PAYMENT_METHOD_CREDIT_CARD,
-                static::PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE => static::PYZ_PAYMENT_METHOD_INVOICE,
             ],
         ];
     }
