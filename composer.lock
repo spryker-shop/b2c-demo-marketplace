@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61012e7c9e4bbfe94d499427de3a2cc",
+    "content-hash": "e8c2bdb35066c0d2e2fceda43cd753da",
     "packages": [
         {
             "name": "async-aws/core",
@@ -65744,38 +65744,38 @@
         {
             "package": "spryker-feature/file-manager",
             "version": "9999999-dev",
-            "alias": "202411.0",
-            "alias_normalized": "202411.0"
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
         },
         {
             "package": "spryker-feature/inventory-management",
             "version": "9999999-dev",
-            "alias": "202411.0",
-            "alias_normalized": "202411.0"
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
         },
         {
             "package": "spryker-feature/marketplace-inventory-management",
             "version": "9999999-dev",
-            "alias": "202411.0",
-            "alias_normalized": "202411.0"
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
         },
         {
             "package": "spryker-feature/product",
             "version": "9999999-dev",
-            "alias": "202411.0",
-            "alias_normalized": "202411.0"
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
         },
         {
             "package": "spryker-feature/product-lists",
             "version": "9999999-dev",
-            "alias": "202411.0",
-            "alias_normalized": "202411.0"
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
         },
         {
             "package": "spryker-feature/scheduled-prices",
             "version": "9999999-dev",
-            "alias": "202411.0",
-            "alias_normalized": "202411.0"
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
         }
     ],
     "minimum-stability": "dev",
