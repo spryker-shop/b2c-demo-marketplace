@@ -13,22 +13,24 @@ image:
         SPRYKER_HOOK_AFTER_DEPLOY: "true"
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production --no-ansi -vvv"
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive --no-ansi -vvv"
+        SPRYKER_PRODUCT_CONFIGURATOR_HOST: dtc.mp-b2c.security-testing.demo-spryker.com
+        SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
+        SPRYKER_YVES_HOST_DE: www.de.mp-b2c.internal-security.demo-spryker.com
+        SPRYKER_YVES_HOST_AT: www.at.mp-b2c.internal-security.demo-spryker.com
     node:
-        version: 16
-        npm: 8
+        version: 18
+        npm: 9
 
 composer:
     mode: --no-dev
     autoload: --classmap-authoritative
 
 assets:
-    image: fholzer/nginx-brotli:v1.18.0
+    image: spryker/nginx-brotli:latest
     mode: production
     compression:
         brotli:
-            static: only
-        gzip:
-            static: true
+            static: on
             level: 5
 
 regions:
