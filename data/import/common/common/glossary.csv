@@ -1273,12 +1273,6 @@ dummyPaymentCreditCard.card_security_code,CVC,en_US
 dummyPaymentCreditCard.card_security_code,CVC,de_DE
 dummyPaymentCreditCard.hidden_numbers,*********,en_US
 dummyPaymentCreditCard.hidden_numbers,*********,de_DE
-DummyPaymentInvoice,Invoice,en_US
-DummyPaymentInvoice,Auf Rechnung,de_DE
-dummyPaymentInvoice.invoice,Pay with invoice:,en_US
-dummyPaymentInvoice.invoice,Auf Rechnung bezahlen:,de_DE
-dummyPaymentInvoice.date_of_birth,Date of Birth,en_US
-dummyPaymentInvoice.date_of_birth,Geburtsdatum,de_DE
 cart.item.item_price,Item price,en_US
 cart.item.item_price,Stückpreis,de_DE
 cart.item.item_total,Item total,en_US
@@ -3078,3 +3072,5 @@ wishlist.validation.error.wishlist_item_cannot_be_updated,Wishlist item cannot b
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wunschliste kann nicht aktualisiert werden.,de_DE
 store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
+store.validation.store_not_found,"Store not found",en_US
+store.validation.store_not_found,"Store nicht gefunden",de_DE
