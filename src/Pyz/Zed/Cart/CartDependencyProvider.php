@@ -46,7 +46,7 @@ use Spryker\Zed\ProductCartConnector\Communication\Plugin\ProductUrlItemExpander
 use Spryker\Zed\ProductCartConnector\Communication\Plugin\RemoveInactiveItemsPreReloadPlugin;
 use Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Cart\ProductConfigurationGroupKeyItemExpanderPlugin;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Cart\ProductDiscontinuedCartPreCheckPlugin;
-use Spryker\Zed\ProductImageCartConnector\Communication\Plugin\ProductImageCartPlugin;
+use Spryker\Zed\ProductImageCartConnector\Communication\Plugin\Cart\ProductImageItemExpanderPlugin;
 use Spryker\Zed\ProductList\Communication\Plugin\CartExtension\ProductListRestrictedItemsPreCheckPlugin;
 use Spryker\Zed\ProductList\Communication\Plugin\CartExtension\RemoveRestrictedItemsPreReloadPlugin;
 use Spryker\Zed\ProductOffer\Communication\Plugin\Cart\FilterInactiveProductOfferPreReloadItemsPlugin;
@@ -86,7 +86,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new SkuGroupKeyPlugin(),
             new CartItemGroupKeyOptionPlugin(),
             new CartItemWithBundleGroupKeyExpanderPlugin(),
-            new ProductImageCartPlugin(),
+            new ProductImageItemExpanderPlugin(),
             new CartGroupPromotionItems(),
             new GiftCardMetadataExpanderPlugin(), #GiftCardFeature
             new ConfiguredBundleQuantityPerSlotItemExpanderPlugin(),
