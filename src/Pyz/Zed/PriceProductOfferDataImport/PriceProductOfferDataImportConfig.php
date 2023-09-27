@@ -15,7 +15,7 @@ class PriceProductOfferDataImportConfig extends SprykerPriceProductOfferDataImpo
     /**
      * @var string
      */
-    public const PYZ_IMPORT_TYPE_COMBINED_PRICE_PRODUCT_OFFER = 'combined-price-product-offer';
+    public const IMPORT_TYPE_COMBINED_PRICE_PRODUCT_OFFER = 'combined-price-product-offer';
 
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
@@ -26,7 +26,7 @@ class PriceProductOfferDataImportConfig extends SprykerPriceProductOfferDataImpo
 
         return $this->buildImporterConfiguration(
             $moduleDataImportDirectory . 'combined_merchant_product_offer.csv',
-            static::PYZ_IMPORT_TYPE_COMBINED_PRICE_PRODUCT_OFFER,
+            static::IMPORT_TYPE_COMBINED_PRICE_PRODUCT_OFFER,
         );
     }
 }

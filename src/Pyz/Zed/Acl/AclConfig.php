@@ -18,7 +18,7 @@ class AclConfig extends SprykerAclConfig
     /**
      * @var string
      */
-    protected const PYZ_RULE_TYPE_DENY = 'deny';
+    protected const RULE_TYPE_DENY = 'deny';
 
     /**
      * @return array<array<string, mixed>>
@@ -78,7 +78,7 @@ class AclConfig extends SprykerAclConfig
                 'bundle' => $bundleName,
                 'controller' => AclConstants::VALIDATOR_WILDCARD,
                 'action' => AclConstants::VALIDATOR_WILDCARD,
-                'type' => static::PYZ_RULE_TYPE_DENY,
+                'type' => static::RULE_TYPE_DENY,
                 'role' => AclConstants::ROOT_ROLE,
             ];
         }

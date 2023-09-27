@@ -24,7 +24,7 @@ class CombinedPriceProductOfferDataImportPlugin extends AbstractPlugin implement
      */
     public function getImportType(): string
     {
-        return PriceProductOfferDataImportConfig::PYZ_IMPORT_TYPE_COMBINED_PRICE_PRODUCT_OFFER;
+        return PriceProductOfferDataImportConfig::IMPORT_TYPE_COMBINED_PRICE_PRODUCT_OFFER;
     }
 
     /**

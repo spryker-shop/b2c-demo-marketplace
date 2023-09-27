@@ -24,7 +24,7 @@ class CombinedMerchantProductOfferStoreDataImportPlugin extends AbstractPlugin i
      */
     public function getImportType(): string
     {
-        return MerchantProductOfferDataImportConfig::PYZ_IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE;
+        return MerchantProductOfferDataImportConfig::IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE;
     }
 
     /**

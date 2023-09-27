@@ -21,7 +21,7 @@ class IsOrderPaidConditionPlugin extends AbstractPlugin implements ConditionInte
     /**
      * @var string
      */
-    protected const PYZ_ITEM_STATE_PAID = 'paid';
+    protected const ITEM_STATE_PAID = 'paid';
 
     /**
      * {@inheritDoc}
@@ -39,7 +39,7 @@ class IsOrderPaidConditionPlugin extends AbstractPlugin implements ConditionInte
         $orderTransfer = $salesFacade->findOrderByIdSalesOrder($orderItem->getFkSalesOrder());
 
         foreach ($orderTransfer->getItems() as $itemTransfer) {
-            if ($itemTransfer->getState()->getName() !== static::PYZ_ITEM_STATE_PAID) {
+            if ($itemTransfer->getState()->getName() !== static::ITEM_STATE_PAID) {
                 return false;
             }
         }
