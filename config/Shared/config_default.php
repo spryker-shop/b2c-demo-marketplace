@@ -844,7 +844,6 @@ $config[GlueJsonApiConventionConstants::GLUE_DOMAIN] = sprintf(
 );
 $config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_CORS_ALLOW_ORIGIN] = getenv('SPRYKER_GLUE_APPLICATION_CORS_ALLOW_ORIGIN') ?: '*';
 
-
 // ----------------------------------------------------------------------------
 // ------------------------------ Push Notification ---------------------------
 // ----------------------------------------------------------------------------
