@@ -187,7 +187,6 @@
         "spryker/payments-rest-api": "^1.2.0",
         "spryker/picking-list-multi-shipment-picking-strategy-example": "^0.2.0",
         "spryker/picking-lists-backend-api": "^1.0.0",
-        "spryker/picking-lists-backend-api-extension": "^1.0.0",
         "spryker/picking-lists-users-backend-api": "^1.0.0",
         "spryker/picking-lists-warehouses-backend-api": "^1.0.0",
         "spryker/price-cart-connector": "^6.10.0",
