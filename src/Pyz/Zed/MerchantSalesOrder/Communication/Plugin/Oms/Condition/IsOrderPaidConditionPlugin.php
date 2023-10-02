@@ -35,7 +35,7 @@ class IsOrderPaidConditionPlugin extends AbstractPlugin implements ConditionInte
      */
     public function check(SpySalesOrderItem $orderItem): bool
     {
-        $salesFacade = $this->getFactory()->getPyzSalesFacade();
+        $salesFacade = $this->getFactory()->getSalesFacade();
         $orderTransfer = $salesFacade->findOrderByIdSalesOrder($orderItem->getFkSalesOrder());
 
         foreach ($orderTransfer->getItems() as $itemTransfer) {

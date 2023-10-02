@@ -22,7 +22,7 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
     /**
      * @return \Pyz\Zed\Oms\Business\OmsFacadeInterface
      */
-    public function getPyzOmsFacade(): OmsFacadeInterface
+    public function getOmsFacade(): OmsFacadeInterface
     {
         return $this->getProvidedDependency(MerchantOmsDependencyProvider::FACADE_OMS);
     }
@@ -30,7 +30,7 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
     /**
      * @return \Spryker\Zed\SalesReturn\Business\SalesReturnFacadeInterface
      */
-    public function getPyzSalesReturnFacade(): SalesReturnFacadeInterface
+    public function getSalesReturnFacade(): SalesReturnFacadeInterface
     {
         return $this->getProvidedDependency(MerchantOmsDependencyProvider::FACADE_SALES_RETURN);
     }

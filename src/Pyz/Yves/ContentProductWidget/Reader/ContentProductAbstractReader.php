@@ -7,28 +7,29 @@
 
 namespace Pyz\Yves\ContentProductWidget\Reader;
 
-use Spryker\Client\ContentProduct\ContentProductClientInterface;
-use Spryker\Client\ProductStorage\ProductStorageClientInterface;
+use SprykerShop\Yves\ContentProductWidget\Dependency\Client\ContentProductWidgetToContentProductClientBridgeInterface;
+use SprykerShop\Yves\ContentProductWidget\Dependency\Client\ContentProductWidgetToProductStorageClientBridgeInterface;
+use SprykerShop\Yves\ContentProductWidget\Reader\ContentProductAbstractReaderInterface;
 
 class ContentProductAbstractReader implements ContentProductAbstractReaderInterface
 {
     /**
-     * @var \Spryker\Client\ContentProduct\ContentProductClientInterface
+     * @var \SprykerShop\Yves\ContentProductWidget\Dependency\Client\ContentProductWidgetToContentProductClientBridgeInterface
      */
     protected $contentProductClient;
 
     /**
-     * @var \Spryker\Client\ProductStorage\ProductStorageClientInterface
+     * @var \SprykerShop\Yves\ContentProductWidget\Dependency\Client\ContentProductWidgetToProductStorageClientBridgeInterface
      */
     protected $productStorageClient;
 
     /**
-     * @param \Spryker\Client\ContentProduct\ContentProductClientInterface $contentProductClient
-     * @param \Spryker\Client\ProductStorage\ProductStorageClientInterface $productStorageClient
+     * @param \SprykerShop\Yves\ContentProductWidget\Dependency\Client\ContentProductWidgetToContentProductClientBridgeInterface $contentProductClient
+     * @param \SprykerShop\Yves\ContentProductWidget\Dependency\Client\ContentProductWidgetToProductStorageClientBridgeInterface $productStorageClient
      */
     public function __construct(
-        ContentProductClientInterface $contentProductClient,
-        ProductStorageClientInterface $productStorageClient,
+        ContentProductWidgetToContentProductClientBridgeInterface $contentProductClient,
+        ContentProductWidgetToProductStorageClientBridgeInterface $productStorageClient,
     ) {
         $this->contentProductClient = $contentProductClient;
         $this->productStorageClient = $productStorageClient;
@@ -40,7 +41,7 @@ class ContentProductAbstractReader implements ContentProductAbstractReaderInterf
      *
      * @return array<\Generated\Shared\Transfer\ProductViewTransfer>
      */
-    public function getPyzProductAbstractCollection(string $contentKey, string $localeName): array
+    public function findProductAbstractCollection(string $contentKey, string $localeName): array
     {
         $contentProductAbstractListTypeTransfer = $this->contentProductClient->executeProductAbstractListTypeByKey($contentKey, $localeName);
 

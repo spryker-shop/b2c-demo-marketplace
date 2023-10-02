@@ -25,10 +25,10 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
-    public function getPyzCombinedMerchantProductOfferDataImporterConfiguration(): DataImporterConfigurationTransfer
+    public function getCombinedMerchantProductOfferDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         return $this->buildImporterConfiguration(
-            $this->getPyzCombinedMerchantProductOfferFilePath(),
+            $this->getCombinedMerchantProductOfferFilePath(),
             static::IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER,
         );
     }
@@ -36,10 +36,10 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
-    public function getPyzCombinedMerchantProductOfferStoreDataImporterConfiguration(): DataImporterConfigurationTransfer
+    public function getCombinedMerchantProductOfferStoreDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         return $this->buildImporterConfiguration(
-            $this->getPyzCombinedMerchantProductOfferFilePath(),
+            $this->getCombinedMerchantProductOfferFilePath(),
             static::IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE,
         );
     }
@@ -47,7 +47,7 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
     /**
      * @return string
      */
-    public function getPyzCombinedMerchantProductOfferFilePath(): string
+    public function getCombinedMerchantProductOfferFilePath(): string
     {
         $moduleDataImportDirectory = $this->getDataImportRootPath() . 'common' . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR;
 

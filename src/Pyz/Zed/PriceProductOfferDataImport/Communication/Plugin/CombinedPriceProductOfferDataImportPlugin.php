@@ -34,6 +34,6 @@ class CombinedPriceProductOfferDataImportPlugin extends AbstractPlugin implement
      */
     public function import(?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null): DataImporterReportTransfer
     {
-        return $this->getFacade()->importPyzCombinedPriceProductOfferData($dataImporterConfigurationTransfer);
+        return $this->getFacade()->importCombinedPriceProductOfferData($dataImporterConfigurationTransfer);
     }
 }

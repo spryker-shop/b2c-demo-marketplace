@@ -59,8 +59,8 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     {
         $container = parent::provideCommunicationLayerDependencies($container);
 
-        $container = $this->addPyzOmsFacade($container);
-        $container = $this->addPyzSalesReturnFacade($container);
+        $container = $this->addOmsFacade($container);
+        $container = $this->addSalesReturnFacade($container);
 
         return $container;
     }
@@ -70,7 +70,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    public function addPyzOmsFacade(Container $container): Container
+    public function addOmsFacade(Container $container): Container
     {
         $container->set(static::FACADE_OMS, function (Container $container) {
             return $container->getLocator()->oms()->facade();
@@ -84,7 +84,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    public function addPyzSalesReturnFacade(Container $container): Container
+    public function addSalesReturnFacade(Container $container): Container
     {
         $container->set(static::FACADE_SALES_RETURN, function (Container $container) {
             return $container->getLocator()->salesReturn()->facade();
