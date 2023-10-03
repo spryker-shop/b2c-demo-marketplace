@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2409ead9ce59b62ac6ae4a9725b05e5a",
+    "content-hash": "0485009d2bde375f407b09977bd90db3",
     "packages": [
         {
             "name": "async-aws/core",
@@ -66181,6 +66181,12 @@
         }
     ],
     "aliases": [
+        {
+            "package": "spryker-feature/data-exchange-api",
+            "version": "9999999-dev",
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
+        },
         {
             "package": "spryker-feature/file-manager",
             "version": "9999999-dev",
