@@ -145,7 +145,6 @@ groups:
                         store: DE
                     glue-backend.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
-                        store: AT
             mportal:
                 application: merchant-portal
                 endpoints:
