@@ -15,6 +15,7 @@
         "ext-readline": "*",
         "ext-redis": "*",
         "league/flysystem": "^2.5.0",
+        "spryker-eco/authorization-picking-app-backend-api": "^0.1.0",
         "spryker-eco/loggly": "^0.1.1",
         "spryker-feature/acl": "^202307.0",
         "spryker-feature/agent-assist": "^202307.0",
