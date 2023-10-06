@@ -17,13 +17,13 @@ class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCo
     /**
      * @var string
      */
-    protected const PYZ_EVENT_DELIVER = 'deliver';
+    protected const EVENT_DELIVER = 'deliver';
 
     /**
      * @return string
      */
     public function getEventName(): string
     {
-        return static::PYZ_EVENT_DELIVER;
+        return static::EVENT_DELIVER;
     }
 }

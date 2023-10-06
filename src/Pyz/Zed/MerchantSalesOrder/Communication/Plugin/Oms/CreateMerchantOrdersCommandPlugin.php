@@ -44,7 +44,7 @@ class CreateMerchantOrdersCommandPlugin extends AbstractPlugin implements Comman
             return [];
         }
 
-        $salesFacade = $this->getFactory()->getPyzSalesFacade();
+        $salesFacade = $this->getFactory()->getSalesFacade();
         $orderTransfer = $salesFacade->findOrderByIdSalesOrder($orderEntity->getIdSalesOrder());
 
         $this->getFacade()->createMerchantOrderCollection($orderTransfer);
