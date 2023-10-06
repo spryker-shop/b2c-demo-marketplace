@@ -21,7 +21,7 @@ class AclConfig extends SprykerAclConfig
     protected const PYZ_RULE_TYPE_DENY = 'deny';
 
     /**
-     * @return array
+     * @return array<array<string, mixed>>
      */
     public function getInstallerRules(): array
     {
@@ -32,7 +32,7 @@ class AclConfig extends SprykerAclConfig
     }
 
     /**
-     * @return array
+     * @return array<string, array<string, mixed>>
      */
     public function getInstallerUsers(): array
     {
@@ -55,9 +55,9 @@ class AclConfig extends SprykerAclConfig
     }
 
     /**
-     * @param string[][] $installerRules
+     * @param array<array<string, mixed>> $installerRules
      *
-     * @return string[][]
+     * @return array<array<string, mixed>>
      */
     protected function addPyzMerchantPortalInstallerRules(array $installerRules): array
     {
@@ -87,7 +87,7 @@ class AclConfig extends SprykerAclConfig
     }
 
     /**
-     * @return array
+     * @return array<int, array<string, mixed>>
      */
     public function getInstallerRoles(): array
     {
@@ -95,7 +95,7 @@ class AclConfig extends SprykerAclConfig
     }
 
     /**
-     * @return mixed[]
+     * @return array<int, array<string, mixed>>
      */
     protected function addPyzInstallerRootRole(): array
     {

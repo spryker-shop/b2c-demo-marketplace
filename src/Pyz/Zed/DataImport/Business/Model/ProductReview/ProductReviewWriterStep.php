@@ -32,8 +32,10 @@ class ProductReviewWriterStep extends PublishAwareStep implements DataImportStep
      * @param \Pyz\Zed\DataImport\Business\Model\Product\Repository\ProductRepositoryInterface $productRepository
      * @param \Pyz\Zed\DataImport\Business\Model\Locale\Repository\LocaleRepositoryInterface $localeRepository
      */
-    public function __construct(ProductRepositoryInterface $productRepository, LocaleRepositoryInterface $localeRepository)
-    {
+    public function __construct(
+        ProductRepositoryInterface $productRepository,
+        LocaleRepositoryInterface $localeRepository,
+    ) {
         $this->productRepository = $productRepository;
         $this->localeRepository = $localeRepository;
     }
@@ -43,7 +45,7 @@ class ProductReviewWriterStep extends PublishAwareStep implements DataImportStep
      *
      * @return void
      */
-    public function execute(DataSetInterface $dataSet)
+    public function execute(DataSetInterface $dataSet): void
     {
         $productReviewEntity = SpyProductReviewQuery::create()
             ->filterByCustomerReference($dataSet['customer_reference'])
@@ -72,7 +74,7 @@ class ProductReviewWriterStep extends PublishAwareStep implements DataImportStep
      *
      * @return int
      */
-    protected function getFkProductAbstract(DataSetInterface $dataSet)
+    protected function getFkProductAbstract(DataSetInterface $dataSet): int
     {
         return $this->productRepository->getIdProductAbstractByAbstractSku($dataSet['abstract_product_sku']);
     }
@@ -82,7 +84,7 @@ class ProductReviewWriterStep extends PublishAwareStep implements DataImportStep
      *
      * @return int
      */
-    protected function getFkLocale(DataSetInterface $dataSet)
+    protected function getFkLocale(DataSetInterface $dataSet): int
     {
         return $this->localeRepository->getIdLocaleByLocale($dataSet['locale_name']);
     }

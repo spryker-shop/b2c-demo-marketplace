@@ -11,11 +11,12 @@ use Spryker\Shared\ErrorHandler\ErrorRenderer\WebExceptionErrorRenderer;
 use Spryker\Shared\Event\EventConstants;
 use Spryker\Shared\EventBehavior\EventBehaviorConstants;
 use Spryker\Shared\GlueApplication\GlueApplicationConstants;
+use Spryker\Shared\GlueBackendApiApplication\GlueBackendApiApplicationConstants;
+use Spryker\Shared\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConstants;
 use Spryker\Shared\Http\HttpConstants;
 use Spryker\Shared\Kernel\KernelConstants;
 use Spryker\Shared\Kernel\Store;
 use Spryker\Shared\Log\LogConstants;
-use Spryker\Shared\Mail\MailConstants;
 use Spryker\Shared\MerchantPortalApplication\MerchantPortalConstants;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\MessageBrokerAws\MessageBrokerAwsConstants;
@@ -34,6 +35,7 @@ use Spryker\Shared\Session\SessionConstants;
 use Spryker\Shared\SessionRedis\SessionRedisConstants;
 use Spryker\Shared\StorageDatabase\StorageDatabaseConstants;
 use Spryker\Shared\StorageRedis\StorageRedisConstants;
+use Spryker\Shared\SymfonyMailer\SymfonyMailerConstants;
 use Spryker\Shared\Testify\TestifyConstants;
 use Spryker\Shared\ZedRequest\ZedRequestConstants;
 use Spryker\Zed\OauthDummy\OauthDummyConfig;
@@ -43,13 +45,16 @@ use SprykerShop\Shared\ErrorPage\ErrorPageConstants;
 // ############################## TESTING IN CI ###############################
 // ############################################################################
 
-$stores = array_combine(Store::getInstance()->getAllowedStores(), Store::getInstance()->getAllowedStores());
-$yvesHost = 'www.de.spryker.test';
-$glueHost = 'glue.de.spryker.test';
-$backofficeHost = 'backoffice.de.spryker.test';
-$merchantPortalHost = 'mp.de.spryker.test';
-$backendGatewayHost = 'backend-gateway.de.spryker.test';
-$backendApiHost = 'backend-api.de.spryker.test';
+$dynamicStoreEnabled = (bool)getenv('SPRYKER_DYNAMIC_STORE_MODE');
+
+$yvesHost = $dynamicStoreEnabled ? 'www.eu.spryker.test' : 'www.de.spryker.test';
+$glueHost = $dynamicStoreEnabled ? 'glue.eu.spryker.test' : 'glue.de.spryker.test';
+$glueBackendHost = $dynamicStoreEnabled ? 'gluebackend.eu.spryker.test' : 'gluebackend.de.spryker.test';
+$glueStorefrontHost = $dynamicStoreEnabled ? 'gluestorefront.eu.spryker.test' : 'gluestorefront.de.spryker.test';
+$backofficeHost = $dynamicStoreEnabled ? 'backoffice.eu.spryker.test' : 'backoffice.de.spryker.test';
+$merchantPortalHost = $dynamicStoreEnabled ? 'mp.eu.spryker.test' : 'mp.de.spryker.test';
+$backendGatewayHost = $dynamicStoreEnabled ? 'backend-gateway.eu.spryker.test' : 'backend-gateway.de.spryker.test';
+$backendApiHost = $dynamicStoreEnabled ? 'backend-api.eu.spryker.test' : 'backend-api.de.spryker.test';
 
 // ----------------------------------------------------------------------------
 // ------------------------------ CODEBASE ------------------------------------
@@ -98,7 +103,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, $config[
 // ------------------------------ AUTHENTICATION ------------------------------
 // ----------------------------------------------------------------------------
 
-require 'common/config_oauth-devvm.php';
+require 'common/config_oauth.php';
 
 // ----------------------------------------------------------------------------
 // ------------------------------ SERVICES ------------------------------------
@@ -175,7 +180,8 @@ $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION][EventConstants::EVENT_QUEUE
 
 $config[EventBehaviorConstants::EVENT_BEHAVIOR_TRIGGERING_ACTIVE] = getenv('TEST_GROUP') === 'acceptance';
 
-$config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = array_map(static function ($storeName) {
+$currentRegion = getenv('SPRYKER_CURRENT_REGION') ?: null;
+$config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = array_map(static function ($storeName) use ($currentRegion, $dynamicStoreEnabled) {
     return [
         RabbitMqEnv::RABBITMQ_CONNECTION_NAME => $storeName . '-connection',
         RabbitMqEnv::RABBITMQ_HOST => 'localhost',
@@ -183,18 +189,18 @@ $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = array_map(static function ($storeNa
         RabbitMqEnv::RABBITMQ_PASSWORD => 'guest',
         RabbitMqEnv::RABBITMQ_USERNAME => 'guest',
         RabbitMqEnv::RABBITMQ_VIRTUAL_HOST => '/',
-        RabbitMqEnv::RABBITMQ_STORE_NAMES => [$storeName],
-        RabbitMqEnv::RABBITMQ_DEFAULT_CONNECTION => $storeName === APPLICATION_STORE,
+        RabbitMqEnv::RABBITMQ_STORE_NAMES => $dynamicStoreEnabled ? [] : [$storeName],
+        RabbitMqEnv::RABBITMQ_DEFAULT_CONNECTION => $dynamicStoreEnabled ? $storeName === $currentRegion : $storeName === APPLICATION_STORE,
     ];
-}, Store::getInstance()->getAllowedStores());
+}, $dynamicStoreEnabled ? [$currentRegion] : Store::getInstance()->getAllowedStores());
 
 // ---------- LOGGER
 
 $config[LogConstants::LOG_LEVEL] = Logger::CRITICAL;
 
-// >>> EMAIL
+// >>> SYMFONY_MAILER
 
-$config[MailConstants::SMTP_PORT] = 1025;
+$config[SymfonyMailerConstants::SMTP_PORT] = 1025;
 
 // ----------------------------------------------------------------------------
 // ------------------------------ ZED (Gateway) -------------------------------
@@ -209,11 +215,11 @@ $config[SessionConstants::ZED_SESSION_COOKIE_NAME]
     = $backofficeHost;
 $config[ZedRequestConstants::BASE_URL_ZED_API] = sprintf(
     'http://%s',
-    $backendGatewayHost
+    $backendGatewayHost,
 );
 $config[ZedRequestConstants::BASE_URL_SSL_ZED_API] = sprintf(
     'https://%s',
-    $backendGatewayHost
+    $backendGatewayHost,
 );
 
 // ----------------------------------------------------------------------------
@@ -222,7 +228,7 @@ $config[ZedRequestConstants::BASE_URL_SSL_ZED_API] = sprintf(
 
 $config[ApplicationConstants::BASE_URL_ZED] = sprintf(
     'http://%s',
-    $backofficeHost
+    $backofficeHost,
 );
 
 // ----------------------------------------------------------------------------
@@ -231,7 +237,7 @@ $config[ApplicationConstants::BASE_URL_ZED] = sprintf(
 
 $config[MerchantPortalConstants::BASE_URL_MP] = sprintf(
     'http://%s',
-    $merchantPortalHost
+    $merchantPortalHost,
 );
 
 // ----------------------------------------------------------------------------
@@ -248,7 +254,7 @@ $config[ApplicationConstants::BASE_URL_YVES]
     = $config[NewsletterConstants::BASE_URL_YVES]
     = sprintf(
         'http://%s',
-        $yvesHost
+        $yvesHost,
     );
 
 // ----------------------------------------------------------------------------
@@ -258,7 +264,7 @@ $config[ApplicationConstants::BASE_URL_YVES]
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN]
     = sprintf(
         'http://%s',
-        $glueHost
+        $glueHost,
     );
 
 if (class_exists(TestifyConstants::class)) {
@@ -284,13 +290,31 @@ $config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthDummyConfig::PROVIDE
 // ------------------------------ MessageBroker -----------------------------------------
 // ----------------------------------------------------------------------------
 $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
+$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] =
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     'payment' => 'in-memory',
     'assets' => 'in-memory',
     'product' => 'in-memory',
+    'reviews' => 'in-memory',
+    'orders' => 'in-memory',
 ];
+
+$config[MessageBrokerConstants::IS_ENABLED] = true;
 
 //-----------------------------------------------------------------------------
 //----------------------------------- ACP -------------------------------------
 //-----------------------------------------------------------------------------
 $config[ProductConstants::PUBLISHING_TO_MESSAGE_BROKER_ENABLED] = false;
+
+// ----------------------------------------------------------------------------
+// ------------------------------ Glue Backend API -------------------------------
+// ----------------------------------------------------------------------------
+$config[GlueBackendApiApplicationConstants::GLUE_BACKEND_API_HOST] = $glueBackendHost;
+$config[GlueBackendApiApplicationConstants::PROJECT_NAMESPACES] = [
+    'Pyz',
+];
+
+// ----------------------------------------------------------------------------
+// ------------------------------ Glue Storefront API -------------------------------
+// ----------------------------------------------------------------------------
+$config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST] = $glueStorefrontHost;

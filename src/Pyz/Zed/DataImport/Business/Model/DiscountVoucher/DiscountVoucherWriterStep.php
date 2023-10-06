@@ -27,26 +27,32 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      * @var string
      */
     public const KEY_DISCOUNT_KEY = 'discount_key';
+
     /**
      * @var string
      */
     public const KEY_RANDOM_GENERATED_CODE_LENGTH = 'random_generated_code_length';
+
     /**
      * @var string
      */
     public const KEY_QUANTITY = 'quantity';
+
     /**
      * @var string
      */
     public const KEY_CUSTOM_CODE = 'custom_code';
+
     /**
      * @var string
      */
     public const KEY_VOUCHER_BATCH = 'voucher_batch';
+
     /**
      * @var string
      */
     public const KEY_IS_ACTIVE = 'is_active';
+
     /**
      * @var string
      */
@@ -70,7 +76,7 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      *
      * @return void
      */
-    public function execute(DataSetInterface $dataSet)
+    public function execute(DataSetInterface $dataSet): void
     {
         $discountEntity = SpyDiscountQuery::create()
             ->findOneByDiscountKey($dataSet[static::KEY_DISCOUNT_KEY]);
@@ -107,7 +113,7 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      *
      * @return bool
      */
-    protected function voucherBatchExists(SpyDiscount $discountEntity, $voucherBatch)
+    protected function voucherBatchExists(SpyDiscount $discountEntity, $voucherBatch): bool
     {
         $query = SpyDiscountVoucherQuery::create()
             ->filterByFkDiscountVoucherPool($discountEntity->getFkDiscountVoucherPool())
@@ -121,9 +127,9 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      * @param int $quantity
      * @param string|null $customCode
      *
-     * @return array
+     * @return array<string>
      */
-    protected function generateCodes($length, $quantity, $customCode = null)
+    protected function generateCodes(int $length, int $quantity, ?string $customCode = null): array
     {
         $codesToGenerate = [];
 
@@ -150,11 +156,11 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      *
      * @return string
      */
-    protected function addCustomCodeToGenerated($customCode, $code)
+    protected function addCustomCodeToGenerated(string $customCode, string $code): string
     {
         $replacementString = $this->discountConfig->getVoucherPoolTemplateReplacementString();
 
-        if (!$customCode) {
+        if ($customCode === '') {
             return $code;
         }
 
@@ -170,7 +176,7 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      *
      * @return bool
      */
-    protected function voucherCodeExists($code)
+    protected function voucherCodeExists(string $code): bool
     {
         return (SpyDiscountVoucherQuery::create()->filterByCode($code)->count() > 0);
     }
@@ -180,7 +186,7 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      *
      * @return string
      */
-    protected function getRandomVoucherCode($length)
+    protected function getRandomVoucherCode(int $length): string
     {
         $allowedCharacters = $this->discountConfig->getVoucherCodeCharacters();
 

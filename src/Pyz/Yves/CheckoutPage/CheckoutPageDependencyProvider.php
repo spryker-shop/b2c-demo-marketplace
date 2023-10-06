@@ -33,6 +33,7 @@ use SprykerShop\Yves\CustomerPage\Plugin\CustomerStepHandler;
 use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollectionExtenderPlugin;
 use SprykerShop\Yves\SalesOrderThresholdWidget\Plugin\CheckoutPage\SalesOrderThresholdWidgetPlugin;
 use Symfony\Component\Form\FormFactory;
+use Symfony\Component\Form\FormInterface;
 
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
 {
@@ -58,7 +59,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getSummaryPageWidgetPlugins(): array
     {
@@ -68,9 +69,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 
     /**
-     * @phpstan-return array<int, class-string<\Symfony\Component\Form\FormTypeInterface>|\Symfony\Component\Form\FormInterface>
+     * @phpstan-return array<class-string<\Symfony\Component\Form\FormTypeInterface>|\Symfony\Component\Form\FormInterface>
      *
-     * @return \Symfony\Component\Form\FormTypeInterface[]|string[]
+     * @return array<\Symfony\Component\Form\FormTypeInterface|string>
      */
     protected function getCustomerStepSubForms(): array
     {
@@ -87,13 +88,13 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
      *
      * @return \Symfony\Component\Form\FormInterface
      */
-    protected function getPyzCustomerCheckoutForm($subForm, $blockPrefix)
+    protected function getPyzCustomerCheckoutForm($subForm, $blockPrefix): FormInterface
     {
         return $this->getPyzFormFactory()->createNamed(
             $blockPrefix,
             CustomerCheckoutForm::class,
             null,
-            [CustomerCheckoutForm::SUB_FORM_CUSTOMER => $subForm]
+            [CustomerCheckoutForm::SUB_FORM_CUSTOMER => $subForm],
         );
     }
 
@@ -106,7 +107,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getAddressStepSubForms(): array
     {
@@ -126,7 +127,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
             $paymentMethodHandler->add(new NopaymentHandlerPlugin(), NopaymentConfig::PAYMENT_PROVIDER_NAME);
             $paymentMethodHandler->add(
                 new DummyMarketplacePaymentHandlerPlugin(),
-                DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE
+                DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE,
             );
             $paymentMethodHandler->add(new PaymentForeignHandlerPlugin(), PaymentTransfer::FOREIGN_PAYMENTS);
 
@@ -153,7 +154,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 
     /**
-     * @return \SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\AddressTransferExpanderPluginInterface[]
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\AddressTransferExpanderPluginInterface>
      */
     protected function getAddressStepExecutorAddressExpanderPlugins(): array
     {
@@ -179,7 +180,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 
     /**
-     * @return \SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\StepEngine\CheckoutPageStepEnginePreRenderPluginInterface[]
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\StepEngine\CheckoutPageStepEnginePreRenderPluginInterface>
      */
     protected function getCheckoutPageStepEnginePreRenderPlugins(): array
     {

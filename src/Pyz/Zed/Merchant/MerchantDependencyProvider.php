@@ -7,7 +7,7 @@
 
 namespace Pyz\Zed\Merchant;
 
-use Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant\MerchantAclMerchantPostCreatePlugin;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant\MerchantAclEntitiesMerchantPostCreatePlugin;
 use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependencyProvider;
 use Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant\MerchantCategoryMerchantExpanderPlugin;
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileExpanderPlugin;
@@ -20,19 +20,19 @@ use Spryker\Zed\MerchantUser\Communication\Plugin\Merchant\SyncMerchantUsersStat
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface>
      */
     protected function getMerchantPostCreatePlugins(): array
     {
         return [
             new MerchantProfileMerchantPostCreatePlugin(),
             new MerchantStockMerchantPostCreatePlugin(),
-            new MerchantAclMerchantPostCreatePlugin(),
+            new MerchantAclEntitiesMerchantPostCreatePlugin(),
         ];
     }
 
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostUpdatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostUpdatePluginInterface>
      */
     protected function getMerchantPostUpdatePlugins(): array
     {
@@ -43,7 +43,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
      */
     protected function getMerchantExpanderPlugins(): array
     {

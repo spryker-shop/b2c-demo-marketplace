@@ -3006,6 +3006,10 @@ error.429,Zu viele Anfragen,de_DE
 error.429,Too Many Requests,en_US
 security_blocker_page.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 security_blocker_page.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 agent_page.error.customer_already_logged_in,"Sie sind bereits als Kunde angemeldet. Bitte loggen Sie sich zuerst aus und fahren Sie dann fort",de_DE
 agent_page.error.customer_already_logged_in,"You are already logged in as customer, please logout first, then proceed",en_US
 customer.login.remember_me,"Remember me",en_US
@@ -3072,3 +3076,5 @@ wishlist.validation.error.wishlist_item_not_found,Wishlist item not found.,en_US
 wishlist.validation.error.wishlist_item_not_found,Wunschliste Artikel nicht gefunden.,de_DE
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wishlist item cannot be updated.,en_US
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wunschliste kann nicht aktualisiert werden.,de_DE
+store_widget.switcher.store,Store:,en_US
+store_widget.switcher.store,Shop:,de_DE

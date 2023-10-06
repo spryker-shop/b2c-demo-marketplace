@@ -12,9 +12,9 @@ use Spryker\Zed\Transfer\TransferConfig as SprykerTransferConfig;
 class TransferConfig extends SprykerTransferConfig
 {
     /**
-     * @return array
+     * @return list<string>
      */
-    public function getEntitiesSourceDirectories()
+    public function getEntitiesSourceDirectories(): array
     {
         return [
             APPLICATION_SOURCE_DIR . '/Orm/Propel/*/Schema/',

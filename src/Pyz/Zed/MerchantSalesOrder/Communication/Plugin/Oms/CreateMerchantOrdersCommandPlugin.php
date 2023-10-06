@@ -15,7 +15,8 @@ use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByOrderInterface;
 
 /**
  * @method \Pyz\Zed\MerchantSalesOrder\Communication\MerchantSalesOrderCommunicationFactory getFactory()
- * @method \Spryker\Zed\MerchantSalesOrder\Business\MerchantSalesOrderFacade getFacade()
+ * @method \Spryker\Zed\MerchantSalesOrder\Business\MerchantSalesOrderFacadeInterface getFacade()
+ * @method \Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderConfig getConfig()
  */
 class CreateMerchantOrdersCommandPlugin extends AbstractPlugin implements CommandByOrderInterface
 {
@@ -25,17 +26,17 @@ class CreateMerchantOrdersCommandPlugin extends AbstractPlugin implements Comman
      *
      * @api
      *
-     * @param \Orm\Zed\Sales\Persistence\SpySalesOrderItem[] $orderItems
+     * @param array<\Orm\Zed\Sales\Persistence\SpySalesOrderItem> $orderItems
      * @param \Orm\Zed\Sales\Persistence\SpySalesOrder $orderEntity
      * @param \Spryker\Zed\Oms\Business\Util\ReadOnlyArrayObject $data
      *
-     * @return array
+     * @return array<mixed>
      */
     public function run(array $orderItems, SpySalesOrder $orderEntity, ReadOnlyArrayObject $data): array
     {
         $merchantOrderTransfer = $this->getFacade()->findMerchantOrder(
             (new MerchantOrderCriteriaTransfer())
-                ->setIdOrder($orderEntity->getIdSalesOrder())
+                ->setIdOrder($orderEntity->getIdSalesOrder()),
         );
 
         // Check if merchant order is already exists, because command is running for each order item.

@@ -13,10 +13,11 @@ use Spryker\Zed\ProductOfferStockDataImport\Business\Step\ProductOfferStockWrite
 class CombinedProductOfferStockWriterStep extends ProductOfferStockWriterStep
 {
     protected const QUANTITY = CombinedProductOfferStockDataSetInterface::QUANTITY;
+
     protected const IS_NEVER_OUT_OF_STOCK = CombinedProductOfferStockDataSetInterface::IS_NEVER_OUT_OF_STOCK;
 
     /**
-     * @var array
+     * @var list<string>
      */
     protected const REQUIRED_DATA_SET_KEYS = [
         self::FK_STOCK,

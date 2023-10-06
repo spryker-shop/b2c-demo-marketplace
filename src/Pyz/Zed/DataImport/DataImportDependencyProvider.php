@@ -32,11 +32,15 @@ use Spryker\Zed\ContentBannerDataImport\Communication\Plugin\ContentBannerDataIm
 use Spryker\Zed\ContentNavigationDataImport\Communication\Plugin\DataImport\ContentNavigationDataImportPlugin;
 use Spryker\Zed\ContentProductDataImport\Communication\Plugin\ContentProductAbstractListDataImportPlugin;
 use Spryker\Zed\ContentProductSetDataImport\Communication\Plugin\ContentProductSetDataImportPlugin;
+use Spryker\Zed\CountryDataImport\Communication\Plugin\DataImport\CountryStoreDataImportPlugin;
+use Spryker\Zed\CurrencyDataImport\Communication\Plugin\DataImport\CurrencyStoreDataImportPlugin;
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportEventBehaviorPlugin;
 use Spryker\Zed\DataImport\Communication\Plugin\DataImportPublisherPlugin;
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\FileManagerDataImport\Communication\Plugin\FileManagerDataImportPlugin;
 use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport\DefaultLocaleStoreDataImportPlugin;
+use Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport\LocaleStoreDataImportPlugin;
 use Spryker\Zed\MerchantCategoryDataImport\Communication\Plugin\DataImport\MerchantCategoryDataImportPlugin;
 use Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantDataImportPlugin;
 use Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantStoreDataImportPlugin;
@@ -78,6 +82,7 @@ use Spryker\Zed\ShipmentDataImport\Communication\Plugin\ShipmentMethodStoreDataI
 use Spryker\Zed\StockAddressDataImport\Communication\Plugin\DataImport\StockAddressDataImportPlugin;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockDataImportPlugin;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockStoreDataImportPlugin;
+use Spryker\Zed\StoreDataImport\Communication\Plugin\DataImport\StoreDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
@@ -85,38 +90,47 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      * @var string
      */
     public const FACADE_AVAILABILITY = 'availability facade';
+
     /**
      * @var string
      */
     public const FACADE_CATEGORY = 'category facade';
+
     /**
      * @var string
      */
     public const FACADE_PRODUCT_BUNDLE = 'product bundle facade';
+
     /**
      * @var string
      */
     public const FACADE_PRODUCT_RELATION = 'product relation facade';
+
     /**
      * @var string
      */
     public const FACADE_PRODUCT_SEARCH = 'product search facade';
+
     /**
      * @var string
      */
     public const FACADE_CURRENCY = 'FACADE_CURRENCY';
+
     /**
      * @var string
      */
     public const FACADE_PRICE_PRODUCT = 'FACADE_PRICE_PRODUCT';
+
     /**
      * @var string
      */
     public const FACADE_STOCK = 'FACADE_STOCK';
+
     /**
      * @var string
      */
     public const FACADE_STORE = 'FACADE_STORE';
+
     /**
      * @var string
      */
@@ -127,7 +141,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    public function provideBusinessLayerDependencies(Container $container)
+    public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
 
@@ -150,7 +164,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function addMerchantUserFacade(Container $container)
+    protected function addMerchantUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_USER, function (Container $container) {
             return $container->getLocator()->merchantUser()->facade();
@@ -164,11 +178,11 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function addAvailabilityFacade(Container $container)
+    protected function addAvailabilityFacade(Container $container): Container
     {
-        $container[static::FACADE_AVAILABILITY] = function (Container $container) {
+        $container->set(static::FACADE_AVAILABILITY, function (Container $container) {
             return $container->getLocator()->availability()->facade();
-        };
+        });
 
         return $container;
     }
@@ -178,7 +192,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function addCategoryFacade(Container $container)
+    protected function addCategoryFacade(Container $container): Container
     {
         $container->set(static::FACADE_CATEGORY, function (Container $container) {
             return $container->getLocator()->category()->facade();
@@ -192,7 +206,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function addProductBundleFacade(Container $container)
+    protected function addProductBundleFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_BUNDLE, function (Container $container) {
             return $container->getLocator()->productBundle()->facade();
@@ -206,7 +220,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function addProductSearchFacade(Container $container)
+    protected function addProductSearchFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_SEARCH, function (Container $container) {
             return $container->getLocator()->productSearch()->facade();
@@ -220,11 +234,11 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    protected function addProductRelationFacade(Container $container)
+    protected function addProductRelationFacade(Container $container): Container
     {
-        $container[static::FACADE_PRODUCT_RELATION] = function (Container $container) {
+        $container->set(static::FACADE_PRODUCT_RELATION, function (Container $container) {
             return $container->getLocator()->productRelation()->facade();
-        };
+        });
 
         return $container;
     }
@@ -286,11 +300,16 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 
     /**
-     * @return array
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
      */
     protected function getDataImporterPlugins(): array
     {
         return [
+            new StoreDataImportPlugin(),
+            new CountryStoreDataImportPlugin(),
+            new CurrencyStoreDataImportPlugin(),
+            new LocaleStoreDataImportPlugin(),
+            new DefaultLocaleStoreDataImportPlugin(),
             new CategoryDataImportPlugin(),
             new ContentBannerDataImportPlugin(),
             new ContentProductAbstractListDataImportPlugin(),
@@ -362,7 +381,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 
     /**
-     * @return array
+     * @return array<\Spryker\Zed\DataImport\Business\Model\DataImporterPluginCollectionInterface|\Spryker\Zed\DataImport\Business\Model\DataImporterCollectionInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportBeforeImportHookInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportAfterImportHookInterface>
      */
     protected function getDataImportBeforeImportHookPlugins(): array
     {
@@ -372,7 +391,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 
     /**
-     * @return array
+     * @return array<\Spryker\Zed\DataImport\Business\Model\DataImporterPluginCollectionInterface|\Spryker\Zed\DataImport\Business\Model\DataImporterCollectionInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportBeforeImportHookInterface|\Spryker\Zed\DataImport\Dependency\Plugin\DataImportAfterImportHookInterface>
      */
     protected function getDataImportAfterImportHookPlugins(): array
     {

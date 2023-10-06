@@ -67,7 +67,7 @@ use Spryker\Zed\Kernel\AbstractBundleConfig;
  * @method void comment($description)
  * @method void pause()
  *
- * @SuppressWarnings(PHPMD)
+ * @SuppressWarnings(\PyzTest\Zed\AclEntity\PHPMD)
  */
 class AclQueryDirectorTester extends Actor
 {
@@ -311,7 +311,7 @@ class AclQueryDirectorTester extends Actor
     public function createAclQueryDirector(
         RolesTransfer $rolesTransfer,
         ?AclEntityMetadataCollectionTransfer $aclEntityMetadataCollectionTransfer = null,
-        ?AbstractBundleConfig $bundleConfig = null
+        ?AbstractBundleConfig $bundleConfig = null,
     ): AclQueryDirectorInterface {
         $factory = new AclEntityPersistenceFactory();
         if ($bundleConfig) {
@@ -342,7 +342,7 @@ class AclQueryDirectorTester extends Actor
     public function createAclModelDirector(
         RolesTransfer $rolesTransfer,
         ?AclEntityMetadataCollectionTransfer $aclEntityMetadataCollectionTransfer = null,
-        ?AbstractBundleConfig $bundleConfig = null
+        ?AbstractBundleConfig $bundleConfig = null,
     ): AclModelDirectorInterface {
         $factory = new AclEntityPersistenceFactory();
         if ($bundleConfig) {
@@ -369,7 +369,7 @@ class AclQueryDirectorTester extends Actor
      */
     public function createMerchantCategoryRules(
         MerchantTransfer $merchantTransfer,
-        RoleTransfer $roleTransfer
+        RoleTransfer $roleTransfer,
     ): void {
         $aclEntitySegmentMerchant = $this->haveAclEntitySegment(
             [
@@ -406,7 +406,7 @@ class AclQueryDirectorTester extends Actor
      */
     public function createProductOfferRules(
         MerchantTransfer $merchantTransfer,
-        RoleTransfer $roleTransfer
+        RoleTransfer $roleTransfer,
     ): void {
         $aclEntitySegmentMerchant = $this->haveAclEntitySegment(
             [

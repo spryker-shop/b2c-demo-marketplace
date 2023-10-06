@@ -19,7 +19,7 @@ use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByItemInterface;
 /**
  * @method \Pyz\Zed\MerchantOms\Communication\MerchantOmsCommunicationFactory getFactory()
  * @method \Pyz\Zed\MerchantOms\MerchantOmsConfig getConfig()
- * @method \Spryker\Zed\MerchantOms\Business\MerchantOmsFacade getFacade()()
+ * @method \Spryker\Zed\MerchantOms\Business\MerchantOmsFacadeInterface getFacade()
  */
 class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements CommandByItemInterface
 {
@@ -37,13 +37,13 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
      *
      * @throws \LogicException
      *
-     * @return array
+     * @return array<mixed>
      */
     public function run(SpySalesOrderItem $orderItem, ReadOnlyArrayObject $data): array
     {
         $merchantOrderItemTransfer = $this->getFactory()->getMerchantSalesOrderFacade()->findMerchantOrderItem(
             (new MerchantOrderItemCriteriaTransfer())
-                ->setIdOrderItem($orderItem->getIdSalesOrderItem())
+                ->setIdOrderItem($orderItem->getIdSalesOrderItem()),
         );
 
         if (!$merchantOrderItemTransfer) {
@@ -60,7 +60,7 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
             throw new LogicException(sprintf(
                 'Merchant Order Item #%s transition for event "%s" has not happened.',
                 $merchantOrderItemTransfer->getIdMerchantOrderItem(),
-                static::PYZ_EVENT_START_RETURN
+                static::PYZ_EVENT_START_RETURN,
             ));
         }
 

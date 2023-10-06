@@ -12,13 +12,13 @@ use Spryker\Shared\ErrorHandler\ErrorRenderer\WebExceptionErrorRenderer;
 use Spryker\Shared\ErrorHandler\ErrorRenderer\WebHtmlErrorRenderer;
 use Spryker\Shared\Event\EventConstants;
 use Spryker\Shared\GlueApplication\GlueApplicationConstants;
+use Spryker\Shared\GlueBackendApiApplication\GlueBackendApiApplicationConstants;
+use Spryker\Shared\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConstants;
 use Spryker\Shared\Kernel\KernelConstants;
 use Spryker\Shared\Log\LogConstants;
 use Spryker\Shared\MerchantPortalApplication\MerchantPortalConstants;
 use Spryker\Shared\Newsletter\NewsletterConstants;
 use Spryker\Shared\OauthClient\OauthClientConstants;
-use Spryker\Shared\MessageBroker\MessageBrokerConstants;
-use Spryker\Shared\MessageBrokerAws\MessageBrokerAwsConstants;
 use Spryker\Shared\ProductManagement\ProductManagementConstants;
 use Spryker\Shared\Propel\PropelConstants;
 use Spryker\Shared\PropelOrm\PropelOrmConstants;
@@ -26,11 +26,9 @@ use Spryker\Shared\Queue\QueueConfig;
 use Spryker\Shared\Queue\QueueConstants;
 use Spryker\Shared\Router\RouterConstants;
 use Spryker\Shared\Session\SessionConstants;
-use Spryker\Shared\Store\StoreConstants;
 use Spryker\Shared\Testify\TestifyConstants;
 use Spryker\Shared\WebProfiler\WebProfilerConstants;
 use Spryker\Shared\ZedRequest\ZedRequestConstants;
-use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 use Spryker\Zed\OauthDummy\OauthDummyConfig;
 use SprykerShop\Shared\CalculationPage\CalculationPageConstants;
 use SprykerShop\Shared\ErrorPage\ErrorPageConstants;
@@ -114,7 +112,7 @@ if (!getenv('SPRYKER_SSL_ENABLE')) {
     $config[ApplicationConstants::BASE_URL_ZED] = sprintf(
         'http://%s%s',
         getenv('SPRYKER_BE_HOST'),
-        $backofficePort !== 80 ? ':' . $backofficePort : ''
+        $backofficePort !== 80 ? ':' . $backofficePort : '',
     );
 
 // ----------------------------------------------------------------------------
@@ -125,7 +123,7 @@ if (!getenv('SPRYKER_SSL_ENABLE')) {
     $config[MerchantPortalConstants::BASE_URL_MP] = sprintf(
         'http://%s%s',
         getenv('SPRYKER_MP_HOST'),
-        $merchantPortalPort !== 80 ? ':' . $merchantPortalPort : ''
+        $merchantPortalPort !== 80 ? ':' . $merchantPortalPort : '',
     );
 
 // ----------------------------------------------------------------------------
@@ -141,7 +139,7 @@ if (!getenv('SPRYKER_SSL_ENABLE')) {
         = sprintf(
             'http://%s%s',
             $yvesHost,
-            $yvesPort !== 80 ? ':' . $yvesPort : ''
+            $yvesPort !== 80 ? ':' . $yvesPort : '',
         );
 
 // ----------------------------------------------------------------------------
@@ -153,7 +151,7 @@ if (!getenv('SPRYKER_SSL_ENABLE')) {
     $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = sprintf(
         'http://%s%s',
         $glueHost,
-        $gluePort !== 80 ? ':' . $gluePort : ''
+        $gluePort !== 80 ? ':' . $gluePort : '',
     );
 
     if (class_exists(TestifyConstants::class, true)) {
@@ -175,13 +173,16 @@ $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = Oauth
 $config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthDummyConfig::PROVIDER_NAME;
 
 // ----------------------------------------------------------------------------
-// ------------------------------ MessageBroker -----------------------------------------
+// ------------------------------ Glue Backend API -------------------------------
 // ----------------------------------------------------------------------------
-$messageBrokerTransport = getenv('SPRYKER_TESTING_ENABLED') ? 'in-memory' : MessageBrokerAwsConfig::SQS_TRANSPORT;
-
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    'payment' => $messageBrokerTransport,
-    'assets' => $messageBrokerTransport,
-    'product' => $messageBrokerTransport,
+$sprykerGlueBackendHost = getenv('SPRYKER_GLUE_BACKEND_HOST');
+$config[GlueBackendApiApplicationConstants::GLUE_BACKEND_API_HOST] = $sprykerGlueBackendHost;
+$config[GlueBackendApiApplicationConstants::PROJECT_NAMESPACES] = [
+    'Pyz',
 ];
+
+// ----------------------------------------------------------------------------
+// ------------------------------ Glue Storefront API -------------------------------
+// ----------------------------------------------------------------------------
+$sprykerGlueStorefrontHost = getenv('SPRYKER_GLUE_STOREFRONT_HOST');
+$config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST] = $sprykerGlueStorefrontHost;
