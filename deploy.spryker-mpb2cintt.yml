@@ -131,6 +131,20 @@ groups:
                         store: DE
                     glue.at.mp-b2c.internal-testing.demo-spryker.com:
                         store: AT
+            gluestorefront:
+                application: glue-storefront
+                endpoints:
+                    glue-storefront.de.mp-b2c.internal-testing.demo-spryker.com:
+                        store: DE
+                    glue-storefront.at.mp-b2c.internal-testing.demo-spryker.com:
+                        store: AT
+            gluebackend:
+                application: glue-backend
+                endpoints:
+                    glue-backend.de.mp-b2c.internal-testing.demo-spryker.com:
+                        store: DE
+                    glue-backend.at.mp-b2c.internal-testing.demo-spryker.com:
+                        store: AT
             mportal:
                 application: merchant-portal
                 endpoints:
