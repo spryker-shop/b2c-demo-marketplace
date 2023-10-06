@@ -14,6 +14,7 @@
             <state name="canceled" display="oms.state.canceled"/>
             <state name="refunded" display="oms.state.refunded"/>
             <state name="merchant split pending" reserved="true" display="oms.state.merchant-split-pending"/>
+            <state name="tax invoice submitted" reserved="true" display="oms.state.paid"/>
             <state name="sent to merchant" reserved="true" display="oms.state.sent-to-merchant"/>
             <state name="shipped by merchant" reserved="true" display="oms.state.shipped-by-merchant"/>
             <state name="delivered" reserved="true" display="oms.state.delivered"/>
@@ -35,6 +36,12 @@
 
             <transition happy="true" condition="MerchantSalesOrder/IsOrderPaid">
                 <source>paid</source>
+                <target>tax invoice submitted</target>
+                <event>submit tax invoice</event>
+            </transition>
+
+            <transition happy="true">
+                <source>tax invoice submitted</source>
                 <target>merchant split pending</target>
             </transition>
 
@@ -92,6 +99,7 @@
             <event name="cancel" manual="true"/>
             <event name="refund" manual="true"/>
             <event name="send to merchant" onEnter="true" command="MerchantSalesOrder/CreateOrders"/>
+            <event name="submit tax invoice" onEnter="true" command="TaxApp/SubmitPaymentTaxInvoice"/>
             <event name="ship by merchant"/>
             <event name="deliver"/>
             <event name="close" manual="true" command="MerchantOms/CloseOrderItem"/>
