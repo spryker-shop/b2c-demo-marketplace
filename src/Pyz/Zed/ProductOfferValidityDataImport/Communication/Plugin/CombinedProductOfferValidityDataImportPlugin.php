@@ -24,7 +24,7 @@ class CombinedProductOfferValidityDataImportPlugin extends AbstractPlugin implem
      */
     public function getImportType(): string
     {
-        return ProductOfferValidityDataImportConfig::PYZ_IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY;
+        return ProductOfferValidityDataImportConfig::IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY;
     }
 
     /**
@@ -35,6 +35,6 @@ class CombinedProductOfferValidityDataImportPlugin extends AbstractPlugin implem
     public function import(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer {
-        return $this->getFacade()->importPyzCombinedProductOfferValidity($dataImporterConfigurationTransfer);
+        return $this->getFacade()->importCombinedProductOfferValidity($dataImporterConfigurationTransfer);
     }
 }

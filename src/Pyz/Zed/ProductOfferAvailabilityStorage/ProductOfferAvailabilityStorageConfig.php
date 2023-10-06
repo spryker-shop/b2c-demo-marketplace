@@ -25,6 +25,6 @@ class ProductOfferAvailabilityStorageConfig extends SprykerProductOfferAvailabil
      */
     public function getProductOfferAvailabilitySynchronizationPoolName(): ?string
     {
-        return SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME;
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 }
