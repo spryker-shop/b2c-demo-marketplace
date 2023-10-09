@@ -26,19 +26,19 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
      */
-    public function getPyzCombinedProductOfferValidityDataImporter(): DataImporterInterface
+    public function getCombinedProductOfferValidityDataImporter(): DataImporterInterface
     {
-        $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getPyzCombinedProductOfferValidityDataImporterConfiguration(),
+        $dataImporter = $this->getConditionalCsvDataImporterFromConfig(
+            $this->getConfig()->getCombinedProductOfferValidityDataImporterConfiguration(),
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
         $dataSetStepBroker
-            ->addStep($this->createPyzCombinedProductOfferReferenceToIdProductOfferStep())
-            ->addStep($this->createPyzCombinedProductOfferValidityWriterStep());
+            ->addStep($this->createCombinedProductOfferReferenceToIdProductOfferStep())
+            ->addStep($this->createCombinedProductOfferValidityWriterStep());
 
         $dataImporter
-            ->setDataSetCondition($this->createPyzCombinedProductOfferValidityMandatoryColumnCondition())
+            ->setDataSetCondition($this->createCombinedProductOfferValidityMandatoryColumnCondition())
             ->addDataSetStepBroker($dataSetStepBroker);
 
         return $dataImporter;
@@ -49,12 +49,12 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function getPyzConditionalCsvDataImporterFromConfig(
+    public function getConditionalCsvDataImporterFromConfig(
         DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterConditional {
         $csvReader = $this->createCsvReaderFromConfig($dataImporterConfigurationTransfer->getReaderConfiguration());
 
-        return $this->createPyzDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
+        return $this->createDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
     }
 
     /**
@@ -63,7 +63,7 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function createPyzDataImporterConditional(
+    public function createDataImporterConditional(
         string $importType,
         DataReaderInterface $reader,
     ): DataImporterConditional {
@@ -73,7 +73,7 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
+    public function createCombinedProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
     {
         return new CombinedProductOfferReferenceToIdProductOfferStep(
             $this->getProductOfferFacade(),
@@ -83,7 +83,7 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedProductOfferValidityWriterStep(): DataImportStepInterface
+    public function createCombinedProductOfferValidityWriterStep(): DataImportStepInterface
     {
         return new CombinedProductOfferValidityWriterStep();
     }
@@ -91,7 +91,7 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
     /**
      * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
      */
-    public function createPyzCombinedProductOfferValidityMandatoryColumnCondition(): DataSetConditionInterface
+    public function createCombinedProductOfferValidityMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedProductOfferValidityMandatoryColumnCondition();
     }

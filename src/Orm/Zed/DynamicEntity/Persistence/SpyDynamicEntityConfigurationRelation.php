@@ -5,12 +5,12 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace Orm\Zed\ExampleStateMachine\Persistence;
+namespace Orm\Zed\DynamicEntity\Persistence;
 
-use Orm\Zed\ExampleStateMachine\Persistence\Base\PyzExampleStateMachineItem as BasePyzExampleStateMachineItem;
+use Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfigurationRelation as BaseSpyDynamicEntityConfigurationRelation;
 
 /**
- * Skeleton subclass for representing a row from the 'pyz_example_state_machine_item' table.
+ * Skeleton subclass for representing a row from the 'spy_dynamic_entity_configuration_relation' table.
  *
  *
  *
@@ -18,6 +18,6 @@ use Orm\Zed\ExampleStateMachine\Persistence\Base\PyzExampleStateMachineItem as B
  * application requirements. This class will only be generated as
  * long as it does not already exist in the output directory.
  */
-class PyzExampleStateMachineItem extends BasePyzExampleStateMachineItem
+class SpyDynamicEntityConfigurationRelation extends BaseSpyDynamicEntityConfigurationRelation
 {
 }
