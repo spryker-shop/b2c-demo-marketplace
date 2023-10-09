@@ -25,12 +25,6 @@ sections:
         rest-request-validation-cache-warmup:
             command: 'vendor/bin/console rest-api:build-request-validation-cache'
 
-        controller-cache-warmup:
-            command: 'vendor/bin/glue glue-api:controller:cache:warm-up'
-
-        router-cache-warmup-merchant-portal:
-            command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
-
         propel-copy-schema:
             command: 'vendor/bin/console propel:schema:copy'
 
@@ -61,9 +55,6 @@ sections:
 
         rest-api-generate-documentation:
             command: 'vendor/bin/console rest-api:generate:documentation'
-
-        api-generate-documentation:
-            command: 'vendor/bin/glue api:generate:documentation'
 
     build-static:
         dependencies-install:
@@ -139,3 +130,10 @@ sections:
         publish-and-sync:
             command: 'vendor/bin/console queue:worker:start --stop-when-empty'
             timeout: 2000
+
+    setup-glue:
+        controller-cache-warmup:
+            command: 'vendor/bin/glue glue-api:controller:cache:warm-up'
+
+        api-generate-documentation:
+            command: 'vendor/bin/glue api:generate:documentation'

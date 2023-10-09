@@ -267,9 +267,6 @@ services:
             spryker.local:
 
 docker:
-    compose:
-        yamls:
-            - .robot/docker-compose.robot.yml
     ssl:
         enabled: false
         redirect: true
