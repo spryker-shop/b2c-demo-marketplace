@@ -25,6 +25,9 @@ sections:
         rest-request-validation-cache-warmup:
             command: 'vendor/bin/console rest-api:build-request-validation-cache'
 
+        router-cache-warmup-merchant-portal:
+            command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
+
         propel-copy-schema:
             command: 'vendor/bin/console propel:schema:copy'
 
