@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0485009d2bde375f407b09977bd90db3",
+    "content-hash": "d8d1cc6e968e55ee1bec4412162c4b2f",
     "packages": [
         {
             "name": "async-aws/core",
@@ -4796,16 +4796,16 @@
         },
         {
             "name": "spryker-feature/cart",
-            "version": "202307.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/cart.git",
-                "reference": "c69dc2bda57f99a80bd5186485c1f1ead2b61906"
+                "reference": "378825915398df61b513dd59ae53d6632097ffb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/cart/zipball/c69dc2bda57f99a80bd5186485c1f1ead2b61906",
-                "reference": "c69dc2bda57f99a80bd5186485c1f1ead2b61906",
+                "url": "https://api.github.com/repos/spryker-feature/cart/zipball/378825915398df61b513dd59ae53d6632097ffb4",
+                "reference": "378825915398df61b513dd59ae53d6632097ffb4",
                 "shasum": ""
             },
             "require": {
@@ -4818,6 +4818,7 @@
                 "spryker/cart-variant": "^2.0.0",
                 "spryker/persistent-cart": "^3.7.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -4830,9 +4831,9 @@
             ],
             "description": "Cart [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/cart/tree/202307.0"
+                "source": "https://github.com/spryker-feature/cart/tree/master"
             },
-            "time": "2023-07-26T14:49:56+00:00"
+            "time": "2023-09-28T09:10:15+00:00"
         },
         {
             "name": "spryker-feature/catalog",
@@ -66230,6 +66231,12 @@
     ],
     "aliases": [
         {
+            "package": "spryker-feature/cart",
+            "version": "9999999-dev",
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
+        },
+        {
             "package": "spryker-feature/data-exchange-api",
             "version": "9999999-dev",
             "alias": "202311.0",
@@ -66280,6 +66287,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "spryker-feature/cart": 20,
         "spryker-feature/data-exchange-api": 20,
         "spryker-feature/file-manager": 20,
         "spryker-feature/inventory-management": 20,
