@@ -120,6 +120,7 @@
             <process>MarketplaceReturn</process>
             <process>MarketplaceRefund</process>
             <process>WarehouseAllocation</process>
+            <process>DummyPicking</process>
         </subprocesses>
 
     </process>
