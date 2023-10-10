@@ -32,26 +32,26 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
      */
-    public function getPyzCombinedPriceProductOfferDataImport(): DataImporterInterface
+    public function getCombinedPriceProductOfferDataImport(): DataImporterInterface
     {
-        $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getPyzCombinedPriceProductOfferDataImporterConfiguration(),
+        $dataImporter = $this->getConditionalCsvDataImporterFromConfig(
+            $this->getConfig()->getCombinedPriceProductOfferDataImporterConfiguration(),
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
         $dataSetStepBroker
-            ->addStep($this->createPyzCombinedProductOfferReferenceToProductOfferDataStep())
-            ->addStep($this->createPyzCombinedProductOfferToIdProductStep())
-            ->addStep($this->createPyzCombinedPriceTypeToIdPriceTypeStep())
-            ->addStep($this->createPyzCombinedPriceProductWriterStep())
-            ->addStep($this->createPyzCombinedStoreToIdStoreStep())
-            ->addStep($this->createPyzCombinedCurrencyToIdCurrencyStep())
-            ->addStep($this->createPyzCombinedPreparePriceDataStep())
-            ->addStep($this->createPyzCombinedPriceProductStoreWriterStep())
+            ->addStep($this->createCombinedProductOfferReferenceToProductOfferDataStep())
+            ->addStep($this->createCombinedProductOfferToIdProductStep())
+            ->addStep($this->createCombinedPriceTypeToIdPriceTypeStep())
+            ->addStep($this->createCombinedPriceProductWriterStep())
+            ->addStep($this->createCombinedStoreToIdStoreStep())
+            ->addStep($this->createCombinedCurrencyToIdCurrencyStep())
+            ->addStep($this->createCombinedPreparePriceDataStep())
+            ->addStep($this->createCombinedPriceProductStoreWriterStep())
             ->addStep($this->createPriceProductOfferWriterStep());
 
         $dataImporter
-            ->setDataSetCondition($this->createPyzCombinedPriceProductOfferMandatoryColumnCondition())
+            ->setDataSetCondition($this->createCombinedPriceProductOfferMandatoryColumnCondition())
             ->addDataSetStepBroker($dataSetStepBroker);
 
         return $dataImporter;
@@ -62,12 +62,12 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function getPyzConditionalCsvDataImporterFromConfig(
+    public function getConditionalCsvDataImporterFromConfig(
         DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterConditional {
         $csvReader = $this->createCsvReaderFromConfig($dataImporterConfigurationTransfer->getReaderConfiguration());
 
-        return $this->createPyzDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
+        return $this->createDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
     }
 
     /**
@@ -76,7 +76,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function createPyzDataImporterConditional(
+    public function createDataImporterConditional(
         string $importType,
         DataReaderInterface $reader,
     ): DataImporterConditional {
@@ -86,7 +86,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedProductOfferReferenceToProductOfferDataStep(): DataImportStepInterface
+    public function createCombinedProductOfferReferenceToProductOfferDataStep(): DataImportStepInterface
     {
         return new CombinedProductOfferReferenceToProductOfferDataStep();
     }
@@ -94,7 +94,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedProductOfferToIdProductStep(): DataImportStepInterface
+    public function createCombinedProductOfferToIdProductStep(): DataImportStepInterface
     {
         return new CombinedProductOfferToIdProductStep();
     }
@@ -102,7 +102,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedPriceTypeToIdPriceTypeStep(): DataImportStepInterface
+    public function createCombinedPriceTypeToIdPriceTypeStep(): DataImportStepInterface
     {
         return new CombinedPriceTypeToIdPriceTypeStep();
     }
@@ -110,7 +110,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedPriceProductWriterStep(): DataImportStepInterface
+    public function createCombinedPriceProductWriterStep(): DataImportStepInterface
     {
         return new CombinedPriceProductWriterStep();
     }
@@ -118,7 +118,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedStoreToIdStoreStep(): DataImportStepInterface
+    public function createCombinedStoreToIdStoreStep(): DataImportStepInterface
     {
         return new CombinedStoreToIdStoreStep();
     }
@@ -126,7 +126,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedCurrencyToIdCurrencyStep(): DataImportStepInterface
+    public function createCombinedCurrencyToIdCurrencyStep(): DataImportStepInterface
     {
         return new CombinedCurrencyToIdCurrencyStep();
     }
@@ -134,7 +134,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedPriceProductStoreWriterStep(): DataImportStepInterface
+    public function createCombinedPriceProductStoreWriterStep(): DataImportStepInterface
     {
         return new CombinedPriceProductStoreWriterStep();
     }
@@ -142,7 +142,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedPreparePriceDataStep(): DataImportStepInterface
+    public function createCombinedPreparePriceDataStep(): DataImportStepInterface
     {
         return new CombinedPreparePriceDataStep($this->getPriceProductFacade(), $this->getUtilEncodingService());
     }
@@ -150,7 +150,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     /**
      * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
      */
-    public function createPyzCombinedPriceProductOfferMandatoryColumnCondition(): DataSetConditionInterface
+    public function createCombinedPriceProductOfferMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedPriceProductOfferMandatoryColumnCondition();
     }
