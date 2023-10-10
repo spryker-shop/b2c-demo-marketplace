@@ -17,6 +17,6 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
      */
     public function getMerchantSearchSynchronizationPoolName(): ?string
     {
-        return SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME;
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 }
