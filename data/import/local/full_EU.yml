@@ -253,6 +253,8 @@ actions:
     source: data/import/common/common/marketplace/merchant_category.csv
   - data_entity: merchant-product-approval-status-default
     source: data/import/common/common/marketplace/merchant_product_approval_status_default.csv
+  - data_entity: stock
+    source: data/import/common/common/marketplace/warehouse.csv
   - data_entity: stock-address
     source: data/import/common/common/marketplace/warehouse_address.csv
   - data_entity: stock-store
