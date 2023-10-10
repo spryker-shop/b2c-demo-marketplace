@@ -40,7 +40,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageSenderPlugins(): array
     {
         return [
-            new HttpChannelMessageSenderPlugin()
+            new HttpChannelMessageSenderPlugin(),
         ];
     }
 
