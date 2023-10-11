@@ -38,6 +38,7 @@ use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointRemo
 use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMessageAttributeProviderPlugin;
 use Spryker\Zed\Store\Communication\Plugin\MessageBroker\CurrentStoreReferenceMessageAttributeProviderPlugin;
 use Spryker\Zed\Store\Communication\Plugin\MessageBroker\StoreReferenceMessageValidatorPlugin;
+use Spryker\Zed\TaxApp\Communication\Plugin\MessageBroker\TaxAppMessageHandlerPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -87,6 +88,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new SearchEndpointAvailableMessageHandlerPlugin(),
             new SearchEndpointRemovedMessageHandlerPlugin(),
             new MerchantExportMerchantsMessageHandlerPlugin(),
+            new TaxAppMessageHandlerPlugin(),
         ];
     }
 
