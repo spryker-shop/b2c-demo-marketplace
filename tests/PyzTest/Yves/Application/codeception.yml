@@ -1,5 +1,4 @@
 namespace: PyzTest\Yves\Application
-spryker_module: HomePage
 
 paths:
     tests: .
