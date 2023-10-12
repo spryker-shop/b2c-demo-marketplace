@@ -49,9 +49,6 @@ class ProductRelationCreateRelationCest
 
         $i->clickSaveButton();
 
-        $i->waitForElement('//*[@id="form-product-relation"]/div/ul/li[1]/a', 20);
-        $i->click('//*[@id="form-product-relation"]/div/ul/li[1]/a');
-
         $i->waitForText(sprintf('%s %s', ProductRelationCreatePage::EDIT_PRODUCT_RELATION_TEXT, $productRelationKey), 20);
         $i->seeInPageSource(sprintf('%s %s', ProductRelationCreatePage::EDIT_PRODUCT_RELATION_TEXT, $productRelationKey));
 

@@ -203,6 +203,8 @@ class ProductRelationPresentationTester extends Actor
     }
 
     /**
+     * @param string $productRelationKey
+     *
      * @return \Orm\Zed\ProductRelation\Persistence\SpyProductRelation|null
      */
     protected function findProductRelationByProductRelationKey(string $productRelationKey): ?SpyProductRelation
