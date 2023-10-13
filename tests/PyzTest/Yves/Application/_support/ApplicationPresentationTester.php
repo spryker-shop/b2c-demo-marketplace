@@ -5,11 +5,10 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace PyzTest\Yves\Application;
 
 use Codeception\Actor;
+use Codeception\Scenario;
 
 /**
  * Inherited Methods
@@ -23,15 +22,21 @@ use Codeception\Actor;
  * @method void am($role)
  * @method void lookForwardTo($achieveValue)
  * @method void comment($description)
- * @method void pause($vars = [])
+ * @method \Codeception\Lib\Friend haveFriend($name, $actorClass = NULL)
  *
  * @SuppressWarnings(\PyzTest\Yves\Application\PHPMD)
  */
-class ApplicationControllerTester extends Actor
+class ApplicationPresentationTester extends Actor
 {
-    use _generated\ApplicationControllerTesterActions;
+    use _generated\ApplicationPresentationTesterActions;
 
     /**
-     * Define custom actions here
+     * @param \Codeception\Scenario $scenario
      */
+    public function __construct(Scenario $scenario)
+    {
+        parent::__construct($scenario);
+
+        $this->amYves();
+    }
 }
