@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e44308b8be074b9ce2b1e1a447bd4e35",
+    "content-hash": "1834d179359bdf8cc24894552be36531",
     "packages": [
         {
             "name": "async-aws/core",
@@ -5132,16 +5132,16 @@
         },
         {
             "name": "spryker-feature/checkout",
-            "version": "202307.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/checkout.git",
-                "reference": "96d2cdaefd895f82d6430a1fafdfbec5546d7ec7"
+                "reference": "e4bf1c133255a34167caa8e689b97f94679308c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/checkout/zipball/96d2cdaefd895f82d6430a1fafdfbec5546d7ec7",
-                "reference": "96d2cdaefd895f82d6430a1fafdfbec5546d7ec7",
+                "url": "https://api.github.com/repos/spryker-feature/checkout/zipball/e4bf1c133255a34167caa8e689b97f94679308c9",
+                "reference": "e4bf1c133255a34167caa8e689b97f94679308c9",
                 "shasum": ""
             },
             "require": {
@@ -5156,6 +5156,7 @@
                 "spryker/sales-order-threshold-gui": "^1.9.0",
                 "spryker/step-engine": "^3.4.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -5168,9 +5169,9 @@
             ],
             "description": "Checkout [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/checkout/tree/202307.0"
+                "source": "https://github.com/spryker-feature/checkout/tree/master"
             },
-            "time": "2023-07-26T14:49:58+00:00"
+            "time": "2023-07-28T08:05:13+00:00"
         },
         {
             "name": "spryker-feature/cms",
@@ -5420,16 +5421,16 @@
         },
         {
             "name": "spryker-feature/customer-account-management",
-            "version": "202307.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/customer-account-management.git",
-                "reference": "c888e02b35995e7675f891d26edd5b61c304edde"
+                "reference": "d970b4a4c7adf79ef4a8d04ccb3ea5ba44c7594b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/customer-account-management/zipball/c888e02b35995e7675f891d26edd5b61c304edde",
-                "reference": "c888e02b35995e7675f891d26edd5b61c304edde",
+                "url": "https://api.github.com/repos/spryker-feature/customer-account-management/zipball/d970b4a4c7adf79ef4a8d04ccb3ea5ba44c7594b",
+                "reference": "d970b4a4c7adf79ef4a8d04ccb3ea5ba44c7594b",
                 "shasum": ""
             },
             "require": {
@@ -5447,6 +5448,7 @@
                 "spryker/oauth-customer-validation": "^1.0.0",
                 "spryker/oauth-revoke": "^1.3.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -5459,9 +5461,9 @@
             ],
             "description": "Customer Account Management [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/customer-account-management/tree/202307.0"
+                "source": "https://github.com/spryker-feature/customer-account-management/tree/master"
             },
-            "time": "2023-07-26T14:50:05+00:00"
+            "time": "2023-07-27T11:37:22+00:00"
         },
         {
             "name": "spryker-feature/data-exchange-api",
@@ -9475,21 +9477,21 @@
         },
         {
             "name": "spryker-shop/checkout-page",
-            "version": "3.24.0",
+            "version": "3.26.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/checkout-page.git",
-                "reference": "c08bf59ca60686a4e7a110116cf10b20d0f4e451"
+                "reference": "d88c59b9e2c0fb8089d6b409dd3c4b54ddc279e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/c08bf59ca60686a4e7a110116cf10b20d0f4e451",
-                "reference": "c08bf59ca60686a4e7a110116cf10b20d0f4e451",
+                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/d88c59b9e2c0fb8089d6b409dd3c4b54ddc279e9",
+                "reference": "d88c59b9e2c0fb8089d6b409dd3c4b54ddc279e9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
-                "spryker-shop/checkout-page-extension": "^1.4.0",
+                "spryker-shop/checkout-page-extension": "^1.5.0",
                 "spryker-shop/customer-page": "^2.13.0",
                 "spryker-shop/money-widget": "^1.0.0",
                 "spryker-shop/shop-application": "^1.0.0",
@@ -9539,6 +9541,7 @@
                 "spryker-shop/order-custom-reference-widget": "Add the module if you want to use order custom reference functionality",
                 "spryker-shop/product-packaging-unit-widget": "If you want to use components from module ProductPackagingUnitWidget or SummaryProductPackagingUnitWidgetPlugin: ^0.5.2",
                 "spryker-shop/quote-request-widget": "If you want to use QuoteRequestActionsWidget: ^2.2.0",
+                "spryker-shop/shipment-type-widget": "Add the module if you want to use ShipmentTypeAddressFormWidget.",
                 "spryker/router": "Use this module when you want to use the Router.",
                 "spryker/shipment-cart-connector": "If you want to use shipment totals in quote or shipment source prices, min version 2.1.0",
                 "spryker/silex": "Use this module when using plugins that need Silex dependencies."
@@ -9560,9 +9563,9 @@
             ],
             "description": "CheckoutPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/checkout-page/tree/3.24.0"
+                "source": "https://github.com/spryker-shop/checkout-page/tree/3.26.1"
             },
-            "time": "2023-03-31T19:36:14+00:00"
+            "time": "2023-09-27T08:31:16+00:00"
         },
         {
             "name": "spryker-shop/checkout-page-extension",
@@ -10629,22 +10632,22 @@
         },
         {
             "name": "spryker-shop/customer-page",
-            "version": "2.43.0",
+            "version": "2.46.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-page.git",
-                "reference": "93c8ae52879fa94ef1a325d7d5c841a7c9c4a169"
+                "reference": "d48921cee4bae345e30ba67e7995131662eb4ad4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/93c8ae52879fa94ef1a325d7d5c841a7c9c4a169",
-                "reference": "93c8ae52879fa94ef1a325d7d5c841a7c9c4a169",
+                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/d48921cee4bae345e30ba67e7995131662eb4ad4",
+                "reference": "d48921cee4bae345e30ba67e7995131662eb4ad4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
                 "spryker-shop/checkout-page-extension": "^1.0.0",
-                "spryker-shop/customer-page-extension": "^1.5.0",
+                "spryker-shop/customer-page-extension": "^1.6.0",
                 "spryker-shop/shop-application": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.70.0",
                 "spryker/application": "^3.8.0",
@@ -10695,6 +10698,7 @@
                 "spryker-shop/sales-configurable-bundle-widget": "Add the module if you want to use OrderItemsConfiguredBundleWidget.",
                 "spryker-shop/sales-product-configuration-widget": "Add the module if you want to use ProductConfigurationOrderItemDisplayWidget.",
                 "spryker-shop/sales-return-page": "Add the module if you want to use return-create-link molecule.",
+                "spryker-shop/sales-service-point-widget": "Add the module if you want to display the service point related information.",
                 "spryker/config": "Use this module when using plugins that need Config dependencies.",
                 "spryker/container": "If you want to use twig plugins.",
                 "spryker/messenger": "Use this module when using plugins that need Messenger dependencies.",
@@ -10719,9 +10723,9 @@
             ],
             "description": "CustomerPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/customer-page/tree/2.43.0"
+                "source": "https://github.com/spryker-shop/customer-page/tree/2.46.0"
             },
-            "time": "2023-07-06T09:11:57+00:00"
+            "time": "2023-10-02T10:12:51+00:00"
         },
         {
             "name": "spryker-shop/customer-page-extension",
@@ -71371,6 +71375,18 @@
             "alias_normalized": "202311.0"
         },
         {
+            "package": "spryker-feature/checkout",
+            "version": "9999999-dev",
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
+        },
+        {
+            "package": "spryker-feature/customer-account-management",
+            "version": "9999999-dev",
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
+        },
+        {
             "package": "spryker-feature/data-exchange-api",
             "version": "9999999-dev",
             "alias": "202311.0",
@@ -71530,6 +71546,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "spryker-feature/cart": 20,
+        "spryker-feature/checkout": 20,
+        "spryker-feature/customer-account-management": 20,
         "spryker-feature/data-exchange-api": 20,
         "spryker-feature/file-manager": 20,
         "spryker-feature/inventory-management": 20,
