@@ -17,13 +17,13 @@ class ExecuteReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsE
     /**
      * @var string
      */
-    protected const PYZ_EVENT_EXECUTE_RETURN = 'execute-return';
+    protected const EVENT_EXECUTE_RETURN = 'execute-return';
 
     /**
      * @return string
      */
     public function getEventName(): string
     {
-        return static::PYZ_EVENT_EXECUTE_RETURN;
+        return static::EVENT_EXECUTE_RETURN;
     }
 }

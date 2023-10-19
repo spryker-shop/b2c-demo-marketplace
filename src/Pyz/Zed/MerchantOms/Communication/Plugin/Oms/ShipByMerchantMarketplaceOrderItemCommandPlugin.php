@@ -17,13 +17,13 @@ class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOms
     /**
      * @var string
      */
-    protected const PYZ_EVENT_SHIP_BY_MERCHANT = 'ship by merchant';
+    protected const EVENT_SHIP_BY_MERCHANT = 'ship by merchant';
 
     /**
      * @return string
      */
     public function getEventName(): string
     {
-        return static::PYZ_EVENT_SHIP_BY_MERCHANT;
+        return static::EVENT_SHIP_BY_MERCHANT;
     }
 }

@@ -17,13 +17,13 @@ class RefundMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
     /**
      * @var string
      */
-    protected const PYZ_EVENT_REFUND = 'refund';
+    protected const EVENT_REFUND = 'refund';
 
     /**
      * @return string
      */
     public function getEventName(): string
     {
-        return static::PYZ_EVENT_REFUND;
+        return static::EVENT_REFUND;
     }
 }

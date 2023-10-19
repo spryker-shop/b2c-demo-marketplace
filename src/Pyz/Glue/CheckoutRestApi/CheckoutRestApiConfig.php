@@ -30,21 +30,21 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
      *
      * @var string
      */
-    protected const PYZ_DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
+    protected const DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
 
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_CREDIT_CARD
      *
      * @var string
      */
-    protected const PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'Credit Card';
+    protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'Credit Card';
 
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_CREDIT_CARD
      *
      * @var string
      */
-    protected const PYZ_PAYMENT_METHOD_CREDIT_CARD = 'dummyPaymentCreditCard';
+    protected const PAYMENT_METHOD_CREDIT_CARD = 'dummyPaymentCreditCard';
 
     /**
      * @var bool
@@ -57,8 +57,8 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     public function getPaymentProviderMethodToStateMachineMapping(): array
     {
         return [
-            static::PYZ_DUMMY_PAYMENT_PROVIDER_NAME => [
-                static::PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD => static::PYZ_PAYMENT_METHOD_CREDIT_CARD,
+            static::DUMMY_PAYMENT_PROVIDER_NAME => [
+                static::DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD => static::PAYMENT_METHOD_CREDIT_CARD,
             ],
         ];
     }
