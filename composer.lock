@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "823056b8d992138d34a7e1cd75b618d7",
+    "content-hash": "e16f4573d721c0f65a6884a9e1380371",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6060,16 +6060,16 @@
         },
         {
             "name": "spryker-feature/marketplace-product",
-            "version": "202307.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product.git",
-                "reference": "532b790046b58526eee8d4c791f5d872ff984f56"
+                "reference": "9a465c5b4e7e16fc311f0d12737fed3f43bb4e32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product/zipball/532b790046b58526eee8d4c791f5d872ff984f56",
-                "reference": "532b790046b58526eee8d4c791f5d872ff984f56",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product/zipball/9a465c5b4e7e16fc311f0d12737fed3f43bb4e32",
+                "reference": "9a465c5b4e7e16fc311f0d12737fed3f43bb4e32",
                 "shasum": ""
             },
             "require": {
@@ -6091,6 +6091,7 @@
                 "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
                 "spryker-feature/product": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -6103,9 +6104,9 @@
             ],
             "description": "Marketplace Product [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-product/tree/202307.0"
+                "source": "https://github.com/spryker-feature/marketplace-product/tree/master"
             },
-            "time": "2023-07-26T14:51:16+00:00"
+            "time": "2023-07-27T11:26:45+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product-approval-process",
@@ -68464,6 +68465,12 @@
             "alias_normalized": "202311.0"
         },
         {
+            "package": "spryker-feature/marketplace-product",
+            "version": "9999999-dev",
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
+        },
+        {
             "package": "spryker-feature/product",
             "version": "9999999-dev",
             "alias": "202311.0",
@@ -68513,6 +68520,7 @@
         "spryker-feature/file-manager": 20,
         "spryker-feature/inventory-management": 20,
         "spryker-feature/marketplace-inventory-management": 20,
+        "spryker-feature/marketplace-product": 20,
         "spryker-feature/product": 20,
         "spryker-feature/product-lists": 20,
         "spryker-feature/push-notification": 20,
@@ -68542,5 +68550,5 @@
     "platform-overrides": {
         "php": "8.0.9"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
