@@ -68,35 +68,25 @@
 
                     {% block additionalInfo %}
                         {% if embed.hasShippingAddresses %}
-                            {% widget 'ShipmentTypeAddressFormWidget' args [embed.item] with {
-                                data: {
-                                    deliveryContainerClassName: embed.deliveryContainerClassName,
-                                    shipmentTypesClassName: embed.validatorTriggerClassName,
-                                    servicePointClassName: embed.itemShippingClassName,
-                                },
-                            } only %}{% endwidget %}
-
-                            <div class="{{ embed.deliveryContainerClassName }} {{ embed.shipmentTypeHiddenClassName }} {{ component.renderClass(config.name ~ '__additional-info', modifiers) }}">
-                                {{ form_row(embed.item.shippingAddress.id_customer_address, {
-                                    label: 'page.checkout.address.delivery.address_select' | trans,
-                                    attr: {
-                                        class: embed.addressSelectClassName ~ ' ' ~ embed.deliveryContainerClassName ~ ' ' ~ embed.shipmentTypeHiddenClassName ~ ' ' ~ embed.jsName ~ '__trigger--' ~ embed.index,
+                            <div class="{{ component.renderClass(config.name ~ '__additional-info', modifiers) }}">
+                                {% widget 'ShipmentTypeAddressFormWidget' args [embed.item] with {
+                                    data: {
+                                        deliveryContainerClassName: embed.deliveryContainerClassName,
+                                        shipmentTypesClassName: embed.validatorTriggerClassName,
+                                        servicePointClassName: embed.itemShippingClassName,
                                     },
-                                }) }}
+                                } only %}{% endwidget %}
+
+                                <div class="{{ embed.deliveryContainerClassName }} {{ embed.shipmentTypeHiddenClassName }}">
+                                    {{ form_row(embed.item.shippingAddress.id_customer_address, {
+                                        label: 'page.checkout.address.delivery.address_select' | trans,
+                                        attr: {
+                                            class: embed.addressSelectClassName ~ ' ' ~ embed.deliveryContainerClassName ~ ' ' ~ embed.shipmentTypeHiddenClassName ~ ' ' ~ embed.jsName ~ '__trigger--' ~ embed.index,
+                                        },
+                                    }) }}
+                                </div>
                             </div>
                         {% endif %}
-
-                        <div class="{{ component.renderClass(config.name ~ '__additional-options', modifiers) }} col">
-                            {% widget 'ProductConfigurationCartItemDisplayWidget'
-                                args [data.productItem]
-                                with {
-                                data: {
-                                    wrapperClassName: config.name ~ '__product-configuration-options ' ~ config.name ~ '__product-configuration-options--desktop ' ~ config.name ~ '__product-configuration-options--no-spacing',
-                                    hasStatus: false,
-                                },
-                            } only %}
-                            {% endwidget %}
-                        </div>
                     {% endblock %}
 
                     {% block productConfiguration %}
@@ -104,8 +94,9 @@
                             args [data.productItem]
                             with {
                             data: {
-                                wrapperClassName: config.name ~ '__product-configuration-options ' ~ config.name ~ '__product-configuration-options--mobile',
+                                wrapperClassName: config.name ~ '__product-configuration-options',
                                 hasStatus: false,
+                                modifiers: ['alternative'],
                             },
                         } only %}
                         {% endwidget %}
