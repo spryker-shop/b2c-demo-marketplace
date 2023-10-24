@@ -19,7 +19,6 @@ use Spryker\Shared\Kernel\Store;
 use Spryker\Shared\Log\LogConstants;
 use Spryker\Shared\MerchantPortalApplication\MerchantPortalConstants;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
-use Spryker\Shared\MessageBrokerAws\MessageBrokerAwsConstants;
 use Spryker\Shared\Newsletter\NewsletterConstants;
 use Spryker\Shared\OauthClient\OauthClientConstants;
 use Spryker\Shared\Product\ProductConstants;
@@ -289,20 +288,6 @@ $config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthDummyConfig::PROVIDE
 // ----------------------------------------------------------------------------
 // ------------------------------ MessageBroker -----------------------------------------
 // ----------------------------------------------------------------------------
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] =
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    'payment-method-commands' => 'in-memory',
-    'payment-commands' => 'in-memory',
-    'payment-events' => 'in-memory',
-    'asset-commands' => 'in-memory',
-    'product-events' => 'in-memory',
-    'product-commands' => 'in-memory',
-    'search-commands' => 'in-memory',
-    'product-review-commands' => 'in-memory',
-    'order-events' => 'in-memory',
-];
-
 $config[MessageBrokerConstants::IS_ENABLED] = true;
 
 //-----------------------------------------------------------------------------
