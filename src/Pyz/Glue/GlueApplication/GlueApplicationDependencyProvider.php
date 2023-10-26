@@ -96,6 +96,8 @@ use Spryker\Glue\GlueApplication\Plugin\GlueApplication\CorsValidateHttpRequestP
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\FallbackStorefrontApiGlueApplicationBootstrapPlugin;
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\HeadersValidateHttpRequestPlugin;
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\PaginationParametersValidateHttpRequestPlugin;
+use Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication\AuthorizationRestUserValidatorPlugin;
+use Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication\AuthorizationRouterParameterExpanderPlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\BackendApiGlueApplicationBootstrapPlugin;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\BackendRouterProviderPlugin;
@@ -368,6 +370,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         return [
             new AgentRestUserValidatorPlugin(),
+            new AuthorizationRestUserValidatorPlugin(),
         ];
     }
 
@@ -383,9 +386,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         return [
             new SecurityBlockerCustomerRestRequestValidatorPlugin(),
             new SecurityBlockerAgentRestRequestValidatorPlugin(),
-            new AccessTokenRestRequestValidatorPlugin(),
             new AgentAccessTokenRestRequestValidatorPlugin(),
             new SimultaneousAuthenticationRestRequestValidatorPlugin(),
+            new AccessTokenRestRequestValidatorPlugin(),
             new ValidateRestRequestAttributesPlugin(),
             new CurrencyParameterValidatorPlugin(),
             new PriceModeParameterValidatorPlugin(),
@@ -768,6 +771,18 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new RouterApplicationPlugin(),
             new StoreHttpHeaderApplicationPlugin(),
             new LocaleApplicationPlugin(),
+        ];
+    }
+
+    /**
+     * @deprecated Will be removed without replacement.
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouterParameterExpanderPluginInterface>
+     */
+    protected function getRouterParameterExpanderPlugins(): array
+    {
+        return [
+            new AuthorizationRouterParameterExpanderPlugin(),
         ];
     }
 
