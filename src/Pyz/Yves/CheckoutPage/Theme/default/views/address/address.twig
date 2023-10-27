@@ -144,14 +144,11 @@
 
             <div class="{{ billingSameAsShippingContainerClassName }} {{ shipmentTypeHiddenClassName }} col col--sm-12">
                 <div class="{{ billingSameAsShippingClassName }} {{ isMultipleShipmentSelected ? hiddenClassName }}">
-                    <h2 class="title title--primary col col--sm-12">{{ 'page.checkout.address.billing-address' | trans }}</h2>
+                    <h2 class="title title--primary">{{ 'page.checkout.address.billing-address' | trans }}</h2>
 
                     {{ form_row(data.form.billingSameAsShipping, {
                         label: 'page.checkout.address.billing-same-as-shipping' | trans,
                         component: molecule('toggler-checkbox'),
-                        rowAttr: {
-                            class: 'col col--sm-12',
-                        },
                         attributes: {
                             'target-class-name': billingClassName,
                             'class-to-toggle': hiddenClassName,
