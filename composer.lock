@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "098695a706d2f9e3fa60b6ef74a822a9",
+    "content-hash": "bacae4c731b6af55efa4a2328eef61c7",
     "packages": [
         {
             "name": "async-aws/core",
@@ -42105,6 +42105,55 @@
             "time": "2023-07-17T12:04:54+00:00"
         },
         {
+            "name": "spryker/product-image-sets-backend-api",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-image-sets-backend-api.git",
+                "reference": "972e1afe02d68556555793edad938e2e7c8a52f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-image-sets-backend-api/zipball/972e1afe02d68556555793edad938e2e7c8a52f0",
+                "reference": "972e1afe02d68556555793edad938e2e7c8a52f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "spryker/kernel": "^3.66.0",
+                "spryker/product-image": "^3.16.0",
+                "spryker/transfer": "^3.31.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/product": "*",
+                "spryker/propel": "*",
+                "spryker/store": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductImageSetsBackendApi module",
+            "support": {
+                "source": "https://github.com/spryker/product-image-sets-backend-api/tree/0.2.0"
+            },
+            "time": "2023-08-22T14:41:38+00:00"
+        },
+        {
             "name": "spryker/product-image-sets-rest-api",
             "version": "1.0.5",
             "source": {
@@ -47587,6 +47636,58 @@
                 "source": "https://github.com/spryker/products-categories-resource-relationship/tree/1.4.0"
             },
             "time": "2023-04-20T13:53:42+00:00"
+        },
+        {
+            "name": "spryker/products-product-image-sets-backend-resource-relationship",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/products-product-image-sets-backend-resource-relationship.git",
+                "reference": "cbb7a6e7231d9cde2c38ed670fed7f2f53f38156"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/products-product-image-sets-backend-resource-relationship/zipball/cbb7a6e7231d9cde2c38ed670fed7f2f53f38156",
+                "reference": "cbb7a6e7231d9cde2c38ed670fed7f2f53f38156",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "spryker/glue-json-api-convention-extension": "^1.0.0",
+                "spryker/kernel": "^3.66.0",
+                "spryker/product-image-sets-backend-api": "^0.2.0",
+                "spryker/transfer": "^3.31.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/locale": "*",
+                "spryker/product": "*",
+                "spryker/product-image": "*",
+                "spryker/propel": "*",
+                "spryker/store": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductsProductImageSetsBackendResourceRelationship module",
+            "support": {
+                "source": "https://github.com/spryker/products-product-image-sets-backend-resource-relationship/tree/0.2.0"
+            },
+            "time": "2023-08-22T14:41:38+00:00"
         },
         {
             "name": "spryker/products-rest-api",
@@ -56446,16 +56547,16 @@
         },
         {
             "name": "spryker/tax-app",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/tax-app.git",
-                "reference": "1ec3a00a390046dc536b9af455b2746e59d3db6f"
+                "reference": "a6b7a4375f28cb65ffd99e69e1835654c52646d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/tax-app/zipball/1ec3a00a390046dc536b9af455b2746e59d3db6f",
-                "reference": "1ec3a00a390046dc536b9af455b2746e59d3db6f",
+                "url": "https://api.github.com/repos/spryker/tax-app/zipball/a6b7a4375f28cb65ffd99e69e1835654c52646d9",
+                "reference": "a6b7a4375f28cb65ffd99e69e1835654c52646d9",
                 "shasum": ""
             },
             "require": {
@@ -56469,6 +56570,7 @@
                 "spryker/message-broker-extension": "^1.0.0",
                 "spryker/oauth-client": "^1.4.0",
                 "spryker/propel-orm": "^1.18.0",
+                "spryker/ramsey-uuid": "^2.0.0",
                 "spryker/sales": "^11.0.0",
                 "spryker/store": "^1.16.0",
                 "spryker/symfony": "^3.0.0",
@@ -56477,6 +56579,7 @@
                 "spryker/util-encoding": "^2.1.0"
             },
             "require-dev": {
+                "spryker/calculation": "*",
                 "spryker/code-sniffer": "*",
                 "spryker/container": "*",
                 "spryker/customer": "*",
@@ -56484,7 +56587,6 @@
                 "spryker/merchant-profile": "*",
                 "spryker/oms": "*",
                 "spryker/propel": "*",
-                "spryker/ramsey-uuid": "*",
                 "spryker/session": "*",
                 "spryker/testify": "*"
             },
@@ -56510,9 +56612,9 @@
             ],
             "description": "TaxApp module",
             "support": {
-                "source": "https://github.com/spryker/tax-app/tree/0.1.0"
+                "source": "https://github.com/spryker/tax-app/tree/0.2.0"
             },
-            "time": "2023-09-18T09:59:00+00:00"
+            "time": "2023-10-26T12:55:48+00:00"
         },
         {
             "name": "spryker/tax-app-extension",
