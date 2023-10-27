@@ -9482,16 +9482,16 @@
         },
         {
             "name": "spryker-shop/checkout-page",
-            "version": "3.27.0",
+            "version": "3.28.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/checkout-page.git",
-                "reference": "ec74a5c9d3e0abdbdaca86d49e8a5d6e7b188fd0"
+                "reference": "5a661f66c10cdf97a23fcce5aa8806d7fdedad01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/ec74a5c9d3e0abdbdaca86d49e8a5d6e7b188fd0",
-                "reference": "ec74a5c9d3e0abdbdaca86d49e8a5d6e7b188fd0",
+                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/5a661f66c10cdf97a23fcce5aa8806d7fdedad01",
+                "reference": "5a661f66c10cdf97a23fcce5aa8806d7fdedad01",
                 "shasum": ""
             },
             "require": {
@@ -9568,9 +9568,9 @@
             ],
             "description": "CheckoutPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/checkout-page/tree/3.27.0"
+                "source": "https://github.com/spryker-shop/checkout-page/tree/3.28.1"
             },
-            "time": "2023-10-02T10:12:51+00:00"
+            "time": "2023-10-26T18:58:43+00:00"
         },
         {
             "name": "spryker-shop/checkout-page-extension",
@@ -10637,16 +10637,16 @@
         },
         {
             "name": "spryker-shop/customer-page",
-            "version": "2.46.0",
+            "version": "2.46.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-page.git",
-                "reference": "d48921cee4bae345e30ba67e7995131662eb4ad4"
+                "reference": "33d5dad493303c45bc77149d23c3243044dbfefa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/d48921cee4bae345e30ba67e7995131662eb4ad4",
-                "reference": "d48921cee4bae345e30ba67e7995131662eb4ad4",
+                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/33d5dad493303c45bc77149d23c3243044dbfefa",
+                "reference": "33d5dad493303c45bc77149d23c3243044dbfefa",
                 "shasum": ""
             },
             "require": {
@@ -10728,9 +10728,9 @@
             ],
             "description": "CustomerPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/customer-page/tree/2.46.0"
+                "source": "https://github.com/spryker-shop/customer-page/tree/2.46.1"
             },
-            "time": "2023-10-02T10:12:51+00:00"
+            "time": "2023-10-26T18:58:43+00:00"
         },
         {
             "name": "spryker-shop/customer-page-extension",

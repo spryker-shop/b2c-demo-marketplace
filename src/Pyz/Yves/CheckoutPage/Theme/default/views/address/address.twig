@@ -25,7 +25,6 @@
             isMultipleShipmentEnabled: data.isMultipleShipmentEnabled,
             jsAddressClass: jsAddressClass,
             isBillingSameAsShippingChecked: billingSameAsShippingData is not defined or billingSameAsShippingData,
-            hasCustomerAddresses: data.hasCustomerAddresses,
             formSubmitClassName: formSubmitClassName,
         },
     } only %}
@@ -38,8 +37,9 @@
             {% set multishipmentTargetClassName = embed.jsAddressClass ~ '__items-target' %}
             {% set validatorClassName = embed.jsAddressClass ~ '__validate-next-checkout-step' %}
             {% set multishipmentValidatorClassName = embed.jsAddressClass ~ '__multishipment-validate-next-checkout-step' %}
+            {% set billingSameAsShippingContainerClassName = embed.jsAddressClass ~ '__billing-same-as-shipping-container' %}
             {% set billingSameAsShippingClassName = embed.jsAddressClass ~ '__billing-same-as-shipping' %}
-            {% set selectBillingAddressClassName = embed.jsAddressClass ~ '__form-select-billin-address' %}
+            {% set selectBillingAddressClassName = embed.jsAddressClass ~ '__form-select-billing-address' %}
             {% set billingClassName = embed.jsAddressClass ~ '__billing' %}
             {% set billingFormClassName = embed.jsAddressClass ~ '__billing-form' %}
             {% set hiddenClassName = 'is-hidden' %}
@@ -59,11 +59,13 @@
                 {% set deliverySelectClassName = embed.jsAddressClass ~ '__form-select-shipping-address' %}
                 {% set hasShipmentTypes = data.form.shipmentType is defined %}
                 {% set defaultShipmentType = 'delivery' %}
-                {% set currentShipmentType = hasShipmentTypes ? data.form.shipmentType.key.vars.value %}
+                {% set currentShipmentType = data.form.shipmentType.key.vars.value | default %}
                 {% set isDefaultShipmentType = currentShipmentType == defaultShipmentType %}
-                {% set shipmentTypeHiddenClassName = not isDefaultShipmentType ? hiddenClassName %}
-                {% set isMultipleShipmentSelected = embed.forms.shipping.id_customer_address.vars.value == '-1' %}
-                {% set isAddressSelected = embed.forms.shipping.id_customer_address.vars.value is not empty %}
+                {% set shipmentTypeHiddenClassName = hasShipmentTypes and not isDefaultShipmentType ? hiddenClassName %}
+                {% set shippingAddressValue = embed.forms.shipping.id_customer_address.vars.value %}
+                {% set isMultipleShipmentSelected = shippingAddressValue == optionValueDeliverToMultipleAddresses %}
+                {% set isAddressSelected = shippingAddressValue is not empty and shippingAddressValue != '0' %}
+                {% set singleDeliveryContainerHiddenClassName = hasShipmentTypes and isMultipleShipmentSelected ? hiddenClassName %}
 
                 <div class="col col--sm-12 grid spacing-bottom"> 
                     {% if embed.isMultipleShipmentEnabled and hasShipmentTypes %}
@@ -80,11 +82,11 @@
                         </div>
                     {% endif %}
 
-                    <div class="{{ singleDeliveryContainerClassName }} {{ isMultipleShipmentSelected ? hiddenClassName }} col col--sm-12">
+                    <div class="{{ singleDeliveryContainerClassName }} {{ singleDeliveryContainerHiddenClassName }} col col--sm-12">
                         {% widget 'ShipmentTypeAddressFormWidget' args [data.form] with {
                             data: {
                                 deliveryContainerClassName: deliveryContainerClassName,
-                                billingSameAsShippingContainerClassName: billingSameAsShippingClassName,
+                                billingSameAsShippingContainerClassName: billingSameAsShippingContainerClassName,
                                 shipmentTypesClassName: validatorTriggerClassName,
                                 servicePointClassName: shippingValidationContainerClassName,
                                 deliverySelectClassName: deliverySelectClassName,
@@ -106,7 +108,7 @@
 
             <div class="{{ deliveryContainerClassName }} {{ shipmentTypeHiddenClassName }} col col--sm-12">
                 {% include molecule('form') with {
-                    class: shippingClassName ~ ' ' ~ shippingValidationContainerClassName ~ ' ' ~ (isAddressSelected or embed.hasCustomerAddresses ? hiddenClassName),
+                    class: shippingClassName ~ ' ' ~ shippingValidationContainerClassName ~ ' ' ~ (isAddressSelected ? hiddenClassName),
                     modifiers: ['checkout-form', 'checkout-form-elements'],
                     data: {
                         form: embed.forms.shipping,
@@ -140,26 +142,28 @@
                 } only %}
             {% endif %}
 
-            <div class="{{ billingSameAsShippingClassName }} {{ shipmentTypeHiddenClassName }} col col--sm-12">
-                <h2 class="title title--primary col col--sm-12">{{ 'page.checkout.address.billing-address' | trans }}</h2>
+            <div class="{{ billingSameAsShippingContainerClassName }} {{ shipmentTypeHiddenClassName }} col col--sm-12">
+                <div class="{{ billingSameAsShippingClassName }} {{ isMultipleShipmentSelected ? hiddenClassName }}">
+                    <h2 class="title title--primary col col--sm-12">{{ 'page.checkout.address.billing-address' | trans }}</h2>
 
-                {{ form_row(data.form.billingSameAsShipping, {
-                    label: 'page.checkout.address.billing-same-as-shipping' | trans,
-                    component: molecule('toggler-checkbox'),
-                    rowAttr: {
-                        class: 'col col--sm-12',
-                    },
-                    attributes: {
-                        'target-class-name': billingClassName,
-                        'class-to-toggle': hiddenClassName,
-                        'add-class-when-checked': true,
-                        'checked': embed.isBillingSameAsShippingChecked,
-                    },
-                }) }}
+                    {{ form_row(data.form.billingSameAsShipping, {
+                        label: 'page.checkout.address.billing-same-as-shipping' | trans,
+                        component: molecule('toggler-checkbox'),
+                        rowAttr: {
+                            class: 'col col--sm-12',
+                        },
+                        attributes: {
+                            'target-class-name': billingClassName,
+                            'class-to-toggle': hiddenClassName,
+                            'add-class-when-checked': true,
+                            'checked': not isMultipleShipmentSelected ? embed.isBillingSameAsShippingChecked : false,
+                        },
+                    }) }}
+                </div>
             </div>
 
             {% embed molecule('form') with {
-                class: billingClassName ~ ' ' ~ hiddenClassName ~ ' col col--sm-12 spacing-top spacing-top--big ' ~ hiddenClassName,
+                class: billingClassName ~ ' ' ~ (not isMultipleShipmentSelected ? hiddenClassName) ~ ' col col--sm-12 spacing-top spacing-top--big',
                 modifiers: ['checkout-form-elements'],
                 data: {
                     form: embed.forms.billing,
@@ -179,14 +183,14 @@
                 embed: {
                     jsAddressClass: embed.jsAddressClass,
                     hiddenClassName: hiddenClassName,
-                    hasCustomerAddresses: embed.hasCustomerAddresses,
                     billingFormClassName: billingFormClassName,
                     selectBillingAddressClassName: selectBillingAddressClassName,
                 },
             } only %}
                 {% block fields %}
                     {% set hasBillingAddresses = data.form.id_customer_address is defined %}
-                    {% set isAddressSelected = data.form.id_customer_address.vars.value is not empty %}
+                    {% set billingAddressValue = data.form.id_customer_address.vars.value %}
+                    {% set isAddressSelected = billingAddressValue is not empty and billingAddressValue != '0' %}
 
                     {% if hasBillingAddresses %}
                         <div class="col col--sm-12 spacing-bottom spacing-bottom--small">
@@ -200,7 +204,7 @@
                     {% endif %}
 
                     <div class="{{ config.name }}__checkout-sub-form">
-                        <div class="{{ config.name }}__checkout-sub-form-content {{ embed.billingFormClassName }} {{ isAddressSelected or embed.hasCustomerAddresses ? embed.hiddenClassName }}">
+                        <div class="{{ config.name }}__checkout-sub-form-content {{ embed.billingFormClassName }} {{ isAddressSelected ? embed.hiddenClassName }}">
                             {{ parent() }}
                         </div>
                     </div>
@@ -247,7 +251,6 @@
                     'target-selector': '.' ~ billingFormClassName,
                 },
             } only %}
-
         {% endblock %}
 
         {% block actions %}
