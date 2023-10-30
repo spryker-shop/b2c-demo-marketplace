@@ -14,6 +14,8 @@ use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJson
 use Spryker\Glue\PickingListsUsersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\UsersByPickingListsBackendResourceRelationshipPlugin;
 use Spryker\Glue\PickingListsWarehousesBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\WarehousesByPickingListsBackendResourceRelationshipPlugin;
 use Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin;
+use Spryker\Glue\ProductsBackendApi\ProductsBackendApiConfig;
+use Spryker\Glue\ProductsProductImageSetsBackendResourceRelationship\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ConcreteProductImageSetsByProductsBackendResourceRelationshipPlugin;
 use Spryker\Glue\SalesOrdersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\SalesOrdersByPickingListItemsBackendResourceRelationshipPlugin;
 use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ServicePointAddressesByServicePointsBackendResourceRelationshipPlugin;
 use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ServicePointsByServicesBackendResourceRelationshipPlugin;
@@ -87,6 +89,11 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
         $resourceRelationshipCollection->addRelationship(
             ServicePointsBackendApiConfig::RESOURCE_SERVICES,
             new ServiceTypesByServicesBackendResourceRelationshipPlugin(),
+        );
+
+        $resourceRelationshipCollection->addRelationship(
+            ProductsBackendApiConfig::RESOURCE_CONCRETE_PRODUCTS,
+            new ConcreteProductImageSetsByProductsBackendResourceRelationshipPlugin(),
         );
 
         return $resourceRelationshipCollection;
