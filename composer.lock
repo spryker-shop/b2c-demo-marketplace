@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3a72e8b76817ebd477ac8ad0add8d03",
+    "content-hash": "73a464495ade86fe97155f07be3e6631",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6966,7 +6966,7 @@
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202307.x-dev"
+                    "dev-master": "202311.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -71624,12 +71624,6 @@
             "alias_normalized": "202311.0"
         },
         {
-            "package": "spryker-feature/marketplace-product",
-            "version": "9999999-dev",
-            "alias": "202311.0",
-            "alias_normalized": "202311.0"
-        },
-        {
             "package": "spryker-feature/marketplace-merchant-portal-product-offer-management",
             "version": "9999999-dev",
             "alias": "202311.0",
@@ -71649,6 +71643,12 @@
         },
         {
             "package": "spryker-feature/marketplace-merchant-product-offer-service-points-availability",
+            "version": "9999999-dev",
+            "alias": "202311.0",
+            "alias_normalized": "202311.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-product",
             "version": "9999999-dev",
             "alias": "202311.0",
             "alias_normalized": "202311.0"
@@ -71801,11 +71801,11 @@
         "spryker-feature/file-manager": 20,
         "spryker-feature/inventory-management": 20,
         "spryker-feature/marketplace-inventory-management": 20,
-        "spryker-feature/marketplace-product": 20,
         "spryker-feature/marketplace-merchant-portal-product-offer-management": 20,
         "spryker-feature/marketplace-merchant-portal-product-offer-service-points": 20,
         "spryker-feature/marketplace-merchant-portal-product-offer-shipment": 20,
         "spryker-feature/marketplace-merchant-product-offer-service-points-availability": 20,
+        "spryker-feature/marketplace-product": 20,
         "spryker-feature/marketplace-product-offer": 20,
         "spryker-feature/merchant": 20,
         "spryker-feature/order-management": 20,
