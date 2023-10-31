@@ -6,6 +6,6 @@ export default register(
         import(
             /* webpackMode: "lazy" */
             /* webpackChunkName: "main-popup" */
-            'ServicePointWidget/components/molecules/main-popup/main-popup'
+            'ShopUi/components/molecules/main-popup/main-popup'
         ),
 );
