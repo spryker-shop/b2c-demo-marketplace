@@ -47,7 +47,7 @@
         "spryker-feature/marketplace-merchant-product-offer-service-points-availability": "dev-master as 202311.0",
         "spryker-feature/marketplace-merchantportal-core": "^202307.0",
         "spryker-feature/marketplace-order-management": "^202307.0",
-        "spryker-feature/marketplace-product": "^202307.0",
+        "spryker-feature/marketplace-product": "dev-master as 202311.0",
         "spryker-feature/marketplace-product-approval-process": "^202307.0",
         "spryker-feature/marketplace-product-offer": "dev-master as 202311.0",
         "spryker-feature/marketplace-product-offer-prices": "^202307.0",
