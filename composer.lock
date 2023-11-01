@@ -19251,16 +19251,16 @@
         },
         {
             "name": "spryker/chart",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/chart.git",
-                "reference": "d5c0f89fd8467a8217c44505a6082b24f9e1d26b"
+                "reference": "96c11005add3af78dfc11baf0e7d60061104233d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/chart/zipball/d5c0f89fd8467a8217c44505a6082b24f9e1d26b",
-                "reference": "d5c0f89fd8467a8217c44505a6082b24f9e1d26b",
+                "url": "https://api.github.com/repos/spryker/chart/zipball/96c11005add3af78dfc11baf0e7d60061104233d",
+                "reference": "96c11005add3af78dfc11baf0e7d60061104233d",
                 "shasum": ""
             },
             "require": {
@@ -19297,9 +19297,9 @@
             ],
             "description": "Chart module",
             "support": {
-                "source": "https://github.com/spryker/chart/tree/1.5.0"
+                "source": "https://github.com/spryker/chart/tree/1.6.0"
             },
-            "time": "2023-10-09T14:30:57+00:00"
+            "time": "2023-11-01T12:11:03+00:00"
         },
         {
             "name": "spryker/chart-gui",
