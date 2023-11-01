@@ -5,12 +5,14 @@
         {% set isItemRelatedToBundle = item.vars.data.relatedBundleItemIdentifier %}
 
         {% if not isItemRelatedToBundle %}
-            <div class="grid {{ config.jsName }}__item-shipping-{{ loop.index }}">
+            <div class="grid">
                 {% set hasShippingAddresses = item.shippingAddress.id_customer_address is defined %}
                 {% set itemName = item.vars.data.name | default %}
                 {% set itemQuantity = item.vars.data.quantity | default %}
                 {% set imageUrl = item.vars.data.images[0].externalUrlSmall ?? '' %}
-                {% set deliveryContainerClassName = config.jsName ~ '__delivery-' ~ loop.index %}
+                {% set deliveryContainerClassName = config.jsName ~ '__delivery--' ~ loop.index %}
+                {% set deliverySelectClassName = config.jsName ~ '__trigger--' ~ loop.index %}
+                {% set formItemShippingClassName = config.jsName ~ '__item-shipping--' ~ loop.index %}
                 {% set hasShipmentTypes = item.shipmentType is defined %}
                 {% set defaultShipmentType = 'delivery' %}
                 {% set currentShipmentType = item.shipmentType.key.vars.value | default %}
@@ -30,12 +32,11 @@
                         item: item,
                         hasShippingAddresses: hasShippingAddresses,
                         deliveryContainerClassName: deliveryContainerClassName,
+                        deliverySelectClassName: deliverySelectClassName,
                         shipmentTypeHiddenClassName: shipmentTypeHiddenClassName,
                         validatorTriggerClassName: data.validatorTriggerClassName,
                         itemShippingClassName: data.itemShippingClassName,
                         addressSelectClassName: data.addressSelectClassName,
-                        jsName: config.jsName,
-                        index: loop.index,
                     },
                 } only %}
                     {% import _self as component %}
@@ -73,6 +74,7 @@
                                 {% widget 'ShipmentTypeAddressFormWidget' args [embed.item] with {
                                     data: {
                                         deliveryContainerClassName: embed.deliveryContainerClassName,
+                                        deliverySelectClassName: embed.deliverySelectClassName,
                                         shipmentTypesClassName: embed.validatorTriggerClassName,
                                         servicePointClassName: embed.itemShippingClassName,
                                     },
@@ -82,7 +84,7 @@
                                     {{ form_row(embed.item.shippingAddress.id_customer_address, {
                                         label: 'page.checkout.address.delivery.address_select' | trans,
                                         attr: {
-                                            class: embed.addressSelectClassName ~ ' ' ~ embed.deliveryContainerClassName ~ ' ' ~ embed.shipmentTypeHiddenClassName ~ ' ' ~ embed.jsName ~ '__trigger--' ~ embed.index,
+                                            class: embed.addressSelectClassName ~ ' ' ~ embed.deliverySelectClassName ~ ' ' ~ embed.deliveryContainerClassName,
                                         },
                                     }) }}
                                 </div>
@@ -90,25 +92,20 @@
                         {% endif %}
                     {% endblock %}
 
-                    {% block productConfiguration %}
-                        {% widget 'ProductConfigurationCartItemDisplayWidget'
-                            args [data.productItem]
-                            with {
-                            data: {
-                                wrapperClassName: config.name ~ '__product-configuration-options',
-                                hasStatus: false,
-                                modifiers: ['alternative'],
-                            },
-                        } only %}
-                        {% endwidget %}
+                    {% block productConfigurationContent %}
+                        {% set hasStatus = false %}
+
+                        {{ parent() }}
                     {% endblock %}
+
+                    {% block productConfigurationButton %}{% endblock %}
 
                     {% block bundles %}{% endblock %}
                 {% endembed %}
 
                 <div class="{{ deliveryContainerClassName }} {{ data.validationClassName }} {{ shipmentTypeHiddenClassName }} col col--sm-12">
                     {% include molecule('form') with {
-                        class: data.itemShippingClassName ~ ' ' ~ (hasShippingAddresses ? data.hiddenClassName ~ ' ') ~ config.jsName ~ '__item-shipping--' ~ loop.index,
+                        class: data.itemShippingClassName ~ ' ' ~ formItemShippingClassName ~ ' ' ~ (hasShippingAddresses ? data.hiddenClassName),
                         modifiers: ['checkout-form'],
                         data: {
                             form: item.shippingAddress,
@@ -130,8 +127,8 @@
                     {% include molecule('address-form-toggler', 'CustomerPage') ignore missing with {
                         class: config.jsName ~ '__toggler',
                         attributes: {
-                            'trigger-selector': '.' ~ config.jsName ~ '__trigger--' ~ loop.index,
-                            'target-selector': '.' ~ config.jsName ~ '__item-shipping--' ~ loop.index,
+                            'trigger-selector': '.' ~ deliverySelectClassName,
+                            'target-selector': '.' ~ formItemShippingClassName,
                             'parent-target-class-name': config.jsName,
                             'is-trigger-has-preselected-option': true,
                         },

@@ -29,8 +29,9 @@
         },
     } only %}
         {% block fields %}
-            {% set hasShippingAddresses = data.form.shippingAddress.id_customer_address is defined %}
             {% set deliveryContainerClassName = embed.jsAddressClass ~ '__delivery' %}
+            {% set singleDeliveryContainerClassName = embed.jsAddressClass ~ '__single-delivery' %}
+            {% set deliverySelectClassName = embed.jsAddressClass ~ '__form-select-shipping-address' %}
             {% set validatorTriggerClassName = embed.jsAddressClass ~ '__validator-trigger' %}
             {% set shippingValidationContainerClassName = embed.jsAddressClass ~ '__shipping-validation-container' %}
             {% set shippingClassName = embed.jsAddressClass ~ '__shipping' %}
@@ -43,7 +44,17 @@
             {% set billingClassName = embed.jsAddressClass ~ '__billing' %}
             {% set billingFormClassName = embed.jsAddressClass ~ '__billing-form' %}
             {% set hiddenClassName = 'is-hidden' %}
+
+            {% set shippingAddress = data.form.shippingAddress.id_customer_address %}
+            {% set shippingAddressValue = shippingAddress.vars.value %}
             {% set optionValueDeliverToMultipleAddresses = '-1' %}
+            {% set hasShipmentTypes = data.form.shipmentType is defined %}
+            {% set defaultShipmentType = 'delivery' %}
+            {% set currentShipmentType = data.form.shipmentType.key.vars.value | default %}
+            {% set isDefaultShipmentType = currentShipmentType == defaultShipmentType %}
+            {% set shipmentTypeHiddenClassName = hasShipmentTypes and not isDefaultShipmentType ? hiddenClassName %}
+            {% set isMultipleShipmentSelected = shippingAddressValue == optionValueDeliverToMultipleAddresses %}
+            {% set isAddressSelected = shippingAddressValue is not empty and shippingAddressValue != '0' %}
 
             <h2 class="title title--primary col col--sm-12 grid grid--baseline">
                 <span class="col col--sm-12 col--md-8">{{ 'page.checkout.address.shipping-address' | trans }}</span>
@@ -54,17 +65,7 @@
                 {% endif %}
             </h2>
 
-            {% if hasShippingAddresses %}
-                {% set singleDeliveryContainerClassName = embed.jsAddressClass ~ '__single-delivery' %}
-                {% set deliverySelectClassName = embed.jsAddressClass ~ '__form-select-shipping-address' %}
-                {% set hasShipmentTypes = data.form.shipmentType is defined %}
-                {% set defaultShipmentType = 'delivery' %}
-                {% set currentShipmentType = data.form.shipmentType.key.vars.value | default %}
-                {% set isDefaultShipmentType = currentShipmentType == defaultShipmentType %}
-                {% set shipmentTypeHiddenClassName = hasShipmentTypes and not isDefaultShipmentType ? hiddenClassName %}
-                {% set shippingAddressValue = embed.forms.shipping.id_customer_address.vars.value %}
-                {% set isMultipleShipmentSelected = shippingAddressValue == optionValueDeliverToMultipleAddresses %}
-                {% set isAddressSelected = shippingAddressValue is not empty and shippingAddressValue != '0' %}
+            {% if shippingAddress is defined %}
                 {% set singleDeliveryContainerHiddenClassName = hasShipmentTypes and isMultipleShipmentSelected ? hiddenClassName %}
 
                 <div class="col col--sm-12 grid spacing-bottom"> 

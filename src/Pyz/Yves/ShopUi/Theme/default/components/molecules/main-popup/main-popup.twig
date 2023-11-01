@@ -3,3 +3,12 @@
 {% define data = {
     closeIconName: 'close',
 } %}
+
+{% block closeButtonContent %}
+    {% include atom('icon') with {
+        modifiers: ['full-size'],
+        data: {
+            name: data.closeIconName,
+        },
+    } only %}
+{% endblock %}

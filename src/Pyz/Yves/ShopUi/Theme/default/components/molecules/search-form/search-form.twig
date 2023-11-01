@@ -22,13 +22,12 @@
         <div class="grid">
             <div class="col col--sm-10">
                 <input 
-                    name="q" 
-                    type="text" 
-                    class="suggest-search__input suggest-search__input--expand {{ config.jsName }}__input--{{ attributes['data-search-id'] }}" 
-                    placeholder="{{ 'global.search' | trans }}" 
-                    value="{{ data.searchValue }}" 
-                    autofocus="autofocus" 
+                    name="q"
+                    class="suggest-search__input suggest-search__input--expand {{ config.jsName }}__input--{{ attributes['data-search-id'] }}"
+                    placeholder="{{ 'global.search' | trans }}"
+                    value="{{ data.searchValue }}"
                     autocomplete="off"
+                    autofocus
                 >
             </div>
         </div>
