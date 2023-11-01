@@ -46,7 +46,7 @@
             {% set hiddenClassName = 'is-hidden' %}
 
             {% set shippingAddress = data.form.shippingAddress.id_customer_address %}
-            {% set shippingAddressValue = shippingAddress.vars.value %}
+            {% set shippingAddressValue = shippingAddress.vars.value | default %}
             {% set optionValueDeliverToMultipleAddresses = '-1' %}
             {% set hasShipmentTypes = data.form.shipmentType is defined %}
             {% set defaultShipmentType = 'delivery' %}
@@ -186,11 +186,11 @@
                 },
             } only %}
                 {% block fields %}
-                    {% set hasBillingAddresses = data.form.id_customer_address is defined %}
-                    {% set billingAddressValue = data.form.id_customer_address.vars.value %}
+                    {% set billingAddress = data.form.id_customer_address %}
+                    {% set billingAddressValue = billingAddress.vars.value | default %}
                     {% set isAddressSelected = billingAddressValue is not empty and billingAddressValue != '0' %}
 
-                    {% if hasBillingAddresses %}
+                    {% if billingAddress is defined %}
                         <div class="col col--sm-12 spacing-bottom spacing-bottom--small">
                             {{ form_row(data.form.id_customer_address, {
                                 label: 'page.checkout.address.billing.address_select' | trans,
