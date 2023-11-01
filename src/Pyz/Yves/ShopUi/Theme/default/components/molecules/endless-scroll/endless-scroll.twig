@@ -1,0 +1,15 @@
+{% extends molecule('endless-scroll', '@SprykerShop:ShopUi') %}
+
+{% block ajaxLoader %}
+    {% if data.hasLoader %}
+        <div class="{{ config.name }}__loader">
+            {% include molecule('ajax-loader') with {
+                modifiers: ['bottom', 'big', 'with-background'],
+                attributes: {
+                    'provider-class-name': providerClassName,
+                    'parent-class-name': config.name,
+                },
+            } only %}
+        </div>
+    {% endif %}
+{% endblock %}
