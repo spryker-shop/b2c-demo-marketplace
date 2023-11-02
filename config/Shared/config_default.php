@@ -4,6 +4,8 @@ use Generated\Shared\Transfer\AddReviewsTransfer;
 use Generated\Shared\Transfer\AssetAddedTransfer;
 use Generated\Shared\Transfer\AssetDeletedTransfer;
 use Generated\Shared\Transfer\AssetUpdatedTransfer;
+use Generated\Shared\Transfer\ConfigureTaxAppTransfer;
+use Generated\Shared\Transfer\DeleteTaxAppTransfer;
 use Generated\Shared\Transfer\ExportMerchantsTransfer;
 use Generated\Shared\Transfer\InitializeProductExportTransfer;
 use Generated\Shared\Transfer\MerchantCreatedTransfer;
@@ -29,6 +31,7 @@ use Generated\Shared\Transfer\ProductExportedTransfer;
 use Generated\Shared\Transfer\ProductUpdatedTransfer;
 use Generated\Shared\Transfer\SearchEndpointAvailableTransfer;
 use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
+use Generated\Shared\Transfer\SubmitPaymentTaxInvoiceTransfer;
 use Monolog\Logger;
 use Pyz\Shared\Console\ConsoleConstants;
 use Pyz\Shared\Scheduler\SchedulerConfig;
@@ -73,6 +76,8 @@ use Spryker\Shared\OauthAuth0\OauthAuth0Constants;
 use Spryker\Shared\OauthClient\OauthClientConstants;
 use Spryker\Shared\OauthCryptography\OauthCryptographyConstants;
 use Spryker\Shared\Oms\OmsConstants;
+use Spryker\Shared\Payment\PaymentConstants;
+use Spryker\Shared\Product\ProductConstants;
 use Spryker\Shared\ProductConfiguration\ProductConfigurationConstants;
 use Spryker\Shared\ProductLabel\ProductLabelConstants;
 use Spryker\Shared\ProductManagement\ProductManagementConstants;
@@ -80,6 +85,7 @@ use Spryker\Shared\ProductRelation\ProductRelationConstants;
 use Spryker\Shared\Propel\PropelConstants;
 use Spryker\Shared\PropelQueryBuilder\PropelQueryBuilderConstants;
 use Spryker\Shared\PropelReplicationCache\PropelReplicationCacheConstants;
+use Spryker\Shared\PushNotificationWebPushPhp\PushNotificationWebPushPhpConstants;
 use Spryker\Shared\Queue\QueueConfig;
 use Spryker\Shared\Queue\QueueConstants;
 use Spryker\Shared\RabbitMq\RabbitMqEnv;
@@ -89,6 +95,7 @@ use Spryker\Shared\Scheduler\SchedulerConstants;
 use Spryker\Shared\SchedulerJenkins\SchedulerJenkinsConfig;
 use Spryker\Shared\SchedulerJenkins\SchedulerJenkinsConstants;
 use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConstants;
+use Spryker\Shared\SearchHttp\SearchHttpConstants;
 use Spryker\Shared\SecurityBlocker\SecurityBlockerConstants;
 use Spryker\Shared\SecurityBlockerBackoffice\SecurityBlockerBackofficeConstants;
 use Spryker\Shared\SecurityBlockerMerchantPortal\SecurityBlockerMerchantPortalConstants;
@@ -101,10 +108,10 @@ use Spryker\Shared\SessionRedis\SessionRedisConfig;
 use Spryker\Shared\SessionRedis\SessionRedisConstants;
 use Spryker\Shared\Storage\StorageConstants;
 use Spryker\Shared\StorageRedis\StorageRedisConstants;
-use Spryker\Shared\Store\StoreConstants;
 use Spryker\Shared\SymfonyMailer\SymfonyMailerConstants;
 use Spryker\Shared\Synchronization\SynchronizationConstants;
 use Spryker\Shared\Tax\TaxConstants;
+use Spryker\Shared\TaxApp\TaxAppConstants;
 use Spryker\Shared\Testify\TestifyConstants;
 use Spryker\Shared\Translator\TranslatorConstants;
 use Spryker\Shared\User\UserConstants;
@@ -536,10 +543,10 @@ $config[SynchronizationConstants::DEFAULT_SYNC_SEARCH_QUEUE_MESSAGE_CHUNK_SIZE] 
 
 // >>> SCHEDULER
 $config[SchedulerConstants::ENABLED_SCHEDULERS] = [
-    SchedulerConfig::PYZ_SCHEDULER_JENKINS,
+    SchedulerConfig::SCHEDULER_JENKINS,
 ];
 $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
-    SchedulerConfig::PYZ_SCHEDULER_JENKINS => [
+    SchedulerConfig::SCHEDULER_JENKINS => [
         SchedulerJenkinsConfig::SCHEDULER_JENKINS_BASE_URL => sprintf(
             '%s://%s:%s/',
             getenv('SPRYKER_SCHEDULER_PROTOCOL') ?: 'http',
@@ -711,7 +718,6 @@ $config[KernelConstants::DOMAIN_WHITELIST] = array_merge(
     $config[KernelConstants::DOMAIN_WHITELIST],
     $aopApplicationConfiguration['APP_DOMAINS'] ?? [],
 );
-$config[StoreConstants::STORE_NAME_REFERENCE_MAP] = $aopApplicationConfiguration['STORE_NAME_REFERENCE_MAP'] ?? [];
 $config[AppCatalogGuiConstants::APP_CATALOG_SCRIPT_URL] = $aopApplicationConfiguration['APP_CATALOG_SCRIPT_URL'] ?? '';
 
 $aopAuthenticationConfiguration = json_decode(html_entity_decode((string)getenv('SPRYKER_AOP_AUTHENTICATION')), true);
@@ -719,7 +725,17 @@ $config[OauthAuth0Constants::AUTH0_CUSTOM_DOMAIN] = $aopAuthenticationConfigurat
 $config[OauthAuth0Constants::AUTH0_CLIENT_ID] = $aopAuthenticationConfiguration['AUTH0_CLIENT_ID'] ?? '';
 $config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfiguration['AUTH0_CLIENT_SECRET'] ?? '';
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[SearchHttpConstants::TENANT_IDENTIFIER]
+    = $config[ProductConstants::TENANT_IDENTIFIER]
+    = $config[MessageBrokerConstants::TENANT_IDENTIFIER]
+    = $config[MessageBrokerAwsConstants::CONSUMER_ID]
+    = $config[OauthClientConstants::TENANT_IDENTIFIER]
+    = $config[PaymentConstants::TENANT_IDENTIFIER]
+    = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
+    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
+$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentMethodAddedTransfer::class => 'payment-method-commands',
     PaymentMethodDeletedTransfer::class => 'payment-method-commands',
     PaymentCancelReservationRequestedTransfer::class => 'payment-commands',
@@ -749,49 +765,37 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     MerchantExportedTransfer::class => 'merchant-events',
     MerchantCreatedTransfer::class => 'merchant-events',
     MerchantUpdatedTransfer::class => 'merchant-events',
+    ConfigureTaxAppTransfer::class => 'tax-commands',
+    DeleteTaxAppTransfer::class => 'tax-commands',
+    SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
-    'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-method-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'asset-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'order-events' => 'http',
-    'product-events' => 'http',
-    'merchant-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'merchant-events' => 'http',
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    'payment-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'payment-method-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'asset-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'product-review-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'product-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'merchant-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'tax-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-method-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'asset-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'order-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'merchant-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+    'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'product-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'order-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'merchant-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'payment-tax-invoice-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    'payment-commands' => 'http',
-    'product-events' => 'http',
-    'order-events' => 'http',
-    'merchant-events' => 'http',
-];
-
-$aopInfrastructureConfiguration = json_decode(html_entity_decode((string)getenv('SPRYKER_AOP_INFRASTRUCTURE')), true);
-
-$config[MessageBrokerAwsConstants::SQS_RECEIVER_CONFIG] = json_encode($aopInfrastructureConfiguration['SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG'] ?? []);
-$config[MessageBrokerAwsConstants::HTTP_SENDER_CONFIG] = $aopInfrastructureConfiguration['SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG'] ?? [];
+// -------------------------------- ACP AWS --------------------------------------
+$config[MessageBrokerAwsConstants::HTTP_CHANNEL_SENDER_BASE_URL] = getenv('SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL') ?: '';
+$config[MessageBrokerAwsConstants::HTTP_CHANNEL_RECEIVER_BASE_URL] = getenv('SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL') ?: '';
 
 $config[MessageBrokerConstants::IS_ENABLED] = (
-    !empty($aopInfrastructureConfiguration['SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG'])
-    && !empty($aopInfrastructureConfiguration['SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG'])
+    $config[MessageBrokerAwsConstants::HTTP_CHANNEL_SENDER_BASE_URL]
+    && $config[MessageBrokerAwsConstants::HTTP_CHANNEL_RECEIVER_BASE_URL]
 );
 
 // ----------------------------------------------------------------------------
@@ -809,6 +813,10 @@ $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
 $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::PROVIDER_NAME;
 $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
 $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
+
+$config[TaxAppConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
+$config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+$config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
 
 // ----------------------------------------------------------------------------
 // -------------------------- Product Configuration ---------------------------
@@ -833,9 +841,19 @@ $config[GlueBackendApiApplicationConstants::GLUE_BACKEND_CORS_ALLOW_ORIGIN] = ge
 // ----------------------------------------------------------------------------
 $sprykerGlueStorefrontHost = getenv('SPRYKER_GLUE_STOREFRONT_HOST');
 $config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST] = $sprykerGlueStorefrontHost;
+$gluePort = (int)(getenv('SPRYKER_API_PORT')) ?: 443;
+$protocol = $gluePort === 443 ? 'https' : 'http';
 
 $config[GlueJsonApiConventionConstants::GLUE_DOMAIN] = sprintf(
-    'https://%s',
+    '%s://%s',
+    $protocol,
     $sprykerGlueStorefrontHost ?: $sprykerGlueBackendHost ?: 'localhost',
 );
 $config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_CORS_ALLOW_ORIGIN] = getenv('SPRYKER_GLUE_APPLICATION_CORS_ALLOW_ORIGIN') ?: '*';
+
+// ----------------------------------------------------------------------------
+// ------------------------------ Push Notification ---------------------------
+// ----------------------------------------------------------------------------
+$config[PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PUBLIC_KEY');
+$config[PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY');
+$config[PushNotificationWebPushPhpConstants::VAPID_SUBJECT] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT');

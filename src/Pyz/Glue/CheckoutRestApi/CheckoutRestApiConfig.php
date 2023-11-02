@@ -15,7 +15,6 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
      * @var array<string, array<string>>
      */
     protected const PAYMENT_METHOD_REQUIRED_FIELDS = [
-        'dummyPaymentInvoice' => ['dummyPaymentInvoice.dateOfBirth'],
         'dummyPaymentCreditCard' => [
             'dummyPaymentCreditCard.cardType',
             'dummyPaymentCreditCard.cardNumber',
@@ -31,35 +30,21 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
      *
      * @var string
      */
-    protected const PYZ_DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
-
-    /**
-     * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_INVOICE
-     *
-     * @var string
-     */
-    protected const PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE = 'Invoice';
+    protected const DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
 
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_CREDIT_CARD
      *
      * @var string
      */
-    protected const PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'Credit Card';
-
-    /**
-     * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_INVOICE
-     *
-     * @var string
-     */
-    protected const PYZ_PAYMENT_METHOD_INVOICE = 'dummyPaymentInvoice';
+    protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'Credit Card';
 
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_CREDIT_CARD
      *
      * @var string
      */
-    protected const PYZ_PAYMENT_METHOD_CREDIT_CARD = 'dummyPaymentCreditCard';
+    protected const PAYMENT_METHOD_CREDIT_CARD = 'dummyPaymentCreditCard';
 
     /**
      * @var bool
@@ -72,9 +57,8 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     public function getPaymentProviderMethodToStateMachineMapping(): array
     {
         return [
-            static::PYZ_DUMMY_PAYMENT_PROVIDER_NAME => [
-                static::PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD => static::PYZ_PAYMENT_METHOD_CREDIT_CARD,
-                static::PYZ_DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE => static::PYZ_PAYMENT_METHOD_INVOICE,
+            static::DUMMY_PAYMENT_PROVIDER_NAME => [
+                static::DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD => static::PAYMENT_METHOD_CREDIT_CARD,
             ],
         ];
     }

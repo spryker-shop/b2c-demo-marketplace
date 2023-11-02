@@ -17,6 +17,6 @@ class MerchantStorageConfig extends BaseMerchantStorageConfig
      */
     public function getMerchantSynchronizationPoolName(): ?string
     {
-        return SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME;
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 }
