@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc01897e4b0bf059c7da29d85e1be8b7",
+    "content-hash": "5f51ad80c53f058d3dd51180e9ec9e7d",
     "packages": [
         {
             "name": "async-aws/core",
@@ -20395,16 +20395,16 @@
         },
         {
             "name": "spryker/checkout-rest-api",
-            "version": "3.8.0",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/checkout-rest-api.git",
-                "reference": "33d772f93e31de51112e4859bc5ac2bf9a3914be"
+                "reference": "574f5fd9bb0c530596d58adfd18934a46b1f3a2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/checkout-rest-api/zipball/33d772f93e31de51112e4859bc5ac2bf9a3914be",
-                "reference": "33d772f93e31de51112e4859bc5ac2bf9a3914be",
+                "url": "https://api.github.com/repos/spryker/checkout-rest-api/zipball/574f5fd9bb0c530596d58adfd18934a46b1f3a2c",
+                "reference": "574f5fd9bb0c530596d58adfd18934a46b1f3a2c",
                 "shasum": ""
             },
             "require": {
@@ -20423,6 +20423,7 @@
                 "spryker/quote": "^2.0.0",
                 "spryker/shipment": "^7.0.0 || ^8.0.0",
                 "spryker/symfony": "^3.0.0",
+                "spryker/transfer": "^3.25.0",
                 "spryker/zed-request": "^3.0.0"
             },
             "require-dev": {
@@ -20449,9 +20450,9 @@
             ],
             "description": "CheckoutRestApi module",
             "support": {
-                "source": "https://github.com/spryker/checkout-rest-api/tree/3.8.0"
+                "source": "https://github.com/spryker/checkout-rest-api/tree/3.9.0"
             },
-            "time": "2023-09-04T12:35:05+00:00"
+            "time": "2023-10-25T07:06:24+00:00"
         },
         {
             "name": "spryker/checkout-rest-api-extension",
@@ -29302,16 +29303,16 @@
         },
         {
             "name": "spryker/glue-backend-api-application",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/glue-backend-api-application.git",
-                "reference": "6c093688ba13c4aaceb8eca713fcb4eef2725b2b"
+                "reference": "eeaba801086537f09b10cef157385821f626181f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/glue-backend-api-application/zipball/6c093688ba13c4aaceb8eca713fcb4eef2725b2b",
-                "reference": "6c093688ba13c4aaceb8eca713fcb4eef2725b2b",
+                "url": "https://api.github.com/repos/spryker/glue-backend-api-application/zipball/eeaba801086537f09b10cef157385821f626181f",
+                "reference": "eeaba801086537f09b10cef157385821f626181f",
                 "shasum": ""
             },
             "require": {
@@ -29322,16 +29323,16 @@
                 "spryker/glue-application": "^1.39.0",
                 "spryker/glue-application-extension": "^1.14.0",
                 "spryker/kernel": "^3.66.0",
+                "spryker/locale": "^3.10.0 || ^4.2.0",
                 "spryker/oauth-extension": "^1.7.0",
                 "spryker/store": "^1.19.0",
                 "spryker/symfony": "^3.7.0",
-                "spryker/transfer": "^3.25.0"
+                "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
                 "spryker/glue-json-api-convention-extension": "*",
-                "spryker/testify": "*",
-                "willdurand/negotiation": "*"
+                "spryker/testify": "*"
             },
             "type": "library",
             "extra": {
@@ -29350,9 +29351,9 @@
             ],
             "description": "GlueBackendApiApplication module",
             "support": {
-                "source": "https://github.com/spryker/glue-backend-api-application/tree/1.4.0"
+                "source": "https://github.com/spryker/glue-backend-api-application/tree/1.5.0"
             },
-            "time": "2023-07-18T14:25:47+00:00"
+            "time": "2023-10-17T16:01:45+00:00"
         },
         {
             "name": "spryker/glue-backend-api-application-authorization-connector",
@@ -29586,16 +29587,16 @@
         },
         {
             "name": "spryker/glue-storefront-api-application",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/glue-storefront-api-application.git",
-                "reference": "2897c4f233fb0e4dedbc6402df4c3838dd74dd2b"
+                "reference": "a5d7bf309fb813b4fdbe56e0c23c2136474efd6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/glue-storefront-api-application/zipball/2897c4f233fb0e4dedbc6402df4c3838dd74dd2b",
-                "reference": "2897c4f233fb0e4dedbc6402df4c3838dd74dd2b",
+                "url": "https://api.github.com/repos/spryker/glue-storefront-api-application/zipball/a5d7bf309fb813b4fdbe56e0c23c2136474efd6e",
+                "reference": "a5d7bf309fb813b4fdbe56e0c23c2136474efd6e",
                 "shasum": ""
             },
             "require": {
@@ -29606,17 +29607,17 @@
                 "spryker/glue-application": "^1.39.0",
                 "spryker/glue-application-extension": "^1.14.0",
                 "spryker/kernel": "^3.66.0",
+                "spryker/locale": "^3.10.0 || ^4.2.0",
                 "spryker/oauth-extension": "^1.7.0",
                 "spryker/session": "^3.0.0 || ^4.0.0",
                 "spryker/store": "^1.15.0",
                 "spryker/symfony": "^3.7.0",
-                "spryker/transfer": "^3.25.0"
+                "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
                 "spryker/glue-json-api-convention-extension": "*",
-                "spryker/testify": "*",
-                "willdurand/negotiation": "*"
+                "spryker/testify": "*"
             },
             "type": "library",
             "extra": {
@@ -29635,9 +29636,9 @@
             ],
             "description": "GlueStorefrontApiApplication module",
             "support": {
-                "source": "https://github.com/spryker/glue-storefront-api-application/tree/1.3.0"
+                "source": "https://github.com/spryker/glue-storefront-api-application/tree/1.4.0"
             },
-            "time": "2023-07-18T14:25:47+00:00"
+            "time": "2023-10-17T16:01:45+00:00"
         },
         {
             "name": "spryker/glue-storefront-api-application-authorization-connector",
@@ -70863,16 +70864,16 @@
         },
         {
             "name": "spryker/development",
-            "version": "3.34.5",
+            "version": "3.34.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/development.git",
-                "reference": "9f5791d3b22f25e47606f79f846163acebb5571b"
+                "reference": "5ffaedf6ec6609b370281bf1dfbaf37635ee6534"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/development/zipball/9f5791d3b22f25e47606f79f846163acebb5571b",
-                "reference": "9f5791d3b22f25e47606f79f846163acebb5571b",
+                "url": "https://api.github.com/repos/spryker/development/zipball/5ffaedf6ec6609b370281bf1dfbaf37635ee6534",
+                "reference": "5ffaedf6ec6609b370281bf1dfbaf37635ee6534",
                 "shasum": ""
             },
             "require": {
@@ -70913,9 +70914,9 @@
             ],
             "description": "Development module",
             "support": {
-                "source": "https://github.com/spryker/development/tree/3.34.5"
+                "source": "https://github.com/spryker/development/tree/3.34.7"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2023-10-18T15:23:47+00:00"
         },
         {
             "name": "spryker/docker-chromedriver",

@@ -15,7 +15,7 @@ class ProductOfferServicePointAvailabilityCalculatorStorageDependencyProvider ex
     /**
      * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityCalculatorStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityCalculatorStrategyPluginInterface>
      */
-    protected function getProductOfferServicePointAvailabilityCalculatorStorageStrategyPlugins(): array
+    protected function getProductOfferServicePointAvailabilityCalculatorStrategyPlugins(): array
     {
         return [
             new ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin(),
