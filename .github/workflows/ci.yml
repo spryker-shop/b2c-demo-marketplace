@@ -12,7 +12,7 @@ on:
 jobs:
     validation:
         name: "Static analysis / PHP 8.0"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         strategy:
             fail-fast: false
             matrix:
@@ -162,7 +162,7 @@ jobs:
 
     php-81-mariadb-glue-alpine:
         name: "PHP 8.1 / MariaDB / Glue / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.1
@@ -189,7 +189,7 @@ jobs:
 
     php-81-postgresql-glue-alpine:
         name: "PHP 8.1 / PostgreSQL / Glue / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.1
@@ -216,7 +216,7 @@ jobs:
 
     php-81-mariadb-acceptance-alpine:
         name: "PHP 8.1 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.1
@@ -242,7 +242,7 @@ jobs:
 
     php-81-postgresql-acceptance-alpine:
         name: "PHP 8.1 / PostgreSQL / Acceptance / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.1
@@ -268,7 +268,7 @@ jobs:
 
     php-81-mariadb-functional-alpine:
         name: "PHP 8.1 / MariaDB / Functional / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.1
@@ -293,7 +293,7 @@ jobs:
 
     php-81-postgresql-functional-alpine:
         name: "PHP 8.1 / PostgreSQL / Functional / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.1
@@ -319,7 +319,7 @@ jobs:
 
     php-80-mariadb-glue-alpine:
         name: "PHP 8.0 / MariaDB / Glue / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0
@@ -348,7 +348,7 @@ jobs:
 
     php-80-postgresql-acceptance-alpine:
         name: "PHP 8.0 / PostgreSQL / Acceptance / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0
@@ -377,7 +377,7 @@ jobs:
 
     php-80-postgresql-functional-alpine:
         name: "PHP 8.0 / PostgreSQL / Functional / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0
@@ -405,7 +405,7 @@ jobs:
 
     php-80-mariadb-acceptance-alpine:
         name: "PHP 8.0 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0
@@ -434,7 +434,7 @@ jobs:
 
     php-80-mariadb-functional-alpine:
         name: "PHP 8.0 / MariaDB / Functional / Alpine"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0
@@ -462,7 +462,7 @@ jobs:
 
     php-80-postgres-functional-debian:
         name: "PHP 8.0 / PostgreSQL / Functional / Debian"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0-debian
@@ -489,7 +489,7 @@ jobs:
 
     frontend-assets-via-docker-php-8-0:
         name: "Docker / Alpine / PHP 8.0 / Frontend & Assets"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0
@@ -508,7 +508,7 @@ jobs:
 
     docker-alpine-php-8-0-mariadb-robot:
         name: "Docker / Alpine / PHP 8.0 / MariaDB / Robot"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0
@@ -550,7 +550,7 @@ jobs:
 
     docker-alpine-php-8-1-postgresql-robot:
         name: "Docker / Alpine / PHP 8.1 / PostgreSQL / Robot"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.1
