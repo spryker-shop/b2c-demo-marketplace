@@ -42,7 +42,7 @@ class ExampleStateMachineQueryContainer extends AbstractQueryContainer implement
     /**
      * @param int $idStateMachineItem
      *
-     * @return \Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItem[]|\Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItemQuery|\Propel\Runtime\Collection\ObjectCollection
+     * @return array<\Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItem>|\Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItemQuery|\Propel\Runtime\Collection\ObjectCollection
      */
     public function queryExampleStateMachineItemByIdStateMachineItem($idStateMachineItem)
     {
