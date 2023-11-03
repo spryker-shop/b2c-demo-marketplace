@@ -1,0 +1,18 @@
+@include service-point-widget-service-point-finder {
+    $name: '.service-point-finder';
+
+    &__search {
+        margin: 0;
+    }
+
+    @include shop-ui-input(#{$name}__search-field) {
+        font: fw(regular) rem(16) / rem(18) $setting-font-family;
+        color: $setting-color-black;
+        padding: rem(14) rem(8) rem(14) rem(34);
+        border-radius: rem(2);
+    }
+
+    &__icon {
+        top: rem(16);
+    }
+}

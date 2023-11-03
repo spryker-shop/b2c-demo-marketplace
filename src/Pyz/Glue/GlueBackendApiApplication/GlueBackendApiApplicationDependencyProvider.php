@@ -28,6 +28,11 @@ use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\Picking
 use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication\PushNotificationProvidersBackendResourcePlugin;
 use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication\PushNotificationSubscriptionsBackendResourcePlugin;
 use Spryker\Glue\Router\Plugin\Application\RouterApplicationPlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServicePointAddressesBackendResourcePlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServicePointsBackendResourcePlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServicesBackendResourcePlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServiceTypesBackendResourcePlugin;
+use Spryker\Glue\ShipmentTypesBackendApi\Plugin\GlueBackendApiApplication\ShipmentTypesBackendResourcePlugin;
 use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
 use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestBuilderPlugin;
 use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestValidatorPlugin;
@@ -113,6 +118,11 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
             new PickingListStartPickingBackendResourcePlugin(),
             new PickingListItemsBackendResourcePlugin(),
             new WarehouseUserAssignmentsBackendResourcePlugin(),
+            new ServicePointsBackendResourcePlugin(),
+            new ServicePointAddressesBackendResourcePlugin(),
+            new ServiceTypesBackendResourcePlugin(),
+            new ServicesBackendResourcePlugin(),
+            new ShipmentTypesBackendResourcePlugin(),
         ];
     }
 

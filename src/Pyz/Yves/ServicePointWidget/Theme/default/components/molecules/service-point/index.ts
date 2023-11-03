@@ -1,0 +1,1 @@
+import './service-point.scss';

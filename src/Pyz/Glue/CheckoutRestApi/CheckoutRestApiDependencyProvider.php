@@ -10,8 +10,13 @@ namespace Pyz\Glue\CheckoutRestApi;
 use Spryker\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
 use Spryker\Glue\CheckoutRestApi\Plugin\SinglePaymentCheckoutRequestAttributesValidatorPlugin;
 use Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi\SelectedPaymentMethodCheckoutDataResponseMapperPlugin;
+use Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi\ServicePointCheckoutDataResponseMapperPlugin;
+use Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi\ServicePointCheckoutRequestAttributesValidatorPlugin;
 use Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi\AddressSourceCheckoutRequestValidatorPlugin;
 use Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi\ShipmentDataCheckoutRequestValidatorPlugin;
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi\ShipmentTypeServicePointCheckoutRequestAttributesValidatorPlugin;
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi\ShipmentTypeServicePointCheckoutRequestExpanderPlugin;
+use Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi\SelectedShipmentTypesCheckoutDataResponseMapperPlugin;
 
 class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
 {
@@ -22,6 +27,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     {
         return [
             new SinglePaymentCheckoutRequestAttributesValidatorPlugin(),
+            new ServicePointCheckoutRequestAttributesValidatorPlugin(),
+            new ShipmentTypeServicePointCheckoutRequestAttributesValidatorPlugin(),
         ];
     }
 
@@ -43,6 +50,18 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     {
         return [
             new SelectedPaymentMethodCheckoutDataResponseMapperPlugin(),
+            new ServicePointCheckoutDataResponseMapperPlugin(),
+            new SelectedShipmentTypesCheckoutDataResponseMapperPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutRequestExpanderPluginInterface>
+     */
+    protected function getCheckoutRequestExpanderPlugins(): array
+    {
+        return [
+            new ShipmentTypeServicePointCheckoutRequestExpanderPlugin(),
         ];
     }
 }
