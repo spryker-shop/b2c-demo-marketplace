@@ -51,13 +51,6 @@ class CheckoutRestApiFixtures implements FixturesBuilderInterface, FixturesConta
     protected const PRODUCT_CONCRETES_GENERATE_NUMBER = 100;
 
     /**
-     * @uses \Spryker\Zed\Merchant\MerchantConfig::STATUS_APPROVED
-     *
-     * @var string
-     */
-    protected const MERCHANT_STATUS_APPROVED = 'approved';
-
-    /**
      * @var \Generated\Shared\Transfer\CustomerTransfer
      */
     protected CustomerTransfer $customerTransfer;
@@ -141,7 +134,7 @@ class CheckoutRestApiFixtures implements FixturesBuilderInterface, FixturesConta
 
         $merchantTransfer = $I->haveMerchant([
             MerchantTransfer::IS_ACTIVE => true,
-            MerchantTransfer::STATUS => static::MERCHANT_STATUS_APPROVED,
+            MerchantTransfer::STATUS => CheckoutApiTester::MERCHANT_STATUS_APPROVED,
             MerchantTransfer::MERCHANT_PROFILE => new MerchantProfileTransfer(),
         ]);
 

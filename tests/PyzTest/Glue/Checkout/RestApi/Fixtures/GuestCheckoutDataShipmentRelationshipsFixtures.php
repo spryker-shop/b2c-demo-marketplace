@@ -10,6 +10,9 @@ namespace PyzTest\Glue\Checkout\RestApi\Fixtures;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
 use Generated\Shared\Transfer\ShipmentMethodTransfer;
+use Generated\Shared\Transfer\ShipmentTypeTransfer;
+use Generated\Shared\Transfer\StoreRelationTransfer;
+use Generated\Shared\Transfer\StoreTransfer;
 use PyzTest\Glue\Checkout\CheckoutApiTester;
 use SprykerTest\Shared\Shipment\Helper\ShipmentMethodDataHelper;
 use SprykerTest\Shared\Testify\Fixtures\FixturesBuilderInterface;
@@ -54,6 +57,11 @@ class GuestCheckoutDataShipmentRelationshipsFixtures implements FixturesBuilderI
     protected ShipmentMethodTransfer $shipmentMethodTransfer;
 
     /**
+     * @var \Generated\Shared\Transfer\ShipmentTypeTransfer
+     */
+    protected ShipmentTypeTransfer $shipmentTypeTransfer;
+
+    /**
      * @return string
      */
     public function getGuestCustomerReference(): string
@@ -86,6 +94,14 @@ class GuestCheckoutDataShipmentRelationshipsFixtures implements FixturesBuilderI
     }
 
     /**
+     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
+     */
+    public function getShipmentTypeTransfer(): ShipmentTypeTransfer
+    {
+        return $this->shipmentTypeTransfer;
+    }
+
+    /**
      * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
      *
      * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
@@ -109,6 +125,16 @@ class GuestCheckoutDataShipmentRelationshipsFixtures implements FixturesBuilderI
             [
                 $I->getStoreFacade()->getCurrentStore()->getIdStore(),
             ],
+        );
+
+        $this->shipmentTypeTransfer = $I->haveShipmentType([
+            ShipmentTypeTransfer::IS_ACTIVE => true,
+            ShipmentTypeTransfer::STORE_RELATION => (new StoreRelationTransfer())
+                ->addStores($I->haveStore([StoreTransfer::NAME => 'DE'])),
+        ]);
+        $I->haveShipmentMethodShipmentTypeRelation(
+            $this->shipmentMethodTransfer->getIdShipmentMethodOrFail(),
+            $this->shipmentTypeTransfer->getIdShipmentTypeOrFail(),
         );
 
         $this->guestQuoteTransfer = $I->havePersistentQuoteWithItemsAndItemLevelShipment(

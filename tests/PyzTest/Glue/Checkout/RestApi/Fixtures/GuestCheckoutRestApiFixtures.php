@@ -37,13 +37,6 @@ class GuestCheckoutRestApiFixtures implements FixturesBuilderInterface, Fixtures
     protected const ANONYMOUS_PREFIX = 'anonymous:';
 
     /**
-     * @uses \Spryker\Zed\Merchant\MerchantConfig::STATUS_APPROVED
-     *
-     * @var string
-     */
-    protected const MERCHANT_STATUS_APPROVED = 'approved';
-
-    /**
      * @var string
      */
     protected string $guestCustomerReference;
@@ -121,7 +114,7 @@ class GuestCheckoutRestApiFixtures implements FixturesBuilderInterface, Fixtures
 
         $merchantTransfer = $I->haveMerchant([
             MerchantTransfer::IS_ACTIVE => true,
-            MerchantTransfer::STATUS => static::MERCHANT_STATUS_APPROVED,
+            MerchantTransfer::STATUS => CheckoutApiTester::MERCHANT_STATUS_APPROVED,
             MerchantTransfer::MERCHANT_PROFILE => new MerchantProfileTransfer(),
         ]);
 

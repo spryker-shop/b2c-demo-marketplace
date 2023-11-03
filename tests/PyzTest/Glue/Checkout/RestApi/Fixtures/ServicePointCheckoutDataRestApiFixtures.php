@@ -9,26 +9,11 @@ namespace PyzTest\Glue\Checkout\RestApi\Fixtures;
 
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
-use Generated\Shared\Transfer\ShipmentMethodTransfer;
-use Generated\Shared\Transfer\ShipmentTypeTransfer;
-use Generated\Shared\Transfer\StoreRelationTransfer;
 use PyzTest\Glue\Checkout\CheckoutApiTester;
-use SprykerTest\Shared\Shipment\Helper\ShipmentMethodDataHelper;
 use SprykerTest\Shared\Testify\Fixtures\FixturesBuilderInterface;
 use SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface;
 
-/**
- * Auto-generated group annotations
- *
- * @group PyzTest
- * @group Glue
- * @group Checkout
- * @group RestApi
- * @group CheckoutDataRestApiFixtures
- * Add your own group annotations below this line
- * @group EndToEnd
- */
-class CheckoutDataRestApiFixtures implements FixturesBuilderInterface, FixturesContainerInterface
+class ServicePointCheckoutDataRestApiFixtures implements FixturesBuilderInterface, FixturesContainerInterface
 {
     /**
      * @var string
@@ -51,11 +36,6 @@ class CheckoutDataRestApiFixtures implements FixturesBuilderInterface, FixturesC
     protected QuoteTransfer $quoteTransfer;
 
     /**
-     * @var \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
-    protected ShipmentMethodTransfer $shipmentMethodTransfer;
-
-    /**
      * @return \Generated\Shared\Transfer\QuoteTransfer
      */
     public function getQuoteTransfer(): QuoteTransfer
@@ -69,14 +49,6 @@ class CheckoutDataRestApiFixtures implements FixturesBuilderInterface, FixturesC
     public function getCustomerTransfer(): CustomerTransfer
     {
         return $this->customerTransfer;
-    }
-
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
-    public function getShipmentMethodTransfer(): ShipmentMethodTransfer
-    {
-        return $this->shipmentMethodTransfer;
     }
 
     /**
@@ -95,28 +67,7 @@ class CheckoutDataRestApiFixtures implements FixturesBuilderInterface, FixturesC
         ]);
 
         $this->customerTransfer = $I->confirmCustomer($customerTransfer);
-
-        $shipmentTypeTransfer = $I->haveShipmentType([
-            ShipmentTypeTransfer::IS_ACTIVE => true,
-            ShipmentTypeTransfer::STORE_RELATION => (new StoreRelationTransfer())->addStores($I->getStoreFacade()->getCurrentStore()),
-        ]);
-        $this->shipmentMethodTransfer = $I->haveShipmentMethod(
-            [
-                ShipmentMethodTransfer::CARRIER_NAME => 'Spryker Dummy Shipment',
-                ShipmentMethodTransfer::NAME => 'Standard',
-            ],
-            [],
-            ShipmentMethodDataHelper::DEFAULT_PRICE_LIST,
-            [
-                $I->getStoreFacade()->getCurrentStore()->getIdStore(),
-            ],
-        );
-
-        $I->addShipmentTypeToShipmentMethod($this->shipmentMethodTransfer, $shipmentTypeTransfer);
-        $this->quoteTransfer = $I->havePersistentQuoteWithItemsAndItemLevelShipment(
-            $this->customerTransfer,
-            [$I->getQuoteItemOverrideData($I->haveProductWithStock(), $this->shipmentMethodTransfer, 10)],
-        );
+        $this->quoteTransfer = $I->havePersistentQuoteWithItemAndItemServicePoint($this->customerTransfer);
 
         return $this;
     }
