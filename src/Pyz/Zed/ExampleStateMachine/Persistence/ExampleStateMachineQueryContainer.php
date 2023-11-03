@@ -34,9 +34,12 @@ class ExampleStateMachineQueryContainer extends AbstractQueryContainer implement
      */
     public function queryAllStateMachineItems(): ObjectCollection
     {
-         return $this->getFactory()
+        /** @var \Propel\Runtime\Collection\ObjectCollection<\Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItem> $stateMachineItems */
+         $stateMachineItems = $this->getFactory()
              ->createExampleStateMachineQuery()
              ->find();
+
+         return $stateMachineItems;
     }
 
     /**
