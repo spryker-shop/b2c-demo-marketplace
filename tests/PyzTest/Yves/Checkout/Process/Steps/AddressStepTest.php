@@ -379,7 +379,7 @@ class AddressStepTest extends Unit
                 'address_step',
                 'escape_route',
                 $this->getCheckoutAddressStepEnterPreCheckPlugins(),
-                []
+                $this->getCheckoutAddressStepPostExecutePlugins(),
             ])
             ->getMock();
 
@@ -485,6 +485,14 @@ class AddressStepTest extends Unit
      * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutAddressStepEnterPreCheckPluginInterface>
      */
     public function getCheckoutAddressStepEnterPreCheckPlugins(): array
+    {
+        return [];
+    }
+
+    /**
+     * @return list<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutAddressStepPostExecutePluginInterface>
+     */
+    protected function getCheckoutAddressStepPostExecutePlugins(): array
     {
         return [];
     }
