@@ -86,10 +86,9 @@ class ProductRepository implements ProductRepositoryInterface
     public function getSkuProductAbstractList(): array
     {
         /** @var \Propel\Runtime\Collection\ObjectCollection $collection */
-        $collection =  SpyProductAbstractQuery::create()
+        $collection = SpyProductAbstractQuery::create()
             ->select([SpyProductAbstractTableMap::COL_SKU])
             ->find();
-
 
         /** @var array<string> $skuList */
         $skuList = $collection->toArray();
