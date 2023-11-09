@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcbd6c6cf0ae1a345dc20d259de1d4c9",
+    "content-hash": "6611bf471b7b3410c63f9f9cef822320",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6018,80 +6018,6 @@
             "time": "2023-10-16T13:16:36+00:00"
         },
         {
-            "name": "spryker-feature/marketplace-merchant-portal-product-offer-service-points",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-feature/marketplace-merchant-portal-product-offer-service-points.git",
-                "reference": "6c091ff1f446c37280ec4d814977a97d386545c0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-portal-product-offer-service-points/zipball/6c091ff1f446c37280ec4d814977a97d386545c0",
-                "reference": "6c091ff1f446c37280ec4d814977a97d386545c0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0"
-            },
-            "suggest": {
-                "spryker-feature/product-offer-service-points": "Recommended feature dependency."
-            },
-            "default-branch": true,
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "202311.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Marketplace Merchant Portal Product Offer Service Points [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-merchant-portal-product-offer-service-points/tree/master"
-            },
-            "time": "2023-11-02T11:25:06+00:00"
-        },
-        {
-            "name": "spryker-feature/marketplace-merchant-portal-product-offer-shipment",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-feature/marketplace-merchant-portal-product-offer-shipment.git",
-                "reference": "3797d24a739fc763df71c95e117c015a99b866ca"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-portal-product-offer-shipment/zipball/3797d24a739fc763df71c95e117c015a99b866ca",
-                "reference": "3797d24a739fc763df71c95e117c015a99b866ca",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0"
-            },
-            "suggest": {
-                "spryker-feature/product-offer-shipment": "Recommended feature dependency."
-            },
-            "default-branch": true,
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "202311.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Marketplace Merchant Portal Product Offer Shipment [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/marketplace-merchant-portal-product-offer-shipment/tree/master"
-            },
-            "time": "2023-11-02T11:26:16+00:00"
-        },
-        {
             "name": "spryker-feature/marketplace-merchant-product-offer-service-points-availability",
             "version": "dev-master",
             "source": {
@@ -8088,40 +8014,6 @@
             "time": "2023-11-02T11:27:06+00:00"
         },
         {
-            "name": "spryker-feature/shipment-product-offer-service-points-availability",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker-feature/shipment-product-offer-service-points-availability.git",
-                "reference": "9b96a4aa60cdf6b48a15ad0bb6695b2c17223324"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/shipment-product-offer-service-points-availability/zipball/9b96a4aa60cdf6b48a15ad0bb6695b2c17223324",
-                "reference": "9b96a4aa60cdf6b48a15ad0bb6695b2c17223324",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0"
-            },
-            "default-branch": true,
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "202311.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Shipment Product Offer Service Points Availability [feature]",
-            "support": {
-                "source": "https://github.com/spryker-feature/shipment-product-offer-service-points-availability/tree/master"
-            },
-            "time": "2023-11-02T11:27:28+00:00"
-        },
-        {
             "name": "spryker-feature/shipment-service-points",
             "version": "dev-master",
             "source": {
@@ -9571,16 +9463,16 @@
         },
         {
             "name": "spryker-shop/checkout-page",
-            "version": "3.29.1",
+            "version": "3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/checkout-page.git",
-                "reference": "ca6146dda8aba906f766c32fa76132dbf8315d1c"
+                "reference": "98f291b1f3e9785df1f191a6b1e74202360a2b93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/ca6146dda8aba906f766c32fa76132dbf8315d1c",
-                "reference": "ca6146dda8aba906f766c32fa76132dbf8315d1c",
+                "url": "https://api.github.com/repos/spryker-shop/checkout-page/zipball/98f291b1f3e9785df1f191a6b1e74202360a2b93",
+                "reference": "98f291b1f3e9785df1f191a6b1e74202360a2b93",
                 "shasum": ""
             },
             "require": {
@@ -9657,9 +9549,9 @@
             ],
             "description": "CheckoutPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/checkout-page/tree/3.29.1"
+                "source": "https://github.com/spryker-shop/checkout-page/tree/3.29.0"
             },
-            "time": "2023-11-08T09:58:38+00:00"
+            "time": "2023-11-02T20:09:30+00:00"
         },
         {
             "name": "spryker-shop/checkout-page-extension",
@@ -72031,18 +71923,6 @@
             "alias_normalized": "202311.0"
         },
         {
-            "package": "spryker-feature/marketplace-merchant-portal-product-offer-service-points",
-            "version": "9999999-dev",
-            "alias": "202311.0",
-            "alias_normalized": "202311.0"
-        },
-        {
-            "package": "spryker-feature/marketplace-merchant-portal-product-offer-shipment",
-            "version": "9999999-dev",
-            "alias": "202311.0",
-            "alias_normalized": "202311.0"
-        },
-        {
             "package": "spryker-feature/marketplace-merchant-product-offer-service-points-availability",
             "version": "9999999-dev",
             "alias": "202311.0",
@@ -72325,12 +72205,6 @@
             "alias_normalized": "202311.0"
         },
         {
-            "package": "spryker-feature/shipment-product-offer-service-points-availability",
-            "version": "9999999-dev",
-            "alias": "202311.0",
-            "alias_normalized": "202311.0"
-        },
-        {
             "package": "spryker-feature/shipment-service-points",
             "version": "9999999-dev",
             "alias": "202311.0",
@@ -72407,8 +72281,6 @@
         "spryker-feature/marketplace-merchant": 20,
         "spryker-feature/marketplace-merchant-portal-product-management": 20,
         "spryker-feature/marketplace-merchant-portal-product-offer-management": 20,
-        "spryker-feature/marketplace-merchant-portal-product-offer-service-points": 20,
-        "spryker-feature/marketplace-merchant-portal-product-offer-shipment": 20,
         "spryker-feature/marketplace-merchant-product-offer-service-points-availability": 20,
         "spryker-feature/marketplace-merchantportal-core": 20,
         "spryker-feature/marketplace-order-management": 20,
@@ -72456,7 +72328,6 @@
         "spryker-feature/service-points-cart": 20,
         "spryker-feature/shipment": 20,
         "spryker-feature/shipment-cart": 20,
-        "spryker-feature/shipment-product-offer-service-points-availability": 20,
         "spryker-feature/shipment-service-points": 20,
         "spryker-feature/spryker-core": 20,
         "spryker-feature/spryker-core-back-office": 20,
@@ -72488,5 +72359,5 @@
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
