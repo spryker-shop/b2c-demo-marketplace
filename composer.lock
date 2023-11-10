@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3eec75594e66ac179a36f6e5cbcacb8",
+    "content-hash": "ba89aef722be01927d2183ad40f5b198",
     "packages": [
         {
             "name": "async-aws/core",
@@ -9651,16 +9651,16 @@
         },
         {
             "name": "spryker-shop/click-and-collect-page-example",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/click-and-collect-page-example.git",
-                "reference": "fb557ce279993b1c660c8d55eb81e10c7464db5d"
+                "reference": "0dceb890d178f3df0167ce1f587dd53ead183587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/click-and-collect-page-example/zipball/fb557ce279993b1c660c8d55eb81e10c7464db5d",
-                "reference": "fb557ce279993b1c660c8d55eb81e10c7464db5d",
+                "url": "https://api.github.com/repos/spryker-shop/click-and-collect-page-example/zipball/0dceb890d178f3df0167ce1f587dd53ead183587",
+                "reference": "0dceb890d178f3df0167ce1f587dd53ead183587",
                 "shasum": ""
             },
             "require": {
@@ -9699,9 +9699,9 @@
             ],
             "description": "ClickAndCollectPageExample module",
             "support": {
-                "source": "https://github.com/spryker-shop/click-and-collect-page-example/tree/0.3.1"
+                "source": "https://github.com/spryker-shop/click-and-collect-page-example/tree/0.3.2"
             },
-            "time": "2023-11-02T20:09:30+00:00"
+            "time": "2023-11-09T10:02:29+00:00"
         },
         {
             "name": "spryker-shop/cms-block-widget",
@@ -72359,5 +72359,5 @@
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
