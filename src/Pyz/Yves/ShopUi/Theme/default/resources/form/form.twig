@@ -30,6 +30,7 @@
     {%- endif -%}
 
     {% embed molecule('custom-select') with {
+        class: attr.extraClass | default,
         modifiers: ['expand'],
         attributes: {
             multiple: multiple,
