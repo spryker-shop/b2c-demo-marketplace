@@ -1,0 +1,15 @@
+{% extends molecule('shipment-type-toggler', '@SprykerShop:ShipmentTypeWidget') %}
+
+{% block radioButtons %}
+    <div class="spacing-y spacing-y--big">
+        {{ form_row(data.shipmentTypeForm.key, {
+            label_attr: {
+                class: 'list--inline',
+            },
+            choices_attr: {
+                class: config.jsName ~ '__trigger ' ~ data.shipmentTypesClassName,
+                modifiers: ['big'],
+            },
+        }) }}
+    </div>
+{% endblock %}
