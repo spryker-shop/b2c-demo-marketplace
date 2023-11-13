@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bcdc1f44ec3c4f341c7e82ee909369e0",
+    "content-hash": "a0f5896a32d3d60c82251d0da473645e",
     "packages": [
         {
             "name": "async-aws/core",
@@ -14904,16 +14904,16 @@
         },
         {
             "name": "spryker-shop/shipment-type-widget",
-            "version": "1.2.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/shipment-type-widget.git",
-                "reference": "43e652d2b4ac1820bbdd12b64b4575d9de0406b2"
+                "reference": "7f55a4b75f4fa611e8cb45fc0e92a1794fa8dc15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/shipment-type-widget/zipball/43e652d2b4ac1820bbdd12b64b4575d9de0406b2",
-                "reference": "43e652d2b4ac1820bbdd12b64b4575d9de0406b2",
+                "url": "https://api.github.com/repos/spryker-shop/shipment-type-widget/zipball/7f55a4b75f4fa611e8cb45fc0e92a1794fa8dc15",
+                "reference": "7f55a4b75f4fa611e8cb45fc0e92a1794fa8dc15",
                 "shasum": ""
             },
             "require": {
@@ -14954,9 +14954,9 @@
             ],
             "description": "ShipmentTypeWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/shipment-type-widget/tree/1.2.0"
+                "source": "https://github.com/spryker-shop/shipment-type-widget/tree/1.1.0"
             },
-            "time": "2023-11-10T08:59:27+00:00"
+            "time": "2023-11-02T20:09:30+00:00"
         },
         {
             "name": "spryker-shop/shop-application",
@@ -32389,20 +32389,20 @@
         },
         {
             "name": "spryker/merchant-product-offer-storage",
-            "version": "2.4.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product-offer-storage.git",
-                "reference": "4ef16c331dde5dcb3891ae53c21bcb3a7187e32d"
+                "reference": "ec9f35abab68484338b61992bd3ffe7830ca5a76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product-offer-storage/zipball/4ef16c331dde5dcb3891ae53c21bcb3a7187e32d",
-                "reference": "4ef16c331dde5dcb3891ae53c21bcb3a7187e32d",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offer-storage/zipball/ec9f35abab68484338b61992bd3ffe7830ca5a76",
+                "reference": "ec9f35abab68484338b61992bd3ffe7830ca5a76",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.0",
                 "spryker/event-behavior": "^1.14.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant": "^3.1.0",
@@ -32447,9 +32447,9 @@
             ],
             "description": "MerchantProductOfferStorage module",
             "support": {
-                "source": "https://github.com/spryker/merchant-product-offer-storage/tree/2.4.0"
+                "source": "https://github.com/spryker/merchant-product-offer-storage/tree/2.3.0"
             },
-            "time": "2023-11-10T15:25:49+00:00"
+            "time": "2023-10-27T14:50:55+00:00"
         },
         {
             "name": "spryker/merchant-product-offer-storage-extension",
@@ -45636,20 +45636,20 @@
         },
         {
             "name": "spryker/product-offer-warehouse-allocation-example",
-            "version": "0.3.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-warehouse-allocation-example.git",
-                "reference": "5e3425a746853c23ce3298f067b582b81056925a"
+                "reference": "b6ba09074792ac3fe8543a97b85019b555218611"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-warehouse-allocation-example/zipball/5e3425a746853c23ce3298f067b582b81056925a",
-                "reference": "5e3425a746853c23ce3298f067b582b81056925a",
+                "url": "https://api.github.com/repos/spryker/product-offer-warehouse-allocation-example/zipball/b6ba09074792ac3fe8543a97b85019b555218611",
+                "reference": "b6ba09074792ac3fe8543a97b85019b555218611",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product-offer": "^1.0.0",
                 "spryker/product-offer-stock": "^1.0.0",
@@ -45682,9 +45682,9 @@
             ],
             "description": "ProductOfferWarehouseAllocationExample module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-warehouse-allocation-example/tree/0.3.0"
+                "source": "https://github.com/spryker/product-offer-warehouse-allocation-example/tree/0.2.0"
             },
-            "time": "2023-11-10T09:38:46+00:00"
+            "time": "2023-09-27T12:20:15+00:00"
         },
         {
             "name": "spryker/product-option",
@@ -47674,20 +47674,20 @@
         },
         {
             "name": "spryker/product-warehouse-allocation-example",
-            "version": "0.3.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-warehouse-allocation-example.git",
-                "reference": "5e3560188ae8317a150dff66bd3aba73ab6b1966"
+                "reference": "65a63240ee6b593eea24571807386ba1291f3b64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-warehouse-allocation-example/zipball/5e3560188ae8317a150dff66bd3aba73ab6b1966",
-                "reference": "5e3560188ae8317a150dff66bd3aba73ab6b1966",
+                "url": "https://api.github.com/repos/spryker/product-warehouse-allocation-example/zipball/65a63240ee6b593eea24571807386ba1291f3b64",
+                "reference": "65a63240ee6b593eea24571807386ba1291f3b64",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product": "^6.0.0",
                 "spryker/propel-orm": "^1.0.0",
@@ -47718,9 +47718,9 @@
             ],
             "description": "ProductWarehouseAllocationExample module",
             "support": {
-                "source": "https://github.com/spryker/product-warehouse-allocation-example/tree/0.3.0"
+                "source": "https://github.com/spryker/product-warehouse-allocation-example/tree/0.2.0"
             },
-            "time": "2023-11-10T09:38:46+00:00"
+            "time": "2023-09-27T12:20:15+00:00"
         },
         {
             "name": "spryker/products-backend-api",
@@ -72359,5 +72359,5 @@
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
