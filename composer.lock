@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56e56909246197f0285a43cdf5f5d25d",
+    "content-hash": "67a88ed2741824aa2b9502d40ef5e577",
     "packages": [
         {
             "name": "async-aws/core",
@@ -14904,16 +14904,16 @@
         },
         {
             "name": "spryker-shop/shipment-type-widget",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/shipment-type-widget.git",
-                "reference": "7f55a4b75f4fa611e8cb45fc0e92a1794fa8dc15"
+                "reference": "43e652d2b4ac1820bbdd12b64b4575d9de0406b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/shipment-type-widget/zipball/7f55a4b75f4fa611e8cb45fc0e92a1794fa8dc15",
-                "reference": "7f55a4b75f4fa611e8cb45fc0e92a1794fa8dc15",
+                "url": "https://api.github.com/repos/spryker-shop/shipment-type-widget/zipball/43e652d2b4ac1820bbdd12b64b4575d9de0406b2",
+                "reference": "43e652d2b4ac1820bbdd12b64b4575d9de0406b2",
                 "shasum": ""
             },
             "require": {
@@ -14954,9 +14954,9 @@
             ],
             "description": "ShipmentTypeWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/shipment-type-widget/tree/1.1.0"
+                "source": "https://github.com/spryker-shop/shipment-type-widget/tree/1.2.0"
             },
-            "time": "2023-11-02T20:09:30+00:00"
+            "time": "2023-11-10T08:59:27+00:00"
         },
         {
             "name": "spryker-shop/shop-application",
@@ -20470,16 +20470,16 @@
         },
         {
             "name": "spryker/click-and-collect-example",
-            "version": "0.8.1",
+            "version": "0.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/click-and-collect-example.git",
-                "reference": "573a8126677b1ec9d6ee91fdf3805363a6750334"
+                "reference": "d6590b7324807464d29269d908f4ef6f780acdbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/click-and-collect-example/zipball/573a8126677b1ec9d6ee91fdf3805363a6750334",
-                "reference": "573a8126677b1ec9d6ee91fdf3805363a6750334",
+                "url": "https://api.github.com/repos/spryker/click-and-collect-example/zipball/d6590b7324807464d29269d908f4ef6f780acdbd",
+                "reference": "d6590b7324807464d29269d908f4ef6f780acdbd",
                 "shasum": ""
             },
             "require": {
@@ -20507,6 +20507,7 @@
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
+                "spryker/decimal-object": "*",
                 "spryker/price-product": "*",
                 "spryker/product": "*",
                 "spryker/propel": "*",
@@ -20530,9 +20531,9 @@
             ],
             "description": "ClickAndCollectExample module",
             "support": {
-                "source": "https://github.com/spryker/click-and-collect-example/tree/0.8.1"
+                "source": "https://github.com/spryker/click-and-collect-example/tree/0.8.2"
             },
-            "time": "2023-11-06T10:23:04+00:00"
+            "time": "2023-11-13T14:37:10+00:00"
         },
         {
             "name": "spryker/cms",
@@ -27417,20 +27418,20 @@
         },
         {
             "name": "spryker/dynamic-entity",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/dynamic-entity.git",
-                "reference": "3fb6992fa49b87826f24f39d00939700549e4e6e"
+                "reference": "8d139af4ccf7c8d1f3905970eb50e4c326c9da85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/dynamic-entity/zipball/3fb6992fa49b87826f24f39d00939700549e4e6e",
-                "reference": "3fb6992fa49b87826f24f39d00939700549e4e6e",
+                "url": "https://api.github.com/repos/spryker/dynamic-entity/zipball/8d139af4ccf7c8d1f3905970eb50e4c326c9da85",
+                "reference": "8d139af4ccf7c8d1f3905970eb50e4c326c9da85",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/dynamic-entity-extension": "^1.0.0",
                 "spryker/installer-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -27461,9 +27462,9 @@
             ],
             "description": "DynamicEntity module",
             "support": {
-                "source": "https://github.com/spryker/dynamic-entity/tree/1.1.0"
+                "source": "https://github.com/spryker/dynamic-entity/tree/1.2.0"
             },
-            "time": "2023-11-02T15:17:39+00:00"
+            "time": "2023-11-14T12:41:41+00:00"
         },
         {
             "name": "spryker/dynamic-entity-backend-api",
@@ -29024,20 +29025,20 @@
         },
         {
             "name": "spryker/glue-application",
-            "version": "1.58.0",
+            "version": "1.59.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/glue-application.git",
-                "reference": "b4b913c76e89175c9d4afe830904386d70252743"
+                "reference": "911cb6c4b5256e29cc5eaa5addbed9a18b97f7be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/glue-application/zipball/b4b913c76e89175c9d4afe830904386d70252743",
-                "reference": "b4b913c76e89175c9d4afe830904386d70252743",
+                "url": "https://api.github.com/repos/spryker/glue-application/zipball/911cb6c4b5256e29cc5eaa5addbed9a18b97f7be",
+                "reference": "911cb6c4b5256e29cc5eaa5addbed9a18b97f7be",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/application": "^3.13.0",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/container": "^1.0.0",
@@ -29085,9 +29086,9 @@
             ],
             "description": "GlueApplication module",
             "support": {
-                "source": "https://github.com/spryker/glue-application/tree/1.58.0"
+                "source": "https://github.com/spryker/glue-application/tree/1.59.0"
             },
-            "time": "2023-10-17T16:01:45+00:00"
+            "time": "2023-11-14T15:48:24+00:00"
         },
         {
             "name": "spryker/glue-application-authorization-connector",
@@ -32389,20 +32390,20 @@
         },
         {
             "name": "spryker/merchant-product-offer-storage",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product-offer-storage.git",
-                "reference": "ec9f35abab68484338b61992bd3ffe7830ca5a76"
+                "reference": "4ef16c331dde5dcb3891ae53c21bcb3a7187e32d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product-offer-storage/zipball/ec9f35abab68484338b61992bd3ffe7830ca5a76",
-                "reference": "ec9f35abab68484338b61992bd3ffe7830ca5a76",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offer-storage/zipball/4ef16c331dde5dcb3891ae53c21bcb3a7187e32d",
+                "reference": "4ef16c331dde5dcb3891ae53c21bcb3a7187e32d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/event-behavior": "^1.14.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant": "^3.1.0",
@@ -32447,9 +32448,9 @@
             ],
             "description": "MerchantProductOfferStorage module",
             "support": {
-                "source": "https://github.com/spryker/merchant-product-offer-storage/tree/2.3.0"
+                "source": "https://github.com/spryker/merchant-product-offer-storage/tree/2.4.0"
             },
-            "time": "2023-10-27T14:50:55+00:00"
+            "time": "2023-11-10T15:25:49+00:00"
         },
         {
             "name": "spryker/merchant-product-offer-storage-extension",
@@ -45636,20 +45637,20 @@
         },
         {
             "name": "spryker/product-offer-warehouse-allocation-example",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-warehouse-allocation-example.git",
-                "reference": "b6ba09074792ac3fe8543a97b85019b555218611"
+                "reference": "5e3425a746853c23ce3298f067b582b81056925a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-warehouse-allocation-example/zipball/b6ba09074792ac3fe8543a97b85019b555218611",
-                "reference": "b6ba09074792ac3fe8543a97b85019b555218611",
+                "url": "https://api.github.com/repos/spryker/product-offer-warehouse-allocation-example/zipball/5e3425a746853c23ce3298f067b582b81056925a",
+                "reference": "5e3425a746853c23ce3298f067b582b81056925a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product-offer": "^1.0.0",
                 "spryker/product-offer-stock": "^1.0.0",
@@ -45682,9 +45683,9 @@
             ],
             "description": "ProductOfferWarehouseAllocationExample module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-warehouse-allocation-example/tree/0.2.0"
+                "source": "https://github.com/spryker/product-offer-warehouse-allocation-example/tree/0.3.0"
             },
-            "time": "2023-09-27T12:20:15+00:00"
+            "time": "2023-11-10T09:38:46+00:00"
         },
         {
             "name": "spryker/product-option",
@@ -47674,20 +47675,20 @@
         },
         {
             "name": "spryker/product-warehouse-allocation-example",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-warehouse-allocation-example.git",
-                "reference": "65a63240ee6b593eea24571807386ba1291f3b64"
+                "reference": "5e3560188ae8317a150dff66bd3aba73ab6b1966"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-warehouse-allocation-example/zipball/65a63240ee6b593eea24571807386ba1291f3b64",
-                "reference": "65a63240ee6b593eea24571807386ba1291f3b64",
+                "url": "https://api.github.com/repos/spryker/product-warehouse-allocation-example/zipball/5e3560188ae8317a150dff66bd3aba73ab6b1966",
+                "reference": "5e3560188ae8317a150dff66bd3aba73ab6b1966",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product": "^6.0.0",
                 "spryker/propel-orm": "^1.0.0",
@@ -47718,9 +47719,9 @@
             ],
             "description": "ProductWarehouseAllocationExample module",
             "support": {
-                "source": "https://github.com/spryker/product-warehouse-allocation-example/tree/0.2.0"
+                "source": "https://github.com/spryker/product-warehouse-allocation-example/tree/0.3.0"
             },
-            "time": "2023-09-27T12:20:15+00:00"
+            "time": "2023-11-10T09:38:46+00:00"
         },
         {
             "name": "spryker/products-backend-api",
@@ -53317,20 +53318,20 @@
         },
         {
             "name": "spryker/service-points-backend-api",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/service-points-backend-api.git",
-                "reference": "8dd5d299b700891997e0046ac53b7b41949a07de"
+                "reference": "7f21ae3478127245479fde372f3d6a18497e1ee4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/service-points-backend-api/zipball/8dd5d299b700891997e0046ac53b7b41949a07de",
-                "reference": "8dd5d299b700891997e0046ac53b7b41949a07de",
+                "url": "https://api.github.com/repos/spryker/service-points-backend-api/zipball/7f21ae3478127245479fde372f3d6a18497e1ee4",
+                "reference": "7f21ae3478127245479fde372f3d6a18497e1ee4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/glossary-storage": "^1.5.0",
                 "spryker/glue-application-extension": "^1.0.0",
                 "spryker/glue-json-api-convention-extension": "^1.0.0",
@@ -53344,6 +53345,7 @@
                 "spryker/code-sniffer": "*",
                 "spryker/config": "*",
                 "spryker/container": "*",
+                "spryker/country": "*",
                 "spryker/glue-application": "*",
                 "spryker/glue-backend-api-application": "*",
                 "spryker/propel": "*",
@@ -53372,9 +53374,9 @@
             ],
             "description": "ServicePointsBackendApi module",
             "support": {
-                "source": "https://github.com/spryker/service-points-backend-api/tree/1.0.0"
+                "source": "https://github.com/spryker/service-points-backend-api/tree/1.1.0"
             },
-            "time": "2023-11-01T17:06:46+00:00"
+            "time": "2023-11-10T09:10:30+00:00"
         },
         {
             "name": "spryker/service-points-rest-api",
@@ -71028,19 +71030,18 @@
         },
         {
             "name": "spryker/robotframework-suite-tests",
-            "version": "dev-master",
+            "version": "dev-bugfix/cc-31600-fixed-warehouse-user-assigment-validation-demos",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "c7756dee9093090c09f47e7677165932903bfe3f"
+                "reference": "d07b8b276796b7af45d9f7d89b1b7b5156499be4"
             },
-            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2023-11-10T09:25:40+00:00"
+            "time": "2023-11-14T13:57:48+00:00"
         },
         {
             "name": "spryker/testify",
