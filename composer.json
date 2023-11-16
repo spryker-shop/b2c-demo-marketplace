@@ -454,7 +454,7 @@
         "spryker-shop/merchant-sales-return-widget": "1.0.1",
         "spryker-shop/merchant-search-widget": "1.0.0",
         "spryker-shop/merchant-widget": "1.3.1",
-        "spryker-shop/money-widget": "1.7.0",cd vendor/spryker-shop/date-time-configurator-page-example/src/SprykerShop/Configurator/DateTimeConfiguratorPageExample/Theme/ConfiguratorApplication/
+        "spryker-shop/money-widget": "1.7.0",
         "spryker-shop/newsletter-page": "1.2.0",
         "spryker-shop/newsletter-widget": "1.8.0",
         "spryker-shop/order-cancel-widget": "1.1.0",
