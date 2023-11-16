@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67a88ed2741824aa2b9502d40ef5e577",
+    "content-hash": "f2c08bd52efdb91f83862c64949a749b",
     "packages": [
         {
             "name": "async-aws/core",
@@ -43956,20 +43956,20 @@
         },
         {
             "name": "spryker/product-offer-prices-rest-api",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-prices-rest-api.git",
-                "reference": "2d56c378454a2852f56563f6df560b603458a6a0"
+                "reference": "f0ff4bf48e8e4e32f2efe99d932894e908900f4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-prices-rest-api/zipball/2d56c378454a2852f56563f6df560b603458a6a0",
-                "reference": "2d56c378454a2852f56563f6df560b603458a6a0",
+                "url": "https://api.github.com/repos/spryker/product-offer-prices-rest-api/zipball/f0ff4bf48e8e4e32f2efe99d932894e908900f4d",
+                "reference": "f0ff4bf48e8e4e32f2efe99d932894e908900f4d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.1",
                 "spryker/glue-application": "^1.8.0",
                 "spryker/glue-application-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
@@ -44002,9 +44002,9 @@
             ],
             "description": "ProductOfferPricesRestApi module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-prices-rest-api/tree/2.0.1"
+                "source": "https://github.com/spryker/product-offer-prices-rest-api/tree/2.1.0"
             },
-            "time": "2022-04-26T16:30:57+00:00"
+            "time": "2023-11-15T11:32:04+00:00"
         },
         {
             "name": "spryker/product-offer-prices-rest-api-extension",
@@ -71030,18 +71030,19 @@
         },
         {
             "name": "spryker/robotframework-suite-tests",
-            "version": "dev-bugfix/cc-31600-fixed-warehouse-user-assigment-validation-demos",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "f643973ce59a784fed612c3023ef7a76bd1d48cd"
+                "reference": "186dc4ada3d43e119a19524eae98d9e81ce592c6"
             },
+            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2023-11-15T19:35:02+00:00"
+            "time": "2023-11-16T13:57:46+00:00"
         },
         {
             "name": "spryker/testify",
