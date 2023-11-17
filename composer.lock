@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88d248e13a325367d9a86d9a630cd6f9",
+    "content-hash": "33c4a95a1addcf5e2724bd8ca2a842c4",
     "packages": [
         {
             "name": "async-aws/core",
@@ -20042,20 +20042,20 @@
         },
         {
             "name": "spryker/category-storage",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/category-storage.git",
-                "reference": "2fd865e3c1a42cd560f96ff210a02f500d264d95"
+                "reference": "05309798b74267ba797418ac78b6a18fa49a27b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/category-storage/zipball/2fd865e3c1a42cd560f96ff210a02f500d264d95",
-                "reference": "2fd865e3c1a42cd560f96ff210a02f500d264d95",
+                "url": "https://api.github.com/repos/spryker/category-storage/zipball/05309798b74267ba797418ac78b6a18fa49a27b8",
+                "reference": "05309798b74267ba797418ac78b6a18fa49a27b8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/category": "^5.6.0",
                 "spryker/event-behavior": "^1.6.0",
                 "spryker/kernel": "^3.30.0",
@@ -20108,9 +20108,9 @@
             ],
             "description": "CategoryStorage module",
             "support": {
-                "source": "https://github.com/spryker/category-storage/tree/2.8.0"
+                "source": "https://github.com/spryker/category-storage/tree/2.9.0"
             },
-            "time": "2023-09-11T11:36:57+00:00"
+            "time": "2023-11-17T11:07:33+00:00"
         },
         {
             "name": "spryker/chart",
