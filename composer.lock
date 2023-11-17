@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8921868576fc3d380adf20ffb3f65eb",
+    "content-hash": "522918fb923886dadaacb6a66ca3a68f",
     "packages": [
         {
             "name": "async-aws/core",
@@ -71032,19 +71032,18 @@
         },
         {
             "name": "spryker/robotframework-suite-tests",
-            "version": "dev-master",
+            "version": "dev-bugfix/cc-29261-missing-validation-config-for-product-configuration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "aa889bb3b21627743bcf2d98af4d1f0bc5cd7648"
+                "reference": "15386cc3092bfeda5ce3a798855cc44079d536e8"
             },
-            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2023-11-17T09:26:05+00:00"
+            "time": "2023-11-17T15:56:41+00:00"
         },
         {
             "name": "spryker/testify",
