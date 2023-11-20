@@ -347,15 +347,17 @@ class ProductStockPropelDataSetWriter implements DataSetWriterInterface
     {
         $idStore = $this->getIdStore($storeTransfer);
 
-        $productReservations = SpyOmsProductReservationQuery::create()
+        /** @var \Propel\Runtime\Collection\ObjectCollection $collection */
+        $collection = SpyOmsProductReservationQuery::create()
             ->filterBySku($sku)
             ->filterByFkStore($idStore)
             ->select([
                 SpyOmsProductReservationTableMap::COL_RESERVATION_QUANTITY,
             ])
-            ->find()
-            ->toArray();
+            ->find();
 
+        /** @var array<int> $productReservations */
+        $productReservations = $collection->toArray();
         $reservationQuantity = new Decimal(0);
 
         foreach ($productReservations as $productReservationQuantity) {
