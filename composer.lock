@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2146e7d3d63b0d5bb4e5af80e44f97d9",
+    "content-hash": "4a1770620cba15bf50b1cd994b7b7d3b",
     "packages": [
         {
             "name": "async-aws/core",
@@ -48742,20 +48742,20 @@
         },
         {
             "name": "spryker/quote",
-            "version": "2.18.0",
+            "version": "2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/quote.git",
-                "reference": "e577815ae7bbe6e43f81fd657b3af92a19d88e2e"
+                "reference": "c75e2e8ea9739488b528f695b55e1f0568b0588a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/quote/zipball/e577815ae7bbe6e43f81fd657b3af92a19d88e2e",
-                "reference": "e577815ae7bbe6e43f81fd657b3af92a19d88e2e",
+                "url": "https://api.github.com/repos/spryker/quote/zipball/c75e2e8ea9739488b528f695b55e1f0568b0588a",
+                "reference": "c75e2e8ea9739488b528f695b55e1f0568b0588a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/agent-extension": "^1.0.0",
                 "spryker/comment-extension": "^1.0.0",
                 "spryker/currency": "^3.4.0 || ^4.0.0",
@@ -48795,9 +48795,9 @@
             ],
             "description": "Quote module",
             "support": {
-                "source": "https://github.com/spryker/quote/tree/2.18.0"
+                "source": "https://github.com/spryker/quote/tree/2.19.0"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2023-11-10T12:45:47+00:00"
         },
         {
             "name": "spryker/quote-extension",
