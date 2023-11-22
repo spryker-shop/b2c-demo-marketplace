@@ -15,39 +15,39 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
     /**
      * @var string
      */
-    public const PYZ_IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER = 'combined-merchant-product-offer';
+    public const IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER = 'combined-merchant-product-offer';
 
     /**
      * @var string
      */
-    public const PYZ_IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE = 'combined-merchant-product-offer-store';
+    public const IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE = 'combined-merchant-product-offer-store';
 
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
-    public function getPyzCombinedMerchantProductOfferDataImporterConfiguration(): DataImporterConfigurationTransfer
+    public function getCombinedMerchantProductOfferDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         return $this->buildImporterConfiguration(
-            $this->getPyzCombinedMerchantProductOfferFilePath(),
-            static::PYZ_IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER,
+            $this->getCombinedMerchantProductOfferFilePath(),
+            static::IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER,
         );
     }
 
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
-    public function getPyzCombinedMerchantProductOfferStoreDataImporterConfiguration(): DataImporterConfigurationTransfer
+    public function getCombinedMerchantProductOfferStoreDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         return $this->buildImporterConfiguration(
-            $this->getPyzCombinedMerchantProductOfferFilePath(),
-            static::PYZ_IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE,
+            $this->getCombinedMerchantProductOfferFilePath(),
+            static::IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE,
         );
     }
 
     /**
      * @return string
      */
-    public function getPyzCombinedMerchantProductOfferFilePath(): string
+    public function getCombinedMerchantProductOfferFilePath(): string
     {
         $moduleDataImportDirectory = $this->getDataImportRootPath() . 'common' . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR;
 

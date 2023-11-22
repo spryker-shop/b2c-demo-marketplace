@@ -31,22 +31,22 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
      */
-    public function getPyzCombinedMerchantProductOfferDataImporter(): DataImporterInterface
+    public function getCombinedMerchantProductOfferDataImporter(): DataImporterInterface
     {
-        $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getPyzCombinedMerchantProductOfferDataImporterConfiguration(),
+        $dataImporter = $this->getConditionalCsvDataImporterFromConfig(
+            $this->getConfig()->getCombinedMerchantProductOfferDataImporterConfiguration(),
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
         $dataSetStepBroker
-            ->addStep($this->createPyzCombinedMerchantReferenceToIdMerchantStep())
-            ->addStep($this->createPyzCombinedConcreteSkuValidationStep())
-            ->addStep($this->createPyzCombinedMerchantSkuValidationStep())
-            ->addStep($this->createPyzCombinedApprovalStatusValidationStep())
-            ->addStep($this->createPyzCombinedMerchantProductOfferWriterStep());
+            ->addStep($this->createCombinedMerchantReferenceToIdMerchantStep())
+            ->addStep($this->createCombinedConcreteSkuValidationStep())
+            ->addStep($this->createCombinedMerchantSkuValidationStep())
+            ->addStep($this->createCombinedApprovalStatusValidationStep())
+            ->addStep($this->createCombinedMerchantProductOfferWriterStep());
 
         $dataImporter
-            ->setDataSetCondition($this->createPyzCombinedMerchantProductOfferMandatoryColumnCondition())
+            ->setDataSetCondition($this->createCombinedMerchantProductOfferMandatoryColumnCondition())
             ->addDataSetStepBroker($dataSetStepBroker);
 
         return $dataImporter;
@@ -55,20 +55,20 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
      */
-    public function getPyzCombinedMerchantProductOfferStoreDataImporter(): DataImporterInterface
+    public function getCombinedMerchantProductOfferStoreDataImporter(): DataImporterInterface
     {
-        $dataImporter = $this->getPyzConditionalCsvDataImporterFromConfig(
-            $this->getConfig()->getPyzCombinedMerchantProductOfferStoreDataImporterConfiguration(),
+        $dataImporter = $this->getConditionalCsvDataImporterFromConfig(
+            $this->getConfig()->getCombinedMerchantProductOfferStoreDataImporterConfiguration(),
         );
 
         $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
         $dataSetStepBroker
             ->addStep($this->createProductOfferReferenceToIdProductOfferStep())
-            ->addStep($this->createPyzCombinedStoreNameToIdStoreStep())
+            ->addStep($this->createCombinedStoreNameToIdStoreStep())
             ->addStep($this->createMerchantProductOfferStoreWriterStep());
 
         $dataImporter
-            ->setDataSetCondition($this->createPyzCombinedMerchantProductOfferStoreMandatoryColumnCondition())
+            ->setDataSetCondition($this->createCombinedMerchantProductOfferStoreMandatoryColumnCondition())
             ->addDataSetStepBroker($dataSetStepBroker);
 
         return $dataImporter;
@@ -79,12 +79,12 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function getPyzConditionalCsvDataImporterFromConfig(
+    public function getConditionalCsvDataImporterFromConfig(
         DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterConditional {
         $csvReader = $this->createCsvReaderFromConfig($dataImporterConfigurationTransfer->getReaderConfiguration());
 
-        return $this->createPyzDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
+        return $this->createDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
     }
 
     /**
@@ -93,7 +93,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function createPyzDataImporterConditional(
+    public function createDataImporterConditional(
         string $importType,
         DataReaderInterface $reader,
     ): DataImporterConditional {
@@ -103,7 +103,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedMerchantReferenceToIdMerchantStep(): DataImportStepInterface
+    public function createCombinedMerchantReferenceToIdMerchantStep(): DataImportStepInterface
     {
         return new CombinedMerchantReferenceToIdMerchantStep();
     }
@@ -111,7 +111,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedConcreteSkuValidationStep(): DataImportStepInterface
+    public function createCombinedConcreteSkuValidationStep(): DataImportStepInterface
     {
         return new CombinedConcreteSkuValidationStep();
     }
@@ -119,7 +119,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedMerchantSkuValidationStep(): DataImportStepInterface
+    public function createCombinedMerchantSkuValidationStep(): DataImportStepInterface
     {
         return new CombinedMerchantSkuValidationStep();
     }
@@ -127,7 +127,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedMerchantProductOfferWriterStep(): DataImportStepInterface
+    public function createCombinedMerchantProductOfferWriterStep(): DataImportStepInterface
     {
         return new CombinedMerchantProductOfferWriterStep($this->getEventFacade());
     }
@@ -135,7 +135,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedStoreNameToIdStoreStep(): DataImportStepInterface
+    public function createCombinedStoreNameToIdStoreStep(): DataImportStepInterface
     {
         return new CombinedStoreNameToIdStoreStep();
     }
@@ -143,7 +143,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
      */
-    public function createPyzCombinedApprovalStatusValidationStep(): DataImportStepInterface
+    public function createCombinedApprovalStatusValidationStep(): DataImportStepInterface
     {
         return new CombinedApprovalStatusValidationStep();
     }
@@ -151,7 +151,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
      */
-    public function createPyzCombinedMerchantProductOfferStoreMandatoryColumnCondition(): DataSetConditionInterface
+    public function createCombinedMerchantProductOfferStoreMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedMerchantProductOfferStoreMandatoryColumnCondition();
     }
@@ -159,7 +159,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     /**
      * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
      */
-    public function createPyzCombinedMerchantProductOfferMandatoryColumnCondition(): DataSetConditionInterface
+    public function createCombinedMerchantProductOfferMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedMerchantProductOfferMandatoryColumnCondition();
     }

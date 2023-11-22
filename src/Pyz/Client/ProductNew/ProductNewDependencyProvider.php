@@ -48,7 +48,6 @@ class ProductNewDependencyProvider extends SprykerProductNewDependencyProvider
      */
     protected function getNewProductsResultFormatterPlugins(): array
     {
-        /** @phpstan-var \Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface $rawCatalogSearchResultFormatterPlugin */
         $rawCatalogSearchResultFormatterPlugin = new RawCatalogSearchResultFormatterPlugin();
 
         return [

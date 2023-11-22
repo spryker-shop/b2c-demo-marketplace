@@ -13,6 +13,7 @@ use Spryker\Zed\MerchantShipment\Communication\Plugin\Quote\MerchantShipmentQuot
 use Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote\OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin;
 use Spryker\Zed\Price\Communication\Plugin\Quote\QuotePriceModeValidatorPlugin;
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
+use Spryker\Zed\ShipmentTypeCart\Communication\Plugin\Quote\ShipmentTypeQuoteExpanderPlugin;
 use Spryker\Zed\Store\Communication\Plugin\Quote\QuoteStoreValidatorPlugin;
 
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
@@ -56,6 +57,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     {
         return [
             new MerchantShipmentQuoteExpanderPlugin(),
+            new ShipmentTypeQuoteExpanderPlugin(),
         ];
     }
 }

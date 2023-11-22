@@ -101,4 +101,27 @@
             display: inline-block;
         }
     }
+
+    &--big {
+        #{$name}__box {
+            width: rem(20);
+            height: rem(20);
+        }
+
+        #{$name}__label {
+            font-size: rem(16);
+            line-height: rem(20);
+            vertical-align: top;
+        }
+
+        #{$name}__input:checked + #{$name}__box {
+            &::before {
+                left: rem(5);
+                top: rem(5);
+                height: rem(10);
+                width: rem(10);
+                border-radius: rem(5);
+            }
+        }
+    }
 }

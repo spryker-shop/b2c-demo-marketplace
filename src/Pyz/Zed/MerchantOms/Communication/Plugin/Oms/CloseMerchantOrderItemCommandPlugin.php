@@ -25,7 +25,7 @@ class CloseMerchantOrderItemCommandPlugin extends AbstractPlugin implements Comm
     /**
      * @var string
      */
-    protected const PYZ_EVENT_CLOSE = 'close';
+    protected const EVENT_CLOSE = 'close';
 
     /**
      * {@inheritDoc}
@@ -50,7 +50,7 @@ class CloseMerchantOrderItemCommandPlugin extends AbstractPlugin implements Comm
         }
 
         $merchantOmsTriggerRequestTransfer = (new MerchantOmsTriggerRequestTransfer())
-            ->setMerchantOmsEventName(static::PYZ_EVENT_CLOSE)
+            ->setMerchantOmsEventName(static::EVENT_CLOSE)
             ->addMerchantOrderItem($merchantOrderItemTransfer);
 
         $transitionCount = $this->getFacade()->triggerEventForMerchantOrderItems($merchantOmsTriggerRequestTransfer);
@@ -58,7 +58,7 @@ class CloseMerchantOrderItemCommandPlugin extends AbstractPlugin implements Comm
             throw new LogicException(sprintf(
                 'Merchant Order Item #%s transition for event "%s" has not happened.',
                 $merchantOrderItemTransfer->getIdMerchantOrderItem(),
-                static::PYZ_EVENT_CLOSE,
+                static::EVENT_CLOSE,
             ));
         }
 

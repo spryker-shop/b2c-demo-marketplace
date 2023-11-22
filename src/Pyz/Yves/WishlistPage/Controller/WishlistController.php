@@ -23,7 +23,7 @@ class WishlistController extends SprykerWishlistController
     /**
      * @var string
      */
-    public const PYZ_REQUEST_HEADER_REFERER = 'referer';
+    public const REQUEST_HEADER_REFERER = 'referer';
 
     /**
      * @param \Symfony\Component\HttpFoundation\Request $request
@@ -73,8 +73,8 @@ class WishlistController extends SprykerWishlistController
             $this->addSuccessMessage('cart.add.items.success');
         }
 
-        if ($request->headers->has(static::PYZ_REQUEST_HEADER_REFERER)) {
-            return $this->redirectResponseExternal($request->headers->get(static::PYZ_REQUEST_HEADER_REFERER));
+        if ($request->headers->has(static::REQUEST_HEADER_REFERER)) {
+            return $this->redirectResponseExternal($request->headers->get(static::REQUEST_HEADER_REFERER));
         }
 
         return $this->redirectResponseInternal(

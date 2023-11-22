@@ -25,7 +25,7 @@ interface ExampleProductSalePageQueryContainerInterface
      *
      * @return \Orm\Zed\ProductLabel\Persistence\SpyProductLabelQuery<\Orm\Zed\ProductLabel\Persistence\SpyProductLabel>
      */
-    public function queryPyzProductLabelByName($labelName): SpyProductLabelQuery;
+    public function queryProductLabelByName($labelName): SpyProductLabelQuery;
 
     /**
      * @api
@@ -37,7 +37,7 @@ interface ExampleProductSalePageQueryContainerInterface
      *
      * @return \Orm\Zed\ProductLabel\Persistence\SpyProductLabelProductAbstractQuery
      */
-    public function queryPyzRelationsBecomingInactive(int $idProductLabel, string $priceMode): SpyProductLabelProductAbstractQuery;
+    public function queryRelationsBecomingInactive(int $idProductLabel, string $priceMode): SpyProductLabelProductAbstractQuery;
 
     /**
      * @api
@@ -51,7 +51,7 @@ interface ExampleProductSalePageQueryContainerInterface
      *
      * @return \Orm\Zed\Product\Persistence\SpyProductAbstractQuery
      */
-    public function queryPyzRelationsBecomingActive(
+    public function queryRelationsBecomingActive(
         int $idProductLabel,
         int $currentStoreId,
         int $currentCurrencyId,
