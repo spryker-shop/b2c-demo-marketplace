@@ -7,7 +7,8 @@
 
 namespace Pyz\Glue\GlueBackendApiApplication;
 
-use Spryker\Glue\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
+use Spryker\Glue\DynamicEntityBackendApi\Plugin\GlueApplication\DynamicEntityRouteProviderPlugin;
+use Spryker\Glue\EventDispatcher\Plugin\GlueBackendApiApplication\EventDispatcherApplicationPlugin;
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\ApplicationIdentifierRequestBuilderPlugin;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\LocaleRequestBuilderPlugin;
@@ -21,8 +22,23 @@ use Spryker\Glue\OauthBackendApi\Plugin\AccessTokenValidatorPlugin;
 use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\OauthBackendApiTokenResource;
 use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\UserRequestValidatorPlugin;
 use Spryker\Glue\OauthBackendApi\Plugin\GlueBackendApiApplication\UserRequestBuilderPlugin;
+use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\PickingListItemsBackendResourcePlugin;
+use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\PickingListsBackendResourcePlugin;
+use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\PickingListStartPickingBackendResourcePlugin;
+use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication\PushNotificationProvidersBackendResourcePlugin;
+use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication\PushNotificationSubscriptionsBackendResourcePlugin;
 use Spryker\Glue\Router\Plugin\Application\RouterApplicationPlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServicePointAddressesBackendResourcePlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServicePointsBackendResourcePlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServicesBackendResourcePlugin;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication\ServiceTypesBackendResourcePlugin;
+use Spryker\Glue\ShipmentTypesBackendApi\Plugin\GlueBackendApiApplication\ShipmentTypesBackendResourcePlugin;
 use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestBuilderPlugin;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestValidatorPlugin;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseTokensBackendResourcePlugin;
+use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication\WarehouseUserAssignmentsBackendResourcePlugin;
+use Spryker\Zed\ClickAndCollectExample\Communication\Plugin\GlueBackendApiApplication\MerchantUserAccessRestrictionRequestAfterRoutingValidatorPlugin;
 use Spryker\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
@@ -50,6 +66,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
             new ApplicationIdentifierRequestBuilderPlugin(),
             new LocaleRequestBuilderPlugin(),
             new UserRequestBuilderPlugin(),
+            new WarehouseRequestBuilderPlugin(),
         ];
     }
 
@@ -61,6 +78,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
         return [
             new AccessTokenValidatorPlugin(),
             new UserRequestValidatorPlugin(),
+            new WarehouseRequestValidatorPlugin(),
         ];
     }
 
@@ -73,6 +91,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
             new RequestCorsValidatorPlugin(),
             new ScopeRequestAfterRoutingValidatorPlugin(),
             new AuthorizationRequestAfterRoutingValidatorPlugin(),
+            new MerchantUserAccessRestrictionRequestAfterRoutingValidatorPlugin(),
         ];
     }
 
@@ -94,6 +113,18 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     {
         return [
             new OauthBackendApiTokenResource(),
+            new WarehouseTokensBackendResourcePlugin(),
+            new PushNotificationSubscriptionsBackendResourcePlugin(),
+            new PushNotificationProvidersBackendResourcePlugin(),
+            new PickingListsBackendResourcePlugin(),
+            new PickingListStartPickingBackendResourcePlugin(),
+            new PickingListItemsBackendResourcePlugin(),
+            new WarehouseUserAssignmentsBackendResourcePlugin(),
+            new ServicePointsBackendResourcePlugin(),
+            new ServicePointAddressesBackendResourcePlugin(),
+            new ServiceTypesBackendResourcePlugin(),
+            new ServicesBackendResourcePlugin(),
+            new ShipmentTypesBackendResourcePlugin(),
         ];
     }
 
@@ -102,6 +133,8 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
      */
     protected function getRouteProviderPlugins(): array
     {
-        return [];
+        return [
+            new DynamicEntityRouteProviderPlugin(),
+        ];
     }
 }

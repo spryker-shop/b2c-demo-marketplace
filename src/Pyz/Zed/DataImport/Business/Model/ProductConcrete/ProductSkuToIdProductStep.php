@@ -60,7 +60,6 @@ class ProductSkuToIdProductStep implements DataImportStepInterface
             return;
         }
 
-        /** @var string $sku */
         $sku = $dataSet[$this->source];
         if (!isset(static::$resolved[$sku])) {
             static::$resolved[$sku] = $this->resolveIdProduct($sku);

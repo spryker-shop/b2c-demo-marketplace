@@ -35,12 +35,14 @@ export default class CustomSelect extends Component {
         this.$select.on('select2:select', () => this.onChangeSelect());
     }
 
-    initSelect(): void {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    initSelect(modifiedConfig?: Record<string, any>): void {
         this.$select.select2({
             minimumResultsForSearch: Infinity,
             width: this.configWidth,
             theme: this.configTheme,
             dropdownCssClass: this.additionalClassName ? `select2-dropdown--${this.additionalClassName}` : '',
+            ...modifiedConfig,
         });
     }
 

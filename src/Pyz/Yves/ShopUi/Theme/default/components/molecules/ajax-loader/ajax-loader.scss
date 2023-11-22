@@ -1,3 +1,7 @@
 @include shop-ui-ajax-loader {
     background-color: $setting-color-transparent;
+
+    &--with-background {
+        background-color: $setting-color-white;
+    }
 }

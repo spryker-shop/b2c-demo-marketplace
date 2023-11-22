@@ -30,6 +30,7 @@ use Spryker\Zed\ProductBundle\Communication\Plugin\Checkout\ProductBundleOrderSa
 use Spryker\Zed\ProductCartConnector\Communication\Plugin\Checkout\ProductExistsCheckoutPreConditionPlugin;
 use Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Checkout\ProductConfigurationCheckoutPreConditionPlugin;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Checkout\ProductDiscontinuedCheckoutPreConditionPlugin;
+use Spryker\Zed\ProductOffer\Communication\Plugin\Checkout\ProductOfferCheckoutPreConditionPlugin;
 use Spryker\Zed\ProductOption\Communication\Plugin\Checkout\ProductOptionOrderSaverPlugin;
 use Spryker\Zed\Sales\Communication\Plugin\Checkout\DuplicateOrderCheckoutPreConditionPlugin;
 use Spryker\Zed\Sales\Communication\Plugin\Checkout\OrderItemsSaverPlugin;
@@ -39,8 +40,11 @@ use Spryker\Zed\Sales\Communication\Plugin\SalesOrderExpanderPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Checkout\SalesOrderThresholdCheckoutPreConditionPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Checkout\SalesOrderThresholdExpenseSavePlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Checkout\SalesPaymentCheckoutDoSaveOrderPlugin;
+use Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout\ShipmentTypeCheckoutDoSaveOrderPlugin;
+use Spryker\Zed\ServicePointCart\Communication\Plugin\Checkout\ServicePointCheckoutPreConditionPlugin;
 use Spryker\Zed\Shipment\Communication\Plugin\Checkout\SalesOrderShipmentSavePlugin;
 use Spryker\Zed\ShipmentCheckoutConnector\Communication\Plugin\Checkout\ShipmentCheckoutPreCheckPlugin;
+use Spryker\Zed\ShipmentTypeCart\Communication\Plugin\Checkout\ShipmentTypeCheckoutPreConditionPlugin;
 
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
@@ -65,10 +69,13 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new ShipmentCheckoutPreCheckPlugin(),
             new PaymentMethodValidityCheckoutPreConditionPlugin(),
             new DuplicateOrderCheckoutPreConditionPlugin(),
+            new ProductOfferCheckoutPreConditionPlugin(),
             new MerchantProductOptionCheckoutPreConditionPlugin(),
             new ProductExistsCheckoutPreConditionPlugin(),
             new ProductApprovalCheckoutPreConditionPlugin(),
             new ProductConfigurationCheckoutPreConditionPlugin(),
+            new ShipmentTypeCheckoutPreConditionPlugin(),
+            new ServicePointCheckoutPreConditionPlugin(),
         ];
     }
 
@@ -86,6 +93,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
              * `OrderSaverPlugin`,
              * `OrderTotalsSaverPlugin`,
              * `SalesOrderShipmentSavePlugin`,
+             * `ShipmentTypeCheckoutDoSaveOrderPlugin`
              * `OrderItemsSaverPlugin`,
              * `ProductConfigurationOrderSaverPlugin`
              * must be enabled in the strict order.
@@ -93,6 +101,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new OrderSaverPlugin(),
             new OrderTotalsSaverPlugin(),
             new SalesOrderShipmentSavePlugin(),
+            new ShipmentTypeCheckoutDoSaveOrderPlugin(),
             new OrderItemsSaverPlugin(),
             new CartNoteSaverPlugin(), #CartNoteFeature
             new ProductOptionOrderSaverPlugin(),

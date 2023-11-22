@@ -30,6 +30,7 @@
     {%- endif -%}
 
     {% embed molecule('custom-select') with {
+        class: attr.extraClass | default,
         modifiers: ['expand'],
         attributes: {
             multiple: multiple,
@@ -94,24 +95,40 @@
     {% endembed %}
 {%- endblock -%}
 
+{%- block choice_widget_expanded -%}
+    <ul class="list {{ '--inline' in label_attr.class | default ? 'list--inline' }}" {{ block('widget_container_attributes') }}>
+        {% for child in form %}
+            <li class="list__item">
+                {{- form_errors(child, {
+                    parent_label_class: label_attr.class | default,
+                }) -}}
+                {{- form_widget(child, {
+                    parent_label_class: label_attr.class | default,
+                    choices_attr: choices_attr | default({}),
+                }) -}}
+            </li>
+        {% endfor %}
+    </ul>
+{%- endblock -%}
+
 {%- block checkbox_widget -%}
     {%- set type = type | default('checkbox') -%}
     {%- set component = component | default(atom(type)) -%}
     {%- set label = label | default(name | humanize) | trans -%}
     {%- set modifiers = errors is empty ? ['expand'] : ['expand', 'error'] -%}
-    {%- set inputClass = attr.class | default -%}
+    {%- set inputClass = attr.class | default ~ ' ' ~ choices_attr.class | default -%}
 
     {% define attributes = {
         id: id,
         name: full_name,
         checked: checked | default(false),
         required: required | default(false),
-        disabled: disabled | default(false),
+        disabled: disabled ?: attr.disabled | default(false),
         value: value | default,
         additionalModifier: '',
     } %}
 
-    {%- set modifiers = modifiers | merge([attributes.additionalModifier]) -%}
+    {%- set modifiers = modifiers | merge([attributes.additionalModifier], choices_attr.modifiers | default([])) -%}
 
     {% include component with {
         modifiers: modifiers,
