@@ -19,8 +19,8 @@
 
     <div class="{{ config.name }}__item">
         <h4 class="title title--secondary-small">{{ 'checkout.step.summary.delivery_address' | trans }}</h4>
-        {% block salesServicePointNameForShipmentGroup %}
-            {% widget 'SalesServicePointNameForShipmentGroupWidget' args [data.shipmentGroup] only %}{% endwidget %}
+        {% block servicePointNameForShipmentGroup %}
+            {% widget 'ServicePointNameForShipmentGroupWidget' args [data.shipmentGroup] only %}{% endwidget %}
         {% endblock %}
 
         <div class="{{ config.name }}__text">{{ fullShippingAddress }}</div>
