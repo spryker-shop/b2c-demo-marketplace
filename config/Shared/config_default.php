@@ -267,7 +267,7 @@ $config[OauthConstants::OAUTH_CLIENT_CONFIGURATION] = array_merge(
             'secret' => null,
             'isConfidential' => false,
             'name' => 'Fulfillment b2c-mp prod',
-            'redirectUri' => 'https://de.mp-b2c.fulfilment-app.demo-spryker.com/oauth/cb/spryker',
+            'redirectUri' => 'https://de.b2c-marketplace.fulfillment-app.demo-spryker.com/oauth/cb/spryker',
             'isDefault' => false,
         ],
     ],
