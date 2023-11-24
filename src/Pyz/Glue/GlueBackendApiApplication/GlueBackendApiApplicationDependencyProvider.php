@@ -40,7 +40,6 @@ use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\Wareh
 use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication\WarehouseUserAssignmentsBackendResourcePlugin;
 use Spryker\Zed\ClickAndCollectExample\Communication\Plugin\GlueBackendApiApplication\MerchantUserAccessRestrictionRequestAfterRoutingValidatorPlugin;
 use Spryker\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin;
-use SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication\AuthorizeResource;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
@@ -126,7 +125,6 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
             new ServiceTypesBackendResourcePlugin(),
             new ServicesBackendResourcePlugin(),
             new ShipmentTypesBackendResourcePlugin(),
-            new AuthorizeResource(),
         ];
     }
 
