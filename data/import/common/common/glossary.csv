@@ -1297,6 +1297,8 @@ dummyPaymentCreditCard.card_security_code,CVC,en_US
 dummyPaymentCreditCard.card_security_code,CVC,de_DE
 dummyPaymentCreditCard.hidden_numbers,*********,en_US
 dummyPaymentCreditCard.hidden_numbers,*********,de_DE
+dummyPaymentInvoice.date_of_birth,Date of Birth,en_US
+dummyPaymentInvoice.date_of_birth,Geburtsdatum,de_DE
 cart.item.item_price,Item price,en_US
 cart.item.item_price,Stückpreis,de_DE
 cart.item.item_total,Item total,en_US
