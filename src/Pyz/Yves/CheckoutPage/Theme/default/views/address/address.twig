@@ -31,6 +31,7 @@
         {% block fields %}
             {% set deliveryContainerClassName = embed.jsAddressClass ~ '__delivery' %}
             {% set singleDeliveryContainerClassName = embed.jsAddressClass ~ '__single-delivery' %}
+            {% set deliveryCustomSelectClassName = embed.jsAddressClass ~ '__form-custom-select-shipping-address' %}
             {% set deliverySelectClassName = embed.jsAddressClass ~ '__form-select-shipping-address' %}
             {% set validatorTriggerClassName = embed.jsAddressClass ~ '__validator-trigger' %}
             {% set shippingValidationContainerClassName = embed.jsAddressClass ~ '__shipping-validation-container' %}
@@ -68,7 +69,7 @@
             {% if shippingAddress is defined %}
                 {% set singleDeliveryContainerHiddenClassName = hasShipmentTypes and isMultipleShipmentSelected ? hiddenClassName %}
 
-                <div class="col col--sm-12 grid spacing-bottom"> 
+                <div class="col col--sm-12 grid spacing-bottom">
                     {% if embed.isMultipleShipmentEnabled and hasShipmentTypes %}
                         <div class="col col--sm-12 spacing-bottom">
                             {% include molecule('multiple-shipment-toggler', 'CheckoutPage') with {
@@ -77,6 +78,7 @@
                                 },
                                 attributes: {
                                     'toggle-targets-class-name': singleDeliveryContainerClassName,
+                                    'custom-select-class-name': deliveryCustomSelectClassName,
                                     'select-class-name': deliverySelectClassName,
                                 },
                             } only %}
@@ -100,6 +102,7 @@
                                 label: 'page.checkout.address.delivery.address_select' | trans,
                                 attr: {
                                     class: deliverySelectClassName,
+                                    extraClass: deliveryCustomSelectClassName,
                                 },
                             }) }}
                         </div>
