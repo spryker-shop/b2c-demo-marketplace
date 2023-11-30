@@ -51,6 +51,7 @@ use SprykerShop\Yves\ProductReviewWidget\Plugin\Router\ProductReviewWidgetRouteP
 use SprykerShop\Yves\ProductSearchWidget\Plugin\Router\ProductSearchWidgetRouteProviderPlugin;
 use SprykerShop\Yves\ProductSetListPage\Plugin\Router\ProductSetListPageRouteProviderPlugin;
 use SprykerShop\Yves\SalesReturnPage\Plugin\Router\SalesReturnPageRouteProviderPlugin;
+use SprykerShop\Yves\ServicePointWidget\Plugin\Router\ServicePointWidgetRouteProviderPlugin;
 use SprykerShop\Yves\StorageRouter\Plugin\Router\StorageRouterPlugin;
 use SprykerShop\Yves\WishlistPage\Plugin\Router\WishlistPageRouteProviderPlugin;
 
@@ -112,6 +113,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
             new OrderCancelWidgetRouteProviderPlugin(),
             new PaymentPageRouteProviderPlugin(),
             new ProductConfiguratorGatewayPageRouteProviderPlugin(),
+            new ServicePointWidgetRouteProviderPlugin(),
         ];
     }
 

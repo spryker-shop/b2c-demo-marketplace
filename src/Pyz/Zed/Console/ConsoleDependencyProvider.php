@@ -86,6 +86,8 @@ use Spryker\Zed\ProductDiscontinuedDataImport\ProductDiscontinuedDataImportConfi
 use Spryker\Zed\ProductLabel\Communication\Console\ProductLabelRelationUpdaterConsole;
 use Spryker\Zed\ProductLabel\Communication\Console\ProductLabelValidityConsole;
 use Spryker\Zed\ProductLabelDataImport\ProductLabelDataImportConfig;
+use Spryker\Zed\ProductOfferServicePointDataImport\ProductOfferServicePointDataImportConfig;
+use Spryker\Zed\ProductOfferShipmentTypeDataImport\ProductOfferShipmentTypeDataImportConfig;
 use Spryker\Zed\ProductOfferValidity\Communication\Console\ProductOfferValidityConsole;
 use Spryker\Zed\ProductQuantityDataImport\ProductQuantityDataImportConfig;
 use Spryker\Zed\ProductRelation\Communication\Console\ProductRelationUpdaterConsole;
@@ -136,6 +138,7 @@ use Spryker\Zed\SearchElasticsearch\Communication\Console\ElasticsearchSnapshotC
 use Spryker\Zed\SearchElasticsearch\Communication\Console\ElasticsearchSnapshotDeleteConsole;
 use Spryker\Zed\SearchElasticsearch\Communication\Console\ElasticsearchSnapshotRegisterRepositoryConsole;
 use Spryker\Zed\SearchElasticsearch\Communication\Console\ElasticsearchSnapshotRestoreConsole;
+use Spryker\Zed\ServicePointDataImport\ServicePointDataImportConfig;
 use Spryker\Zed\Session\Communication\Console\SessionRemoveLockConsole;
 use Spryker\Zed\SetupFrontend\Communication\Console\CleanUpDependenciesConsole;
 use Spryker\Zed\SetupFrontend\Communication\Console\InstallPackageManagerConsole;
@@ -148,6 +151,8 @@ use Spryker\Zed\SetupFrontend\Communication\Console\YvesInstallDependenciesConso
 use Spryker\Zed\SetupFrontend\Communication\Console\ZedBuildFrontendConsole;
 use Spryker\Zed\SetupFrontend\Communication\Console\ZedInstallDependenciesConsole;
 use Spryker\Zed\ShipmentDataImport\ShipmentDataImportConfig;
+use Spryker\Zed\ShipmentTypeDataImport\ShipmentTypeDataImportConfig;
+use Spryker\Zed\ShipmentTypeServicePointDataImport\ShipmentTypeServicePointDataImportConfig;
 use Spryker\Zed\StateMachine\Communication\Console\CheckConditionConsole as StateMachineCheckConditionConsole;
 use Spryker\Zed\StateMachine\Communication\Console\CheckTimeoutConsole as StateMachineCheckTimeoutConsole;
 use Spryker\Zed\StateMachine\Communication\Console\ClearLocksConsole as StateMachineClearLocksConsole;
@@ -291,6 +296,17 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . LocaleDataImportConfig::IMPORT_TYPE_LOCALE_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . LocaleDataImportConfig::IMPORT_TYPE_DEFAULT_LOCALE_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . StoreDataImportConfig::IMPORT_TYPE_STORE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_TYPE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_STORE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_ADDRESS),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ProductOfferServicePointDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SERVICE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeDataImportConfig::IMPORT_TYPE_SHIPMENT_TYPE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeDataImportConfig::IMPORT_TYPE_SHIPMENT_TYPE_STORE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeDataImportConfig::IMPORT_TYPE_SHIPMENT_METHOD_SHIPMENT_TYPE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeServicePointDataImportConfig::IMPORT_TYPE_SHIPMENT_TYPE_SERVICE_TYPE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ProductOfferShipmentTypeDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHIPMENT_TYPE),
 
             // Publish and Synchronization
             new EventBehaviorTriggerTimeoutConsole(),

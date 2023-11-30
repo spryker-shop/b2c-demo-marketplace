@@ -1,0 +1,13 @@
+{% extends molecule('service-point-finder', '@SprykerShop:ServicePointWidget') %}
+
+{% block ajaxLoader %}
+    {% if data.hasLoader %}
+        {% include molecule('ajax-loader') with {
+            modifiers: ['big', 'with-background'],
+            attributes: {
+                'provider-class-name': providerClassName,
+                'parent-class-name': config.name,
+            },
+        } only %}
+    {% endif %}
+{% endblock %}

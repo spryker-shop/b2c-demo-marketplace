@@ -11,6 +11,8 @@ use SprykerShop\Yves\CustomerReorderWidget\CustomerReorderWidgetDependencyProvid
 use SprykerShop\Yves\SalesConfigurableBundleWidget\Plugin\CustomerReorder\ConfiguredBundlePostReorderPlugin;
 use SprykerShop\Yves\SalesProductConfigurationWidget\Plugin\CustomerReorderWidget\ProductConfigurationReorderItemExpanderPlugin;
 use SprykerShop\Yves\SalesReturnPage\Plugin\CustomerReorderWidget\RemunerationAmountReorderItemSanitizerPlugin;
+use SprykerShop\Yves\SalesServicePointWidget\Plugin\CustomerReorderWidget\ServicePointReorderItemSanitizerPlugin;
+use SprykerShop\Yves\ShipmentPage\Plugin\CustomerReorderWidget\ShipmentReorderItemSanitizerPlugin;
 
 class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidgetDependencyProvider
 {
@@ -41,6 +43,8 @@ class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidg
     {
         return [
             new RemunerationAmountReorderItemSanitizerPlugin(),
+            new ShipmentReorderItemSanitizerPlugin(),
+            new ServicePointReorderItemSanitizerPlugin(),
         ];
     }
 }
