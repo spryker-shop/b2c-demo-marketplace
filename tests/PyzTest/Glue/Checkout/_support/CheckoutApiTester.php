@@ -12,6 +12,7 @@ use DateTime;
 use Generated\Shared\DataBuilder\AddressBuilder;
 use Generated\Shared\DataBuilder\CustomerBuilder;
 use Generated\Shared\DataBuilder\ItemBuilder;
+use Generated\Shared\DataBuilder\MerchantBuilder;
 use Generated\Shared\DataBuilder\ServicePointBuilder;
 use Generated\Shared\DataBuilder\ShipmentBuilder;
 use Generated\Shared\DataBuilder\StoreRelationBuilder;
@@ -867,6 +868,24 @@ class CheckoutApiTester extends ApiEndToEndTester
         ]);
 
         return $servicePointTransfer->setAddress($servicePointAddressTransfer->setServicePoint(null));
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
+     *
+     * @return \Generated\Shared\Transfer\MerchantTransfer
+     */
+    public function haveMerchantWithStoreRelation(StoreTransfer $storeTransfer): MerchantTransfer
+    {
+        $merchantTransfer = (new MerchantBuilder([
+            MerchantTransfer::STATUS => static::MERCHANT_STATUS_APPROVED,
+            MerchantTransfer::IS_ACTIVE => true,
+            MerchantTransfer::STORE_RELATION => (new StoreRelationTransfer())
+                ->addIdStores($storeTransfer->getIdStoreOrFail())
+                ->addStores($storeTransfer),
+        ]))->withMerchantProfile()->build();
+
+        return $this->haveMerchant($merchantTransfer->toArray(true, true));
     }
 
     /**
