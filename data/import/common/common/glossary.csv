@@ -3300,3 +3300,5 @@ product_offer_shipment_type.validation.product_offer_not_unique,A product offer 
 product_offer_shipment_type.validation.product_offer_not_unique,Ein Product Offer mit der gleichen Referenz liegt bereits in der Anfrage vor.,de_DE
 product_offer_shipment_type.validation.shipment_type_not_unique,A delivery type for product offer '%product_offer_reference%' with the same uuid already exists in request.,de_DE
 product_offer_shipment_type.validation.shipment_type_not_unique,Ein Lieferart für Product Offer '%product_offer_reference%' mit derselben UUID ist bereits in der Anfrage vorhanden.,de_DE
+category.validation.category_node_entity_not_found,The category node ID '%category_node_id%' cannot be relocated because this category node no longer exists.,en_US
+category.validation.category_node_entity_not_found,"Die Kategorieknoten-ID '%category_node_id%' kann nicht verschoben werden, da dieser Kategorieknoten nicht mehr existiert.",de_DE
