@@ -105,7 +105,7 @@
                                     disabled: not data.item.isReturnable,
                                     attributes: {
                                         additionalModifier: 'big',
-                                        'merchant-reference': data.item.merchantReference,
+                                        'merchant-reference': data.item.merchantReference ?? false,
                                         'is-returnable': data.item.isReturnable,
                                     },
                                 }) }}
