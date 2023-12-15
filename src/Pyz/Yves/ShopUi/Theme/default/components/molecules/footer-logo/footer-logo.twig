@@ -1,5 +1,5 @@
 {% extends molecule('logo') %}
-{% import model('component') as component %}
+{% import _self as component %}
 
 {% define config = {
     name: 'footer-logo',
@@ -28,7 +28,7 @@
                 </g>
             </svg>
         {% else %}
-            <img class="{{ config.name }}__image" {{ component.renderAttributes(attributes) }}>
+            <img class="{{ config.name }}__image" {{ _self.renderAttributes(attributes) }}>
         {% endif %}
     </a>
 {% endblock %}

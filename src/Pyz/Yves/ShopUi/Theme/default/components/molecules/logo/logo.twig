@@ -1,5 +1,5 @@
 {% extends molecule('logo', '@SprykerShop:ShopUi') %}
-{% import model('component') as component %}
+{% import _self as component %}
 
 {% block body %}
     <a href="{{ data.url }}" class="{{ config.name }}__link">
@@ -49,7 +49,7 @@
                 </g>
             </svg>
         {% else %}
-            <img class="{{ config.name }}__image" {{ component.renderAttributes(attributes) }}>
+            <img class="{{ config.name }}__image" {{ _self.renderAttributes(attributes) }}>
         {% endif %}
     </a>
 {% endblock %}
