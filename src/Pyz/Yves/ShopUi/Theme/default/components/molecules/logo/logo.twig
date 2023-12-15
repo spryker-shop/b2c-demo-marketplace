@@ -1,23 +1,10 @@
-{% extends model('component') %}
-
-{% define config = {
-    name: 'logo',
-    renderAttributes: false
-} %}
-
-{% define data = {
-    url: path('home')
-} %}
-
-{% define attributes = {
-    src: null,
-    alt: 'Logo'
-} %}
+{% extends molecule('logo', '@SprykerShop:ShopUi') %}
+{% import model('component') as component %}
 
 {% block body %}
     <a href="{{ data.url }}" class="{{ config.name }}__link">
         {% if attributes.src is empty %}
-            <svg class="{{ config.name }}__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 65">
+            <svg class="{{ config.name }}__image" viewBox="0 0 209 65">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g transform="translate(-616.000000, -38.000000)" fill-rule="nonzero">
                         <g transform="translate(616.000000, 38.000000)">
@@ -62,7 +49,7 @@
                 </g>
             </svg>
         {% else %}
-            <img class="{{ config.name }}__image" {{ block('attributes') }}>
+            <img class="{{ config.name }}__image" {{ component.renderAttributes(attributes) }}>
         {% endif %}
     </a>
 {% endblock %}

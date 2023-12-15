@@ -8,6 +8,7 @@
         }
 
         &__link {
+            display: block;
             width: rem(180);
 
             @include helper-breakpoint-media-min($md-min) {
@@ -27,6 +28,8 @@
                 padding: 0 0 rem(22);
             }
         }
+
+        @content;
     }
 }
 
