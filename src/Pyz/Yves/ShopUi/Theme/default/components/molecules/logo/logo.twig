@@ -2,18 +2,22 @@
 
 {% define config = {
     name: 'logo',
+    renderAttributes: false
 } %}
 
 {% define data = {
-    url: path('home'),
-    src: '',
-    alt: 'Logo',
+    url: path('home')
+} %}
+
+{% define attributes = {
+    src: null,
+    alt: 'Logo'
 } %}
 
 {% block body %}
-    <a class="{{ config.name }}__link" href="{{ data.url }}">
-        {% if data.src is empty %}
-            <svg class="{{ config.name }}__image" viewBox="0 0 209 65">
+    <a href="{{ data.url }}" class="{{ config.name }}__link">
+        {% if attributes.src is empty %}
+            <svg class="{{ config.name }}__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 65">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g transform="translate(-616.000000, -38.000000)" fill-rule="nonzero">
                         <g transform="translate(616.000000, 38.000000)">
@@ -58,7 +62,7 @@
                 </g>
             </svg>
         {% else %}
-            <img class="{{ config.name }}__image" src="{{ data.src }}" alt="{{ data.alt }}">
+            <img class="{{ config.name }}__image" {{ block('attributes') }}>
         {% endif %}
     </a>
 {% endblock %}

@@ -1,21 +1,21 @@
 @mixin shop-ui-footer-logo($name: '.footer-logo') {
     #{$name} {
-        margin: rem(-5) 0 rem(5);
-
         &__link {
+            padding: 0;
             display: block;
-            width: rem(90);
-
-            @include helper-breakpoint-media-min($md-min) {
-                width: rem(102);
-            }
+            border: none;
+            transform: translate(0, rem(-5));
         }
 
         &__image {
-            display: inline-block;
-            vertical-align: top;
-        }
+            width: rem(90);
+            height: rem(36);
 
+            @include helper-breakpoint-media-min($md-min) {
+                width: rem(102);
+                height: rem(42);
+            }
+        }
         @content;
     }
 }
