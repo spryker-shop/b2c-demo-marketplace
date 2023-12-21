@@ -17,6 +17,24 @@
     {% endif %}
 {% endmacro %}
 
+{% block actionContent %}
+    <input type="hidden" name="id-wishlist-item" value="{{ idWishlistItem }}">
+                
+    {% if widgetGlobalExists('MerchantProductOfferWidget') %}
+        {% include molecule('wishlist-item-product-offer', 'MerchantProductOfferWidget') with {
+            data: {
+                productView: item,
+            },
+        } only %}
+    {% elseif widgetGlobalExists('MerchantProductWidget') %}
+        {% include molecule('wishlist-item-merchant-product', 'MerchantProductWidget') with {
+            data: {
+                productView: item,
+            },
+        } only %}
+    {% endif %}
+{% endblock %}
+
 {% block wishlistMoveToCartAction %}
     {% if wishlistMoveToCartForm %}
         {{ form_start(wishlistMoveToCartForm, { action: moveToCartActionPath, name: moveToCartFormName, attr: { id: moveToCartFormName } }) }}
@@ -24,21 +42,7 @@
                 {{ 'customer.account.wishlist.add-to-cart' | trans }}
             </button>
 
-            <input type="hidden" name="id-wishlist-item" value="{{ idWishlistItem }}">
-            
-            {% if widgetGlobalExists('MerchantProductOfferWidget') %}
-                {% include molecule('wishlist-item-product-offer', 'MerchantProductOfferWidget') with {
-                    data: {
-                        productView: item,
-                    },
-                } only %}
-            {% elseif widgetGlobalExists('MerchantProductWidget') %}
-                {% include molecule('wishlist-item-merchant-product', 'MerchantProductWidget') with {
-                    data: {
-                        productView: item,
-                    },
-                } only %}
-            {% endif %}
+            {{ block('actionContent') }}
         {{ form_end(wishlistMoveToCartForm) }}
     {% endif %}
 {% endblock %}
@@ -50,21 +54,7 @@
                 {{ 'customer.account.wishlist.remove' | trans }}
             </button>
 
-            <input type="hidden" name="id-wishlist-item" value="{{ idWishlistItem }}">
-
-            {% if widgetGlobalExists('MerchantProductOfferWidget') %}
-                {% include molecule('wishlist-item-product-offer', 'MerchantProductOfferWidget') with {
-                    data: {
-                        productView: item,
-                    },
-                } only %}
-            {% elseif widgetGlobalExists('MerchantProductWidget') %}
-                {% include molecule('wishlist-item-merchant-product', 'MerchantProductWidget') with {
-                    data: {
-                        productView: item,
-                    },
-                } only %}
-            {% endif %}
+            {{ block('actionContent') }}
         {{ form_end(wishlistRemoveItemForm) }}
     {% endif %}
 {% endblock %}

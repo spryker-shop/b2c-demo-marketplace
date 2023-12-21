@@ -6,8 +6,7 @@
 
         @include helper-breakpoint-media-min($lg-min) {
             width: 100%;
-            padding: 0;
-            padding-right: rem(3);
+            padding: 0 rem(3) 0 0;
             flex-wrap: nowrap;
         }
 

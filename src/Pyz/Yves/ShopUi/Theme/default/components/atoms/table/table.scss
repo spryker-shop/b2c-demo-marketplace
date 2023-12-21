@@ -9,12 +9,6 @@
             &:last-child {
                 border-bottom: rem(1) solid $setting-color-gray-3;
             }
-
-            /* stylelint-disable */
-            table tr:last-child {
-                border-bottom: none;
-            }
-            /* stylelint-enable */
         }
     }
 
@@ -33,6 +27,12 @@
 
         @include helper-breakpoint-media-min($md-min) {
             margin: rem(4) 0 0;
+        }
+    }
+
+    &--sub-table {
+        tbody tr:last-child {
+            border-bottom: none;
         }
     }
 
