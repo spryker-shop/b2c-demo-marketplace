@@ -560,7 +560,7 @@ jobs:
                   APPLICATION_STORE=AT docker/sdk console queue:worker:start --stop-when-empty
             - name: Run Tests
               run: |
-                  docker/sdk exec robot-framework robot -v env:api_mp_b2c -v docker:True --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s tests.api.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:api_mp_b2c -v docker:True --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s robotframework.tests.api.mp_b2c .
             - name: Upload artifacts
               if: always()
               run: |
@@ -602,7 +602,7 @@ jobs:
                   APPLICATION_STORE=AT docker/sdk console queue:worker:start --stop-when-empty
             - name: Run Tests
               run: |
-                  docker/sdk exec robot-framework robot -v env:api_mp_b2c -v db_engine:psycopg2 -v docker:True --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s tests.api.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:api_mp_b2c -v db_engine:psycopg2 -v docker:True --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s robotframework.tests.api.mp_b2c .
             - name: Upload artifacts
               if: always()
               run: |
