@@ -12,6 +12,7 @@ use DateTime;
 use Generated\Shared\DataBuilder\AddressBuilder;
 use Generated\Shared\DataBuilder\CustomerBuilder;
 use Generated\Shared\DataBuilder\ItemBuilder;
+use Generated\Shared\DataBuilder\MerchantBuilder;
 use Generated\Shared\DataBuilder\ServicePointBuilder;
 use Generated\Shared\DataBuilder\ShipmentBuilder;
 use Generated\Shared\DataBuilder\StoreRelationBuilder;
@@ -390,15 +391,20 @@ class CheckoutApiTester extends ApiEndToEndTester
 
     /**
      * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
+     * @param \Generated\Shared\Transfer\AddressTransfer|null $addressTransfer
      *
      * @return array<string, mixed>
      */
-    public function getSplitShipmentRequestPayload(ItemTransfer $itemTransfer): array
+    public function getSplitShipmentRequestPayload(ItemTransfer $itemTransfer, ?AddressTransfer $addressTransfer = null): array
     {
+        $shippingAddressPayload = $addressTransfer
+            ? [RestAddressTransfer::ID => $addressTransfer->getUuidOrFail()]
+            : $this->getAddressRequestPayload($itemTransfer->getShipmentOrFail()->getShippingAddressOrFail());
+
         return [
             RestShipmentsTransfer::ID_SHIPMENT_METHOD => $itemTransfer->getShipmentOrFail()->getMethodOrFail()->getIdShipmentMethodOrFail(),
             RestShipmentsTransfer::ITEMS => [$itemTransfer->getGroupKeyOrFail()],
-            RestShipmentsTransfer::SHIPPING_ADDRESS => $this->getAddressRequestPayload($itemTransfer->getShipmentOrFail()->getShippingAddressOrFail()),
+            RestShipmentsTransfer::SHIPPING_ADDRESS => $shippingAddressPayload,
             RestShipmentsTransfer::REQUESTED_DELIVERY_DATE => (new DateTime('tomorrow'))->format('Y-m-d'),
         ];
     }
@@ -867,6 +873,63 @@ class CheckoutApiTester extends ApiEndToEndTester
         ]);
 
         return $servicePointTransfer->setAddress($servicePointAddressTransfer->setServicePoint(null));
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
+     *
+     * @return \Generated\Shared\Transfer\MerchantTransfer
+     */
+    public function haveMerchantWithStoreRelation(StoreTransfer $storeTransfer): MerchantTransfer
+    {
+        $merchantTransfer = (new MerchantBuilder([
+            MerchantTransfer::STATUS => static::MERCHANT_STATUS_APPROVED,
+            MerchantTransfer::IS_ACTIVE => true,
+            MerchantTransfer::STORE_RELATION => (new StoreRelationTransfer())
+                ->addIdStores($storeTransfer->getIdStoreOrFail())
+                ->addStores($storeTransfer),
+        ]))->withMerchantProfile()->build();
+
+        return $this->haveMerchant($merchantTransfer->toArray(true, true));
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\AddressTransfer $addressTransfer
+     *
+     * @return void
+     */
+    public function assertCustomerBillingAddressInOrders(AddressTransfer $addressTransfer): void
+    {
+        $jsonPath = sprintf('$..included[?(@.type == \'%s\')]', 'orders');
+        $billingAddress = $this->getDataFromResponseByJsonPath($jsonPath)[0]['attributes']['billingAddress'];
+
+        $this->assertSame($addressTransfer->getAddress1(), $billingAddress['address1']);
+        $this->assertSame($addressTransfer->getAddress2(), $billingAddress['address2']);
+        $this->assertSame($addressTransfer->getAddress3(), $billingAddress['address3']);
+        $this->assertSame($addressTransfer->getCompany(), $billingAddress['company']);
+        $this->assertSame($addressTransfer->getCity(), $billingAddress['city']);
+        $this->assertSame($addressTransfer->getZipCode(), $billingAddress['zipCode']);
+        $this->assertSame($addressTransfer->getIso2Code(), $billingAddress['iso2Code']);
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\AddressTransfer $addressTransfer
+     *
+     * @return void
+     */
+    public function assertCustomerShippingAddressInOrderShipments(
+        AddressTransfer $addressTransfer,
+    ): void {
+        $jsonPath = sprintf('$..included[?(@.type == \'%s\')]', 'order-shipments');
+        $shippingAddress = $this->getDataFromResponseByJsonPath($jsonPath)[0]['attributes']['shippingAddress'];
+
+        $this->assertSame($addressTransfer->getAddress1(), $shippingAddress['address1']);
+        $this->assertSame($addressTransfer->getAddress2(), $shippingAddress['address2']);
+        $this->assertSame($addressTransfer->getAddress3(), $shippingAddress['address3']);
+        $this->assertSame($addressTransfer->getCompany(), $shippingAddress['company']);
+        $this->assertSame($addressTransfer->getCity(), $shippingAddress['city']);
+        $this->assertSame($addressTransfer->getZipCode(), $shippingAddress['zipCode']);
+        $this->assertSame($addressTransfer->getIso2Code(), $shippingAddress['iso2Code']);
     }
 
     /**
