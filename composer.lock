@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8a2a3d409c564026a549ca4ac1242a4",
+    "content-hash": "4316170e0fa825ab240f66304d99d635",
     "packages": [
         {
             "name": "async-aws/core",
@@ -5869,16 +5869,16 @@
         },
         {
             "name": "spryker-feature/marketplace-merchant",
-            "version": "202311.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant.git",
-                "reference": "f24fe89d960c00e1268895a8309866fc1d0525b9"
+                "reference": "047c46ea9c6c2d9546f9ec245ec85c4ebe633910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/f24fe89d960c00e1268895a8309866fc1d0525b9",
-                "reference": "f24fe89d960c00e1268895a8309866fc1d0525b9",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/047c46ea9c6c2d9546f9ec245ec85c4ebe633910",
+                "reference": "047c46ea9c6c2d9546f9ec245ec85c4ebe633910",
                 "shasum": ""
             },
             "require": {
@@ -5894,15 +5894,17 @@
                 "spryker/merchant-search": "^1.0.0",
                 "spryker/merchant-storage": "^1.1.0",
                 "spryker/merchant-user": "^1.4.0",
-                "spryker/merchant-user-gui": "^1.6.0"
+                "spryker/merchant-user-gui": "^1.6.0",
+                "spryker/oauth-merchant-user": "^1.0.0"
             },
             "suggest": {
                 "spryker-feature/merchant": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202311.x-dev"
+                    "dev-master": "202403.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5911,9 +5913,9 @@
             ],
             "description": "Marketplace Merchant [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-merchant/tree/202311.0"
+                "source": "https://github.com/spryker-feature/marketplace-merchant/tree/master"
             },
-            "time": "2023-11-21T13:27:43+00:00"
+            "time": "2024-02-01T14:30:31+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant-portal-product-management",
@@ -8218,7 +8220,7 @@
         },
         {
             "name": "spryker-feature/warehouse-picking",
-            "version": "202311.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/warehouse-picking.git",
@@ -8238,6 +8240,7 @@
             "suggest": {
                 "spryker-feature/spryker-core": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -8256,31 +8259,33 @@
         },
         {
             "name": "spryker-feature/warehouse-user-management",
-            "version": "202311.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/warehouse-user-management.git",
-                "reference": "007ddd26e65fcd83dfd3b4fca955eff4eda0c3d2"
+                "reference": "6ace319312728a88fe6bc5460e25e4b825ad35f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/warehouse-user-management/zipball/007ddd26e65fcd83dfd3b4fca955eff4eda0c3d2",
-                "reference": "007ddd26e65fcd83dfd3b4fca955eff4eda0c3d2",
+                "url": "https://api.github.com/repos/spryker-feature/warehouse-user-management/zipball/6ace319312728a88fe6bc5460e25e4b825ad35f1",
+                "reference": "6ace319312728a88fe6bc5460e25e4b825ad35f1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
                 "spryker/oauth-warehouse": "^1.0.0",
+                "spryker/oauth-warehouse-user": "^1.0.0",
                 "spryker/warehouse-user": "^1.1.0",
                 "spryker/warehouse-user-gui": "^1.1.0"
             },
             "suggest": {
                 "spryker-feature/spryker-core-back-office": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202311.x-dev"
+                    "dev-master": "202403.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -8289,9 +8294,9 @@
             ],
             "description": "Warehouse User Management [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/warehouse-user-management/tree/202311.0"
+                "source": "https://github.com/spryker-feature/warehouse-user-management/tree/master"
             },
-            "time": "2023-11-21T13:27:30+00:00"
+            "time": "2024-02-01T14:30:36+00:00"
         },
         {
             "name": "spryker-feature/wishlist",
@@ -36000,6 +36005,55 @@
             "time": "2023-02-08T18:31:45+00:00"
         },
         {
+            "name": "spryker/oauth-merchant-user",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/oauth-merchant-user.git",
+                "reference": "3a49f776285a863454ab58489b7f9b919c589915"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/oauth-merchant-user/zipball/3a49f776285a863454ab58489b7f9b919c589915",
+                "reference": "3a49f776285a863454ab58489b7f9b919c589915",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/kernel": "^3.30.0",
+                "spryker/merchant-user": "^1.0.0",
+                "spryker/oauth-user-connector-extension": "^1.0.0",
+                "spryker/transfer": "^3.27.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/merchant": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*",
+                "spryker/user": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "OauthMerchantUser module",
+            "support": {
+                "source": "https://github.com/spryker/oauth-merchant-user/tree/1.0.0"
+            },
+            "time": "2024-02-01T12:59:57+00:00"
+        },
+        {
             "name": "spryker/oauth-revoke",
             "version": "1.3.1",
             "source": {
@@ -36240,6 +36294,54 @@
             "description": "OauthWarehouse module",
             "support": {
                 "source": "https://github.com/spryker/oauth-warehouse/tree/1.1.0"
+            },
+            "time": "2024-02-01T12:59:57+00:00"
+        },
+        {
+            "name": "spryker/oauth-warehouse-user",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/oauth-warehouse-user.git",
+                "reference": "61f067faaf3321ed7614f46ddfdd622416803990"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/oauth-warehouse-user/zipball/61f067faaf3321ed7614f46ddfdd622416803990",
+                "reference": "61f067faaf3321ed7614f46ddfdd622416803990",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/kernel": "^3.30.0",
+                "spryker/oauth-user-connector-extension": "^1.0.0",
+                "spryker/transfer": "^3.27.0",
+                "spryker/user": "^3.16.0",
+                "spryker/warehouse-user": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "OauthWarehouseUser module",
+            "support": {
+                "source": "https://github.com/spryker/oauth-warehouse-user/tree/1.0.0"
             },
             "time": "2024-02-01T12:59:57+00:00"
         },
@@ -71803,6 +71905,12 @@
             "alias_normalized": "202403.0"
         },
         {
+            "package": "spryker-feature/marketplace-merchant",
+            "version": "9999999-dev",
+            "alias": "202403.0",
+            "alias_normalized": "202403.0"
+        },
+        {
             "package": "spryker-feature/marketplace-merchantportal-core",
             "version": "9999999-dev",
             "alias": "202403.0",
@@ -71825,16 +71933,31 @@
             "version": "9999999-dev",
             "alias": "202403.0",
             "alias_normalized": "202403.0"
+        },
+        {
+            "package": "spryker-feature/warehouse-picking",
+            "version": "9999999-dev",
+            "alias": "202403.0",
+            "alias_normalized": "202403.0"
+        },
+        {
+            "package": "spryker-feature/warehouse-user-management",
+            "version": "9999999-dev",
+            "alias": "202403.0",
+            "alias_normalized": "202403.0"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "spryker-feature/category-management": 20,
         "spryker-feature/customer-account-management": 20,
+        "spryker-feature/marketplace-merchant": 20,
         "spryker-feature/marketplace-merchantportal-core": 20,
         "spryker-feature/shipment": 20,
         "spryker-feature/spryker-core": 20,
         "spryker-feature/spryker-core-back-office": 20,
+        "spryker-feature/warehouse-picking": 20,
+        "spryker-feature/warehouse-user-management": 20,
         "spryker/docker-chromedriver": 20,
         "spryker/robotframework-suite-tests": 20
     },
