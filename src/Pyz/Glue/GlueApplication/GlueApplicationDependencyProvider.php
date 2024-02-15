@@ -208,7 +208,7 @@ use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\GlueApplication\Service
 use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesByShipmentMethodsResourceRelationshipPlugin;
 use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesResourceRoutePlugin;
 use Spryker\Glue\ShipmentTypesRestApi\ShipmentTypesRestApiConfig;
-use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
+use Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication\StoreApplicationPlugin;
 use Spryker\Glue\StoresRestApi\Plugin\StoresResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\CartUpSellingProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\GuestCartUpSellingProductsResourceRoutePlugin;
@@ -801,7 +801,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new EventDispatcherApplicationPlugin(),
             new GlueApplicationApplicationPlugin(),
             new RouterApplicationPlugin(),
-            new StoreHttpHeaderApplicationPlugin(),
+            new StoreApplicationPlugin(),
             new LocaleApplicationPlugin(),
         ];
     }
