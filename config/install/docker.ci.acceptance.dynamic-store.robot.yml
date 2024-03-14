@@ -89,8 +89,8 @@ sections:
             command: 'vendor/bin/console frontend:mp:build'
             timeout: 1600
 
-            date-time-product-configurator:
-                command: 'vendor/bin/console frontend:date-time-product-configurator:build'
+        date-time-product-configurator:
+            command: 'vendor/bin/console frontend:date-time-product-configurator:build'
 
     init-storages-per-region:
         propel-copy-schema:
