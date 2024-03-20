@@ -58198,16 +58198,16 @@
         },
         {
             "name": "spryker/twig",
-            "version": "3.19.0",
+            "version": "3.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/twig.git",
-                "reference": "edb5f3254ec226949b7346d243818053af6d7cdc"
+                "reference": "aed418c90222375f845be7e92cee556bbd3e8dfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/twig/zipball/edb5f3254ec226949b7346d243818053af6d7cdc",
-                "reference": "edb5f3254ec226949b7346d243818053af6d7cdc",
+                "url": "https://api.github.com/repos/spryker/twig/zipball/aed418c90222375f845be7e92cee556bbd3e8dfd",
+                "reference": "aed418c90222375f845be7e92cee556bbd3e8dfd",
                 "shasum": ""
             },
             "require": {
@@ -58252,9 +58252,9 @@
             ],
             "description": "Twig module",
             "support": {
-                "source": "https://github.com/spryker/twig/tree/3.19.0"
+                "source": "https://github.com/spryker/twig/tree/3.20.0"
             },
-            "time": "2023-11-02T20:09:27+00:00"
+            "time": "2024-03-19T19:07:13+00:00"
         },
         {
             "name": "spryker/twig-extension",
