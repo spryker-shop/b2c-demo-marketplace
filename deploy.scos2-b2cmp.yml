@@ -124,7 +124,7 @@ groups:
                     glue-backend.at.spryker-b2cmp.cloud.spryker.toys:
                         store: AT
                         cors-allow-origin: '*'
-            merchant_portal:
+            mportal:
                 application: merchant-portal
                 endpoints:
                     mp.de.spryker-b2cmp.cloud.spryker.toys:
