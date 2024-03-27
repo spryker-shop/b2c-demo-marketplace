@@ -124,6 +124,22 @@ groups:
                     glue-backend.at.spryker-b2cmp.cloud.spryker.toys:
                         store: AT
                         cors-allow-origin: '*'
+            merchant_portal:
+                application: merchant-portal
+                endpoints:
+                    mp.de.spryker-b2cmp.cloud.spryker.toys:
+                        entry-point: MerchantPortal
+                        store: DE
+                        primal: true
+                        services:
+                            session:
+                                namespace: 7
+                    mp.at.spryker-b2cmp.cloud.spryker.toys:
+                        entry-point: MerchantPortal
+                        store: AT
+                        services:
+                            session:
+                                namespace: 8
 services:
     database:
         engine: mysql
