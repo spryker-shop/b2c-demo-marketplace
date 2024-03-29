@@ -63,6 +63,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new MerchantMessageHandlerPlugin(),
             new TaxAppMessageHandlerPlugin(),
             new PaymentOperationsMessageHandlerPlugin(),
+            new PaymentCreatedMessageHandlerPlugin(),
         ];
     }
 
@@ -78,7 +79,6 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new TransactionIdMessageAttributeProviderPlugin(),
             new SessionTrackingIdMessageAttributeProviderPlugin(),
             new TenantActorMessageAttributeProviderPlugin(),
-            new PaymentCreatedMessageHandlerPlugin(),
         ];
     }
 
