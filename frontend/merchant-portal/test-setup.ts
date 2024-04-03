@@ -1,2 +1,3 @@
-import 'core-js/features/reflect';
 import 'jest-preset-angular/setup-jest';
+import 'reflect-metadata/lite';
+
