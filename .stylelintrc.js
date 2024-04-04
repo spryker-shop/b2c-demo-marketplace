@@ -9,5 +9,7 @@ module.exports = {
         'color-hex-length': null,
         'scss/dollar-variable-empty-line-before': null,
         'scss/at-import-partial-extension': null,
+        'selector-class-pattern': null,
+        'scss/at-rule-conditional-no-parentheses': null,
     },
 };
