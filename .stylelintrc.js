@@ -6,7 +6,7 @@ module.exports = {
         'declaration-block-no-redundant-longhand-properties': null,
         'scss/at-if-no-null': null,
         'scss/dollar-variable-pattern': null,
-        'color-hex-length': 'long',
+        'color-hex-length': null,
         'scss/dollar-variable-empty-line-before': null,
         'scss/at-import-partial-extension': null,
     },
