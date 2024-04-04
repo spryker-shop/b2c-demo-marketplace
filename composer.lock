@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d535973f8ec5e080c0bcc17d3718aec7",
+    "content-hash": "18a025179eaf0441749703c763a8c992",
     "packages": [
         {
             "name": "async-aws/core",
@@ -71614,18 +71614,19 @@
         },
         {
             "name": "spryker/cypress-tests",
-            "version": "dev-feature/cc-33374/integrate-cc-32421-b2b",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "be154ff34f86a4c7f7a0c95dd680190123fc28e1"
+                "reference": "605573465f36f74974480ea901d79fffad91e9e6"
             },
+            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2024-04-03T13:07:24+00:00"
+            "time": "2024-04-04T09:50:20+00:00"
         },
         {
             "name": "spryker/development",
@@ -72773,9 +72774,9 @@
         "spryker/agent-dashboard-merchant-portal-gui": 20,
         "spryker/agent-security-blocker-merchant-portal-gui": 20,
         "spryker/agent-security-merchant-portal-gui": 20,
+        "spryker/cypress-tests": 20,
         "spryker/docker-chromedriver": 20,
-        "spryker/robotframework-suite-tests": 20,
-        "spryker/cypress-tests": 20
+        "spryker/robotframework-suite-tests": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
