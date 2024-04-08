@@ -371,7 +371,7 @@
         "phpdocumentor/graphviz": "2.1.0",
         "phpmd/phpmd": "2.15.0",
         "phpseclib/phpseclib": "3.0.37",
-        "phpstan/phpstan": "^1.10.45",
+        "phpstan/phpstan": "1.9.16",
         "phpunit/phpunit": "^9.5.2",
         "predis/predis": "1.1.10",
         "propel/propel": "2.0.0-beta3",
