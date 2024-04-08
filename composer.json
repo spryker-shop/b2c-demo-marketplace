@@ -304,7 +304,7 @@
         "aws/aws-sdk-php": "3.303.4",
         "brick/math": "0.11.0",
         "cebe/php-openapi": "1.7.0",
-        "codeception/codeception": "^5.0.12",
+        "codeception/codeception": "5.0.12",
         "codeception/module-asserts": "^3.0.0",
         "codeception/module-cli": "^2.0.0",
         "codeception/module-filesystem": "^3.0.0",
@@ -1574,6 +1574,10 @@
         "phpstan-setup": "vendor/bin/console dev:ide-auto-completion:generate",
         "prefer-mid": [
             "COMPOSER_MEMORY_LIMIT=-1 composer require twig/twig:\"^2.9.0\""
-        ]
+        ],
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
     }
 }
