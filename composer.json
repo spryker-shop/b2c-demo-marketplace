@@ -371,7 +371,7 @@
         "phpdocumentor/graphviz": "2.1.0",
         "phpmd/phpmd": "2.15.0",
         "phpseclib/phpseclib": "3.0.37",
-        "phpstan/phpstan": "1.9.16",
+        "phpstan/phpstan": "^1.10.45",
         "phpunit/phpunit": "^9.5.2",
         "predis/predis": "1.1.10",
         "propel/propel": "2.0.0-beta3",
@@ -1574,10 +1574,6 @@
         "phpstan-setup": "vendor/bin/console dev:ide-auto-completion:generate",
         "prefer-mid": [
             "COMPOSER_MEMORY_LIMIT=-1 composer require twig/twig:\"^2.9.0\""
-        ],
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        }
+        ]
     }
 }
