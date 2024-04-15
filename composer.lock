@@ -22205,16 +22205,16 @@
         },
         {
             "name": "spryker/cms-gui",
-            "version": "5.14.0",
+            "version": "5.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cms-gui.git",
-                "reference": "635948a2626c42fe4910263903e9f8954570a30c"
+                "reference": "13c3a05ea3bc14113e53f1044e5f1830477d08f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/cms-gui/zipball/635948a2626c42fe4910263903e9f8954570a30c",
-                "reference": "635948a2626c42fe4910263903e9f8954570a30c",
+                "url": "https://api.github.com/repos/spryker/cms-gui/zipball/13c3a05ea3bc14113e53f1044e5f1830477d08f2",
+                "reference": "13c3a05ea3bc14113e53f1044e5f1830477d08f2",
                 "shasum": ""
             },
             "require": {
@@ -22265,9 +22265,9 @@
             ],
             "description": "CmsGui module",
             "support": {
-                "source": "https://github.com/spryker/cms-gui/tree/5.14.0"
+                "source": "https://github.com/spryker/cms-gui/tree/5.15.0"
             },
-            "time": "2023-11-15T11:17:28+00:00"
+            "time": "2023-12-06T11:44:29+00:00"
         },
         {
             "name": "spryker/cms-gui-extension",
