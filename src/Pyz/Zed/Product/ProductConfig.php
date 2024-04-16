@@ -74,4 +74,12 @@ class ProductConfig extends SprykerProductConfig
             ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_UPDATE,
         ]);
     }
+
+    /**
+     * @return int
+     */
+    public function getProductPublishToMessageBrokerChunkSize(): int
+    {
+        return 3;
+    }
 }
