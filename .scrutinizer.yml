@@ -1,7 +1,14 @@
 build:
+    image: default-jammy
     environment:
         php: '8.1'
-        node: '14.0'
+        node: 'v18.17'
+
+    dependencies:
+        before:
+            - 'npm cache clean --force'
+            - 'rm -rf node_modules'
+            - 'npm install'
 
     tests:
         override:

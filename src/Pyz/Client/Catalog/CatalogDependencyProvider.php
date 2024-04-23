@@ -136,14 +136,12 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
      */
     protected function createCatalogSearchResultFormatterPlugins(): array
     {
-        $rawCatalogSearchResultFormatterPlugin = new RawCatalogSearchResultFormatterPlugin();
-
         return [
             new FacetResultFormatterPlugin(),
             new SortedResultFormatterPlugin(),
             new PaginatedResultFormatterPlugin(),
             new CurrencyAwareCatalogSearchResultFormatterPlugin(
-                $rawCatalogSearchResultFormatterPlugin,
+                new RawCatalogSearchResultFormatterPlugin(),
             ),
             new SpellingSuggestionResultFormatterPlugin(),
             new CategoryTreeFilterPageSearchResultFormatterPlugin(),
@@ -173,12 +171,10 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
      */
     protected function createSuggestionResultFormatterPlugins(): array
     {
-        $suggestionByTypeResultFormatterPlugin = new SuggestionByTypeResultFormatterPlugin();
-
         return [
             new CompletionResultFormatterPlugin(),
             new CurrencyAwareSuggestionByTypeResultFormatter(
-                $suggestionByTypeResultFormatterPlugin,
+                new SuggestionByTypeResultFormatterPlugin(),
             ),
         ];
     }
