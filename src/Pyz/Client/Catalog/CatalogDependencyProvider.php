@@ -171,12 +171,10 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
      */
     protected function createSuggestionResultFormatterPlugins(): array
     {
-        $suggestionByTypeResultFormatterPlugin = new SuggestionByTypeResultFormatterPlugin();
-
         return [
             new CompletionResultFormatterPlugin(),
             new CurrencyAwareSuggestionByTypeResultFormatter(
-                $suggestionByTypeResultFormatterPlugin,
+                new SuggestionByTypeResultFormatterPlugin(),
             ),
         ];
     }
