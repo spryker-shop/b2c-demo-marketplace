@@ -3314,3 +3314,5 @@ product_offer_shipment_type.validation.shipment_type_not_unique,A delivery type 
 product_offer_shipment_type.validation.shipment_type_not_unique,Ein Lieferart für Product Offer '%product_offer_reference%' mit derselben UUID ist bereits in der Anfrage vorhanden.,de_DE
 category.validation.category_node_entity_not_found,The category node ID '%category_node_id%' cannot be relocated because this category node no longer exists.,en_US
 category.validation.category_node_entity_not_found,"Die Kategorieknoten-ID '%category_node_id%' kann nicht verschoben werden, da dieser Kategorieknoten nicht mehr existiert.",de_DE
+dynamic_entity.validation.invalid_url,The URL is invalid. `%errorPath%` field '%fieldName%' must have a URL data format.,en_US
+dynamic_entity.validation.invalid_url,Die URL ist ungültig. `%errorPath%` Feld '%fieldName%' muss ein URL-Datenformat haben.,de_DE
