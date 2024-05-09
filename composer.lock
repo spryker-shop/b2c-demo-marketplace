@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51f0541a79b9c6ec094db4be7e182f9c",
+    "content-hash": "9791b98786c1fd744af22a1883c28ca3",
     "packages": [
         {
             "name": "async-aws/core",
@@ -34982,16 +34982,16 @@
         },
         {
             "name": "spryker/merchant-user",
-            "version": "1.5.1",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-user.git",
-                "reference": "56a58147dfe28cceadf3c040b5b4c7b2f8c4ed7a"
+                "reference": "95fd1116cf6d5c3e0efae6b7483f6d2fd2ba1a85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-user/zipball/56a58147dfe28cceadf3c040b5b4c7b2f8c4ed7a",
-                "reference": "56a58147dfe28cceadf3c040b5b4c7b2f8c4ed7a",
+                "url": "https://api.github.com/repos/spryker/merchant-user/zipball/95fd1116cf6d5c3e0efae6b7483f6d2fd2ba1a85",
+                "reference": "95fd1116cf6d5c3e0efae6b7483f6d2fd2ba1a85",
                 "shasum": ""
             },
             "require": {
@@ -35039,9 +35039,9 @@
             ],
             "description": "MerchantUser module",
             "support": {
-                "source": "https://github.com/spryker/merchant-user/tree/1.5.1"
+                "source": "https://github.com/spryker/merchant-user/tree/1.6.0"
             },
-            "time": "2024-03-13T15:14:46+00:00"
+            "time": "2024-04-30T08:06:39+00:00"
         },
         {
             "name": "spryker/merchant-user-extension",
@@ -58329,16 +58329,16 @@
         },
         {
             "name": "spryker/transfer",
-            "version": "3.35.0",
+            "version": "3.36.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/transfer.git",
-                "reference": "539b53f9da85ccdfeb17f64c18c0c2ba3eac2e79"
+                "reference": "b3df867764830174fa8bf48ebe1a919f100b44ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/transfer/zipball/539b53f9da85ccdfeb17f64c18c0c2ba3eac2e79",
-                "reference": "539b53f9da85ccdfeb17f64c18c0c2ba3eac2e79",
+                "url": "https://api.github.com/repos/spryker/transfer/zipball/b3df867764830174fa8bf48ebe1a919f100b44ee",
+                "reference": "b3df867764830174fa8bf48ebe1a919f100b44ee",
                 "shasum": ""
             },
             "require": {
@@ -58374,9 +58374,9 @@
             ],
             "description": "Transfer module",
             "support": {
-                "source": "https://github.com/spryker/transfer/tree/3.35.0"
+                "source": "https://github.com/spryker/transfer/tree/3.36.0"
             },
-            "time": "2023-11-20T09:35:42+00:00"
+            "time": "2024-04-12T11:26:30+00:00"
         },
         {
             "name": "spryker/translator",
@@ -61003,20 +61003,20 @@
         },
         {
             "name": "spryker/zed-request",
-            "version": "3.20.0",
+            "version": "3.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-request.git",
-                "reference": "b06b5e843f8b3406436b0567dc6dd6581725fa1a"
+                "reference": "369d1a325af4963c712ce62a3524bee2f5cbe756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-request/zipball/b06b5e843f8b3406436b0567dc6dd6581725fa1a",
-                "reference": "b06b5e843f8b3406436b0567dc6dd6581725fa1a",
+                "url": "https://api.github.com/repos/spryker/zed-request/zipball/369d1a325af4963c712ce62a3524bee2f5cbe756",
+                "reference": "369d1a325af4963c712ce62a3524bee2f5cbe756",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "psr/http-message": "^1.0.0",
                 "spryker/application-extension": "^1.1.0",
                 "spryker/config": "^3.0.0",
@@ -61068,9 +61068,9 @@
             ],
             "description": "ZedRequest module",
             "support": {
-                "source": "https://github.com/spryker/zed-request/tree/3.20.0"
+                "source": "https://github.com/spryker/zed-request/tree/3.21.0"
             },
-            "time": "2023-10-19T09:26:16+00:00"
+            "time": "2024-04-16T13:44:16+00:00"
         },
         {
             "name": "spryker/zed-request-extension",

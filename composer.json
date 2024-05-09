@@ -304,7 +304,7 @@
         "codeception/module-webdriver": "^3.1.1",
         "composer/package-versions-deprecated": "^1.10.0",
         "filp/whoops": "^2.7",
-        "phpstan/phpstan": "^1.10.45",
+        "phpstan/phpstan": "1.10.66",
         "phpunit/phpunit": "^9.5.2",
         "spryker-feature/development-tools": "^202404.0",
         "spryker-sdk/evaluator": "^0.2.1",
