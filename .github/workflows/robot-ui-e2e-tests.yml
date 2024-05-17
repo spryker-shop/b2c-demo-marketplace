@@ -2,6 +2,8 @@ name: "[mp_b2c][master] Robot Regression UI E2E"
 
 on:
     pull_request:
+        types: [ labeled ]
+    push:
         branches:
             - master
     workflow_dispatch:
@@ -12,25 +14,30 @@ concurrency:
 
 jobs:
     docker-alpine-php-8-2-mariadb-robot-ui-group-one:
+        if: ${{ github.event.label.name == 'robot-regression-ui-e2e' }}
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Robot / UI / Group One"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
             TRAVIS: 1
             ROBOT_TESTS_ARTIFACTS_BUCKET_REGION: eu-west-1
         steps:
-            - name: apt update
-              run: sudo apt update
-            - uses: actions/checkout@v3
-
-            - uses: actions/setup-python@v4
+            - uses: actions/checkout@v4
+            - uses: actions/setup-python@v5
               with:
                   python-version: '3.9'
 
+            - name: Cache pip packages
+              uses: actions/cache@v4
+              with:
+                  path: ~/.cache/pip
+                  key: ${{ runner.os }}-pip-${{ hashFiles('composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pip-
+
             - name: Install packages
               run: |
-                  sudo apt-get install apache2-utils
                   sudo apt install awscli -q
                   python3 -m pip install --upgrade pip
                   python3 -m pip install -U robotframework
@@ -39,6 +46,7 @@ jobs:
                   python3 -m pip install -U robotframework-databaselibrary
                   python3 -m pip install -U robotframework-browser
                   python3 -m pip install PyMySQL
+                  sudo npx playwright install-deps
             - name: Install docker-compose
               run: |
                   sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -84,21 +92,28 @@ jobs:
                     --recursive \
                     --expires "$(date -d '+7 days' --utc +'%Y-%m-%dT%H:%M:%SZ')"
     docker-alpine-php-8-2-mariadb-robot-ui-group-two:
+        if: ${{ github.event.label.name == 'robot-regression-ui-e2e' }}
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Robot / UI /Group Two"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
             TRAVIS: 1
             ROBOT_TESTS_ARTIFACTS_BUCKET_REGION: eu-west-1
         steps:
-            - name: apt update
-              run: sudo apt update
-            - uses: actions/checkout@v3
 
-            - uses: actions/setup-python@v4
+            - uses: actions/checkout@v4
+            - uses: actions/setup-python@v5
               with:
                   python-version: '3.9'
+
+            - name: Cache pip packages
+              uses: actions/cache@v4
+              with:
+                  path: ~/.cache/pip
+                  key: ${{ runner.os }}-pip-${{ hashFiles('composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pip-
 
             - name: Install packages
               run: |
@@ -111,6 +126,7 @@ jobs:
                   python3 -m pip install -U robotframework-databaselibrary
                   python3 -m pip install -U robotframework-browser
                   python3 -m pip install PyMySQL
+                  sudo npx playwright install-deps
             - name: Install docker-compose
               run: |
                   sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -156,25 +172,30 @@ jobs:
                     --recursive \
                     --expires "$(date -d '+7 days' --utc +'%Y-%m-%dT%H:%M:%SZ')"
     docker-alpine-php-8-2-mariadb-robot-ui-group-three:
+        if: ${{ github.event.label.name == 'robot-regression-ui-e2e' }}
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Robot / UI / Group Three"
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
             TRAVIS: 1
             ROBOT_TESTS_ARTIFACTS_BUCKET_REGION: eu-west-1
         steps:
-            - name: apt update
-              run: sudo apt update
-            - uses: actions/checkout@v3
-
-            - uses: actions/setup-python@v4
+            - uses: actions/checkout@v4
+            - uses: actions/setup-python@v5
               with:
                   python-version: '3.9'
 
+            - name: Cache pip packages
+              uses: actions/cache@v4
+              with:
+                  path: ~/.cache/pip
+                  key: ${{ runner.os }}-pip-${{ hashFiles('composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pip-
+
             - name: Install packages
               run: |
-                  sudo apt-get install apache2-utils
                   sudo apt install awscli -q
                   python3 -m pip install --upgrade pip
                   python3 -m pip install -U robotframework
@@ -183,6 +204,7 @@ jobs:
                   python3 -m pip install -U robotframework-databaselibrary
                   python3 -m pip install -U robotframework-browser
                   python3 -m pip install PyMySQL
+                  sudo npx playwright install-deps
             - name: Install docker-compose
               run: |
                   sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
