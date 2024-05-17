@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9791b98786c1fd744af22a1883c28ca3",
+    "content-hash": "41db8ebf7a72babf71f781065e3ecb15",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6230,7 +6230,7 @@
         },
         {
             "name": "spryker-feature/marketplace-merchant-portal-product-management",
-            "version": "202404.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant-portal-product-management.git",
@@ -6250,6 +6250,7 @@
                 "spryker-feature/marketplace-merchantportal-core": "Recommended feature dependency.",
                 "spryker-feature/marketplace-product": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -44304,16 +44305,16 @@
         },
         {
             "name": "spryker/product-merchant-portal-gui",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-merchant-portal-gui.git",
-                "reference": "3b12cddd0143aee4b1335c2bf4a934d897f0122c"
+                "reference": "88c53062d32cbbd5cd768190f13d7fd756224cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/3b12cddd0143aee4b1335c2bf4a934d897f0122c",
-                "reference": "3b12cddd0143aee4b1335c2bf4a934d897f0122c",
+                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/88c53062d32cbbd5cd768190f13d7fd756224cca",
+                "reference": "88c53062d32cbbd5cd768190f13d7fd756224cca",
                 "shasum": ""
             },
             "require": {
@@ -44374,9 +44375,9 @@
             ],
             "description": "ProductMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/4.0.0"
+                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/4.1.0"
             },
-            "time": "2024-04-03T13:26:42+00:00"
+            "time": "2024-05-16T14:02:12+00:00"
         },
         {
             "name": "spryker/product-merchant-portal-gui-extension",
@@ -73043,12 +73044,19 @@
             "version": "9999999-dev",
             "alias": "202407.0",
             "alias_normalized": "202407.0"
+        },
+        {
+            "package": "spryker-feature/marketplace-merchant-portal-product-management",
+            "version": "9999999-dev",
+            "alias": "202407.0",
+            "alias_normalized": "202407.0"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "spryker-feature/configurable-product": 20,
         "spryker-feature/customer-account-management": 20,
+        "spryker-feature/marketplace-merchant-portal-product-management": 20,
         "spryker/cypress-tests": 20,
         "spryker/docker-chromedriver": 20,
         "spryker/robotframework-suite-tests": 20
