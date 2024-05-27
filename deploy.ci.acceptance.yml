@@ -22,7 +22,7 @@ image:
         npm: 9
 
 composer:
-    mode: "--no-dev --quiet"
+    mode: --no-dev
     autoload: --classmap-authoritative
 
 regions:
@@ -133,3 +133,7 @@ docker:
 
     mount:
         baked:
+
+    compose:
+        yamls:
+            - .robot/docker-compose.robot.yml
