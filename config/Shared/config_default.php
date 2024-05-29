@@ -10,11 +10,7 @@ use Generated\Shared\Transfer\CapturePaymentTransfer;
 use Generated\Shared\Transfer\ConfigureTaxAppTransfer;
 use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
 use Generated\Shared\Transfer\DeleteTaxAppTransfer;
-use Generated\Shared\Transfer\ExportMerchantsTransfer;
 use Generated\Shared\Transfer\InitializeProductExportTransfer;
-use Generated\Shared\Transfer\MerchantCreatedTransfer;
-use Generated\Shared\Transfer\MerchantExportedTransfer;
-use Generated\Shared\Transfer\MerchantUpdatedTransfer;
 use Generated\Shared\Transfer\OrderStatusChangedTransfer;
 use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
 use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
@@ -777,10 +773,6 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     SearchEndpointRemovedTransfer::class => 'search-commands',
     AddReviewsTransfer::class => 'product-review-commands',
     OrderStatusChangedTransfer::class => 'order-events',
-    ExportMerchantsTransfer::class => 'merchant-commands',
-    MerchantExportedTransfer::class => 'merchant-events',
-    MerchantCreatedTransfer::class => 'merchant-events',
-    MerchantUpdatedTransfer::class => 'merchant-events',
     ConfigureTaxAppTransfer::class => 'tax-commands',
     DeleteTaxAppTransfer::class => 'tax-commands',
     SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
@@ -794,7 +786,6 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     'product-review-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'product-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'search-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'merchant-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'tax-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
@@ -802,7 +793,6 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'product-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'order-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'merchant-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'payment-tax-invoice-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 

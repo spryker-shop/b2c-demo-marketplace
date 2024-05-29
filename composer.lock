@@ -31687,16 +31687,16 @@
         },
         {
             "name": "spryker/merchant",
-            "version": "3.10.0",
+            "version": "3.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant.git",
-                "reference": "98f5f80aab6229afaf2af285c4bac1ed648623c1"
+                "reference": "8296b16772ce4e1c3f09d611abeaa80095ba9169"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant/zipball/98f5f80aab6229afaf2af285c4bac1ed648623c1",
-                "reference": "98f5f80aab6229afaf2af285c4bac1ed648623c1",
+                "url": "https://api.github.com/repos/spryker/merchant/zipball/8296b16772ce4e1c3f09d611abeaa80095ba9169",
+                "reference": "8296b16772ce4e1c3f09d611abeaa80095ba9169",
                 "shasum": ""
             },
             "require": {
@@ -31745,9 +31745,9 @@
             ],
             "description": "Merchant module",
             "support": {
-                "source": "https://github.com/spryker/merchant/tree/3.10.0"
+                "source": "https://github.com/spryker/merchant/tree/3.12.0"
             },
-            "time": "2024-02-06T10:56:40+00:00"
+            "time": "2024-05-28T11:32:17+00:00"
         },
         {
             "name": "spryker/merchant-agent",
