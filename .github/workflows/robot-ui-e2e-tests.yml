@@ -15,7 +15,7 @@ concurrency:
 jobs:
     docker-alpine-php-8-2-mariadb-robot-ui-group-one:
         if: >
-            (github.event_name == 'pull_request' && github.event.label.name == 'robot-regression-ui-e2e') ||
+            (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'robot-regression-ui-e2e')) ||
             (github.event_name == 'push' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Robot / UI / Group One"
         runs-on: ubuntu-22.04
@@ -40,7 +40,6 @@ jobs:
 
             - name: Install packages
               run: |
-                  sudo apt install awscli -q
                   python3 -m pip install --upgrade pip
                   python3 -m pip install -U robotframework
                   python3 -m pip install -U robotframework-requests
@@ -95,7 +94,7 @@ jobs:
                     --expires "$(date -d '+7 days' --utc +'%Y-%m-%dT%H:%M:%SZ')"
     docker-alpine-php-8-2-mariadb-robot-ui-group-two:
         if: >
-            (github.event_name == 'pull_request' && github.event.label.name == 'robot-regression-ui-e2e') ||
+            (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'robot-regression-ui-e2e')) ||
             (github.event_name == 'push' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Robot / UI /Group Two"
         runs-on: ubuntu-22.04
@@ -121,8 +120,6 @@ jobs:
 
             - name: Install packages
               run: |
-                  sudo apt-get install apache2-utils
-                  sudo apt install awscli -q
                   python3 -m pip install --upgrade pip
                   python3 -m pip install -U robotframework
                   python3 -m pip install -U robotframework-requests
@@ -177,7 +174,7 @@ jobs:
                     --expires "$(date -d '+7 days' --utc +'%Y-%m-%dT%H:%M:%SZ')"
     docker-alpine-php-8-2-mariadb-robot-ui-group-three:
         if: >
-            (github.event_name == 'pull_request' && github.event.label.name == 'robot-regression-ui-e2e') ||
+            (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'robot-regression-ui-e2e')) ||
             (github.event_name == 'push' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Robot / UI / Group Three"
         runs-on: ubuntu-22.04
@@ -202,7 +199,6 @@ jobs:
 
             - name: Install packages
               run: |
-                  sudo apt install awscli -q
                   python3 -m pip install --upgrade pip
                   python3 -m pip install -U robotframework
                   python3 -m pip install -U robotframework-requests
