@@ -7,6 +7,10 @@ export default class VariantResetter extends Component {
     protected readyCallback(): void {}
 
     protected init(): void {
+        if (this.isAjaxMode) {
+            return;
+        }
+
         this.trigger = <HTMLElement>this.getElementsByClassName(`${this.jsName}__trigger`)[0];
         this.target = <HTMLInputElement>this.getElementsByClassName(`${this.jsName}__target`)[0];
 
@@ -21,5 +25,9 @@ export default class VariantResetter extends Component {
         event.preventDefault();
         this.target.value = '';
         this.target.closest('form').submit();
+    }
+
+    protected get isAjaxMode(): boolean {
+        return !!this.getAttribute('ajax-mode');
     }
 }
