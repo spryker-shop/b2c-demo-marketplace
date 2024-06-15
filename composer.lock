@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ce3556f801d225cd4730cf31f8a00cd",
+    "content-hash": "886f36439b7fd2c9a362bb5c89ddfb2e",
     "packages": [
         {
             "name": "async-aws/core",
@@ -72234,18 +72234,19 @@
         },
         {
             "name": "spryker/robotframework-suite-tests",
-            "version": "dev-bugfix/cc-33728-adjusted-merchant-demodata",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "a63b0df8b880702600ca6b73a73c4c541addd778"
+                "reference": "488a121b1af033257c68fda18243088dd1700a38"
             },
+            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2024-06-15T13:14:48+00:00"
+            "time": "2024-06-15T15:28:17+00:00"
         },
         {
             "name": "spryker/testify",
