@@ -1,0 +1,29 @@
+name: Label Check
+
+on:
+    pull_request:
+        types: [opened, edited, labeled, unlabeled, synchronize]
+
+jobs:
+    label-check:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+
+            - name: Verify Labels
+              run: |
+                  labels=$(jq -r '.pull_request.labels[].name' "$GITHUB_EVENT_PATH")
+                  required_labels=("robot-regression-ui-e2e" "skip-robot-regression-ui-e2e")
+                  has_required_label=false
+                  for label in "${required_labels[@]}"; do
+                    if [[ "$labels" == *"$label"* ]]; then
+                      has_required_label=true
+                      break
+                    fi
+                  done
+                  if [ "$has_required_label" == false ]; then
+                    echo "Pull request does not have any of the required labels: ${required_labels[@]}"
+                    exit 1
+                  fi
