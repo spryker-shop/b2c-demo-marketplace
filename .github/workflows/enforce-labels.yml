@@ -26,7 +26,7 @@ jobs:
                   if [ "$has_required_label" == false ]; then
                     echo "Pull request does not have any of the required labels: ${required_labels[@]}"
                     echo "Please use at least one of the required labels to proceed:"
-                    echo "- ${required_labels[0]}: to run Robot UI E2E tests (use this label if any critical component is affected by the code)"
-                    echo "- ${required_labels[1]}: to skip Robot UI E2E tests (use this label if the code changes are not critical)"
+                    echo "- ${required_labels[0]}: to run Robot UI E2E tests (use this label by default)"
+                    echo "- ${required_labels[1]}: to skip Robot UI E2E tests (use this label if the code can't affect any functionality)"
                     exit 1
                   fi
