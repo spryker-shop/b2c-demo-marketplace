@@ -113,6 +113,16 @@ groups:
                         store: DE
                     glue.at.spryker-mpb2c.cloud.spryker.toys:
                         store: AT
+            mportal:
+                application: merchant-portal
+                endpoints:
+                    mp.de.spryker-mpb2c.cloud.spryker.toys:
+                        entry-point: MerchantPortal
+                        store: DE
+                        primal: true
+                    mp.at.spryker-mpb2c.cloud.spryker.toys:
+                        entry-point: MerchantPortal
+                        store: AT
 services:
     database:
         engine: mysql
