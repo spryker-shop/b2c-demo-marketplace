@@ -46,11 +46,6 @@
                 <event>submit tax invoice</event>
             </transition>
 
-            <transition happy="true">
-                <source>tax invoice submitted</source>
-                <target>merchant split pending</target>
-            </transition>
-
             <transition>
                 <source>paid</source>
                 <target>paid</target>

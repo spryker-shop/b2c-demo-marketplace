@@ -12,13 +12,6 @@ use Spryker\Zed\MerchantCommission\MerchantCommissionConfig as SprykerMerchantCo
 class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
 {
     /**
-     * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_NET
-     *
-     * @var string
-     */
-    protected const PRICE_MODE_NET = 'NET_MODE';
-
-    /**
      * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_GROSS
      *
      * @var string
@@ -30,7 +23,7 @@ class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
      */
     protected const MERCHANT_COMMISSION_PRICE_MODE_PER_STORE = [
         'DE' => self::PRICE_MODE_GROSS,
-        'AT' => self::PRICE_MODE_NET,
+        'AT' => self::PRICE_MODE_GROSS,
         'US' => self::PRICE_MODE_GROSS,
     ];
 
@@ -38,6 +31,6 @@ class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
      * @var list<string>
      */
     protected const EXCLUDED_MERCHANTS_FROM_COMMISSION = [
-        'MER000008',
+        'MER000001',
     ];
 }

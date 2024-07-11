@@ -12,7 +12,7 @@
 
         <transitions>
             <transition happy="true">
-                <source>paid</source>
+                <source>tax invoice submitted</source>
                 <target>commission calculated</target>
                 <event>commission-calculate</event>
             </transition>
