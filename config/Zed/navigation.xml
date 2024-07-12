@@ -327,6 +327,13 @@
                 <controller>list-merchant</controller>
                 <action>index</action>
             </merchant>
+            <merchant-commission-gui>
+                <label>Merchant Commissions</label>
+                <title>Merchant Commissions</title>
+                <bundle>merchant_commission-gui</bundle>
+                <controller>list</controller>
+                <action>index</action>
+            </merchant-commission-gui>
             <product-offer-gui>
                 <label>Offers</label>
                 <title>Offers</title>

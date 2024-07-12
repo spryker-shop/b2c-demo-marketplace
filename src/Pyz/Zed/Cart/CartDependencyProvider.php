@@ -60,6 +60,7 @@ use Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\ProductOptionVal
 use Spryker\Zed\ProductQuantity\Communication\Plugin\Cart\CartChangeTransferQuantityNormalizerPlugin;
 use Spryker\Zed\ProductQuantity\Communication\Plugin\Cart\ProductQuantityRestrictionCartPreCheckPlugin;
 use Spryker\Zed\ProductQuantity\Communication\Plugin\CartExtension\ProductQuantityRestrictionCartRemovalPreCheckPlugin;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Cart\SanitizeMerchantCommissionPreReloadPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Cart\AddThresholdMessagesCartPostReloadItemsPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Cart\SalesOrderThresholdCartTerminationPlugin;
 use Spryker\Zed\SalesQuantity\Communication\Plugin\Cart\IsQuantitySplittableItemExpanderPlugin;
@@ -175,6 +176,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new RemoveRestrictedItemsPreReloadPlugin(),
             new FilterInactiveProductOfferPreReloadItemsPlugin(),
             new ProductApprovalPreReloadItemsPlugin(),
+            new SanitizeMerchantCommissionPreReloadPlugin(),
         ];
     }
 

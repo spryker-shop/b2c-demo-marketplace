@@ -57,4 +57,12 @@ class SalesConfig extends SprykerSalesConfig
     {
         return false;
     }
+
+    /**
+     * @return bool
+     */
+    public function shouldPersistModifiedOrderItemProperties(): bool
+    {
+        return true;
+    }
 }
