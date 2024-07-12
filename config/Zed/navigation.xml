@@ -328,8 +328,8 @@
                 <action>index</action>
             </merchant>
             <merchant-commission-gui>
-                <label>Merchant Commission</label>
-                <title>Merchant Commission</title>
+                <label>Merchant Commissions</label>
+                <title>Merchant Commissions</title>
                 <bundle>merchant_commission-gui</bundle>
                 <controller>list</controller>
                 <action>index</action>
