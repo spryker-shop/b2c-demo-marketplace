@@ -49,6 +49,9 @@ suites:
                 - \SprykerTest\Zed\Permission\Helper\PermissionHelper
                 - \SprykerTest\Zed\Country\Helper\CountryDataHelper
                 - \SprykerTest\Shared\Discount\Helper\DiscountDataHelper
+                - \SprykerTest\Zed\Category\Helper\CategoryDataHelper
+                - \SprykerTest\Zed\ProductCategory\Helper\ProductCategoryDataHelper
+                - \SprykerTest\Shared\MerchantCommission\Helper\MerchantCommissionHelper
                 - \SprykerTest\Zed\Twig\Helper\TwigHelper:
                       twigPlugins:
                           - \Spryker\Zed\Application\Communication\Plugin\Twig\ApplicationTwigPlugin
