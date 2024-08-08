@@ -10,6 +10,9 @@
                 "vendor/spryker/agent-security-merchant-portal-gui/mp.public-api.ts"
             ],
             "@mp/dashboard-merchant-portal-gui": ["vendor/spryker/dashboard-merchant-portal-gui/mp.public-api.ts"],
+            "@mp/merchant-app-merchant-portal-gui": [
+                "vendor/spryker/merchant-app-merchant-portal-gui/mp.public-api.ts"
+            ],
             "@mp/merchant-profile-merchant-portal-gui": [
                 "vendor/spryker/merchant-profile-merchant-portal-gui/mp.public-api.ts"
             ],

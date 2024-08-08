@@ -33,6 +33,8 @@ use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleMerchantAclE
 use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleStoreAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Merchant\Communication\Plugin\AclMerchantPortal\MerchantAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Merchant\Communication\Plugin\AclMerchantPortal\MerchantMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin;
 use Spryker\Zed\MerchantCategory\Communication\Plugin\AclMerchantPortal\MerchantCategoryAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\MerchantProduct\Communication\Plugin\AclMerchantPortal\MerchantProductAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\MerchantProduct\Communication\Plugin\AclMerchantPortal\MerchantProductMerchantAclEntityRuleExpanderPlugin;
@@ -107,6 +109,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new ProductMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
             new SalesMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
             new ProductOfferServicePointMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
         ];
     }
 
@@ -220,6 +223,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new ProductOfferShipmentTypeAclEntityConfigurationExpanderPlugin(),
             new ServiceAclEntityConfigurationExpanderPlugin(),
             new ProductOfferServicePointAclEntityConfigurationExpanderPlugin(),
+            new MerchantAppAclEntityConfigurationExpanderPlugin(),
             new SalesMerchantCommissionAclEntityConfigurationExpanderPlugin(),
         ];
     }
