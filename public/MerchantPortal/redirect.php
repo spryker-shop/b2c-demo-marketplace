@@ -7,8 +7,8 @@ if (empty($_GET['url'])) {
 }
 ?>
 <p style="text-align: center">
-    The site <?php echo $_SERVER['HTTP_REFERER'] ?? ''; ?> wants to redirect you to <strong><?php echo $_GET['url'] ?></strong>. Do you want to follow the redirect?
+    The site <?php echo htmlspecialchars($_SERVER['HTTP_REFERER'], ENT_QUOTES, 'UTF-8') ?? ''; ?> wants to redirect you to <strong><?php echo htmlspecialchars($_GET['url'], ENT_QUOTES, 'UTF-8'); ?></strong>. Do you want to follow the redirect?
 </p>
 <p style="text-align: center">
-    <a href="<?php echo $_GET['url']; ?>">Follow</a>
+    <a href="<?php echo htmlspecialchars($_GET['url'], ENT_QUOTES, 'UTF-8'); ?>">Follow</a>
 </p>
