@@ -4,7 +4,7 @@ namespace: spryker_ci
 tag: '1.0'
 
 environment: docker.ci
-pipeline: docker.ci.acceptance.dynamic-store
+pipeline: docker.ci.acceptance
 image:
     tag: spryker/php:8.2
     environment:
@@ -22,8 +22,8 @@ image:
         npm: 9
 
 composer:
-    mode: "--no-dev --quiet"
-    autoload: --classmap-authoritative
+    mode: ''
+    autoload: ''
 
 regions:
     EU:
@@ -90,7 +90,6 @@ groups:
                 endpoints:
                     glue-backend.eu.spryker.local:
                         region: EU
-
 services:
     database:
         engine: mysql
@@ -114,14 +113,8 @@ services:
     search:
         engine: elastic
         version: '7.10'
-    scheduler:
-        engine: jenkins
-        version: '2.442'
-        csrf-protection-enabled: true
     mail_catcher:
         engine: mailhog
-    webdriver:
-        engine: chromedriver
 
 docker:
     ssl:
@@ -137,3 +130,7 @@ docker:
 
     mount:
         baked:
+
+    compose:
+        yamls:
+            - .robot/docker-compose.robot.yml
