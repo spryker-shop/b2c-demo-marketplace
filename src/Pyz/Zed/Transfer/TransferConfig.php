@@ -34,6 +34,17 @@ class TransferConfig extends SprykerTransferConfig
     }
 
     /**
+     * We use strict name validation for core internal usage and enable this by default for all
+     * new projects.
+     *
+     * @return bool
+     */
+    public function isTransferNameValidated(): bool
+    {
+        return true;
+    }
+
+    /**
      * We use strict validation for case sensitive declaration for all new projects.
      *
      * @return bool
