@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f839324a739bd85245d6527d1b20420",
+    "content-hash": "1066ecd1d90b904424c41dc0072b9d9d",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6187,16 +6187,16 @@
         },
         {
             "name": "spryker-feature/marketplace-merchant",
-            "version": "202404.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant.git",
-                "reference": "1ade82a7871791029f038ded838f990f267293b4"
+                "reference": "f054ebb083c4201f22a074efe2815da859cc8895"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/1ade82a7871791029f038ded838f990f267293b4",
-                "reference": "1ade82a7871791029f038ded838f990f267293b4",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant/zipball/f054ebb083c4201f22a074efe2815da859cc8895",
+                "reference": "f054ebb083c4201f22a074efe2815da859cc8895",
                 "shasum": ""
             },
             "require": {
@@ -6206,20 +6206,23 @@
                 "spryker-shop/merchant-search-widget": "^1.0.0",
                 "spryker-shop/merchant-widget": "^1.3.0",
                 "spryker/merchant": "^3.10.0",
+                "spryker/merchant-app": "^1.0.0",
                 "spryker/merchant-profile": "^1.5.0",
                 "spryker/merchant-profile-data-import": "^0.6.0",
                 "spryker/merchant-profile-gui": "^1.3.0",
                 "spryker/merchant-user": "^1.5.0",
                 "spryker/merchant-user-gui": "^1.6.0",
-                "spryker/oauth-merchant-user": "^1.0.0"
+                "spryker/oauth-merchant-user": "^1.0.0",
+                "spryker/sales-payment-merchant": "^1.0.0"
             },
             "suggest": {
                 "spryker-feature/merchant": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202404.x-dev"
+                    "dev-master": "202407.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6228,9 +6231,9 @@
             ],
             "description": "Marketplace Merchant [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-merchant/tree/202404.0"
+                "source": "https://github.com/spryker-feature/marketplace-merchant/tree/master"
             },
-            "time": "2024-04-23T08:49:40+00:00"
+            "time": "2024-08-07T09:07:16+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant-commission",
@@ -6238,12 +6241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant-commission.git",
-                "reference": "b9cc4c3cbadd0776bfd6809253e0abe27d8cddf7"
+                "reference": "57bc12c88c3da6d0279eac3572ed2a9f733b47a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-commission/zipball/b9cc4c3cbadd0776bfd6809253e0abe27d8cddf7",
-                "reference": "b9cc4c3cbadd0776bfd6809253e0abe27d8cddf7",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-commission/zipball/57bc12c88c3da6d0279eac3572ed2a9f733b47a2",
+                "reference": "57bc12c88c3da6d0279eac3572ed2a9f733b47a2",
                 "shasum": ""
             },
             "require": {
@@ -6254,7 +6257,8 @@
                 "spryker/merchant-commission-gui": "^1.0.0",
                 "spryker/merchant-sales-order-sales-merchant-commission": "^1.0.0",
                 "spryker/sales-merchant-commission": "^1.0.0",
-                "spryker/sales-merchant-commission-merchant-portal-gui": "^1.0.0"
+                "spryker/sales-merchant-commission-merchant-portal-gui": "^1.0.0",
+                "spryker/sales-payment-merchant-sales-merchant-commission": "^1.0.0"
             },
             "default-branch": true,
             "type": "metapackage",
@@ -6271,7 +6275,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchant-commission/tree/master"
             },
-            "time": "2024-07-10T14:50:15+00:00"
+            "time": "2024-08-07T15:58:13+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant-portal-product-management",
@@ -7219,7 +7223,7 @@
         },
         {
             "name": "spryker-feature/payments",
-            "version": "202404.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/payments.git",
@@ -7239,6 +7243,7 @@
                 "spryker/payment-gui": "^1.3.0",
                 "spryker/sales-payment-detail": "^1.0.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -8428,12 +8433,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/spryker-core.git",
-                "reference": "2cafd1b935cdc33f92534c007eda1e9bdb78ac82"
+                "reference": "bf7a8803af5519b862a96f514992b05c74c608ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/spryker-core/zipball/2cafd1b935cdc33f92534c007eda1e9bdb78ac82",
-                "reference": "2cafd1b935cdc33f92534c007eda1e9bdb78ac82",
+                "url": "https://api.github.com/repos/spryker-feature/spryker-core/zipball/bf7a8803af5519b862a96f514992b05c74c608ef",
+                "reference": "bf7a8803af5519b862a96f514992b05c74c608ef",
                 "shasum": ""
             },
             "require": {
@@ -8479,6 +8484,7 @@
                 "spryker/health-check": "^1.0.1",
                 "spryker/http": "^1.11.0",
                 "spryker/installer": "^4.2.0",
+                "spryker/kernel-app": "^1.0.0",
                 "spryker/locale": "^4.5.0",
                 "spryker/locale-data-import": "^0.1.0",
                 "spryker/locale-gui": "^1.0.0",
@@ -8539,7 +8545,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/spryker-core/tree/master"
             },
-            "time": "2024-07-11T11:06:05+00:00"
+            "time": "2024-08-07T09:07:15+00:00"
         },
         {
             "name": "spryker-feature/spryker-core-back-office",
@@ -11039,16 +11045,16 @@
         },
         {
             "name": "spryker-shop/customer-page",
-            "version": "2.53.0",
+            "version": "2.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-page.git",
-                "reference": "70243113ab4922c48fbf93643a0f73781a19df63"
+                "reference": "1770551a75a3b89c71c9a5cf655a916776e5a7f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/70243113ab4922c48fbf93643a0f73781a19df63",
-                "reference": "70243113ab4922c48fbf93643a0f73781a19df63",
+                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/1770551a75a3b89c71c9a5cf655a916776e5a7f6",
+                "reference": "1770551a75a3b89c71c9a5cf655a916776e5a7f6",
                 "shasum": ""
             },
             "require": {
@@ -11131,9 +11137,9 @@
             ],
             "description": "CustomerPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/customer-page/tree/2.53.0"
+                "source": "https://github.com/spryker-shop/customer-page/tree/2.54.0"
             },
-            "time": "2024-07-09T11:33:31+00:00"
+            "time": "2024-07-26T10:35:05+00:00"
         },
         {
             "name": "spryker-shop/customer-page-extension",
@@ -31280,6 +31286,103 @@
             "time": "2024-05-20T17:36:41+00:00"
         },
         {
+            "name": "spryker/kernel-app",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/kernel-app.git",
+                "reference": "01fa7697e8e3732c1f772295acb91e7832d9b3ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/kernel-app/zipball/01fa7697e8e3732c1f772295acb91e7832d9b3ae",
+                "reference": "01fa7697e8e3732c1f772295acb91e7832d9b3ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/guzzle": "^2.0.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/message-broker-extension": "^1.0.0",
+                "spryker/symfony": "^3.17.0",
+                "spryker/transfer": "^3.27.0",
+                "spryker/util-encoding": "^2.0.0"
+            },
+            "require-dev": {
+                "psr/http-message": "^1.1 || ^2.0",
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/kernel-app-extension": "*",
+                "spryker/message-broker": "*",
+                "spryker/propel": "*",
+                "spryker/ramsey-uuid": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Shared\\KernelApp\\Helper\\": "tests/SprykerTest/Shared/KernelApp/_support/Helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "KernelApp module",
+            "support": {
+                "source": "https://github.com/spryker/kernel-app/tree/1.0.0"
+            },
+            "time": "2024-08-06T15:45:00+00:00"
+        },
+        {
+            "name": "spryker/kernel-app-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/kernel-app-extension.git",
+                "reference": "cf0ab6d76dc28fb793b036ff8e5d232b1daa0333"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/kernel-app-extension/zipball/cf0ab6d76dc28fb793b036ff8e5d232b1daa0333",
+                "reference": "cf0ab6d76dc28fb793b036ff8e5d232b1daa0333",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/transfer": "^3.27.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "KernelAppExtension module",
+            "support": {
+                "source": "https://github.com/spryker/kernel-app-extension/tree/1.0.0"
+            },
+            "time": "2024-08-06T15:45:00+00:00"
+        },
+        {
             "name": "spryker/key-builder",
             "version": "1.1.0",
             "source": {
@@ -32010,6 +32113,123 @@
             "time": "2024-02-06T10:56:40+00:00"
         },
         {
+            "name": "spryker/merchant-app",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-app.git",
+                "reference": "8f8adabf02b51aec0a6a97a1ec11c85015992f4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-app/zipball/8f8adabf02b51aec0a6a97a1ec11c85015992f4d",
+                "reference": "8f8adabf02b51aec0a6a97a1ec11c85015992f4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/kernel": "^3.30.0",
+                "spryker/kernel-app": "^1.0.0",
+                "spryker/kernel-app-extension": "^1.0.0",
+                "spryker/merchant": "^3.0.0",
+                "spryker/merchant-user": "^1.0.0",
+                "spryker/message-broker-extension": "^1.0.0",
+                "spryker/propel-orm": "^1.0.0",
+                "spryker/transfer": "^3.27.0",
+                "spryker/util-encoding": "^2.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/message-broker": "*",
+                "spryker/propel": "*",
+                "spryker/ramsey-uuid": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Shared\\MerchantApp\\Helper\\": "tests/SprykerTest/Shared/MerchantApp/_support/Helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantApp module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-app/tree/1.0.0"
+            },
+            "time": "2024-08-06T15:45:00+00:00"
+        },
+        {
+            "name": "spryker/merchant-app-merchant-portal-gui",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-app-merchant-portal-gui.git",
+                "reference": "b72bcacb4883de4c221a6a0c64a0406fe0ba6e5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-app-merchant-portal-gui/zipball/b72bcacb4883de4c221a6a0c64a0406fe0ba6e5f",
+                "reference": "b72bcacb4883de4c221a6a0c64a0406fe0ba6e5f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/acl-merchant-portal-extension": "^1.0.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/merchant-app": "^1.0.0",
+                "spryker/merchant-user": "^1.0.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/transfer": "^3.27.0",
+                "spryker/zed-ui": "^3.0.0"
+            },
+            "require-dev": {
+                "spryker/application": "*",
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/event-dispatcher": "*",
+                "spryker/form": "*",
+                "spryker/gui": "*",
+                "spryker/merchant": "*",
+                "spryker/propel": "*",
+                "spryker/router": "*",
+                "spryker/store": "*",
+                "spryker/testify": "*",
+                "spryker/twig": "*",
+                "spryker/validator": "*",
+                "spryker/zed-navigation": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantAppMerchantPortalGui module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-app-merchant-portal-gui/tree/1.0.0"
+            },
+            "time": "2024-08-06T15:45:00+00:00"
+        },
+        {
             "name": "spryker/merchant-categories-rest-api",
             "version": "1.0.0",
             "source": {
@@ -32409,16 +32629,16 @@
         },
         {
             "name": "spryker/merchant-commission-gui",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-commission-gui.git",
-                "reference": "0155cedc7dcdfe86ee78ed2afa84a9430bdb12c4"
+                "reference": "c15ac6c2ea9142973405d4f21cdb1e2b57860be9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-commission-gui/zipball/0155cedc7dcdfe86ee78ed2afa84a9430bdb12c4",
-                "reference": "0155cedc7dcdfe86ee78ed2afa84a9430bdb12c4",
+                "url": "https://api.github.com/repos/spryker/merchant-commission-gui/zipball/c15ac6c2ea9142973405d4f21cdb1e2b57860be9",
+                "reference": "c15ac6c2ea9142973405d4f21cdb1e2b57860be9",
                 "shasum": ""
             },
             "require": {
@@ -32456,9 +32676,9 @@
             ],
             "description": "MerchantCommissionGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-commission-gui/tree/1.0.0"
+                "source": "https://github.com/spryker/merchant-commission-gui/tree/1.0.1"
             },
-            "time": "2024-07-10T09:00:59+00:00"
+            "time": "2024-07-23T14:49:16+00:00"
         },
         {
             "name": "spryker/merchant-commission-gui-extension",
@@ -33053,20 +33273,20 @@
         },
         {
             "name": "spryker/merchant-portal-application",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-portal-application.git",
-                "reference": "71cfa3565f4eb29d3c9273a0fddc6be6353b9d32"
+                "reference": "113771c90bf5f647f03431a1880d442126eec051"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-portal-application/zipball/71cfa3565f4eb29d3c9273a0fddc6be6353b9d32",
-                "reference": "71cfa3565f4eb29d3c9273a0fddc6be6353b9d32",
+                "url": "https://api.github.com/repos/spryker/merchant-portal-application/zipball/113771c90bf5f647f03431a1880d442126eec051",
+                "reference": "113771c90bf5f647f03431a1880d442126eec051",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/application": "^3.0.0",
                 "spryker/container": "^1.0.0",
                 "spryker/event-dispatcher-extension": "^1.0.0",
@@ -33099,9 +33319,9 @@
             ],
             "description": "MerchantPortalApplication module",
             "support": {
-                "source": "https://github.com/spryker/merchant-portal-application/tree/1.2.0"
+                "source": "https://github.com/spryker/merchant-portal-application/tree/1.2.1"
             },
-            "time": "2023-10-10T10:57:01+00:00"
+            "time": "2024-08-06T15:45:00+00:00"
         },
         {
             "name": "spryker/merchant-product",
@@ -37037,21 +37257,22 @@
         },
         {
             "name": "spryker/oauth-client",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/oauth-client.git",
-                "reference": "993a2fc531557eb965a1e4606978e969e3ec5895"
+                "reference": "78f1b06bee95af13c3f19526e402c9b39650a209"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/oauth-client/zipball/993a2fc531557eb965a1e4606978e969e3ec5895",
-                "reference": "993a2fc531557eb965a1e4606978e969e3ec5895",
+                "url": "https://api.github.com/repos/spryker/oauth-client/zipball/78f1b06bee95af13c3f19526e402c9b39650a209",
+                "reference": "78f1b06bee95af13c3f19526e402c9b39650a209",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/kernel": "^3.30.0",
+                "spryker/kernel-app-extension": "^1.0.0",
                 "spryker/message-broker-aws-extension": "^1.0.0",
                 "spryker/message-broker-extension": "^1.0.0",
                 "spryker/oauth-client-extension": "^1.0.0",
@@ -37082,9 +37303,9 @@
             ],
             "description": "OauthClient module",
             "support": {
-                "source": "https://github.com/spryker/oauth-client/tree/1.4.0"
+                "source": "https://github.com/spryker/oauth-client/tree/1.5.0"
             },
-            "time": "2023-08-31T11:27:42+00:00"
+            "time": "2024-08-06T15:45:00+00:00"
         },
         {
             "name": "spryker/oauth-client-extension",
@@ -38303,16 +38524,16 @@
         },
         {
             "name": "spryker/payment",
-            "version": "5.18.0",
+            "version": "5.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/payment.git",
-                "reference": "cdc215b6bd526a6531b37ade26cc47ef685ab94a"
+                "reference": "328939e7bc1863640302ed40bb17f653d6df8e80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/payment/zipball/cdc215b6bd526a6531b37ade26cc47ef685ab94a",
-                "reference": "cdc215b6bd526a6531b37ade26cc47ef685ab94a",
+                "url": "https://api.github.com/repos/spryker/payment/zipball/328939e7bc1863640302ed40bb17f653d6df8e80",
+                "reference": "328939e7bc1863640302ed40bb17f653d6df8e80",
                 "shasum": ""
             },
             "require": {
@@ -38343,6 +38564,7 @@
                 "spryker/code-sniffer": "*",
                 "spryker/container": "*",
                 "spryker/propel": "*",
+                "spryker/ramsey-uuid": "*",
                 "spryker/testify": "*"
             },
             "suggest": {
@@ -38368,9 +38590,9 @@
             ],
             "description": "Payment module",
             "support": {
-                "source": "https://github.com/spryker/payment/tree/5.18.0"
+                "source": "https://github.com/spryker/payment/tree/5.21.1"
             },
-            "time": "2024-02-07T17:00:08+00:00"
+            "time": "2024-08-07T10:12:06+00:00"
         },
         {
             "name": "spryker/payment-cart-connector",
@@ -51137,16 +51359,16 @@
         },
         {
             "name": "spryker/sales",
-            "version": "11.49.1",
+            "version": "11.49.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales.git",
-                "reference": "53a49812394e172175e036f02e7d6b7b96123aa6"
+                "reference": "ab95331da553f087bb4d8e60e0ec665fc7d867ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales/zipball/53a49812394e172175e036f02e7d6b7b96123aa6",
-                "reference": "53a49812394e172175e036f02e7d6b7b96123aa6",
+                "url": "https://api.github.com/repos/spryker/sales/zipball/ab95331da553f087bb4d8e60e0ec665fc7d867ad",
+                "reference": "ab95331da553f087bb4d8e60e0ec665fc7d867ad",
                 "shasum": ""
             },
             "require": {
@@ -51213,9 +51435,9 @@
             ],
             "description": "Sales module",
             "support": {
-                "source": "https://github.com/spryker/sales/tree/11.49.1"
+                "source": "https://github.com/spryker/sales/tree/11.49.2"
             },
-            "time": "2024-06-28T09:07:50+00:00"
+            "time": "2024-08-06T15:45:00+00:00"
         },
         {
             "name": "spryker/sales-configurable-bundle",
@@ -51620,16 +51842,16 @@
         },
         {
             "name": "spryker/sales-merchant-portal-gui",
-            "version": "3.0.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-merchant-portal-gui.git",
-                "reference": "94942f3647964aecdb920803c66b7f2b36b976ff"
+                "reference": "7819210fac42c7cb15790e05223072943c13c6e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/94942f3647964aecdb920803c66b7f2b36b976ff",
-                "reference": "94942f3647964aecdb920803c66b7f2b36b976ff",
+                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/7819210fac42c7cb15790e05223072943c13c6e9",
+                "reference": "7819210fac42c7cb15790e05223072943c13c6e9",
                 "shasum": ""
             },
             "require": {
@@ -51664,6 +51886,10 @@
                 "spryker/propel": "*",
                 "spryker/testify": "*"
             },
+            "suggest": {
+                "spryker/sales-merchant-commission-merchant-portal-gui": "Use this module if you want to use templates with merchant commission totals.",
+                "spryker/sales-merchant-portal-gui": "Use this module if you want to use templates with merchant commission totals."
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -51681,9 +51907,9 @@
             ],
             "description": "SalesMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/3.0.0"
+                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/3.0.2"
             },
-            "time": "2024-04-03T13:26:42+00:00"
+            "time": "2024-06-28T09:07:50+00:00"
         },
         {
             "name": "spryker/sales-merchant-portal-gui-extension",
@@ -52184,16 +52410,16 @@
         },
         {
             "name": "spryker/sales-payment",
-            "version": "1.8.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-payment.git",
-                "reference": "2ca71425d715c05ee21bf990675ef86db85cbe6b"
+                "reference": "c4e2275c56eb18cdc865b2e89ea852da48df7f1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-payment/zipball/2ca71425d715c05ee21bf990675ef86db85cbe6b",
-                "reference": "2ca71425d715c05ee21bf990675ef86db85cbe6b",
+                "url": "https://api.github.com/repos/spryker/sales-payment/zipball/c4e2275c56eb18cdc865b2e89ea852da48df7f1a",
+                "reference": "c4e2275c56eb18cdc865b2e89ea852da48df7f1a",
                 "shasum": ""
             },
             "require": {
@@ -52218,7 +52444,7 @@
             },
             "suggest": {
                 "spryker/checkout": "If you want to use Checkout plugins.",
-                "spryker/oms": "If you want to use Oms command plugins."
+                "spryker/oms": "If you want to use OMS plugins."
             },
             "type": "library",
             "extra": {
@@ -52229,6 +52455,7 @@
             "autoload": {
                 "psr-4": {
                     "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Zed\\SalesPayment\\Helper\\": "tests/SprykerTest/Zed/SalesPayment/_support/Helper/",
                     "SprykerTest\\Shared\\SalesPayment\\Helper\\": "tests/SprykerTest/Shared/SalesPayment/_support/Helper/"
                 }
             },
@@ -52238,28 +52465,29 @@
             ],
             "description": "SalesPayment module",
             "support": {
-                "source": "https://github.com/spryker/sales-payment/tree/1.8.0"
+                "source": "https://github.com/spryker/sales-payment/tree/1.10.0"
             },
-            "time": "2024-04-29T16:15:47+00:00"
+            "time": "2024-08-06T15:45:00+00:00"
         },
         {
             "name": "spryker/sales-payment-detail",
-            "version": "1.0.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-payment-detail.git",
-                "reference": "9b380eb985aa9cbf7b14de7fde35c6efa7cd6b3d"
+                "reference": "5aae8d885eaf0a0c6b02e5d23327b59a64270392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-payment-detail/zipball/9b380eb985aa9cbf7b14de7fde35c6efa7cd6b3d",
-                "reference": "9b380eb985aa9cbf7b14de7fde35c6efa7cd6b3d",
+                "url": "https://api.github.com/repos/spryker/sales-payment-detail/zipball/5aae8d885eaf0a0c6b02e5d23327b59a64270392",
+                "reference": "5aae8d885eaf0a0c6b02e5d23327b59a64270392",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
                 "spryker/kernel": "^3.30.0",
                 "spryker/message-broker-extension": "^1.0.0",
+                "spryker/symfony": "^3.5.0",
                 "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
@@ -52288,9 +52516,9 @@
             ],
             "description": "SalesPaymentDetail module",
             "support": {
-                "source": "https://github.com/spryker/sales-payment-detail/tree/1.0.0"
+                "source": "https://github.com/spryker/sales-payment-detail/tree/1.2.0"
             },
-            "time": "2024-03-20T10:59:01+00:00"
+            "time": "2024-08-08T15:05:02+00:00"
         },
         {
             "name": "spryker/sales-payment-extension",
@@ -52375,6 +52603,159 @@
                 "source": "https://github.com/spryker/sales-payment-gui/tree/1.1.0"
             },
             "time": "2023-01-24T16:01:46+00:00"
+        },
+        {
+            "name": "spryker/sales-payment-merchant",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/sales-payment-merchant.git",
+                "reference": "254a9776209afe01fb6be308bbbefd51046e23e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/sales-payment-merchant/zipball/254a9776209afe01fb6be308bbbefd51046e23e8",
+                "reference": "254a9776209afe01fb6be308bbbefd51046e23e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/kernel": "^3.30.0",
+                "spryker/kernel-app": "^1.0.0",
+                "spryker/merchant": "^3.12.0",
+                "spryker/payment": "^5.21.0",
+                "spryker/propel-orm": "^1.0.0",
+                "spryker/sales": "^11.0.0",
+                "spryker/sales-payment": "^1.10.0",
+                "spryker/sales-payment-merchant-extension": "^1.0.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/transfer": "^3.27.0",
+                "spryker/util-encoding": "^2.0.0",
+                "spryker/uuid-behavior": "^1.0.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/oms": "*",
+                "spryker/propel": "*",
+                "spryker/ramsey-uuid": "*",
+                "spryker/testify": "*"
+            },
+            "suggest": {
+                "spryker/oms": "When you want to use the Command and Condition plugins of this module"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Zed\\SalesPaymentMerchant\\Helper\\": "tests/SprykerTest/Zed/SalesPaymentMerchant/_support/Helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SalesPaymentMerchant module",
+            "support": {
+                "source": "https://github.com/spryker/sales-payment-merchant/tree/1.0.0"
+            },
+            "time": "2024-08-06T15:45:00+00:00"
+        },
+        {
+            "name": "spryker/sales-payment-merchant-extension",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/sales-payment-merchant-extension.git",
+                "reference": "fc4d73d90bfa269dab892a8c04fc0bba20f3f89b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/sales-payment-merchant-extension/zipball/fc4d73d90bfa269dab892a8c04fc0bba20f3f89b",
+                "reference": "fc4d73d90bfa269dab892a8c04fc0bba20f3f89b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/transfer": "^3.27.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SalesPaymentMerchantExtension module",
+            "support": {
+                "source": "https://github.com/spryker/sales-payment-merchant-extension/tree/1.0.0"
+            },
+            "time": "2024-08-06T15:45:00+00:00"
+        },
+        {
+            "name": "spryker/sales-payment-merchant-sales-merchant-commission",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/sales-payment-merchant-sales-merchant-commission.git",
+                "reference": "9eca4ce990efa31a59a77b1e8186bdf696603c8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/sales-payment-merchant-sales-merchant-commission/zipball/9eca4ce990efa31a59a77b1e8186bdf696603c8e",
+                "reference": "9eca4ce990efa31a59a77b1e8186bdf696603c8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "spryker/kernel": "^3.30.0",
+                "spryker/sales-merchant-commission": "^1.0.0",
+                "spryker/sales-payment-merchant": "^1.0.0",
+                "spryker/sales-payment-merchant-extension": "^1.0.0",
+                "spryker/tax": "^5.0.0",
+                "spryker/transfer": "^3.27.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/container": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "SalesPaymentMerchantSalesMerchantCommission module",
+            "support": {
+                "source": "https://github.com/spryker/sales-payment-merchant-sales-merchant-commission/tree/1.0.0"
+            },
+            "time": "2024-08-06T15:45:00+00:00"
         },
         {
             "name": "spryker/sales-product-configuration",
@@ -73027,7 +73408,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "46f3ffde43b664ca754160cf942b9b5e19c88e51"
+                "reference": "d0b9abab095fb3a8492d13ac4f0fcd002fd2ebac"
             },
             "default-branch": true,
             "type": "library",
@@ -73035,7 +73416,7 @@
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2024-06-12T08:11:44+00:00"
+            "time": "2024-07-24T10:01:02+00:00"
         },
         {
             "name": "spryker/development",
@@ -74078,6 +74459,12 @@
             "alias_normalized": "202407.0"
         },
         {
+            "package": "spryker-feature/marketplace-merchant",
+            "version": "9999999-dev",
+            "alias": "202407.0",
+            "alias_normalized": "202407.0"
+        },
+        {
             "package": "spryker-feature/marketplace-merchant-commission",
             "version": "9999999-dev",
             "alias": "202407.0",
@@ -74103,6 +74490,12 @@
         },
         {
             "package": "spryker-feature/order-management",
+            "version": "9999999-dev",
+            "alias": "202407.0",
+            "alias_normalized": "202407.0"
+        },
+        {
+            "package": "spryker-feature/payments",
             "version": "9999999-dev",
             "alias": "202407.0",
             "alias_normalized": "202407.0"
@@ -74140,11 +74533,13 @@
         "spryker-feature/configurable-product": 20,
         "spryker-feature/customer-account-management": 20,
         "spryker-feature/gift-cards": 20,
+        "spryker-feature/marketplace-merchant": 20,
         "spryker-feature/marketplace-merchant-commission": 20,
         "spryker-feature/marketplace-merchant-portal-product-management": 20,
         "spryker-feature/marketplace-merchantportal-core": 20,
         "spryker-feature/marketplace-promotions-discounts": 20,
         "spryker-feature/order-management": 20,
+        "spryker-feature/payments": 20,
         "spryker-feature/product": 20,
         "spryker-feature/promotions-discounts": 20,
         "spryker-feature/spryker-core": 20,
