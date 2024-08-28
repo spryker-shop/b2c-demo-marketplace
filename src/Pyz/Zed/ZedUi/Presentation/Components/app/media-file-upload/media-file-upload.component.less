@@ -1,0 +1,107 @@
+@import '~@spryker/styles/src/lib/themes/default/variables/index.less';
+
+.ant-modal:has(.mp-media-file-upload__footer) {
+    min-width: 800px;
+}
+
+.mp-media-file-upload {
+    &__area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 150px;
+        border: 2px solid @gray-light;
+        background: @gray-lighter;
+        position: relative;
+        border-radius: 10px;
+        text-align: center;
+        color: @gray;
+    }
+
+    &__area-icon {
+        font-size: 40px;
+    }
+
+    &__input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+
+    &__clicker {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    &__description {
+        padding-bottom: 14px;
+
+        ul {
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__files {
+        margin-top: 20px;
+        max-height: 300px;
+        overflow-y: auto;
+
+        &--uploading {
+            margin-top: 0;
+            min-height: 200px;
+        }
+    }
+
+    &__progress,
+    &__file {
+        display: block;
+        width: calc(100% - 15px);
+    }
+
+    &__file {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+
+        &:not(:first-child) {
+            padding-top: 10px;
+        }
+
+        &--error {
+            color: @red;
+        }
+    }
+
+    &__file-item {
+        padding-bottom: 10px;
+    }
+
+    &__name {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        align-self: center;
+    }
+
+    &__footer {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+    }
+
+    &__footer--col {
+        grid-column: 1 / span 2;
+    }
+}

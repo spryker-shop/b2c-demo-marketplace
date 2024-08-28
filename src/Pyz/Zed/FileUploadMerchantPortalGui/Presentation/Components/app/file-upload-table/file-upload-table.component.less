@@ -1,0 +1,30 @@
+@import '~@spryker/styles/src/lib/themes/default/variables/index.less';
+
+.mp-file-upload-table {
+    &--inner {
+        background: @gray-lighter;
+        padding: var(--spy-order-file-upload-table-padding, 20px);
+        display: block;
+    }
+
+    &--order-items {
+        .spy-table-search-feature,
+        .ant-table-features--top .spy-table-features-renderer__content {
+            width: 100%;
+        }
+
+        .spy-table-filters-feature__item {
+            flex: 1;
+        }
+    }
+
+    &--file-upload {
+        .spy-table-column-list:has(.spy-table-column-text) {
+            flex-wrap: nowrap;
+
+            .spy-table-column-text {
+                white-space: normal;
+            }
+        }
+    }
+}

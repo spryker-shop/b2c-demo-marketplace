@@ -26,7 +26,8 @@
             "@mp/zed-ui": ["vendor/spryker/zed-ui/mp.public-api.ts"],
             "@mp/*": ["vendor/spryker/*/mp.public-api.ts"],
             "@mp/gui-table": ["vendor/spryker/gui-table/mp.public-api.ts"],
-            "@mp/polyfills": ["./vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/Presentation/Components/mp.polyfills.ts"]
+            "@mp/polyfills": ["./vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/Presentation/Components/mp.polyfills.ts"],
+            "@mp/zed-ui/project": ["src/Pyz/Zed/ZedUi/mp.public-api.ts"]
         }
     },
     "include": [

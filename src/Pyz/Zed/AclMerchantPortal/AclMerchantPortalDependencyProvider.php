@@ -7,6 +7,9 @@
 
 namespace Pyz\Zed\AclMerchantPortal;
 
+use Pyz\Zed\FileUpload\Communication\Plugin\AclMerchantPortal\FileUploadAclEntityConfigurationExpanderPlugin;
+use Pyz\Zed\FileUpload\Communication\Plugin\AclMerchantPortal\FileUploadMerchantAclEntityRuleExpanderPlugin;
+use Pyz\Zed\FileUpload\Communication\Plugin\AclMerchantPortal\FileUploadMerchantPortalGuiMerchantAclRuleExpanderPlugin;
 use Spryker\Zed\Acl\Communication\Plugin\AclMerchantPortal\AclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\AclEntity\Communication\Plugin\AclMerchantPortal\AclEntityAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
@@ -110,6 +113,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new SalesMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
             new ProductOfferServicePointMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
             new MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new FileUploadMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
         ];
     }
 
@@ -160,6 +164,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
     {
         return [
             new MerchantUserMerchantUserAclEntityRuleExpanderPlugin(),
+            new FileUploadMerchantAclEntityRuleExpanderPlugin(),
         ];
     }
 
@@ -225,6 +230,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new ProductOfferServicePointAclEntityConfigurationExpanderPlugin(),
             new MerchantAppAclEntityConfigurationExpanderPlugin(),
             new SalesMerchantCommissionAclEntityConfigurationExpanderPlugin(),
+            new FileUploadAclEntityConfigurationExpanderPlugin(),
         ];
     }
 }

@@ -36,6 +36,9 @@
                     "vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/Presentation/Components/styles.less",
                     "src/Pyz/Zed/ZedUi/Presentation/Components/styles.less"
                 ],
+                "stylePreprocessorOptions": {
+                    "includePaths": ["node_modules/"]
+                },
                 "scripts": []
             },
             "configurations": {

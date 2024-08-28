@@ -1,0 +1,18 @@
+{% extends '@ZedUi/Layout/merchant-layout-main.twig' %}
+{% import _self as view %}
+
+{% block headTitle %}
+    {{ 'File Uploads' | trans }}
+{% endblock %}
+
+{% block content %}
+    <web-mp-page-layout>
+        <h1 title>{{ 'File Uploads' | trans }}</h1>
+
+        <web-mp-file-upload-table
+            table-id="web-mp-list-file-upload"
+            config='{{ guiTableConfiguration(tableConfiguration) }}'
+        >
+        </web-mp-file-upload-table>
+    </web-mp-page-layout>
+{% endblock %}

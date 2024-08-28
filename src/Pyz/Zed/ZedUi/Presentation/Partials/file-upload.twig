@@ -1,0 +1,24 @@
+{% set translations = {
+    mb: 'MB' | trans,
+    copy: 'Copy' | trans,
+    errorType: data.errorType,
+} %}
+
+<web-mp-media-file-upload
+    {% if data.import %}import-url="{{ data.import }}"{% endif %}
+    {% if data.hook %}hook-url="{{ data.hook }}"{% endif %}
+    data="{{ data.fileData | json_encode }}"
+    button-size="{{ data.buttonSize ?: 'lg' }}"
+    max-call-amount="20"
+    translations="{{ translations | json_encode }}"
+    {% if data.multiple %}multiple{% endif %}
+    {% if data.download %}download-url="{{ data.download }}"{% endif %}
+    {% if data.noCDNPreview %}show-cdn="false"{% endif %}
+>
+    {% block textData %}{% endblock %}
+
+    <span modal-cancel-btn>{{ 'Cancel' | trans }}</span>
+    <span modal-upload-btn>{{ 'Upload' | trans }}</span>
+    <span modal-back-btn>{{ 'Back' | trans }}</span>
+    <span modal-show-progress-btn>{{ 'Show Progress' | trans }}</span>
+</web-mp-media-file-upload>

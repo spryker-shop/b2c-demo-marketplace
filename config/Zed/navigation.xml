@@ -672,4 +672,12 @@
             </onboarding>
         </pages>
     </merchant-portal-payment-settings>
+    <file-upload-merchant-portal-gui>
+        <label>Uploaded Files</label>
+        <title>Uploaded Files</title>
+        <icon>files</icon>
+        <bundle>file-upload-merchant-portal-gui</bundle>
+        <controller>list</controller>
+        <action>index</action>
+    </file-upload-merchant-portal-gui>
 </config>

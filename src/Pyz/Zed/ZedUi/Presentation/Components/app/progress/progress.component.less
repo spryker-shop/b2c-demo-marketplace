@@ -1,0 +1,29 @@
+@import 'ng-zorro-antd/progress/style/index.less';
+@import '~@spryker/styles/src/lib/themes/default/theme.less';
+
+.mp-progress .ant-progress {
+    &-success-bg,
+    &-bg {
+        background-color: var(--spy-yellow-light);
+    }
+
+    &-status-success {
+        .ant-progress-bg {
+            background-color: var(--spy-yellow);
+        }
+
+        .ant-progress-text {
+            color: #f6e600;
+        }
+    }
+
+    &-status-exception {
+        .ant-progress-bg {
+            background-color: @red;
+        }
+
+        .ant-progress-text {
+            color: @red;
+        }
+    }
+}
