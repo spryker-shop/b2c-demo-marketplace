@@ -35047,16 +35047,16 @@
         },
         {
             "name": "spryker/merchant-sales-order-sales-merchant-commission",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-sales-order-sales-merchant-commission.git",
-                "reference": "70a61950f1d5639176b7b9691b61019817b063ca"
+                "reference": "f6691e4a2944af272a8082e526c015fb60cc4ed3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-sales-order-sales-merchant-commission/zipball/70a61950f1d5639176b7b9691b61019817b063ca",
-                "reference": "70a61950f1d5639176b7b9691b61019817b063ca",
+                "url": "https://api.github.com/repos/spryker/merchant-sales-order-sales-merchant-commission/zipball/f6691e4a2944af272a8082e526c015fb60cc4ed3",
+                "reference": "f6691e4a2944af272a8082e526c015fb60cc4ed3",
                 "shasum": ""
             },
             "require": {
@@ -35095,9 +35095,9 @@
             ],
             "description": "MerchantSalesOrderSalesMerchantCommission module",
             "support": {
-                "source": "https://github.com/spryker/merchant-sales-order-sales-merchant-commission/tree/1.0.0"
+                "source": "https://github.com/spryker/merchant-sales-order-sales-merchant-commission/tree/1.0.1"
             },
-            "time": "2024-07-10T09:00:59+00:00"
+            "time": "2024-07-25T10:38:58+00:00"
         },
         {
             "name": "spryker/merchant-sales-return",
@@ -52606,16 +52606,16 @@
         },
         {
             "name": "spryker/sales-payment-merchant",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-payment-merchant.git",
-                "reference": "254a9776209afe01fb6be308bbbefd51046e23e8"
+                "reference": "6107b661e486e98ec6e38437cae29c6859bc32eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-payment-merchant/zipball/254a9776209afe01fb6be308bbbefd51046e23e8",
-                "reference": "254a9776209afe01fb6be308bbbefd51046e23e8",
+                "url": "https://api.github.com/repos/spryker/sales-payment-merchant/zipball/6107b661e486e98ec6e38437cae29c6859bc32eb",
+                "reference": "6107b661e486e98ec6e38437cae29c6859bc32eb",
                 "shasum": ""
             },
             "require": {
@@ -52662,9 +52662,9 @@
             ],
             "description": "SalesPaymentMerchant module",
             "support": {
-                "source": "https://github.com/spryker/sales-payment-merchant/tree/1.0.0"
+                "source": "https://github.com/spryker/sales-payment-merchant/tree/1.1.0"
             },
-            "time": "2024-08-06T15:45:00+00:00"
+            "time": "2024-08-13T07:41:07+00:00"
         },
         {
             "name": "spryker/sales-payment-merchant-extension",
