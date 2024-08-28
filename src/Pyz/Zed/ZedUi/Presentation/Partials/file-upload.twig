@@ -1,19 +1,19 @@
 {% set translations = {
     mb: 'MB' | trans,
     copy: 'Copy' | trans,
-    errorType: data.errorType,
+    errorType: data.errorType | default(''),
 } %}
 
 <web-mp-media-file-upload
-    {% if data.import %}import-url="{{ data.import }}"{% endif %}
-    {% if data.hook %}hook-url="{{ data.hook }}"{% endif %}
+    {% if data.import is defined %}import-url="{{ data.import }}"{% endif %}
+    {% if data.hook is defined %}hook-url="{{ data.hook }}"{% endif %}
     data="{{ data.fileData | json_encode }}"
-    button-size="{{ data.buttonSize ?: 'lg' }}"
+    button-size="{{ data.buttonSize is defined ?: 'lg' }}"
     max-call-amount="20"
     translations="{{ translations | json_encode }}"
-    {% if data.multiple %}multiple{% endif %}
-    {% if data.download %}download-url="{{ data.download }}"{% endif %}
-    {% if data.noCDNPreview %}show-cdn="false"{% endif %}
+    {% if data.multiple is defined %}multiple{% endif %}
+    {% if data.download is defined %}download-url="{{ data.download }}"{% endif %}
+    {% if data.noCDNPreview is defined %}show-cdn="false"{% endif %}
 >
     {% block textData %}{% endblock %}
 

@@ -1,22 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const {
-    SPRYKER_PROJECT_DIR,
-    SPRYKER_CORE_DIR,
-    MP_CORE_ENTRY_POINT_FILE,
-    MP_PUBLIC_API_FILE,
-    ROOT_DIR,
-} = require('./mp-paths');const { getMPEntryPoints, entryPointPathToName } = require('./utils');
+const { SPRYKER_CORE_DIR, MP_CORE_ENTRY_POINT_FILE, MP_PUBLIC_API_FILE, ROOT_DIR } = require('./mp-paths');
+const { getMPEntryPoints, entryPointPathToName } = require('./utils');
 
 const TSCONFIG_FILES = ['tsconfig.mp.json'];
-
-function toPascalCase(str) {
-    return str
-        .split('-')
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join('');
-}
 
 async function getMPPathsMap() {
     const entryPoints = await getMPEntryPoints(SPRYKER_CORE_DIR, MP_CORE_ENTRY_POINT_FILE);
@@ -24,9 +12,6 @@ async function getMPPathsMap() {
     return entryPoints.sort().reduce(
         (acc, entryPoint) => ({
             ...acc,
-            [`${entryPointPathToName('@mp/', entryPoint)}/project`]: [
-                path.join(SPRYKER_PROJECT_DIR, toPascalCase(entryPoint.split('/src')[0]), MP_PUBLIC_API_FILE),
-            ],
             [entryPointPathToName('@mp/', entryPoint)]: [
                 path.join(SPRYKER_CORE_DIR, entryPoint.split('/src')[0], MP_PUBLIC_API_FILE),
             ],
@@ -43,8 +28,8 @@ async function updateConfigPaths() {
         const config = require(path.join(ROOT_DIR, fileName));
 
         config.compilerOptions.paths = {
-            ...config.compilerOptions.paths,
             ...mpPaths,
+            ...config.compilerOptions.paths,
         };
 
         fs.writeFileSync(fileName, JSON.stringify(config));

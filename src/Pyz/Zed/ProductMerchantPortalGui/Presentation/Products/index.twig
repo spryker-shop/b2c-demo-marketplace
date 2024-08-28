@@ -25,71 +25,110 @@
         table-id="{{ idTableProductList }}"
         table-config='{{ guiTableConfiguration(productAbstractTableConfiguration) }}'>
         <h1 title>{{ 'Products' | trans }}</h1>
-        <div class="spy-col-basis-auto spy-col-gutter-md">
-            {% set imagesTypes = constant('Pyz\\Shared\\FileUpload\\FileUploadConfig::ACCEPTED_IMAGE_CONTENT_TYPES') | join(', ') %}
-            {% set videoTypes = constant('Pyz\\Shared\\FileUpload\\FileUploadConfig::ACCEPTED_VIDEO_CONTENT_TYPES') | join(', ') %}
-            {% set docTypes = constant('Pyz\\Shared\\FileUpload\\FileUploadConfig::ACCEPTED_DOCUMENT_CONTENT_TYPES') | join(', ') %}
-            {% set types = "#{imagesTypes}, #{videoTypes}, #{docTypes}" %}
-
-            {% set mediaData = [
-                {
-                    size: 2,
-                    errorSize: 'The file should be less then %size% MB' | trans({
-                    '%size%': 2,
-                }),
-                    types: imagesTypes,
-                },
-                {
-                    size: 100,
-                    errorSize: 'The file should be less then %size% MB' | trans({
-                    '%size%': 100,
-                }),
-                    types: videoTypes,
-                },
-                {
-                    size: 25,
-                    errorSize: 'The file should be less then %size% MB' | trans({
-                    '%size%': 25,
-                }),
-                    types: docTypes,
-                }
-            ] %}
-
-            {% embed 'ZedUi/Partials/file-upload.twig' with {
-                data: {
-                    errorType: 'Only %types% file formats are allowed' | trans({
-                        '%types%': types
+        <div button-action class="spy-row spy-row-gutter-md">
+            <div class="spy-col-basis-auto spy-col-gutter-md">
+                {% set mediaData = [
+                    {
+                        size: 15,
+                        errorSize: 'The file should be less then %size% MB' | trans({
+                        '%size%': 15,
                     }),
-                    import: '/product-merchant-portal-gui/products/get-import-url',
-                    hook: '/product-merchant-portal-gui/products/save-import-url',
-                    multiple: true,
-                    fileData: mediaData,
-                    buttonSize: 'md',
-                    download: false,
-                    noCDNPreview: false,
-                }
-            } %}
-                {% block textData %}
-                    <ul description>
-                        <li>
-                            {{ 'Maximum %value% media can be uploaded in one upload.' | trans({
-                                '%value%': 20,
-                            }) }}
-                        </li>
-                    </ul>
-                    <span modal-title>{{ 'Import Media' | trans }}</span>
-                    <span input-label>{{ 'Choose or drag your media' | trans }}</span>
-                    {{ 'Import Media' | trans }}
-                {% endblock %}
-            {% endembed %}
+                        types: 'text/csv',
+                    },
+                ] %}
+
+                {% embed 'ZedUi/Partials/file-upload.twig' with {
+                    data: {
+                        errorType: 'Only %types% file formats are allowed' | trans({
+                            '%types%': 'text/csv'
+                        }),
+                        noCDNPreview: true,
+                        import: '/product-merchant-portal-gui/products/get-import-url',
+                        hook: '/product-merchant-portal-gui/products/save-import-url',
+                        download: '/import_template.csv',
+                        fileData: mediaData,
+                    }
+                } %}
+                    {% block textData %}
+                        <span modal-title>{{ 'Import Products' | trans }}</span>
+                        <span input-label>{{ 'Choose or drag your csv file' | trans }}</span>
+                        <span modal-download-btn>{{ 'Download Template' | trans }}</span>
+                        {{ 'Import Products' | trans }}
+                    {% endblock %}
+                {% endembed %}
+            </div>
+
+            <div class="spy-col-basis-auto spy-col-gutter-md">
+                {% set imagesTypes = constant('Pyz\\Shared\\FileUpload\\FileUploadConfig::ACCEPTED_IMAGE_CONTENT_TYPES') | join(', ') %}
+                {% set videoTypes = constant('Pyz\\Shared\\FileUpload\\FileUploadConfig::ACCEPTED_VIDEO_CONTENT_TYPES') | join(', ') %}
+                {% set docTypes = constant('Pyz\\Shared\\FileUpload\\FileUploadConfig::ACCEPTED_DOCUMENT_CONTENT_TYPES') | join(', ') %}
+                {% set types = "#{imagesTypes}, #{videoTypes}, #{docTypes}" %}
+
+                {% set mediaData = [
+                    {
+                        size: 2,
+                        errorSize: 'The file should be less then %size% MB' | trans({
+                        '%size%': 2,
+                    }),
+                        types: imagesTypes,
+                    },
+                    {
+                        size: 100,
+                        errorSize: 'The file should be less then %size% MB' | trans({
+                        '%size%': 100,
+                    }),
+                        types: videoTypes,
+                    },
+                    {
+                        size: 25,
+                        errorSize: 'The file should be less then %size% MB' | trans({
+                        '%size%': 25,
+                    }),
+                        types: docTypes,
+                    }
+                ] %}
+
+                {% embed 'ZedUi/Partials/file-upload.twig' with {
+                    data: {
+                        errorType: 'Only %types% file formats are allowed' | trans({
+                            '%types%': types
+                        }),
+                        multiple: true,
+                        fileData: mediaData,
+                    }
+                } %}
+                    {% block textData %}
+                        <ul description>
+                            <li>
+                                {{ 'Maximum %value% media can be uploaded in one upload.' | trans({
+                                    '%value%': 20,
+                                }) }}
+                            </li>
+                            <li>
+                                {{ 'Maximum %value% media can be uploaded in one upload.' | trans({
+                                    '%value%': 20,
+                                }) }}
+                            </li>
+                            <li>
+                                {{ 'Maximum %value% media can be uploaded in one upload.' | trans({
+                                    '%value%': 20,
+                                }) }}
+                            </li>
+                        </ul>
+                        <span modal-title>{{ 'Import Media' | trans }}</span>
+                        <span input-label>{{ 'Choose or drag your media' | trans }}</span>
+                        {{ 'Import Media' | trans }}
+                    {% endblock %}
+                {% endembed %}
+            </div>
+
+            <web-spy-button-action
+                class="spy-col-basis-auto spy-col-gutter-md"
+                size="lg"
+                variant="primary"
+                action="{{ actionConfig }}">
+                {{ 'Create Product' | trans }}
+            </web-spy-button-action>
         </div>
-        <web-spy-button-action
-            button-action
-            type="button"
-            size="lg"
-            variant="primary"
-            action="{{ actionConfig }}">
-            {{ 'Create Product' | trans }}
-        </web-spy-button-action>
     </web-mp-product-list>
 {% endblock %}
