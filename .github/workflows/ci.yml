@@ -163,7 +163,7 @@ jobs:
 
     php-82-mariadb-glue-alpine:
         name: "PHP 8.2 / MariaDB / Glue / Alpine"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -216,7 +216,7 @@ jobs:
 
     php-82-mariadb-acceptance-alpine:
         name: "PHP 8.2 / MariaDB / Acceptance / Alpine"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -242,7 +242,7 @@ jobs:
 
     php-82-postgresql-acceptance-alpine:
         name: "PHP 8.2 / PostgreSQL / Acceptance / Alpine"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -292,7 +292,7 @@ jobs:
 
     php-82-postgresql-functional-alpine:
         name: "PHP 8.2 / PostgreSQL / Functional / Alpine"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -368,7 +368,7 @@ jobs:
 
     php-81-postgresql-functional-alpine:
         name: "PHP 8.1 / PostgreSQL / Functional / Alpine"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -393,7 +393,7 @@ jobs:
 
     php-81-mariadb-acceptance-alpine:
         name: "PHP 8.1 / MariaDB / Acceptance / Alpine"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -419,7 +419,7 @@ jobs:
 
     php-81-mariadb-functional-alpine:
         name: "PHP 8.1 / MariaDB / Functional / Alpine"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -444,7 +444,7 @@ jobs:
 
     php-81-postgres-functional-debian:
         name: "PHP 8.1 / PostgreSQL / Functional / Debian"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -468,7 +468,7 @@ jobs:
 
     frontend-assets-via-docker-php-8-1:
         name: "Docker / Alpine / PHP 8.1 / Frontend & Assets"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -487,7 +487,7 @@ jobs:
 
     docker-alpine-php-8-1-mariadb-robot:
         name: "Docker / Alpine / PHP 8.1 / MariaDB / Robot / API"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -531,7 +531,7 @@ jobs:
 
     docker-alpine-php-8-2-postgresql-robot:
         name: "Docker / Alpine / PHP 8.2 / PostgreSQL / Robot / API"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -575,7 +575,7 @@ jobs:
 
     docker-alpine-php-8-2-mariadb-robot-dynamic-multistore:
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Robot / API / Dynamic Multistore"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -618,7 +618,7 @@ jobs:
 
     docker-alpine-php-8-2-mariadb-cypress:
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Cypress / UI"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -670,7 +670,7 @@ jobs:
 
     docker-alpine-php-8-2-mariadb-cypress-dynamic-multistore:
         name: "Docker / Alpine / PHP 8.2 / MariaDB / Cypress / UI / Dynamic Store"
-        if: "!contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "!contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -722,7 +722,7 @@ jobs:
 
     positive-docker-alpine-php-8-1-mariadb-robot:
         name: "[Hackathon] Positive / Docker / Alpine / PHP 8.1 / MariaDB / Robot / API"
-        if: "contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
@@ -766,7 +766,7 @@ jobs:
 
     negative-docker-alpine-php-8-1-mariadb-robot:
         name: "[Hackathon] Negative / Docker / Alpine / PHP 8.1 / MariaDB / Robot / API"
-        if: "contains(github.event.pull_request.labels.*.name, 'hackathon')"
+        if: "contains(github.event.pull_request.head.ref, 'hackathon')"
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
