@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Pyz\Zed\FileUpload\Communication\Plugin\AclMerchantPortal;
+namespace Pyz\Zed\MerchantProductImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal;
 
 use Generated\Shared\Transfer\RuleTransfer;
 use Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantAclRuleExpanderPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
-class FileUploadMerchantPortalGuiMerchantAclRuleExpanderPlugin extends AbstractPlugin implements MerchantAclRuleExpanderPluginInterface
+class MerchantProductImportMerchantAclRuleExpanderPlugin extends AbstractPlugin implements MerchantAclRuleExpanderPluginInterface
 {
     /**
      * @uses {@link \Spryker\Shared\Acl\AclConstants::VALIDATOR_WILDCARD}
@@ -37,7 +37,7 @@ class FileUploadMerchantPortalGuiMerchantAclRuleExpanderPlugin extends AbstractP
     public function expand(array $ruleTransfers): array
     {
         $ruleTransfers[] = (new RuleTransfer())
-            ->setBundle('file-upload-merchant-portal-gui')
+            ->setBundle('merchant-product-import-merchant-portal-gui')
             ->setController(static::RULE_VALIDATOR_WILDCARD)
             ->setAction(static::RULE_VALIDATOR_WILDCARD)
             ->setType(static::RULE_TYPE_ALLOW);

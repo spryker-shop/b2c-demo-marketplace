@@ -21,15 +21,19 @@ class FileUploadEntityManager extends AbstractEntityManager implements FileUploa
     /**
      * @param \Generated\Shared\Transfer\FileUploadTransfer $fileUploadTransfer
      *
-     * @return void
+     * @return \Generated\Shared\Transfer\FileUploadTransfer
      */
-    public function createFileUpload(FileUploadTransfer $fileUploadTransfer): void
+    public function createFileUpload(FileUploadTransfer $fileUploadTransfer): FileUploadTransfer
     {
         $pyzFileUpload = $this->getFactory()
             ->createFileUploadMapper()
             ->mapTransferToEntity($fileUploadTransfer, new PyzFileUpload());
 
         $pyzFileUpload->save();
+
+        $fileUploadTransfer->setIdFileUpload($pyzFileUpload->getIdFileUpload());
+
+        return $fileUploadTransfer;
     }
 
     public function deleteFileUpload(FileUploadTransfer $fileUploadTransfer): bool

@@ -11,6 +11,7 @@ namespace Pyz\Zed\FileUploadMerchantPortalGui\Communication\Controller;
 
 use Generated\Shared\Transfer\FileUploadTransfer;
 use Pyz\Shared\AwsS3\AwsS3Config as SharedAwsS3Config;
+use Pyz\Shared\FileUpload\FileUploadConfig;
 use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -70,6 +71,19 @@ class UploadController extends AbstractController
         ]);
     }
 
+    private function resolveResourceObjectType(string $contentType): string
+    {
+        if (in_array($contentType, array_merge(
+            FileUploadConfig::ACCEPTED_DOCUMENT_CONTENT_TYPES,
+            FileUploadConfig::ACCEPTED_IMAGE_CONTENT_TYPES,
+            FileUploadConfig::ACCEPTED_VIDEO_CONTENT_TYPES,
+        ))) {
+            return SharedAwsS3Config::OBJECT_TYPE_ADDITIONAL_MEDIA;
+        }
+
+        return SharedAwsS3Config::OBJECT_TYPE_CVS_IMPORT;
+    }
+
     private function createHydratedFileUploadTransfer(Request $request): FileUploadTransfer
     {
         $fileName = $request->get(self::PARAM_FILE_NAME);
@@ -82,7 +96,7 @@ class UploadController extends AbstractController
             ->setFileName($fileName)
             ->setContentType($type)
             ->setSize($size)
-            ->setObjectType(SharedAwsS3Config::OBJECT_TYPE_ADDITIONAL_MEDIA);
+            ->setObjectType($this->resolveResourceObjectType($type));
     }
 
     private function createErrorJsonResponse(string $message): JsonResponse

@@ -8,7 +8,7 @@
         <column name="fk_merchant" required="true" type="INTEGER"/>
         <column name="fk_user" required="true" type="INTEGER"/>
         <column name="s3_url" type="VARCHAR" size="255" required="true"/>
-        <column name="cdn_url" type="VARCHAR" size="255" required="true"/>
+        <column name="cdn_url" type="VARCHAR" size="255" required="false"/>
         <column name="original_file_name" type="VARCHAR" size="255" required="true"/>
         <column name="content_type" type="VARCHAR" size="255" required="true"/>
         <column name="size" type="INTEGER" default="0"/>

@@ -53,6 +53,7 @@ class FileUploadBusinessFactory extends AbstractBusinessFactory
             $this->getEntityManager(),
             $this->getMerchantUserFacade(),
             $this->getAwsS3Service(),
+            $this->getFileUploadPostSavePlugins(),
         );
     }
 
@@ -76,5 +77,13 @@ class FileUploadBusinessFactory extends AbstractBusinessFactory
     private function getAwsS3Service(): AwsS3ServiceInterface
     {
         return $this->getProvidedDependency(FileUploadDependencyProvider::SERVICE_AWS_S3);
+    }
+
+    /**
+     * @return array<\Pyz\Zed\FileUpload\Dependency\Plugin\FileUploadPostSavePluginInterface>
+     */
+    private function getFileUploadPostSavePlugins(): array
+    {
+        return $this->getProvidedDependency(FileUploadDependencyProvider::PLUGINS_FILE_UPLOAD_POST_SAVE);
     }
 }

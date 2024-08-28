@@ -10,8 +10,9 @@ declare(strict_types=1);
 namespace Pyz\Zed\FileUpload;
 
 use Pyz\Service\AwsS3\AwsS3ServiceInterface;
-use Pyz\Zed\Merchant\Business\MerchantFacadeInterface;
-use Pyz\Zed\User\Business\UserFacadeInterface;
+use Pyz\Zed\MerchantProductImport\Communication\Plugin\FileUpload\MerchantProductImpostPostSavePlugin;
+use Spryker\Zed\Merchant\Business\MerchantFacadeInterface;
+use Spryker\Zed\User\Business\UserFacadeInterface;
 use Spryker\Zed\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface;
@@ -26,12 +27,15 @@ class FileUploadDependencyProvider extends AbstractBundleDependencyProvider
 
     public const SERVICE_AWS_S3 = 'SERVICE_AWS_S3';
 
+    public const PLUGINS_FILE_UPLOAD_POST_SAVE = 'PLUGINS_FILE_UPLOAD_POST_SAVE';
+
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
 
         $this->addMerchantUserFacade($container);
         $this->addAwsS3Service($container);
+        $this->addFileUploadPostSavePlugins($container);
 
         return $container;
     }
@@ -105,5 +109,25 @@ class FileUploadDependencyProvider extends AbstractBundleDependencyProvider
                 return $container->getLocator()->user()->facade();
             },
         );
+    }
+
+    private function addFileUploadPostSavePlugins(Container $container): void
+    {
+        $container->set(
+            self::PLUGINS_FILE_UPLOAD_POST_SAVE,
+            function (): array {
+                return $this->getFileUploadPostSavePlugins();
+            }
+        );
+    }
+
+    /**
+     * @return array<\Pyz\Zed\FileUpload\Dependency\Plugin\FileUploadPostSavePluginInterface>
+     */
+    private function getFileUploadPostSavePlugins(): array
+    {
+        return [
+            new MerchantProductImpostPostSavePlugin(),
+        ];
     }
 }

@@ -1,0 +1,19 @@
+{% extends '@ZedUi/Layout/merchant-layout-main.twig' %}
+{% import _self as view %}
+
+{% block headTitle %}
+    {{ 'Import History' | trans }}
+{% endblock %}
+
+{% block content %}
+    <web-mp-page-layout>
+        <h1 title>{{ 'Import History' | trans }}</h1>
+
+        <web-mp-import-upload-table
+            table-id='product-import'
+            config='{{ guiTableConfiguration(tableConfiguration) }}'
+            class="mp-items-table--file-upload"
+        >
+        </web-mp-import-upload-table>
+    </web-mp-page-layout>
+{% endblock %}

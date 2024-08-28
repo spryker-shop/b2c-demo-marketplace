@@ -24,6 +24,8 @@ class FileUploadConfig extends AbstractBundleConfig
 
     public const DOCUMENT_FILE_NAME_PATTERN = '{merchant_reference}/document/{file_name}_{timestamp}.{extension}';
 
+    public const IMPORT_CSV_FILE_NAME_PATTERN = '{merchant_reference}-{userId}-{timestamp}-import-products.{extension}';
+
     /**
      * Specification:
      * - Defines allowed content types for each file type.
@@ -36,6 +38,7 @@ class FileUploadConfig extends AbstractBundleConfig
         self::FILE_TYPE_IMAGE => SharedFileUploadConfig::ACCEPTED_IMAGE_CONTENT_TYPES,
         self::FILE_TYPE_VIDEO => SharedFileUploadConfig::ACCEPTED_VIDEO_CONTENT_TYPES,
         self::FILE_TYPE_DOCUMENT => SharedFileUploadConfig::ACCEPTED_DOCUMENT_CONTENT_TYPES,
+        self::FILE_TYPE_IMPORT_CSV => ['text/csv'],
     ];
 
     /**
@@ -50,6 +53,7 @@ class FileUploadConfig extends AbstractBundleConfig
         self::FILE_TYPE_IMAGE => self::IMAGE_FILE_NAME_PATTERN,
         self::FILE_TYPE_VIDEO => self::VIDEO_FILE_NAME_PATTERN,
         self::FILE_TYPE_DOCUMENT => self::DOCUMENT_FILE_NAME_PATTERN,
+        self::FILE_TYPE_IMPORT_CSV => self::IMPORT_CSV_FILE_NAME_PATTERN,
     ];
 
     private const FILE_TYPE_IMAGE = 'image';
@@ -57,6 +61,8 @@ class FileUploadConfig extends AbstractBundleConfig
     private const FILE_TYPE_VIDEO = 'video';
 
     private const FILE_TYPE_DOCUMENT = 'document';
+
+    private const FILE_TYPE_IMPORT_CSV = 'import_csv';
 
     /**
      * @return array<string, array<string>>

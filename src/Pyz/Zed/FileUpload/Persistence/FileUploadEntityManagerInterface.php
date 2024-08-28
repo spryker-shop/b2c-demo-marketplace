@@ -17,9 +17,9 @@ interface FileUploadEntityManagerInterface extends EntityManagerInterface
     /**
      * @param \Generated\Shared\Transfer\FileUploadTransfer $fileUploadTransfer
      *
-     * @return void
+     * @return \Generated\Shared\Transfer\FileUploadTransfer
      */
-    public function createFileUpload(FileUploadTransfer $fileUploadTransfer): void;
+    public function createFileUpload(FileUploadTransfer $fileUploadTransfer): FileUploadTransfer;
 
     public function deleteFileUpload(FileUploadTransfer $fileUploadTransfer): bool;
 }

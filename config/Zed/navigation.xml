@@ -640,10 +640,28 @@
     <product-merchant-portal-gui>
         <label>Products</label>
         <title>Products</title>
-        <icon>products</icon>
+        <icon>offers</icon>
         <bundle>product-merchant-portal-gui</bundle>
         <controller>products</controller>
         <action>index</action>
+        <pages>
+            <products>
+                <label>Products</label>
+                <title>Products</title>
+                <bundle>product-merchant-portal-gui</bundle>
+                <controller>products</controller>
+                <action>index</action>
+                <visible>1</visible>
+            </products>
+            <import-uploads>
+                <label>Import History</label>
+                <title>Import History</title>
+                <bundle>merchant-product-import-merchant-portal-gui</bundle>
+                <controller>imports</controller>
+                <action>index</action>
+                <visible>1</visible>
+            </import-uploads>
+        </pages>
     </product-merchant-portal-gui>
     <agent-dashboard-merchant-portal-gui>
         <label>Merchant Users</label>
