@@ -29,13 +29,13 @@ export interface FileData {
 }
 
 @Component({
-    selector: 'mp-media-file-upload',
-    templateUrl: './media-file-upload.component.html',
-    styleUrls: ['./media-file-upload.component.less'],
+    selector: 'mp-file-uploader',
+    templateUrl: './file-uploader.component.html',
+    styleUrls: ['./file-uploader.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
 })
-export class MediaFileUploadComponent implements OnDestroy, OnInit {
+export class FileUploaderComponent implements OnDestroy, OnInit {
     @Input() importUrl = '/file-upload-merchant-portal-gui/upload/get-upload-url';
     @Input() hookUrl = '/file-upload-merchant-portal-gui/upload/save-upload-data';
     @Input() downloadUrl: string;

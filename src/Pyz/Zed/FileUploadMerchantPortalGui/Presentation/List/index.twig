@@ -6,13 +6,52 @@
 {% endblock %}
 
 {% block content %}
-    <web-mp-page-layout>
-        <h1 title>{{ 'File Uploads' | trans }}</h1>
+    {% set fileUploaderConfig = {
+        data: [
+            {
+                size: 2,
+                errorSize: 'The file should be less then 2MB' | trans,
+                types: ['image/png', 'image/jpeg'],
+            },
+        ],
+        translations: {
+            mb: 'MB' | trans,
+            copy: 'Copy' | trans,
+            errorType: data.errorType | default(''),
+        },
+    }%}
 
-        <web-mp-file-upload-table
-            table-id="web-mp-list-file-upload"
-            config='{{ guiTableConfiguration(tableConfiguration) }}'
-        >
-        </web-mp-file-upload-table>
-    </web-mp-page-layout>
+
+    <web-mp-file-upload-list
+        cloak
+        table-id="web-mp-list-file-upload"
+        table-config='{{ guiTableConfiguration(tableConfiguration) }}'
+    >
+        <h1 title>{{ 'File Uploads' | trans }}</h1>
+        <div action class="spy-row spy-row-gutter-md">
+            <div class="spy-col-basis-auto spy-col-gutter-md">
+                <web-mp-file-uploader
+                    data="{{ fileUploaderConfig.data | json_encode }}"
+                    max-call-amount="20"
+                    translations="{{ fileUploaderConfig.translations | json_encode }}"
+                    multiple
+                >
+                    {% block textData %}
+                        <ul description>
+                            <li>{{ 'You can upload multiple images' | trans }}</li>
+                            <li>{{ 'Max allowed single image size - 2MB' | trans }}</li>
+                        </ul>
+                        <span modal-title>{{ 'Import Images' | trans }}</span>
+                        <span input-label>{{ 'Choose or drag your images' | trans }}</span>
+                        {{ 'Import Images' | trans }}
+                    {% endblock %}
+
+                    <span modal-cancel-btn>{{ 'Cancel' | trans }}</span>
+                    <span modal-upload-btn>{{ 'Upload' | trans }}</span>
+                    <span modal-back-btn>{{ 'Back' | trans }}</span>
+                    <span modal-show-progress-btn>{{ 'Show Progress' | trans }}</span>
+                </web-mp-file-uploader>
+            </div>
+        </div>
+    </web-mp-file-upload-list>
 {% endblock %}

@@ -5,11 +5,11 @@ import { IconModule } from '@spryker/icon';
 import { ModalModule } from '@spryker/modal';
 import { IconFilesModule } from '../../icons';
 import { ProgressModule } from '../progress/progress.module';
-import { MediaFileUploadComponent } from './media-file-upload.component';
+import { FileUploaderComponent } from './file-uploader.component';
 
 @NgModule({
     imports: [IconModule, IconFilesModule, CommonModule, ModalModule, ButtonModule, ButtonLinkModule, ProgressModule],
-    declarations: [MediaFileUploadComponent],
-    exports: [MediaFileUploadComponent],
+    declarations: [FileUploaderComponent],
+    exports: [FileUploaderComponent],
 })
-export class MediaFileUploadModule {}
+export class FileUploaderModule {}

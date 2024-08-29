@@ -8,7 +8,7 @@
 
         @if (!showProgress) {
             @if (!files?.length) {
-                <div class="mp-media-file-upload__description">
+                <div class="mp-file-uploader__description">
                     <ng-content select="[description]"></ng-content>
                 </div>
             }
@@ -16,15 +16,15 @@
             <div
                 (drop)="onSelect($event, $event.dataTransfer.files)"
                 (dragover)="onDragOver($event)"
-                class="mp-media-file-upload__area"
+                class="mp-file-uploader__area"
             >
-                <spy-icon class="mp-media-file-upload__area-icon" name="files"></spy-icon>
+                <spy-icon class="mp-file-uploader__area-icon" name="files"></spy-icon>
                 <ng-content select="[input-label]"></ng-content>
 
-                <label for="media-file-uploader" class="mp-media-file-upload__clicker"></label>
+                <label for="file-uploader" class="mp-file-uploader__clicker"></label>
                 <input
-                    id="media-file-uploader"
-                    class="mp-media-file-upload__input"
+                    id="file-uploader"
+                    class="mp-file-uploader__input"
                     type="file"
                     [attr.multiple]="multiple"
                     [accept]="types"
@@ -33,13 +33,13 @@
             </div>
 
             @if (files?.length) {
-                <div class="mp-media-file-upload__files">
+                <div class="mp-file-uploader__files">
                     @for (file of files; track file.id; let index = $index) {
                         <div
-                            [class.mp-media-file-upload__preload-item--error]="file.error"
-                            class="mp-media-file-upload__file"
+                            [class.mp-file-uploader__preload-item--error]="file.error"
+                            class="mp-file-uploader__file"
                         >
-                            <span class="mp-media-file-upload__name">{{ index + 1 }}. {{ file.name }}</span>
+                            <span class="mp-file-uploader__name">{{ index + 1 }}. {{ file.name }}</span>
                             <span>{{ fileSize(file) }}</span>
                         </div>
 
@@ -49,21 +49,21 @@
             }
         } @else {
             @if (uploadingFiles$ | async; as files) {
-                <div class="mp-media-file-upload__files mp-media-file-upload__files--uploading">
+                <div class="mp-file-uploader__files mp-file-uploader__files--uploading">
                     @for (file$ of files; track $index; let index = $index) {
                         @if (file$ | async; as file) {
-                            <div class="mp-media-file-upload__file-item">
+                            <div class="mp-file-uploader__file-item">
                                 {{ index + 1 }}. {{ file.name }}
 
                                 <mp-progress
                                     [error]="file.error"
-                                    class="mp-media-file-upload__progress"
+                                    class="mp-file-uploader__progress"
                                     [percent]="file.progress"
                                 ></mp-progress>
 
                                 @if (file.url && showCdn) {
-                                    <div class="mp-media-file-upload__file">
-                                        <span class="mp-media-file-upload__name">{{ file.url }}</span>
+                                    <div class="mp-file-uploader__file">
+                                        <span class="mp-file-uploader__name">{{ file.url }}</span>
 
                                         <spy-button type="link" size="sm" (click)="copyToClipboard(file.url)">
                                             {{ this.translations?.copy }}
@@ -77,7 +77,7 @@
             }
         }
 
-        <div class="ant-modal-footer mp-media-file-upload__footer">
+        <div class="ant-modal-footer mp-file-uploader__footer">
             @if ((uploadingFiles$ | async)?.length) {
                 <spy-button size="sm" (click)="onShowProgress()">
                     @if (showProgress) {
@@ -89,7 +89,7 @@
             }
 
             <div
-                [class.mp-media-file-upload__footer--col]="!(uploadingFiles$ | async)?.length"
+                [class.mp-file-uploader__footer--col]="!(uploadingFiles$ | async)?.length"
                 class="spy-row spy-row-align-row-flex-end spy-row-gutter-sm"
             >
                 <spy-button
@@ -129,7 +129,7 @@
     (click)="modal.open(true)"
     [size]="buttonSize"
     variant="secondary"
-    class="mp-media-file-upload__modal_button"
+    class="mp-file-uploader__modal_button"
 >
     <ng-content></ng-content>
 </spy-button>
