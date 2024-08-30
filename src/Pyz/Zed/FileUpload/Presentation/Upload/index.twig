@@ -1,0 +1,24 @@
+{% extends '@Gui/Layout/layout.twig' %}
+
+{% set widget_title = 'Upload file' %}
+
+{% block head_title widget_title | trans %}
+{% block section_title widget_title | trans %}
+
+{% block content %}
+    {% embed '@Gui/Partials/widget.twig' %}
+        {% block widget_content %}
+            {% set acceptedContentTypes = form.vars.accepted_content_type | join(',') %}
+            {{ form_start(form) }}
+                {{ form_rest(form) }}
+                <input
+                    id="media-file-upload"
+                    class="form-control"
+                    type="file"
+                    accept="{{ acceptedContentTypes }}"
+                />
+                <input type="submit" class="btn btn-primary safe-submit" value="{{ 'Save' | trans }}" />
+            {{ form_end(form) }}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

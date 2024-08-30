@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\MerchantProductImport\Persistence"
+          package="src.Orm.Zed.MerchantProductImport.Persistence">
+
+    <table name="pyz_import_upload" phpName="PyzImportUpload">
+        <column name="id_import_upload" type="INTEGER" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="fk_merchant" type="INTEGER" required="true"/>
+        <column name="fk_user" type="INTEGER" required="true"/>
+        <column name="fk_file_upload" type="INTEGER" required="true"/>
+        <column name="status" type="ENUM" valueSet="pending, in_progress, failed, partially_failed, successful" defaultValue="pending"/>
+        <column name="number_of_products_uploaded" type="INTEGER"/>
+        <column name="number_of_products_failed" type="INTEGER"/>
+        <column name="errors" type="LONGVARCHAR"/>
+        <column name="status_updated_at" type="DATETIME"/>
+        <column name="started_at" type="DATETIME"/>
+        <column name="finished_at" type="DATETIME"/>
+
+        <foreign-key name="pyz_import_upload-fk_merchant" foreignTable="spy_merchant" phpName="Merchant" refPhpName="ImportUpload">
+            <reference local="fk_merchant" foreign="id_merchant"/>
+        </foreign-key>
+        <foreign-key name="pyz_import_upload-fk_user" foreignTable="spy_user" phpName="User" refPhpName="ImportUpload">
+            <reference local="fk_user" foreign="id_user"/>
+        </foreign-key>
+        <foreign-key name="pyz_import_upload-fk_file_upload" foreignTable="pyz_file_upload">
+            <reference local="fk_file_upload" foreign="id_file_upload"/>
+        </foreign-key>
+
+        <behavior name="timestampable">
+            <parameter name="disable_updated_at" value="true"/>
+        </behavior>
+
+    </table>
+</database>

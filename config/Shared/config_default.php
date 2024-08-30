@@ -34,6 +34,8 @@ use Generated\Shared\Transfer\SearchEndpointAvailableTransfer;
 use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
 use Generated\Shared\Transfer\SubmitPaymentTaxInvoiceTransfer;
 use Monolog\Logger;
+use Pyz\Shared\AwsS3\AwsS3Config;
+use Pyz\Shared\AwsS3\AwsS3Constants;
 use Pyz\Shared\Console\ConsoleConstants;
 use Pyz\Shared\Scheduler\SchedulerConfig;
 use Pyz\Yves\ShopApplication\YvesBootstrap;
@@ -927,3 +929,30 @@ $config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_CORS_ALLOW_ORIGIN
 $config[PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PUBLIC_KEY');
 $config[PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY');
 $config[PushNotificationWebPushPhpConstants::VAPID_SUBJECT] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT');
+
+// ----------------------------------------------------------------------------
+// ---------------------------- S3 Bucket -------------------------------------
+// ----------------------------------------------------------------------------
+$config[AwsS3Constants::BUCKETS_CONFIGURATION_MAP] = [
+    AwsS3Config::OBJECT_TYPE_CVS_IMPORT => [
+        'region' => getenv('AWS_REGION'),
+        'Bucket' => getenv('DATA_IMPORT_S3_BUCKET'),
+        'version' => 'latest',
+        'credentials' => [
+            'key' => getenv('DATA_IMPORT_S3_KEY'),
+            'secret' => getenv('DATA_IMPORT_S3_SECRET'),
+        ],
+        AwsS3Config::CONFIG_PRE_SIGNED_URL_EXPIRATION => '30 minutes',
+    ],
+    AwsS3Config::OBJECT_TYPE_ADDITIONAL_MEDIA => [
+        'region' => getenv('AWS_REGION'),
+        'Bucket' => getenv('ADDITIONAL_MEDIA_S3_BUCKET'),
+        'version' => 'latest',
+        'credentials' => [
+            'key' => getenv('ADDITIONAL_MEDIA_S3_KEY'),
+            'secret' => getenv('ADDITIONAL_MEDIA_S3_SECRET'),
+        ],
+        AwsS3Config::CONFIG_PRE_SIGNED_URL_EXPIRATION => '15 minutes',
+        AwsS3Config::CONFIG_CDN_HOST => getenv('ADDITIONAL_MEDIA_CDN_URL'),
+    ],
+];

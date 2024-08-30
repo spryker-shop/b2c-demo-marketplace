@@ -1,0 +1,135 @@
+<spy-modal #modal (visibleChange)="onModalVisibleChange($event)">
+    <ng-template>
+        <div class="ant-modal-header">
+            <div class="ant-modal-title">
+                <ng-content select="[modal-title]"></ng-content>
+            </div>
+        </div>
+
+        @if (!showProgress) {
+            @if (!files?.length) {
+                <div class="mp-file-uploader__description">
+                    <ng-content select="[description]"></ng-content>
+                </div>
+            }
+
+            <div
+                (drop)="onSelect($event, $event.dataTransfer.files)"
+                (dragover)="onDragOver($event)"
+                class="mp-file-uploader__area"
+            >
+                <spy-icon class="mp-file-uploader__area-icon" name="files"></spy-icon>
+                <ng-content select="[input-label]"></ng-content>
+
+                <label for="file-uploader" class="mp-file-uploader__clicker"></label>
+                <input
+                    id="file-uploader"
+                    class="mp-file-uploader__input"
+                    type="file"
+                    [attr.multiple]="multiple"
+                    [accept]="types"
+                    (change)="onSelect($event, $event.target.files)"
+                />
+            </div>
+
+            @if (files?.length) {
+                <div class="mp-file-uploader__files">
+                    @for (file of files; track file.id; let index = $index) {
+                        <div
+                            [class.mp-file-uploader__preload-item--error]="file.error"
+                            class="mp-file-uploader__file"
+                        >
+                            <span class="mp-file-uploader__name">{{ index + 1 }}. {{ file.name }}</span>
+                            <span>{{ fileSize(file) }}</span>
+                        </div>
+
+                        <span class="text-alert">{{ file.error }}</span>
+                    }
+                </div>
+            }
+        } @else {
+            @if (uploadingFiles$ | async; as files) {
+                <div class="mp-file-uploader__files mp-file-uploader__files--uploading">
+                    @for (file$ of files; track $index; let index = $index) {
+                        @if (file$ | async; as file) {
+                            <div class="mp-file-uploader__file-item">
+                                {{ index + 1 }}. {{ file.name }}
+
+                                <mp-progress
+                                    [error]="file.error"
+                                    class="mp-file-uploader__progress"
+                                    [percent]="file.progress"
+                                ></mp-progress>
+
+                                @if (file.url && showCdn) {
+                                    <div class="mp-file-uploader__file">
+                                        <span class="mp-file-uploader__name">{{ file.url }}</span>
+
+                                        <spy-button type="link" size="sm" (click)="copyToClipboard(file.url)">
+                                            {{ this.translations?.copy }}
+                                        </spy-button>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            }
+        }
+
+        <div class="ant-modal-footer mp-file-uploader__footer">
+            @if ((uploadingFiles$ | async)?.length) {
+                <spy-button size="sm" (click)="onShowProgress()">
+                    @if (showProgress) {
+                        <ng-content select="[modal-back-btn]"></ng-content>
+                    } @else {
+                        <ng-content select="[modal-show-progress-btn]"></ng-content>
+                    }
+                </spy-button>
+            }
+
+            <div
+                [class.mp-file-uploader__footer--col]="!(uploadingFiles$ | async)?.length"
+                class="spy-row spy-row-align-row-flex-end spy-row-gutter-sm"
+            >
+                <spy-button
+                    [disabled]="!validFiles.length"
+                    class="spy-col-basis-auto spy-col-gutter-sm"
+                    size="sm"
+                    (click)="onImport()"
+                >
+                    <ng-content select="[modal-upload-btn]"></ng-content>
+                </spy-button>
+
+                <spy-button
+                    class="spy-col-basis-auto spy-col-gutter-sm"
+                    size="sm"
+                    variant="secondary"
+                    (click)="modal.close()"
+                >
+                    <ng-content select="[modal-cancel-btn]"></ng-content>
+                </spy-button>
+
+                @if (downloadUrl) {
+                    <spy-button-link
+                        class="spy-col-basis-auto spy-col-gutter-sm"
+                        size="sm"
+                        variant="secondary"
+                        [url]="downloadUrl"
+                    >
+                        <ng-content select="[modal-download-btn]"></ng-content>
+                    </spy-button-link>
+                }
+            </div>
+        </div>
+    </ng-template>
+</spy-modal>
+
+<spy-button
+    (click)="modal.open(true)"
+    [size]="buttonSize"
+    variant="secondary"
+    class="mp-file-uploader__modal_button"
+>
+    <ng-content></ng-content>
+</spy-button>
