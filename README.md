@@ -5,7 +5,7 @@
 
 ## Description
 
-Spryker B2C Demo Marketplace is a collection of Spryker B2C-specific marketplace features. It suits most projects as a starting point of development and can be used to explore Spryker.
+Spryker B2C B2C Demo Marketplace is a collection of Spryker B2C-specific marketplace features. It suits most projects as a starting point of development and can be used to explore Spryker.
 
 ## B2C Demo Marketplace quick start
 
