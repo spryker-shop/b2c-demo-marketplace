@@ -41003,16 +41003,16 @@
         },
         {
             "name": "spryker/product",
-            "version": "6.42.0",
+            "version": "6.43.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product.git",
-                "reference": "a398be4f37f1cf4e924b345e92054f67ea34159f"
+                "reference": "b97eee877a57d91f54b8ba63c3c726c2d2523adc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product/zipball/a398be4f37f1cf4e924b345e92054f67ea34159f",
-                "reference": "a398be4f37f1cf4e924b345e92054f67ea34159f",
+                "url": "https://api.github.com/repos/spryker/product/zipball/b97eee877a57d91f54b8ba63c3c726c2d2523adc",
+                "reference": "b97eee877a57d91f54b8ba63c3c726c2d2523adc",
                 "shasum": ""
             },
             "require": {
@@ -41063,9 +41063,9 @@
             ],
             "description": "Product module",
             "support": {
-                "source": "https://github.com/spryker/product/tree/6.42.0"
+                "source": "https://github.com/spryker/product/tree/6.43.1"
             },
-            "time": "2024-07-03T11:11:29+00:00"
+            "time": "2024-08-23T09:18:56+00:00"
         },
         {
             "name": "spryker/product-abstract-data-feed",
