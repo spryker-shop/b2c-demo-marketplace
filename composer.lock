@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e731b5d02f36376d8b881186e343398",
+    "content-hash": "f6fd28987e88f0bac22ca7ce2752d9d1",
     "packages": [
         {
             "name": "async-aws/core",
@@ -74846,7 +74846,7 @@
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "8.1"
+        "php": "8.2"
     },
     "plugin-api-version": "2.6.0"
 }
