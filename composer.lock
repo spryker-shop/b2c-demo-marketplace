@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c146df4474fa59b76567e56b4c30fca7",
+    "content-hash": "7e731b5d02f36376d8b881186e343398",
     "packages": [
         {
             "name": "async-aws/core",
@@ -1639,12 +1639,12 @@
             "version": "v5.2.13",
             "source": {
                 "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
+                "url": "https://github.com/jsonrainbow/json-schema.git",
                 "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
                 "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793",
                 "shasum": ""
             },
@@ -1699,8 +1699,8 @@
                 "schema"
             ],
             "support": {
-                "issues": "https://github.com/justinrainbow/json-schema/issues",
-                "source": "https://github.com/justinrainbow/json-schema/tree/v5.2.13"
+                "issues": "https://github.com/jsonrainbow/json-schema/issues",
+                "source": "https://github.com/jsonrainbow/json-schema/tree/v5.2.13"
             },
             "time": "2023-09-26T02:20:38+00:00"
         },
@@ -7418,7 +7418,7 @@
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202404.x-dev"
+                    "dev-master": "202407.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7427,7 +7427,7 @@
             ],
             "description": "Product [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/product/tree/202404.0"
+                "source": "https://github.com/spryker-feature/product/tree/master"
             },
             "time": "2024-04-23T08:48:30+00:00"
         },
@@ -58765,7 +58765,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -58779,7 +58779,7 @@
             ],
             "description": "StoreContextStorage module",
             "support": {
-                "source": "https://github.com/spryker/store-context-gui/tree/2.0.0"
+                "source": "https://github.com/spryker/store-context-storage/tree/1.0.0"
             },
             "time": "2024-06-18T09:53:39+00:00"
         },
@@ -74832,7 +74832,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "ext-bcmath": "*",
         "ext-curl": "*",
         "ext-gd": "*",
