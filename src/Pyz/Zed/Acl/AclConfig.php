@@ -46,6 +46,9 @@ class AclConfig extends SprykerAclConfig
             'richard@spryker.com' => [
                 'group' => AclConstants::ROOT_GROUP,
             ],
+            'agent-merchant@spryker.com' => [
+                'group' => AclConstants::ROOT_GROUP,
+            ],
             'martha@video-king.nl' => [],
             'harald@spryker.com' => [],
             'jason.weidmann@budgetcamerasonline.com' => [],
@@ -72,6 +75,8 @@ class AclConfig extends SprykerAclConfig
             'dummy-merchant-portal-gui',
             'price-product-merchant-relationship-merchant-portal-gui',
             'product-offer-service-point-merchant-portal-gui',
+            'agent-dashboard-merchant-portal-gui',
+            'merchant-app-merchant-portal-gui',
         ];
 
         foreach ($bundleNames as $bundleName) {

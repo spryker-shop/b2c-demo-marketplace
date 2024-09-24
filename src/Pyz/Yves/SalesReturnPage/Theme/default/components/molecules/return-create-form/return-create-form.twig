@@ -51,6 +51,7 @@
                         disabled: not data.item.isReturnable,
                         attributes: {
                             additionalModifier: 'big',
+                            'is-returnable': data.item.isReturnable,
                         },
                     }) }}
                 </div>
@@ -142,6 +143,7 @@
                                         disabled: not isReturnable,
                                         attributes: {
                                             additionalModifier: 'big',
+                                            'is-returnable': isReturnable,
                                         },
                                     }) }}
                                 {% endif %}
@@ -242,6 +244,7 @@
                                          disabled: not data.product.isReturnable,
                                          attributes: {
                                              additionalModifier: 'big',
+                                             'is-returnable': data.product.isReturnable,
                                          },
                                      }) }}
                                  {% endif %}

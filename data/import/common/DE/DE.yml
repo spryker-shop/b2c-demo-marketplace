@@ -33,6 +33,11 @@ actions:
     source: data/import/common/DE/discount_amount.csv
   - data_entity: discount-store
     source: data/import/common/DE/discount_store.csv
+  # Merchants
+  - data_entity: merchant-commission-amount
+    source: data/import/common/DE/marketplace/merchant_commission_amount.csv
+  - data_entity: merchant-commission-store
+    source: data/import/common/DE/marketplace/merchant_commission_store.csv
   # Payment methods
   - data_entity: payment-method-store
     source: data/import/common/DE/payment_method_store.csv

@@ -6,7 +6,9 @@
 
         {% if not isItemRelatedToBundle %}
             <div class="grid">
-                {% set hasShippingAddresses = item.shippingAddress.id_customer_address is defined %}
+                {% set shippingAddress = item.shippingAddress %}
+                {% set hasShippingAddresses = shippingAddress.id_customer_address is defined %}
+                {% set isNewAddressSelected = shippingAddress.id_customer_address.vars.value | default == 0 %}
                 {% set itemName = item.vars.data.name | default %}
                 {% set itemQuantity = item.vars.data.quantity | default %}
                 {% set imageUrl = item.vars.data.images[0].externalUrlSmall ?? '' %}
@@ -18,6 +20,7 @@
                 {% set currentShipmentType = item.shipmentType.key.vars.value | default %}
                 {% set isDefaultShipmentType = currentShipmentType == defaultShipmentType %}
                 {% set shipmentTypeHiddenClassName = hasShipmentTypes and not isDefaultShipmentType ? data.hiddenClassName %}
+                {% set newAddressHiddenClassName = not isNewAddressSelected and hasShippingAddresses ? ' ' ~ data.hiddenClassName %}
 
                 {% embed molecule('product-card-item') with {
                     class: 'col col--sm-12 col--lg-6',
@@ -105,10 +108,10 @@
 
                 <div class="{{ deliveryContainerClassName }} {{ data.validationClassName }} {{ shipmentTypeHiddenClassName }} col col--sm-12">
                     {% include molecule('form') with {
-                        class: data.itemShippingClassName ~ ' ' ~ formItemShippingClassName ~ ' ' ~ (hasShippingAddresses ? data.hiddenClassName),
+                        class: data.itemShippingClassName ~ ' ' ~ formItemShippingClassName ~ newAddressHiddenClassName,
                         modifiers: ['checkout-form'],
                         data: {
-                            form: item.shippingAddress,
+                            form: shippingAddress,
                             enableStart: false,
                             enableEnd: false,
                             layout: {
@@ -130,7 +133,6 @@
                             'trigger-selector': '.' ~ deliverySelectClassName,
                             'target-selector': '.' ~ formItemShippingClassName,
                             'parent-target-class-name': config.jsName,
-                            'is-trigger-has-preselected-option': true,
                         },
                     } only %}
                 </div>

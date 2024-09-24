@@ -4,8 +4,8 @@ x-frontend-auth: &frontend-auth
     auth:
         engine: basic
         users:
-            - username: cloud
-              password: cloud
+            -   username: cloud
+                password: cloud
 
 namespace: spryker-cloud
 tag: '1.0'

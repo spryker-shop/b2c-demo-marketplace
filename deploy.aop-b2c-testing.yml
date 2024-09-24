@@ -31,8 +31,8 @@ x-frontend-auth: &frontend-auth
     auth:
         engine: basic
         users:
-            - username: spryker
-              password: secret
+            -   username: spryker
+                password: secret
         exclude:
             - '${ALLOWED_IP}' # AWS gateway
             - 185.60.20.0/24 # PayOne
@@ -58,12 +58,13 @@ image:
 
         #AOP
         SPRYKER_TENANT_IDENTIFIER: "AOP_B2C_Testing-DE"
-        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL: "https://sam-publish.mb-testing.acp.demo-spryker.com/"
-        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL: "https://sam-consume.mb-testing.acp.demo-spryker.com/"
+        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL: "https://publish.mb-testing.acp.demo-spryker.com/"
+        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL: "https://consume.mb-testing.acp.demo-spryker.com/"
 
         SPRYKER_AOP_APPLICATION: '{
             "APP_DOMAINS": [
                 "os.apps-testing.aop.demo-spryker.com",
+                "stripe-testing.acp.demo-spryker.com",
                 "*.bazaarvoice.com"
             ],
             "APP_CATALOG_SCRIPT_URL": "https://app-catalog.atrs-testing.demo-spryker.com/loader"

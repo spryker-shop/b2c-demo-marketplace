@@ -8,11 +8,17 @@
         }
 
         &__link {
+            display: block;
             width: rem(180);
 
             @include helper-breakpoint-media-min($md-min) {
                 width: rem(210);
             }
+        }
+
+        &__image {
+            display: inline-block;
+            vertical-align: top;
         }
 
         &--checkout {
@@ -22,6 +28,8 @@
                 padding: 0 0 rem(22);
             }
         }
+
+        @content;
     }
 }
 

@@ -42,7 +42,7 @@ tag: '1.0'
 
 environment: docker
 image:
-    tag: spryker/php:8.1  # Last actual image
+    tag: spryker/php:8.2  # Last actual image
     environment:
         SPRYKER_PRODUCT_CONFIGURATOR_HOST: date-time-configurator-example.demo-spryker.com
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
@@ -128,6 +128,16 @@ groups:
                     glue.de.example.demo-spryker.com:
                         store: DE
                         primal: true
+            glue_storefront_eu:
+                application: glue-storefront
+                endpoints:
+                    glue-storefront.de.example.cloud.spryker.toys:
+                        store: DE
+            glue_backend_eu:
+                application: glue-backend
+                endpoints:
+                    glue-backend.de.example.cloud.spryker.toys:
+                        store: DE
 services:
     database:
         engine: mysql

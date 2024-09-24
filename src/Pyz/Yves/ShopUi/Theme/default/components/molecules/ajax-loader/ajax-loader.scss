@@ -4,4 +4,8 @@
     &--with-background {
         background-color: $setting-color-white;
     }
+
+    &--viewport-centered {
+        background-color: rgba($setting-color-lighter, 0.5);
+    }
 }

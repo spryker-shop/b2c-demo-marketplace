@@ -31,8 +31,8 @@ x-frontend-auth: &frontend-auth
     auth:
         engine: basic
         users:
-            - username: spryker
-              password: secret
+            -   username: spryker
+                password: secret
         exclude:
             - '${ALLOWED_IP}' # AWS gateway
             - 185.60.20.0/24 # PayOne
@@ -58,12 +58,13 @@ image:
 
         #AOP
         SPRYKER_TENANT_IDENTIFIER: "AOP_Demo_B2C-DE"
-        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL: "https://sam-publish.mb-staging.acp.demo-spryker.com/"
-        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL: "https://sam-consume.mb-staging.acp.demo-spryker.com/"
+        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL: "https://publish.mb-staging.acp.demo-spryker.com/"
+        SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL: "https://consume.mb-staging.acp.demo-spryker.com/"
 
         SPRYKER_AOP_APPLICATION: '{
             "APP_DOMAINS": [
                 "os.apps-staging.aop.demo-spryker.com",
+                "stripe-staging.acp.demo-spryker.com",
                 "*.bazaarvoice.com"
             ],
             "APP_CATALOG_SCRIPT_URL": "https://app-catalog.atrs-staging.demo-spryker.com/loader"
@@ -176,15 +177,16 @@ groups:
                     backend-gateway.at.aop-b2c.demo-spryker.com:
                         store: AT
                         primal: true
-            backapi:
-                application: zed
+            mportal:
+                application: merchant-portal
                 endpoints:
-                    backend-api.de.aop-b2c.demo-spryker.com:
+                    mp.de.aop-b2c.demo-spryker.com:
                         store: DE
-                        entry-point: BackendApi
-                    backend-api.at.aop-b2c.demo-spryker.com:
+                        entry-point: MerchantPortal
+                        primal: true
+                    mp.at.aop-b2c.demo-spryker.com:
                         store: AT
-                        entry-point: BackendApi
+                        entry-point: MerchantPortal
 services:
     database:
         engine: mysql

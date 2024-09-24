@@ -158,56 +158,6 @@ class CheckoutRestApiCest
      *
      * @return void
      */
-    public function requestWithOneItemInQuoteAndCreditCardPayment(CheckoutApiTester $I): void
-    {
-        // Arrange
-        $customerTransfer = $this->fixtures->getCustomerTransfer();
-        $I->authorizeCustomerToGlue($customerTransfer);
-
-        $shipmentMethodTransfer = $this->fixtures->getShipmentMethodTransfer();
-        $quoteTransfer = $I->havePersistentQuoteWithItemsAndItemLevelShipment(
-            $customerTransfer,
-            [$I->getQuoteItemOverrideData($this->fixtures->getProductConcreteTransfers()[0], $shipmentMethodTransfer, 10)],
-        );
-        $shippingAddressTransfer = $quoteTransfer->getItems()[0]->getShipment()->getShippingAddress();
-
-        $url = $I->buildCheckoutUrl();
-        $requestPayload = [
-            'data' => [
-                'type' => CheckoutRestApiConfig::RESOURCE_CHECKOUT,
-                'attributes' => [
-                    'idCart' => $quoteTransfer->getUuid(),
-                    'billingAddress' => $I->getAddressRequestPayload($quoteTransfer->getBillingAddress()),
-                    'shippingAddress' => $I->getAddressRequestPayload($shippingAddressTransfer),
-                    'customer' => $I->getCustomerRequestPayload($customerTransfer),
-                    'payments' => $I->getPaymentRequestPayload(),
-                    'shipment' => $I->getShipmentRequestPayload($shipmentMethodTransfer->getIdShipmentMethod()),
-                ],
-            ],
-        ];
-
-        // Act
-        $I->sendPOST($url, $requestPayload);
-
-        // Assert
-        $I->seeResponseCodeIs(HttpCode::CREATED);
-        $I->seeResponseIsJson();
-        $I->seeResponseMatchesOpenApiSchema();
-
-        $I->assertCheckoutResponseResourceHasCorrectData();
-
-        $I->amSure('The returned resource has correct self link')
-            ->whenI()
-            ->seeSingleResourceHasSelfLink($url);
-    }
-
-    /**
-     * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function requestWithOneItemInQuoteAndPersistedAddresses(CheckoutApiTester $I): void
     {
         // Arrange
@@ -449,5 +399,92 @@ class CheckoutRestApiCest
         $I->assertShipmentExpensesHaveCorrectPrice(
             $shipmentMethodTransfer->getPrices()->offsetGet(0)->getGrossAmountOrFail(),
         );
+    }
+
+    /**
+     * @depends loadFixtures
+     *
+     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
+     *
+     * @return void
+     */
+    public function requestWithCustomerBillingAddressIdOnly(CheckoutApiTester $I): void
+    {
+        // Arrange
+        $customerTransfer = $this->fixtures->getCustomerTransfer();
+        $I->authorizeCustomerToGlue($customerTransfer);
+
+        $shipmentMethodTransfer = $this->fixtures->getShipmentMethodTransfer();
+        $quoteTransfer = $I->havePersistentQuoteWithItemsAndItemLevelShipment(
+            $customerTransfer,
+            [$I->getQuoteItemOverrideData($this->fixtures->getProductConcreteTransfers()[0], $shipmentMethodTransfer, 10)],
+        );
+        $quoteTransfer = $I->getCartFacade()->validateQuote($quoteTransfer)->getQuoteTransfer();
+        $shippingAddressTransfer = $quoteTransfer->getItems()[0]->getShipment()->getShippingAddress();
+
+        $requestPayload = [
+            'data' => [
+                'type' => CheckoutRestApiConfig::RESOURCE_CHECKOUT,
+                'attributes' => [
+                    'idCart' => $quoteTransfer->getUuid(),
+                    'billingAddress' => [
+                        'id' => $this->fixtures->getCustomerAddress()->getUuid(),
+                    ],
+                    'shippingAddress' => $I->getAddressRequestPayload($shippingAddressTransfer),
+                    'payments' => $I->getPaymentRequestPayload(),
+                    'shipment' => $I->getShipmentRequestPayload($shipmentMethodTransfer->getIdShipmentMethod()),
+                ],
+            ],
+        ];
+
+        // Act
+        $I->sendPOST($I->buildCheckoutUrl(['orders']), $requestPayload);
+
+        // Assert
+        $I->seeResponseCodeIs(HttpCode::CREATED);
+        $I->assertCustomerBillingAddressInOrders($this->fixtures->getCustomerAddress());
+    }
+
+    /**
+     * @depends loadFixtures
+     *
+     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
+     *
+     * @return void
+     */
+    public function requestSplitCheckoutWithCustomerShippingAddressIdOnly(CheckoutApiTester $I): void
+    {
+        // Arrange
+        $customerTransfer = $this->fixtures->getCustomerTransfer();
+        $I->authorizeCustomerToGlue($customerTransfer);
+
+        $shipmentMethodTransfer = $this->fixtures->getShipmentMethodTransfer();
+        $quoteTransfer = $I->havePersistentQuoteWithItemsAndItemLevelShipment(
+            $customerTransfer,
+            [$I->getQuoteItemOverrideData($this->fixtures->getProductConcreteTransfers()[0], $shipmentMethodTransfer, 1)],
+        );
+        $quoteTransfer = $I->getCartFacade()->validateQuote($quoteTransfer)->getQuoteTransfer();
+        $itemTransfer = $quoteTransfer->getItems()->offsetGet(0);
+
+        $requestPayload = [
+            'data' => [
+                'type' => CheckoutRestApiConfig::RESOURCE_CHECKOUT,
+                'attributes' => [
+                    'idCart' => $quoteTransfer->getUuid(),
+                    'billingAddress' => $I->getAddressRequestPayload($quoteTransfer->getBillingAddress()),
+                    'payments' => $I->getPaymentRequestPayload(),
+                    'shipments' => [
+                        $I->getSplitShipmentRequestPayload($itemTransfer, $this->fixtures->getCustomerAddress()),
+                    ],
+                ],
+            ],
+        ];
+
+        // Act
+        $I->sendPOST($I->buildCheckoutUrl(['orders', 'order-shipments']), $requestPayload);
+
+        // Assert
+        $I->seeResponseCodeIs(HttpCode::CREATED);
+        $I->assertCustomerShippingAddressInOrderShipments($this->fixtures->getCustomerAddress());
     }
 }

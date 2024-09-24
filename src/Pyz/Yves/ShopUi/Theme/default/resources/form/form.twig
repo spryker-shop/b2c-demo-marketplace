@@ -30,6 +30,7 @@
     {%- endif -%}
 
     {% embed molecule('custom-select') with {
+        class: attr.extraClass | default,
         modifiers: ['expand'],
         attributes: {
             multiple: multiple,
@@ -114,6 +115,7 @@
     {%- set type = type | default('checkbox') -%}
     {%- set component = component | default(atom(type)) -%}
     {%- set label = label | default(name | humanize) | trans -%}
+    {%- set componentClass = componentClass | default -%}
     {%- set modifiers = errors is empty ? ['expand'] : ['expand', 'error'] -%}
     {%- set inputClass = attr.class | default ~ ' ' ~ choices_attr.class | default -%}
 
@@ -130,6 +132,7 @@
     {%- set modifiers = modifiers | merge([attributes.additionalModifier], choices_attr.modifiers | default([])) -%}
 
     {% include component with {
+        class: componentClass,
         modifiers: modifiers,
         data: {
             label: label,

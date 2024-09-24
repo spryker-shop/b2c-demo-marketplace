@@ -125,10 +125,6 @@ export default class SeparateReturnsByMerchant extends SeparateReturnsByMerchant
         });
     }
 
-    protected get checkboxDisabledComponentClass(): string {
-        return this.getAttribute('checkbox-component-disabled-classname');
-    }
-
     protected get selectAllCheckboxesClassName(): string {
         return this.getAttribute('select-all-checkboxes-classname');
     }

@@ -7,6 +7,7 @@
 
 namespace PyzTest\Glue\Checkout\RestApi\Fixtures;
 
+use Generated\Shared\Transfer\AddressTransfer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\MerchantProfileTransfer;
 use Generated\Shared\Transfer\MerchantTransfer;
@@ -51,13 +52,6 @@ class CheckoutRestApiFixtures implements FixturesBuilderInterface, FixturesConta
     protected const PRODUCT_CONCRETES_GENERATE_NUMBER = 100;
 
     /**
-     * @uses \Spryker\Zed\Merchant\MerchantConfig::STATUS_APPROVED
-     *
-     * @var string
-     */
-    protected const MERCHANT_STATUS_APPROVED = 'approved';
-
-    /**
      * @var \Generated\Shared\Transfer\CustomerTransfer
      */
     protected CustomerTransfer $customerTransfer;
@@ -81,6 +75,11 @@ class CheckoutRestApiFixtures implements FixturesBuilderInterface, FixturesConta
      * @var \Generated\Shared\Transfer\ShipmentMethodTransfer
      */
     protected ShipmentMethodTransfer $shipmentMethodTransfer;
+
+    /**
+     * @var \Generated\Shared\Transfer\AddressTransfer
+     */
+    protected AddressTransfer $customerAddress;
 
     /**
      * @return \Generated\Shared\Transfer\CustomerTransfer
@@ -123,6 +122,14 @@ class CheckoutRestApiFixtures implements FixturesBuilderInterface, FixturesConta
     }
 
     /**
+     * @return \Generated\Shared\Transfer\AddressTransfer
+     */
+    public function getCustomerAddress(): AddressTransfer
+    {
+        return $this->customerAddress;
+    }
+
+    /**
      * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
      *
      * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
@@ -141,7 +148,7 @@ class CheckoutRestApiFixtures implements FixturesBuilderInterface, FixturesConta
 
         $merchantTransfer = $I->haveMerchant([
             MerchantTransfer::IS_ACTIVE => true,
-            MerchantTransfer::STATUS => static::MERCHANT_STATUS_APPROVED,
+            MerchantTransfer::STATUS => CheckoutApiTester::MERCHANT_STATUS_APPROVED,
             MerchantTransfer::MERCHANT_PROFILE => new MerchantProfileTransfer(),
         ]);
 
@@ -175,6 +182,11 @@ class CheckoutRestApiFixtures implements FixturesBuilderInterface, FixturesConta
                 $I->getStoreFacade()->getCurrentStore()->getIdStore(),
             ],
         );
+
+        $this->customerAddress = $I->haveCustomerAddress([
+            AddressTransfer::FK_CUSTOMER => $this->customerTransfer->getIdCustomer(),
+            AddressTransfer::FK_COUNTRY => $I->haveCountry()->getIdCountry(),
+        ]);
 
         return $this;
     }
