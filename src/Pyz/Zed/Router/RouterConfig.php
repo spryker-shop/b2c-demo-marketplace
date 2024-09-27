@@ -29,6 +29,7 @@ class RouterConfig extends SprykerRouterConfig
      */
     public function isRoutingCacheEnabled(): bool
     {
+        //
         return true;
     }
 }
