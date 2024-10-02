@@ -14,6 +14,7 @@ use Pyz\Zed\Development\Communication\Console\FunctionalCodeTestConsole;
 use SecurityChecker\Command\SecurityCheckerCommand;
 use Spryker\Zed\AclDataImport\AclDataImportConfig;
 use Spryker\Zed\AclEntityDataImport\AclEntityDataImportConfig;
+use Spryker\Zed\AclMerchantPortal\Communication\Console\AclEntitySynchronizeConsole;
 use Spryker\Zed\Cache\Communication\Console\EmptyAllCachesConsole;
 use Spryker\Zed\CategoryDataImport\CategoryDataImportConfig;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
@@ -403,6 +404,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DeleteExpiredPushNotificationSubscriptionConsole(),
             new SendPushNotificationConsole(),
             new OrderMatrixConsole(),
+            new AclEntitySynchronizeConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
