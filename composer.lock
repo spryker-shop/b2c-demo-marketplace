@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c146df4474fa59b76567e56b4c30fca7",
+    "content-hash": "f4b3e72bd60629461f8d1baa9bb6c051",
     "packages": [
         {
             "name": "async-aws/core",
@@ -5214,7 +5214,7 @@
         },
         {
             "name": "spryker-feature/acl",
-            "version": "202404.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/acl.git",
@@ -5233,6 +5233,7 @@
                 "spryker/acl-entity": "^1.10.0",
                 "spryker/acl-entity-data-import": "^0.2.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -7029,7 +7030,7 @@
         },
         {
             "name": "spryker-feature/merchant",
-            "version": "202404.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/merchant.git",
@@ -7049,6 +7050,7 @@
                 "spryker/merchant-search": "^1.0.0",
                 "spryker/merchant-storage": "^1.1.0"
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
@@ -11579,20 +11581,20 @@
         },
         {
             "name": "spryker-shop/error-page",
-            "version": "1.9.2",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/error-page.git",
-                "reference": "30fe098ff2a2c223266f7311e2048789016f1ead"
+                "reference": "fb29e5b314860d0f6ebd992f0ea2e4b30b6c6e6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/error-page/zipball/30fe098ff2a2c223266f7311e2048789016f1ead",
-                "reference": "30fe098ff2a2c223266f7311e2048789016f1ead",
+                "url": "https://api.github.com/repos/spryker-shop/error-page/zipball/fb29e5b314860d0f6ebd992f0ea2e4b30b6c6e6c",
+                "reference": "fb29e5b314860d0f6ebd992f0ea2e4b30b6c6e6c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.2",
                 "spryker-shop/error-page-extension": "^1.0.0",
                 "spryker-shop/shop-application": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.0.0",
@@ -11605,7 +11607,8 @@
                 "spryker/code-sniffer": "*",
                 "spryker/container": "*",
                 "spryker/event-dispatcher": "*",
-                "spryker/silex": "*"
+                "spryker/silex": "*",
+                "spryker/testify": "*"
             },
             "suggest": {
                 "spryker/container": "Use this module when you want to use the ErrorPageEventDispatcherPlugin.",
@@ -11629,9 +11632,9 @@
             ],
             "description": "ErrorPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/error-page/tree/1.9.2"
+                "source": "https://github.com/spryker-shop/error-page/tree/1.10.0"
             },
-            "time": "2023-03-10T12:46:37+00:00"
+            "time": "2024-09-23T17:26:38+00:00"
         },
         {
             "name": "spryker-shop/error-page-extension",
@@ -16514,16 +16517,16 @@
         },
         {
             "name": "spryker/acl-entity",
-            "version": "1.10.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-entity.git",
-                "reference": "89a2bcb33192de938a2173b33b6a84f585b7c72f"
+                "reference": "da2ebc55e28a04fd17cbd3376ab2d9365af2603f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/89a2bcb33192de938a2173b33b6a84f585b7c72f",
-                "reference": "89a2bcb33192de938a2173b33b6a84f585b7c72f",
+                "url": "https://api.github.com/repos/spryker/acl-entity/zipball/da2ebc55e28a04fd17cbd3376ab2d9365af2603f",
+                "reference": "da2ebc55e28a04fd17cbd3376ab2d9365af2603f",
                 "shasum": ""
             },
             "require": {
@@ -16570,9 +16573,9 @@
             ],
             "description": "AclEntity module",
             "support": {
-                "source": "https://github.com/spryker/acl-entity/tree/1.10.0"
+                "source": "https://github.com/spryker/acl-entity/tree/1.12.0"
             },
-            "time": "2024-03-27T10:11:29+00:00"
+            "time": "2024-09-12T11:11:33+00:00"
         },
         {
             "name": "spryker/acl-entity-data-import",
@@ -16758,32 +16761,33 @@
         },
         {
             "name": "spryker/acl-merchant-portal",
-            "version": "1.12.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/acl-merchant-portal.git",
-                "reference": "f729c4336410cd87eccfeba7089c50d530fa8100"
+                "reference": "06c3161c9f16f84cd9b81d8503e863f9e49ed6a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/acl-merchant-portal/zipball/f729c4336410cd87eccfeba7089c50d530fa8100",
-                "reference": "f729c4336410cd87eccfeba7089c50d530fa8100",
+                "url": "https://api.github.com/repos/spryker/acl-merchant-portal/zipball/06c3161c9f16f84cd9b81d8503e863f9e49ed6a2",
+                "reference": "06c3161c9f16f84cd9b81d8503e863f9e49ed6a2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
                 "spryker/acl": "^3.19.0",
-                "spryker/acl-entity": "^1.0.0",
+                "spryker/acl-entity": "^1.12.0",
                 "spryker/acl-entity-extension": "^1.0.0",
                 "spryker/acl-extension": "^1.1.0",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/agent-dashboard-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
-                "spryker/merchant": "^3.0.0",
+                "spryker/merchant": "^3.13.0",
                 "spryker/merchant-extension": "^1.1.0",
-                "spryker/merchant-user": "^1.0.0",
+                "spryker/merchant-user": "^1.5.0",
                 "spryker/merchant-user-extension": "^1.1.0",
                 "spryker/security-merchant-portal-gui-extension": "^1.0.0",
+                "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
@@ -16812,9 +16816,9 @@
             ],
             "description": "AclMerchantPortal module",
             "support": {
-                "source": "https://github.com/spryker/acl-merchant-portal/tree/1.12.0"
+                "source": "https://github.com/spryker/acl-merchant-portal/tree/1.13.0"
             },
-            "time": "2024-02-06T10:56:40+00:00"
+            "time": "2024-09-12T11:11:33+00:00"
         },
         {
             "name": "spryker/acl-merchant-portal-extension",
@@ -32059,16 +32063,16 @@
         },
         {
             "name": "spryker/merchant",
-            "version": "3.12.0",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant.git",
-                "reference": "8296b16772ce4e1c3f09d611abeaa80095ba9169"
+                "reference": "6343acf11129b4c992848c3d6945ecb0e0459d0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant/zipball/8296b16772ce4e1c3f09d611abeaa80095ba9169",
-                "reference": "8296b16772ce4e1c3f09d611abeaa80095ba9169",
+                "url": "https://api.github.com/repos/spryker/merchant/zipball/6343acf11129b4c992848c3d6945ecb0e0459d0b",
+                "reference": "6343acf11129b4c992848c3d6945ecb0e0459d0b",
                 "shasum": ""
             },
             "require": {
@@ -32117,9 +32121,9 @@
             ],
             "description": "Merchant module",
             "support": {
-                "source": "https://github.com/spryker/merchant/tree/3.12.0"
+                "source": "https://github.com/spryker/merchant/tree/3.13.0"
             },
-            "time": "2024-05-28T11:32:17+00:00"
+            "time": "2024-09-12T11:11:33+00:00"
         },
         {
             "name": "spryker/merchant-agent",
@@ -56039,20 +56043,20 @@
         },
         {
             "name": "spryker/session",
-            "version": "4.16.0",
+            "version": "4.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/session.git",
-                "reference": "8b0943ff4b7c02d2e69d5b7ccf4f6f73563b0248"
+                "reference": "69356d9bef6448d740147f15fd06e8ad243d4deb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/session/zipball/8b0943ff4b7c02d2e69d5b7ccf4f6f73563b0248",
-                "reference": "8b0943ff4b7c02d2e69d5b7ccf4f6f73563b0248",
+                "url": "https://api.github.com/repos/spryker/session/zipball/69356d9bef6448d740147f15fd06e8ad243d4deb",
+                "reference": "69356d9bef6448d740147f15fd06e8ad243d4deb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/config": "^3.0.0",
                 "spryker/event-dispatcher-extension": "^1.0.0",
@@ -56099,9 +56103,9 @@
             ],
             "description": "Session module",
             "support": {
-                "source": "https://github.com/spryker/session/tree/4.16.0"
+                "source": "https://github.com/spryker/session/tree/4.17.0"
             },
-            "time": "2023-11-02T20:09:27+00:00"
+            "time": "2024-09-27T13:35:51+00:00"
         },
         {
             "name": "spryker/session-customer-validation-extension",
@@ -74792,6 +74796,12 @@
     ],
     "aliases": [
         {
+            "package": "spryker-feature/acl",
+            "version": "9999999-dev",
+            "alias": "202407.0",
+            "alias_normalized": "202407.0"
+        },
+        {
             "package": "spryker-feature/agent-assist",
             "version": "9999999-dev",
             "alias": "202407.0",
@@ -74858,6 +74868,12 @@
             "alias_normalized": "202407.0"
         },
         {
+            "package": "spryker-feature/merchant",
+            "version": "9999999-dev",
+            "alias": "202407.0",
+            "alias_normalized": "202407.0"
+        },
+        {
             "package": "spryker-feature/order-management",
             "version": "9999999-dev",
             "alias": "202407.0",
@@ -74896,6 +74912,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "spryker-feature/acl": 20,
         "spryker-feature/agent-assist": 20,
         "spryker-feature/cart": 20,
         "spryker-feature/configurable-bundle": 20,
@@ -74907,6 +74924,7 @@
         "spryker-feature/marketplace-merchant-portal-product-management": 20,
         "spryker-feature/marketplace-merchantportal-core": 20,
         "spryker-feature/marketplace-promotions-discounts": 20,
+        "spryker-feature/merchant": 20,
         "spryker-feature/order-management": 20,
         "spryker-feature/payments": 20,
         "spryker-feature/product": 20,
@@ -74920,7 +74938,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "ext-bcmath": "*",
         "ext-curl": "*",
         "ext-gd": "*",
@@ -74934,7 +74952,7 @@
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "8.1"
+        "php": "8.2"
     },
     "plugin-api-version": "2.6.0"
 }
