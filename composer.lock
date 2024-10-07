@@ -32221,20 +32221,20 @@
         },
         {
             "name": "spryker/merchant-app",
-            "version": "1.1.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-app.git",
-                "reference": "81f5d1aaa6220d859ea75f45cddb1eaaba7f754f"
+                "reference": "c9dbb8c24056da7acd37515930f246ae71d4ce02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-app/zipball/81f5d1aaa6220d859ea75f45cddb1eaaba7f754f",
-                "reference": "81f5d1aaa6220d859ea75f45cddb1eaaba7f754f",
+                "url": "https://api.github.com/repos/spryker/merchant-app/zipball/c9dbb8c24056da7acd37515930f246ae71d4ce02",
+                "reference": "c9dbb8c24056da7acd37515930f246ae71d4ce02",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/kernel": "^3.30.0",
                 "spryker/kernel-app": "^1.1.0",
                 "spryker/kernel-app-extension": "^1.0.0",
@@ -32271,9 +32271,9 @@
             ],
             "description": "MerchantApp module",
             "support": {
-                "source": "https://github.com/spryker/merchant-app/tree/1.1.0"
+                "source": "https://github.com/spryker/merchant-app/tree/1.3.0"
             },
-            "time": "2024-09-06T13:27:51+00:00"
+            "time": "2024-10-04T08:31:44+00:00"
         },
         {
             "name": "spryker/merchant-app-merchant-portal-gui",
