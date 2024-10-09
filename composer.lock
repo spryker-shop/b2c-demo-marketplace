@@ -32537,20 +32537,20 @@
         },
         {
             "name": "spryker/merchant-commission",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-commission.git",
-                "reference": "479c60b680749ce4115315a39c4d04e99eeb1101"
+                "reference": "b455351c053de405f017d93dcc72c665adabbf85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-commission/zipball/479c60b680749ce4115315a39c4d04e99eeb1101",
-                "reference": "479c60b680749ce4115315a39c4d04e99eeb1101",
+                "url": "https://api.github.com/repos/spryker/merchant-commission/zipball/b455351c053de405f017d93dcc72c665adabbf85",
+                "reference": "b455351c053de405f017d93dcc72c665adabbf85",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/currency": "^4.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/merchant": "^3.0.0",
@@ -32587,9 +32587,9 @@
             ],
             "description": "MerchantCommission module",
             "support": {
-                "source": "https://github.com/spryker/merchant-commission/tree/1.0.0"
+                "source": "https://github.com/spryker/merchant-commission/tree/1.1.0"
             },
-            "time": "2024-07-10T09:00:59+00:00"
+            "time": "2024-10-08T11:51:31+00:00"
         },
         {
             "name": "spryker/merchant-commission-data-export",
