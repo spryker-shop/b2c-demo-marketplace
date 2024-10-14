@@ -29386,21 +29386,21 @@
         },
         {
             "name": "spryker/flysystem-aws3v3-file-system",
-            "version": "3.0.1",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/flysystem-aws3v3-file-system.git",
-                "reference": "214c9951f12cc115bb341a0292a64fa18a967606"
+                "reference": "1a814a602cb7c4b21d25ffcf51b3a40ed645fb21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/flysystem-aws3v3-file-system/zipball/214c9951f12cc115bb341a0292a64fa18a967606",
-                "reference": "214c9951f12cc115bb341a0292a64fa18a967606",
+                "url": "https://api.github.com/repos/spryker/flysystem-aws3v3-file-system/zipball/1a814a602cb7c4b21d25ffcf51b3a40ed645fb21",
+                "reference": "1a814a602cb7c4b21d25ffcf51b3a40ed645fb21",
                 "shasum": ""
             },
             "require": {
-                "league/flysystem-aws-s3-v3": "^3.0.0",
-                "php": ">=8.1",
+                "league/flysystem-aws-s3-v3": "^3.24.0",
+                "php": ">=8.2",
                 "spryker/kernel": "^3.30.0"
             },
             "require-dev": {
@@ -29429,9 +29429,9 @@
             ],
             "description": "FlysystemAws3v3FileSystem module",
             "support": {
-                "source": "https://github.com/spryker/flysystem-aws3v3-file-system/tree/3.0.1"
+                "source": "https://github.com/spryker/flysystem-aws3v3-file-system/tree/3.1.1"
             },
-            "time": "2024-08-30T12:53:48+00:00"
+            "time": "2024-10-14T07:44:15+00:00"
         },
         {
             "name": "spryker/flysystem-ftp-file-system",
@@ -32926,20 +32926,20 @@
         },
         {
             "name": "spryker/merchant-gui",
-            "version": "3.12.0",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-gui.git",
-                "reference": "8d850b17ddb3a5db38ab90aa6e1c6df049a97654"
+                "reference": "33d07ac2d4cd3551eede15b3a2a8ec824449385d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-gui/zipball/8d850b17ddb3a5db38ab90aa6e1c6df049a97654",
-                "reference": "8d850b17ddb3a5db38ab90aa6e1c6df049a97654",
+                "url": "https://api.github.com/repos/spryker/merchant-gui/zipball/33d07ac2d4cd3551eede15b3a2a8ec824449385d",
+                "reference": "33d07ac2d4cd3551eede15b3a2a8ec824449385d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/availability-gui-extension": "^1.0.0",
                 "spryker/gui": "^3.45.0",
                 "spryker/kernel": "^3.52.0",
@@ -32979,9 +32979,9 @@
             ],
             "description": "MerchantGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-gui/tree/3.12.0"
+                "source": "https://github.com/spryker/merchant-gui/tree/3.13.0"
             },
-            "time": "2024-03-27T10:11:29+00:00"
+            "time": "2024-10-11T13:05:23+00:00"
         },
         {
             "name": "spryker/merchant-gui-extension",
@@ -34682,20 +34682,20 @@
         },
         {
             "name": "spryker/merchant-profile",
-            "version": "1.5.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-profile.git",
-                "reference": "59498048281d61b062a6c6c6a7d755e4a6c000e9"
+                "reference": "7a7f8cd9b6924dfee8f23b00adec810a7126bdd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-profile/zipball/59498048281d61b062a6c6c6a7d755e4a6c000e9",
-                "reference": "59498048281d61b062a6c6c6a7d755e4a6c000e9",
+                "url": "https://api.github.com/repos/spryker/merchant-profile/zipball/7a7f8cd9b6924dfee8f23b00adec810a7126bdd9",
+                "reference": "7a7f8cd9b6924dfee8f23b00adec810a7126bdd9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/country": "^3.0.0 || ^4.0.0",
                 "spryker/glossary": "^3.0.0",
@@ -34731,9 +34731,9 @@
             ],
             "description": "MerchantProfile module",
             "support": {
-                "source": "https://github.com/spryker/merchant-profile/tree/1.5.0"
+                "source": "https://github.com/spryker/merchant-profile/tree/1.7.0"
             },
-            "time": "2023-09-18T09:59:00+00:00"
+            "time": "2024-10-11T13:05:23+00:00"
         },
         {
             "name": "spryker/merchant-profile-data-import",
@@ -45257,21 +45257,21 @@
         },
         {
             "name": "spryker/product-management",
-            "version": "0.19.42",
+            "version": "0.19.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-management.git",
-                "reference": "1ae46d9c43f3f303d5b7f6b4305f42403488b54a"
+                "reference": "c37f167c7c086c5bdcae733cbfa1d8ac155ebf8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-management/zipball/1ae46d9c43f3f303d5b7f6b4305f42403488b54a",
-                "reference": "1ae46d9c43f3f303d5b7f6b4305f42403488b54a",
+                "url": "https://api.github.com/repos/spryker/product-management/zipball/c37f167c7c086c5bdcae733cbfa1d8ac155ebf8a",
+                "reference": "c37f167c7c086c5bdcae733cbfa1d8ac155ebf8a",
                 "shasum": ""
             },
             "require": {
                 "everon/collection": "^1.0.0",
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/availability": "^9.0.0",
                 "spryker/category": "^3.0.0 || ^4.0.0 || ^5.0.0",
                 "spryker/currency": "^3.2.0 || ^4.0.0",
@@ -45288,7 +45288,7 @@
                 "spryker/product-category": "^4.12.1",
                 "spryker/product-group": "^1.0.0",
                 "spryker/product-image": "^3.0.0",
-                "spryker/product-management-extension": "^1.6.0",
+                "spryker/product-management-extension": "^1.7.0",
                 "spryker/product-validity": "^1.0.0",
                 "spryker/propel-orm": "^1.0.0",
                 "spryker/stock": "^8.0.0",
@@ -45334,26 +45334,26 @@
             ],
             "description": "ProductManagement module",
             "support": {
-                "source": "https://github.com/spryker/product-management/tree/0.19.42"
+                "source": "https://github.com/spryker/product-management/tree/0.19.43"
             },
-            "time": "2024-09-12T14:55:57+00:00"
+            "time": "2024-10-10T13:43:31+00:00"
         },
         {
             "name": "spryker/product-management-extension",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-management-extension.git",
-                "reference": "9e9d5492bc92e045d57f3f976b632561425e29ce"
+                "reference": "6f24c8d587b8dc49d3dfd5a2c1d82e743b7db7a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-management-extension/zipball/9e9d5492bc92e045d57f3f976b632561425e29ce",
-                "reference": "9e9d5492bc92e045d57f3f976b632561425e29ce",
+                "url": "https://api.github.com/repos/spryker/product-management-extension/zipball/6f24c8d587b8dc49d3dfd5a2c1d82e743b7db7a0",
+                "reference": "6f24c8d587b8dc49d3dfd5a2c1d82e743b7db7a0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=8.2"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -45381,9 +45381,9 @@
             ],
             "description": "ProductManagementExtension module",
             "support": {
-                "source": "https://github.com/spryker/product-management-extension/tree/1.6.0"
+                "source": "https://github.com/spryker/product-management-extension/tree/1.7.0"
             },
-            "time": "2022-02-11T12:49:43+00:00"
+            "time": "2024-10-10T13:43:31+00:00"
         },
         {
             "name": "spryker/product-merchant-commission-connector",
