@@ -1,13 +1,13 @@
 <?php
 
 /**
- * This file is part of the Spryker Commerce OS.
+ * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace PyzTest\Yves\Application\Presentation\Controller;
+namespace PyzTest\Yves\Application\Controller;
 
-use PyzTest\Yves\Application\ApplicationPresentationTester;
+use PyzTest\Yves\Application\ApplicationControllerTester;
 use PyzTest\Yves\Application\PageObject\Homepage;
 
 /**
@@ -16,7 +16,6 @@ use PyzTest\Yves\Application\PageObject\Homepage;
  * @group PyzTest
  * @group Yves
  * @group Application
- * @group Presentation
  * @group Controller
  * @group HomepageCest
  * Add your own group annotations below this line
@@ -24,11 +23,11 @@ use PyzTest\Yves\Application\PageObject\Homepage;
 class HomepageCest
 {
     /**
-     * @param \PyzTest\Yves\Application\ApplicationPresentationTester $i
+     * @param \PyzTest\Yves\Application\ApplicationControllerTester $i
      *
      * @return void
      */
-    public function testICanOpenHomepage(ApplicationPresentationTester $i): void
+    public function testICanOpenHomepage(ApplicationControllerTester $i): void
     {
         $i->wantTo('See that i can open the homepage');
         $i->amOnPage(Homepage::URL);

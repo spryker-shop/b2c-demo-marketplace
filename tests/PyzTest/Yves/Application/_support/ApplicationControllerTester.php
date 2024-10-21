@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file is part of the Spryker Commerce OS.
+ * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
 namespace PyzTest\Yves\Application;
 
 use Codeception\Actor;
-use Codeception\Scenario;
 
 /**
  * Inherited Methods
@@ -22,21 +21,11 @@ use Codeception\Scenario;
  * @method void am($role)
  * @method void lookForwardTo($achieveValue)
  * @method void comment($description)
- * @method \Codeception\Lib\Friend haveFriend($name, $actorClass = NULL)
+ * @method void pause()
  *
  * @SuppressWarnings(\PyzTest\Yves\Application\PHPMD)
  */
-class ApplicationPresentationTester extends Actor
+class ApplicationControllerTester extends Actor
 {
-    use _generated\ApplicationPresentationTesterActions;
-
-    /**
-     * @param \Codeception\Scenario $scenario
-     */
-    public function __construct(Scenario $scenario)
-    {
-        parent::__construct($scenario);
-
-        $this->amYves();
-    }
+    use _generated\ApplicationControllerTesterActions;
 }
