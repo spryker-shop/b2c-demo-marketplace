@@ -83,7 +83,7 @@ class SuccessStepTest extends Unit
      *
      * @return \SprykerShop\Yves\CheckoutPage\Process\Steps\SuccessStep
      */
-    protected function createSuccessStep($customerClientMock = null, CheckoutPageToCartClientInterface $cartClientMock = null): SuccessStep
+    protected function createSuccessStep($customerClientMock = null, ?CheckoutPageToCartClientInterface $cartClientMock = null): SuccessStep
     {
         if ($customerClientMock === null) {
             $customerClientMock = $this->createCustomerClientMock();
