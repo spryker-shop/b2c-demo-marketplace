@@ -5323,12 +5323,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/analytics.git",
-                "reference": "5625f8ef458404640ff2046051456ea4d66cbbb3"
+                "reference": "2cd63d9b7356de6d8267100065ccab1c27192469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/analytics/zipball/5625f8ef458404640ff2046051456ea4d66cbbb3",
-                "reference": "5625f8ef458404640ff2046051456ea4d66cbbb3",
+                "url": "https://api.github.com/repos/spryker-feature/analytics/zipball/2cd63d9b7356de6d8267100065ccab1c27192469",
+                "reference": "2cd63d9b7356de6d8267100065ccab1c27192469",
                 "shasum": ""
             },
             "require": {
@@ -5350,7 +5350,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/analytics/tree/master"
             },
-            "time": "2024-10-21T10:53:23+00:00"
+            "time": "2024-10-22T09:21:24+00:00"
         },
         {
             "name": "spryker-feature/availability-notification",
@@ -6333,16 +6333,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-merchant-commission.git",
-                "reference": "57bc12c88c3da6d0279eac3572ed2a9f733b47a2"
+                "reference": "185a1086af60a264626c55ed8bee14846fc8c920"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-commission/zipball/57bc12c88c3da6d0279eac3572ed2a9f733b47a2",
-                "reference": "57bc12c88c3da6d0279eac3572ed2a9f733b47a2",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-merchant-commission/zipball/185a1086af60a264626c55ed8bee14846fc8c920",
+                "reference": "185a1086af60a264626c55ed8bee14846fc8c920",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/merchant-commission": "^1.0.0",
                 "spryker/merchant-commission-data-export": "^0.2.0",
                 "spryker/merchant-commission-data-import": "^0.2.0",
@@ -6356,7 +6356,7 @@
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202407.x-dev"
+                    "dev-master": "202410.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6367,7 +6367,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/marketplace-merchant-commission/tree/master"
             },
-            "time": "2024-08-07T15:58:13+00:00"
+            "time": "2024-10-23T08:52:28+00:00"
         },
         {
             "name": "spryker-feature/marketplace-merchant-portal-product-management",
@@ -74248,7 +74248,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "d4d57f159f22d494744d65aa243494f8743dce13"
+                "reference": "ce9ce7e594585728390d3e3ceb76208c0eaa3e5d"
             },
             "default-branch": true,
             "type": "library",
@@ -74256,7 +74256,7 @@
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2024-10-18T11:33:54+00:00"
+            "time": "2024-10-23T10:09:15+00:00"
         },
         {
             "name": "spryker/development",
@@ -74461,7 +74461,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "9d780964a5510302b7c77994fa6631e4446f64df"
+                "reference": "574276b9a35a114fd2db329538b0ba8d6a8bfc8d"
             },
             "default-branch": true,
             "type": "library",
@@ -74469,7 +74469,7 @@
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2024-10-21T10:34:21+00:00"
+            "time": "2024-10-22T22:05:26+00:00"
         },
         {
             "name": "spryker/testify",
