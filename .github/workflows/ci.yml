@@ -1003,8 +1003,10 @@ jobs:
                 run: |
                     sudo apt install awscli -q
 
-            -   name: Composer install
-                run: composer install
+            -   name: Install cypress-tests folder
+                run: |
+                    cd ./data && composer require "spryker/cypress-tests:dev-master" --dev --no-interaction
+                    cp -r vendor ../vendor
 
             -   name: Install docker-compose
                 run: |
