@@ -46,11 +46,6 @@
                 <event>submit tax invoice</event>
             </transition>
 
-            <transition happy="true">
-                <source>tax invoice submitted</source>
-                <target>merchant split pending</target>
-            </transition>
-
             <transition>
                 <source>paid</source>
                 <target>paid</target>
@@ -129,6 +124,7 @@
             <process>MarketplaceRefund</process>
             <process>WarehouseAllocation</process>
             <process>DummyPicking</process>
+            <process>DummyMarketplaceMerchantCommission</process>
         </subprocesses>
 
     </process>
@@ -137,5 +133,6 @@
     <process name="MarketplaceRefund" file="MarketplaceSubprocess/MarketplaceRefund01.xml"/>
     <process name="WarehouseAllocation" file="WarehouseAllocationSubprocess/WarehouseAllocation01.xml"/>
     <process name="DummyPicking" file="DummySubprocess/DummyPicking01.xml"/>
+    <process name="DummyMarketplaceMerchantCommission" file="DummySubprocess/DummyMarketplaceMerchantCommission01.xml"/>
 
 </statemachine>

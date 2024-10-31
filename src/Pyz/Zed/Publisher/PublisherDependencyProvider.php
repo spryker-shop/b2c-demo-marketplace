@@ -46,9 +46,6 @@ use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\Gloss
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\GlossaryWritePublisherPlugin as GlossaryKeyWriterPublisherPlugin;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryPublisherTriggerPlugin;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryTranslation\GlossaryWritePublisherPlugin as GlossaryTranslationWritePublisherPlugin;
-use Spryker\Zed\Merchant\Communication\Plugin\Publisher\MerchantCreatedMessageBrokerPublisherPlugin;
-use Spryker\Zed\Merchant\Communication\Plugin\Publisher\MerchantExportedMessageBrokerPublisherPlugin;
-use Spryker\Zed\Merchant\Communication\Plugin\Publisher\MerchantUpdatedMessageBrokerPublisherPlugin;
 use Spryker\Zed\MerchantCategory\Communication\Plugin\Publisher\Category\CategoryWritePublisherPlugin;
 use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursWritePublisherPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\MerchantProductOfferSearchPublisherTriggerPlugin;
@@ -97,6 +94,7 @@ use Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\Produ
 use Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\ProductConfiguration\ProductConfigurationWritePublisherPlugin;
 use Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\ProductConfigurationPublisherTriggerPlugin;
 use Spryker\Zed\ProductDiscontinuedStorage\Communication\Plugin\Publisher\ProductDiscontinuedPublisherTriggerPlugin;
+use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelLocalizedAttributesWritePublisherPlugin;
 use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelProductUpdatedEventTriggerPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel\ProductLabelWritePublisherPlugin as ProductLabelSearchWritePublisherPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract\ProductLabelProductAbstractWritePublisherPlugin as ProductLabelProductAbstractSearchWritePublisherPlugin;
@@ -172,6 +170,7 @@ use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMetho
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeWriterPublisherPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypePublisherTriggerPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreWriterPublisherPlugin;
+use Spryker\Zed\StoreContextStorage\Communication\Plugin\Publisher\ContextStoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CountryStore\CountryStoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CurrencyStore\CurrencyStoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\LocaleStore\LocaleStoreWritePublisherPlugin;
@@ -217,7 +216,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getProductMessageBrokerPlugins(),
             $this->getProductConfigurationStoragePlugins(),
             $this->getProductOfferAvailabilityStoragePlugins(),
-            $this->getMerchantExportPlugins(),
             $this->getServicePointSearchPlugins(),
             $this->getServicePointStoragePlugins(),
             $this->getShipmentTypeStoragePlugins(),
@@ -344,6 +342,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductLabelProductAbstractStorageWritePublisherPlugin(),
             new ProductLabelDictionaryStorageWritePublisherPlugin(),
             new ProductLabelDictionaryStorageDeletePublisherPlugin(),
+            new ProductLabelLocalizedAttributesWritePublisherPlugin(),
         ];
     }
 
@@ -556,6 +555,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new CurrencyStoreWritePublisherPlugin(),
             new CountryStoreWritePublisherPlugin(),
             new LocaleStoreWritePublisherPlugin(),
+            new ContextStoreWritePublisherPlugin(),
         ];
     }
 
@@ -616,18 +616,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new ProductConfigurationWritePublisherPlugin(),
             new ProductConfigurationDeletePublisherPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
-     */
-    protected function getMerchantExportPlugins(): array
-    {
-        return [
-            new MerchantExportedMessageBrokerPublisherPlugin(),
-            new MerchantCreatedMessageBrokerPublisherPlugin(),
-            new MerchantUpdatedMessageBrokerPublisherPlugin(),
         ];
     }
 

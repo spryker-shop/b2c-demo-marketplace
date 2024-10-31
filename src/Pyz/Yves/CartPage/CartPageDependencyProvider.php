@@ -8,6 +8,7 @@
 namespace Pyz\Yves\CartPage;
 
 use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
+use SprykerShop\Yves\CartPage\Plugin\CartPage\CartBlockMiniCartViewExpanderPlugin;
 use SprykerShop\Yves\DiscountPromotionWidget\Plugin\CartPage\DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin;
 use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage\MerchantProductOfferPreAddToCartPlugin;
 use SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage\MerchantProductPreAddToCartPlugin;
@@ -45,6 +46,16 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
     {
         return [
             new DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\MiniCartViewExpanderPluginInterface>
+     */
+    protected function getMiniCartViewExpanderPlugins(): array
+    {
+        return [
+            new CartBlockMiniCartViewExpanderPlugin(),
         ];
     }
 }

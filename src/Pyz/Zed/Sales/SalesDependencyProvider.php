@@ -37,6 +37,7 @@ use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales\ConfiguredBundleItemPreTransformerPlugin;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales\ConfiguredBundleOrderItemExpanderPlugin;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales\ConfiguredBundlesOrderItemsPostSavePlugin;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Sales\MerchantCommissionOrderPostCancelPlugin;
 use Spryker\Zed\SalesOms\Communication\Plugin\OrderItemReferenceExpanderPreSavePlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Sales\SalesPaymentOrderExpanderPlugin;
 use Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales\ProductConfigurationOrderItemExpanderPlugin;
@@ -210,6 +211,16 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     {
         return [
             new MerchantOmsStateOrderItemsTableExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostCancelPluginInterface>
+     */
+    protected function getOrderPostCancelPlugins(): array
+    {
+        return [
+            new MerchantCommissionOrderPostCancelPlugin(),
         ];
     }
 }
