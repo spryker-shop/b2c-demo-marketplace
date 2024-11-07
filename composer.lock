@@ -74161,14 +74161,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "5e5830a2fca297c0fc3ee7a5e64be3e0722f746a"
+                "reference": "b7ee051c171f2acb579b0e722e0b1c25a4a0c3c0"
             },
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2024-11-04T10:34:22+00:00"
+            "time": "2024-11-07T18:26:56+00:00"
         },
         {
             "name": "spryker/development",
