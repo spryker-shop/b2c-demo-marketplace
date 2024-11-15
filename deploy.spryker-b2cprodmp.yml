@@ -137,7 +137,7 @@ groups:
             mportal:
                 application: merchant-portal
                 endpoints:
-                    mp.de.b2c-marketplace-eu.demo-spryker.com:
+                    mp.b2c-marketplace-eu.demo-spryker.com:
                         entry-point: MerchantPortal
                         region: EU
                         primal: true
