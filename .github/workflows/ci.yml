@@ -261,7 +261,7 @@ jobs:
             -   name: Run docker
                 run: |
                     git clone https://github.com/spryker/docker-sdk.git ./docker
-                    docker/sdk boot deploy.ci.api.debug.yml
+                    docker/sdk boot deploy.ci.api.yml
                     docker/sdk up -t
 
     php-83-mariadb-acceptance-alpine-dynamic-store-off:
