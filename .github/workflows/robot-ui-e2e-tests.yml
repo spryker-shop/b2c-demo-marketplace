@@ -43,7 +43,7 @@ jobs:
             - name: Install packages
               run: |
                   sudo apt-get update
-#                  sudo apt install awscli -q
+                  sudo apt install awscli -q
             - name: Install robotframework-suite-tests folder
               run: |
                   cd ./data && composer require "spryker/robotframework-suite-tests:dev-master" --dev --no-interaction
@@ -333,7 +333,7 @@ jobs:
             - name: Install packages
               run: |
                   sudo apt-get update
-#                  sudo apt install awscli -q
+                  sudo apt install awscli -q
             - name: Install robotframework-suite-tests folder
               run: |
                   cd ./data && composer require "spryker/robotframework-suite-tests:dev-master" --dev --no-interaction
