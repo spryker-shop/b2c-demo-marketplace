@@ -263,6 +263,10 @@ jobs:
                     git clone https://github.com/spryker/docker-sdk.git ./docker
                     docker/sdk boot deploy.ci.api.yml
                     docker/sdk up -t
+                    docker/sdk testing codecept fixtures
+                    docker/sdk testing console queue:worker:start --stop-when-empty
+                    docker/sdk cli composer dump-autoload -o -a --apcu
+                    docker/sdk testing codecept run -c codeception.api.yml
 
     php-83-mariadb-acceptance-alpine-dynamic-store-off:
         name: "PHP 8.3 / MariaDB / Acceptance / Alpine / Dynamic Store OFF"
