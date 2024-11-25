@@ -163,7 +163,7 @@ jobs:
                 run: vendor/bin/evaluator evaluate --exclude-checkers=SPRYKER_DEV_PACKAGES_CHECKER --format=compact
 
     php-83-mariadb-glue-alpine-dynamic-store-off:
-        name: "PHP 8.3 / MariaDB / Glue / Alpine / Dynamic Store OFF"
+        name: "PHP 8.3 / MariaDB / Glue / Alpine / Dynamic Store OFF "
         runs-on: ubuntu-22.04
         env:
             PROGRESS_TYPE: plain
