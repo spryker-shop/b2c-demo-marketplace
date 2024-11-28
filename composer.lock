@@ -74015,7 +74015,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "ce9ce7e594585728390d3e3ceb76208c0eaa3e5d"
+                "reference": "b5c0be284fc099f006b601218e24fee9534947bb"
             },
             "default-branch": true,
             "type": "library",
@@ -74023,7 +74023,7 @@
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2024-10-23T10:09:15+00:00"
+            "time": "2024-11-27T11:59:16+00:00"
         },
         {
             "name": "spryker/development",
@@ -74228,7 +74228,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "574276b9a35a114fd2db329538b0ba8d6a8bfc8d"
+                "reference": "03ecaf533e2b87986ef555a8f2df13055c0e332d"
             },
             "default-branch": true,
             "type": "library",
@@ -74236,7 +74236,7 @@
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2024-10-22T22:05:26+00:00"
+            "time": "2024-11-22T15:44:29+00:00"
         },
         {
             "name": "spryker/testify",
