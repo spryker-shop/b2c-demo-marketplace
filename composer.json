@@ -110,7 +110,6 @@
         "spryker-shop/cms-content-widget-product-connector": "^1.3.0",
         "spryker-shop/cms-content-widget-product-set-connector": "^1.4.0",
         "spryker-shop/date-time-configurator-page-example": "^0.5.3",
-        "spryker-shop/store-widget": "^1.4",
         "spryker/agent-auth-rest-api": "^1.1.0",
         "spryker/agent-dashboard-merchant-portal-gui": "^1.0.0",
         "spryker/agent-security-blocker-merchant-portal-gui": "^1.1.0",
