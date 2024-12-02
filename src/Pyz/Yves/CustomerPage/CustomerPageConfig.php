@@ -73,4 +73,12 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
     {
         return true;
     }
+
+    /**
+     * @return bool
+     */
+    public function isRememberMeEnabled(): bool
+    {
+        return false;
+    }
 }

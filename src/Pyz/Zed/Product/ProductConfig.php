@@ -82,4 +82,12 @@ class ProductConfig extends SprykerProductConfig
     {
         return 3;
     }
+
+    /**
+     * @return bool
+     */
+    public function isFullLocaleNamesInUrlEnabled(): bool
+    {
+        return true;
+    }
 }
