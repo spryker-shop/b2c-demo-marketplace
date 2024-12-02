@@ -15962,16 +15962,16 @@
         },
         {
             "name": "spryker-shop/shop-ui",
-            "version": "1.81.0",
+            "version": "1.80.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/shop-ui.git",
-                "reference": "f538a4331c54d5cfee4636742a043667b6d16158"
+                "reference": "aaf92ec03739f1b5d1899cd49d25b73356135155"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/shop-ui/zipball/f538a4331c54d5cfee4636742a043667b6d16158",
-                "reference": "f538a4331c54d5cfee4636742a043667b6d16158",
+                "url": "https://api.github.com/repos/spryker-shop/shop-ui/zipball/aaf92ec03739f1b5d1899cd49d25b73356135155",
+                "reference": "aaf92ec03739f1b5d1899cd49d25b73356135155",
                 "shasum": ""
             },
             "require": {
@@ -16019,9 +16019,9 @@
             ],
             "description": "ShopUi module",
             "support": {
-                "source": "https://github.com/spryker-shop/shop-ui/tree/1.81.0"
+                "source": "https://github.com/spryker-shop/shop-ui/tree/1.80.0"
             },
-            "time": "2024-11-28T15:34:10+00:00"
+            "time": "2024-11-28T12:12:55+00:00"
         },
         {
             "name": "spryker-shop/shopping-list-page-extension",
