@@ -112,6 +112,7 @@ regions:
 
 groups:
     EU:
+        region: EU
         applications:
             Yves:
                 application: yves
