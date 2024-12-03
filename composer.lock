@@ -45679,16 +45679,16 @@
         },
         {
             "name": "spryker/product-merchant-portal-gui",
-            "version": "4.4.1",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-merchant-portal-gui.git",
-                "reference": "fb19beccbe21cd28911eca166b2b9d68f178971a"
+                "reference": "6f9bc9b8b5ad8aa5f3b944fc91308268544a7b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/fb19beccbe21cd28911eca166b2b9d68f178971a",
-                "reference": "fb19beccbe21cd28911eca166b2b9d68f178971a",
+                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/6f9bc9b8b5ad8aa5f3b944fc91308268544a7b60",
+                "reference": "6f9bc9b8b5ad8aa5f3b944fc91308268544a7b60",
                 "shasum": ""
             },
             "require": {
@@ -45749,9 +45749,9 @@
             ],
             "description": "ProductMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/4.4.1"
+                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/4.5.0"
             },
-            "time": "2024-10-10T08:50:33+00:00"
+            "time": "2024-11-27T11:36:10+00:00"
         },
         {
             "name": "spryker/product-merchant-portal-gui-extension",
