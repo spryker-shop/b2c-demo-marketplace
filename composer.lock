@@ -26369,16 +26369,16 @@
         },
         {
             "name": "spryker/customer",
-            "version": "7.60.0",
+            "version": "7.64.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/customer.git",
-                "reference": "5fb3529fd7acb482e84ce2e21ff5a60f8d7480d3"
+                "reference": "39a63c766a1b7634c0c251e00086b9f16bfcc961"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/customer/zipball/5fb3529fd7acb482e84ce2e21ff5a60f8d7480d3",
-                "reference": "5fb3529fd7acb482e84ce2e21ff5a60f8d7480d3",
+                "url": "https://api.github.com/repos/spryker/customer/zipball/39a63c766a1b7634c0c251e00086b9f16bfcc961",
+                "reference": "39a63c766a1b7634c0c251e00086b9f16bfcc961",
                 "shasum": ""
             },
             "require": {
@@ -26388,6 +26388,7 @@
                 "spryker/checkout-extension": "^1.2.0",
                 "spryker/country": "^3.1.0 || ^4.0.0",
                 "spryker/customer-extension": "^1.5.0",
+                "spryker/event-dispatcher-extension": "^1.0.0",
                 "spryker/gui": "^3.39.0",
                 "spryker/kernel": "^3.72.0",
                 "spryker/locale": "^3.0.0 || ^4.0.0",
@@ -26425,6 +26426,8 @@
             },
             "suggest": {
                 "spryker/checkout": "If you want to use Checkout plugins.",
+                "spryker/container": "To use EventDispatcher plugins.",
+                "spryker/event-dispatcher": "To use EventDispatcher plugins.",
                 "spryker/log": "If you want to use Log plugins.",
                 "spryker/sales": "If you want customer information in sales."
             },
@@ -26447,9 +26450,9 @@
             ],
             "description": "Customer module",
             "support": {
-                "source": "https://github.com/spryker/customer/tree/7.60.0"
+                "source": "https://github.com/spryker/customer/tree/7.64.0"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2024-12-03T11:23:20+00:00"
         },
         {
             "name": "spryker/customer-access",
