@@ -131,12 +131,12 @@ jobs:
               id: run_tests
               continue-on-error: true
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eu.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_two -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eur.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_two -s '*'.tests.ui.mp_b2c .
                   docker/sdk exec robot-framework touch results/time.txt && echo $(date) > results/time.txt
             - name: Rerun Failed Tests
               if: steps.run_tests.outcome != 'success'
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eu.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eur.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
             - name: Merge Test Results
               if: always() && steps.run_tests.outcome != 'success'
               run: |
@@ -196,12 +196,12 @@ jobs:
               id: run_tests
               continue-on-error: true
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eu.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_tree -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eur.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_tree -s '*'.tests.ui.mp_b2c .
                   docker/sdk exec robot-framework touch results/time.txt && echo $(date) > results/time.txt
             - name: Rerun Failed Tests
               if: steps.run_tests.outcome != 'success'
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eu.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -v glue_env:http://glue.eur.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local -v yves_env:http://yves.eur.spryker.local -v zed_env:http://backoffice.eu.spryker.local -v mp_root_env:http://mp.eu.spryker.local/ -v mp_env:http://mp.eu.spryker.local/security-merchant-portal-gui/login/ -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
             - name: Merge Test Results
               if: always() && steps.run_tests.outcome != 'success'
               run: |
@@ -261,12 +261,12 @@ jobs:
               id: run_tests
               continue-on-error: true
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_one -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v yves_env:http://yves.eur.spryker.local -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_one -s '*'.tests.ui.mp_b2c .
                   docker/sdk exec robot-framework touch results/time.txt && echo $(date) > results/time.txt
             - name: Rerun Failed Tests
               if: steps.run_tests.outcome != 'success'
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v yves_env:http://yves.eur.spryker.local -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
             - name: Merge Test Results
               if: always() && steps.run_tests.outcome != 'success'
               run: |
@@ -328,12 +328,12 @@ jobs:
               id: run_tests
               continue-on-error: true
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_two -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v yves_env:http://yves.eur.spryker.local -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_two -s '*'.tests.ui.mp_b2c .
                   docker/sdk exec robot-framework touch results/time.txt && echo $(date) > results/time.txt
             - name: Rerun Failed Tests
               if: steps.run_tests.outcome != 'success'
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v yves_env:http://yves.eur.spryker.local -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
             - name: Merge Test Results
               if: always() && steps.run_tests.outcome != 'success'
               run: |
@@ -393,12 +393,12 @@ jobs:
               id: run_tests
               continue-on-error: true
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_tree -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v yves_env:http://yves.eur.spryker.local -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results --exclude skip-due-to-issueORskip-due-to-refactoring --include group_tree -s '*'.tests.ui.mp_b2c .
                   docker/sdk exec robot-framework touch results/time.txt && echo $(date) > results/time.txt
             - name: Rerun Failed Tests
               if: steps.run_tests.outcome != 'success'
               run: |
-                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
+                  docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v yves_env:http://yves.eur.spryker.local -v glue_env:http://glue.eur.spryker.local -v docker:True -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.ui.mp_b2c .
             - name: Merge Test Results
               if: always() && steps.run_tests.outcome != 'success'
               run: |

@@ -835,7 +835,7 @@ jobs:
                     APPLICATION_STORE=AT docker/sdk console queue:worker:start --stop-when-empty
             -   name: Run Tests
                 run: |
-                    docker/sdk exec robot-framework robot -v env:api_mp_b2c -v yves_env:http://yves.eur.spryker.local -v docker:True --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s robotframework.tests.api.mp_b2c .
+                    docker/sdk exec robot-framework robot -v env:api_mp_b2c -v glue_env:http://glue.eur.spryker.local -v yves_env:http://yves.eur.spryker.local -v docker:True --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s robotframework.tests.api.mp_b2c .
             -   name: Upload artifacts
                 if: failure()
                 run: |
