@@ -1006,7 +1006,6 @@ jobs:
                 run: |
                     sudo apt-get update
                     sudo apt install awscli -q
-                    sudo apt install jq -q
 
             -   name: Install cypress-tests folder
                 run: |
