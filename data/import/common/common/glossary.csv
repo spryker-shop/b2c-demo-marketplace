@@ -713,6 +713,8 @@ profile.form.salutation,Salutation,en_US
 profile.form.salutation,Anrede,de_DE
 customer.salutation.dr,Dr.,en_US
 customer.salutation.dr,Dr.,de_DE
+customer.salutation.n/a,n/a,en_US
+customer.salutation.n/a,n/a,de_DE
 customer.customer_id,ID,en_US
 customer.customer_id,ID,de_DE
 forms.submit-btn,Submit,en_US
@@ -3362,3 +3364,9 @@ rule_engine.validation.invalid_query_string,The provided query string has an inv
 rule_engine.validation.invalid_query_string,Die angegebene Abfragezeichenfolge hat ein ungültiges Format.,de_DE
 rule_engine.validation.invalid_compare_operator_value,The provided compare operator is invalid.,en_US
 rule_engine.validation.invalid_compare_operator_value,Der angegebene Vergleichsoperator ist ungültig.,de_DE
+payment_app_widget.validation.quote_is_empty, Quote is empty.,en_US
+payment_app_widget.validation.quote_is_empty, Angebot ist leer.,de_DE
+payment_app_widget.error.payment_failed,Payment failed,en_US
+payment_app_widget.error.payment_failed,Zahlung fehlgeschlagen,de_DE
+payment_app_widget.error.incorrect_quote,"Quote not found, session may have expired",en_US
+payment_app_widget.error.incorrect_quote,"Angebot nicht gefunden, Sitzung ist möglicherweise abgelaufen",de_DE
