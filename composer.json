@@ -65,7 +65,7 @@
         "spryker-feature/navigation": "^202410.0",
         "spryker-feature/non-splittable-products": "^202410.0",
         "spryker-feature/order-management": "^202410.0",
-        "spryker-feature/payments": "^202410.0",
+        "spryker-feature/payments": "dev-master as 202410.0",
         "spryker-feature/prices": "^202410.0",
         "spryker-feature/product": "^202410.0",
         "spryker-feature/product-approval-process": "^202410.0",
