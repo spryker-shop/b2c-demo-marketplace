@@ -55957,20 +55957,20 @@
         },
         {
             "name": "spryker/security-merchant-portal-gui",
-            "version": "3.2.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-merchant-portal-gui.git",
-                "reference": "89ac62ba05ec0bb804232ad5b05d100f8e11e2c2"
+                "reference": "f0e0246041473ec964f98e9a9b12d331acab1646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/89ac62ba05ec0bb804232ad5b05d100f8e11e2c2",
-                "reference": "89ac62ba05ec0bb804232ad5b05d100f8e11e2c2",
+                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/f0e0246041473ec964f98e9a9b12d331acab1646",
+                "reference": "f0e0246041473ec964f98e9a9b12d331acab1646",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/log": "^3.17.0",
@@ -56018,9 +56018,9 @@
             ],
             "description": "SecurityMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/3.2.0"
+                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/3.4.0"
             },
-            "time": "2024-08-30T12:07:33+00:00"
+            "time": "2024-12-12T18:25:19+00:00"
         },
         {
             "name": "spryker/security-merchant-portal-gui-extension",
