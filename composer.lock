@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e9e80195ec0fc75ad44a8c17cad2b9e",
+    "content-hash": "5b312fad5df98d96dba5bbd96b9d5478",
     "packages": [
         {
             "name": "async-aws/core",
@@ -33322,6 +33322,54 @@
             "time": "2024-03-27T10:11:29+00:00"
         },
         {
+            "name": "spryker/merchant-discount-connector",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-discount-connector.git",
+                "reference": "b24f4cf7954e2f3b98efd95846c700e842a7284e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-discount-connector/zipball/b24f4cf7954e2f3b98efd95846c700e842a7284e",
+                "reference": "b24f4cf7954e2f3b98efd95846c700e842a7284e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "spryker/discount": "^9.0.0",
+                "spryker/discount-extension": "^1.2.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/merchant": "^3.0.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantDiscountConnector module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-discount-connector/tree/1.0.0"
+            },
+            "time": "2024-12-13T15:11:46+00:00"
+        },
+        {
             "name": "spryker/merchant-extension",
             "version": "1.2.0",
             "source": {
@@ -46445,6 +46493,53 @@
                 "source": "https://github.com/spryker/product-offer-availability-storage/tree/1.2.0"
             },
             "time": "2023-07-25T12:51:44+00:00"
+        },
+        {
+            "name": "spryker/product-offer-discount-connector",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-offer-discount-connector.git",
+                "reference": "faa273429b479dfbf80797249d874b3b36884af7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-offer-discount-connector/zipball/faa273429b479dfbf80797249d874b3b36884af7",
+                "reference": "faa273429b479dfbf80797249d874b3b36884af7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "spryker/discount": "^9.0.0",
+                "spryker/discount-extension": "^1.2.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/product-offer": "^1.0.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductOfferDiscountConnector module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-discount-connector/tree/1.0.0"
+            },
+            "time": "2024-12-13T15:11:46+00:00"
         },
         {
             "name": "spryker/product-offer-extension",
@@ -75426,7 +75521,7 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },
