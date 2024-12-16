@@ -58,14 +58,14 @@ class CustomerRegistrationCest
         // Arrange
         /** @var \Generated\Shared\Transfer\RestCustomersAttributesTransfer $restCustomersAttributesTransfer */
         $restCustomersAttributesTransfer = (new RestCustomersAttributesBuilder([
-            RestCustomersAttributesTransfer::PASSWORD => 'change123',
-            RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change123',
+            RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
+            RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!23456',
             RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
         ]))->build();
         $customerTransfer = $I->haveCustomer(
             [
-                CustomerTransfer::NEW_PASSWORD => 'change123',
-                CustomerTransfer::PASSWORD => 'change123',
+                CustomerTransfer::NEW_PASSWORD => 'Change!23456',
+                CustomerTransfer::PASSWORD => 'Change!23456',
             ],
         );
         $I->confirmCustomer($customerTransfer);
@@ -134,8 +134,8 @@ class CustomerRegistrationCest
         return [
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'change123',
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change123',
+                    RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
+                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!23456',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => false,
                 ]))->build(),
                 RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
@@ -149,8 +149,8 @@ class CustomerRegistrationCest
             ],
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'change123',
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change123',
+                    RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
+                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!23456',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
                     RestCustomersAttributesTransfer::SALUTATION => 'xyz',
                 ]))->build(),
@@ -165,8 +165,8 @@ class CustomerRegistrationCest
             ],
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'change123',
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change123',
+                    RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
+                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!23456',
                 ]))->build(),
                 RestErrorMessageTransfer::STATUS => Response::HTTP_BAD_REQUEST,
                 'errors' => [
@@ -179,7 +179,7 @@ class CustomerRegistrationCest
             ],
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'change123',
+                    RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
                     RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change1234',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
                 ]))->build(),
@@ -198,7 +198,7 @@ class CustomerRegistrationCest
             ],
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change123',
+                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!23456',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
                 ]))->build(),
                 RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
@@ -212,7 +212,7 @@ class CustomerRegistrationCest
             ],
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'change123',
+                    RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
                 ]))->build(),
                 RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
@@ -226,8 +226,8 @@ class CustomerRegistrationCest
             ],
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop',
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop',
+                    RestCustomersAttributesTransfer::PASSWORD => 'Change!23456pqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuioppqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwert',
+                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!23456pqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuioppqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwert',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
                 ]))->build(),
                 RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
@@ -235,12 +235,12 @@ class CustomerRegistrationCest
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
                         RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
-                        RestErrorMessageTransfer::DETAIL => 'password => This value is too long. It should have 64 characters or less.',
+                        RestErrorMessageTransfer::DETAIL => 'password => This value is too long. It should have 128 characters or less.',
                     ],
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
                         RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
-                        RestErrorMessageTransfer::DETAIL => 'confirmPassword => This value is too long. It should have 64 characters or less.',
+                        RestErrorMessageTransfer::DETAIL => 'confirmPassword => This value is too long. It should have 128 characters or less.',
                     ],
                 ],
             ],
@@ -296,8 +296,8 @@ class CustomerRegistrationCest
             ],
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'change123',
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change123',
+                    RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
+                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!23456',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
                     RestCustomersAttributesTransfer::GENDER => 'xyz',
                 ]))->build(),
