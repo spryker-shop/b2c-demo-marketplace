@@ -225,27 +225,12 @@ class CustomerPasswordCest
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
                         RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
-                        RestErrorMessageTransfer::DETAIL => 'newPassword => This value is too short. It should have 8 characters or more.',
+                        RestErrorMessageTransfer::DETAIL => 'newPassword => This value is too short. It should have 12 characters or more.',
                     ],
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
                         RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
-                        RestErrorMessageTransfer::DETAIL => 'confirmPassword => This value is too short. It should have 8 characters or more.',
-                    ],
-                ],
-            ],
-            [
-                'attributes' => [
-                    RestCustomerPasswordAttributesTransfer::PASSWORD => 'change123',
-                    RestCustomerPasswordAttributesTransfer::NEW_PASSWORD => 'qwertyui',
-                    RestCustomerPasswordAttributesTransfer::CONFIRM_PASSWORD => 'qwertyui',
-                ],
-                RestErrorMessageTransfer::STATUS => Response::HTTP_BAD_REQUEST,
-                'errors' => [
-                    [
-                        RestErrorMessageTransfer::CODE => CustomersRestApiConfig::RESPONSE_CODE_CUSTOMER_PASSWORD_INVALID_CHARACTER_SET,
-                        RestErrorMessageTransfer::STATUS => Response::HTTP_BAD_REQUEST,
-                        RestErrorMessageTransfer::DETAIL => CustomersRestApiConfig::RESPONSE_MESSAGE_CUSTOMER_PASSWORD_INVALID_CHARACTER_SET,
+                        RestErrorMessageTransfer::DETAIL => 'confirmPassword => This value is too short. It should have 12 characters or more.',
                     ],
                 ],
             ],

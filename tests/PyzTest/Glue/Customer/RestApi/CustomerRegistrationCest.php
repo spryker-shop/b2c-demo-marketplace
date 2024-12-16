@@ -180,7 +180,7 @@ class CustomerRegistrationCest
             [
                 'attributes' => (new RestCustomersAttributesBuilder([
                     RestCustomersAttributesTransfer::PASSWORD => 'Change!23456',
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'change1234',
+                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'Change!234564',
                     RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
                 ]))->build(),
                 RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
@@ -255,27 +255,12 @@ class CustomerRegistrationCest
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
                         RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
-                        RestErrorMessageTransfer::DETAIL => 'password => This value is too short. It should have 8 characters or more.',
+                        RestErrorMessageTransfer::DETAIL => 'password => This value is too short. It should have 12 characters or more.',
                     ],
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
                         RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
-                        RestErrorMessageTransfer::DETAIL => 'confirmPassword => This value is too short. It should have 8 characters or more.',
-                    ],
-                ],
-            ],
-            [
-                'attributes' => (new RestCustomersAttributesBuilder([
-                    RestCustomersAttributesTransfer::PASSWORD => 'qwertyui',
-                    RestCustomersAttributesTransfer::CONFIRM_PASSWORD => 'qwertyui',
-                    RestCustomersAttributesTransfer::ACCEPTED_TERMS => true,
-                ]))->build(),
-                RestErrorMessageTransfer::STATUS => Response::HTTP_BAD_REQUEST,
-                'errors' => [
-                    [
-                        RestErrorMessageTransfer::CODE => CustomersRestApiConfig::RESPONSE_CODE_CUSTOMER_PASSWORD_INVALID_CHARACTER_SET,
-                        RestErrorMessageTransfer::STATUS => Response::HTTP_BAD_REQUEST,
-                        RestErrorMessageTransfer::DETAIL => CustomersRestApiConfig::RESPONSE_MESSAGE_CUSTOMER_PASSWORD_INVALID_CHARACTER_SET,
+                        RestErrorMessageTransfer::DETAIL => 'confirmPassword => This value is too short. It should have 12 characters or more.',
                     ],
                 ],
             ],
