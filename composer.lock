@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e9e80195ec0fc75ad44a8c17cad2b9e",
+    "content-hash": "f08730cc776043d81c341f024d9f1a58",
     "packages": [
         {
             "name": "async-aws/core",
@@ -29056,16 +29056,16 @@
         },
         {
             "name": "spryker/error-handler",
-            "version": "2.10.0",
+            "version": "2.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/error-handler.git",
-                "reference": "2ff6de9883943896e6c8b223cbce593d1ff5f315"
+                "reference": "3e4115c37fa4b9210f35002e25a5fa73e32f0e45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/error-handler/zipball/2ff6de9883943896e6c8b223cbce593d1ff5f315",
-                "reference": "2ff6de9883943896e6c8b223cbce593d1ff5f315",
+                "url": "https://api.github.com/repos/spryker/error-handler/zipball/3e4115c37fa4b9210f35002e25a5fa73e32f0e45",
+                "reference": "3e4115c37fa4b9210f35002e25a5fa73e32f0e45",
                 "shasum": ""
             },
             "require": {
@@ -29111,9 +29111,9 @@
             ],
             "description": "ErrorHandler module",
             "support": {
-                "source": "https://github.com/spryker/error-handler/tree/2.10.0"
+                "source": "https://github.com/spryker/error-handler/tree/2.10.1"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2024-12-13T10:39:29+00:00"
         },
         {
             "name": "spryker/error-handler-extension",
@@ -33321,6 +33321,54 @@
                 "source": "https://github.com/spryker/merchant-data-import/tree/0.5.2"
             },
             "time": "2024-03-27T10:11:29+00:00"
+        },
+        {
+            "name": "spryker/merchant-discount-connector",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/merchant-discount-connector.git",
+                "reference": "b24f4cf7954e2f3b98efd95846c700e842a7284e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/merchant-discount-connector/zipball/b24f4cf7954e2f3b98efd95846c700e842a7284e",
+                "reference": "b24f4cf7954e2f3b98efd95846c700e842a7284e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "spryker/discount": "^9.0.0",
+                "spryker/discount-extension": "^1.2.0",
+                "spryker/kernel": "^3.30.0",
+                "spryker/merchant": "^3.0.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MerchantDiscountConnector module",
+            "support": {
+                "source": "https://github.com/spryker/merchant-discount-connector/tree/1.0.0"
+            },
+            "time": "2024-12-13T15:11:46+00:00"
         },
         {
             "name": "spryker/merchant-extension",
@@ -38531,16 +38579,16 @@
         },
         {
             "name": "spryker/oms",
-            "version": "11.37.2",
+            "version": "11.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/oms.git",
-                "reference": "a903bfd89882e759636660f337bfd62ceb5700de"
+                "reference": "1e4ab8383d1b0bee0dff4df63d15dd4419cc1eb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/oms/zipball/a903bfd89882e759636660f337bfd62ceb5700de",
-                "reference": "a903bfd89882e759636660f337bfd62ceb5700de",
+                "url": "https://api.github.com/repos/spryker/oms/zipball/1e4ab8383d1b0bee0dff4df63d15dd4419cc1eb2",
+                "reference": "1e4ab8383d1b0bee0dff4df63d15dd4419cc1eb2",
                 "shasum": ""
             },
             "require": {
@@ -38598,9 +38646,9 @@
             ],
             "description": "Oms module",
             "support": {
-                "source": "https://github.com/spryker/oms/tree/11.37.2"
+                "source": "https://github.com/spryker/oms/tree/11.39.0"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2024-12-13T10:00:48+00:00"
         },
         {
             "name": "spryker/oms-discount-connector",
@@ -46448,6 +46496,53 @@
             "time": "2023-07-25T12:51:44+00:00"
         },
         {
+            "name": "spryker/product-offer-discount-connector",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/product-offer-discount-connector.git",
+                "reference": "faa273429b479dfbf80797249d874b3b36884af7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/product-offer-discount-connector/zipball/faa273429b479dfbf80797249d874b3b36884af7",
+                "reference": "faa273429b479dfbf80797249d874b3b36884af7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "spryker/discount": "^9.0.0",
+                "spryker/discount-extension": "^1.2.0",
+                "spryker/kernel": "^3.33.0",
+                "spryker/product-offer": "^1.0.0",
+                "spryker/transfer": "^3.25.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "ProductOfferDiscountConnector module",
+            "support": {
+                "source": "https://github.com/spryker/product-offer-discount-connector/tree/1.0.0"
+            },
+            "time": "2024-12-13T15:11:46+00:00"
+        },
+        {
             "name": "spryker/product-offer-extension",
             "version": "1.0.1",
             "source": {
@@ -52286,16 +52381,16 @@
         },
         {
             "name": "spryker/sales",
-            "version": "11.52.0",
+            "version": "11.53.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales.git",
-                "reference": "ece7c30a0f6d34157810a945de6ffa033e43fc69"
+                "reference": "c736770e6f04d36bdacf0c673b88daf1c09517e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales/zipball/ece7c30a0f6d34157810a945de6ffa033e43fc69",
-                "reference": "ece7c30a0f6d34157810a945de6ffa033e43fc69",
+                "url": "https://api.github.com/repos/spryker/sales/zipball/c736770e6f04d36bdacf0c673b88daf1c09517e2",
+                "reference": "c736770e6f04d36bdacf0c673b88daf1c09517e2",
                 "shasum": ""
             },
             "require": {
@@ -52362,9 +52457,9 @@
             ],
             "description": "Sales module",
             "support": {
-                "source": "https://github.com/spryker/sales/tree/11.52.0"
+                "source": "https://github.com/spryker/sales/tree/11.53.0"
             },
-            "time": "2024-11-28T12:12:52+00:00"
+            "time": "2024-12-13T10:00:48+00:00"
         },
         {
             "name": "spryker/sales-configurable-bundle",
@@ -57540,20 +57635,20 @@
         },
         {
             "name": "spryker/shipment-gui",
-            "version": "2.10.1",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/shipment-gui.git",
-                "reference": "bae94e2210b184e380401edce981684203897d57"
+                "reference": "380bfc1c8dc328313cc9f6d2d2d7e49d39f6b211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/shipment-gui/zipball/bae94e2210b184e380401edce981684203897d57",
-                "reference": "bae94e2210b184e380401edce981684203897d57",
+                "url": "https://api.github.com/repos/spryker/shipment-gui/zipball/380bfc1c8dc328313cc9f6d2d2d7e49d39f6b211",
+                "reference": "380bfc1c8dc328313cc9f6d2d2d7e49d39f6b211",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/customer": "^7.23.0",
                 "spryker/gui": "^3.31.0",
                 "spryker/kernel": "^3.33.0",
@@ -57602,9 +57697,9 @@
             ],
             "description": "ShipmentGui module",
             "support": {
-                "source": "https://github.com/spryker/shipment-gui/tree/2.10.1"
+                "source": "https://github.com/spryker/shipment-gui/tree/2.11.0"
             },
-            "time": "2023-11-22T10:16:20+00:00"
+            "time": "2024-12-13T10:00:48+00:00"
         },
         {
             "name": "spryker/shipment-gui-extension",
@@ -60858,16 +60953,16 @@
         },
         {
             "name": "spryker/twig",
-            "version": "3.24.1",
+            "version": "3.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/twig.git",
-                "reference": "ce248b3f8565fb6606bc4ab41011b9cda5068590"
+                "reference": "211af00512f740341689cfd09f842a3042ca26b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/twig/zipball/ce248b3f8565fb6606bc4ab41011b9cda5068590",
-                "reference": "ce248b3f8565fb6606bc4ab41011b9cda5068590",
+                "url": "https://api.github.com/repos/spryker/twig/zipball/211af00512f740341689cfd09f842a3042ca26b8",
+                "reference": "211af00512f740341689cfd09f842a3042ca26b8",
                 "shasum": ""
             },
             "require": {
@@ -60888,7 +60983,8 @@
                 "spryker/event-dispatcher": "*",
                 "spryker/propel": "*",
                 "spryker/silex": "*",
-                "spryker/testify": "*"
+                "spryker/testify": "*",
+                "symfony/var-dumper": "*"
             },
             "suggest": {
                 "spryker/event-dispatcher": "If you want to use EventDispatcher plugin.",
@@ -60912,9 +61008,9 @@
             ],
             "description": "Twig module",
             "support": {
-                "source": "https://github.com/spryker/twig/tree/3.24.1"
+                "source": "https://github.com/spryker/twig/tree/3.25.1"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2024-12-12T18:25:19+00:00"
         },
         {
             "name": "spryker/twig-extension",
@@ -75427,7 +75523,7 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },
