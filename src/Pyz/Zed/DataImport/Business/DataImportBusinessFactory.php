@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\DataImport\Business;
 
 use Generated\Shared\Transfer\DataImportConfigurationActionTransfer;
@@ -229,7 +231,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
      *
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
      */
-    public function createDataImporterConditional($importType, DataReaderInterface $reader): DataImporterConditional
+    public function createDataImporterConditional(string $importType, DataReaderInterface $reader): DataImporterConditional
     {
         return new DataImporterConditional($importType, $reader, $this->getGracefulRunnerFacade());
     }
@@ -707,8 +709,8 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
      * @return \Pyz\Zed\DataImport\Business\Model\Navigation\NavigationKeyToIdNavigationStep
      */
     protected function createNavigationKeyToIdNavigationStep(
-        $source = NavigationKeyToIdNavigationStep::KEY_SOURCE,
-        $target = NavigationKeyToIdNavigationStep::KEY_TARGET,
+        string $source = NavigationKeyToIdNavigationStep::KEY_SOURCE,
+        string $target = NavigationKeyToIdNavigationStep::KEY_TARGET,
     ): NavigationKeyToIdNavigationStep {
         return new NavigationKeyToIdNavigationStep($source, $target);
     }
@@ -1294,8 +1296,8 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
      * @return \Pyz\Zed\DataImport\Business\Model\Locale\LocaleNameToIdLocaleStep
      */
     protected function createLocaleNameToIdStep(
-        $source = LocaleNameToIdLocaleStep::KEY_SOURCE,
-        $target = LocaleNameToIdLocaleStep::KEY_TARGET,
+        string $source = LocaleNameToIdLocaleStep::KEY_SOURCE,
+        string $target = LocaleNameToIdLocaleStep::KEY_TARGET,
     ): LocaleNameToIdLocaleStep {
         return new LocaleNameToIdLocaleStep($source, $target);
     }
@@ -1333,8 +1335,8 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
      * @return \Pyz\Zed\DataImport\Business\Model\Tax\TaxSetNameToIdTaxSetStep
      */
     protected function createTaxSetNameToIdTaxSetStep(
-        $source = TaxSetNameToIdTaxSetStep::KEY_SOURCE,
-        $target = TaxSetNameToIdTaxSetStep::KEY_TARGET,
+        string $source = TaxSetNameToIdTaxSetStep::KEY_SOURCE,
+        string $target = TaxSetNameToIdTaxSetStep::KEY_TARGET,
     ): TaxSetNameToIdTaxSetStep {
         return new TaxSetNameToIdTaxSetStep($source, $target);
     }
@@ -1410,7 +1412,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
      * @return \Pyz\Zed\DataImport\Business\Model\DataImporterDataSetWriterAwareConditional
      */
     public function createDataImporterWriterAwareConditional(
-        $importType,
+        string $importType,
         DataReaderInterface $reader,
     ): DataImporterDataSetWriterAwareConditional {
         return new DataImporterDataSetWriterAwareConditional($importType, $reader, $this->getGracefulRunnerFacade());

@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace PyzTest\Glue\Customer\RestApi;
 
 use Codeception\Example;
@@ -120,9 +122,9 @@ class CustomerRegistrationCest
         $I->seeResponseMatchesOpenApiSchema();
 
         foreach ($example['errors'] as $index => $error) {
-            $I->seeResponseErrorsHaveCode($error[RestErrorMessageTransfer::CODE], $index);
-            $I->seeResponseErrorsHaveStatus($error[RestErrorMessageTransfer::STATUS], $index);
-            $I->seeResponseErrorsHaveDetail($error[RestErrorMessageTransfer::DETAIL], $index);
+            $I->seeResponseErrorsHaveCode($error[RestErrorMessageTransfer::CODE], (string)$index);
+            $I->seeResponseErrorsHaveStatus($error[RestErrorMessageTransfer::STATUS], (string)$index);
+            $I->seeResponseErrorsHaveDetail($error[RestErrorMessageTransfer::DETAIL], (string)$index);
         }
     }
 
@@ -260,7 +262,7 @@ class CustomerRegistrationCest
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
                         RestErrorMessageTransfer::STATUS => Response::HTTP_UNPROCESSABLE_ENTITY,
-                        RestErrorMessageTransfer::DETAIL => 'password => This value is not valid.',
+                        RestErrorMessageTransfer::DETAIL => 'password => Your password must include at least one uppercase letter, one lowercase letter, one number, and one special character from the following list: !@#$%^&*()_-+=[]{}|;:<>.,/?\~. Non-Latin and other special characters are not allowed.',
                     ],
                     [
                         RestErrorMessageTransfer::CODE => RestRequestValidatorConfig::RESPONSE_CODE_REQUEST_INVALID,
