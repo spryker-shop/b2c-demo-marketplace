@@ -3,10 +3,9 @@ name: "[mp_b2c][master] Robot Regression UI E2E"
 on:
     pull_request:
         types: [ labeled, synchronize ]
-    push:
-        branches:
-            - master
     workflow_dispatch:
+    schedule:
+        -   cron: '0 0 * * 0'
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -18,7 +17,7 @@ jobs:
             (github.event_name == 'pull_request'
                 && (contains(github.event.pull_request.labels.*.name, 'run-ui-ci')
                     || contains(github.event.pull_request.labels.*.name, 'run-latest-ci'))
-            ) || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+            ) || (github.event_name == 'schedule' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.3 / MariaDB / Robot / UI / Group One"
         runs-on: ubuntu-22.04
         env:
@@ -81,12 +80,19 @@ jobs:
               run: |
                   AWS_DEFAULT_REGION=${{env.ROBOT_TESTS_ARTIFACTS_BUCKET_REGION}} AWS_ACCESS_KEY_ID=${{ secrets.ROBOT_TESTS_ARTIFACTS_KEY }} AWS_SECRET_ACCESS_KEY=${{ secrets.ROBOT_TESTS_ARTIFACTS_SECRET }} aws s3 cp .robot/results/log.html s3://${{vars.ROBOT_TESTS_ARTIFACTS_BUCKET}}/b2c-mp/dms-on/robot-ui/${GITHUB_RUN_ID}/PHP8.3MariaDB/group1/log.html
 
+            -   name: Slack Notification for scheduled job
+                uses: ./.github/actions/scheduled-job-slack-notifications
+                env:
+                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+                    SLACK_CHANNEL_ID: ${{ secrets.WEEKLY_CI_SLACK_CHANNEL_ID }}
+                if: always()
+
     docker-alpine-php-83-mariadb-robot-ui-group-two:
         if: >
             (github.event_name == 'pull_request'
                 && (contains(github.event.pull_request.labels.*.name, 'run-ui-ci')
                     || contains(github.event.pull_request.labels.*.name, 'run-latest-ci'))
-            ) || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+            ) || (github.event_name == 'schedule' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.3 / MariaDB / Robot / UI /Group Two"
         runs-on: ubuntu-22.04
         env:
@@ -150,12 +156,19 @@ jobs:
               run: |
                   AWS_DEFAULT_REGION=${{env.ROBOT_TESTS_ARTIFACTS_BUCKET_REGION}} AWS_ACCESS_KEY_ID=${{ secrets.ROBOT_TESTS_ARTIFACTS_KEY }} AWS_SECRET_ACCESS_KEY=${{ secrets.ROBOT_TESTS_ARTIFACTS_SECRET }} aws s3 cp .robot/results/log.html s3://${{vars.ROBOT_TESTS_ARTIFACTS_BUCKET}}/b2c-mp/dms-on/robot-ui/${GITHUB_RUN_ID}/PHP8.3MariaDB/group2/log.html
 
+            -   name: Slack Notification for scheduled job
+                uses: ./.github/actions/scheduled-job-slack-notifications
+                env:
+                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+                    SLACK_CHANNEL_ID: ${{ secrets.WEEKLY_CI_SLACK_CHANNEL_ID }}
+                if: always()
+
     docker-alpine-php-83-mariadb-robot-ui-group-three:
         if: >
             (github.event_name == 'pull_request'
                 && (contains(github.event.pull_request.labels.*.name, 'run-ui-ci')
                     || contains(github.event.pull_request.labels.*.name, 'run-latest-ci'))
-            ) || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+            ) || (github.event_name == 'schedule' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.3 / MariaDB / Robot / UI / Group Three"
         runs-on: ubuntu-22.04
         env:
@@ -217,11 +230,18 @@ jobs:
               run: |
                   AWS_DEFAULT_REGION=${{env.ROBOT_TESTS_ARTIFACTS_BUCKET_REGION}} AWS_ACCESS_KEY_ID=${{ secrets.ROBOT_TESTS_ARTIFACTS_KEY }} AWS_SECRET_ACCESS_KEY=${{ secrets.ROBOT_TESTS_ARTIFACTS_SECRET }} aws s3 cp .robot/results/log.html s3://${{vars.ROBOT_TESTS_ARTIFACTS_BUCKET}}/b2c-mp/dms-on/robot-ui/${GITHUB_RUN_ID}/PHP8.3MariaDB/group3/log.html
 
+            -   name: Slack Notification for scheduled job
+                uses: ./.github/actions/scheduled-job-slack-notifications
+                env:
+                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+                    SLACK_CHANNEL_ID: ${{ secrets.WEEKLY_CI_SLACK_CHANNEL_ID }}
+                if: always()
+
     docker-alpine-php-82-postgresql-dynamic-store-off-robot-ui-group-one:
         if: >
             (github.event_name == 'pull_request'
                && contains(github.event.pull_request.labels.*.name, 'run-comaptibility-ci')
-            ) || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+            ) || (github.event_name == 'schedule' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.2 / PostgreSQL / Dynamic Store OFF / Robot / UI / Group One"
         runs-on: ubuntu-22.04
         env:
@@ -285,11 +305,18 @@ jobs:
                     --recursive \
                     --expires "$(date -d '+7 days' --utc +'%Y-%m-%dT%H:%M:%SZ')"
 
+            -   name: Slack Notification for scheduled job
+                uses: ./.github/actions/scheduled-job-slack-notifications
+                env:
+                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+                    SLACK_CHANNEL_ID: ${{ secrets.WEEKLY_CI_SLACK_CHANNEL_ID }}
+                if: always()
+
     docker-alpine-php-82-postgresql-dynamic-store-off-robot-ui-group-two:
         if: >
             (github.event_name == 'pull_request'
                 && contains(github.event.pull_request.labels.*.name, 'run-comaptibility-ci')
-            ) || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+            ) || (github.event_name == 'schedule' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.2 / PostgreSQL / Dynamic Store OFF / Robot / UI / Group Two"
         runs-on: ubuntu-22.04
         env:
@@ -351,11 +378,18 @@ jobs:
               run: |
                   AWS_DEFAULT_REGION=${{env.ROBOT_TESTS_ARTIFACTS_BUCKET_REGION}} AWS_ACCESS_KEY_ID=${{ secrets.ROBOT_TESTS_ARTIFACTS_KEY }} AWS_SECRET_ACCESS_KEY=${{ secrets.ROBOT_TESTS_ARTIFACTS_SECRET }} aws s3 cp .robot/results/log.html s3://${{vars.ROBOT_TESTS_ARTIFACTS_BUCKET}}/b2c-mp/dms-off/robot-ui/${GITHUB_RUN_ID}/PHP8.2PostgreSQL/group2/log.html
 
+            -   name: Slack Notification for scheduled job
+                uses: ./.github/actions/scheduled-job-slack-notifications
+                env:
+                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+                    SLACK_CHANNEL_ID: ${{ secrets.WEEKLY_CI_SLACK_CHANNEL_ID }}
+                if: always()
+
     docker-alpine-php-82-postgresql-dynamic-store-off-robot-ui-group-three:
         if: >
             (github.event_name == 'pull_request'
                 && contains(github.event.pull_request.labels.*.name, 'run-comaptibility-ci')
-            ) || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+            ) || (github.event_name == 'schedule' && github.ref == 'refs/heads/master')
         name: "Docker / Alpine / PHP 8.2 / PostgreSQL / Dynamic Store OFF / Robot / UI / Group Three"
         runs-on: ubuntu-22.04
         env:
@@ -416,3 +450,10 @@ jobs:
               if: failure()
               run: |
                   AWS_DEFAULT_REGION=${{env.ROBOT_TESTS_ARTIFACTS_BUCKET_REGION}} AWS_ACCESS_KEY_ID=${{ secrets.ROBOT_TESTS_ARTIFACTS_KEY }} AWS_SECRET_ACCESS_KEY=${{ secrets.ROBOT_TESTS_ARTIFACTS_SECRET }} aws s3 cp .robot/results/log.html s3://${{vars.ROBOT_TESTS_ARTIFACTS_BUCKET}}/b2c-mp/dms-off/robot-ui/${GITHUB_RUN_ID}/PHP8.2PostgreSQL/group3/log.html
+
+            -   name: Slack Notification for scheduled job
+                uses: ./.github/actions/scheduled-job-slack-notifications
+                env:
+                    SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+                    SLACK_CHANNEL_ID: ${{ secrets.WEEKLY_CI_SLACK_CHANNEL_ID }}
+                if: always()
