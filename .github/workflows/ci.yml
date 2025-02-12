@@ -2,7 +2,7 @@ name: B2C-MP-CI
 
 on:
     pull_request:
-        types: [ labeled, synchronize ]
+        types: [ labeled, unlabeled, synchronize ]
     workflow_dispatch:
     schedule:
         -   cron: '0 0 * * 0'
@@ -847,6 +847,10 @@ jobs:
                     docker/sdk testing console queue:worker:start --stop-when-empty
                     docker/sdk cli composer dump-autoload -o -a --apcu
                     docker/sdk testing codecept run -c codeception.acceptance.yml
+
+            -   name: Slack Notification for scheduled job
+                uses: ./.github/actions/scheduled-job-slack-notifications
+                if: always()
 
 
     php-82-mariadb-functional-alpine-dynamic-store-off:
