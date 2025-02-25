@@ -29,10 +29,10 @@ image:
         SPRYKER_HOOK_AFTER_DEPLOY: ""
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production --no-ansi -vvv"
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r destructive --no-ansi -vvv"
-        SPRYKER_PRODUCT_CONFIGURATOR_HOST: dtc.eu.mp-t.cloud.spryker.toys
+        SPRYKER_PRODUCT_CONFIGURATOR_HOST: dtc.academy-eu-b2c-mp.prod.demo-spryker.com
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
-        SPRYKER_YVES_HOST_EU: www.eu.mp-t.cloud.spryker.toys
-        SPRYKER_YVES_HOST_US: www.us.mp-t.cloud.spryker.toys
+        SPRYKER_YVES_HOST_EU: www.academy-eu-b2c-mp.prod.demo-spryker.com
+        SPRYKER_YVES_HOST_US: www.academy-us-b2c-mp.prod.demo-spryker.com
         SPRYKER_DYNAMIC_STORE_MODE: true
     php:
         ini:
@@ -64,9 +64,9 @@ regions:
       mail:
         sender:
           name: Spryker No-Reply
-          email: no-reply@eu.mp-t.cloud.spryker.toys
+          email: no-reply@academy-eu-b2c-mp.prod.demo-spryker.com
       database:
-        database: spryker_mpt
+        database: spryker_acb2cmpeu
         username: spryker
         password: secret
       broker:
@@ -84,35 +84,35 @@ groups:
             yves:
                 application: yves
                 endpoints:
-                    www.eu.mp-t.cloud.spryker.toys:
+                    www.academy-eu-b2c-mp.prod.demo-spryker.com:
                         region: EU
                         services:
                             session:
                                 namespace: 2
-                    dtc.eu.mp-t.cloud.spryker.toys:
+                    dtc.academy-eu-b2c-mp.prod.demo-spryker.com:
                         entry-point: Configurator
             glue:
                 application: glue
                 endpoints:
-                    glue.eu.mp-t.cloud.spryker.toys:
+                    glue.academy-eu-b2c-mp.prod.demo-spryker.com:
                         region: EU
                         cors-allow-origin: '*'
             gluestorefront:
                 application: glue-storefront
                 endpoints:
-                    glue-storefront.eu.mp-t.cloud.spryker.toys:
+                    glue-storefront.academy-eu-b2c-mp.prod.demo-spryker.com:
                         region: EU
                         cors-allow-origin: '*'
             gluebackend:
                 application: glue-backend
                 endpoints:
-                    glue-backend.eu.mp-t.cloud.spryker.toys:
+                    glue-backend.academy-eu-b2c-mp.prod.demo-spryker.com:
                         region: EU
                         cors-allow-origin: '*'
             boffice:
                 application: backoffice
                 endpoints:
-                    backoffice.eu.mp-t.cloud.spryker.toys:
+                    backoffice.academy-eu-b2c-mp.prod.demo-spryker.com:
                         region: EU
                         primal: true
                         services:
@@ -121,19 +121,19 @@ groups:
             backgw:
                 application: backend-gateway
                 endpoints:
-                    backend-gateway.eu.mp-t.cloud.spryker.toys:
+                    backend-gateway.academy-eu-b2c-mp.prod.demo-spryker.com:
                         region: EU
                         primal: true
             backapi:
                 application: zed
                 endpoints:
-                    backend-api.eu.mp-t.cloud.spryker.toys:
+                    backend-api.academy-eu-b2c-mp.prod.demo-spryker.com:
                         region: EU
                         entry-point: BackendApi
             mportal:
                 application: merchant-portal
                 endpoints:
-                    mp.eu.mp-t.cloud.spryker.toys:
+                    mp.academy-eu-b2c-mp.prod.demo-spryker.com:
                         entry-point: MerchantPortal
                         region: EU
                         primal: true
@@ -157,7 +157,7 @@ services:
             username: "spryker"
             password: "secret"
         endpoints:
-            queue.eu.mp-t.cloud.spryker.toys:
+            queue.academy-eu-b2c-mp.prod.demo-spryker.com:
             localhost:5672:
                 protocol: tcp
     session:
@@ -177,11 +177,11 @@ services:
         engine: jenkins
         version: '2.442'
         endpoints:
-            scheduler.eu.mp-t.cloud.spryker.toys:
+            scheduler.academy-eu-b2c-mp.prod.demo-spryker.com:
     mail_catcher:
         engine: mailhog
         endpoints:
-            mail.eu.mp-t.cloud.spryker.toys:
+            mail.academy-eu-b2c-mp.prod.demo-spryker.com:
 
 docker:
 
