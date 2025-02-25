@@ -66,7 +66,7 @@ regions:
           name: Spryker No-Reply
           email: no-reply@academy-eu-b2c-mp.prod.demo-spryker.com
       database:
-        database: spryker-acb2cmpeu
+        database: spryker_acb2cmpeu
         username: spryker
         password: secret
       broker:
