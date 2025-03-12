@@ -183,7 +183,7 @@ services:
                 protocol: tcp
     broker:
         engine: rabbitmq
-        version: 3.13
+        version: 3.9
         api:
             username: "spryker"
             password: "secret"
