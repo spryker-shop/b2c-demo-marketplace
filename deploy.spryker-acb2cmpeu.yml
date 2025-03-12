@@ -28,12 +28,13 @@ image:
         SPRYKER_HOOK_BEFORE_DEPLOY: "vendor/bin/install -r EU/pre-deploy -vvv"
         SPRYKER_HOOK_AFTER_DEPLOY: ""
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production --no-ansi -vvv"
-        SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r destructive --no-ansi -vvv"
+        SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive --no-ansi -vvv"
         SPRYKER_PRODUCT_CONFIGURATOR_HOST: dtc.academy-eu-b2c-mp.prod.demo-spryker.com
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
         SPRYKER_YVES_HOST_EU: www.academy-eu-b2c-mp.prod.demo-spryker.com
         SPRYKER_YVES_HOST_US: www.academy-us-b2c-mp.prod.demo-spryker.com
-        SPRYKER_DYNAMIC_STORE_MODE: true
+        SPRYKER_DEFAULT_STORE: "DE"
+        SPRYKER_ACTIVE_STORES: "DE,AT"
     php:
         enabled-extensions:
             - blackfire
