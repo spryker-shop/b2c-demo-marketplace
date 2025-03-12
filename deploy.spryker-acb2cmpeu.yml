@@ -68,28 +68,27 @@ regions:
         database: spryker_acb2cmpeu
         username: spryker
         password: secret
-
-      stores:
-          DE:
-              services:
-                  broker:
-                      namespace: de_queue
-                  key_value_store:
-                      namespace: 1
-                  search:
-                      namespace: de_search
-                  session:
-                      namespace: 2
-          AT:
-              services:
-                  broker:
-                      namespace: at_queue
-                  key_value_store:
-                      namespace: 3
-                  search:
-                      namespace: at_search
-                  session:
-                      namespace: 4
+    stores:
+        DE:
+            services:
+                broker:
+                    namespace: de_queue
+                key_value_store:
+                    namespace: 1
+                search:
+                    namespace: de_search
+                session:
+                    namespace: 2
+        AT:
+            services:
+                broker:
+                    namespace: at_queue
+                key_value_store:
+                    namespace: 3
+                search:
+                    namespace: at_search
+                session:
+                    namespace: 4
 
 
 
