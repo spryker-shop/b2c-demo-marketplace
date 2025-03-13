@@ -198,7 +198,7 @@ services:
         endpoints:
             scheduler.scos-b2cmp.sh01.demo-spryker.com:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.scos-b2cmp.sh01.demo-spryker.com:
 

@@ -147,7 +147,7 @@ services:
         endpoints:
             scheduler.internal-security.demo-spryker.com:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.internal-security.demo-spryker.com:
 
