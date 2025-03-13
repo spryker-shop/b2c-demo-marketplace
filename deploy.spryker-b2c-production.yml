@@ -194,7 +194,7 @@ services:
         endpoints:
             scheduler.b2c.demo-spryker.com:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.b2c.demo-spryker.com:
 

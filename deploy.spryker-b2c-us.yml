@@ -164,7 +164,7 @@ services:
         endpoints:
             scheduler.b2c-staging-us.cloud.spryker.toys:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.b2c-staging-us.cloud.spryker.toys:
 
