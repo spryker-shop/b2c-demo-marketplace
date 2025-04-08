@@ -74846,14 +74846,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "b7db709d7ed932ccf8e6f716b0d4ced237577e04"
+                "reference": "8f84a8b83ad8ad56eb96b6fc82657b48f01d08fc"
             },
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2025-03-13T18:42:58+00:00"
+            "time": "2025-04-08T20:15:23+00:00"
         },
         {
             "name": "spryker/testify",

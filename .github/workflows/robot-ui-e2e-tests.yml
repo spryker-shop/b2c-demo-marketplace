@@ -1,4 +1,4 @@
-name: "[mp_b2c][master] Robot Regression UI E2E"
+name: "Robot UI E2E"
 
 on:
     pull_request:
@@ -69,7 +69,7 @@ jobs:
               id: run_dynamic_tests
               continue-on-error: true
               run: |
-                  docker/sdk exec robot-framework pabot --processes 4 -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -d results/dynamic_set --exclude skip-due-to-issueORskip-due-to-refactoringORstatic-set -s '*'.tests.parallel_ui.mp_b2c .
+                  docker/sdk exec robot-framework pabot --processes 4 --ordering pabot_mp_b2c_ordering -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:true -d results/dynamic_set --exclude skip-due-to-issueORskip-due-to-refactoringORstatic-set -s '*'.tests.parallel_ui.mp_b2c .
             - name: Run Static Tests Set
               id: run_static_tests
               continue-on-error: true
@@ -93,10 +93,9 @@ jobs:
               if: failure()
               run: |
                   AWS_DEFAULT_REGION=${{env.ROBOT_TESTS_ARTIFACTS_BUCKET_REGION}} AWS_ACCESS_KEY_ID=${{ secrets.ROBOT_TESTS_ARTIFACTS_KEY }} AWS_SECRET_ACCESS_KEY=${{ secrets.ROBOT_TESTS_ARTIFACTS_SECRET }} aws s3 cp .robot/results/log.html s3://${{vars.ROBOT_TESTS_ARTIFACTS_BUCKET}}/b2c-mp/dms-on/robot-ui/${GITHUB_RUN_ID}/PHP8.3MariaDB/log.html
-
-            -   name: Slack Notification for scheduled job
-                uses: ./.github/actions/scheduled-job-slack-notifications
-                if: always()
+            - name: Slack Notification for scheduled job
+              uses: ./.github/actions/scheduled-job-slack-notifications
+              if: always()
 
     docker-alpine-php-82-postgresql-dynamic-store-off-robot-ui:
         if: >
@@ -149,7 +148,7 @@ jobs:
               id: run_dynamic_tests
               continue-on-error: true
               run: |
-                  docker/sdk exec robot-framework pabot --processes 4 -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:false -v db_engine:psycopg2 -d results/dynamic_set --exclude skip-due-to-issueORskip-due-to-refactoringORstatic-set -s '*'.tests.parallel_ui.mp_b2c .
+                  docker/sdk exec robot-framework pabot --processes 4 --ordering pabot_mp_b2c_ordering -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:false -v db_engine:psycopg2 -d results/dynamic_set --exclude skip-due-to-issueORskip-due-to-refactoringORstatic-set -s '*'.tests.parallel_ui.mp_b2c .
             - name: Run Static Tests Set
               id: run_static_tests
               continue-on-error: true
@@ -173,9 +172,6 @@ jobs:
               if: failure()
               run: |
                   AWS_DEFAULT_REGION=${{env.ROBOT_TESTS_ARTIFACTS_BUCKET_REGION}} AWS_ACCESS_KEY_ID=${{ secrets.ROBOT_TESTS_ARTIFACTS_KEY }} AWS_SECRET_ACCESS_KEY=${{ secrets.ROBOT_TESTS_ARTIFACTS_SECRET }} aws s3 cp .robot/results/log.html s3://${{vars.ROBOT_TESTS_ARTIFACTS_BUCKET}}/b2c-mp/dms-off/robot-ui/${GITHUB_RUN_ID}/PHP8.2PostgreSQL/log.html
-                    --recursive \
-                    --expires "$(date -d '+7 days' --utc +'%Y-%m-%dT%H:%M:%SZ')"
-
-            -   name: Slack Notification for scheduled job
-                uses: ./.github/actions/scheduled-job-slack-notifications
-                if: always()
+            - name: Slack Notification for scheduled job
+              uses: ./.github/actions/scheduled-job-slack-notifications
+              if: always()
