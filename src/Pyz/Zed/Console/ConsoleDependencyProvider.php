@@ -164,6 +164,7 @@ use Spryker\Zed\StateMachine\Communication\Console\CheckTimeoutConsole as StateM
 use Spryker\Zed\StateMachine\Communication\Console\ClearLocksConsole as StateMachineClearLocksConsole;
 use Spryker\Zed\StockDataImport\StockDataImportConfig;
 use Spryker\Zed\Storage\Communication\Console\StorageDeleteAllConsole;
+use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisDataReSaveConsole;
 use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisExportRdbConsole;
 use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisImportRdbConsole;
 use Spryker\Zed\StoreContextDataImport\StoreContextDataImportConfig;
@@ -411,6 +412,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new SendPushNotificationConsole(),
             new OrderMatrixConsole(),
             new AclEntitySynchronizeConsole(),
+            new StorageRedisDataReSaveConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
