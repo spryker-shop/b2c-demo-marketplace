@@ -11207,22 +11207,22 @@
         },
         {
             "name": "spryker-shop/customer-page",
-            "version": "2.63.0",
+            "version": "2.60.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/customer-page.git",
-                "reference": "b5295ce631f5bea91c8724d0246f53ce9362d16d"
+                "reference": "528db31274f44064ad8c7e80f60488146f8d7ea9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/b5295ce631f5bea91c8724d0246f53ce9362d16d",
-                "reference": "b5295ce631f5bea91c8724d0246f53ce9362d16d",
+                "url": "https://api.github.com/repos/spryker-shop/customer-page/zipball/528db31274f44064ad8c7e80f60488146f8d7ea9",
+                "reference": "528db31274f44064ad8c7e80f60488146f8d7ea9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
                 "spryker-shop/checkout-page-extension": "^1.0.0",
-                "spryker-shop/customer-page-extension": "^1.7.0",
+                "spryker-shop/customer-page-extension": "^1.6.0",
                 "spryker-shop/shop-application": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.84.0",
                 "spryker/application": "^3.8.0",
@@ -11281,7 +11281,6 @@
                 "spryker-shop/sales-service-point-widget": "Add the module if you want to display the service point related information.",
                 "spryker/config": "Use this module when using plugins that need Config dependencies.",
                 "spryker/messenger": "Use this module when using plugins that need Messenger dependencies.",
-                "spryker/multi-factor-auth": "Use this module when using plugins that need MultiFactorAuth dependencies.",
                 "spryker/shipment-cart-connector": "If you want to use shipment totals in quote or shipment source prices, min version 2.1.0",
                 "spryker/silex": "Use this module when using plugins that need Silex dependencies."
             },
@@ -11302,9 +11301,9 @@
             ],
             "description": "CustomerPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/customer-page/tree/2.63.0"
+                "source": "https://github.com/spryker-shop/customer-page/tree/2.60.3"
             },
-            "time": "2025-04-10T08:17:34+00:00"
+            "time": "2025-03-27T11:30:32+00:00"
         },
         {
             "name": "spryker-shop/customer-page-extension",
