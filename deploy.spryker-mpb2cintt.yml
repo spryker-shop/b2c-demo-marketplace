@@ -195,6 +195,7 @@ services:
                 protocol: tcp
     scheduler:
         engine: jenkins
+        version: '2.492.3'
         endpoints:
             scheduler.mp-b2c.internal-testing.demo-spryker.com:
     mail_catcher:
