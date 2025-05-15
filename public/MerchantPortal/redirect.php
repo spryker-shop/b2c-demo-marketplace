@@ -5,14 +5,10 @@
 if (empty($_GET['url'])) {
     exit('No redirect URL provided');
 }
-if (empty(filter_var($_GET['url'], FILTER_SANITIZE_URL))) {
-    exit('No redirect URL provided');
-}
-
 ?>
 <p style="text-align: center">
-    The site <?php echo filter_var($_SERVER['HTTP_REFERER'] ?? '', FILTER_SANITIZE_URL); ?> wants to redirect you to <strong><?php echo filter_var($_GET['url'], FILTER_SANITIZE_URL) ?></strong>. Would you like to follow the redirect?
+    The site <?php echo htmlspecialchars($_SERVER['HTTP_REFERER'] ?? '', ENT_QUOTES, 'UTF-8') ?? ''; ?> wants to redirect you to <strong><?php echo htmlspecialchars($_GET['url'], ENT_QUOTES, 'UTF-8'); ?></strong>. Would you like to follow the redirect?
 </p>
 <p style="text-align: center">
-    <a href="<?php echo filter_var($_GET['url'], FILTER_SANITIZE_URL); ?>">Follow</a>
+    <a href="<?php echo htmlspecialchars($_GET['url'], ENT_QUOTES, 'UTF-8'); ?>">Follow</a>
 </p>
