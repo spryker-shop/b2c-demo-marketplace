@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b280c627f5e31977cdbba2295859388",
+    "content-hash": "03298868e519ee3e987bfb37da46ff62",
     "packages": [
         {
             "name": "async-aws/core",
@@ -74839,19 +74839,18 @@
         },
         {
             "name": "spryker/cypress-tests",
-            "version": "dev-master",
+            "version": "dev-bugfix/cc-35103-flaky-post-deploy-cypress-e2e-test_1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "929cdf355253488a1a4b0675a4a63a62499244ea"
+                "reference": "b223038062c3a0d5cfc8a6feab7d1386450c250b"
             },
-            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2025-03-10T20:34:08+00:00"
+            "time": "2025-04-18T00:43:55+00:00"
         },
         {
             "name": "spryker/development",
