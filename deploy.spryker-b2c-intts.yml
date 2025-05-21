@@ -122,7 +122,7 @@ services:
         endpoints:
             scheduler.us.b2c.internal-testing.demo-spryker.com:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.internal-testing.demo-spryker.com:
 

@@ -180,7 +180,7 @@ services:
         endpoints:
             scheduler.spryker-b2cmp.cloud.spryker.toys:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.spryker-b2cmp.cloud.spryker.toys:
 
