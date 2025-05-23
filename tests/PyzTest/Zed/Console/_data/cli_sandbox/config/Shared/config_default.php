@@ -19,7 +19,6 @@ use Spryker\Shared\Newsletter\NewsletterConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Queue\QueueConstants;
 use Spryker\Shared\Propel\PropelConstants;
-use Spryker\Shared\Queue\QueueConstants;
 use Spryker\Shared\Sales\SalesConstants;
 use Spryker\Shared\Search\SearchConstants;
 use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConstants;
