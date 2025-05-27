@@ -129,6 +129,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
             ShipmentTypeStorageConfig::QUEUE_NAME_SYNC_STORAGE_SHIPMENT_TYPE => new SynchronizationStorageQueueMessageProcessorPlugin(),
             ProductOfferServicePointStorageConfig::QUEUE_NAME_SYNC_STORAGE_PRODUCT_OFFER_SERVICE => new SynchronizationStorageQueueMessageProcessorPlugin(),
             ProductOfferShipmentTypeStorageConfig::PRODUCT_OFFER_SHIPMENT_TYPE_SYNC_STORAGE_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+            UrlStorageConfig::PUBLISH_URL_RETRY => new EventRetryQueueMessageProcessorPlugin(),
         ];
     }
 
