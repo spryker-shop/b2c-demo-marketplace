@@ -14,6 +14,7 @@ use Spryker\Zed\CartNote\Communication\Plugin\Checkout\CartNoteSaverPlugin;
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\Customer\Communication\Plugin\Checkout\CustomerOrderSavePlugin;
 use Spryker\Zed\Customer\Communication\Plugin\CustomerPreConditionCheckerPlugin;
+use Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Checkout\CustomerDiscountOrderSavePlugin;
 use Spryker\Zed\Discount\Communication\Plugin\Checkout\DiscountOrderSavePlugin;
 use Spryker\Zed\Discount\Communication\Plugin\Checkout\VoucherDiscountMaxUsageCheckoutPreConditionPlugin;
 use Spryker\Zed\DummyPayment\Communication\Plugin\Checkout\DummyPaymentCheckoutPostSavePlugin;
@@ -116,6 +117,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new SalesPaymentCheckoutDoSaveOrderPlugin(),
             new GiftCardCheckoutDoSaveOrderPlugin(),
             new SalesOrderThresholdExpenseSavePlugin(), #SalesOrderThresholdFeature
+            new CustomerDiscountOrderSavePlugin(),
         ];
     }
 
