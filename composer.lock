@@ -61220,16 +61220,16 @@
         },
         {
             "name": "spryker/transfer",
-            "version": "3.39.0",
+            "version": "3.38.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/transfer.git",
-                "reference": "9b622e673753ce962834aaceef1156481d845043"
+                "reference": "5af808802d9bb8367bfeae9902f22b7ef4e064a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/transfer/zipball/9b622e673753ce962834aaceef1156481d845043",
-                "reference": "9b622e673753ce962834aaceef1156481d845043",
+                "url": "https://api.github.com/repos/spryker/transfer/zipball/5af808802d9bb8367bfeae9902f22b7ef4e064a9",
+                "reference": "5af808802d9bb8367bfeae9902f22b7ef4e064a9",
                 "shasum": ""
             },
             "require": {
@@ -61265,22 +61265,22 @@
             ],
             "description": "Transfer module",
             "support": {
-                "source": "https://github.com/spryker/transfer/tree/3.39.0"
+                "source": "https://github.com/spryker/transfer/tree/3.38.0"
             },
-            "time": "2025-05-23T10:18:08+00:00"
+            "time": "2025-02-20T11:07:27+00:00"
         },
         {
             "name": "spryker/translator",
-            "version": "1.14.2",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/translator.git",
-                "reference": "4283390e901896838fde6d6377639455066290c2"
+                "reference": "061a017b6f2adedba3a98eec846f10f10784893a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/translator/zipball/4283390e901896838fde6d6377639455066290c2",
-                "reference": "4283390e901896838fde6d6377639455066290c2",
+                "url": "https://api.github.com/repos/spryker/translator/zipball/061a017b6f2adedba3a98eec846f10f10784893a",
+                "reference": "061a017b6f2adedba3a98eec846f10f10784893a",
                 "shasum": ""
             },
             "require": {
@@ -61326,9 +61326,9 @@
             ],
             "description": "Translator module",
             "support": {
-                "source": "https://github.com/spryker/translator/tree/1.14.2"
+                "source": "https://github.com/spryker/translator/tree/1.14.0"
             },
-            "time": "2025-03-27T16:46:47+00:00"
+            "time": "2024-09-20T14:38:30+00:00"
         },
         {
             "name": "spryker/translator-extension",
