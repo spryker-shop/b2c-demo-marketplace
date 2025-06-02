@@ -11,6 +11,8 @@ namespace Pyz\Zed\Discount;
 
 use Spryker\Zed\CategoryDiscountConnector\Communication\Plugin\Discount\CategoryDecisionRulePlugin;
 use Spryker\Zed\CategoryDiscountConnector\Communication\Plugin\Discount\CategoryDiscountableItemCollectorPlugin;
+use Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount\CustomerOrderAmountDecisionRulePlugin;
+use Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount\CustomerReferenceDecisionRulePlugin;
 use Spryker\Zed\CustomerGroupDiscountConnector\Communication\Plugin\DecisionRule\CustomerGroupDecisionRulePlugin;
 use Spryker\Zed\Discount\DiscountDependencyProvider as SprykerDiscountDependencyProvider;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionCalculationFormDataExpanderPlugin;
@@ -63,6 +65,8 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
             new CustomerOrderCountDecisionRulePlugin(),
             new ProductOfferReferenceDecisionRulePlugin(),
             new MerchantReferenceDecisionRulePlugin(),
+            new CustomerReferenceDecisionRulePlugin(),
+            new CustomerOrderAmountDecisionRulePlugin(),
         ]);
     }
 
