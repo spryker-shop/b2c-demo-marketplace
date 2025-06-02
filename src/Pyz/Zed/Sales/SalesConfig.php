@@ -76,4 +76,12 @@ class SalesConfig extends SprykerSalesConfig
     {
         return true;
     }
+
+    /**
+     * @return string
+     */
+    public function getItemHashColumn(): string
+    {
+        return 'OrderItemReference';
+    }
 }
