@@ -9645,16 +9645,16 @@
         },
         {
             "name": "spryker-shop/cart-page",
-            "version": "3.49.0",
+            "version": "3.52.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/cart-page.git",
-                "reference": "90c2c867e52b6174138b6e3ab2081cf03bdfc7f4"
+                "reference": "025b53b20e79412aab428eb4c27193670b529b8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/cart-page/zipball/90c2c867e52b6174138b6e3ab2081cf03bdfc7f4",
-                "reference": "90c2c867e52b6174138b6e3ab2081cf03bdfc7f4",
+                "url": "https://api.github.com/repos/spryker-shop/cart-page/zipball/025b53b20e79412aab428eb4c27193670b529b8d",
+                "reference": "025b53b20e79412aab428eb4c27193670b529b8d",
                 "shasum": ""
             },
             "require": {
@@ -9707,6 +9707,7 @@
                 "spryker-shop/product-measurement-unit-widget": "^0.7.2: If you want to use measurement-unit-item molecule from module ProductMeasurementUnitWidget",
                 "spryker-shop/product-option-widget": "If you want to use components from module ProductOptionWidget or CartItemProductOptionWidgetPlugin",
                 "spryker-shop/product-packaging-unit-widget": "If you want to use components from module ProductPackagingUnitWidget or CartProductPackagingUnitWidgetPlugin",
+                "spryker-shop/sales-order-amendment-widget": "If you want to use CancelOrderAmendmentWidget.",
                 "spryker/container": "If you want to use the CartTwigPlugin",
                 "spryker/permission": "If you want to use permissions plugins",
                 "spryker/router": "Use this module when using plugins that adds routes to the Route Module.",
@@ -9730,9 +9731,9 @@
             ],
             "description": "CartPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/cart-page/tree/3.49.0"
+                "source": "https://github.com/spryker-shop/cart-page/tree/3.52.0"
             },
-            "time": "2025-04-03T12:49:27+00:00"
+            "time": "2025-06-02T12:28:37+00:00"
         },
         {
             "name": "spryker-shop/cart-page-extension",
@@ -9939,20 +9940,20 @@
         },
         {
             "name": "spryker-shop/category-widget",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/category-widget.git",
-                "reference": "cafe028b3c3ba5df245a211b66d2f5c4e8f43bc5"
+                "reference": "6d86104119cd7db6f422c392a436122af0a08596"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/category-widget/zipball/cafe028b3c3ba5df245a211b66d2f5c4e8f43bc5",
-                "reference": "cafe028b3c3ba5df245a211b66d2f5c4e8f43bc5",
+                "url": "https://api.github.com/repos/spryker-shop/category-widget/zipball/6d86104119cd7db6f422c392a436122af0a08596",
+                "reference": "6d86104119cd7db6f422c392a436122af0a08596",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.2",
                 "spryker-shop/shop-ui": "^1.0.0",
                 "spryker/category-storage": "^1.11.0 || ^2.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -9988,9 +9989,9 @@
             ],
             "description": "CategoryWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/category-widget/tree/1.4.0"
+                "source": "https://github.com/spryker-shop/category-widget/tree/1.5.0"
             },
-            "time": "2021-10-29T12:16:12+00:00"
+            "time": "2025-06-02T12:28:37+00:00"
         },
         {
             "name": "spryker-shop/chart-widget",
