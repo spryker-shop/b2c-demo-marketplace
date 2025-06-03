@@ -1,5 +1,5 @@
 @import '../../atoms/select/select';
-@import '~select2/src/scss/core.scss';
+@import '~select2/src/scss/core';
 
 @mixin shop-ui-custom-select($name: '.custom-select') {
     @include shop-ui-select($name) {
