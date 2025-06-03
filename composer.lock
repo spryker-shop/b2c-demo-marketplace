@@ -59757,23 +59757,22 @@
         },
         {
             "name": "spryker/store",
-            "version": "1.29.0",
+            "version": "1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/store.git",
-                "reference": "ccee2ff12bfd8ab2eb21f1fe72d69e67097f9f1d"
+                "reference": "69c9bc2e94a96e0d762f222e830a2392ba140234"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/store/zipball/ccee2ff12bfd8ab2eb21f1fe72d69e67097f9f1d",
-                "reference": "ccee2ff12bfd8ab2eb21f1fe72d69e67097f9f1d",
+                "url": "https://api.github.com/repos/spryker/store/zipball/69c9bc2e94a96e0d762f222e830a2392ba140234",
+                "reference": "69c9bc2e94a96e0d762f222e830a2392ba140234",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.1",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/application-extension": "^1.0.0",
-                "spryker/cart-reorder-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/log": "^1.0.0 || ^2.0.0 || ^3.0.0",
                 "spryker/message-broker-extension": "^1.0.0",
@@ -59782,7 +59781,7 @@
                 "spryker/quote-extension": "^1.4.0",
                 "spryker/store-extension": "^1.0.0",
                 "spryker/symfony": "^3.0.0",
-                "spryker/transfer": "^3.27.0",
+                "spryker/transfer": "^3.25.0",
                 "spryker/zed-request": "^3.3.0",
                 "spryker/zed-request-extension": "^1.1.0"
             },
@@ -59821,9 +59820,9 @@
             ],
             "description": "Store module",
             "support": {
-                "source": "https://github.com/spryker/store/tree/1.29.0"
+                "source": "https://github.com/spryker/store/tree/1.28.0"
             },
-            "time": "2025-05-05T08:02:48+00:00"
+            "time": "2024-08-02T09:21:41+00:00"
         },
         {
             "name": "spryker/store-context",
