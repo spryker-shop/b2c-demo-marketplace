@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb4b1d57f0c2979b9ded0890b39492e8",
+    "content-hash": "8268a55fc1606cbd3a5420601e4ee0f6",
     "packages": [
         {
             "name": "async-aws/core",
@@ -9645,16 +9645,16 @@
         },
         {
             "name": "spryker-shop/cart-page",
-            "version": "3.49.0",
+            "version": "3.52.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/cart-page.git",
-                "reference": "90c2c867e52b6174138b6e3ab2081cf03bdfc7f4"
+                "reference": "025b53b20e79412aab428eb4c27193670b529b8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/cart-page/zipball/90c2c867e52b6174138b6e3ab2081cf03bdfc7f4",
-                "reference": "90c2c867e52b6174138b6e3ab2081cf03bdfc7f4",
+                "url": "https://api.github.com/repos/spryker-shop/cart-page/zipball/025b53b20e79412aab428eb4c27193670b529b8d",
+                "reference": "025b53b20e79412aab428eb4c27193670b529b8d",
                 "shasum": ""
             },
             "require": {
@@ -9707,6 +9707,7 @@
                 "spryker-shop/product-measurement-unit-widget": "^0.7.2: If you want to use measurement-unit-item molecule from module ProductMeasurementUnitWidget",
                 "spryker-shop/product-option-widget": "If you want to use components from module ProductOptionWidget or CartItemProductOptionWidgetPlugin",
                 "spryker-shop/product-packaging-unit-widget": "If you want to use components from module ProductPackagingUnitWidget or CartProductPackagingUnitWidgetPlugin",
+                "spryker-shop/sales-order-amendment-widget": "If you want to use CancelOrderAmendmentWidget.",
                 "spryker/container": "If you want to use the CartTwigPlugin",
                 "spryker/permission": "If you want to use permissions plugins",
                 "spryker/router": "Use this module when using plugins that adds routes to the Route Module.",
@@ -9730,9 +9731,9 @@
             ],
             "description": "CartPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/cart-page/tree/3.49.0"
+                "source": "https://github.com/spryker-shop/cart-page/tree/3.52.0"
             },
-            "time": "2025-04-03T12:49:27+00:00"
+            "time": "2025-06-02T12:28:37+00:00"
         },
         {
             "name": "spryker-shop/cart-page-extension",
@@ -9939,20 +9940,20 @@
         },
         {
             "name": "spryker-shop/category-widget",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/category-widget.git",
-                "reference": "cafe028b3c3ba5df245a211b66d2f5c4e8f43bc5"
+                "reference": "6d86104119cd7db6f422c392a436122af0a08596"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/category-widget/zipball/cafe028b3c3ba5df245a211b66d2f5c4e8f43bc5",
-                "reference": "cafe028b3c3ba5df245a211b66d2f5c4e8f43bc5",
+                "url": "https://api.github.com/repos/spryker-shop/category-widget/zipball/6d86104119cd7db6f422c392a436122af0a08596",
+                "reference": "6d86104119cd7db6f422c392a436122af0a08596",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.2",
                 "spryker-shop/shop-ui": "^1.0.0",
                 "spryker/category-storage": "^1.11.0 || ^2.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -9988,9 +9989,9 @@
             ],
             "description": "CategoryWidget module",
             "support": {
-                "source": "https://github.com/spryker-shop/category-widget/tree/1.4.0"
+                "source": "https://github.com/spryker-shop/category-widget/tree/1.5.0"
             },
-            "time": "2021-10-29T12:16:12+00:00"
+            "time": "2025-06-02T12:28:37+00:00"
         },
         {
             "name": "spryker-shop/chart-widget",
@@ -11514,20 +11515,20 @@
         },
         {
             "name": "spryker-shop/date-time-configurator-page-example",
-            "version": "0.5.3",
+            "version": "0.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/date-time-configurator-page-example.git",
-                "reference": "72e72ddd798e27ff9e3b5c07089f5818371fb962"
+                "reference": "448d644ad2fa710429cccd6a93878defbe900d3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/date-time-configurator-page-example/zipball/72e72ddd798e27ff9e3b5c07089f5818371fb962",
-                "reference": "72e72ddd798e27ff9e3b5c07089f5818371fb962",
+                "url": "https://api.github.com/repos/spryker-shop/date-time-configurator-page-example/zipball/448d644ad2fa710429cccd6a93878defbe900d3e",
+                "reference": "448d644ad2fa710429cccd6a93878defbe900d3e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker-shop/product-configuration-cart-widget-extension": "^1.0.0",
                 "spryker-shop/product-configuration-shopping-list-widget-extension": "^1.0.0",
                 "spryker-shop/product-configuration-widget-extension": "^1.0.0",
@@ -11573,9 +11574,9 @@
             ],
             "description": "DateTimeConfiguratorPageExample module",
             "support": {
-                "source": "https://github.com/spryker-shop/date-time-configurator-page-example/tree/0.5.3"
+                "source": "https://github.com/spryker-shop/date-time-configurator-page-example/tree/0.5.5"
             },
-            "time": "2024-08-29T06:28:49+00:00"
+            "time": "2025-05-30T10:01:17+00:00"
         },
         {
             "name": "spryker-shop/discount-promotion-widget",
@@ -17249,20 +17250,20 @@
         },
         {
             "name": "spryker/agent-dashboard-merchant-portal-gui",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/agent-dashboard-merchant-portal-gui.git",
-                "reference": "37de3f3f55d09c1f62e73b5d7faabc890f30da6b"
+                "reference": "7b9e7ee6167c377e43ba37fc2e7cb73d8821af9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/agent-dashboard-merchant-portal-gui/zipball/37de3f3f55d09c1f62e73b5d7faabc890f30da6b",
-                "reference": "37de3f3f55d09c1f62e73b5d7faabc890f30da6b",
+                "url": "https://api.github.com/repos/spryker/agent-dashboard-merchant-portal-gui/zipball/7b9e7ee6167c377e43ba37fc2e7cb73d8821af9f",
+                "reference": "7b9e7ee6167c377e43ba37fc2e7cb73d8821af9f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/agent-dashboard-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/gui-table": "^3.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -17271,7 +17272,7 @@
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/translator": "^1.1.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*"
@@ -17293,9 +17294,9 @@
             ],
             "description": "AgentDashboardMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/agent-dashboard-merchant-portal-gui/tree/1.0.0"
+                "source": "https://github.com/spryker/agent-dashboard-merchant-portal-gui/tree/1.1.0"
             },
-            "time": "2024-04-03T13:26:42+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/agent-dashboard-merchant-portal-gui-extension",
@@ -17526,20 +17527,20 @@
         },
         {
             "name": "spryker/agent-security-merchant-portal-gui",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/agent-security-merchant-portal-gui.git",
-                "reference": "561666781f0d69a07b966c154476b165e8e95113"
+                "reference": "dd63b295d342db98a7edca9ade75dc87278a58a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/agent-security-merchant-portal-gui/zipball/561666781f0d69a07b966c154476b165e8e95113",
-                "reference": "561666781f0d69a07b966c154476b165e8e95113",
+                "url": "https://api.github.com/repos/spryker/agent-security-merchant-portal-gui/zipball/dd63b295d342db98a7edca9ade75dc87278a58a0",
+                "reference": "dd63b295d342db98a7edca9ade75dc87278a58a0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/container": "^1.1.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/log": "^3.17.0",
@@ -17552,7 +17553,7 @@
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/user": "^3.21.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/application": "*",
@@ -17583,9 +17584,9 @@
             ],
             "description": "AgentSecurityMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/agent-security-merchant-portal-gui/tree/1.1.0"
+                "source": "https://github.com/spryker/agent-security-merchant-portal-gui/tree/1.2.0"
             },
-            "time": "2024-07-09T11:33:28+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/alternative-products-rest-api",
@@ -17930,16 +17931,16 @@
         },
         {
             "name": "spryker/application",
-            "version": "3.36.0",
+            "version": "3.36.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/application.git",
-                "reference": "05f84ec7998d359c04294ae54fca6fa9b8d9f6be"
+                "reference": "3c40b041223238d65182a3c9429de5039b21a580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/application/zipball/05f84ec7998d359c04294ae54fca6fa9b8d9f6be",
-                "reference": "05f84ec7998d359c04294ae54fca6fa9b8d9f6be",
+                "url": "https://api.github.com/repos/spryker/application/zipball/3c40b041223238d65182a3c9429de5039b21a580",
+                "reference": "3c40b041223238d65182a3c9429de5039b21a580",
                 "shasum": ""
             },
             "require": {
@@ -17992,9 +17993,9 @@
             ],
             "description": "Application module",
             "support": {
-                "source": "https://github.com/spryker/application/tree/3.36.0"
+                "source": "https://github.com/spryker/application/tree/3.36.2"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/application-extension",
@@ -18965,20 +18966,20 @@
         },
         {
             "name": "spryker/availability-notification",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/availability-notification.git",
-                "reference": "b8274d0980a602a74dad1745c32c1e075f9faf98"
+                "reference": "e03874026c96c9aeb4e102f2574be2c4fb6cb62c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/availability-notification/zipball/b8274d0980a602a74dad1745c32c1e075f9faf98",
-                "reference": "b8274d0980a602a74dad1745c32c1e075f9faf98",
+                "url": "https://api.github.com/repos/spryker/availability-notification/zipball/e03874026c96c9aeb4e102f2574be2c4fb6cb62c",
+                "reference": "e03874026c96c9aeb4e102f2574be2c4fb6cb62c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.2",
                 "spryker/application": "^3.2.0",
                 "spryker/customer": "^7.16.1",
                 "spryker/glossary": "^3.0.0",
@@ -19024,9 +19025,9 @@
             ],
             "description": "AvailabilityNotification module",
             "support": {
-                "source": "https://github.com/spryker/availability-notification/tree/1.4.1"
+                "source": "https://github.com/spryker/availability-notification/tree/1.4.2"
             },
-            "time": "2023-05-05T18:20:59+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/availability-notifications-rest-api",
@@ -27742,26 +27743,26 @@
         },
         {
             "name": "spryker/dashboard-merchant-portal-gui",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/dashboard-merchant-portal-gui.git",
-                "reference": "0a3da9dd98a333962801969b4c8ab0c81a2cb872"
+                "reference": "021e34f6a52b390d66144a07c0b29e4aa77ccbfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/dashboard-merchant-portal-gui/zipball/0a3da9dd98a333962801969b4c8ab0c81a2cb872",
-                "reference": "0a3da9dd98a333962801969b4c8ab0c81a2cb872",
+                "url": "https://api.github.com/repos/spryker/dashboard-merchant-portal-gui/zipball/021e34f6a52b390d66144a07c0b29e4aa77ccbfd",
+                "reference": "021e34f6a52b390d66144a07c0b29e4aa77ccbfd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/dashboard-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*"
@@ -27783,9 +27784,9 @@
             ],
             "description": "DashboardMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/dashboard-merchant-portal-gui/tree/3.0.0"
+                "source": "https://github.com/spryker/dashboard-merchant-portal-gui/tree/3.1.0"
             },
-            "time": "2024-04-03T13:26:42+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/dashboard-merchant-portal-gui-extension",
@@ -31458,16 +31459,16 @@
         },
         {
             "name": "spryker/gui-table",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/gui-table.git",
-                "reference": "f4ff7df455b852b23aa27a7cd3a3b4962854323d"
+                "reference": "6acb027282aa83479ceec10d125f0750b9ee734b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/gui-table/zipball/f4ff7df455b852b23aa27a7cd3a3b4962854323d",
-                "reference": "f4ff7df455b852b23aa27a7cd3a3b4962854323d",
+                "url": "https://api.github.com/repos/spryker/gui-table/zipball/6acb027282aa83479ceec10d125f0750b9ee734b",
+                "reference": "6acb027282aa83479ceec10d125f0750b9ee734b",
                 "shasum": ""
             },
             "require": {
@@ -31480,7 +31481,7 @@
                 "spryker/twig": "^3.13.0",
                 "spryker/util-date-time": "^1.3.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -31507,9 +31508,9 @@
             ],
             "description": "GuiTable module",
             "support": {
-                "source": "https://github.com/spryker/gui-table/tree/3.2.0"
+                "source": "https://github.com/spryker/gui-table/tree/3.3.0"
             },
-            "time": "2024-11-27T11:43:17+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/guzzle",
@@ -32212,16 +32213,16 @@
         },
         {
             "name": "spryker/locale",
-            "version": "4.9.1",
+            "version": "4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/locale.git",
-                "reference": "29ba1333c9c1abd924c27ccfb55daaeef8515a95"
+                "reference": "7364f62725a2c9e558e5228e461afed3620dfff8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/locale/zipball/29ba1333c9c1abd924c27ccfb55daaeef8515a95",
-                "reference": "29ba1333c9c1abd924c27ccfb55daaeef8515a95",
+                "url": "https://api.github.com/repos/spryker/locale/zipball/7364f62725a2c9e558e5228e461afed3620dfff8",
+                "reference": "7364f62725a2c9e558e5228e461afed3620dfff8",
                 "shasum": ""
             },
             "require": {
@@ -32276,9 +32277,9 @@
             ],
             "description": "Locale module",
             "support": {
-                "source": "https://github.com/spryker/locale/tree/4.9.1"
+                "source": "https://github.com/spryker/locale/tree/4.10.0"
             },
-            "time": "2025-01-07T10:51:37+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/locale-data-import",
@@ -32918,27 +32919,27 @@
         },
         {
             "name": "spryker/merchant-app-merchant-portal-gui",
-            "version": "1.1.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-app-merchant-portal-gui.git",
-                "reference": "e3dc51fd2aee0e68eb441b0d6651e0c466707975"
+                "reference": "fb6c15ad47bef628ce6c599c03f8adab9865cb72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-app-merchant-portal-gui/zipball/e3dc51fd2aee0e68eb441b0d6651e0c466707975",
-                "reference": "e3dc51fd2aee0e68eb441b0d6651e0c466707975",
+                "url": "https://api.github.com/repos/spryker/merchant-app-merchant-portal-gui/zipball/fb6c15ad47bef628ce6c599c03f8adab9865cb72",
+                "reference": "fb6c15ad47bef628ce6c599c03f8adab9865cb72",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant-app": "^1.1.0",
                 "spryker/merchant-user": "^1.0.0",
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/application": "*",
@@ -32973,9 +32974,9 @@
             ],
             "description": "MerchantAppMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-app-merchant-portal-gui/tree/1.1.0"
+                "source": "https://github.com/spryker/merchant-app-merchant-portal-gui/tree/1.2.1"
             },
-            "time": "2024-09-06T13:27:51+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/merchant-categories-rest-api",
@@ -35527,20 +35528,20 @@
         },
         {
             "name": "spryker/merchant-profile-merchant-portal-gui",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-profile-merchant-portal-gui.git",
-                "reference": "2057226ce35e1a879febcd7bde2fdad621dc44a8"
+                "reference": "eb570d49b5ad88bc0c8d128cd9c527287fa764ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-profile-merchant-portal-gui/zipball/2057226ce35e1a879febcd7bde2fdad621dc44a8",
-                "reference": "2057226ce35e1a879febcd7bde2fdad621dc44a8",
+                "url": "https://api.github.com/repos/spryker/merchant-profile-merchant-portal-gui/zipball/eb570d49b5ad88bc0c8d128cd9c527287fa764ee",
+                "reference": "eb570d49b5ad88bc0c8d128cd9c527287fa764ee",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/country": "^3.0.0 || ^4.0.0",
                 "spryker/glossary": "^3.0.0",
@@ -35554,7 +35555,7 @@
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.25.0",
                 "spryker/url": "^3.0.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -35577,9 +35578,9 @@
             ],
             "description": "MerchantProfileMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/merchant-profile-merchant-portal-gui/tree/3.0.0"
+                "source": "https://github.com/spryker/merchant-profile-merchant-portal-gui/tree/3.1.0"
             },
-            "time": "2024-04-03T13:26:42+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/merchant-profile-merchant-portal-gui-extension",
@@ -46307,16 +46308,16 @@
         },
         {
             "name": "spryker/product-merchant-portal-gui",
-            "version": "4.6.0",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-merchant-portal-gui.git",
-                "reference": "5d50f368961dd41b5c4954bd507df6507c05f190"
+                "reference": "f6341cedd6903e299d387906a332e4fffb6b2444"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/5d50f368961dd41b5c4954bd507df6507c05f190",
-                "reference": "5d50f368961dd41b5c4954bd507df6507c05f190",
+                "url": "https://api.github.com/repos/spryker/product-merchant-portal-gui/zipball/f6341cedd6903e299d387906a332e4fffb6b2444",
+                "reference": "f6341cedd6903e299d387906a332e4fffb6b2444",
                 "shasum": ""
             },
             "require": {
@@ -46352,7 +46353,7 @@
                 "spryker/transfer": "^3.27.0",
                 "spryker/translator": "^1.1.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^3.2.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -46377,9 +46378,9 @@
             ],
             "description": "ProductMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/4.6.0"
+                "source": "https://github.com/spryker/product-merchant-portal-gui/tree/4.7.0"
             },
-            "time": "2024-11-27T11:43:17+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/product-merchant-portal-gui-extension",
@@ -46913,20 +46914,20 @@
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui",
-            "version": "3.0.1",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-merchant-portal-gui.git",
-                "reference": "908d1cbc139cf1b705db0054a2158651a02b52c2"
+                "reference": "ef6e8844e7ea6a70ef0cf393c155b697c4ca8bb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/908d1cbc139cf1b705db0054a2158651a02b52c2",
-                "reference": "908d1cbc139cf1b705db0054a2158651a02b52c2",
+                "url": "https://api.github.com/repos/spryker/product-offer-merchant-portal-gui/zipball/ef6e8844e7ea6a70ef0cf393c155b697c4ca8bb5",
+                "reference": "ef6e8844e7ea6a70ef0cf393c155b697c4ca8bb5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/currency": "^3.8.0 || ^4.0.0",
                 "spryker/dashboard-merchant-portal-gui-extension": "^1.0.0",
@@ -46960,7 +46961,7 @@
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.0.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -46983,9 +46984,9 @@
             ],
             "description": "ProductOfferMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/3.0.1"
+                "source": "https://github.com/spryker/product-offer-merchant-portal-gui/tree/3.1.0"
             },
-            "time": "2024-05-06T12:15:28+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/product-offer-merchant-portal-gui-extension",
@@ -53206,20 +53207,20 @@
         },
         {
             "name": "spryker/sales-merchant-portal-gui",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-merchant-portal-gui.git",
-                "reference": "7819210fac42c7cb15790e05223072943c13c6e9"
+                "reference": "dcf37b871cda28d78de6ddca5c49fa1acf6b0be4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/7819210fac42c7cb15790e05223072943c13c6e9",
-                "reference": "7819210fac42c7cb15790e05223072943c13c6e9",
+                "url": "https://api.github.com/repos/spryker/sales-merchant-portal-gui/zipball/dcf37b871cda28d78de6ddca5c49fa1acf6b0be4",
+                "reference": "dcf37b871cda28d78de6ddca5c49fa1acf6b0be4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/currency": "^3.0.0 || ^4.0.0",
                 "spryker/dashboard-merchant-portal-gui-extension": "^1.0.0",
@@ -53241,7 +53242,7 @@
                 "spryker/translator": "^1.1.0",
                 "spryker/twig": "^3.0.0",
                 "spryker/util-encoding": "^2.0.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -53271,9 +53272,9 @@
             ],
             "description": "SalesMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/3.0.2"
+                "source": "https://github.com/spryker/sales-merchant-portal-gui/tree/3.1.0"
             },
-            "time": "2024-06-28T09:07:50+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/sales-merchant-portal-gui-extension",
@@ -54510,20 +54511,20 @@
         },
         {
             "name": "spryker/sales-reclamation-gui",
-            "version": "1.7.1",
+            "version": "1.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-reclamation-gui.git",
-                "reference": "5b5292f7f7f169550bd96b10d76d64dda199e1fd"
+                "reference": "f90e1e1978e5a6de0b288ae1de921977c58f85e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-reclamation-gui/zipball/5b5292f7f7f169550bd96b10d76d64dda199e1fd",
-                "reference": "5b5292f7f7f169550bd96b10d76d64dda199e1fd",
+                "url": "https://api.github.com/repos/spryker/sales-reclamation-gui/zipball/f90e1e1978e5a6de0b288ae1de921977c58f85e2",
+                "reference": "f90e1e1978e5a6de0b288ae1de921977c58f85e2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.2",
                 "spryker/gui": "^3.45.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/oms": "^8.0.0 || ^10.0.0 || ^11.0.0",
@@ -54554,9 +54555,9 @@
             ],
             "description": "SalesReclamationGui module",
             "support": {
-                "source": "https://github.com/spryker/sales-reclamation-gui/tree/1.7.1"
+                "source": "https://github.com/spryker/sales-reclamation-gui/tree/1.7.3"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/sales-return",
@@ -55758,20 +55759,20 @@
         },
         {
             "name": "spryker/security",
-            "version": "1.8.1",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security.git",
-                "reference": "17c7fd11012442848846757e2efc0a51ff3d21b3"
+                "reference": "adc67160c5145b1123fc6cb69f3e6a060bd855ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security/zipball/17c7fd11012442848846757e2efc0a51ff3d21b3",
-                "reference": "17c7fd11012442848846757e2efc0a51ff3d21b3",
+                "url": "https://api.github.com/repos/spryker/security/zipball/adc67160c5145b1123fc6cb69f3e6a060bd855ef",
+                "reference": "adc67160c5145b1123fc6cb69f3e6a060bd855ef",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/kernel": "^3.52.0",
                 "spryker/security-extension": "^1.1.0",
@@ -55813,9 +55814,9 @@
             ],
             "description": "Security module",
             "support": {
-                "source": "https://github.com/spryker/security/tree/1.8.1"
+                "source": "https://github.com/spryker/security/tree/1.9.0"
             },
-            "time": "2024-02-20T09:01:42+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/security-blocker",
@@ -56393,16 +56394,16 @@
         },
         {
             "name": "spryker/security-merchant-portal-gui",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-merchant-portal-gui.git",
-                "reference": "42179f8ade882df6b914a5a411d58d146b2cbd64"
+                "reference": "70057236b853ea8174e55c34565430053b2fd8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/42179f8ade882df6b914a5a411d58d146b2cbd64",
-                "reference": "42179f8ade882df6b914a5a411d58d146b2cbd64",
+                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/70057236b853ea8174e55c34565430053b2fd8da",
+                "reference": "70057236b853ea8174e55c34565430053b2fd8da",
                 "shasum": ""
             },
             "require": {
@@ -56420,7 +56421,7 @@
                 "spryker/transfer": "^3.27.0",
                 "spryker/user-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/validator": "^1.6.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/acl": "*",
@@ -56454,9 +56455,9 @@
             ],
             "description": "SecurityMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/3.5.0"
+                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/3.6.0"
             },
-            "time": "2025-02-28T10:29:27+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/security-merchant-portal-gui-extension",
@@ -57179,16 +57180,16 @@
         },
         {
             "name": "spryker/session",
-            "version": "4.18.0",
+            "version": "4.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/session.git",
-                "reference": "4f329543dd8b21db3e453c3c31d518109d8ecdd8"
+                "reference": "b78b4d8cd432de47e4dd17e788d0b1596759692f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/session/zipball/4f329543dd8b21db3e453c3c31d518109d8ecdd8",
-                "reference": "4f329543dd8b21db3e453c3c31d518109d8ecdd8",
+                "url": "https://api.github.com/repos/spryker/session/zipball/b78b4d8cd432de47e4dd17e788d0b1596759692f",
+                "reference": "b78b4d8cd432de47e4dd17e788d0b1596759692f",
                 "shasum": ""
             },
             "require": {
@@ -57239,9 +57240,9 @@
             ],
             "description": "Session module",
             "support": {
-                "source": "https://github.com/spryker/session/tree/4.18.0"
+                "source": "https://github.com/spryker/session/tree/4.19.0"
             },
-            "time": "2024-12-23T13:26:59+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/session-customer-validation-extension",
@@ -57566,16 +57567,16 @@
         },
         {
             "name": "spryker/setup",
-            "version": "4.6.0",
+            "version": "4.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/setup.git",
-                "reference": "cab4c101ba03bd65e4ef02d9534a26390c6efb3e"
+                "reference": "972e978003667d583be8cc3e78e99b23dadd6ab6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/setup/zipball/cab4c101ba03bd65e4ef02d9534a26390c6efb3e",
-                "reference": "cab4c101ba03bd65e4ef02d9534a26390c6efb3e",
+                "url": "https://api.github.com/repos/spryker/setup/zipball/972e978003667d583be8cc3e78e99b23dadd6ab6",
+                "reference": "972e978003667d583be8cc3e78e99b23dadd6ab6",
                 "shasum": ""
             },
             "require": {
@@ -57612,9 +57613,9 @@
             ],
             "description": "Setup module",
             "support": {
-                "source": "https://github.com/spryker/setup/tree/4.6.0"
+                "source": "https://github.com/spryker/setup/tree/4.6.1"
             },
-            "time": "2024-09-20T14:38:30+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/setup-frontend",
@@ -60810,16 +60811,16 @@
         },
         {
             "name": "spryker/tax-app",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/tax-app.git",
-                "reference": "d06a938c0d03a9f15d0b9e46fdaf81aa8a68afab"
+                "reference": "e1143113253eef5cb6811a6e96fc2485d4b16c13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/tax-app/zipball/d06a938c0d03a9f15d0b9e46fdaf81aa8a68afab",
-                "reference": "d06a938c0d03a9f15d0b9e46fdaf81aa8a68afab",
+                "url": "https://api.github.com/repos/spryker/tax-app/zipball/e1143113253eef5cb6811a6e96fc2485d4b16c13",
+                "reference": "e1143113253eef5cb6811a6e96fc2485d4b16c13",
                 "shasum": ""
             },
             "require": {
@@ -60879,9 +60880,9 @@
             ],
             "description": "TaxApp module",
             "support": {
-                "source": "https://github.com/spryker/tax-app/tree/0.4.1"
+                "source": "https://github.com/spryker/tax-app/tree/0.4.2"
             },
-            "time": "2025-02-28T12:18:45+00:00"
+            "time": "2025-05-16T13:20:28+00:00"
         },
         {
             "name": "spryker/tax-app-extension",
@@ -60926,25 +60927,26 @@
         },
         {
             "name": "spryker/tax-app-rest-api",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/tax-app-rest-api.git",
-                "reference": "5b2f48b8118c251b137f96ebc2f5dfd8bf156867"
+                "reference": "964166c88181d580f804001044a7591af9071e83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/tax-app-rest-api/zipball/5b2f48b8118c251b137f96ebc2f5dfd8bf156867",
-                "reference": "5b2f48b8118c251b137f96ebc2f5dfd8bf156867",
+                "url": "https://api.github.com/repos/spryker/tax-app-rest-api/zipball/964166c88181d580f804001044a7591af9071e83",
+                "reference": "964166c88181d580f804001044a7591af9071e83",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
+                "spryker/glossary-storage": "^1.11.2",
                 "spryker/glue-application": "^1.9.0",
                 "spryker/glue-application-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/symfony": "^3.5.0",
-                "spryker/tax-app": "^0.4.0",
+                "spryker/tax-app": "^0.4.2",
                 "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
@@ -60969,9 +60971,9 @@
             ],
             "description": "TaxAppRestApi module",
             "support": {
-                "source": "https://github.com/spryker/tax-app-rest-api/tree/0.1.0"
+                "source": "https://github.com/spryker/tax-app-rest-api/tree/0.2.0"
             },
-            "time": "2025-02-12T15:21:58+00:00"
+            "time": "2025-05-16T13:20:28+00:00"
         },
         {
             "name": "spryker/tax-merchant-portal-gui",
@@ -61450,16 +61452,16 @@
         },
         {
             "name": "spryker/twig",
-            "version": "3.27.0",
+            "version": "3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/twig.git",
-                "reference": "bf450c6e46dc67ce53a98c83ec1dea138397091c"
+                "reference": "f042173e2a43f3d16b079ecb89f8718f903a03bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/twig/zipball/bf450c6e46dc67ce53a98c83ec1dea138397091c",
-                "reference": "bf450c6e46dc67ce53a98c83ec1dea138397091c",
+                "url": "https://api.github.com/repos/spryker/twig/zipball/f042173e2a43f3d16b079ecb89f8718f903a03bd",
+                "reference": "f042173e2a43f3d16b079ecb89f8718f903a03bd",
                 "shasum": ""
             },
             "require": {
@@ -61505,9 +61507,9 @@
             ],
             "description": "Twig module",
             "support": {
-                "source": "https://github.com/spryker/twig/tree/3.27.0"
+                "source": "https://github.com/spryker/twig/tree/3.29.0"
             },
-            "time": "2025-01-23T10:38:31+00:00"
+            "time": "2025-06-02T12:28:35+00:00"
         },
         {
             "name": "spryker/twig-extension",
@@ -62042,16 +62044,16 @@
         },
         {
             "name": "spryker/user-merchant-portal-gui",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/user-merchant-portal-gui.git",
-                "reference": "0fa56d706f234d3413a377c7e932db26bc752cbe"
+                "reference": "b3d2db79e8f2e86f7e3e955ab3a8679ab2a295f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/0fa56d706f234d3413a377c7e932db26bc752cbe",
-                "reference": "0fa56d706f234d3413a377c7e932db26bc752cbe",
+                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/b3d2db79e8f2e86f7e3e955ab3a8679ab2a295f8",
+                "reference": "b3d2db79e8f2e86f7e3e955ab3a8679ab2a295f8",
                 "shasum": ""
             },
             "require": {
@@ -62068,7 +62070,7 @@
                 "spryker/user-locale": "^1.0.0",
                 "spryker/user-merchant-portal-gui-extension": "^1.0.0",
                 "spryker/validator": "^1.6.0",
-                "spryker/zed-ui": "^3.0.0"
+                "spryker/zed-ui": "^3.3.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -62091,9 +62093,9 @@
             ],
             "description": "UserMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/3.2.0"
+                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/3.3.0"
             },
-            "time": "2025-02-28T10:29:27+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "spryker/user-merchant-portal-gui-extension",
@@ -64091,16 +64093,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "8bc1189bfa79c752f5faddcece229f3732c4db6b"
+                "reference": "b6e6c968606b09ecd50a2125e9615adbcd21189a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/8bc1189bfa79c752f5faddcece229f3732c4db6b",
-                "reference": "8bc1189bfa79c752f5faddcece229f3732c4db6b",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/b6e6c968606b09ecd50a2125e9615adbcd21189a",
+                "reference": "b6e6c968606b09ecd50a2125e9615adbcd21189a",
                 "shasum": ""
             },
             "require": {
@@ -64140,9 +64142,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/3.2.0"
+                "source": "https://github.com/spryker/zed-ui/tree/3.3.0"
             },
-            "time": "2024-09-26T14:51:17+00:00"
+            "time": "2025-05-30T10:01:14+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -74977,7 +74979,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "2510b3753fd2737727f774303b70bd59d8af39e0"
+                "reference": "3db7bd4f5a107fa25264994c5909963b8d288aec"
             },
             "default-branch": true,
             "type": "library",
@@ -74985,7 +74987,7 @@
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2025-06-02T15:29:45+00:00"
+            "time": "2025-06-10T08:50:17+00:00"
         },
         {
             "name": "spryker/development",
