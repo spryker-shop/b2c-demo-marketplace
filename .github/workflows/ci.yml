@@ -20,7 +20,7 @@ concurrency:
 jobs:
     validation:
         name: "Static analysis"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         strategy:
             fail-fast: false
             matrix:
@@ -75,7 +75,7 @@ jobs:
                     echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
             -   name: Composer cache
-                uses: actions/cache@v3
+                uses: actions/cache@v4
                 with:
                     path: ${{ steps.composer-cache.outputs.dir }}
                     key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -156,9 +156,11 @@ jobs:
 
     js-validation:
         name: "NPM validation"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         strategy:
             fail-fast: false
+            matrix:
+                node-version: [ '18' ]
 
         env:
             APPLICATION_ENV: ci.mysql
@@ -197,7 +199,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / MariaDB / Glue / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -208,7 +210,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -230,7 +232,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-api-ci')
             || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
             || github.ref == 'refs/heads/master'
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -242,7 +244,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -264,7 +266,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / PostgreSQL / Glue / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -275,7 +277,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -296,7 +298,7 @@ jobs:
         if: >
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -308,7 +310,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -330,7 +332,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / MariaDB / Acceptance / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -341,7 +343,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -362,7 +364,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-ui-ci')
             || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
             || github.ref == 'refs/heads/master'
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -374,7 +376,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -395,7 +397,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / PostgreSQL / Acceptance / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -406,7 +408,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -426,7 +428,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / PostgreSQL / Acceptance / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -438,7 +440,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -459,7 +461,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / MariaDB / Functional / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -470,7 +472,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -490,7 +492,7 @@ jobs:
             || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
             || github.ref == 'refs/heads/master'
         name: "[run-functional-ci] PHP 8.3 / MariaDB / Functional / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -502,7 +504,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -522,7 +524,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / PostgreSQL / Functional / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -533,7 +535,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -553,7 +555,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.3 / PostgreSQL / Functional / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -565,7 +567,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -586,7 +588,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / MariaDB / Glue / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -597,7 +599,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -618,7 +620,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / MariaDB / Glue / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -630,7 +632,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -652,7 +654,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / PostgreSQL / Acceptance / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -663,7 +665,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -683,7 +685,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / PostgreSQL / Acceptance / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -695,7 +697,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -716,7 +718,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / PostgreSQL / Functional / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -727,7 +729,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -747,7 +749,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / PostgreSQL / Functional / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -759,7 +761,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -780,7 +782,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / MariaDB / Acceptance / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -791,7 +793,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -811,7 +813,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -823,7 +825,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -845,7 +847,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / MariaDB / Functional / Alpine / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -856,7 +858,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -875,7 +877,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / MariaDB / Functional / Alpine"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -887,7 +889,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -907,7 +909,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / PostgreSQL / Functional / Debian / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2-debian
@@ -918,7 +920,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Run docker
                 run: |
@@ -937,7 +939,7 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "PHP 8.2 / PostgreSQL / Functional / Debian"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2-debian
@@ -949,7 +951,7 @@ jobs:
             -   uses: actions/checkout@v4
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
 
             -   name: Run docker
@@ -964,13 +966,13 @@ jobs:
                 uses: ./.github/actions/job-slack-notifications
                 if: always()
 
-    frontend-assets-via-docker-php-8-2:
+    frontend-assets-via-docker-php-82:
         if: >
             contains(github.event.pull_request.labels.*.name, 'run-functional-ci')
             || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
             || github.ref == 'refs/heads/master'
         name: "[run-functional-ci] PHP 8.2 / Frontend & Assets"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
@@ -979,7 +981,7 @@ jobs:
         steps:
             -   uses: actions/checkout@v4
             -   run: echo eyAiZXhwZXJpbWVudGFsIiA6IHRydWUsICJmZWF0dXJlcyIgOiB7ICJidWlsZGtpdCI6IHRydWUgfSB9Cg==|base64 -d|sudo tee /etc/docker/daemon.json
-            -   run: sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            -   run: sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
             -   run: sudo chmod +x /usr/local/bin/docker-compose
             -   run: git clone https://github.com/spryker/docker-sdk.git --single-branch --branch master ./docker
             -   run: docker/sdk boot deploy.yml
@@ -997,18 +999,22 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "Docker / Alpine / PHP 8.2 / PostgreSQL / Robot / API / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.2
             TRAVIS: 1
             ROBOT_TESTS_ARTIFACTS_BUCKET_REGION: eu-west-1
+
         steps:
             -   uses: actions/checkout@v4
+
             -   name: Install packages
                 run: |
                     sudo apt-get update
-                    sudo apt install awscli -q
+                    sudo apt-get install -y python3-pip
+                    pip3 install --upgrade pip
+                    pip3 install awscli
 
             -   name: Install robotframework-suite-tests folder
                 run: |
@@ -1017,8 +1023,9 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
+
             -   name: Install Project
                 continue-on-error: true
                 run: |
@@ -1029,9 +1036,11 @@ jobs:
                     docker/sdk cli composer dump-autoload -o -a --apcu
                     docker/sdk testing console queue:worker:start --stop-when-empty
                     APPLICATION_STORE=AT docker/sdk console queue:worker:start --stop-when-empty
+
             -   name: Run Tests
                 run: |
                     docker/sdk exec robot-framework robot -v env:api_mp_b2c -v db_engine:psycopg2 -v docker:True --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s robotframework.tests.api.mp_b2c .
+
             -   name: Upload artifacts
                 if: failure()
                 run: |
@@ -1047,7 +1056,7 @@ jobs:
             || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
             || github.ref == 'refs/heads/master'
         name: "[run-api-ci] PHP 8.3 / MariaDB / Robot / API"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -1055,12 +1064,15 @@ jobs:
             ROBOT_TESTS_ARTIFACTS_BUCKET_REGION: eu-west-1
             SPRYKER_CURRENT_REGION: EU
             DYNAMIC_STORE_MODE: true
+
         steps:
             -   uses: actions/checkout@v4
             -   name: Install packages
                 run: |
                     sudo apt-get update
-                    sudo apt install awscli -q
+                    sudo apt-get install -y python3-pip
+                    pip3 install --upgrade pip
+                    pip3 install awscli
 
             -   name: Install robotframework-suite-tests folder
                 run: |
@@ -1069,7 +1081,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Install Project
                 continue-on-error: true
@@ -1083,6 +1095,7 @@ jobs:
             -   name: Run Tests
                 run: |
                     docker/sdk exec robot-framework robot -v env:api_mp_b2c -v docker:True -v dms:true -v glue_env:http://glue.eu.spryker.local -v bapi_env:http://glue-backend.eu.spryker.local -v sapi_env:http://glue-storefront.eu.spryker.local --exclude skip-due-to-issueORskip-due-to-refactoring -d results -s robotframework.tests.api.mp_b2c .
+
             -   name: Upload artifacts
                 if: failure()
                 run: |
@@ -1097,18 +1110,21 @@ jobs:
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
         name: "Docker / Alpine / PHP 8.3 / MariaDB / Cypress / UI / Dynamic Store OFF"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
             TRAVIS: 1
             ROBOT_TESTS_ARTIFACTS_BUCKET_REGION: eu-west-1
+
         steps:
             -   uses: actions/checkout@v4
             -   name: Install packages
                 run: |
                     sudo apt-get update
-                    sudo apt install awscli -q
+                    sudo apt-get install -y python3-pip
+                    pip3 install --upgrade pip
+                    pip3 install awscli
 
             -   name: Install cypress-tests folder
                 run: |
@@ -1117,7 +1133,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Install Project
                 continue-on-error: true
@@ -1127,11 +1143,13 @@ jobs:
                     sudo bash -c "echo '127.0.0.1 backend-api.at.spryker.local backend-api.de.spryker.local glue-backend.de.spryker.local glue-backend.at.spryker.local glue-storefront.de.spryker.local glue-storefront.at.spryker.local backend-gateway.at.spryker.local backend-gateway.de.spryker.local backoffice.at.spryker.local backoffice.de.spryker.local date-time-configurator-example.spryker.local glue.at.spryker.local glue.de.spryker.local yves.at.spryker.local yves.de.spryker.local mp.de.spryker.local mp.at.spryker.local' >> /etc/hosts"
                     docker/sdk up -t
                     docker/sdk cli composer dump-autoload -o -a --apcu
+
             -   name: Publish & Sync
                 run: |
                     for i in {1..5}; do
                       docker/sdk cli console queue:worker:start --stop-when-empty
                     done
+
             -   name: Run Tests
                 run: |
                     docker/sdk exec cypress-tests cp .env.example .env
@@ -1140,6 +1158,7 @@ jobs:
                       sleep 1
                     done
                     (exit $s)
+
             -   name: Upload artifacts
                 if: failure()
                 run: |
@@ -1155,7 +1174,7 @@ jobs:
             || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
             || github.ref == 'refs/heads/master'
         name: "[run-ui-ci] PHP 8.3 / MariaDB / Cypress / UI"
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
@@ -1163,12 +1182,15 @@ jobs:
             ROBOT_TESTS_ARTIFACTS_BUCKET_REGION: eu-west-1
             SPRYKER_CURRENT_REGION: EU
             DYNAMIC_STORE_MODE: true
+
         steps:
             -   uses: actions/checkout@v4
             -   name: Install packages
                 run: |
                     sudo apt-get update
-                    sudo apt install awscli -q
+                    sudo apt-get install -y python3-pip
+                    pip3 install --upgrade pip
+                    pip3 install awscli
 
             -   name: Install cypress-tests folder
                 run: |
@@ -1177,7 +1199,7 @@ jobs:
 
             -   name: Install docker-compose
                 run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/download/2.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     sudo chmod +x /usr/local/bin/docker-compose
             -   name: Install Project
                 continue-on-error: true
@@ -1187,16 +1209,19 @@ jobs:
                     sudo bash -c "echo '127.0.0.1 backend-api.eu.spryker.local backend-api.us.spryker.local backend-gateway.eu.spryker.local backend-gateway.us.spryker.local backoffice.eu.spryker.local backoffice.us.spryker.local glue-backend.eu.spryker.local glue-backend.us.spryker.local glue-storefront.eu.spryker.local glue-storefront.us.spryker.local glue.eu.spryker.local glue.us.spryker.local mail.spryker.local mp.eu.spryker.local mp.us.spryker.local queue.spryker.local spryker.local swagger.spryker.local yves.eu.spryker.local yves.us.spryker.local' >> /etc/hosts"
                     docker/sdk up -t
                     docker/sdk cli composer dump-autoload -o -a --apcu
+
             -   name: Publish & Sync
                 run: |
                     for i in {1..5}; do
                       docker/sdk cli console queue:worker:start --stop-when-empty
                     done
+
             -   name: Run Tests
                 run: |
                     docker/sdk exec cypress-tests cp .env.dynamic-store.example .env
                     docker/sdk exec cypress-tests git log -2
                     docker/sdk exec --env "ENV_REPOSITORY_ID=b2c-mp" cypress-tests npm run cy:ci
+
             -   name: Upload artifacts
                 if: failure()
                 run: |
