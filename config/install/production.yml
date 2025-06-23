@@ -30,6 +30,9 @@ sections:
             command: 'vendor/bin/console queue:setup'
         scheduler-setup:
             command: 'vendor/bin/console scheduler:setup -vvv --no-ansi'
+    data-import:
+        glossary:
+            command: 'vendor/bin/console data:import:glossary -vvv --no-ansi'
     acl:
         acl-entity-synchronize:
             command: 'vendor/bin/console acl-entity:synchronize -vvv --no-ansi'
