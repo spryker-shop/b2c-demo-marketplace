@@ -287,8 +287,9 @@ $config[OauthConstants::PUBLIC_KEY_PATH]
         getenv('SPRYKER_OAUTH_KEY_PUBLIC') ?: '',
     ) ?: null;
 $config[OauthConstants::ENCRYPTION_KEY] = getenv('SPRYKER_OAUTH_ENCRYPTION_KEY') ?: null;
+$oauthClientConfigurations = getenv('SPRYKER_OAUTH_CLIENT_CONFIGURATION') ? json_decode(getenv('SPRYKER_OAUTH_CLIENT_CONFIGURATION'), true) : [];
 $config[OauthConstants::OAUTH_CLIENT_CONFIGURATION] = array_merge(
-    json_decode(getenv('SPRYKER_OAUTH_CLIENT_CONFIGURATION'), true) ?: [],
+    $oauthClientConfigurations,
     [
         [
             'identifier' => 'fulfillment-client-b2cmp-local',
