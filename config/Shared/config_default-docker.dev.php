@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 use Monolog\Logger;
 use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
 use Spryker\Shared\Application\ApplicationConstants;
@@ -24,6 +26,7 @@ use Spryker\Shared\Propel\PropelConstants;
 use Spryker\Shared\PropelOrm\PropelOrmConstants;
 use Spryker\Shared\Queue\QueueConfig;
 use Spryker\Shared\Queue\QueueConstants;
+use Spryker\Shared\Redis\RedisConstants;
 use Spryker\Shared\Router\RouterConstants;
 use Spryker\Shared\Session\SessionConstants;
 use Spryker\Shared\Testify\TestifyConstants;
@@ -59,7 +62,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = (bool)getenv('S
 if (interface_exists(WebProfilerConstants::class, true)) {
     $config[WebProfilerConstants::IS_WEB_PROFILER_ENABLED]
         = $config[WebProfilerWidgetConstants::IS_WEB_PROFILER_ENABLED]
-        = false;
+        = (bool)getenv('SPRYKER_DEBUG_ENABLED');
 }
 $config[KernelConstants::ENABLE_CONTAINER_OVERRIDING] = (bool)getenv('SPRYKER_TESTING_ENABLED');
 $config[DocumentationGeneratorRestApiConstants::ENABLE_REST_API_DOCUMENTATION_GENERATION] = true;
@@ -75,6 +78,10 @@ $config[ErrorHandlerConstants::ERROR_LEVEL] = getenv('SPRYKER_DEBUG_DEPRECATIONS
 // ----------------------------------------------------------------------------
 // ------------------------------ SERVICES ------------------------------------
 // ----------------------------------------------------------------------------
+
+// >>> STORAGE
+
+$config[RedisConstants::REDIS_IS_DEV_MODE] = getenv('SPRYKER_REDIS_IS_DEV_MODE') !== false ? getenv('SPRYKER_REDIS_IS_DEV_MODE') : true;
 
 // >>> QUEUE
 

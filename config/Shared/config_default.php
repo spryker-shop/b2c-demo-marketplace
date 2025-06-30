@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 use Generated\Shared\Transfer\AddPaymentMethodTransfer;
 use Generated\Shared\Transfer\AddReviewsTransfer;
 use Generated\Shared\Transfer\AppConfigUpdatedTransfer;
@@ -33,6 +35,7 @@ use Generated\Shared\Transfer\RefundPaymentTransfer;
 use Generated\Shared\Transfer\SearchEndpointAvailableTransfer;
 use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
 use Generated\Shared\Transfer\SubmitPaymentTaxInvoiceTransfer;
+use Generated\Shared\Transfer\UpdatePaymentMethodTransfer;
 use Monolog\Logger;
 use Pyz\Shared\Console\ConsoleConstants;
 use Pyz\Shared\Scheduler\SchedulerConfig;
@@ -70,6 +73,7 @@ use Spryker\Shared\GlueStorefrontApiApplication\GlueStorefrontApiApplicationCons
 use Spryker\Shared\Http\HttpConstants;
 use Spryker\Shared\Kernel\KernelConstants;
 use Spryker\Shared\KernelApp\KernelAppConstants;
+use Spryker\Shared\Locale\LocaleConstants;
 use Spryker\Shared\Log\LogConstants;
 use Spryker\Shared\Mail\MailConstants;
 use Spryker\Shared\MerchantPortalApplication\MerchantPortalConstants;
@@ -95,6 +99,7 @@ use Spryker\Shared\PushNotificationWebPushPhp\PushNotificationWebPushPhpConstant
 use Spryker\Shared\Queue\QueueConfig;
 use Spryker\Shared\Queue\QueueConstants;
 use Spryker\Shared\RabbitMq\RabbitMqEnv;
+use Spryker\Shared\Redis\RedisConstants;
 use Spryker\Shared\Router\RouterConstants;
 use Spryker\Shared\Sales\SalesConstants;
 use Spryker\Shared\Scheduler\SchedulerConstants;
@@ -112,6 +117,7 @@ use Spryker\Shared\Session\SessionConfig;
 use Spryker\Shared\Session\SessionConstants;
 use Spryker\Shared\SessionRedis\SessionRedisConfig;
 use Spryker\Shared\SessionRedis\SessionRedisConstants;
+use Spryker\Shared\Sitemap\SitemapConstants;
 use Spryker\Shared\Storage\StorageConstants;
 use Spryker\Shared\StorageRedis\StorageRedisConstants;
 use Spryker\Shared\SymfonyMailer\SymfonyMailerConstants;
@@ -133,6 +139,8 @@ use Spryker\Zed\Payment\PaymentConfig;
 use Spryker\Zed\Propel\PropelConfig;
 use SprykerShop\Shared\CustomerPage\CustomerPageConstants;
 use SprykerShop\Shared\ShopUi\ShopUiConstants;
+use SprykerShop\Shared\StorageRouter\StorageRouterConstants;
+use SprykerShop\Shared\StoreWidget\StoreWidgetConstants;
 use Symfony\Component\HttpFoundation\Cookie;
 
 // ############################################################################
@@ -170,6 +178,12 @@ $config[RouterConstants::YVES_SSL_EXCLUDED_ROUTE_NAMES] = [
 $config[RouterConstants::ZED_SSL_EXCLUDED_ROUTE_NAMES] = [
     'healthCheck' => 'health-check/index',
 ];
+
+$config[RouterConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[StoreWidgetConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[StorageRouterConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[ShopUiConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[LocaleConstants::IS_STORE_ROUTING_ENABLED] = (bool)getenv('SPRYKER_DYNAMIC_STORE_MODE');
 
 // >>> DEV TOOLS
 
@@ -242,9 +256,9 @@ $config[HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG]
     'preload' => true,
 ];
 
-$config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^/login_check$|^(/en|/de)?/customer($|/)|^(/en|/de)?/wishlist($|/)|^(/en|/de)?/shopping-list($|/)|^(/en|/de)?/quote-request($|/)|^(/en|/de)?/comment($|/)|^(/en|/de)?/company(?!/register)($|/)|^(/en|/de)?/multi-cart($|/)|^(/en|/de)?/shared-cart($|/)|^(/en|/de)?/cart(?!/add)($|/)|^(/en|/de)?/checkout($|/))';
+$config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^/login_check$|^(/[A-Z]{2})?(/en|/de)?/customer($|/)|^(/[A-Z]{2})?(/en|/de)?/wishlist($|/)|^(/[A-Z]{2})?(/en|/de)?/shopping-list($|/)|^(/[A-Z]{2})?(/en|/de)?/quote-request($|/)|^(/[A-Z]{2})?(/en|/de)?/comment($|/)|^(/[A-Z]{2})?(/en|/de)?/company(?!/register)($|/)|^(/[A-Z]{2})?(/en|/de)?/multi-cart($|/)|^(/[A-Z]{2})?(/en|/de)?/shared-cart($|/)|^(/en|/de)?/cart(?!/add)($|/)|^(/en|/de)?/checkout($|/))|^(/en|/de)?/cart-reorder($|/)|^(/en|/de)?/order-amendment($|/)';
 $config[CustomerConstants::CUSTOMER_ANONYMOUS_PATTERN] = '^/.*';
-$config[CustomerPageConstants::CUSTOMER_REMEMBER_ME_SECRET] = 'hundnase';
+$config[CustomerPageConstants::CUSTOMER_REMEMBER_ME_SECRET] = getenv('SPRYKER_CUSTOMER_REMEMBER_ME_SECRET');
 $config[CustomerPageConstants::CUSTOMER_REMEMBER_ME_LIFETIME] = 31536000;
 
 $config[LogConstants::LOG_SANITIZE_FIELDS] = [
@@ -364,6 +378,12 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
         'action' => '*',
         'type' => 'allow',
     ],
+    [
+        'bundle' => '_profiler',
+        'controller' => '*',
+        'action' => '*',
+        'type' => 'allow',
+    ],
 ];
 // ACL: Allow or disallow of urls for Zed Admin GUI
 $config[AclConstants::ACL_USER_RULE_WHITELIST] = [
@@ -407,13 +427,15 @@ $config[SearchElasticsearchConstants::FULL_TEXT_BOOSTED_BOOSTING_VALUE] = 3;
 
 // >>> STORAGE
 
-$config[StorageConstants::STORAGE_KV_SOURCE] = strtolower(getenv('SPRYKER_KEY_VALUE_STORE_ENGINE')) ?: 'redis';
+$keyValueRegionNamespaces = json_decode(getenv('SPRYKER_KEY_VALUE_REGION_NAMESPACES') ?: '[]', true);
+$config[StorageConstants::STORAGE_KV_SOURCE] = getenv('SPRYKER_KEY_VALUE_STORE_ENGINE') ? strtolower(getenv('SPRYKER_KEY_VALUE_STORE_ENGINE')) : 'redis';
+$config[RedisConstants::REDIS_COMPRESSION_ENABLED] = getenv('SPRYKER_KEY_VALUE_COMPRESSING_ENABLED') ?: false;
 $config[StorageRedisConstants::STORAGE_REDIS_PERSISTENT_CONNECTION] = true;
 $config[StorageRedisConstants::STORAGE_REDIS_SCHEME] = getenv('SPRYKER_KEY_VALUE_STORE_PROTOCOL') ?: 'tcp';
 $config[StorageRedisConstants::STORAGE_REDIS_HOST] = getenv('SPRYKER_KEY_VALUE_STORE_HOST');
 $config[StorageRedisConstants::STORAGE_REDIS_PORT] = getenv('SPRYKER_KEY_VALUE_STORE_PORT');
 $config[StorageRedisConstants::STORAGE_REDIS_PASSWORD] = getenv('SPRYKER_KEY_VALUE_STORE_PASSWORD');
-$config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = getenv('SPRYKER_KEY_VALUE_STORE_NAMESPACE') ?: 1;
+$config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = getenv('SPRYKER_KEY_VALUE_STORE_NAMESPACE') ?: $keyValueRegionNamespaces[APPLICATION_CODE_BUCKET] ?? 1;
 $config[StorageRedisConstants::STORAGE_REDIS_DATA_SOURCE_NAMES] = json_decode(getenv('SPRYKER_KEY_VALUE_STORE_SOURCE_NAMES') ?: '[]', true) ?: [];
 $config[StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS] = json_decode(getenv('SPRYKER_KEY_VALUE_STORE_CONNECTION_OPTIONS') ?: '[]', true) ?: [];
 
@@ -429,7 +451,7 @@ $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 $config[SessionConstants::YVES_SESSION_COOKIE_NAME]
     = $config[SessionConstants::YVES_SESSION_COOKIE_DOMAIN]
     = $sprykerFrontendHost;
-$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
+$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING;
 $config[SessionRedisConstants::YVES_SESSION_REDIS_SCHEME] = getenv('SPRYKER_SESSION_FE_PROTOCOL') ?: 'tcp';
 $config[SessionRedisConstants::YVES_SESSION_REDIS_HOST] = getenv('SPRYKER_SESSION_FE_HOST');
 $config[SessionRedisConstants::YVES_SESSION_REDIS_PORT] = getenv('SPRYKER_SESSION_FE_PORT');
@@ -630,13 +652,23 @@ $config[SymfonyMailerConstants::SMTP_PASSWORD] = getenv('SPRYKER_SMTP_PASSWORD')
 
 // >>> FILESYSTEM
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
+    SitemapConstants::FILESYSTEM_NAME => [
+        'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
+        'root' => APPLICATION_ROOT_DIR . '/data/sitemaps/',
+        'path' => '/',
+    ],
+    SitemapConstants::FILESYSTEM_NAME_CACHE => [
+        'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
+        'root' => APPLICATION_ROOT_DIR . '/data/sitemaps/cache',
+        'path' => '/',
+    ],
     's3-import' => [
         'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
         'path' => '/',
         'key' => '',
         'secret' => '',
         'bucket' => '',
-        'region' => '',
+        'region' => 'eu-central-1',
     ],
     'files-import' => [
         'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
@@ -715,13 +747,17 @@ $config[ApplicationConstants::BASE_URL_YVES]
 $config[ShopUiConstants::YVES_ASSETS_URL_PATTERN] = '/assets/' . (getenv('SPRYKER_BUILD_HASH') ?: 'current') . '/%theme%/';
 
 // >>> Availability Notification
-$config[AvailabilityNotificationConstants::BASE_URL_YVES_PORT] = $yvesPort;
-$config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING] = [
+$config[AvailabilityNotificationConstants::BASE_URL_YVES_PORT]
+    = $config[SitemapConstants::BASE_URL_YVES_PORT]
+    = $yvesPort;
+$config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING]
+    = $config[SitemapConstants::STORE_TO_YVES_HOST_MAPPING] = [
     'DE' => getenv('SPRYKER_YVES_HOST_DE'),
     'AT' => getenv('SPRYKER_YVES_HOST_AT'),
     'US' => getenv('SPRYKER_YVES_HOST_US'),
 ];
-$config[AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING] = [
+$config[AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING]
+    = $config[SitemapConstants::REGION_TO_YVES_HOST_MAPPING] = [
     'EU' => getenv('SPRYKER_YVES_HOST_EU'),
     'US' => getenv('SPRYKER_YVES_HOST_US'),
 ];
@@ -813,7 +849,9 @@ $config[SearchHttpConstants::TENANT_IDENTIFIER]
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
 $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    AppConfigUpdatedTransfer::class => 'app-events',
     AddPaymentMethodTransfer::class => 'payment-method-commands',
+    UpdatePaymentMethodTransfer::class => 'payment-method-commands',
     DeletePaymentMethodTransfer::class => 'payment-method-commands',
     CancelPaymentTransfer::class => 'payment-commands',
     CapturePaymentTransfer::class => 'payment-commands',
@@ -826,6 +864,8 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentRefundFailedTransfer::class => 'payment-events',
     PaymentCanceledTransfer::class => 'payment-events',
     PaymentCancellationFailedTransfer::class => 'payment-events',
+    PaymentCreatedTransfer::class => 'payment-events',
+    PaymentUpdatedTransfer::class => 'payment-events',
     AssetAddedTransfer::class => 'asset-commands',
     AssetUpdatedTransfer::class => 'asset-commands',
     AssetDeletedTransfer::class => 'asset-commands',
@@ -841,11 +881,8 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     ConfigureTaxAppTransfer::class => 'tax-commands',
     DeleteTaxAppTransfer::class => 'tax-commands',
     SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
-    PaymentCreatedTransfer::class => 'payment-events',
-    PaymentUpdatedTransfer::class => 'payment-events',
     ReadyForMerchantAppOnboardingTransfer::class => 'merchant-app-events',
     MerchantAppOnboardingStatusChangedTransfer::class => 'merchant-app-events',
-    AppConfigUpdatedTransfer::class => 'app-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [

@@ -5,10 +5,13 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Shared\PublishAndSynchronizeHealthCheck\PublishAndSynchronizeHealthCheckConfig;
+use Spryker\Zed\Asset\Communication\Plugin\Publisher\Store\RefreshAssetStoreRelationPublisherPlugin;
 use Spryker\Zed\AssetStorage\Communication\Plugin\Publisher\Asset\AssetDeletePublisherPlugin;
 use Spryker\Zed\AssetStorage\Communication\Plugin\Publisher\Asset\AssetWritePublisherPlugin;
 use Spryker\Zed\AssetStorage\Communication\Plugin\Publisher\AssetPublisherTriggerPlugin;
@@ -94,6 +97,7 @@ use Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\Produ
 use Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\ProductConfiguration\ProductConfigurationWritePublisherPlugin;
 use Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\ProductConfigurationPublisherTriggerPlugin;
 use Spryker\Zed\ProductDiscontinuedStorage\Communication\Plugin\Publisher\ProductDiscontinuedPublisherTriggerPlugin;
+use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelLocalizedAttributesWritePublisherPlugin;
 use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelProductUpdatedEventTriggerPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel\ProductLabelWritePublisherPlugin as ProductLabelSearchWritePublisherPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract\ProductLabelProductAbstractWritePublisherPlugin as ProductLabelProductAbstractSearchWritePublisherPlugin;
@@ -175,6 +179,7 @@ use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CurrencyStore\Curren
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\LocaleStore\LocaleStoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store\StoreSynchronizationTriggeringPublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store\StoreWritePublisherPlugin;
+use Spryker\Zed\TaxApp\Communication\Plugin\Publisher\Store\RefreshTaxAppStoreRelationPublisherPlugin;
 use Spryker\Zed\TaxProductStorage\Communication\Plugin\Publisher\TaxProductPublisherTriggerPlugin;
 use Spryker\Zed\TaxStorage\Communication\Plugin\Publisher\TaxSetPublisherTriggerPlugin;
 
@@ -220,6 +225,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getShipmentTypeStoragePlugins(),
             $this->getProductOfferServicePointStoragePlugins(),
             $this->getProductOfferShipmentTypeStoragePlugins(),
+            $this->getTaxAppPlugins(),
+            $this->getAssetPlugins(),
         );
     }
 
@@ -341,6 +348,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductLabelProductAbstractStorageWritePublisherPlugin(),
             new ProductLabelDictionaryStorageWritePublisherPlugin(),
             new ProductLabelDictionaryStorageDeletePublisherPlugin(),
+            new ProductLabelLocalizedAttributesWritePublisherPlugin(),
         ];
     }
 
@@ -697,6 +705,26 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin(),
             new ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin(),
             new ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    public function getAssetPlugins(): array
+    {
+        return [
+            new RefreshAssetStoreRelationPublisherPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    public function getTaxAppPlugins(): array
+    {
+        return [
+            new RefreshTaxAppStoreRelationPublisherPlugin(),
         ];
     }
 }

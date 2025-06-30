@@ -144,10 +144,11 @@ services:
                 protocol: tcp
     scheduler:
         engine: jenkins
+        version: '2.492.3'
         endpoints:
             scheduler.internal-security.demo-spryker.com:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.internal-security.demo-spryker.com:
 

@@ -161,6 +161,10 @@
         {% endembed %}
     {% endblock %}
 
+    {% block traceableEvent %}
+        {{ parent() }}
+    {% endblock %}
+
     {% block icons %}
         {% include atom('icon-sprite') only %}
     {% endblock %}

@@ -189,10 +189,11 @@ services:
                 protocol: tcp
     scheduler:
         engine: jenkins
+        version: '2.492.3'
         endpoints:
             scheduler.b2c-staging-eu.cloud.spryker.toys:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.b2c-staging-eu.cloud.spryker.toys:
 

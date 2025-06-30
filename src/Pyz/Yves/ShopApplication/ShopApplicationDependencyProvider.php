@@ -5,11 +5,14 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Yves\ShopApplication;
 
 use Pyz\Yves\ProductRelationWidget\Widget\UpSellingProductsWidget;
 use Pyz\Yves\ProductReviewWidget\Widget\ProductDetailPageReviewWidget;
 use Pyz\Yves\ProductSetWidget\Widget\ProductSetIdsWidget;
+use Spryker\Yves\CustomerDataChangeRequest\Widget\CustomerEmailChangeRequestWidget;
 use Spryker\Yves\ErrorHandler\Plugin\Application\ErrorHandlerApplicationPlugin;
 use Spryker\Yves\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
 use Spryker\Yves\Form\Plugin\Application\FormApplicationPlugin;
@@ -19,6 +22,7 @@ use Spryker\Yves\Messenger\Plugin\Application\FlashMessengerApplicationPlugin;
 use Spryker\Yves\Router\Plugin\Application\RouterApplicationPlugin;
 use Spryker\Yves\Security\Plugin\Application\YvesSecurityApplicationPlugin;
 use Spryker\Yves\Session\Plugin\Application\SessionApplicationPlugin;
+use Spryker\Yves\Sitemap\Widget\SitemapWidget;
 use Spryker\Yves\Translator\Plugin\Application\TranslatorApplicationPlugin;
 use Spryker\Yves\Twig\Plugin\Application\TwigApplicationPlugin;
 use Spryker\Yves\Validator\Plugin\Application\ValidatorApplicationPlugin;
@@ -66,6 +70,7 @@ use SprykerShop\Yves\NewsletterWidget\Widget\NewsletterSubscriptionSummaryWidget
 use SprykerShop\Yves\NewsletterWidget\Widget\NewsletterSubscriptionWidget;
 use SprykerShop\Yves\OrderCancelWidget\Widget\OrderCancelButtonWidget;
 use SprykerShop\Yves\OrderCustomReferenceWidget\Widget\OrderCustomReferenceWidget;
+use SprykerShop\Yves\PaymentAppWidget\Widget\ExpressCheckoutPaymentWidget;
 use SprykerShop\Yves\PriceProductVolumeWidget\Widget\CurrentProductPriceVolumeWidget;
 use SprykerShop\Yves\PriceProductWidget\Widget\PriceProductWidget;
 use SprykerShop\Yves\PriceWidget\Widget\PriceModeSwitcherWidget;
@@ -125,6 +130,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 use SprykerShop\Yves\StoreWidget\Plugin\ShopApplication\StoreApplicationPlugin;
 use SprykerShop\Yves\StoreWidget\Widget\StoreSwitcherWidget;
 use SprykerShop\Yves\TabsWidget\Widget\FullTextSearchTabsWidget;
+use SprykerShop\Yves\TraceableEventWidget\Widget\TraceableEventWidget;
 use SprykerShop\Yves\WebProfilerWidget\Plugin\Application\WebProfilerApplicationPlugin;
 use SprykerShop\Yves\WishlistWidget\Widget\WishlistMenuItemWidget;
 
@@ -239,6 +245,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             ProductOfferServicePointAvailabilityDisplayWidget::class,
             CartSummaryHideTaxAmountWidget::class,
             ServicePointNameForShipmentGroupWidget::class,
+            TraceableEventWidget::class,
+            ExpressCheckoutPaymentWidget::class,
+            CustomerEmailChangeRequestWidget::class,
+            SitemapWidget::class,
         ];
     }
 
