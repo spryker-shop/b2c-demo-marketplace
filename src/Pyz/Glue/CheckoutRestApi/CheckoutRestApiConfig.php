@@ -26,6 +26,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
             'dummyPaymentCreditCard.cardExpiresYear',
             'dummyPaymentCreditCard.cardSecurityCode',
         ],
+        'dummyMarketplacePaymentInvoice' => ['dummyMarketplacePaymentInvoice.dateOfBirth'],
     ];
 
     /**
@@ -36,6 +37,13 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     protected const DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
 
     /**
+     * @uses \Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig::PAYMENT_PROVIDER_NAME
+     *
+     * @var string
+     */
+    protected const DUMMY_MARKETPLACE_PAYMENT_PROVIDER_NAME = 'DummyMarketplacePayment';
+
+    /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_CREDIT_CARD
      *
      * @var string
@@ -43,11 +51,23 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'Credit Card';
 
     /**
+     * @var string
+     */
+    protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE = 'Invoice (Marketplace)';
+
+    /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_CREDIT_CARD
      *
      * @var string
      */
     protected const PAYMENT_METHOD_CREDIT_CARD = 'dummyPaymentCreditCard';
+
+    /**
+     * @uses \Spryker\Shared\DummyMarketplacePayment\DummyMarketplacePaymentConfig::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE
+     *
+     * @var string
+     */
+    protected const PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE = 'dummyMarketplacePaymentInvoice';
 
     /**
      * @var bool
@@ -62,6 +82,9 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
         return [
             static::DUMMY_PAYMENT_PROVIDER_NAME => [
                 static::DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD => static::PAYMENT_METHOD_CREDIT_CARD,
+            ],
+            static::DUMMY_MARKETPLACE_PAYMENT_PROVIDER_NAME => [
+                static::DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE => static::PAYMENT_METHOD_DUMMY_MARKETPLACE_PAYMENT_INVOICE,
             ],
         ];
     }

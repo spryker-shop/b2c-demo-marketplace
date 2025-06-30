@@ -39,6 +39,8 @@ class UserConfig extends SprykerUserConfig
                 'lastName' => 'Schmidt',
                 'password' => 'change123',
                 'username' => 'harald@spryker.com',
+                'localeName' => 'en_US',
+                'isWarehouseUser' => 1,
             ],
             [
                 'firstName' => 'Richard',
