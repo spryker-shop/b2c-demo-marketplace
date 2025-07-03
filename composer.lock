@@ -59587,20 +59587,20 @@
         },
         {
             "name": "spryker/storage-gui",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/storage-gui.git",
-                "reference": "060b5141eb760c971589cffc1db37acd69d47e17"
+                "reference": "7c9e367b9ccdbb75d18ef26b4f36c3e85918d5c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/storage-gui/zipball/060b5141eb760c971589cffc1db37acd69d47e17",
-                "reference": "060b5141eb760c971589cffc1db37acd69d47e17",
+                "url": "https://api.github.com/repos/spryker/storage-gui/zipball/7c9e367b9ccdbb75d18ef26b4f36c3e85918d5c3",
+                "reference": "7c9e367b9ccdbb75d18ef26b4f36c3e85918d5c3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "php": ">=8.2",
                 "spryker/gui": "^3.45.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/storage": "^3.9.0",
@@ -59629,9 +59629,9 @@
             ],
             "description": "StorageGui module",
             "support": {
-                "source": "https://github.com/spryker/storage-gui/tree/1.0.0"
+                "source": "https://github.com/spryker/storage-gui/tree/1.1.0"
             },
-            "time": "2022-09-19T06:48:51+00:00"
+            "time": "2025-06-24T12:02:12+00:00"
         },
         {
             "name": "spryker/storage-redis",
@@ -75947,7 +75947,7 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.2"
     },
