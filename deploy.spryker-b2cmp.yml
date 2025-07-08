@@ -70,7 +70,7 @@ regions:
                     name: Spryker No-Reply
                     email: no-reply@b2c-marketplace-dms-on-eu.demo-spryker.com
             database:
-                database: spryker_staging
+                database: spryker-b2cmp
                 username: spryker
                 password: secret
             broker:
