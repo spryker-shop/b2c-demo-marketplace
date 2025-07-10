@@ -34,6 +34,7 @@ use Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication\CartVouchersResourceRou
 use Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication\GuestCartCodesResourceRoutePlugin;
 use Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication\GuestCartVouchersResourceRoutePlugin;
 use Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication\VoucherByQuoteResourceRelationshipPlugin;
+use Spryker\Glue\CartReorderRestApi\Plugin\GlueApplication\CartReorderResourceRoutePlugin;
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\CartsRestApi\Plugin\ControllerBeforeAction\SetAnonymousCustomerIdControllerBeforeActionPlugin;
 use Spryker\Glue\CartsRestApi\Plugin\GlueApplication\CartByRestCheckoutDataResourceRelationshipPlugin;
@@ -131,6 +132,7 @@ use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantsResourceRouteP
 use Spryker\Glue\NavigationsCategoryNodesResourceRelationship\Plugin\GlueApplication\CategoryNodeByResourceIdResourceRelationshipPlugin;
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig;
 use Spryker\Glue\NavigationsRestApi\Plugin\ResourceRoute\NavigationsResourceRoutePlugin;
+use Spryker\Glue\OrderAmendmentsRestApi\Plugin\GlueApplication\OrderAmendmentsByOrderResourceRelationshipPlugin;
 use Spryker\Glue\OrderPaymentsRestApi\Plugin\OrderPaymentsResourceRoutePlugin;
 use Spryker\Glue\OrdersRestApi\OrdersRestApiConfig;
 use Spryker\Glue\OrdersRestApi\Plugin\CustomerOrdersResourceRoutePlugin;
@@ -319,6 +321,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new PaymentCancellationsResourceRoutePlugin(),
             new PaymentCustomersResourceRoutePlugin(),
             new TaxValidateIdResourceRoutePlugin(),
+            new CartReorderResourceRoutePlugin(),
         ];
     }
 
@@ -758,6 +761,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         $resourceRelationshipCollection->addRelationship(
             ShipmentsRestApiConfig::RESOURCE_SHIPMENT_METHODS,
             new ShipmentTypesByShipmentMethodsResourceRelationshipPlugin(),
+        );
+
+        $resourceRelationshipCollection->addRelationship(
+            OrdersRestApiConfig::RESOURCE_ORDERS,
+            new OrderAmendmentsByOrderResourceRelationshipPlugin(),
         );
 
         return $resourceRelationshipCollection;
