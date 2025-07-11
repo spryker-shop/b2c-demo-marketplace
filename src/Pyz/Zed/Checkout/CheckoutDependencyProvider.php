@@ -77,7 +77,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
      *
      * @return list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>
      */
-    protected function getCheckoutPreConditionsForOrderAmendment(Container $container): array
+    protected function getCheckoutPreConditionsForOrderAmendment(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new CustomerPreConditionCheckerPlugin(),
@@ -110,7 +110,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
      *
      * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface>
      */
-    protected function getCheckoutOrderSaversForOrderAmendment(Container $container): array
+    protected function getCheckoutOrderSaversForOrderAmendment(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new CustomerOrderSavePlugin(),
@@ -218,7 +218,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
      *
      * @return list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface>
      */
-    protected function getCheckoutPostHooksForOrderAmendment(Container $container): array
+    protected function getCheckoutPostHooksForOrderAmendment(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new DummyPaymentCheckoutPostSavePlugin(),
@@ -233,7 +233,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
      *
      * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPreSaveHookInterface|\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPreSaveInterface|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreSavePluginInterface>
      */
-    protected function getCheckoutPreSaveHooksForOrderAmendment(Container $container): array
+    protected function getCheckoutPreSaveHooksForOrderAmendment(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new DisallowQuoteCheckoutPreSavePlugin(),

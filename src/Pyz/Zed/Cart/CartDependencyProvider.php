@@ -323,7 +323,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new RemoveRestrictedItemsPreReloadPlugin(),
             new CleanUpItemsPreReloadPlugin(),
             new ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin(),
-            new RemoveRestrictedItemsPreReloadPlugin(),
             new SanitizeMerchantCommissionPreReloadPlugin(),
             new OrderAmendmentRemoveInactiveItemsPreReloadPlugin(),
             new OrderAmendmentFilterInactiveProductOfferPreReloadItemsPlugin(),
