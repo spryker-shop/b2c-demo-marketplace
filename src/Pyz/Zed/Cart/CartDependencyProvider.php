@@ -258,6 +258,27 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     protected function getExpanderPluginsForOrderAmendment(Container $container): array
     {
         return [
+            new ProductCartPlugin(),
+            new IsQuantitySplittableItemExpanderPlugin(),
+            new CartItemPricePlugin(),
+            new CartItemProductOptionPlugin(),
+            new ExpandBundleItemsPlugin(),
+            new ExpandBundleItemsWithImagesPlugin(),
+            new SkuGroupKeyPlugin(),
+            new CartItemGroupKeyOptionPlugin(),
+            new CartItemWithBundleGroupKeyExpanderPlugin(),
+            new ProductImageItemExpanderPlugin(),
+            new CartGroupPromotionItems(),
+            new GiftCardMetadataExpanderPlugin(), #GiftCardFeature
+            new ConfiguredBundleQuantityPerSlotItemExpanderPlugin(),
+            new ConfiguredBundleGroupKeyItemExpanderPlugin(),
+            new ProductUrlItemExpanderPlugin(),
+            new SanitizeCartShipmentItemExpanderPlugin(),
+            new ProductOfferGroupKeyItemExpanderPlugin(),
+            new MerchantShipmentItemExpanderPlugin(),
+            new ProductConfigurationGroupKeyItemExpanderPlugin(),
+            new ShipmentTypeItemExpanderPlugin(),
+            new RemoveQuotePaymentCartItemExpanderPlugin(),
             new PriceItemExpanderPlugin(),
             new OriginalSalesOrderItemPriceItemExpanderPlugin(),
         ];
@@ -303,7 +324,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new CleanUpItemsPreReloadPlugin(),
             new ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin(),
             new RemoveRestrictedItemsPreReloadPlugin(),
-            new FilterInactiveProductOfferPreReloadItemsPlugin(),
             new SanitizeMerchantCommissionPreReloadPlugin(),
             new OrderAmendmentRemoveInactiveItemsPreReloadPlugin(),
             new OrderAmendmentFilterInactiveProductOfferPreReloadItemsPlugin(),

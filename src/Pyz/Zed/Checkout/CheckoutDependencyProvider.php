@@ -22,7 +22,6 @@ use Spryker\Zed\Discount\Communication\Plugin\Checkout\ReplaceSalesOrderDiscount
 use Spryker\Zed\Discount\Communication\Plugin\Checkout\VoucherDiscountMaxUsageCheckoutPreConditionPlugin;
 use Spryker\Zed\DummyPayment\Communication\Plugin\Checkout\DummyPaymentCheckoutPostSavePlugin;
 use Spryker\Zed\DummyPayment\Communication\Plugin\Checkout\DummyPaymentCheckoutPreConditionPlugin;
-use Spryker\Zed\GiftCard\Communication\Plugin\Checkout\GiftCardCheckoutDoSaveOrderPlugin;
 use Spryker\Zed\GiftCard\Communication\Plugin\Checkout\GiftCardCheckoutPreConditionPlugin;
 use Spryker\Zed\GiftCard\Communication\Plugin\Checkout\GiftCardPaymentCheckoutDoSaveOrderPlugin;
 use Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout\SendEmailToGiftCardUser;
@@ -192,7 +191,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new DiscountOrderSavePlugin(),
             new ProductBundleOrderSaverPlugin(),
             new SalesPaymentCheckoutDoSaveOrderPlugin(),
-            new GiftCardCheckoutDoSaveOrderPlugin(),
+            new GiftCardPaymentCheckoutDoSaveOrderPlugin(),
             new SalesOrderThresholdExpenseSavePlugin(), #SalesOrderThresholdFeature
             new CustomerDiscountOrderSavePlugin(),
         ];

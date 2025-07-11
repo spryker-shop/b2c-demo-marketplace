@@ -1,26 +1,43 @@
 {% extends view('order-detail', '@SprykerShop:CustomerPage') %}
 
 {% block customerContent %}
-    {% embed molecule('customer-reorder-form', 'CustomerReorderWidget') ignore missing with {
-        class: 'box',
-        data: {
-            order: data.order,
-        },
-        embed: {
-            order: data.order,
-            shipmentGroups: data.shipmentGroups,
-            orderShipmentExpenses: data.orderShipmentExpenses,
-        },
-    } only %}
-        {% block formContent %}
-            {% include molecule('order-detail', 'CustomerPage') with {
-                class: 'spacing-top spacing-top--big',
-                data: {
-                    order: embed.order,
-                    shipmentGroups: embed.shipmentGroups,
-                    orderShipmentExpenses: embed.orderShipmentExpenses,
-                },
-            } only %}
-        {% endblock %}
-    {% endembed %}
+    {% block orderDetail %}
+        {% widget 'CartReorderItemsWidget' args [
+            data.order,
+            data.shipmentGroups,
+            data.orderShipmentExpenses,
+        ] only %}
+        {% endwidget %}
+    {% endblock %}
+
+    {% block reorderAll %}
+        {% if widgetGlobalExists('CartReorderWidget') %}
+            {% widget 'CartReorderWidget' args [data.order] only %}
+                {% block body %}
+                    <div class="box text-right">
+                        {{ parent() }}
+                    </div>
+                {% endblock %}
+            {% endwidget %}
+        {% else %}
+            {% widget 'CustomerReorderFormWidget' args [data.order] only %}
+                {% block body %}
+                    <div class="box text-right">
+                        {{ parent() }}
+                    </div>
+                {% endblock %}
+            {% endwidget %}
+        {% endif %}
+    {% endblock %}
+
+    {% block orderCancel %}
+        {% widget 'OrderCancelButtonWidget' args [data.order, app.request.requestUri] only %}
+            {% block body %}
+                <div class="box text-right">
+                    {% set buttonClasses = 'button button--alert' %}
+                    {{ parent() }}
+                </div>
+            {% endblock %}
+        {% endwidget %}
+    {% endblock %}
 {% endblock %}
