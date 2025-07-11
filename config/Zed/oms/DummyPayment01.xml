@@ -13,6 +13,7 @@
             <process>DummyPicking</process>
             <process>WarehouseAllocation</process>
             <process>DummyMerchantCommission</process>
+            <process>DummyOrderAmendment</process>
         </subprocesses>
 
         <states>
@@ -20,6 +21,14 @@
                 <flag>cancellable</flag>
             </state>
             <state name="payment pending" reserved="true" display="oms.state.payment-pending">
+                <flag>cancellable</flag>
+            </state>
+            <state name="grace period pending" display="oms.state.new"/>
+            <state name="grace period started" reserved="true" display="oms.state.new">
+                <flag>cancellable</flag>
+                <flag>amendable</flag>
+            </state>
+            <state name="grace period finished" reserved="true" display="oms.state.new">
                 <flag>cancellable</flag>
             </state>
             <state name="invalid" display="oms.state.invalid">
@@ -43,6 +52,17 @@
         <transitions>
             <transition happy="true">
                 <source>new</source>
+                <target>grace period pending</target>
+            </transition>
+
+            <transition happy="true">
+                <source>grace period started</source>
+                <target>grace period finished</target>
+                <event>skip grace period</event>
+            </transition>
+
+            <transition happy="true">
+                <source>grace period finished</source>
                 <target>warehouse allocated</target>
                 <event>allocate warehouse</event>
             </transition>
@@ -152,6 +172,9 @@
         </transitions>
 
         <events>
+            <event name="start grace period" onEnter="true"/>
+            <event name="skip grace period" manual="true" timeout="2 hour"/>
+            <event name="pay" manual="true" timeout="1 hour" timeoutProcessor="OmsTimeout/Initiation" command="DummyPayment/Pay"/>
             <event name="authorize" timeout="1 second"/>
             <event name="pay" manual="true" timeout="1 hour" timeoutProcessor="OmsTimeout/Initiation" command="DummyPayment/Pay"/>
             <event name="submit tax invoice" onEnter="true" command="TaxApp/SubmitPaymentTaxInvoice"/>
@@ -173,5 +196,6 @@
     <process name="DummyPicking" file="DummySubprocess/DummyPicking01.xml"/>
     <process name="WarehouseAllocation" file="WarehouseAllocationSubprocess/WarehouseAllocation01.xml"/>
     <process name="DummyMerchantCommission" file="DummySubprocess/DummyMerchantCommission01.xml"/>
+    <process name="DummyOrderAmendment" file="DummySubprocess/DummyOrderAmendment01.xml"/>
 
 </statemachine>

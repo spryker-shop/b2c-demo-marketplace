@@ -38,7 +38,7 @@
                                 <div class="grid grid--middle col">
                                     {% if embed.order is not empty %}
                                         <span class="spacing-right">
-                                            {% widget 'CustomerReorderItemCheckboxWidget' args [data.productItem] with {
+                                            {% widget 'CartReorderItemCheckboxWidget' args [data.productItem] with {
                                                 data: {
                                                     additionalModifiers: ['big'],
                                                 },
