@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61152aea3bba9b7dab722280046cbef6",
+    "content-hash": "e5eb5197743511bb53dd9f10280229b3",
     "packages": [
         {
             "name": "async-aws/core",
@@ -60586,21 +60586,21 @@
         },
         {
             "name": "spryker/store-context",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/store-context.git",
-                "reference": "a986056939002341b3a4e3dd25c98ddca2226e20"
+                "reference": "c43e0f541ab3677422c64d4fe30ab007e6882c48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/store-context/zipball/a986056939002341b3a4e3dd25c98ddca2226e20",
-                "reference": "a986056939002341b3a4e3dd25c98ddca2226e20",
+                "url": "https://api.github.com/repos/spryker/store-context/zipball/c43e0f541ab3677422c64d4fe30ab007e6882c48",
+                "reference": "c43e0f541ab3677422c64d4fe30ab007e6882c48",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "spryker/kernel": "^3.30.0",
+                "spryker/kernel": "^3.77.0",
                 "spryker/store": "^1.25.0",
                 "spryker/store-extension": "^1.0.0",
                 "spryker/transfer": "^3.27.0",
@@ -60630,9 +60630,9 @@
             ],
             "description": "StoreContext module",
             "support": {
-                "source": "https://github.com/spryker/store-context/tree/1.0.1"
+                "source": "https://github.com/spryker/store-context/tree/1.1.0"
             },
-            "time": "2025-01-08T09:21:29+00:00"
+            "time": "2025-06-26T13:37:53+00:00"
         },
         {
             "name": "spryker/store-context-data-import",
@@ -76687,22 +76687,10 @@
             "alias_normalized": "202507.0"
         },
         {
-            "package": "spryker-feature/order-amendment",
-            "version": "9999999-dev",
-            "alias": "202507.0",
-            "alias_normalized": "202507.0"
-        },
-        {
             "package": "spryker-feature/payments",
             "version": "9999999-dev",
             "alias": "202410.0",
             "alias_normalized": "202410.0"
-        },
-        {
-            "package": "spryker-feature/reorder",
-            "version": "9999999-dev",
-            "alias": "202507.0",
-            "alias_normalized": "202507.0"
         }
     ],
     "minimum-stability": "dev",
