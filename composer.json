@@ -95,7 +95,7 @@
         "spryker-feature/shipment": "^202410.0",
         "spryker-feature/shipment-cart": "^202410.0",
         "spryker-feature/shipment-service-points": "^202410.0",
-        "spryker-feature/spryker-core": "^202410.0",
+        "spryker-feature/spryker-core": "dev-master as 202410.0",
         "spryker-feature/spryker-core-back-office": "^202410.0",
         "spryker-feature/state-machine": "^202410.0",
         "spryker-feature/tax": "^202410.0",
