@@ -255,7 +255,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
      *
      * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
      */
-    protected function getExpanderPluginsForOrderAmendment(Container $container): array
+    protected function getExpanderPluginsForOrderAmendment(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new ProductCartPlugin(),
@@ -315,7 +315,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
      *
      * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
      */
-    protected function getPreReloadPluginsForOrderAmendment(Container $container): array
+    protected function getPreReloadPluginsForOrderAmendment(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new CartConfigurableBundlePreReloadPlugin(),

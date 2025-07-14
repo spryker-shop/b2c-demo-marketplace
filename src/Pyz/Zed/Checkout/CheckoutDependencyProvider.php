@@ -28,6 +28,7 @@ use Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout\SendEmailToG
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantProductOption\Communication\Plugin\Checkout\MerchantProductOptionCheckoutPreConditionPlugin;
 use Spryker\Zed\Nopayment\Communication\Plugin\Checkout\NopaymentCheckoutPreConditionPlugin;
+use Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Checkout\InvoicePaymentToAsyncOrderAmendmentFlowCheckoutPreSavePlugin;
 use Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentAuthorizationCheckoutPostSavePlugin;
 use Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin;
 use Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentMethodValidityCheckoutPreConditionPlugin;
@@ -54,10 +55,12 @@ use Spryker\Zed\Sales\Communication\Plugin\Checkout\OrderTotalsSaverPlugin;
 use Spryker\Zed\Sales\Communication\Plugin\Checkout\UpdateOrderByQuoteCheckoutDoSaveOrderPlugin;
 use Spryker\Zed\Sales\Communication\Plugin\SalesOrderExpanderPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout\OriginalOrderQuoteExpanderCheckoutPreSavePlugin;
+use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout\QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout\SalesOrderAmendmentItemsCheckoutDoSaveOrderPlugin;
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout\SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout\FinishOrderAmendmentCheckoutPostSavePlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout\OrderAmendmentCheckoutPreCheckPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout\StartOrderAmendmentDraftCheckoutPostSavePlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Checkout\ReplaceSalesOrderThresholdExpensesCheckoutDoSaveOrderPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Checkout\SalesOrderThresholdCheckoutPreConditionPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Checkout\SalesOrderThresholdExpenseSavePlugin;
@@ -240,6 +243,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new SalesOrderExpanderPlugin(),
             new OriginalOrderQuoteExpanderCheckoutPreSavePlugin(),
             new FilterOriginalOrderBundleItemCheckoutPreSavePlugin(),
+            new InvoicePaymentToAsyncOrderAmendmentFlowCheckoutPreSavePlugin(), #Order Amendment Feature
         ];
     }
 
@@ -253,6 +257,31 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
         return [
             new DisallowQuoteCheckoutPreSavePlugin(),
             new SalesOrderExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface>
+     */
+    protected function getCheckoutOrderSaversForOrderAmendmentAsync(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            new QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin(), #Order Amendment Feature
+            new SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin(), #Order Amendment Feature
+        ];
+    }
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface>
+     */
+    protected function getCheckoutPostHooksForOrderAmendmentAsync(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            new StartOrderAmendmentDraftCheckoutPostSavePlugin(), #Order Amendment Feature
         ];
     }
 }

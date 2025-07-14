@@ -14,6 +14,7 @@
             <process>WarehouseAllocation</process>
             <process>DummyMerchantCommission</process>
             <process>DummyOrderAmendment</process>
+            <process>DummyOrderAmendmentAsync</process>
         </subprocesses>
 
         <states>
@@ -197,5 +198,6 @@
     <process name="WarehouseAllocation" file="WarehouseAllocationSubprocess/WarehouseAllocation01.xml"/>
     <process name="DummyMerchantCommission" file="DummySubprocess/DummyMerchantCommission01.xml"/>
     <process name="DummyOrderAmendment" file="DummySubprocess/DummyOrderAmendment01.xml"/>
+    <process name="DummyOrderAmendmentAsync" file="DummySubprocess/DummyOrderAmendmentAsync01.xml"/>
 
 </statemachine>
