@@ -56466,16 +56466,16 @@
         },
         {
             "name": "spryker/security-gui",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-gui.git",
-                "reference": "158adea55780485edd27154382a53330df86fddd"
+                "reference": "499e7ba2874c95e7975d83de209b39a1e128910d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-gui/zipball/158adea55780485edd27154382a53330df86fddd",
-                "reference": "158adea55780485edd27154382a53330df86fddd",
+                "url": "https://api.github.com/repos/spryker/security-gui/zipball/499e7ba2874c95e7975d83de209b39a1e128910d",
+                "reference": "499e7ba2874c95e7975d83de209b39a1e128910d",
                 "shasum": ""
             },
             "require": {
@@ -56488,6 +56488,7 @@
                 "spryker/security-blocker": "^1.0.0",
                 "spryker/security-extension": "^1.0.0",
                 "spryker/security-gui-extension": "^1.2.0",
+                "spryker/session": "^4.0.0",
                 "spryker/symfony": "^3.5.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/user": "^3.17.0",
@@ -56503,7 +56504,6 @@
                 "spryker/form": "*",
                 "spryker/propel": "*",
                 "spryker/router": "*",
-                "spryker/session": "*",
                 "spryker/testify": "*"
             },
             "suggest": {
@@ -56527,9 +56527,9 @@
             ],
             "description": "SecurityGui module",
             "support": {
-                "source": "https://github.com/spryker/security-gui/tree/1.10.0"
+                "source": "https://github.com/spryker/security-gui/tree/1.11.0"
             },
-            "time": "2025-06-02T15:30:14+00:00"
+            "time": "2025-07-11T12:57:07+00:00"
         },
         {
             "name": "spryker/security-gui-extension",
