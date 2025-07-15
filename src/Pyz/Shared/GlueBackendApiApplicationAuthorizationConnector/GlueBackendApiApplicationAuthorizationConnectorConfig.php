@@ -14,6 +14,22 @@ use Spryker\Shared\GlueBackendApiApplicationAuthorizationConnector\GlueBackendAp
 class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueBackendApiApplicationAuthorizationConnectorConfig
 {
     /**
+     * Specification:
+     * - Returns a list of protected endpoints.
+     * - Structure example:
+     * [
+     *      '/example' => [
+     *          'isRegularExpression' => false,
+     *      ],
+     *      '/\/example\/.+/' => [
+     *          'isRegularExpression' => true,
+     *          'methods' => [
+     *              'patch',
+     *              'delete',
+     *          ],
+     *      ],
+     * ]
+     *
      * @return array<string, mixed>
      */
     public function getProtectedPaths(): array
@@ -51,6 +67,21 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
             ],
             '/\/service-types.*/' => [
                 'isRegularExpression' => true,
+            ],
+            '/multi-factor-auth-types' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-trigger' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-activate' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-verify' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-deactivate' => [
+                'isRegularExpression' => false,
             ],
         ];
     }
