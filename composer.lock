@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbd9e5360c43c371327e1035dee11789",
+    "content-hash": "1cf2182c59f8e96003f00ecfad0b1b26",
     "packages": [
         {
             "name": "async-aws/core",
@@ -77271,6 +77271,12 @@
             "alias_normalized": "202507.0"
         },
         {
+            "package": "spryker-feature/order-amendment",
+            "version": "9999999-dev",
+            "alias": "202507.0",
+            "alias_normalized": "202507.0"
+        },
+        {
             "package": "spryker-feature/order-management",
             "version": "9999999-dev",
             "alias": "202507.0",
@@ -77398,6 +77404,12 @@
         },
         {
             "package": "spryker-feature/refunds",
+            "version": "9999999-dev",
+            "alias": "202507.0",
+            "alias_normalized": "202507.0"
+        },
+        {
+            "package": "spryker-feature/reorder",
             "version": "9999999-dev",
             "alias": "202507.0",
             "alias_normalized": "202507.0"
