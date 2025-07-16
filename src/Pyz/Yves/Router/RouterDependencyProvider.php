@@ -46,7 +46,6 @@ use SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router\ConfigurableBundleWi
 use SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router\ConfigurableBundleWidgetRouteProviderPlugin;
 use SprykerShop\Yves\CurrencyWidget\Plugin\Router\CurrencyWidgetRouteProviderPlugin;
 use SprykerShop\Yves\CustomerPage\Plugin\Router\CustomerPageRouteProviderPlugin;
-use SprykerShop\Yves\CustomerReorderWidget\Plugin\Router\CustomerReorderWidgetRouteProviderPlugin;
 use SprykerShop\Yves\DiscountWidget\Plugin\Router\DiscountWidgetRouteProviderPlugin;
 use SprykerShop\Yves\ErrorPage\Plugin\Router\ErrorPageRouteProviderPlugin;
 use SprykerShop\Yves\FileManagerWidget\Plugin\Router\FileManagerWidgetRouteProviderPlugin;
@@ -95,7 +94,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
             new HomePageRouteProviderPlugin(),
             new CheckoutPageRouteProviderPlugin(),
             new CustomerPageRouteProviderPlugin(),
-            new CustomerReorderWidgetRouteProviderPlugin(),
             new NewsletterPageRouteProviderPlugin(),
             new CartPageRouteProviderPlugin(),
             new WishlistPageRouteProviderPlugin(),

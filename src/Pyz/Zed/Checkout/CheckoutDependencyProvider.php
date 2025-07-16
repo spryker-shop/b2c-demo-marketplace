@@ -45,7 +45,6 @@ use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Checkout\OrderAmendment
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\Checkout\ProductDiscontinuedCheckoutPreConditionPlugin;
 use Spryker\Zed\ProductOffer\Communication\Plugin\Checkout\OrderAmendmentProductOfferCheckoutPreConditionPlugin;
 use Spryker\Zed\ProductOffer\Communication\Plugin\Checkout\ProductOfferCheckoutPreConditionPlugin;
-use Spryker\Zed\ProductOption\Communication\Plugin\Checkout\ProductOptionOrderSaverPlugin;
 use Spryker\Zed\ProductQuantity\Communication\Plugin\Checkout\ProductQuantityRestrictionCheckoutPreConditionPlugin;
 use Spryker\Zed\QuoteCheckoutConnector\Communication\Plugin\Checkout\DisallowQuoteCheckoutPreSavePlugin;
 use Spryker\Zed\Sales\Communication\Plugin\Checkout\DuplicateOrderCheckoutPreConditionPlugin;
@@ -190,7 +189,6 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new ShipmentTypeCheckoutDoSaveOrderPlugin(),
             new OrderItemsSaverPlugin(),
             new CartNoteSaverPlugin(), #CartNoteFeature
-            new ProductOptionOrderSaverPlugin(),
             new DiscountOrderSavePlugin(),
             new ProductBundleOrderSaverPlugin(),
             new SalesPaymentCheckoutDoSaveOrderPlugin(),
