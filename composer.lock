@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1cf2182c59f8e96003f00ecfad0b1b26",
+    "content-hash": "22d2698b7d7b0f1a1a90c9646f7f16cf",
     "packages": [
         {
             "name": "async-aws/core",
@@ -28053,21 +28053,6 @@
             "time": "2019-05-16T06:09:24+00:00"
         },
         {
-            "name": "spryker/cypress-tests",
-            "version": "dev-feature/cc-36030/oa-integration",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "33275ff54d5b4a8c2fa240e5820270b6e7a9c51e"
-            },
-            "type": "library",
-            "license": [
-                "MIT"
-            ],
-            "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2025-07-17T05:54:07+00:00"
-        },
-        {
             "name": "spryker/dashboard",
             "version": "1.1.4",
             "source": {
@@ -53249,21 +53234,6 @@
             "time": "2025-02-28T10:29:27+00:00"
         },
         {
-            "name": "spryker/robotframework-suite-tests",
-            "version": "dev-feature/cc-36032-integration-oa",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "5af43c75f06be2c91b90eba8ab02b7638e285695"
-            },
-            "type": "library",
-            "license": [
-                "MIT"
-            ],
-            "description": "Automated tests for the Robot Framework",
-            "time": "2025-07-15T16:40:46+00:00"
-        },
-        {
             "name": "spryker/router",
             "version": "1.23.0",
             "source": {
@@ -75928,6 +75898,21 @@
             "time": "2025-02-25T15:24:08+00:00"
         },
         {
+            "name": "spryker/cypress-tests",
+            "version": "dev-feature/cc-36030/oa-integration",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/cypress-tests.git",
+                "reference": "33275ff54d5b4a8c2fa240e5820270b6e7a9c51e"
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
+            "time": "2025-07-17T05:54:07+00:00"
+        },
+        {
             "name": "spryker/development",
             "version": "3.42.0",
             "source": {
@@ -76124,6 +76109,21 @@
                 "source": "https://github.com/spryker/profiler/tree/0.1.1"
             },
             "time": "2023-06-27T11:06:03+00:00"
+        },
+        {
+            "name": "spryker/robotframework-suite-tests",
+            "version": "dev-feature/cc-36032-integration-oa",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/robotframework-suite-tests.git",
+                "reference": "fbf85485883cd34979fbff740df4356947f0744d"
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "description": "Automated tests for the Robot Framework",
+            "time": "2025-07-17T10:38:28+00:00"
         },
         {
             "name": "spryker/testify",

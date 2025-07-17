@@ -25,24 +25,22 @@
 {% endblock %}
 
 {% block customOrderAmendmentAction %}
-    {% if widgetGlobalExists('OrderAmendmentWidget') %}
-        {% widget 'OrderAmendmentWidget' args [order] only %}
-            {% block body %}
-                {% embed molecule('order-amendment', 'SalesOrderAmendmentWidget') with {
-                    data: {
-                        form: data.form,
-                        order: data.order,
-                        hasConfirmationPopup: data.hasConfirmationPopup,
-                    },
-                } only %}
-                    {% block content %}
-                        {% set buttonClass = 'table-action-list__link' %}
-                        {{ parent() }}
-                    {% endblock %}
-                {% endembed %}
-            {% endblock %}
-        {% endwidget %}
-    {% endif %}
+    {% widget 'OrderAmendmentWidget' args [order] only %}
+        {% block body %}
+            {% embed molecule('order-amendment', 'SalesOrderAmendmentWidget') with {
+                data: {
+                    form: data.form,
+                    order: data.order,
+                    hasConfirmationPopup: data.hasConfirmationPopup,
+                },
+            } only %}
+                {% block content %}
+                    {% set buttonClass = 'table-action-list__link' %}
+                    {{ parent() }}
+                {% endblock %}
+            {% endembed %}
+        {% endblock %}
+    {% endwidget %}
 {% endblock %}
 
 {% block orderCancelAction %}
