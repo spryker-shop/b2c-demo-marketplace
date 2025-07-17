@@ -31,6 +31,7 @@
                             embed: {
                                 order: data.order,
                                 bundleItems: item.bundleItems | default([]),
+                                reorderSelectionClassName: data.reorderSelectionClassName,
                             },
                         } only %}
                             {% import _self as component %}
@@ -41,6 +42,7 @@
                                             {% widget 'CartReorderItemCheckboxWidget' args [data.productItem] with {
                                                 data: {
                                                     additionalModifiers: ['big'],
+                                                    checkboxClasses: embed.reorderSelectionClassName,
                                                 },
                                             } only %}{% endwidget %}
                                         </span>
