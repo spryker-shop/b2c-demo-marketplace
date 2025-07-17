@@ -43,6 +43,9 @@ use SprykerShop\Yves\CartPage\Widget\CartChangeQuantityFormWidget;
 use SprykerShop\Yves\CartPage\Widget\CartSummaryHideTaxAmountWidget;
 use SprykerShop\Yves\CartPage\Widget\ProductAbstractAddToCartButtonWidget;
 use SprykerShop\Yves\CartPage\Widget\RemoveFromCartFormWidget;
+use SprykerShop\Yves\CartReorderPage\Widget\CartReorderItemCheckboxWidget;
+use SprykerShop\Yves\CartReorderPage\Widget\CartReorderItemsWidget;
+use SprykerShop\Yves\CartReorderPage\Widget\CartReorderWidget;
 use SprykerShop\Yves\CategoryImageStorageWidget\Widget\CategoryImageStorageWidget;
 use SprykerShop\Yves\CheckoutWidget\Widget\CheckoutBreadcrumbWidget;
 use SprykerShop\Yves\CheckoutWidget\Widget\ProceedToCheckoutButtonWidget;
@@ -119,6 +122,11 @@ use SprykerShop\Yves\ProductWidget\Widget\PdpProductRelationWidget;
 use SprykerShop\Yves\ProductWidget\Widget\PdpProductReplacementForListWidget;
 use SprykerShop\Yves\ProductWidget\Widget\ProductAlternativeWidget;
 use SprykerShop\Yves\SalesConfigurableBundleWidget\Widget\OrderItemsConfiguredBundleWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\CancelOrderAmendmentWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\OrderAmendmentItemLinkWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\OrderAmendmentWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\UpdateOrderCheckoutSubmitButtonTextWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\UpdateOrderCheckoutSuccessTitleWidget;
 use SprykerShop\Yves\SalesOrderThresholdWidget\Widget\SalesOrderThresholdWidget;
 use SprykerShop\Yves\SalesProductBundleWidget\Widget\OrderItemsProductBundleWidget;
 use SprykerShop\Yves\SalesProductConfigurationWidget\Widget\ProductConfigurationOrderItemDisplayWidget;
@@ -253,6 +261,14 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             SetMultiFactorAuthMenuItemWidget::class,
             MultiFactorAuthHandlerWidget::class,
             SitemapWidget::class,
+            CartReorderWidget::class,
+            CartReorderItemCheckboxWidget::class,
+            CartReorderItemsWidget::class,
+            OrderAmendmentWidget::class,
+            CancelOrderAmendmentWidget::class,
+            OrderAmendmentItemLinkWidget::class,
+            UpdateOrderCheckoutSubmitButtonTextWidget::class,
+            UpdateOrderCheckoutSuccessTitleWidget::class,
         ];
     }
 
