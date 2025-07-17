@@ -41,7 +41,6 @@
             @include helper-breakpoint-media-min($lg-min) {
                 padding: 0;
                 border: none;
-                text-align: left;
             }
 
             &:hover {
