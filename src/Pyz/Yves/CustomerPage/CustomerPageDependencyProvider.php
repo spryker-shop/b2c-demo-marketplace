@@ -15,7 +15,6 @@ use SprykerShop\Yves\AgentPage\Plugin\Security\UpdateAgentTokenAfterCustomerAuth
 use SprykerShop\Yves\ClickAndCollectPageExample\Plugin\CustomerPage\ClickAndCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin;
 use SprykerShop\Yves\ClickAndCollectPageExample\Plugin\CustomerPage\ClickAndCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin;
 use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
-use SprykerShop\Yves\CustomerReorderWidget\Plugin\CustomerPage\CustomerReorderWidgetPlugin;
 use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin;
 use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointCheckoutAddressCollectionFormExpanderPlugin;
 use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin;
@@ -26,36 +25,6 @@ use SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage\ShipmentTypeCheckout
 
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
-    /**
-     * @return array<string>
-     */
-    protected function getCustomerOverviewWidgetPlugins(): array
-    {
-        return [
-            CustomerReorderWidgetPlugin::class,
-        ];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getCustomerOrderListWidgetPlugins(): array
-    {
-        return [
-            CustomerReorderWidgetPlugin::class,
-        ];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getCustomerOrderViewWidgetPlugins(): array
-    {
-        return [
-            CustomerReorderWidgetPlugin::class,
-        ];
-    }
-
     /**
      * @return list<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\AfterCustomerAuthenticationSuccessPluginInterface>
      */
