@@ -27,7 +27,7 @@
                     name: link.name,
                 },
                 attributes: {
-                    href: functionExists('generatePath') ? generatePath(link.url) : link.url,
+                    href: link.url,
                 },
             } only %}
         {% endfor %}
