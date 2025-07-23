@@ -3406,6 +3406,12 @@ multi_factor_auth.multi_factor_auth.list.title,"Set up Multi-Factor Authenticati
 multi_factor_auth.multi_factor_auth.list.title,"Multi-Faktor-Authentifizierung einrichten",de_DE
 multi_factor_auth.multi_factor_auth.title,"Multi-Factor Authentication",en_US
 multi_factor_auth.multi_factor_auth.title,"Multi-Faktor-Authentifizierung",de_DE
+multi_factor_auth.enter_your_code_input,"Enter your code here",en_US
+multi_factor_auth.enter_your_code_input,"Geben Sie Ihren Code hier ein",de_DE
+multi_factor_auth.activate,"Activate",en_US
+multi_factor_auth.activate,"Aktivieren",de_DE
+multi_factor_auth.deactivate,"Deactivate",en_US
+multi_factor_auth.deactivate,"Deaktivieren",de_DE
 multi_factor_auth.error.invalid_code,"Invalid multi-factor authentication code. You have %remainingAttempts% attempt(s) left.",en_US
 multi_factor_auth.error.invalid_code,"Ungültiger Multi-Faktor-Authentifizierungscode. Sie haben %remainingAttempts% Versuch(e) verbleiben.",de_DE
 multi_factor_auth.error.attempts_exceeded,"You have exceeded the number of allowed attempts. Please try again after the page has been refreshed.",en_US
