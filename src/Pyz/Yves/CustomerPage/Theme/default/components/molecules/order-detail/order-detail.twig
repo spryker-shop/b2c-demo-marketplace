@@ -54,10 +54,6 @@
                     {% endblock %}
                 {% endwidget %}
 
-                <button class="js-cart-reorder-form__trigger {{ buttonClasses }}" data-qa="reorder-selected-button" disabled>
-                    {{ 'customer.order.reorder_selected' | trans }}
-                </button>
-
                 {% widget 'CartReorderWidget' args [embed.order] with {
                     embed: {
                         buttonClasses: buttonClasses,
