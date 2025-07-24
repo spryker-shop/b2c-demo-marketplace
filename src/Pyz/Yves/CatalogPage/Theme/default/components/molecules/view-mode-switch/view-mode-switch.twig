@@ -8,7 +8,7 @@
     {% set gridViewActiveClass = data.viewMode == 'grid' ? config.name ~ '__link--active' %}
     {% set listViewActiveClass = data.viewMode != 'grid' ? config.name ~ '__link--active' %}
 
-    <a class="{{ config.name }}__link {{ gridViewActiveClass }}" href="{{ gridHreffunctionExists('generatePath') ? generatePath(gridHref) : gridHref }}">
+    <a class="{{ config.name }}__link {{ gridViewActiveClass }}" href="{{ functionExists('generatePath') ? generatePath(gridHref) : gridHref }}">
         {% include atom('icon') with {
             class: 'spacing-right',
             modifiers: ['grid'],
