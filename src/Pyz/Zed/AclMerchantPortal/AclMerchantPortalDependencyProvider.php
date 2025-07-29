@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\AclMerchantPortal;
 
 use Spryker\Zed\Acl\Communication\Plugin\AclMerchantPortal\AclEntityConfigurationExpanderPlugin;
@@ -46,6 +48,7 @@ use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\AclMerchantPortal\Mercha
 use Spryker\Zed\MerchantStock\Communication\Plugin\AclMerchantPortal\MerchantStockAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\MerchantUser\Communication\Plugin\AclMerchantPortal\MerchantUserAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\MerchantUser\Communication\Plugin\AclMerchantPortal\MerchantUserMerchantUserAclEntityRuleExpanderPlugin;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\AclMerchantPortal\UserMultiFactorAuthAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Oms\Communication\Plugin\AclMerchantPortal\OmsAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Oms\Communication\Plugin\AclMerchantPortal\OmsMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\AclMerchantPortal\OmsProductOfferReservationAclEntityConfigurationExpanderPlugin;
@@ -227,6 +230,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new ProductOfferServicePointAclEntityConfigurationExpanderPlugin(),
             new MerchantAppAclEntityConfigurationExpanderPlugin(),
             new SalesMerchantCommissionAclEntityConfigurationExpanderPlugin(),
+            new UserMultiFactorAuthAclEntityConfigurationExpanderPlugin(),
         ];
     }
 }

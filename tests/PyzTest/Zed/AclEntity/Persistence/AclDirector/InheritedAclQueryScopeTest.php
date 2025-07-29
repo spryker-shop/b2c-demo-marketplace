@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace PyzTest\Zed\AclEntity\Persistence\AclDirector;
 
 use Codeception\Test\Unit;
@@ -30,7 +32,7 @@ use Pyz\Zed\ProductOffer\ProductOfferDependencyProvider;
 use PyzTest\Zed\AclEntity\AclQueryDirectorTester;
 use Spryker\Shared\AclEntity\AclEntityConstants;
 use Spryker\Zed\AclEntity\AclEntityDependencyProvider;
-use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalAclEntityMetadataConfigExpanderPlugin;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin;
 use Spryker\Zed\PropelOrm\Business\Runtime\ActiveQuery\Criteria;
 
 /**
@@ -92,7 +94,7 @@ class InheritedAclQueryScopeTest extends Unit
         $this->tester->setDependency(ProductOfferDependencyProvider::PLUGINS_PRODUCT_OFFER_POST_CREATE, []);
         $this->tester->setDependency(
             AclEntityDependencyProvider::PLUGINS_ACL_ENTITY_METADATA_COLLECTION_EXPANDER,
-            [new MerchantPortalAclEntityMetadataConfigExpanderPlugin()],
+            [new MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin()],
         );
 
         $this->tester->deleteTestData();
@@ -531,15 +533,15 @@ class InheritedAclQueryScopeTest extends Unit
         $merchant2Transfer = $this->tester->haveMerchant();
         $merchant3Transfer = $this->tester->haveMerchant();
 
-        $productOfferMerchant1 = $this->tester->haveProductOffer(
+        $this->tester->haveProductOffer(
             [
                 ProductOfferTransfer::MERCHANT_REFERENCE => $merchant1Transfer->getMerchantReference(),
             ],
         );
-        $productOfferMerchant2 = $this->tester->haveProductOffer(
+        $this->tester->haveProductOffer(
             [ProductOfferTransfer::MERCHANT_REFERENCE => $merchant2Transfer->getMerchantReference()],
         );
-        $productOfferMerchant3 = $this->tester->haveProductOffer(
+        $this->tester->haveProductOffer(
             [ProductOfferTransfer::MERCHANT_REFERENCE => $merchant3Transfer->getMerchantReference()],
         );
 

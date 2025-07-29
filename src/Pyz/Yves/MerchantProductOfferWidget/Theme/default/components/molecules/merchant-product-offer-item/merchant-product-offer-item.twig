@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block merchantLink %}
-    <a class="{{ config.name }}__link link link--darkest" href="{{ data.merchantUrl }}">
+    <a class="{{ config.name }}__link link link--darkest" href="{{ functionExists('generatePath') ? generatePath(data.merchantUrl) : data.merchantUrl }}">
         {{ 'merchant_product_offer.view_seller' | trans }}
     </a>
 {% endblock %}

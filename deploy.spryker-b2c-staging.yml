@@ -4,32 +4,42 @@ x-frontend-auth: &frontend-auth
     auth:
         engine: basic
         users:
-            - username: cloud
-              password: cloud
+            -   username: cloud
+                password: cloud
 
 namespace: spryker-cloud
 tag: '1.0'
 
 environment: docker.staging
 image:
-    tag: spryker/php:7.4-alpine3.12
+    tag: spryker/php:8.2
+    environment:
+        SPRYKER_PRODUCT_CONFIGURATOR_HOST: demo-date-time-configurator.b2c.cloud.spryker.toys
+        SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
+        SPRYKER_YVES_HOST_DE: de.b2c.cloud.spryker.toys
+        SPRYKER_YVES_HOST_AT: at.b2c.cloud.spryker.toys
+        SPRYKER_YVES_HOST_US: us.b2c.cloud.spryker.toys
+        SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PUBLIC_KEY: 'BGqNWbv0hWM5CQ1-KwAfSQBMC6TMVFyrnh3vQp37oGCNvQ6eG_HyMjxBFJRWeCPTbzDoxcjhxLJS8Ck8r1G2oFw'
+        SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY: 'UK6DywwjKITPpRHBSY9TLPIXm6BPrHX40sseIoXT9c8'
+        SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT: 'https://spryker.com'
     php:
         enabled-extensions:
             - blackfire
             - newrelic
+    node:
+        version: 18
+        npm: 9
 
 composer:
     mode: --no-dev
     autoload: --classmap-authoritative
 
 assets:
-    image: fholzer/nginx-brotli:v1.18.0
+    image: spryker/nginx-brotli:latest
     mode: production
     compression:
         brotli:
-            static: only
-        gzip:
-            static: true
+            static: on
             level: 5
 
 regions:
@@ -79,6 +89,8 @@ groups:
             redirects_eu:
                 application: static
                 endpoints:
+                    demo-date-time-configurator.b2c.cloud.spryker.toys:
+                        entry-point: Configurator
                     de.b2c.cloud.spryker.toys:
                         store: DE
                         redirect:
@@ -176,16 +188,17 @@ services:
                 protocol: tcp
     search:
         engine: elastic
-        version: 7.6
+        version: '7.10'
         endpoints:
             localhost:9200:
                 protocol: tcp
     scheduler:
         engine: jenkins
+        version: '2.492.3'
         endpoints:
             scheduler.b2c.cloud.spryker.toys:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.b2c.cloud.spryker.toys:
 

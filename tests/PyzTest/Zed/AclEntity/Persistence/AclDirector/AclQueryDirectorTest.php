@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace PyzTest\Zed\AclEntity\Persistence\AclDirector;
 
 use Codeception\Test\Unit;
@@ -23,7 +25,7 @@ use Propel\Runtime\ActiveQuery\ModelJoin;
 use Pyz\Zed\AclEntity\AclEntityDependencyProvider;
 use PyzTest\Zed\AclEntity\AclQueryDirectorTester;
 use Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException;
-use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalAclEntityMetadataConfigExpanderPlugin;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin;
 use Spryker\Zed\Merchant\MerchantDependencyProvider;
 use Spryker\Zed\ProductOffer\ProductOfferDependencyProvider;
 
@@ -54,7 +56,7 @@ class AclQueryDirectorTest extends Unit
 
         $this->tester->setDependency(
             AclEntityDependencyProvider::PLUGINS_ACL_ENTITY_METADATA_COLLECTION_EXPANDER,
-            [new MerchantPortalAclEntityMetadataConfigExpanderPlugin()],
+            [new MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin()],
         );
 
         $this->tester->setDependency(

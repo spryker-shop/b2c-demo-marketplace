@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\ZedNavigation;
 
 use Spryker\Zed\ZedNavigation\ZedNavigationConfig as SprykerZedNavigationConfig;
@@ -69,5 +71,17 @@ class ZedNavigationConfig extends SprykerZedNavigationConfig
         $navigationSchemaFileNamePatterns[static::NAVIGATION_TYPE_SECONDARY_MERCHANT_PORTAL] = 'navigation-secondary-merchant-portal.xml';
 
         return $navigationSchemaFileNamePatterns;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDefaultNavigationType(): string
+    {
+        if (APPLICATION === 'MERCHANT_PORTAL') {
+            return self::NAVIGATION_TYPE_MAIN_MERCHANT_PORTAL;
+        }
+
+        return static::NAVIGATION_TYPE_MAIN;
     }
 }

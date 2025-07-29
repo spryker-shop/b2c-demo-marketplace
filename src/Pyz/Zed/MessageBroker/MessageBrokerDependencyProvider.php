@@ -5,9 +5,12 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\Asset\Communication\Plugin\MessageBroker\AssetMessageHandlerPlugin;
+use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\ActiveAppFilterMessageChannelPlugin;
 use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin;
 use Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\CorrelationIdMessageAttributeProviderPlugin;
@@ -23,7 +26,7 @@ use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageH
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
 use Spryker\Zed\Product\Communication\Plugin\MessageBroker\ProductExportMessageHandlerPlugin;
 use Spryker\Zed\ProductReview\Communication\Plugin\MessageBroker\ProductReviewAddReviewsMessageHandlerPlugin;
-use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\PaymentCreatedMessageHandlerPlugin;
+use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\SalesPaymentDetailMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointMessageHandlerPlugin;
 use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMessageAttributeProviderPlugin;
 use Spryker\Zed\Store\Communication\Plugin\MessageBroker\CurrentStoreReferenceMessageAttributeProviderPlugin;
@@ -68,7 +71,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new ProductReviewAddReviewsMessageHandlerPlugin(),
             new TaxAppMessageHandlerPlugin(),
             new PaymentOperationsMessageHandlerPlugin(),
-            new PaymentCreatedMessageHandlerPlugin(),
+            new SalesPaymentDetailMessageHandlerPlugin(),
             new MerchantAppOnboardingMessageHandlerPlugin(),
         ];
     }
@@ -105,5 +108,15 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getExternalValidatorPlugins(): array
     {
         return [];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\FilterMessageChannelPluginInterface>
+     */
+    public function getFilterMessageChannelPlugins(): array
+    {
+        return [
+            new ActiveAppFilterMessageChannelPlugin(),
+        ];
     }
 }

@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Synchronization;
 
 use Spryker\Zed\AssetStorage\Communication\Plugin\Synchronization\AssetStorageSynchronizationDataPlugin;
@@ -71,7 +73,9 @@ use Spryker\Zed\SearchHttp\Communication\Plugin\Synchronization\SearchHttpSynchr
 use Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization\ServicePointSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServicePointSynchronizationDataBulkRepositoryPlugin as ServicePointStorageSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServiceTypeSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization\ShipmentTypeListSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization\ShipmentTypeSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\StoreStorage\Communication\Plugin\Synchronization\StoreListSynchronizationDataPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Synchronization\StoreSynchronizationDataPlugin;
 use Spryker\Zed\Synchronization\Communication\Plugin\Synchronization\SynchronizationDataQueryExpanderWhereBetweenStrategyPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
@@ -158,8 +162,10 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
             new ServicePointStorageSynchronizationDataBulkRepositoryPlugin(),
             new ServiceTypeSynchronizationDataBulkRepositoryPlugin(),
             new ShipmentTypeSynchronizationDataBulkRepositoryPlugin(),
+            new ShipmentTypeListSynchronizationDataBulkRepositoryPlugin(),
             new ProductOfferServiceSynchronizationDataBulkRepositoryPlugin(),
             new ProductOfferShipmentTypeSynchronizationDataBulkRepositoryPlugin(),
+            new StoreListSynchronizationDataPlugin(),
         ];
     }
 

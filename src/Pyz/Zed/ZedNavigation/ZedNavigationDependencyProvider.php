@@ -5,9 +5,13 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\ZedNavigation;
 
 use Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation\AgentMerchantPortalNavigationItemCollectionFilterPlugin;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation\MerchantPortalNavigationItemCollectionFilterPlugin;
 use Spryker\Zed\ZedNavigation\Communication\Plugin\BackofficeNavigationItemCollectionFilterPlugin;
 use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavigationDependencyProvider;
 
@@ -21,6 +25,8 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
         return [
             new AclNavigationItemCollectionFilterPlugin(),
             new BackofficeNavigationItemCollectionFilterPlugin(),
+            new MerchantPortalNavigationItemCollectionFilterPlugin(),
+            new AgentMerchantPortalNavigationItemCollectionFilterPlugin(),
         ];
     }
 }

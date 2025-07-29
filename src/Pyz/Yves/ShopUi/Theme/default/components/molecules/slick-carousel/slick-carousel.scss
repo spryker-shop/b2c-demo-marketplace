@@ -1,4 +1,4 @@
-@import '~slick-carousel/slick/slick.scss';
+@import '~slick-carousel/slick/slick';
 
 @mixin shop-ui-slick-carousel($name: '.slick-carousel') {
     #{$name} {
