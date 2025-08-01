@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 use Monolog\Logger;
 use Pyz\Shared\Console\ConsoleConstants;
 use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
@@ -313,3 +315,7 @@ if ($isTestifyConstantsClassExists) {
 // ------------------------------ Glue Storefront API -------------------------------
 // ----------------------------------------------------------------------------
 $config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST] = $glueStorefrontHost;
+
+if ($isTestifyConstantsClassExists) {
+    $config[TestifyConstants::GLUE_STOREFRONT_API_DOMAIN] = sprintf('http://%s', $glueStorefrontHost);
+}

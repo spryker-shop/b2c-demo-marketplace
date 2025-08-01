@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\MerchantGui;
 
 use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
@@ -56,6 +58,16 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
      * @return array<\Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantUpdateFormViewExpanderPluginInterface>
      */
     protected function getMerchantUpdateFormViewExpanderPlugins(): array
+    {
+        return [
+            new MerchantUserViewMerchantUpdateFormViewExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantUpdateFormViewExpanderPluginInterface>
+     */
+    protected function getMerchantViewFormViewExpanderPlugins(): array
     {
         return [
             new MerchantUserViewMerchantUpdateFormViewExpanderPlugin(),

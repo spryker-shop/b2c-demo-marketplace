@@ -12,7 +12,7 @@ tag: '1.0'
 
 environment: docker.staging
 image:
-    tag: spryker/php:8.1
+    tag: spryker/php:8.2
     environment:
         SPRYKER_PRODUCT_CONFIGURATOR_HOST: demo-date-time-configurator.b2c.cloud.spryker.toys
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 443
@@ -194,10 +194,11 @@ services:
                 protocol: tcp
     scheduler:
         engine: jenkins
+        version: '2.492.3'
         endpoints:
             scheduler.b2c.cloud.spryker.toys:
     mail_catcher:
-        engine: mailhog
+        engine: mailpit
         endpoints:
             mail.b2c.cloud.spryker.toys:
 

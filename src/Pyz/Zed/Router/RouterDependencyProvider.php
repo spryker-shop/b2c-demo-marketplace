@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Router;
 
 use Spryker\Zed\Router\Communication\Plugin\Router\BackendGatewayRouterPlugin;
@@ -52,6 +54,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     {
         return [
             new MerchantPortalRouterPlugin(),
+            new ZedDevelopmentRouterPlugin(),
         ];
     }
 

@@ -7,11 +7,19 @@
 
     <process name="MarketplacePayment01" main="true">
         <states>
-            <state name="new" reserved="true" display="oms.state.new">
+            <state name="new" display="oms.state.new">
+                <flag>cancellable</flag>
+            </state>
+            <state name="grace period pending" display="oms.state.new"/>
+            <state name="grace period started" reserved="true" display="oms.state.new">
+                <flag>cancellable</flag>
+                <flag>amendable</flag>
+            </state>
+            <state name="grace period finished" reserved="true" display="oms.state.new">
                 <flag>cancellable</flag>
             </state>
             <state name="paid" reserved="true" display="oms.state.paid"/>
-            <state name="canceled" display="oms.state.canceled"/>
+            <state name="cancelled" display="oms.state.canceled"/>
             <state name="refunded" display="oms.state.refunded"/>
             <state name="merchant split pending" reserved="true" display="oms.state.merchant-split-pending"/>
             <state name="tax invoice submitted" reserved="true" display="oms.state.paid"/>
@@ -24,6 +32,29 @@
         <transitions>
             <transition happy="true">
                 <source>new</source>
+                <target>grace period pending</target>
+            </transition>
+
+            <transition>
+                <source>new</source>
+                <target>cancelled</target>
+                <event>cancel</event>
+            </transition>
+
+            <transition happy="true">
+                <source>grace period started</source>
+                <target>grace period finished</target>
+                <event>skip grace period</event>
+            </transition>
+
+            <transition>
+                <source>grace period started</source>
+                <target>cancelled</target>
+                <event>cancel</event>
+            </transition>
+
+            <transition happy="true">
+                <source>grace period finished</source>
                 <target>warehouse allocated</target>
                 <event>allocate warehouse</event>
             </transition>
@@ -36,7 +67,7 @@
 
             <transition>
                 <source>warehouse allocated</source>
-                <target>canceled</target>
+                <target>cancelled</target>
                 <event>cancel</event>
             </transition>
 
@@ -44,11 +75,6 @@
                 <source>paid</source>
                 <target>tax invoice submitted</target>
                 <event>submit tax invoice</event>
-            </transition>
-
-            <transition happy="true">
-                <source>tax invoice submitted</source>
-                <target>merchant split pending</target>
             </transition>
 
             <transition>
@@ -64,12 +90,12 @@
 
             <transition>
                 <source>sent to merchant</source>
-                <target>canceled</target>
+                <target>cancelled</target>
                 <event>cancel</event>
             </transition>
 
             <transition condition="MerchantSalesOrder/IsOrderPaid">
-                <source>canceled</source>
+                <source>cancelled</source>
                 <target>refunded</target>
                 <event>refund</event>
             </transition>
@@ -113,6 +139,7 @@
         </transitions>
 
         <events>
+            <event name="skip grace period" manual="true" timeout="2 hour"/>
             <event name="pay" manual="true" command="Order/RequestProductReviews"/>
             <event name="cancel" manual="true"/>
             <event name="refund" manual="true"/>
@@ -129,6 +156,9 @@
             <process>MarketplaceRefund</process>
             <process>WarehouseAllocation</process>
             <process>DummyPicking</process>
+            <process>DummyMarketplaceMerchantCommission</process>
+            <process>DummyOrderAmendment</process>
+            <process>DummyOrderAmendmentAsync</process>
         </subprocesses>
 
     </process>
@@ -137,5 +167,8 @@
     <process name="MarketplaceRefund" file="MarketplaceSubprocess/MarketplaceRefund01.xml"/>
     <process name="WarehouseAllocation" file="WarehouseAllocationSubprocess/WarehouseAllocation01.xml"/>
     <process name="DummyPicking" file="DummySubprocess/DummyPicking01.xml"/>
+    <process name="DummyMarketplaceMerchantCommission" file="DummySubprocess/DummyMarketplaceMerchantCommission01.xml"/>
+    <process name="DummyOrderAmendment" file="DummySubprocess/DummyOrderAmendment01.xml"/>
+    <process name="DummyOrderAmendmentAsync" file="DummySubprocess/DummyOrderAmendmentAsync01.xml"/>
 
 </statemachine>

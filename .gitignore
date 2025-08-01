@@ -107,3 +107,6 @@ docker
 /.angular/cache
 /.angular
 .nx/cache
+
+# Generated icon sprite
+/frontend/assets/global/default/icons/sprite.svg

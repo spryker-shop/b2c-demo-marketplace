@@ -5,13 +5,15 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Twig;
 
 use Spryker\Service\UtilDateTime\Plugin\Twig\DateTimeFormatterTwigPlugin;
-use Spryker\Shared\Twig\Plugin\DebugTwigPlugin;
 use Spryker\Shared\Twig\Plugin\FormTwigPlugin;
 use Spryker\Shared\Twig\Plugin\RoutingTwigPlugin;
 use Spryker\Shared\Twig\Plugin\SecurityTwigPlugin;
+use Spryker\Shared\Twig\Plugin\VarDumperTwigPlugin;
 use Spryker\Zed\Application\Communication\Plugin\Twig\ApplicationTwigPlugin;
 use Spryker\Zed\Barcode\Plugin\Twig\BarcodeTwigPlugin;
 use Spryker\Zed\ChartGui\Communication\Plugin\Twig\Chart\ChartGuiTwigPlugin;
@@ -34,6 +36,7 @@ use Spryker\Zed\Gui\Communication\Plugin\Twig\Buttons\Table\ViewTableButtonTwigP
 use Spryker\Zed\Gui\Communication\Plugin\Twig\FormRuntimeLoaderTwigPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\GuiFilterTwigPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\GuiTwigLoaderPlugin;
+use Spryker\Zed\Gui\Communication\Plugin\Twig\NavigationLinkTwigPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\NumberFormatterTwigPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\TabsTwigPlugin;
 use Spryker\Zed\Gui\Communication\Plugin\Twig\UrlDecodeTwigPlugin;
@@ -41,6 +44,7 @@ use Spryker\Zed\Gui\Communication\Plugin\Twig\UrlTwigPlugin;
 use Spryker\Zed\GuiTable\Communication\Plugin\Twig\GuiTableConfigurationTwigPlugin;
 use Spryker\Zed\Http\Communication\Plugin\Twig\HttpKernelTwigPlugin;
 use Spryker\Zed\Http\Communication\Plugin\Twig\RuntimeLoaderTwigPlugin;
+use Spryker\Zed\MerchantPortalApplication\Communication\Plugin\Twig\MerchantNavigationTypeTwigPlugin;
 use Spryker\Zed\MerchantUser\Communication\Plugin\Twig\MerchantUserTwigPlugin;
 use Spryker\Zed\Money\Communication\Plugin\Twig\MoneyTwigPlugin;
 use Spryker\Zed\Scheduler\Communication\Plugin\Twig\SchedulerTwigPlugin;
@@ -62,7 +66,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
     protected function getTwigPlugins(): array
     {
         return [
-            new DebugTwigPlugin(),
+            new VarDumperTwigPlugin(),
             new FormTwigPlugin(),
             new HttpKernelTwigPlugin(),
             new RoutingTwigPlugin(),
@@ -75,6 +79,81 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
             new MoneyTwigPlugin(),
             new CurrencyTwigPlugin(),
             new ZedNavigationTwigPlugin(),
+            new TranslatorTwigPlugin(),
+            new DateTimeFormatterTwigPlugin(),
+            new SchedulerTwigPlugin(),
+            new BarcodeTwigPlugin(),
+            new CmsBlockTwigExtensionPlugin(),
+            new NumberFormatterTwigPlugin(),
+
+            new AssetsPathTwigPlugin(),
+            new TabsTwigPlugin(),
+            new UrlTwigPlugin(),
+            new UrlDecodeTwigPlugin(),
+
+            new NavigationLinkTwigPlugin(),
+            // navigation buttons
+            new ButtonGroupTwigPlugin(),
+            new BackActionButtonTwigPlugin(),
+            new CreateActionButtonTwigPlugin(),
+            new ViewActionButtonTwigPlugin(),
+            new EditActionButtonTwigPlugin(),
+            new RemoveActionButtonTwigPlugin(),
+            // table row buttons
+            new EditTableButtonTwigPlugin(),
+            new BackTableButtonTwigPlugin(),
+            new CreateTableButtonTwigPlugin(),
+            new ViewTableButtonTwigPlugin(),
+            new RemoveTableButtonTwigPlugin(),
+            // Form buttons
+            new SubmitButtonTwigPlugin(),
+            new GuiFilterTwigPlugin(),
+
+            new ZedUiNavigationTwigPlugin(),
+            new BooleanToStringTwigPlugin(),
+            new GuiTableConfigurationTwigPlugin(),
+            new MerchantUserTwigPlugin(),
+            new MerchantNavigationTypeTwigPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface>
+     */
+    protected function getTwigLoaderPlugins(): array
+    {
+        $twigLoaderPlugins = [
+            new FilesystemTwigLoaderPlugin(),
+            new FormFilesystemTwigLoaderPlugin(),
+            new GuiTwigLoaderPlugin(),
+            new CmsBlockTemplateTwigLoaderPlugin(),
+        ];
+
+        if (class_exists(WebProfilerTwigLoaderPlugin::class)) {
+            $twigLoaderPlugins[] = new WebProfilerTwigLoaderPlugin();
+        }
+
+        return $twigLoaderPlugins;
+    }
+
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     */
+    protected function getTwigGatewayPlugins(): array
+    {
+        return [
+            new VarDumperTwigPlugin(),
+            new FormTwigPlugin(),
+            new HttpKernelTwigPlugin(),
+            new RoutingTwigPlugin(),
+            new SecurityTwigPlugin(),
+            new RuntimeLoaderTwigPlugin(),
+            new FormRuntimeLoaderTwigPlugin(),
+            new ApplicationTwigPlugin(),
+            new ChartGuiTwigPlugin(),
+            new UserTwigPlugin(),
+            new MoneyTwigPlugin(),
+            new CurrencyTwigPlugin(),
             new TranslatorTwigPlugin(),
             new DateTimeFormatterTwigPlugin(),
             new SchedulerTwigPlugin(),
@@ -102,30 +181,6 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
             // Form buttons
             new SubmitButtonTwigPlugin(),
             new GuiFilterTwigPlugin(),
-
-            new ZedUiNavigationTwigPlugin(),
-            new BooleanToStringTwigPlugin(),
-            new GuiTableConfigurationTwigPlugin(),
-            new MerchantUserTwigPlugin(),
         ];
-    }
-
-    /**
-     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface>
-     */
-    protected function getTwigLoaderPlugins(): array
-    {
-        $twigLoaderPlugins = [
-            new FilesystemTwigLoaderPlugin(),
-            new FormFilesystemTwigLoaderPlugin(),
-            new GuiTwigLoaderPlugin(),
-            new CmsBlockTemplateTwigLoaderPlugin(),
-        ];
-
-        if (class_exists(WebProfilerTwigLoaderPlugin::class)) {
-            $twigLoaderPlugins[] = new WebProfilerTwigLoaderPlugin();
-        }
-
-        return $twigLoaderPlugins;
     }
 }

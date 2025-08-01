@@ -5,10 +5,14 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\Asset\Communication\Plugin\MessageBroker\AssetMessageHandlerPlugin;
-use Spryker\Zed\Merchant\Communication\Plugin\MessageBroker\MerchantMessageHandlerPlugin;
+use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\ActiveAppFilterMessageChannelPlugin;
+use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin;
+use Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\CorrelationIdMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TenantActorMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TimestampMessageAttributeProviderPlugin;
@@ -22,11 +26,15 @@ use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageH
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
 use Spryker\Zed\Product\Communication\Plugin\MessageBroker\ProductExportMessageHandlerPlugin;
 use Spryker\Zed\ProductReview\Communication\Plugin\MessageBroker\ProductReviewAddReviewsMessageHandlerPlugin;
-use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\PaymentCreatedMessageHandlerPlugin;
+use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\SalesPaymentDetailMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointMessageHandlerPlugin;
 use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMessageAttributeProviderPlugin;
+use Spryker\Zed\Store\Communication\Plugin\MessageBroker\CurrentStoreReferenceMessageAttributeProviderPlugin;
 use Spryker\Zed\TaxApp\Communication\Plugin\MessageBroker\TaxAppMessageHandlerPlugin;
 
+/**
+ * @method \Pyz\Zed\MessageBroker\MessageBrokerConfig getConfig()
+ */
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
     /**
@@ -55,15 +63,16 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageHandlerPlugins(): array
     {
         return [
+            new AppConfigMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
             new AssetMessageHandlerPlugin(),
             new ProductExportMessageHandlerPlugin(),
             new SearchEndpointMessageHandlerPlugin(),
             new ProductReviewAddReviewsMessageHandlerPlugin(),
-            new MerchantMessageHandlerPlugin(),
             new TaxAppMessageHandlerPlugin(),
             new PaymentOperationsMessageHandlerPlugin(),
-            new PaymentCreatedMessageHandlerPlugin(),
+            new SalesPaymentDetailMessageHandlerPlugin(),
+            new MerchantAppOnboardingMessageHandlerPlugin(),
         ];
     }
 
@@ -79,6 +88,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new TransactionIdMessageAttributeProviderPlugin(),
             new SessionTrackingIdMessageAttributeProviderPlugin(),
             new TenantActorMessageAttributeProviderPlugin(),
+            new CurrentStoreReferenceMessageAttributeProviderPlugin(),
         ];
     }
 
@@ -89,6 +99,24 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     {
         return [
             new ValidationMiddlewarePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageValidatorPluginInterface>
+     */
+    public function getExternalValidatorPlugins(): array
+    {
+        return [];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\FilterMessageChannelPluginInterface>
+     */
+    public function getFilterMessageChannelPlugins(): array
+    {
+        return [
+            new ActiveAppFilterMessageChannelPlugin(),
         ];
     }
 }

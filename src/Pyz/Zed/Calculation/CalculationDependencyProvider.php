@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Calculation;
 
 use Spryker\Zed\Calculation\CalculationDependencyProvider as SprykerCalculationDependencyProvider;
@@ -36,6 +38,7 @@ use Spryker\Zed\Payment\Communication\Plugin\Calculation\PaymentCalculatorPlugin
 use Spryker\Zed\PersistentCart\Communication\Plugin\Calculation\QuoteSaveQuotePostRecalculateStrategyPlugin;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Calculation\CalculateBundlePricesPlugin;
 use Spryker\Zed\ProductOption\Communication\Plugin\Calculation\ProductOptionTaxRateCalculatorPlugin;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Calculation\MerchantCommissionCalculatorPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Calculation\AddSalesOrderThresholdExpenseCalculatorPlugin;
 use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Calculation\RemoveSalesOrderThresholdExpenseCalculatorPlugin;
 use Spryker\Zed\Shipment\Communication\Plugin\Calculation\FilterObsoleteShipmentExpensesCalculatorPlugin;
@@ -184,7 +187,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
      *
      * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
      */
-    protected function getQuoteCalculatorPluginStack(Container $container): array
+    protected function getQuoteCalculatorPluginStack(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         /** @var array<\Spryker\Zed\Calculation\Dependency\Plugin\CalculationPluginInterface> $pluginStack */
         $pluginStack = [
@@ -242,7 +245,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
      *
      * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
      */
-    protected function getOrderCalculatorPluginStack(Container $container): array
+    protected function getOrderCalculatorPluginStack(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
 
@@ -271,6 +274,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
             new GrandTotalCalculatorPlugin(),
             new NetTotalCalculatorPlugin(),
+            new MerchantCommissionCalculatorPlugin(),
         ];
     }
 

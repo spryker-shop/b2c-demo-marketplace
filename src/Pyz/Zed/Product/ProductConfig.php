@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Product;
 
 use Spryker\Shared\ProductBundleStorage\ProductBundleStorageConfig;
@@ -81,5 +83,13 @@ class ProductConfig extends SprykerProductConfig
     public function getProductPublishToMessageBrokerChunkSize(): int
     {
         return 3;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isFullLocaleNamesInUrlEnabled(): bool
+    {
+        return true;
     }
 }

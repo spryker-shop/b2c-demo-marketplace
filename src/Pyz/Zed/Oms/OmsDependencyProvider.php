@@ -5,6 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Oms;
 
 use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\CloseMerchantOrderItemCommandPlugin;
@@ -28,6 +30,7 @@ use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOffer
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationReaderStrategyPlugin;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationWriterStrategyPlugin;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferReservationPostSaveTerminationAwareStrategyPlugin;
+use Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Oms\ApplyOrderAmendmentDraftCommandByOrderPlugin;
 use Spryker\Zed\PickingList\Communication\Plugin\Oms\GeneratePickingListsCommandByOrderPlugin;
 use Spryker\Zed\PickingList\Communication\Plugin\Oms\IsPickingFinishedConditionPlugin;
 use Spryker\Zed\PickingList\Communication\Plugin\Oms\IsPickingListGenerationFinishedConditionPlugin;
@@ -35,9 +38,19 @@ use Spryker\Zed\PickingList\Communication\Plugin\Oms\IsPickingStartedConditionPl
 use Spryker\Zed\ProductBundle\Communication\Plugin\Oms\ProductBundleReservationPostSaveTerminationAwareStrategyPlugin;
 use Spryker\Zed\Refund\Communication\Plugin\Oms\RefundCommandPlugin;
 use Spryker\Zed\SalesInvoice\Communication\Plugin\Oms\GenerateOrderInvoiceCommandPlugin;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Oms\Command\SalesMerchantCommissionCalculationCommandByOrderPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\DeleteOrderAmendmentQuoteCommandByOrderPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\NotifyOrderAmendmentAppliedCommandPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\NotifyOrderAmendmentFailedCommandPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\UpdateDeletedItemReservationCommandByOrderPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendRefundPaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPaymentMerchant\Communication\Plugin\Oms\Command\MerchantPayoutCommandByOrderPlugin;
+use Spryker\Zed\SalesPaymentMerchant\Communication\Plugin\Oms\Command\MerchantPayoutReverseCommandByOrderPlugin;
+use Spryker\Zed\SalesPaymentMerchant\Communication\Plugin\Oms\Condition\IsMerchantPaidOutConditionPlugin;
+use Spryker\Zed\SalesPaymentMerchant\Communication\Plugin\Oms\Condition\IsMerchantPayoutReversedConditionPlugin;
 use Spryker\Zed\SalesReturn\Communication\Plugin\Oms\Command\StartReturnCommandPlugin;
 use Spryker\Zed\Shipment\Dependency\Plugin\Oms\ShipmentManualEventGrouperPlugin;
 use Spryker\Zed\Shipment\Dependency\Plugin\Oms\ShipmentOrderMailExpanderPlugin;
@@ -118,6 +131,14 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
             $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
             $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
             $commandCollection->add(new RefundCommandPlugin(), 'Payment/Refund/Confirm');
+            $commandCollection->add(new SalesMerchantCommissionCalculationCommandByOrderPlugin(), 'MerchantCommission/Calculate');
+            $commandCollection->add(new MerchantPayoutCommandByOrderPlugin(), 'SalesPaymentMerchant/Payout');
+            $commandCollection->add(new MerchantPayoutReverseCommandByOrderPlugin(), 'SalesPaymentMerchant/ReversePayout');
+            $commandCollection->add(new UpdateDeletedItemReservationCommandByOrderPlugin(), 'OrderAmendment/UnreserveDeletedItems');
+            $commandCollection->add(new DeleteOrderAmendmentQuoteCommandByOrderPlugin(), 'OrderAmendment/StartGracePeriod');
+            $commandCollection->add(new ApplyOrderAmendmentDraftCommandByOrderPlugin(), 'OrderAmendmentAsync/ApplyOrderAmendmentDraft');
+            $commandCollection->add(new NotifyOrderAmendmentAppliedCommandPlugin(), 'OrderAmendmentAsync/NotifyOrderAmendmentApplied');
+            $commandCollection->add(new NotifyOrderAmendmentFailedCommandPlugin(), 'OrderAmendmentAsync/NotifyOrderAmendmentFailed');
 
             return $commandCollection;
         });
@@ -138,6 +159,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
             $conditionCollection->add(new IsPickingListGenerationFinishedConditionPlugin(), 'PickingList/isPickingListGenerationFinished');
             $conditionCollection->add(new IsPickingStartedConditionPlugin(), 'PickingList/isPickingStarted');
             $conditionCollection->add(new IsPickingFinishedConditionPlugin(), 'PickingList/isPickingFinished');
+            $conditionCollection->add(new IsMerchantPaidOutConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPaidOut');
+            $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPayoutReversed');
+            $conditionCollection
+                ->add(new IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin(), 'DummyOrderAmendmentAsync/IsSuccessfullyApplied');
 
             return $conditionCollection;
         });
@@ -150,7 +175,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
      *
      * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsOrderMailExpanderPluginInterface>
      */
-    protected function getOmsOrderMailExpanderPlugins(Container $container): array
+    protected function getOmsOrderMailExpanderPlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new ShipmentOrderMailExpanderPlugin(),
@@ -162,7 +187,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
      *
      * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsManualEventGrouperPluginInterface>
      */
-    protected function getOmsManualEventGrouperPlugins(Container $container): array
+    protected function getOmsManualEventGrouperPlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new ShipmentManualEventGrouperPlugin(),

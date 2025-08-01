@@ -31,6 +31,7 @@
                             embed: {
                                 order: data.order,
                                 bundleItems: item.bundleItems | default([]),
+                                reorderSelectionClassName: data.reorderSelectionClassName,
                             },
                         } only %}
                             {% import _self as component %}
@@ -38,9 +39,10 @@
                                 <div class="grid grid--middle col">
                                     {% if embed.order is not empty %}
                                         <span class="spacing-right">
-                                            {% widget 'CustomerReorderItemCheckboxWidget' args [data.productItem] with {
+                                            {% widget 'CartReorderItemCheckboxWidget' args [data.productItem] with {
                                                 data: {
                                                     additionalModifiers: ['big'],
+                                                    checkboxClasses: embed.reorderSelectionClassName,
                                                 },
                                             } only %}{% endwidget %}
                                         </span>
