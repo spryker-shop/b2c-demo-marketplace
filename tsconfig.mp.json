@@ -17,7 +17,9 @@
             "@mp/merchant-profile-merchant-portal-gui": [
                 "vendor/spryker/merchant-profile-merchant-portal-gui/mp.public-api.ts"
             ],
-            "@mp/multi-factor-auth-merchant-portal": ["vendor/spryker/spryker/Bundles/MultiFactorAuthMerchantPortal/mp.public-api.ts"],
+            "@mp/multi-factor-auth-merchant-portal": [
+                "vendor/spryker/spryker/Bundles/MultiFactorAuthMerchantPortal/mp.public-api.ts"
+            ],
             "@mp/product-merchant-portal-gui": ["vendor/spryker/product-merchant-portal-gui/mp.public-api.ts"],
             "@mp/product-offer-merchant-portal-gui": [
                 "vendor/spryker/product-offer-merchant-portal-gui/mp.public-api.ts"
