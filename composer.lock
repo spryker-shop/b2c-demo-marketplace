@@ -17289,16 +17289,16 @@
         },
         {
             "name": "spryker/agent-dashboard-merchant-portal-gui",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/agent-dashboard-merchant-portal-gui.git",
-                "reference": "e337e3b58aeac8abd0b8fb353d5c47e0ac7c968b"
+                "reference": "b220ba2a578ada34f1ece56c27a3a3f5d1e5f996"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/agent-dashboard-merchant-portal-gui/zipball/e337e3b58aeac8abd0b8fb353d5c47e0ac7c968b",
-                "reference": "e337e3b58aeac8abd0b8fb353d5c47e0ac7c968b",
+                "url": "https://api.github.com/repos/spryker/agent-dashboard-merchant-portal-gui/zipball/b220ba2a578ada34f1ece56c27a3a3f5d1e5f996",
+                "reference": "b220ba2a578ada34f1ece56c27a3a3f5d1e5f996",
                 "shasum": ""
             },
             "require": {
@@ -17333,9 +17333,9 @@
             ],
             "description": "AgentDashboardMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/agent-dashboard-merchant-portal-gui/tree/1.2.0"
+                "source": "https://github.com/spryker/agent-dashboard-merchant-portal-gui/tree/1.3.0"
             },
-            "time": "2025-07-11T12:57:07+00:00"
+            "time": "2025-08-04T15:59:28+00:00"
         },
         {
             "name": "spryker/agent-dashboard-merchant-portal-gui-extension",
@@ -17566,16 +17566,16 @@
         },
         {
             "name": "spryker/agent-security-merchant-portal-gui",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/agent-security-merchant-portal-gui.git",
-                "reference": "7b93f63d4d62c1283c8194c8b4b1661156cd81d4"
+                "reference": "c5889acdf80b45560ac930aae0b2e4a539bf0fd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/agent-security-merchant-portal-gui/zipball/7b93f63d4d62c1283c8194c8b4b1661156cd81d4",
-                "reference": "7b93f63d4d62c1283c8194c8b4b1661156cd81d4",
+                "url": "https://api.github.com/repos/spryker/agent-security-merchant-portal-gui/zipball/c5889acdf80b45560ac930aae0b2e4a539bf0fd8",
+                "reference": "c5889acdf80b45560ac930aae0b2e4a539bf0fd8",
                 "shasum": ""
             },
             "require": {
@@ -17624,9 +17624,9 @@
             ],
             "description": "AgentSecurityMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/agent-security-merchant-portal-gui/tree/1.3.0"
+                "source": "https://github.com/spryker/agent-security-merchant-portal-gui/tree/1.3.1"
             },
-            "time": "2025-07-11T12:57:07+00:00"
+            "time": "2025-08-04T15:59:28+00:00"
         },
         {
             "name": "spryker/alternative-products-rest-api",
@@ -57198,16 +57198,16 @@
         },
         {
             "name": "spryker/security-merchant-portal-gui",
-            "version": "3.7.0",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/security-merchant-portal-gui.git",
-                "reference": "50a0d1f15e7033643f0bde9d4e7ca9ccf27ea60a"
+                "reference": "3d82842ebedff1daacb35b5373e2da0c87ff2295"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/50a0d1f15e7033643f0bde9d4e7ca9ccf27ea60a",
-                "reference": "50a0d1f15e7033643f0bde9d4e7ca9ccf27ea60a",
+                "url": "https://api.github.com/repos/spryker/security-merchant-portal-gui/zipball/3d82842ebedff1daacb35b5373e2da0c87ff2295",
+                "reference": "3d82842ebedff1daacb35b5373e2da0c87ff2295",
                 "shasum": ""
             },
             "require": {
@@ -57260,9 +57260,9 @@
             ],
             "description": "SecurityMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/3.7.0"
+                "source": "https://github.com/spryker/security-merchant-portal-gui/tree/3.7.1"
             },
-            "time": "2025-07-11T12:57:07+00:00"
+            "time": "2025-08-04T15:59:28+00:00"
         },
         {
             "name": "spryker/security-merchant-portal-gui-extension",
@@ -62896,16 +62896,16 @@
         },
         {
             "name": "spryker/user-merchant-portal-gui",
-            "version": "3.4.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/user-merchant-portal-gui.git",
-                "reference": "b752e4819d7f236b216ed1b6cddb303a6b24cdc9"
+                "reference": "731b2bdbe70dbab844f3da4211fff18caf025ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/b752e4819d7f236b216ed1b6cddb303a6b24cdc9",
-                "reference": "b752e4819d7f236b216ed1b6cddb303a6b24cdc9",
+                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/731b2bdbe70dbab844f3da4211fff18caf025ac6",
+                "reference": "731b2bdbe70dbab844f3da4211fff18caf025ac6",
                 "shasum": ""
             },
             "require": {
@@ -62945,9 +62945,9 @@
             ],
             "description": "UserMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/3.4.0"
+                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/3.4.1"
             },
-            "time": "2025-07-11T12:57:07+00:00"
+            "time": "2025-08-04T15:59:28+00:00"
         },
         {
             "name": "spryker/user-merchant-portal-gui-extension",
@@ -64947,16 +64947,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "3.4.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "2b863d386260436333519c1dbc9a3e6a0fa31eb4"
+                "reference": "70356c5f845a395063222d6c3114ac701b02471a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/2b863d386260436333519c1dbc9a3e6a0fa31eb4",
-                "reference": "2b863d386260436333519c1dbc9a3e6a0fa31eb4",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/70356c5f845a395063222d6c3114ac701b02471a",
+                "reference": "70356c5f845a395063222d6c3114ac701b02471a",
                 "shasum": ""
             },
             "require": {
@@ -64996,9 +64996,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/3.4.0"
+                "source": "https://github.com/spryker/zed-ui/tree/3.4.1"
             },
-            "time": "2025-07-11T12:57:07+00:00"
+            "time": "2025-08-04T15:59:28+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -76894,7 +76894,7 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },
