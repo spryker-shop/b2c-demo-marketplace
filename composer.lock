@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a95078a3ffcb489a226a286fd2ed91e8",
+    "content-hash": "3ccb5f2d0d8644442ae44e974a61c8f9",
     "packages": [
         {
             "name": "async-aws/core",
@@ -16224,16 +16224,16 @@
         },
         {
             "name": "spryker-shop/storage-router",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/storage-router.git",
-                "reference": "b1e57a263653c485e3faec0cecd1dbcfc442ecf3"
+                "reference": "7a6492621f3e08076cc350e8dd9dd89fdb703523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/storage-router/zipball/b1e57a263653c485e3faec0cecd1dbcfc442ecf3",
-                "reference": "b1e57a263653c485e3faec0cecd1dbcfc442ecf3",
+                "url": "https://api.github.com/repos/spryker-shop/storage-router/zipball/7a6492621f3e08076cc350e8dd9dd89fdb703523",
+                "reference": "7a6492621f3e08076cc350e8dd9dd89fdb703523",
                 "shasum": ""
             },
             "require": {
@@ -16269,9 +16269,9 @@
             ],
             "description": "StorageRouter module",
             "support": {
-                "source": "https://github.com/spryker-shop/storage-router/tree/0.1.5"
+                "source": "https://github.com/spryker-shop/storage-router/tree/0.1.6"
             },
-            "time": "2024-11-28T15:34:10+00:00"
+            "time": "2025-08-05T12:34:05+00:00"
         },
         {
             "name": "spryker-shop/storage-router-extension",
@@ -37628,23 +37628,22 @@
         },
         {
             "name": "spryker/multi-factor-auth",
-            "version": "1.3.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/multi-factor-auth.git",
-                "reference": "faae08457a5e234f8d10cee84883d3341f579e91"
+                "reference": "0da4dc9a1d9e373560caf4d41394b97aa291d271"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/multi-factor-auth/zipball/faae08457a5e234f8d10cee84883d3341f579e91",
-                "reference": "faae08457a5e234f8d10cee84883d3341f579e91",
+                "url": "https://api.github.com/repos/spryker/multi-factor-auth/zipball/0da4dc9a1d9e373560caf4d41394b97aa291d271",
+                "reference": "0da4dc9a1d9e373560caf4d41394b97aa291d271",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
                 "spryker-shop/agent-page-extension": "^1.1.0",
                 "spryker-shop/customer-page-extension": "^1.7.0",
-                "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/agent": "^1.0.0",
                 "spryker/application": "^3.0.0",
                 "spryker/customer": "^7.0.0",
@@ -37658,18 +37657,15 @@
                 "spryker/kernel": "^3.52.0",
                 "spryker/mail": "^4.6.0",
                 "spryker/mail-extension": "^1.0.0",
-                "spryker/multi-factor-auth-extension": "^1.0.0",
+                "spryker/multi-factor-auth-extension": "^1.2.0",
                 "spryker/propel-orm": "^1.16.0",
                 "spryker/security-gui-extension": "^1.3.0",
-                "spryker/security-merchant-portal-gui-extension": "^1.2.0",
                 "spryker/session": "^4.0.0",
                 "spryker/symfony": "^3.15.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/twig": "^3.0.0",
                 "spryker/user": "^3.27.0",
-                "spryker/zed-navigation-extension": "^1.1.0",
-                "spryker/zed-request": "^3.0.0",
-                "spryker/zed-ui": "^3.4.0"
+                "spryker/zed-request": "^3.0.0"
             },
             "require-dev": {
                 "spryker-shop/agent-page": "*",
@@ -37703,22 +37699,22 @@
             ],
             "description": "MultiFactorAuth module",
             "support": {
-                "source": "https://github.com/spryker/multi-factor-auth/tree/1.3.0"
+                "source": "https://github.com/spryker/multi-factor-auth/tree/1.5.0"
             },
-            "time": "2025-07-24T13:56:34+00:00"
+            "time": "2025-08-04T15:59:28+00:00"
         },
         {
             "name": "spryker/multi-factor-auth-extension",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/multi-factor-auth-extension.git",
-                "reference": "d6ca1e0543ee0959f65b4d094e947aed8664dbb8"
+                "reference": "f6998686c422e0048ad008fa7e5103d3fc6b4e1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/multi-factor-auth-extension/zipball/d6ca1e0543ee0959f65b4d094e947aed8664dbb8",
-                "reference": "d6ca1e0543ee0959f65b4d094e947aed8664dbb8",
+                "url": "https://api.github.com/repos/spryker/multi-factor-auth-extension/zipball/f6998686c422e0048ad008fa7e5103d3fc6b4e1a",
+                "reference": "f6998686c422e0048ad008fa7e5103d3fc6b4e1a",
                 "shasum": ""
             },
             "require": {
@@ -37750,9 +37746,65 @@
             ],
             "description": "MultiFactorAuthExtension module",
             "support": {
-                "source": "https://github.com/spryker/multi-factor-auth-extension/tree/1.1.0"
+                "source": "https://github.com/spryker/multi-factor-auth-extension/tree/1.2.0"
             },
-            "time": "2025-06-02T15:30:14+00:00"
+            "time": "2025-08-04T15:59:28+00:00"
+        },
+        {
+            "name": "spryker/multi-factor-auth-merchant-portal",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/multi-factor-auth-merchant-portal.git",
+                "reference": "b71f940a70297a7eeb004ff078621049af164a93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/multi-factor-auth-merchant-portal/zipball/b71f940a70297a7eeb004ff078621049af164a93",
+                "reference": "b71f940a70297a7eeb004ff078621049af164a93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "spryker/acl-merchant-portal-extension": "^1.0.0",
+                "spryker/kernel": "^3.52.0",
+                "spryker/multi-factor-auth": "^1.5.0",
+                "spryker/multi-factor-auth-extension": "^1.2.0",
+                "spryker/security-merchant-portal-gui-extension": "^1.2.0",
+                "spryker/session": "^4.0.0",
+                "spryker/symfony": "^3.15.0",
+                "spryker/transfer": "^3.27.0",
+                "spryker/user": "^3.27.0",
+                "spryker/zed-navigation-extension": "^1.1.0",
+                "spryker/zed-ui": "^3.4.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*"
+            },
+            "suggest": {
+                "spryker/container": "Use this module when you want to use the Container.",
+                "spryker/router": "Use this module when you want to use the Router."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "MultiFactorAuthMerchantPortal module",
+            "support": {
+                "source": "https://github.com/spryker/multi-factor-auth-merchant-portal/tree/1.0.0"
+            },
+            "time": "2025-08-04T15:59:28+00:00"
         },
         {
             "name": "spryker/navigation",
@@ -75746,7 +75798,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "4087e1fad00dd9e8f6ebda0d14ebf5b63713d5c5"
+                "reference": "2f89e41de2a401a6a7f539f96446f7099e0ec20e"
             },
             "default-branch": true,
             "type": "library",
@@ -75754,7 +75806,7 @@
                 "MIT"
             ],
             "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2025-07-22T11:40:29+00:00"
+            "time": "2025-08-04T15:59:01+00:00"
         },
         {
             "name": "spryker/development",
@@ -76842,7 +76894,7 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.2"
     },
