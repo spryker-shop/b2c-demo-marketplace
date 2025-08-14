@@ -8,10 +8,7 @@ image:
     tag: spryker/php:8.3-rc
     php:
         enabled-extensions:
-            - blackfire
-            - opentelemetry
-            - grpc
-            - protobuf
+            - otel
     environment:
         SPRYKER_PRODUCT_CONFIGURATOR_HOST: date-time-configurator-example.spryker.local
         SPRYKER_PRODUCT_CONFIGURATOR_PORT: 80
