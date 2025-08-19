@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9907fe3ae8366b4de9dbcb0664e8cda",
+    "content-hash": "a05ffe0575b840aa438e3ca97915f043",
     "packages": [
         {
             "name": "async-aws/core",
@@ -40196,16 +40196,16 @@
         },
         {
             "name": "spryker/opentelemetry",
-            "version": "dev-feature/frw-10805/master-otel-integration",
+            "version": "1.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/opentelemetry.git",
-                "reference": "2666a2e33e24c2d7e78e47e55ba5423317c8a5bc"
+                "reference": "c733e33880f08534133b9c9985258a2fc2a424a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/opentelemetry/zipball/2666a2e33e24c2d7e78e47e55ba5423317c8a5bc",
-                "reference": "2666a2e33e24c2d7e78e47e55ba5423317c8a5bc",
+                "url": "https://api.github.com/repos/spryker/opentelemetry/zipball/c733e33880f08534133b9c9985258a2fc2a424a5",
+                "reference": "c733e33880f08534133b9c9985258a2fc2a424a5",
                 "shasum": ""
             },
             "require": {
@@ -40254,9 +40254,9 @@
             "description": "Opentelemetry module",
             "support": {
                 "issues": "https://github.com/spryker/opentelemetry/issues",
-                "source": "https://github.com/spryker/opentelemetry/tree/feature/frw-10805/master-otel-integration"
+                "source": "https://github.com/spryker/opentelemetry/tree/1.16.1"
             },
-            "time": "2025-08-18T13:51:56+00:00"
+            "time": "2025-08-18T13:58:48+00:00"
         },
         {
             "name": "spryker/order-amendment-example",
@@ -77767,7 +77767,6 @@
     "stability-flags": {
         "spryker/cypress-tests": 20,
         "spryker/docker-chromedriver": 20,
-        "spryker/opentelemetry": 20,
         "spryker/robotframework-suite-tests": 20
     },
     "prefer-stable": true,
