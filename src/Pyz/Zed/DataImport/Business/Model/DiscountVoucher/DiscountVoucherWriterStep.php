@@ -108,7 +108,6 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
         }
 
         try {
-            throw new Exception();
             $voucherCodeCollection->save();
         } catch (Exception) {
             $logData = [
