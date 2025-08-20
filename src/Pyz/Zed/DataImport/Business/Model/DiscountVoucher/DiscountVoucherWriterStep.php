@@ -9,7 +9,6 @@ declare(strict_types = 1);
 
 namespace Pyz\Zed\DataImport\Business\Model\DiscountVoucher;
 
-use Exception;
 use Orm\Zed\Discount\Persistence\SpyDiscount;
 use Orm\Zed\Discount\Persistence\SpyDiscountQuery;
 use Orm\Zed\Discount\Persistence\SpyDiscountVoucher;
