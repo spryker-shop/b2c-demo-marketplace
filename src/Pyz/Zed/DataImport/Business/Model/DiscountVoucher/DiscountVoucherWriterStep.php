@@ -17,7 +17,6 @@ use Propel\Runtime\Collection\ObjectCollection;
 use Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface;
 use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
 use Spryker\Zed\Discount\DiscountConfig;
-use Throwable;
 
 class DiscountVoucherWriterStep implements DataImportStepInterface
 {
