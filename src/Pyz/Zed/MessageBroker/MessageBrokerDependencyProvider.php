@@ -10,6 +10,7 @@ declare(strict_types = 1);
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\Asset\Communication\Plugin\MessageBroker\AssetMessageHandlerPlugin;
+use Spryker\Zed\Cms\Communication\Plugin\MessageBroker\CmsPageMessageHandlerPlugin;
 use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\ActiveAppFilterMessageChannelPlugin;
 use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin;
 use Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin;
@@ -73,6 +74,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new PaymentOperationsMessageHandlerPlugin(),
             new SalesPaymentDetailMessageHandlerPlugin(),
             new MerchantAppOnboardingMessageHandlerPlugin(),
+            new CmsPageMessageHandlerPlugin(),
         ];
     }
 
