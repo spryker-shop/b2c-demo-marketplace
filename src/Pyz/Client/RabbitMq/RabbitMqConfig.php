@@ -113,6 +113,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     protected function getPublishQueueConfiguration(): array
     {
         return [
+            MerchantStorageConfig::PUBLISH_MERCHANT,
             PublisherConfig::PUBLISH_QUEUE => [
                 PublisherConfig::PUBLISH_ROUTING_KEY_RETRY => PublisherConfig::PUBLISH_RETRY_QUEUE,
                 PublisherConfig::PUBLISH_ROUTING_KEY_ERROR => PublisherConfig::PUBLISH_ERROR_QUEUE,
