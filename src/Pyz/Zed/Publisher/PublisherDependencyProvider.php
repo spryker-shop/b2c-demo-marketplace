@@ -296,7 +296,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return array<string, array<int, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>>
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
     protected function getGlossaryStoragePlugins(): array
     {
