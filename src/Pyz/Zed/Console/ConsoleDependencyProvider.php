@@ -29,6 +29,7 @@ use Spryker\Zed\CustomerStorage\Communication\Console\DeleteExpiredCustomerInval
 use Spryker\Zed\DataExport\Communication\Console\DataExportConsole;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\DataImport\Communication\Console\DataImportDumpConsole;
+use Spryker\Zed\DataImportMerchant\Communication\Console\DataImportMerchantImportConsole;
 use Spryker\Zed\Development\Communication\Console\CodeArchitectureSnifferConsole;
 use Spryker\Zed\Development\Communication\Console\CodeFixturesConsole;
 use Spryker\Zed\Development\Communication\Console\CodePhpstanConsole;
@@ -421,6 +422,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new AclEntitySynchronizeConsole(),
             new StorageRedisDataReSaveConsole(),
             new SitemapGenerateConsole(),
+            new DataImportMerchantImportConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
