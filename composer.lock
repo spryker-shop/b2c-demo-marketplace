@@ -29185,16 +29185,16 @@
         },
         {
             "name": "spryker/data-import-merchant-portal-gui",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/data-import-merchant-portal-gui.git",
-                "reference": "a16f30ef794e950b1d1a29a6235f3cb685ae20af"
+                "reference": "23104fbd1402cf8143328c4c6852cbbb13018fed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/data-import-merchant-portal-gui/zipball/a16f30ef794e950b1d1a29a6235f3cb685ae20af",
-                "reference": "a16f30ef794e950b1d1a29a6235f3cb685ae20af",
+                "url": "https://api.github.com/repos/spryker/data-import-merchant-portal-gui/zipball/23104fbd1402cf8143328c4c6852cbbb13018fed",
+                "reference": "23104fbd1402cf8143328c4c6852cbbb13018fed",
                 "shasum": ""
             },
             "require": {
@@ -29234,9 +29234,9 @@
             ],
             "description": "DataImportMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/data-import-merchant-portal-gui/tree/1.0.0"
+                "source": "https://github.com/spryker/data-import-merchant-portal-gui/tree/1.1.0"
             },
-            "time": "2025-09-09T09:20:43+00:00"
+            "time": "2025-09-09T16:19:49+00:00"
         },
         {
             "name": "spryker/decimal-object",
