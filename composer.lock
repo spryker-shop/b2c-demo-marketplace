@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f628b27370805d547d619af3d432bb3f",
+    "content-hash": "09fbc493ece793060c877c078de75fd1",
     "packages": [
         {
             "name": "async-aws/core",
@@ -77238,19 +77238,18 @@
         },
         {
             "name": "spryker/robotframework-suite-tests",
-            "version": "dev-master",
+            "version": "dev-feature/frw-9914/master-enable-parallel-test-execution",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "797ca0e3276ac0875de8fe326850140a17eb5d9a"
+                "reference": "9ffd5e83282f4e3edeaa52b7202eb8772eafdcf9"
             },
-            "default-branch": true,
             "type": "library",
             "license": [
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2025-07-24T16:04:51+00:00"
+            "time": "2025-09-10T14:51:15+00:00"
         },
         {
             "name": "spryker/testify",
