@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a73f62069a45f470e49af151d6a62606",
+    "content-hash": "34e3f3bc4ef7d34bc49b2e467e0ff21c",
     "packages": [
         {
             "name": "async-aws/core",
@@ -7998,16 +7998,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/merchant-portal-data-import.git",
-                "reference": "c4d56b781090569aa7ca223f3338cac0dabed0ec"
+                "reference": "ceb968f330dfea2474cdb87de0a04ad98bde11f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/merchant-portal-data-import/zipball/c4d56b781090569aa7ca223f3338cac0dabed0ec",
-                "reference": "c4d56b781090569aa7ca223f3338cac0dabed0ec",
+                "url": "https://api.github.com/repos/spryker-feature/merchant-portal-data-import/zipball/ceb968f330dfea2474cdb87de0a04ad98bde11f8",
+                "reference": "ceb968f330dfea2474cdb87de0a04ad98bde11f8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2"
+                "php": ">=8.2",
+                "spryker/data-import-merchant": "^1.0.0",
+                "spryker/data-import-merchant-portal-gui": "^1.1.0"
             },
             "default-branch": true,
             "type": "metapackage",
@@ -8024,7 +8026,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/merchant-portal-data-import/tree/master"
             },
-            "time": "2025-09-08T16:13:07+00:00"
+            "time": "2025-09-10T09:05:32+00:00"
         },
         {
             "name": "spryker-feature/navigation",
