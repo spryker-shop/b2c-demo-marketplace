@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34e3f3bc4ef7d34bc49b2e467e0ff21c",
+    "content-hash": "f628b27370805d547d619af3d432bb3f",
     "packages": [
         {
             "name": "async-aws/core",
@@ -77031,7 +77031,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "c477fbdcd200f198aecfbebd467369408d829b4a"
+                "reference": "9371ece3df4ac153074d25169bc7dc13dbf595e3"
             },
             "type": "zend-module",
             "license": [

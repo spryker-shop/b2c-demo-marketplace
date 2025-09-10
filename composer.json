@@ -415,7 +415,7 @@
                 "source": {
                     "url": "https://github.com/spryker/cypress-tests.git",
                     "type": "git",
-                    "reference": "c477fbdcd200f198aecfbebd467369408d829b4a"
+                    "reference": "9371ece3df4ac153074d25169bc7dc13dbf595e3"
                 },
                 "type": "zend-module",
                 "license": [
