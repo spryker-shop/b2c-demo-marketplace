@@ -24,6 +24,8 @@ use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyMerchant
 use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyStoreAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Customer\Communication\Plugin\AclMerchantPortal\CustomerMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\DashboardMerchantPortalGui\Communication\Plugin\AclMerchantPortal\DashboardMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\DataImportMerchant\Communication\Plugin\AclMerchantPortal\DataImportMerchantFileAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\DataImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\DataImportMerchantPortalGuiMerchantAclRuleExpanderPlugin;
 use Spryker\Zed\Discount\Communication\Plugin\AclMerchantPortal\DiscountAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Discount\Communication\Plugin\AclMerchantPortal\DiscountMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\AclMerchantPortal\DiscountPromotionAclEntityConfigurationExpanderPlugin;
@@ -114,6 +116,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new SalesMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
             new ProductOfferServicePointMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
             new MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new DataImportMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
         ];
     }
 
@@ -231,6 +234,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new MerchantAppAclEntityConfigurationExpanderPlugin(),
             new SalesMerchantCommissionAclEntityConfigurationExpanderPlugin(),
             new UserMultiFactorAuthAclEntityConfigurationExpanderPlugin(),
+            new DataImportMerchantFileAclEntityConfigurationExpanderPlugin(),
         ];
     }
 }

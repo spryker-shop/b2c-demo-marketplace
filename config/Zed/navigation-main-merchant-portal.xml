@@ -85,4 +85,12 @@
             </onboarding>
         </pages>
     </merchant-portal-payment-settings>
+    <data-import-merchant-portal-gui>
+        <label>Data Import</label>
+        <title>Data Import</title>
+        <icon>data-import</icon>
+        <bundle>data-import-merchant-portal-gui</bundle>
+        <controller>files</controller>
+        <action>index</action>
+    </data-import-merchant-portal-gui>
 </config>
