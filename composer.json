@@ -51,7 +51,7 @@
         "spryker-feature/marketplace-merchant-product-offer-service-points-availability": "^202507.0",
         "spryker-feature/marketplace-merchantportal-core": "^202507.0",
         "spryker-feature/marketplace-order-management": "^202507.0",
-        "spryker-feature/marketplace-product": "^202507.0",
+        "spryker-feature/marketplace-product": "dev-master",
         "spryker-feature/marketplace-product-approval-process": "^202507.0",
         "spryker-feature/marketplace-product-offer": "^202507.0",
         "spryker-feature/marketplace-product-offer-prices": "^202507.0",
@@ -63,6 +63,7 @@
         "spryker-feature/merchant": "^202507.0",
         "spryker-feature/merchant-category": "^202507.0",
         "spryker-feature/merchant-opening-hours": "^202507.0",
+        "spryker-feature/merchant-portal-data-import": "dev-master",
         "spryker-feature/navigation": "^202507.0",
         "spryker-feature/non-splittable-products": "^202507.0",
         "spryker-feature/order-amendment": "^202507.0",
@@ -414,7 +415,7 @@
                 "source": {
                     "url": "https://github.com/spryker/cypress-tests.git",
                     "type": "git",
-                    "reference": "c477fbdcd200f198aecfbebd467369408d829b4a"
+                    "reference": "9371ece3df4ac153074d25169bc7dc13dbf595e3"
                 },
                 "type": "zend-module",
                 "license": [

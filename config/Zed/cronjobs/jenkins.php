@@ -200,6 +200,13 @@ $jobs[] = [
     'global' => true,
 ];
 
+$jobs[] = [
+    'name' => 'data-import-merchant-import',
+    'command' => '$PHP_BIN vendor/bin/console data-import-merchant:import',
+    'schedule' => '* * * * *',
+    'enable' => true,
+];
+
 if (getenv('SPRYKER_CURRENT_REGION')) {
     foreach ($jobs as $job) {
         $job['region'] = getenv('SPRYKER_CURRENT_REGION');

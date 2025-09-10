@@ -3,6 +3,7 @@
 declare(strict_types = 1);
 
 use Monolog\Logger;
+use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
 use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Shared\Customer\CustomerConstants;
@@ -13,6 +14,7 @@ use Spryker\Shared\ErrorHandler\ErrorRenderer\ApiErrorRenderer;
 use Spryker\Shared\ErrorHandler\ErrorRenderer\WebExceptionErrorRenderer;
 use Spryker\Shared\ErrorHandler\ErrorRenderer\WebHtmlErrorRenderer;
 use Spryker\Shared\Event\EventConstants;
+use Spryker\Shared\FileSystem\FileSystemConstants;
 use Spryker\Shared\GlueApplication\GlueApplicationConstants;
 use Spryker\Shared\GlueBackendApiApplication\GlueBackendApiApplicationConstants;
 use Spryker\Shared\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConstants;
@@ -213,4 +215,13 @@ if ($isTestifyConstantsClassExists) {
         $sprykerGlueStorefrontHost,
         $sprykerGlueStorefrontPort !== 80 ? ':' . $sprykerGlueStorefrontPort : '',
     );
+}
+
+// >>> FILESYSTEM
+if (!getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_BUCKET')) {
+    $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-product-data-import-files'] = [
+        'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
+        'root' => '/data',
+        'path' => '/data/merchant-product-data-import-files',
+    ];
 }
