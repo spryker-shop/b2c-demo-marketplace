@@ -680,17 +680,15 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'root' => APPLICATION_ROOT_DIR . '/data/DE/media/',
         'path' => 'files/',
     ],
-    $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-        'merchant-product-data-import-files' => [
-            'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-            'key' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_KEY') ?: '',
-            'bucket' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_BUCKET') ?: '',
-            'secret' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_SECRET') ?: '',
-            'root' => '/',
-            'path' => '/',
-            'version' => 'latest',
-            'region' => getenv('AWS_REGION') ?: 'eu-central-1',
-        ],
+    'merchant-product-data-import-files' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_KEY') ?: '',
+        'bucket' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_BUCKET') ?: '',
+        'secret' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_SECRET') ?: '',
+        'root' => '/',
+        'path' => '/',
+        'version' => 'latest',
+        'region' => getenv('AWS_REGION') ?: 'eu-central-1',
     ],
 ];
 $config[FileManagerConstants::STORAGE_NAME] = 'files';
