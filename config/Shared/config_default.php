@@ -690,9 +690,14 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'path' => 'files/',
     ],
     'merchant-product-data-import-files' => [
-        'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-        'root' => '/data',
-        'path' => '/data/merchant-product-data-import-files',
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('MERCHANT_S3_KEY_ACTUAL') ?: '',
+        'bucket' => getenv('MERCHANT_S3_BUCKET_ACTUAL') ?: '',
+        'secret' => getenv('MERCHANT_S3_SECRET_ACTUAL') ?: '',
+        'root' => '/',
+        'path' => '/',
+        'version' => 'latest',
+        'region' => getenv('AWS_REGION') ?: 'eu-central-1',
     ],
 ];
 $config[FileManagerConstants::STORAGE_NAME] = 'files';
