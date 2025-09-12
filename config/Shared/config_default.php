@@ -691,9 +691,9 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     ],
     'merchant-product-data-import-files' => [
         'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_KEY') ?: '',
-        'bucket' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_SECRET') ?: '',
+        'key' => getenv('MERCHANT_S3_KEY_ACTUAL') ?: '',
+        'bucket' => getenv('MERCHANT_S3_BUCKET_ACTUAL') ?: '',
+        'secret' => getenv('MERCHANT_S3_SECRET_ACTUAL') ?: '',
         'root' => '/',
         'path' => '/',
         'version' => 'latest',
