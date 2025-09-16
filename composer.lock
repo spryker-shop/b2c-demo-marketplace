@@ -37747,16 +37747,16 @@
         },
         {
             "name": "spryker/merchant-storage",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-storage.git",
-                "reference": "e675e3a98e59ce60a3472e2781e088b16627d096"
+                "reference": "74f2ba20cd59f329f4bcaf8e12daa261baa932d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-storage/zipball/e675e3a98e59ce60a3472e2781e088b16627d096",
-                "reference": "e675e3a98e59ce60a3472e2781e088b16627d096",
+                "url": "https://api.github.com/repos/spryker/merchant-storage/zipball/74f2ba20cd59f329f4bcaf8e12daa261baa932d3",
+                "reference": "74f2ba20cd59f329f4bcaf8e12daa261baa932d3",
                 "shasum": ""
             },
             "require": {
@@ -37809,9 +37809,9 @@
             ],
             "description": "MerchantStorage module",
             "support": {
-                "source": "https://github.com/spryker/merchant-storage/tree/1.4.0"
+                "source": "https://github.com/spryker/merchant-storage/tree/1.5.0"
             },
-            "time": "2025-05-20T13:23:34+00:00"
+            "time": "2025-08-20T10:20:44+00:00"
         },
         {
             "name": "spryker/merchant-user",
