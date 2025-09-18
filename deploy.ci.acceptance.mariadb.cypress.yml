@@ -28,7 +28,7 @@ image:
 
 composer:
     mode: '--dev --quiet -o -a'
-    autoload: '--classmap-authoritative -o'
+    autoload: '-o'
 
 regions:
     EU:

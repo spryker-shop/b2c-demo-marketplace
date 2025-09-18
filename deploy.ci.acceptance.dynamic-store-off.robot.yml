@@ -4,7 +4,7 @@ namespace: spryker_ci
 tag: '1.0'
 
 environment: docker.ci
-pipeline: docker.ci.acceptance.dynamic-store-off
+pipeline: docker.ci.acceptance.dynamic-store-off.api
 image:
     tag: spryker/php:8.2
     php:
@@ -65,37 +65,6 @@ groups:
     EU:
         region: EU
         applications:
-            merchant_portal_eu:
-                application: merchant-portal
-                endpoints:
-                    mp.de.spryker.local:
-                        entry-point: MerchantPortal
-                        store: DE
-                        primal: true
-                        services:
-                            session:
-                                namespace: 7
-                    mp.at.spryker.local:
-                        entry-point: MerchantPortal
-                        store: AT
-                        services:
-                            session:
-                                namespace: 8
-            yves_eu:
-                application: yves
-                endpoints:
-                    date-time-configurator-example.spryker.local:
-                        entry-point: Configurator
-                    yves.de.spryker.local:
-                        store: DE
-                        services:
-                            session:
-                                namespace: 1
-                    yves.at.spryker.local:
-                        store: AT
-                        services:
-                            session:
-                                namespace: 2
             glue_eu:
                 application: glue
                 endpoints:

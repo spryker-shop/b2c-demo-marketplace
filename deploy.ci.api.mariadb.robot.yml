@@ -50,14 +50,6 @@ groups:
     EU:
         region: EU
         applications:
-            yves_eu:
-                application: yves
-                endpoints:
-                    yves.eu.spryker.local:
-                        region: EU
-                        services:
-                            session:
-                                namespace: 1
             glue_eu:
                 application: glue
                 endpoints:
