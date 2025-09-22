@@ -7,11 +7,17 @@ sections:
         generate-transfers:
             command: 'vendor/bin/console transfer:generate'
 
+        router-cache-warmup-yves:
+            command: 'vendor/bin/yves router:cache:warm-up'
+
+        router-cache-warmup-backoffice:
+            command: 'vendor/bin/console router:cache:warm-up:backoffice'
+
         oms-process-cache-warmup:
             command: 'vendor/bin/console oms:process-cache:warm-up'
 
-        router-cache-warmup-merchant-portal:
-            command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
+        router-cache-warmup-backend-gateway:
+            command: 'vendor/bin/console router:cache:warm-up:backend-gateway'
 
         navigation-cache-warmup:
             command: 'vendor/bin/console navigation:build-cache'
@@ -50,18 +56,9 @@ sections:
         rest-api-generate-documentation:
             command: 'vendor/bin/console rest-api:generate:documentation'
 
-    build-static:
-        dependencies-install:
-            command: 'vendor/bin/console frontend:project:install-dependencies'
-
-        date-time-product-configurator:
-            command: 'vendor/bin/console frontend:date-time-product-configurator:build'
-
     init-storages-per-store:
         queue-setup:
             command: 'vendor/bin/console queue:setup'
-        setup-search-create-sources:
-            command: 'vendor/bin/console search:setup:sources'
 
     init-storages-per-region:
         propel-copy-schema:
@@ -88,6 +85,9 @@ sections:
     demodata:
         import-eu-region-demodata:
             command: 'vendor/bin/console data:import --config=data/import/local/full_EU.yml'
+
+        setup-search-create-sources:
+            command: 'vendor/bin/console search:setup:sources'
 
         apply-scheduled-prices:
             command: 'vendor/bin/console price-product-schedule:apply'
