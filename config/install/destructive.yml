@@ -49,11 +49,11 @@ sections:
         import-demodata:
             command: 'vendor/bin/console data:import --config=data/import/local/store_${SPRYKER_CURRENT_REGION}.yml'
 
-        clear-and-init-search:
-            clean-search:
-                command: 'vendor/bin/console elasticsearch:index:delete -vvv --no-ansi'
-            setup-search-create-sources:
-                command: 'vendor/bin/console search:setup:sources -vvv --no-ansi'
+    clear-and-init-search:
+        clean-search:
+            command: 'vendor/bin/console elasticsearch:index:delete -vvv --no-ansi'
+        setup-search-create-sources:
+            command: 'vendor/bin/console search:setup:sources -vvv --no-ansi'
 
     demodata:
         import-demodata:
