@@ -194,78 +194,12 @@ jobs:
                 uses: ./.github/actions/job-slack-notifications
                 if: always()
 
-    php-83-mariadb-glue-alpine:
-        name: "[run-api-ci] PHP 8.3 / MariaDB / Glue / Alpine"
-        if: >
-            contains(github.event.pull_request.labels.*.name, 'run-api-ci')
-            || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
-            || github.ref == 'refs/heads/master'
-        runs-on: ubuntu-latest
-        env:
-            PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:8.3
-            TRAVIS: 1
-            SPRYKER_CURRENT_REGION: EU
-            DYNAMIC_STORE_MODE: true
-
-        steps:
-            -   uses: actions/checkout@v4
-            -   name: Install docker-compose
-                run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-                    sudo chmod +x /usr/local/bin/docker-compose
-
-            -   name: Run docker
-                run: |
-                    git clone https://github.com/spryker/docker-sdk.git ./docker
-                    docker/sdk boot deploy.ci.api.mariadb.yml
-                    docker/sdk up -t
-                    docker/sdk cli composer dump-autoload -o -a --apcu
-                    docker/sdk testing codecept fixtures
-                    docker/sdk console queue:worker:start --stop-when-empty
-                    docker/sdk testing codecept run -c codeception.api.yml
-
-            -   name: Slack Notification for failed job
-                uses: ./.github/actions/job-slack-notifications
-                if: always()
-
-    php-82-postgresql-glue-debian-dynamic-store-off:
-        if: >
-            contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
-            || github.ref == 'refs/heads/master'
-        name: "PHP 8.2 / PostgreSQL / Glue / Debian / Dynamic Store OFF"
-        runs-on: ubuntu-latest
-        env:
-            PROGRESS_TYPE: plain
-            SPRYKER_PLATFORM_IMAGE: spryker/php:8.2-debian
-            TRAVIS: 1
-
-        steps:
-            -   uses: actions/checkout@v4
-
-            -   name: Install docker-compose
-                run: |
-                    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-                    sudo chmod +x /usr/local/bin/docker-compose
-            -   name: Run docker
-                run: |
-                    git clone https://github.com/spryker/docker-sdk.git ./docker
-                    docker/sdk boot deploy.ci.api.dynamic-store-off.yml
-                    docker/sdk up -t
-                    docker/sdk cli composer dump-autoload -o -a --apcu
-                    docker/sdk testing codecept fixtures
-                    docker/sdk console queue:worker:start --stop-when-empty
-                    docker/sdk testing codecept run -c codeception.api.yml
-
-            -   name: Slack Notification for failed job
-                uses: ./.github/actions/job-slack-notifications
-                if: always()
-
     php-83-mariadb-acceptance-alpine:
-        name: "[run-ui-ci] PHP 8.3 / MariaDB / Acceptance / Alpine"
+        name: "[run-ui-ci] PHP 8.3 / MariaDB / Acceptance & API / Alpine"
         if: >
             contains(github.event.pull_request.labels.*.name, 'run-ui-ci')
             || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
+            || contains(github.event.pull_request.labels.*.name, 'run-api-ci')
             || github.ref == 'refs/heads/master'
         runs-on: ubuntu-latest
         env:
@@ -289,7 +223,22 @@ jobs:
                     docker/sdk up -t
                     docker/sdk cli composer dump-autoload -o -a --apcu
                     docker/sdk console queue:worker:start --stop-when-empty
+
+            -   name: Run Acceptance Tests
+                if: >
+                    contains(github.event.pull_request.labels.*.name, 'run-ui-ci')
+                    || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
+                    || github.ref == 'refs/heads/master'
+                run: |
                     docker/sdk testing codecept run -c codeception.acceptance.yml
+
+            -   name: Run API Tests
+                if: >
+                    contains(github.event.pull_request.labels.*.name, 'run-api-ci')
+                    || contains(github.event.pull_request.labels.*.name, 'run-latest-ci')
+                    || github.ref == 'refs/heads/master'
+                run: |
+                    docker/sdk testing codecept run -c codeception.api.yml
 
             -   name: Slack Notification for failed job
                 uses: ./.github/actions/job-slack-notifications
@@ -299,7 +248,7 @@ jobs:
         if: >
             contains(github.event.pull_request.labels.*.name, 'run-compatibility-ci')
             || github.ref == 'refs/heads/master'
-        name: "PHP 8.2 / PostgreSQL / Acceptance / Debian / Dynamic Store OFF"
+        name: "PHP 8.2 / PostgreSQL / Acceptance & API / Debian / Dynamic Store OFF"
         runs-on: ubuntu-latest
         env:
             PROGRESS_TYPE: plain
@@ -320,7 +269,14 @@ jobs:
                     docker/sdk up -t
                     docker/sdk cli composer dump-autoload -o -a --apcu
                     docker/sdk console queue:worker:start --stop-when-empty
+
+            -   name: Run Acceptance Tests
+                run: |
                     docker/sdk testing codecept run -c codeception.acceptance.yml
+
+            -   name: Run API Tests
+                run: |
+                    docker/sdk testing codecept run -c codeception.api.yml
 
             -   name: Slack Notification for failed job
                 uses: ./.github/actions/job-slack-notifications
