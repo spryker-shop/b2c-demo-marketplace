@@ -269,8 +269,8 @@ jobs:
                     docker/sdk boot deploy.ci.acceptance.dynamic-store-off.yml
                     docker/sdk up -t
                     docker/sdk cli composer dump-autoload -o -a --apcu
-                    docker/sdk console queue:worker:start --stop-when-empty
                     docker/sdk testing codecept fixtures
+                    docker/sdk console queue:worker:start --stop-when-empty
 
             -   name: Run Acceptance Tests
                 run: |
