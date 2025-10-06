@@ -215,34 +215,41 @@ jobs:
                     sudo bash -c "echo '127.0.0.1 backend-api.at.spryker.local backend-api.de.spryker.local glue-backend.de.spryker.local glue-backend.at.spryker.local glue-storefront.de.spryker.local glue-storefront.at.spryker.local backend-gateway.at.spryker.local backend-gateway.de.spryker.local backoffice.at.spryker.local backoffice.de.spryker.local date-time-configurator-example.spryker.local glue.at.spryker.local glue.de.spryker.local yves.at.spryker.local yves.de.spryker.local mp.de.spryker.local mail.spryker.local mp.at.spryker.local' >> /etc/hosts"
                     docker/sdk up -t -v
                     docker/sdk cli composer dump-autoload -o -a --apcu
+
             -   name: Custom commands
                 continue-on-error: false
                 run: |
                     APPLICATION_STORE=AT docker/sdk console queue:worker:start --stop-when-empty
+
             -   name: Run Dynamic Tests Set
                 id: run_dynamic_tests
                 continue-on-error: true
                 run: |
                     docker/sdk exec robot-framework pabot --processes 6 --ordering pabot_mp_b2c_ordering -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:false -v db_engine:psycopg2 -d results/dynamic_set --exclude skip-due-to-issueORskip-due-to-refactoringORstatic-set -s '*'.tests.parallel_ui.mp_b2c .
+
             -   name: Run Static Tests Set
                 id: run_static_tests
                 continue-on-error: true
                 run: |
                     docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v headless:true -v ignore_console:false -v dms:false -v db_engine:psycopg2 -d results/static_set --exclude skip-due-to-issueORskip-due-to-refactoring --include static-set -s '*'.tests.parallel_ui.mp_b2c .
+
             -   name: Merge Initial Test Results
                 id: merge_initial_results
                 continue-on-error: true
                 run: |
                     docker/sdk exec robot-framework rebot -d results --output output.xml --merge results/dynamic_set/output.xml results/static_set/output.xml
+
             -   name: Rerun Failed Tests
                 id: rerun_failed_tests
                 if: always() && steps.merge_initial_results.outcome != 'success'
                 run: |
                     docker/sdk exec robot-framework robot -v env:ui_mp_b2c -v docker:True -v dms:false -v db_engine:psycopg2 -v headless:true -v ignore_console:false -d results/rerun --runemptysuite --rerunfailed results/output.xml --output rerun.xml -s '*'.tests.parallel_ui.mp_b2c .
+
             -   name: Merge Final Test Results
                 if: always() && steps.merge_initial_results.outcome != 'success'
                 run: |
                     docker/sdk exec robot-framework rebot -d results --merge results/output.xml results/rerun/rerun.xml
+
             -   name: Upload artifacts
                 if: failure()
                 run: |
