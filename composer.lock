@@ -30152,16 +30152,16 @@
         },
         {
             "name": "spryker/dynamic-entity-backend-api",
-            "version": "1.13.1",
+            "version": "1.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/dynamic-entity-backend-api.git",
-                "reference": "3ad2a2250d9d07f441ec1322bf6a08104c2d9736"
+                "reference": "593432ff1b1d081f9982733e7808970401e6bb63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/dynamic-entity-backend-api/zipball/3ad2a2250d9d07f441ec1322bf6a08104c2d9736",
-                "reference": "3ad2a2250d9d07f441ec1322bf6a08104c2d9736",
+                "url": "https://api.github.com/repos/spryker/dynamic-entity-backend-api/zipball/593432ff1b1d081f9982733e7808970401e6bb63",
+                "reference": "593432ff1b1d081f9982733e7808970401e6bb63",
                 "shasum": ""
             },
             "require": {
@@ -30207,9 +30207,9 @@
             ],
             "description": "DynamicEntityBackendApi module",
             "support": {
-                "source": "https://github.com/spryker/dynamic-entity-backend-api/tree/1.13.1"
+                "source": "https://github.com/spryker/dynamic-entity-backend-api/tree/1.14.1"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2025-09-30T12:47:03+00:00"
         },
         {
             "name": "spryker/dynamic-entity-extension",
