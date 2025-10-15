@@ -104,24 +104,24 @@ groups:
                     www.b2c-staging-us.cloud.spryker.toys:
                         store: US
                         <<: *frontend-auth
-            backoffice_us:
+            boffice:
                 application: backoffice
                 endpoints:
                     backoffice.b2c-staging-us.cloud.spryker.toys:
                         store: US
                         <<: *frontend-auth
-            backend_gateway_us:
+            backgw:
                 application: backend-gateway
                 endpoints:
                     backend-gateway.b2c-staging-us.cloud.spryker.toys:
                         store: US
-            backend_api_us:
+            backapi:
                 application: zed
                 endpoints:
                     backend-api.b2c-staging-us.cloud.spryker.toys:
                         store: US
                         entry-point: BackendApi
-            glue_us:
+            glue:
                 application: glue
                 endpoints:
                     glue.b2c-staging-us.cloud.spryker.toys:
