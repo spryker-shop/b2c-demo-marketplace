@@ -359,13 +359,6 @@
             "SprykerConfig\\": "src/SprykerConfig/"
         }
     },
-    "extra": {
-        "installer-paths": {
-            "tests/cypress-tests/": [
-                "type:zend-module"
-            ]
-        }
-    },
     "autoload-dev": {
         "psr-4": {
             "PyzTest\\": "tests/PyzTest/",
@@ -408,22 +401,20 @@
             "url": "https://github.com/spryker/robotframework-suite-tests.git"
         },
         {
-            "type": "package",
-            "package": {
-                "name": "spryker/cypress-tests",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/spryker/cypress-tests.git",
-                    "type": "git",
-                    "reference": "9371ece3df4ac153074d25169bc7dc13dbf595e3"
-                },
-                "type": "zend-module",
-                "license": [
-                    "MIT"
-                ]
-            }
+            "type": "git",
+            "url": "https://github.com/spryker/cypress-tests.git"
         }
     ],
+    "extra": {
+        "installer-types": [
+            "spryker-test"
+        ],
+        "installer-paths": {
+            "tests/cypress-tests/": [
+                "spryker/cypress-tests"
+            ]
+        }
+    },
     "scripts": {
         "compile": [
             "mkdir -p ./data/DE/logs/ZED",
