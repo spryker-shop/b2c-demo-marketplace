@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "512801a2038dbf089fe21a539f517f87",
+    "content-hash": "f228924b69e2d61eb97178a8e4dce61d",
     "packages": [
         {
             "name": "async-aws/core",
@@ -7555,16 +7555,16 @@
         },
         {
             "name": "spryker-feature/marketplace-product-offer",
-            "version": "202507.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/marketplace-product-offer.git",
-                "reference": "c21c8eb0545bdc8edab180aa7518b53cd61b4a4b"
+                "reference": "ba9a43b773e736795d761c4a4c6a1f91e62ae468"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer/zipball/c21c8eb0545bdc8edab180aa7518b53cd61b4a4b",
-                "reference": "c21c8eb0545bdc8edab180aa7518b53cd61b4a4b",
+                "url": "https://api.github.com/repos/spryker-feature/marketplace-product-offer/zipball/ba9a43b773e736795d761c4a4c6a1f91e62ae468",
+                "reference": "ba9a43b773e736795d761c4a4c6a1f91e62ae468",
                 "shasum": ""
             },
             "require": {
@@ -7572,7 +7572,7 @@
                 "spryker-shop/merchant-product-offer-widget": "^2.5.0",
                 "spryker-shop/product-offer-widget": "^1.1.0",
                 "spryker/merchant-product-offer": "^1.8.0",
-                "spryker/merchant-product-offer-data-import": "^1.2.0",
+                "spryker/merchant-product-offer-data-import": "^2.0.0",
                 "spryker/merchant-product-offer-gui": "^1.1.0",
                 "spryker/merchant-product-offer-search": "^1.6.0",
                 "spryker/merchant-product-offer-storage": "^2.6.0",
@@ -7588,10 +7588,11 @@
                 "spryker-feature/marketplace-merchant": "Recommended feature dependency.",
                 "spryker-feature/product": "Recommended feature dependency."
             },
+            "default-branch": true,
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202507.x-dev"
+                    "dev-master": "202510.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7600,9 +7601,9 @@
             ],
             "description": "Marketplace Product Offer [feature]",
             "support": {
-                "source": "https://github.com/spryker-feature/marketplace-product-offer/tree/202507.0"
+                "source": "https://github.com/spryker-feature/marketplace-product-offer/tree/master"
             },
-            "time": "2025-07-25T12:23:51+00:00"
+            "time": "2025-10-02T12:57:55+00:00"
         },
         {
             "name": "spryker-feature/marketplace-product-offer-prices",
@@ -10698,20 +10699,20 @@
         },
         {
             "name": "spryker-shop/catalog-page",
-            "version": "1.31.1",
+            "version": "1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/catalog-page.git",
-                "reference": "9eb6a5e1a4db94048e032626f182f8523b898fe6"
+                "reference": "13c810ce5950c67190aadf9b38ab93c64fe1eb15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/catalog-page/zipball/9eb6a5e1a4db94048e032626f182f8523b898fe6",
-                "reference": "9eb6a5e1a4db94048e032626f182f8523b898fe6",
+                "url": "https://api.github.com/repos/spryker-shop/catalog-page/zipball/13c810ce5950c67190aadf9b38ab93c64fe1eb15",
+                "reference": "13c810ce5950c67190aadf9b38ab93c64fe1eb15",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker-shop/shop-application": "^1.0.0",
                 "spryker-shop/shop-router-extension": "^1.0.0",
                 "spryker-shop/shop-ui": "^1.84.0",
@@ -10763,9 +10764,9 @@
             ],
             "description": "CatalogPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/catalog-page/tree/1.31.1"
+                "source": "https://github.com/spryker-shop/catalog-page/tree/1.32.0"
             },
-            "time": "2025-09-04T08:59:00+00:00"
+            "time": "2025-10-14T11:55:32+00:00"
         },
         {
             "name": "spryker-shop/category-image-storage-widget",
@@ -16949,20 +16950,20 @@
         },
         {
             "name": "spryker-shop/shop-ui",
-            "version": "1.96.1",
+            "version": "1.100.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/shop-ui.git",
-                "reference": "08b69450b89eb2cddda91628bd83a95f5264e662"
+                "reference": "fddf342794e8e4e9b2ff54d7e01b370328286b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/shop-ui/zipball/08b69450b89eb2cddda91628bd83a95f5264e662",
-                "reference": "08b69450b89eb2cddda91628bd83a95f5264e662",
+                "url": "https://api.github.com/repos/spryker-shop/shop-ui/zipball/fddf342794e8e4e9b2ff54d7e01b370328286b68",
+                "reference": "fddf342794e8e4e9b2ff54d7e01b370328286b68",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/form-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/locale": "^3.0.0 || ^4.0.0",
@@ -17006,9 +17007,9 @@
             ],
             "description": "ShopUi module",
             "support": {
-                "source": "https://github.com/spryker-shop/shop-ui/tree/1.96.1"
+                "source": "https://github.com/spryker-shop/shop-ui/tree/1.100.0"
             },
-            "time": "2025-08-27T15:30:39+00:00"
+            "time": "2025-10-15T10:34:39+00:00"
         },
         {
             "name": "spryker-shop/shopping-list-page-extension",
@@ -27170,20 +27171,20 @@
         },
         {
             "name": "spryker/content-product-set-data-import",
-            "version": "0.2.7",
+            "version": "0.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/content-product-set-data-import.git",
-                "reference": "b4ac173c2ba27d2969bc61f9c848f7e20f1ce377"
+                "reference": "305e2cb04527c57bfea13411a50372e3ce9adeb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/content-product-set-data-import/zipball/b4ac173c2ba27d2969bc61f9c848f7e20f1ce377",
-                "reference": "b4ac173c2ba27d2969bc61f9c848f7e20f1ce377",
+                "url": "https://api.github.com/repos/spryker/content-product-set-data-import/zipball/305e2cb04527c57bfea13411a50372e3ce9adeb3",
+                "reference": "305e2cb04527c57bfea13411a50372e3ce9adeb3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/content": "^2.1.0",
                 "spryker/data-import": "^1.5.0",
                 "spryker/kernel": "^3.33.0",
@@ -27215,9 +27216,9 @@
             ],
             "description": "ContentProductSetDataImport module",
             "support": {
-                "source": "https://github.com/spryker/content-product-set-data-import/tree/0.2.7"
+                "source": "https://github.com/spryker/content-product-set-data-import/tree/0.2.8"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/content-product-set-gui",
@@ -27431,20 +27432,20 @@
         },
         {
             "name": "spryker/country-data-import",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/country-data-import.git",
-                "reference": "e4cd644870c52dbca50ad0245b9e3ae9c9fe7823"
+                "reference": "60aa256263f297b9d780b975b577681111fccd76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/country-data-import/zipball/e4cd644870c52dbca50ad0245b9e3ae9c9fe7823",
-                "reference": "e4cd644870c52dbca50ad0245b9e3ae9c9fe7823",
+                "url": "https://api.github.com/repos/spryker/country-data-import/zipball/60aa256263f297b9d780b975b577681111fccd76",
+                "reference": "60aa256263f297b9d780b975b577681111fccd76",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/country": "^4.0.0",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
@@ -27468,13 +27469,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "CountryDataImport module",
             "support": {
-                "source": "https://github.com/spryker/country-data-import/tree/0.1.0"
+                "source": "https://github.com/spryker/country-data-import/tree/0.1.1"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/country-gui",
@@ -27633,20 +27634,20 @@
         },
         {
             "name": "spryker/currency-data-import",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/currency-data-import.git",
-                "reference": "a2ead1dff9d26794f128a26ef14f9f4bbee8e1f3"
+                "reference": "2901d5a351ceb4ffd9f02d49865c05bfbfedbe50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/currency-data-import/zipball/a2ead1dff9d26794f128a26ef14f9f4bbee8e1f3",
-                "reference": "a2ead1dff9d26794f128a26ef14f9f4bbee8e1f3",
+                "url": "https://api.github.com/repos/spryker/currency-data-import/zipball/2901d5a351ceb4ffd9f02d49865c05bfbfedbe50",
+                "reference": "2901d5a351ceb4ffd9f02d49865c05bfbfedbe50",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/currency": "^4.0.0",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -27670,13 +27671,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "CurrencyDataImport module",
             "support": {
-                "source": "https://github.com/spryker/currency-data-import/tree/0.1.0"
+                "source": "https://github.com/spryker/currency-data-import/tree/0.1.1"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/currency-extension",
@@ -28980,20 +28981,20 @@
         },
         {
             "name": "spryker/data-import",
-            "version": "1.30.0",
+            "version": "1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/data-import.git",
-                "reference": "b968ea083997ce707d613662659c4cdf43c4eb77"
+                "reference": "26302225be7994b1e65293ca6078c1ccd6efc24c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/data-import/zipball/b968ea083997ce707d613662659c4cdf43c4eb77",
-                "reference": "b968ea083997ce707d613662659c4cdf43c4eb77",
+                "url": "https://api.github.com/repos/spryker/data-import/zipball/26302225be7994b1e65293ca6078c1ccd6efc24c",
+                "reference": "26302225be7994b1e65293ca6078c1ccd6efc24c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/config": "^3.0.0",
                 "spryker/data-import-extension": "^1.2.0",
                 "spryker/error-handler": "^2.1.0",
@@ -29039,9 +29040,9 @@
             ],
             "description": "DataImport module",
             "support": {
-                "source": "https://github.com/spryker/data-import/tree/1.30.0"
+                "source": "https://github.com/spryker/data-import/tree/1.31.0"
             },
-            "time": "2025-09-09T09:20:43+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/data-import-extension",
@@ -30100,20 +30101,20 @@
         },
         {
             "name": "spryker/dynamic-entity",
-            "version": "1.19.1",
+            "version": "1.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/dynamic-entity.git",
-                "reference": "5090dfa76f0f83522ecb76cccaabae9148624d3b"
+                "reference": "f9894b5904203c4469c3f975231e75d009bc34a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/dynamic-entity/zipball/5090dfa76f0f83522ecb76cccaabae9148624d3b",
-                "reference": "5090dfa76f0f83522ecb76cccaabae9148624d3b",
+                "url": "https://api.github.com/repos/spryker/dynamic-entity/zipball/f9894b5904203c4469c3f975231e75d009bc34a2",
+                "reference": "f9894b5904203c4469c3f975231e75d009bc34a2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/dynamic-entity-extension": "^1.0.0",
                 "spryker/installer-extension": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -30146,22 +30147,22 @@
             ],
             "description": "DynamicEntity module",
             "support": {
-                "source": "https://github.com/spryker/dynamic-entity/tree/1.19.1"
+                "source": "https://github.com/spryker/dynamic-entity/tree/1.19.2"
             },
-            "time": "2025-08-18T13:57:40+00:00"
+            "time": "2025-10-07T08:21:11+00:00"
         },
         {
             "name": "spryker/dynamic-entity-backend-api",
-            "version": "1.13.1",
+            "version": "1.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/dynamic-entity-backend-api.git",
-                "reference": "3ad2a2250d9d07f441ec1322bf6a08104c2d9736"
+                "reference": "593432ff1b1d081f9982733e7808970401e6bb63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/dynamic-entity-backend-api/zipball/3ad2a2250d9d07f441ec1322bf6a08104c2d9736",
-                "reference": "3ad2a2250d9d07f441ec1322bf6a08104c2d9736",
+                "url": "https://api.github.com/repos/spryker/dynamic-entity-backend-api/zipball/593432ff1b1d081f9982733e7808970401e6bb63",
+                "reference": "593432ff1b1d081f9982733e7808970401e6bb63",
                 "shasum": ""
             },
             "require": {
@@ -30207,9 +30208,9 @@
             ],
             "description": "DynamicEntityBackendApi module",
             "support": {
-                "source": "https://github.com/spryker/dynamic-entity-backend-api/tree/1.13.1"
+                "source": "https://github.com/spryker/dynamic-entity-backend-api/tree/1.14.1"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2025-09-30T12:47:03+00:00"
         },
         {
             "name": "spryker/dynamic-entity-extension",
@@ -33551,20 +33552,20 @@
         },
         {
             "name": "spryker/locale-data-import",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/locale-data-import.git",
-                "reference": "81b2918dd33a23ee84202caf90788d2a95102771"
+                "reference": "eb79cf4abd2506566e4488d61222da5dd5a6092f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/locale-data-import/zipball/81b2918dd33a23ee84202caf90788d2a95102771",
-                "reference": "81b2918dd33a23ee84202caf90788d2a95102771",
+                "url": "https://api.github.com/repos/spryker/locale-data-import/zipball/eb79cf4abd2506566e4488d61222da5dd5a6092f",
+                "reference": "eb79cf4abd2506566e4488d61222da5dd5a6092f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/locale": "^4.0.0",
@@ -33588,13 +33589,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "LocaleDataImport module",
             "support": {
-                "source": "https://github.com/spryker/locale-data-import/tree/0.1.0"
+                "source": "https://github.com/spryker/locale-data-import/tree/0.1.1"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/locale-extension",
@@ -34352,20 +34353,20 @@
         },
         {
             "name": "spryker/merchant-category-data-import",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-category-data-import.git",
-                "reference": "9a2d83aa404bb2c46c6dad9e2cd4584d7d037ad2"
+                "reference": "535296b9df1274a1622ba1fbfedff7ea26a7cf18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-category-data-import/zipball/9a2d83aa404bb2c46c6dad9e2cd4584d7d037ad2",
-                "reference": "9a2d83aa404bb2c46c6dad9e2cd4584d7d037ad2",
+                "url": "https://api.github.com/repos/spryker/merchant-category-data-import/zipball/535296b9df1274a1622ba1fbfedff7ea26a7cf18",
+                "reference": "535296b9df1274a1622ba1fbfedff7ea26a7cf18",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=8.3",
                 "spryker/category": "^4.0.0 || ^5.0.0",
                 "spryker/data-import": "^1.11.0",
                 "spryker/kernel": "^3.33.0",
@@ -34390,13 +34391,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "MerchantCategoryDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-category-data-import/tree/0.3.0"
+                "source": "https://github.com/spryker/merchant-category-data-import/tree/0.3.1"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-category-search",
@@ -34745,20 +34746,20 @@
         },
         {
             "name": "spryker/merchant-data-import",
-            "version": "0.5.2",
+            "version": "0.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-data-import.git",
-                "reference": "6b115c9fe5f6518ec71515d64a2efe7a02b7c875"
+                "reference": "22b7d0d97467d5b72eed2e4fd659788dc58239f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-data-import/zipball/6b115c9fe5f6518ec71515d64a2efe7a02b7c875",
-                "reference": "6b115c9fe5f6518ec71515d64a2efe7a02b7c875",
+                "url": "https://api.github.com/repos/spryker/merchant-data-import/zipball/22b7d0d97467d5b72eed2e4fd659788dc58239f7",
+                "reference": "22b7d0d97467d5b72eed2e4fd659788dc58239f7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.3.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/merchant": "^3.0.0",
@@ -34790,9 +34791,9 @@
             ],
             "description": "MerchantDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-data-import/tree/0.5.2"
+                "source": "https://github.com/spryker/merchant-data-import/tree/0.5.3"
             },
-            "time": "2024-03-27T10:11:29+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-discount-connector",
@@ -35049,20 +35050,20 @@
         },
         {
             "name": "spryker/merchant-oms-data-import",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-oms-data-import.git",
-                "reference": "25bd2eda74cc5f8ff1f6ce20a4a81cbcc09058e4"
+                "reference": "120317e9c75627bd7cfd9c4319566dc7245fc8a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-oms-data-import/zipball/25bd2eda74cc5f8ff1f6ce20a4a81cbcc09058e4",
-                "reference": "25bd2eda74cc5f8ff1f6ce20a4a81cbcc09058e4",
+                "url": "https://api.github.com/repos/spryker/merchant-oms-data-import/zipball/120317e9c75627bd7cfd9c4319566dc7245fc8a2",
+                "reference": "120317e9c75627bd7cfd9c4319566dc7245fc8a2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/merchant": "^1.0.0 || ^2.0.0 || ^3.0.0",
@@ -35087,13 +35088,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "MerchantOmsDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-oms-data-import/tree/0.5.0"
+                "source": "https://github.com/spryker/merchant-oms-data-import/tree/0.5.1"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-oms-gui",
@@ -35184,20 +35185,20 @@
         },
         {
             "name": "spryker/merchant-opening-hours-data-import",
-            "version": "0.6.1",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-opening-hours-data-import.git",
-                "reference": "863c70949b333120c84ceee11c567e039695f89b"
+                "reference": "9804b97b5f77f84b1292ecce0f20a842c8bb138c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-opening-hours-data-import/zipball/863c70949b333120c84ceee11c567e039695f89b",
-                "reference": "863c70949b333120c84ceee11c567e039695f89b",
+                "url": "https://api.github.com/repos/spryker/merchant-opening-hours-data-import/zipball/9804b97b5f77f84b1292ecce0f20a842c8bb138c",
+                "reference": "9804b97b5f77f84b1292ecce0f20a842c8bb138c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.3.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant": "^3.0.0",
@@ -35224,13 +35225,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "MerchantOpeningHoursDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-opening-hours-data-import/tree/0.6.1"
+                "source": "https://github.com/spryker/merchant-opening-hours-data-import/tree/0.6.2"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-opening-hours-rest-api",
@@ -35557,20 +35558,20 @@
         },
         {
             "name": "spryker/merchant-product-data-import",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product-data-import.git",
-                "reference": "e1ba22a37970a8b44cfd19141f7320a45b4f91d9"
+                "reference": "7f849644e3bac52d7b40d29b19dfe677782694f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product-data-import/zipball/e1ba22a37970a8b44cfd19141f7320a45b4f91d9",
-                "reference": "e1ba22a37970a8b44cfd19141f7320a45b4f91d9",
+                "url": "https://api.github.com/repos/spryker/merchant-product-data-import/zipball/7f849644e3bac52d7b40d29b19dfe677782694f9",
+                "reference": "7f849644e3bac52d7b40d29b19dfe677782694f9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/category": "^5.0.0",
                 "spryker/currency": "^4.5.0",
                 "spryker/data-import": "^1.30.0",
@@ -35615,9 +35616,9 @@
             ],
             "description": "MerchantProductDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-product-data-import/tree/0.5.0"
+                "source": "https://github.com/spryker/merchant-product-data-import/tree/0.5.1"
             },
-            "time": "2025-09-09T09:20:43+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-product-gui",
@@ -35668,27 +35669,27 @@
         },
         {
             "name": "spryker/merchant-product-offer",
-            "version": "1.8.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product-offer.git",
-                "reference": "519a973e1fda4a8979c137ff35702d3494361f4b"
+                "reference": "19ec05394369dfebbb057e6ebd0f98897c74a96c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product-offer/zipball/519a973e1fda4a8979c137ff35702d3494361f4b",
-                "reference": "519a973e1fda4a8979c137ff35702d3494361f4b",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offer/zipball/19ec05394369dfebbb057e6ebd0f98897c74a96c",
+                "reference": "19ec05394369dfebbb057e6ebd0f98897c74a96c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/cart-reorder-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
-                "spryker/merchant": "^3.0.0",
+                "spryker/merchant": "^3.15.0",
                 "spryker/product-extension": "^1.3.0",
                 "spryker/product-offer": "^1.0.0",
-                "spryker/propel-orm": "^1.0.0",
+                "spryker/propel-orm": "^1.16.0",
                 "spryker/shopping-list-extension": "^1.4.0",
                 "spryker/transfer": "^3.27.0"
             },
@@ -35717,34 +35718,42 @@
             ],
             "description": "MerchantProductOffer module",
             "support": {
-                "source": "https://github.com/spryker/merchant-product-offer/tree/1.8.0"
+                "source": "https://github.com/spryker/merchant-product-offer/tree/1.11.0"
             },
-            "time": "2024-11-15T17:27:29+00:00"
+            "time": "2025-10-15T10:34:36+00:00"
         },
         {
             "name": "spryker/merchant-product-offer-data-import",
-            "version": "1.2.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-product-offer-data-import.git",
-                "reference": "8547b745830e2913523aabc5e5469e6753082b5d"
+                "reference": "e4121dd9b08b99e3e86ef2330bf0437adb3e37a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-product-offer-data-import/zipball/8547b745830e2913523aabc5e5469e6753082b5d",
-                "reference": "8547b745830e2913523aabc5e5469e6753082b5d",
+                "url": "https://api.github.com/repos/spryker/merchant-product-offer-data-import/zipball/e4121dd9b08b99e3e86ef2330bf0437adb3e37a0",
+                "reference": "e4121dd9b08b99e3e86ef2330bf0437adb3e37a0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
-                "spryker/data-import": "^1.0.0",
+                "php": ">=8.3",
+                "spryker/currency": "^4.6.0",
+                "spryker/data-import": "^1.30.0",
+                "spryker/data-import-merchant-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant": "^3.0.0",
-                "spryker/merchant-product-offer": "^1.0.0",
+                "spryker/merchant-product-offer": "^1.10.0",
+                "spryker/merchant-stock": "^1.4.0",
+                "spryker/price-product": "^4.48.0",
+                "spryker/price-product-offer": "^1.7.1",
                 "spryker/product": "^6.0.0",
                 "spryker/product-offer": "^1.0.0",
+                "spryker/product-offer-stock": "^1.6.0",
+                "spryker/product-offer-validity": "^1.4.0",
                 "spryker/propel-orm": "^1.0.0",
-                "spryker/store": "^1.0.0"
+                "spryker/store": "^1.0.0",
+                "spryker/transfer": "^3.27.0"
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
@@ -35754,7 +35763,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -35769,9 +35778,9 @@
             ],
             "description": "MerchantProductOfferDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-product-offer-data-import/tree/1.2.0"
+                "source": "https://github.com/spryker/merchant-product-offer-data-import/tree/2.1.0"
             },
-            "time": "2024-05-06T12:15:28+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-product-offer-gui",
@@ -36720,20 +36729,20 @@
         },
         {
             "name": "spryker/merchant-profile-data-import",
-            "version": "0.6.1",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-profile-data-import.git",
-                "reference": "438c0c976d36a23d676e386cb054422108f262d9"
+                "reference": "333c7ec6fcbae612c60a1f71b36bd0b0b9ccb52b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-profile-data-import/zipball/438c0c976d36a23d676e386cb054422108f262d9",
-                "reference": "438c0c976d36a23d676e386cb054422108f262d9",
+                "url": "https://api.github.com/repos/spryker/merchant-profile-data-import/zipball/333c7ec6fcbae612c60a1f71b36bd0b0b9ccb52b",
+                "reference": "333c7ec6fcbae612c60a1f71b36bd0b0b9ccb52b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/country": "^3.0.0 || ^4.0.0",
                 "spryker/data-import": "^1.3.0",
                 "spryker/glossary": "^3.3.0",
@@ -36761,13 +36770,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "MerchantProfileDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-profile-data-import/tree/0.6.1"
+                "source": "https://github.com/spryker/merchant-profile-data-import/tree/0.6.2"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-profile-gui",
@@ -37601,20 +37610,20 @@
         },
         {
             "name": "spryker/merchant-stock",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-stock.git",
-                "reference": "2f7963ec9d027c0c9acc4f8adb0b7aad808d74fe"
+                "reference": "2264e5f5c7755057e6a1ac512cec524fe21e1f14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-stock/zipball/2f7963ec9d027c0c9acc4f8adb0b7aad808d74fe",
-                "reference": "2f7963ec9d027c0c9acc4f8adb0b7aad808d74fe",
+                "url": "https://api.github.com/repos/spryker/merchant-stock/zipball/2264e5f5c7755057e6a1ac512cec524fe21e1f14",
+                "reference": "2264e5f5c7755057e6a1ac512cec524fe21e1f14",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant": "^3.0.0",
@@ -37647,26 +37656,26 @@
             ],
             "description": "MerchantStock module",
             "support": {
-                "source": "https://github.com/spryker/merchant-stock/tree/1.3.0"
+                "source": "https://github.com/spryker/merchant-stock/tree/1.4.0"
             },
-            "time": "2024-05-06T12:15:28+00:00"
+            "time": "2025-08-04T10:53:26+00:00"
         },
         {
             "name": "spryker/merchant-stock-data-import",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-stock-data-import.git",
-                "reference": "77a79910b790d741ea6ba65b76d7fda944c82b9c"
+                "reference": "c017fb38406fd2bc0d811d4539d4e0d3402f7c01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-stock-data-import/zipball/77a79910b790d741ea6ba65b76d7fda944c82b9c",
-                "reference": "77a79910b790d741ea6ba65b76d7fda944c82b9c",
+                "url": "https://api.github.com/repos/spryker/merchant-stock-data-import/zipball/c017fb38406fd2bc0d811d4539d4e0d3402f7c01",
+                "reference": "c017fb38406fd2bc0d811d4539d4e0d3402f7c01",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.3.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant": "^3.0.0",
@@ -37692,13 +37701,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "MerchantStockDataImport module",
             "support": {
-                "source": "https://github.com/spryker/merchant-stock-data-import/tree/0.3.0"
+                "source": "https://github.com/spryker/merchant-stock-data-import/tree/0.3.1"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/merchant-stock-gui",
@@ -40528,28 +40537,37 @@
         },
         {
             "name": "spryker/opentelemetry",
-            "version": "1.16.1",
+            "version": "1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/opentelemetry.git",
-                "reference": "c733e33880f08534133b9c9985258a2fc2a424a5"
+                "reference": "93cf45658733f99da4396974c30d297ba6dd8baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/opentelemetry/zipball/c733e33880f08534133b9c9985258a2fc2a424a5",
-                "reference": "c733e33880f08534133b9c9985258a2fc2a424a5",
+                "url": "https://api.github.com/repos/spryker/opentelemetry/zipball/93cf45658733f99da4396974c30d297ba6dd8baa",
+                "reference": "93cf45658733f99da4396974c30d297ba6dd8baa",
                 "shasum": ""
             },
             "require": {
                 "open-telemetry/api": "^1.0",
+                "open-telemetry/context": "^1.0",
                 "open-telemetry/exporter-otlp": "^1.0",
                 "open-telemetry/gen-otlp-protobuf": "^1.1",
                 "open-telemetry/sdk": "~1.3.0",
                 "open-telemetry/sem-conv": "~1.32.0",
                 "open-telemetry/transport-grpc": "^1.0",
-                "php": ">=8.2",
+                "php": ">=8.3",
+                "psr/http-message": "^1.0.0",
+                "spryker/config": "^3.0.0",
+                "spryker/elastica": "^4.0.0 || ^5.0.0 || ^6.0.0",
+                "spryker/glue-application": "^1.0.0",
+                "spryker/guzzle": "^2.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/monitoring-extension": "^1.1.0",
+                "spryker/propel-orm": "^1.0.0",
+                "spryker/rabbit-mq": "^2.0.0",
+                "spryker/redis": "^2.0.0",
                 "spryker/symfony": "^3.0.0"
             },
             "require-dev": {
@@ -40586,9 +40604,9 @@
             "description": "Opentelemetry module",
             "support": {
                 "issues": "https://github.com/spryker/opentelemetry/issues",
-                "source": "https://github.com/spryker/opentelemetry/tree/1.16.1"
+                "source": "https://github.com/spryker/opentelemetry/tree/1.18.1"
             },
-            "time": "2025-08-18T13:58:48+00:00"
+            "time": "2025-10-13T08:01:29+00:00"
         },
         {
             "name": "spryker/order-amendment-example",
@@ -42704,20 +42722,20 @@
         },
         {
             "name": "spryker/price-product-offer-data-import",
-            "version": "0.7.2",
+            "version": "0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/price-product-offer-data-import.git",
-                "reference": "87984d5f414a73a5a6158caa729a1eb67ec2b911"
+                "reference": "ef00cdb3080cdf3139ec8c781424d8c288474bfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/price-product-offer-data-import/zipball/87984d5f414a73a5a6158caa729a1eb67ec2b911",
-                "reference": "87984d5f414a73a5a6158caa729a1eb67ec2b911",
+                "url": "https://api.github.com/repos/spryker/price-product-offer-data-import/zipball/ef00cdb3080cdf3139ec8c781424d8c288474bfd",
+                "reference": "ef00cdb3080cdf3139ec8c781424d8c288474bfd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/currency": "^3.0.0 || ^4.0.0",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
@@ -42745,13 +42763,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "PriceProductOfferDataImport module",
             "support": {
-                "source": "https://github.com/spryker/price-product-offer-data-import/tree/0.7.2"
+                "source": "https://github.com/spryker/price-product-offer-data-import/tree/0.7.3"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/price-product-offer-extension",
@@ -43788,20 +43806,20 @@
         },
         {
             "name": "spryker/product-alternative-data-import",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-alternative-data-import.git",
-                "reference": "b956ea34af12224513048066f9a92dfdbb9737a6"
+                "reference": "fed4aac15f41b0adac8b43c4602477b6f8a55eaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-alternative-data-import/zipball/b956ea34af12224513048066f9a92dfdbb9737a6",
-                "reference": "b956ea34af12224513048066f9a92dfdbb9737a6",
+                "url": "https://api.github.com/repos/spryker/product-alternative-data-import/zipball/fed4aac15f41b0adac8b43c4602477b6f8a55eaa",
+                "reference": "fed4aac15f41b0adac8b43c4602477b6f8a55eaa",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.2.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product": "^6.0.0",
@@ -43826,13 +43844,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "ProductAlternativeDataImport module",
             "support": {
-                "source": "https://github.com/spryker/product-alternative-data-import/tree/1.1.0"
+                "source": "https://github.com/spryker/product-alternative-data-import/tree/1.2.0"
             },
-            "time": "2023-01-16T13:42:24+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/product-alternative-extension",
@@ -46176,20 +46194,20 @@
         },
         {
             "name": "spryker/product-discontinued-data-import",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-discontinued-data-import.git",
-                "reference": "e9328a66385c0cab40169b8438f1266a6feeac99"
+                "reference": "dcb4796f0a7404ec1d07559652038fe8d5ee3b53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-discontinued-data-import/zipball/e9328a66385c0cab40169b8438f1266a6feeac99",
-                "reference": "e9328a66385c0cab40169b8438f1266a6feeac99",
+                "url": "https://api.github.com/repos/spryker/product-discontinued-data-import/zipball/dcb4796f0a7404ec1d07559652038fe8d5ee3b53",
+                "reference": "dcb4796f0a7404ec1d07559652038fe8d5ee3b53",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.2.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product": "^6.0.0",
@@ -46216,13 +46234,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "ProductDiscontinuedDataImport module",
             "support": {
-                "source": "https://github.com/spryker/product-discontinued-data-import/tree/1.2.0"
+                "source": "https://github.com/spryker/product-discontinued-data-import/tree/1.3.0"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/product-discontinued-extension",
@@ -47568,20 +47586,20 @@
         },
         {
             "name": "spryker/product-list-data-import",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-list-data-import.git",
-                "reference": "2ba020f24d33eb1ff3027bbc7d53130ae403ff06"
+                "reference": "1ae19c50d05fb0941a80f35431e0c3851b795d67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-list-data-import/zipball/2ba020f24d33eb1ff3027bbc7d53130ae403ff06",
-                "reference": "2ba020f24d33eb1ff3027bbc7d53130ae403ff06",
+                "url": "https://api.github.com/repos/spryker/product-list-data-import/zipball/1ae19c50d05fb0941a80f35431e0c3851b795d67",
+                "reference": "1ae19c50d05fb0941a80f35431e0c3851b795d67",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=8.3",
                 "spryker/category": "^3.0.0 || ^4.0.0 || ^5.0.0",
                 "spryker/data-import": "^1.3.0",
                 "spryker/kernel": "^3.30.0",
@@ -47607,13 +47625,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "ProductListDataImport module",
             "support": {
-                "source": "https://github.com/spryker/product-list-data-import/tree/0.1.2"
+                "source": "https://github.com/spryker/product-list-data-import/tree/0.1.3"
             },
-            "time": "2021-01-29T11:44:40+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/product-list-extension",
@@ -49760,20 +49778,20 @@
         },
         {
             "name": "spryker/product-offer-shipment-type-data-import",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-shipment-type-data-import.git",
-                "reference": "87436493a10375f3a1c7c8ceb0f26a94c2b29b88"
+                "reference": "1b7dae62c562e34d14dc97c1ba1e793413ef9a35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-shipment-type-data-import/zipball/87436493a10375f3a1c7c8ceb0f26a94c2b29b88",
-                "reference": "87436493a10375f3a1c7c8ceb0f26a94c2b29b88",
+                "url": "https://api.github.com/repos/spryker/product-offer-shipment-type-data-import/zipball/1b7dae62c562e34d14dc97c1ba1e793413ef9a35",
+                "reference": "1b7dae62c562e34d14dc97c1ba1e793413ef9a35",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.3.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product-offer": "^1.0.0",
@@ -49801,13 +49819,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "ProductOfferShipmentTypeDataImport module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-shipment-type-data-import/tree/0.4.1"
+                "source": "https://github.com/spryker/product-offer-shipment-type-data-import/tree/0.4.2"
             },
-            "time": "2024-09-20T14:38:30+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/product-offer-shipment-type-gui",
@@ -50009,20 +50027,20 @@
         },
         {
             "name": "spryker/product-offer-stock",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-stock.git",
-                "reference": "edf50846d3e6043fe9a6db85a5987099d65d7caf"
+                "reference": "df7df0c1444eaf6a3c695c9ddb6b9b780997a06b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-stock/zipball/edf50846d3e6043fe9a6db85a5987099d65d7caf",
-                "reference": "edf50846d3e6043fe9a6db85a5987099d65d7caf",
+                "url": "https://api.github.com/repos/spryker/product-offer-stock/zipball/df7df0c1444eaf6a3c695c9ddb6b9b780997a06b",
+                "reference": "df7df0c1444eaf6a3c695c9ddb6b9b780997a06b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/decimal-object": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
@@ -50058,26 +50076,26 @@
             ],
             "description": "ProductOfferStock module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-stock/tree/1.5.0"
+                "source": "https://github.com/spryker/product-offer-stock/tree/1.6.0"
             },
-            "time": "2024-03-13T15:14:46+00:00"
+            "time": "2025-08-04T11:49:53+00:00"
         },
         {
             "name": "spryker/product-offer-stock-data-import",
-            "version": "0.7.0",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-stock-data-import.git",
-                "reference": "0dec3c6e6053805054b1f193845f77e014b824cb"
+                "reference": "38f53d07137ba2594b5880200b74eaa186230997"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-stock-data-import/zipball/0dec3c6e6053805054b1f193845f77e014b824cb",
-                "reference": "0dec3c6e6053805054b1f193845f77e014b824cb",
+                "url": "https://api.github.com/repos/spryker/product-offer-stock-data-import/zipball/38f53d07137ba2594b5880200b74eaa186230997",
+                "reference": "38f53d07137ba2594b5880200b74eaa186230997",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/product-offer": "^1.0.0",
@@ -50087,6 +50105,7 @@
             "require-dev": {
                 "spryker/code-sniffer": "*",
                 "spryker/merchant": "*",
+                "spryker/product": "*",
                 "spryker/propel": "*",
                 "spryker/testify": "*"
             },
@@ -50103,13 +50122,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "ProductOfferStockDataImport module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-stock-data-import/tree/0.7.0"
+                "source": "https://github.com/spryker/product-offer-stock-data-import/tree/0.7.1"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/product-offer-stock-extension",
@@ -50346,20 +50365,20 @@
         },
         {
             "name": "spryker/product-offer-validity",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-validity.git",
-                "reference": "3df0b8c6b46a12d461ad92e0b7b2c75f9894402b"
+                "reference": "a1d15db6359c6357511e438d10ac05d3b45bf26b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-validity/zipball/3df0b8c6b46a12d461ad92e0b7b2c75f9894402b",
-                "reference": "3df0b8c6b46a12d461ad92e0b7b2c75f9894402b",
+                "url": "https://api.github.com/repos/spryker/product-offer-validity/zipball/a1d15db6359c6357511e438d10ac05d3b45bf26b",
+                "reference": "a1d15db6359c6357511e438d10ac05d3b45bf26b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "spryker/acl-merchant-portal-extension": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/product-offer": "^1.2.0",
@@ -50392,26 +50411,26 @@
             ],
             "description": "ProductOfferValidity module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-validity/tree/1.3.0"
+                "source": "https://github.com/spryker/product-offer-validity/tree/1.4.0"
             },
-            "time": "2024-05-06T12:15:28+00:00"
+            "time": "2025-08-04T11:49:53+00:00"
         },
         {
             "name": "spryker/product-offer-validity-data-import",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-validity-data-import.git",
-                "reference": "86828b3cf6d6559cff1537676153adaaf2d7d8bc"
+                "reference": "d66075938d0c7b3652d42155a9e1360988e5c0bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-validity-data-import/zipball/86828b3cf6d6559cff1537676153adaaf2d7d8bc",
-                "reference": "86828b3cf6d6559cff1537676153adaaf2d7d8bc",
+                "url": "https://api.github.com/repos/spryker/product-offer-validity-data-import/zipball/d66075938d0c7b3652d42155a9e1360988e5c0bf",
+                "reference": "d66075938d0c7b3652d42155a9e1360988e5c0bf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/product-offer": "^1.0.0",
@@ -50419,6 +50438,7 @@
             },
             "require-dev": {
                 "spryker/code-sniffer": "*",
+                "spryker/product": "*",
                 "spryker/propel": "*",
                 "spryker/testify": "*"
             },
@@ -50435,13 +50455,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "ProductOfferValidityDataImport module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-validity-data-import/tree/0.5.0"
+                "source": "https://github.com/spryker/product-offer-validity-data-import/tree/0.5.1"
             },
-            "time": "2021-08-16T16:27:47+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/product-offer-validity-gui",
@@ -55395,20 +55415,20 @@
         },
         {
             "name": "spryker/sales-order-threshold-data-import",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-order-threshold-data-import.git",
-                "reference": "f21961a9bf99796e11990de1b6db666928008e11"
+                "reference": "0b00bcaffe4d216844c9df735ff2600b63819b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-order-threshold-data-import/zipball/f21961a9bf99796e11990de1b6db666928008e11",
-                "reference": "f21961a9bf99796e11990de1b6db666928008e11",
+                "url": "https://api.github.com/repos/spryker/sales-order-threshold-data-import/zipball/0b00bcaffe4d216844c9df735ff2600b63819b11",
+                "reference": "0b00bcaffe4d216844c9df735ff2600b63819b11",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.3",
                 "spryker/currency": "^3.0.0 || ^4.0.0",
                 "spryker/data-import": "^1.3.0",
                 "spryker/kernel": "^3.30.0",
@@ -55434,13 +55454,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "proprietary"
             ],
             "description": "SalesOrderThresholdDataImport module",
             "support": {
-                "source": "https://github.com/spryker/sales-order-threshold-data-import/tree/0.1.4"
+                "source": "https://github.com/spryker/sales-order-threshold-data-import/tree/0.1.5"
             },
-            "time": "2023-03-31T19:36:11+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/sales-order-threshold-extension",
@@ -61248,20 +61268,20 @@
         },
         {
             "name": "spryker/stock-address-data-import",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/stock-address-data-import.git",
-                "reference": "b7ad56d602642fdd3adbd75d69ff18adc3cf3160"
+                "reference": "0978b48955a9c25754a96acb6647c2a7c9540c12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/stock-address-data-import/zipball/b7ad56d602642fdd3adbd75d69ff18adc3cf3160",
-                "reference": "b7ad56d602642fdd3adbd75d69ff18adc3cf3160",
+                "url": "https://api.github.com/repos/spryker/stock-address-data-import/zipball/0978b48955a9c25754a96acb6647c2a7c9540c12",
+                "reference": "0978b48955a9c25754a96acb6647c2a7c9540c12",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "spryker/country": "^3.0.0 || ^4.0.0",
                 "spryker/data-import": "^1.4.3",
                 "spryker/kernel": "^3.33.0",
@@ -61290,9 +61310,9 @@
             ],
             "description": "StockAddressDataImport module",
             "support": {
-                "source": "https://github.com/spryker/stock-address-data-import/tree/0.1.2"
+                "source": "https://github.com/spryker/stock-address-data-import/tree/0.1.3"
             },
-            "time": "2024-11-04T14:07:47+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/stock-data-import",
@@ -61848,20 +61868,20 @@
         },
         {
             "name": "spryker/store-context-data-import",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/store-context-data-import.git",
-                "reference": "719c09852e53074ebd96f3b993b36e77c94fbffa"
+                "reference": "fe29fc93ef7f0531d481991d4f3f2a88dc348043"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/store-context-data-import/zipball/719c09852e53074ebd96f3b993b36e77c94fbffa",
-                "reference": "719c09852e53074ebd96f3b993b36e77c94fbffa",
+                "url": "https://api.github.com/repos/spryker/store-context-data-import/zipball/fe29fc93ef7f0531d481991d4f3f2a88dc348043",
+                "reference": "fe29fc93ef7f0531d481991d4f3f2a88dc348043",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.3",
                 "spryker/data-import": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/store": "^1.19.0",
@@ -61889,9 +61909,9 @@
             ],
             "description": "StoreContextDataImport module",
             "support": {
-                "source": "https://github.com/spryker/store-context-data-import/tree/0.1.0"
+                "source": "https://github.com/spryker/store-context-data-import/tree/0.1.1"
             },
-            "time": "2024-06-18T09:53:39+00:00"
+            "time": "2025-10-14T13:32:53+00:00"
         },
         {
             "name": "spryker/store-context-gui",
@@ -77268,15 +77288,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "b6beb1d74fa24fb84cbb5869dffa92cef2182be5"
+                "reference": "9371ece3df4ac153074d25169bc7dc13dbf595e3"
             },
-            "default-branch": true,
-            "type": "spryker-test",
+            "type": "zend-module",
             "license": [
                 "MIT"
-            ],
-            "description": "This repository is dedicated to housing an extensive collection of UI end-to-end tests, meticulously crafted using Cypress for Spryker applications. These tests are designed to thoroughly evaluate the user interface, ensuring that all interactions and visual elements function as intended in real-world scenarios. By leveraging Cypress's advanced browser automation capabilities, this suite provides an efficient and effective means of validating the user experience, confirming the seamless operation and aesthetic integrity of Spryker's front-end components. Our commitment to rigorous UI testing helps maintain the high standard of quality and reliability that Spryker users expect.",
-            "time": "2025-10-17T14:09:35+00:00"
+            ]
         },
         {
             "name": "spryker/development",
@@ -78346,6 +78363,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "spryker-feature/marketplace-product": 20,
+        "spryker-feature/marketplace-product-offer": 20,
         "spryker-feature/merchant-portal-data-import": 20,
         "spryker/cypress-tests": 20,
         "spryker/docker-chromedriver": 20,
