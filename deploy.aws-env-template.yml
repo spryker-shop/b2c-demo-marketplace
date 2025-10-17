@@ -91,14 +91,14 @@ groups:
     EU:
         region: EU
         applications:
-            merchant_portal_eu:
+            mportal:
                 application: merchant-portal
                 endpoints:
                     mp.de.example.demo-spryker.com:
                         entry-point: MerchantPortal
                         store: DE
                         primal: true
-            yves_eu:
+            yves:
                 application: yves
                 endpoints:
                     date-time-configurator-example.demo-spryker.com:
@@ -109,35 +109,35 @@ groups:
                     de.example.demo-spryker.com:
                         store: DE
                         <<: *frontend-auth
-            backoffice_eu:
+            boffice:
                 application: backoffice
                 endpoints:
                     backoffice.de.example.demo-spryker.com:
                         store: DE
                         primal: true
-            backend_gateway_eu:
+            backgw:
                 application: backend-gateway
                 endpoints:
                     backend-gateway.de.example.demo-spryker.com:
                         store: DE
-            backend_api_eu:
+            backapi:
                 application: zed
                 endpoints:
                     backend-api.de.example.demo-spryker.com:
                         store: DE
                         entry-point: BackendApi
-            glue_eu:
+            glue:
                 application: glue
                 endpoints:
                     glue.de.example.demo-spryker.com:
                         store: DE
                         primal: true
-            glue_storefront_eu:
+            gluestorefront:
                 application: glue-storefront
                 endpoints:
                     glue-storefront.de.example.cloud.spryker.toys:
                         store: DE
-            glue_backend_eu:
+            gluebackend:
                 application: glue-backend
                 endpoints:
                     glue-backend.de.example.cloud.spryker.toys:

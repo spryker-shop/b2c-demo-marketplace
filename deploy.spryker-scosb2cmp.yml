@@ -141,7 +141,7 @@ groups:
                     glue-backend.at.scos-b2cmp.sh01.demo-spryker.com:
                         store: AT
                         cors-allow-origin: '*'
-            merchant_portal_eu:
+            mportal:
                 application: merchant-portal
                 endpoints:
                     mp.de.scos-b2cmp.sh01.demo-spryker.com:

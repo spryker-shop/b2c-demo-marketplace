@@ -111,7 +111,7 @@ groups:
     EU:
         region: EU
         applications:
-            yves_eu:
+            yves:
                 application: yves
                 endpoints:
                     demo-date-time-configurator.b2c-staging-eu.cloud.spryker.toys:
@@ -122,7 +122,7 @@ groups:
                     www.at.b2c-staging-eu.cloud.spryker.toys:
                         store: AT
                         <<: *frontend-auth
-            backoffice_eu:
+            boffice:
                 application: backoffice
                 endpoints:
                     backoffice.de.b2c-staging-eu.cloud.spryker.toys:
@@ -138,7 +138,7 @@ groups:
                         store: DE
                     backend-gateway.at.b2c-staging-eu.cloud.spryker.toys:
                         store: AT
-            backend_api_eu:
+            backapi:
                 application: zed
                 endpoints:
                     backend-api.de.b2c-staging-eu.cloud.spryker.toys:
@@ -147,7 +147,7 @@ groups:
                     backend-api.at.b2c-staging-eu.cloud.spryker.toys:
                         store: AT
                         entry-point: BackendApi
-            glue_eu:
+            glue:
                 application: glue
                 endpoints:
                     glue.de.b2c-staging-eu.cloud.spryker.toys:
