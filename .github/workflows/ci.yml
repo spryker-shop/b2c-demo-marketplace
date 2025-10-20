@@ -402,7 +402,7 @@ jobs:
             -   name: Run Tests
                 run: |
                     docker/sdk exec cypress-tests cp .env.dynamic-store.example .env
-                    docker/sdk exec cypress-tests git log -2
+#                    docker/sdk exec cypress-tests git log -2
                     docker/sdk exec cypress-tests npx cypress install
                     docker/sdk exec --env "ENV_REPOSITORY_ID=b2c-mp" cypress-tests npm run cy:ci
 
