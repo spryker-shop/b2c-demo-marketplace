@@ -108,7 +108,7 @@ services:
     key_value_store:
         engine: valkey
     search:
-        engine: elastic
+        engine: opensearch
         version: 7.6
 
 docker:
