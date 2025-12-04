@@ -190,7 +190,6 @@
         "spryker/glue-backend-api-application-glue-json-api-convention-connector": "^1.0.0",
         "spryker/glue-storefront-api-application-authorization-connector": "^1.1.0",
         "spryker/glue-storefront-api-application-glue-json-api-convention-connector": "^1.0.0",
-        "spryker/gui": "^4.0",
         "spryker/merchant-app-merchant-portal-gui": "^1.2.1",
         "spryker/merchant-categories-rest-api": "^1.0.0",
         "spryker/merchant-discount-connector": "^1.0.0",
