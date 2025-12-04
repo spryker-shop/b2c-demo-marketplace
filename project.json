@@ -23,13 +23,27 @@
                 "assets": [
                     {
                         "glob": "*/src/Spryker/Zed/*/Presentation/Components/assets/**/*",
-                        "input": "vendor/spryker/spryker/Bundles",
-                        "output": "/assets/"
+                        "input": "vendor/spryker",
+                        "output": "/assets/",
+                        "ignore": ["**/.gitkeep"]
                     },
                     {
                         "glob": "*/Presentation/Components/assets/**/*",
                         "input": "src/Pyz/Zed",
-                        "output": "/assets/"
+                        "output": "/assets/",
+                        "ignore": ["**/.gitkeep"]
+                    },
+                    {
+                        "glob": "*/data/files/**/*",
+                        "input": "vendor/spryker",
+                        "output": "/static/",
+                        "ignore": ["**/.gitkeep"]
+                    },
+                    {
+                        "glob": "*/data/files/**/*",
+                        "input": "src/Pyz/Zed",
+                        "output": "/static/",
+                        "ignore": ["**/.gitkeep"]
                     }
                 ],
                 "styles": [
