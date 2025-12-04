@@ -11,6 +11,7 @@ namespace Pyz\Zed\DataImportMerchantPortalGui;
 
 use Spryker\Zed\DataImportMerchantPortalGui\DataImportMerchantPortalGuiConfig as SprykerDataImportMerchantPortalGuiConfig;
 use Spryker\Zed\MerchantProductDataImport\MerchantProductDataImportConfig;
+use Spryker\Zed\MerchantProductOfferDataImport\MerchantProductOfferDataImportConfig;
 
 class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalGuiConfig
 {
@@ -21,6 +22,7 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
     {
         return [
             MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT,
+            MerchantProductOfferDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT_OFFER,
         ];
     }
 
@@ -30,7 +32,8 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
     public function getDataImportTemplates(): array
     {
         return [
-            'CSV template Product' => 'js/static/MerchantProductDataImport/data/files/combined_product.csv',
+            'CSV template Product' => 'js/static/merchant-product-data-import/data/files/combined_product.csv',
+            'CSV template Product Offer' => 'js/static/merchant-product-offer-data-import/data/files/combined_product_offer.csv',
         ];
     }
 }
