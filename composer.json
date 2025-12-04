@@ -20,7 +20,7 @@
         "spryker-feature/acl": "^202507.0",
         "spryker-feature/agent-assist": "dev-master as 202507.0",
         "spryker-feature/alternative-products": "dev-master as 202507.0",
-        "spryker-feature/analytics": "202507.0",
+        "spryker-feature/analytics": "^202507.0",
         "spryker-feature/availability-notification": "^202507.0",
         "spryker-feature/cart": "^202507.0",
         "spryker-feature/catalog": "^202507.0",
