@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4e750d0c3285e338dcf3db98594847e",
+    "content-hash": "be3480e3a5e3625d5f1ef98e02ea9a96",
     "packages": [
         {
             "name": "async-aws/core",
@@ -78140,6 +78140,61 @@
                 "source": "https://github.com/spryker/testify/tree/3.61.0"
             },
             "time": "2025-06-19T14:15:15+00:00"
+        },
+        {
+            "name": "spryker/testify-backend-api",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/testify-backend-api.git",
+                "reference": "5bcfba30c4d6d54af8cdca02a7342c25085fda24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/testify-backend-api/zipball/5bcfba30c4d6d54af8cdca02a7342c25085fda24",
+                "reference": "5bcfba30c4d6d54af8cdca02a7342c25085fda24",
+                "shasum": ""
+            },
+            "require": {
+                "codeception/codeception": "^5.0.2",
+                "php": ">=8.2",
+                "spryker/event-behavior": "^1.0.0",
+                "spryker/glue-json-api-convention-extension": "^1.0.0",
+                "spryker/kernel": "^3.73.0",
+                "spryker/log": "^3.0.0",
+                "spryker/queue": "^1.0.0",
+                "spryker/symfony": "^3.0.0",
+                "spryker/testify": "^3.0.0",
+                "spryker/transfer": "^3.42.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/glue-application": "*"
+            },
+            "suggest": {
+                "spryker/glue-application": "If you want to use plugins with glue application."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/",
+                    "SprykerTest\\Shared\\TestifyBackendApi\\Helper\\": "tests/SprykerTest/Shared/TestifyBackendApi/Helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "TestifyBackendApi module",
+            "support": {
+                "source": "https://github.com/spryker/testify-backend-api/tree/0.1.1"
+            },
+            "time": "2025-08-04T12:18:59+00:00"
         },
         {
             "name": "spryker/web-profiler",
