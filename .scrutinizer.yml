@@ -1,10 +1,15 @@
 build:
     image: default-jammy
     environment:
-        php: '8.2'
-        node: 'v18.17'
+        php:
+            version: 8.3.28
+
+        node: 'v18.20'
 
     dependencies:
+        override:
+            - composer install --ignore-platform-reqs --no-interaction --no-scripts # disable PHP dependency (pecl modules) installation
+
         before:
             - 'npm cache clean --force'
             - 'rm -rf node_modules'
