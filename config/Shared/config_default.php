@@ -82,6 +82,7 @@ use Spryker\Shared\Log\LogConstants;
 use Spryker\Shared\Mail\MailConstants;
 use Spryker\Shared\MerchantPortalApplication\MerchantPortalConstants;
 use Spryker\Shared\MerchantProductDataImport\MerchantProductDataImportConstants;
+use Spryker\Shared\MerchantProductOfferDataImport\MerchantProductOfferDataImportConstants;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\MessageBrokerAws\MessageBrokerAwsConstants;
 use Spryker\Shared\Monitoring\MonitoringConstants;
@@ -654,6 +655,8 @@ $config[SymfonyMailerConstants::SMTP_USERNAME] = getenv('SPRYKER_SMTP_USERNAME')
 $config[SymfonyMailerConstants::SMTP_PASSWORD] = getenv('SPRYKER_SMTP_PASSWORD') ?: null;
 
 // >>> FILESYSTEM
+$awsRegion = getenv('AWS_REGION') ?: 'eu-central-1';
+
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     SitemapConstants::FILESYSTEM_NAME => [
         'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
@@ -671,7 +674,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'key' => '',
         'secret' => '',
         'bucket' => '',
-        'region' => 'eu-central-1',
+        'region' => $awsRegion,
     ],
     'files-import' => [
         'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
@@ -691,11 +694,21 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'root' => '/',
         'path' => '/',
         'version' => 'latest',
-        'region' => getenv('AWS_REGION') ?: 'eu-central-1',
+        'region' => $awsRegion,
+    ],
+    'merchant-product-offer-data-import-files' => [
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_KEY') ?: '',
+        'bucket' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_BUCKET') ?: '',
+        'secret' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_SECRET') ?: '',
+        'path' => '/merchant-product-offer-data-import-files',
+        'version' => 'latest',
+        'region' => $awsRegion,
     ],
 ];
 $config[FileManagerConstants::STORAGE_NAME] = 'files';
 $config[MerchantProductDataImportConstants::FILE_SYSTEM_NAME] = 'merchant-product-data-import-files';
+$config[MerchantProductOfferDataImportConstants::FILE_SYSTEM_NAME] = 'merchant-product-offer-data-import-files';
 $config[FileManagerGuiConstants::DEFAULT_FILE_MAX_SIZE] = '10M';
 
 // ----------------------------------------------------------------------------
