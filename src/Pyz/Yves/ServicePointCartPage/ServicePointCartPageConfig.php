@@ -15,7 +15,7 @@ use SprykerShop\Yves\ServicePointCartPage\ServicePointCartPageConfig as SprykerS
 class ServicePointCartPageConfig extends SprykerServicePointCartPageConfig
 {
     /**
-     * @var list<string>
+     * @return list<string>
      */
     public function getQuoteItemFieldsAllowedForReset(): array
     {
