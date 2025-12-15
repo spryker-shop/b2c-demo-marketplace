@@ -6245,17 +6245,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-feature/acl.git",
-                "reference": "804bf3d224aa3385f48cdbb249aab5c75ae6dc29"
+                "reference": "682fd09bae04f60f5eec8cba1ff510a45f457e0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-feature/acl/zipball/804bf3d224aa3385f48cdbb249aab5c75ae6dc29",
-                "reference": "804bf3d224aa3385f48cdbb249aab5c75ae6dc29",
+                "url": "https://api.github.com/repos/spryker-feature/acl/zipball/682fd09bae04f60f5eec8cba1ff510a45f457e0c",
+                "reference": "682fd09bae04f60f5eec8cba1ff510a45f457e0c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
                 "spryker/acl": "^3.23.0",
+                "spryker/acl-data-import": "^0.1.0",
                 "spryker/acl-entity": "^1.13.0",
                 "spryker/acl-entity-data-import": "^0.2.0"
             },
@@ -6263,7 +6264,7 @@
             "type": "metapackage",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "202510.x-dev"
+                    "dev-master": "202512.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6274,7 +6275,7 @@
             "support": {
                 "source": "https://github.com/spryker-feature/acl/tree/master"
             },
-            "time": "2025-08-04T10:50:36+00:00"
+            "time": "2025-12-15T12:57:25+00:00"
         },
         {
             "name": "spryker-feature/agent-assist",
@@ -17977,6 +17978,52 @@
                 "source": "https://github.com/spryker/acl/tree/3.25.1"
             },
             "time": "2025-12-09T10:40:33+00:00"
+        },
+        {
+            "name": "spryker/acl-data-import",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spryker/acl-data-import.git",
+                "reference": "fef265e5b4a7158e038428214e317b3eab20c5c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spryker/acl-data-import/zipball/fef265e5b4a7158e038428214e317b3eab20c5c7",
+                "reference": "fef265e5b4a7158e038428214e317b3eab20c5c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "spryker/acl": "^3.8.0",
+                "spryker/data-import": "^1.14.0",
+                "spryker/kernel": "^3.30.0"
+            },
+            "require-dev": {
+                "spryker/code-sniffer": "*",
+                "spryker/propel": "*",
+                "spryker/testify": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spryker\\": "src/Spryker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "AclDataImport module",
+            "support": {
+                "source": "https://github.com/spryker/acl-data-import/tree/0.1.2"
+            },
+            "time": "2025-08-04T08:52:14+00:00"
         },
         {
             "name": "spryker/acl-entity",
@@ -73536,16 +73583,16 @@
         },
         {
             "name": "codeception/lib-innerbrowser",
-            "version": "4.0.7",
+            "version": "4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-innerbrowser.git",
-                "reference": "cf2ddaae5e07eb3cceb504d93bd95f4a2d892dab"
+                "reference": "ea25ea6745941781861eb4509d134c97685fc833"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/cf2ddaae5e07eb3cceb504d93bd95f4a2d892dab",
-                "reference": "cf2ddaae5e07eb3cceb504d93bd95f4a2d892dab",
+                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/ea25ea6745941781861eb4509d134c97685fc833",
+                "reference": "ea25ea6745941781861eb4509d134c97685fc833",
                 "shasum": ""
             },
             "require": {
@@ -73556,11 +73603,11 @@
                 "ext-mbstring": "*",
                 "php": "^8.1",
                 "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
-                "symfony/browser-kit": "^4.4.24 || ^5.4 || ^6.0 || ^7.0",
-                "symfony/dom-crawler": "^4.4.30 || ^5.4 || ^6.0 || ^7.0"
+                "symfony/browser-kit": "^4.4.24 || ^5.4 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/dom-crawler": "^4.4.30 || ^5.4 || ^6.0 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "codeception/util-universalframework": "^1.0"
+                "codeception/util-universalframework": "^1.0 || ^2.0"
             },
             "type": "library",
             "autoload": {
@@ -73589,9 +73636,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/lib-innerbrowser/issues",
-                "source": "https://github.com/Codeception/lib-innerbrowser/tree/4.0.7"
+                "source": "https://github.com/Codeception/lib-innerbrowser/tree/4.0.8"
             },
-            "time": "2025-10-23T05:52:19+00:00"
+            "time": "2025-12-15T13:07:50+00:00"
         },
         {
             "name": "codeception/lib-web",
