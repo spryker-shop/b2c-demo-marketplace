@@ -12566,16 +12566,16 @@
         },
         {
             "name": "spryker-shop/error-page",
-            "version": "1.10.1",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-shop/error-page.git",
-                "reference": "1b89ffa2fa39ed0e22b892f9600e95db5f648a41"
+                "reference": "306a5e6eeb2a4e68e56fe9aa3722ccc1f81b243c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-shop/error-page/zipball/1b89ffa2fa39ed0e22b892f9600e95db5f648a41",
-                "reference": "1b89ffa2fa39ed0e22b892f9600e95db5f648a41",
+                "url": "https://api.github.com/repos/spryker-shop/error-page/zipball/306a5e6eeb2a4e68e56fe9aa3722ccc1f81b243c",
+                "reference": "306a5e6eeb2a4e68e56fe9aa3722ccc1f81b243c",
                 "shasum": ""
             },
             "require": {
@@ -12617,9 +12617,9 @@
             ],
             "description": "ErrorPage module",
             "support": {
-                "source": "https://github.com/spryker-shop/error-page/tree/1.10.1"
+                "source": "https://github.com/spryker-shop/error-page/tree/1.11.0"
             },
-            "time": "2025-11-04T15:17:04+00:00"
+            "time": "2026-02-16T12:55:41+00:00"
         },
         {
             "name": "spryker-shop/error-page-extension",
@@ -19632,16 +19632,16 @@
         },
         {
             "name": "spryker/availability-cart-connector",
-            "version": "7.6.0",
+            "version": "7.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/availability-cart-connector.git",
-                "reference": "2e6456120b5acb5295f717fdd0159bee76fe626b"
+                "reference": "2e3579ed733305be07bd5009382f09ca65eef29b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/availability-cart-connector/zipball/2e6456120b5acb5295f717fdd0159bee76fe626b",
-                "reference": "2e6456120b5acb5295f717fdd0159bee76fe626b",
+                "url": "https://api.github.com/repos/spryker/availability-cart-connector/zipball/2e3579ed733305be07bd5009382f09ca65eef29b",
+                "reference": "2e3579ed733305be07bd5009382f09ca65eef29b",
                 "shasum": ""
             },
             "require": {
@@ -19684,9 +19684,9 @@
             ],
             "description": "AvailabilityCartConnector module",
             "support": {
-                "source": "https://github.com/spryker/availability-cart-connector/tree/7.6.0"
+                "source": "https://github.com/spryker/availability-cart-connector/tree/7.7.0"
             },
-            "time": "2026-02-12T08:48:01+00:00"
+            "time": "2026-02-16T14:30:14+00:00"
         },
         {
             "name": "spryker/availability-cart-connector-extension",
@@ -30837,16 +30837,16 @@
         },
         {
             "name": "spryker/error-handler",
-            "version": "2.12.0",
+            "version": "2.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/error-handler.git",
-                "reference": "b23037405cf0c2a8b6694f409ce6f128de8dfcd7"
+                "reference": "90d99ef3aab62a3eec7adc045b97d3ecf58cfdc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/error-handler/zipball/b23037405cf0c2a8b6694f409ce6f128de8dfcd7",
-                "reference": "b23037405cf0c2a8b6694f409ce6f128de8dfcd7",
+                "url": "https://api.github.com/repos/spryker/error-handler/zipball/90d99ef3aab62a3eec7adc045b97d3ecf58cfdc1",
+                "reference": "90d99ef3aab62a3eec7adc045b97d3ecf58cfdc1",
                 "shasum": ""
             },
             "require": {
@@ -30892,9 +30892,9 @@
             ],
             "description": "ErrorHandler module",
             "support": {
-                "source": "https://github.com/spryker/error-handler/tree/2.12.0"
+                "source": "https://github.com/spryker/error-handler/tree/2.13.0"
             },
-            "time": "2026-02-02T12:03:42+00:00"
+            "time": "2026-02-16T12:55:41+00:00"
         },
         {
             "name": "spryker/error-handler-extension",
@@ -78491,7 +78491,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "bc61166003bd84b5922c668f4014673fb898740a"
+                "reference": "222cb011ee3f92353a6dda5fef907481cb24bb27"
             },
             "bin": [
                 "bin/run-robot-suite-tests.sh"
@@ -78501,7 +78501,7 @@
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2026-02-16T10:37:23+00:00"
+            "time": "2026-02-16T15:30:36+00:00"
         },
         {
             "name": "spryker/testify",
