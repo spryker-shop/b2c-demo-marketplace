@@ -16,6 +16,7 @@
             currencyIsoCode: data.merchantProductView.price.currency.code | default(null),
             isRadioButtonVisible: data.isRadioButtonVisible,
             currentProductPrice: data.merchantProductView.price,
+            pageReload: data.pageReload, 
         },
     } only %}
 {% endblock %}
