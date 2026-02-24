@@ -12,7 +12,9 @@
     $transition: null;
 
     @each $prop in $props {
-        $transition: $prop $duration $ease, $transition;
+        $transition:
+            $prop $duration $ease,
+            $transition;
     }
     transition: $transition;
 

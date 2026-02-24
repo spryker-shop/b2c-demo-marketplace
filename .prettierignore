@@ -1,6 +1,5 @@
 # Ignore paths
 /.github/
-/.angular/
 /.idea/
 /docker/
 /vendor/
@@ -10,3 +9,5 @@
 /src/Orm/Propel/Schema/
 /package-lock.json
 .nx/cache
+**/*.xml
+**/.angular/

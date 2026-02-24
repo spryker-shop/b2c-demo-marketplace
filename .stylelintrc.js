@@ -11,5 +11,6 @@ module.exports = {
         'scss/at-import-partial-extension': null,
         'selector-class-pattern': null,
         'scss/at-rule-conditional-no-parentheses': null,
+        'nesting-selector-no-missing-scoping-root': null,
     },
 };

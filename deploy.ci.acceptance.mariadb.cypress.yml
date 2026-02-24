@@ -23,8 +23,8 @@ image:
         SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY: 'UK6DywwjKITPpRHBSY9TLPIXm6BPrHX40sseIoXT9c8'
         SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT: 'https://spryker.com'
     node:
-        version: 18
-        npm: 9
+        version: 20
+        npm: 10
 
 composer:
     mode: '--dev --quiet -o -a'
