@@ -105,9 +105,7 @@ integrator.lock
 docker
 
 # angular
-/.angular/cache
-/.angular
-.nx/cache
+**/.angular/
 
 # Generated icon sprite
 /frontend/assets/global/default/icons/sprite.svg
