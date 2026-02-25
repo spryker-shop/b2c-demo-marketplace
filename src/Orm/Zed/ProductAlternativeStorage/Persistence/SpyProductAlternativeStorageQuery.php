@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace Orm\Zed\ProductAlternativeStorage\Persistence;
 
-use Orm\Zed\ProductAlternativeStorage\Persistence\Base\SpyProductAlternativeStorageQuery as BaseSpyProductAlternativeStorageQuery;
+use Spryker\Zed\ProductAlternativeStorage\Persistence\Propel\AbstractSpyProductAlternativeStorageQuery as BaseSpyProductAlternativeStorageQuery;
 
 /**
  * Skeleton subclass for performing query and update operations on the 'spy_product_alternative_storage' table.

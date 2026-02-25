@@ -9,10 +9,10 @@ declare(strict_types = 1);
 
 namespace Orm\Zed\ProductAlternativeStorage\Persistence;
 
-use Orm\Zed\ProductAlternativeStorage\Persistence\Base\SpyProductReplacementForStorage as BaseSpyProductReplacementForStorage;
+use Spryker\Zed\ProductAlternativeStorage\Persistence\Propel\AbstractSpyProductReplacementForStorage as BaseSpyProductReplacementStorage;
 
 /**
- * Skeleton subclass for representing a row from the 'spy_product_replacement_for_storage' table.
+ * Skeleton subclass for representing a row from the 'spy_product_replacement_storage' table.
  *
  *
  *
@@ -20,6 +20,6 @@ use Orm\Zed\ProductAlternativeStorage\Persistence\Base\SpyProductReplacementForS
  * application requirements. This class will only be generated as
  * long as it does not already exist in the output directory.
  */
-class SpyProductReplacementForStorage extends BaseSpyProductReplacementForStorage
+class SpyProductReplacementForStorage extends BaseSpyProductReplacementStorage
 {
 }
