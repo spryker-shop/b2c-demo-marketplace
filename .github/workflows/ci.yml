@@ -209,6 +209,7 @@ jobs:
                 if: always()
 
     php-84-mariadb-acceptance-alpine:
+        needs: [js-validation, validation]
         name: "[run-ui-ci] PHP 8.4 / MariaDB / Acceptance & API / Alpine"
         runs-on: ubuntu-latest
         env:
@@ -243,6 +244,7 @@ jobs:
                 if: always()
 
     php-84-mariadb-functional-alpine:
+        needs: [validation]
         name: "[run-functional-ci] PHP 8.4 / MariaDB / Functional / Alpine"
         runs-on: ubuntu-latest
         env:
@@ -290,6 +292,7 @@ jobs:
                 if: always()
 
     docker-alpine-php-84-mariadb-robot:
+        needs: [validation]
         name: "[run-api-ci] PHP 8.4 / MariaDB / Robot / API"
         runs-on: ubuntu-latest
         env:
@@ -336,6 +339,7 @@ jobs:
                 if: always()
 
     docker-alpine-php-84-mariadb-cypress:
+        needs: [js-validation, validation]
         name: "[run-ui-ci] PHP 8.4 / MariaDB / Cypress / UI"
         runs-on: ubuntu-latest
         env:
@@ -385,6 +389,7 @@ jobs:
                 if: always()
 
     docker-alpine-php-84-mariadb-robot-ui:
+        needs: [js-validation, validation]
         name: "[run-ui-ci] PHP 8.4 / MariaDB / Robot / UI"
         runs-on: ubuntu-latest
         env:
