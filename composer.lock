@@ -49282,16 +49282,16 @@
         },
         {
             "name": "spryker/product-offer-gui",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-offer-gui.git",
-                "reference": "2895d332544f6b6591d4801c26ba4fd58ac62fb0"
+                "reference": "f02a0c1624608e46a18c8642c9dc1d78e76140ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-offer-gui/zipball/2895d332544f6b6591d4801c26ba4fd58ac62fb0",
-                "reference": "2895d332544f6b6591d4801c26ba4fd58ac62fb0",
+                "url": "https://api.github.com/repos/spryker/product-offer-gui/zipball/f02a0c1624608e46a18c8642c9dc1d78e76140ae",
+                "reference": "f02a0c1624608e46a18c8642c9dc1d78e76140ae",
                 "shasum": ""
             },
             "require": {
@@ -49333,9 +49333,9 @@
             ],
             "description": "ProductOfferGui module",
             "support": {
-                "source": "https://github.com/spryker/product-offer-gui/tree/2.0.1"
+                "source": "https://github.com/spryker/product-offer-gui/tree/2.1.0"
             },
-            "time": "2025-12-09T14:55:34+00:00"
+            "time": "2026-02-27T12:50:38+00:00"
         },
         {
             "name": "spryker/product-offer-gui-extension",
