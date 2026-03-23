@@ -22,12 +22,4 @@
         <controller>agent-user-management</controller>
         <action>set-up</action>
     </set-up-multi-factor-auth-agent>
-    <logout>
-        <label>Logout</label>
-        <title>Logout</title>
-        <bundle>security-merchant-portal-gui</bundle>
-        <controller>logout</controller>
-        <action>index</action>
-        <type>danger</type>
-    </logout>
 </config>
