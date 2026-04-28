@@ -651,7 +651,7 @@ class AclQueryDirectorTester extends Actor
         );
     }
 
-     public function clearAclQueryScopeResolverCache(): void
+    public function clearAclQueryScopeResolverCache(): void
     {
         $reflectionClass = new ReflectionClass(AclQueryScopeResolver::class);
         $cacheProperty = $reflectionClass->getProperty('cache');
