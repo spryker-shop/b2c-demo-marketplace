@@ -55,6 +55,7 @@ class SegmentAclQueryScopeTest extends Unit
 
         $this->tester->setDependency(MerchantDependencyProvider::PLUGINS_MERCHANT_POST_CREATE, []);
 
+        $this->tester->clearAclQueryScopeResolverCache();
         $this->tester->deleteTestData();
     }
 

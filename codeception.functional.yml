@@ -2,8 +2,7 @@ namespace: PyzTest
 actor: Tester
 
 include:
-    - tests/PyzTest/Zed/*
-    - tests/PyzTest/Yves/*
+    - tests/PyzTest/Zed/AclEntity
 
 paths:
     tests: tests

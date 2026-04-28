@@ -50,7 +50,8 @@ class CompositeEntityTest extends Unit
     protected function setUp(): void
     {
         parent::setUp();
-
+        
+        $this->tester->clearAclQueryScopeResolverCache();
         $this->tester->deleteTestData();
     }
 

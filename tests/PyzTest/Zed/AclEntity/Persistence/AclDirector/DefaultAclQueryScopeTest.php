@@ -58,6 +58,7 @@ class DefaultAclQueryScopeTest extends Unit
             (new AclRoleCriteriaTransfer())->setNames([AclQueryDirectorTester::ACL_ROLE_1_NAME]),
         );
 
+        $this->tester->clearAclQueryScopeResolverCache();
         $this->tester->cleanCache();
     }
 
