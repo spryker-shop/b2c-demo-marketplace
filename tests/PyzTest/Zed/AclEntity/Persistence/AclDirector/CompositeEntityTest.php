@@ -51,6 +51,7 @@ class CompositeEntityTest extends Unit
     {
         parent::setUp();
 
+        $this->tester->clearAclQueryScopeResolverCache();
         $this->tester->deleteTestData();
     }
 

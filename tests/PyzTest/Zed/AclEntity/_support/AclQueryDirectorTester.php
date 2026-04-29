@@ -52,6 +52,7 @@ use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclModelDirector;
 use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclModelDirectorInterface;
 use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclQueryDirector;
 use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\AclQueryDirectorInterface;
+use Spryker\Zed\AclEntity\Persistence\Propel\AclDirector\StrategyResolver\AclQueryScopeResolver;
 use Spryker\Zed\AclEntity\Persistence\Propel\Provider\AclEntityRuleProvider;
 use Spryker\Zed\AclEntity\Persistence\Propel\Provider\AclRoleProvider;
 use Spryker\Zed\AclEntity\Persistence\Propel\Provider\AclRoleProviderInterface;
@@ -648,5 +649,12 @@ class AclQueryDirectorTester extends Actor
                 'cache' => null,
             ],
         );
+    }
+
+    public function clearAclQueryScopeResolverCache(): void
+    {
+        $reflectionClass = new ReflectionClass(AclQueryScopeResolver::class);
+        $cacheProperty = $reflectionClass->getProperty('cache');
+        $cacheProperty->setValue(null, []);
     }
 }
