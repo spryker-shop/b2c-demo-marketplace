@@ -431,7 +431,6 @@ $config[SearchElasticsearchConstants::FULL_TEXT_BOOSTED_BOOSTING_VALUE] = 3;
 // >>> STORAGE
 
 $keyValueRegionNamespaces = json_decode(getenv('SPRYKER_KEY_VALUE_STORE_CONNECTIONS') ?: '[]', true);
-$namespaceKey = defined('APPLICATION_REGION') ? APPLICATION_REGION : APPLICATION_STORE;
 $config[StorageConstants::STORAGE_KV_SOURCE] = getenv('SPRYKER_KEY_VALUE_STORE_ENGINE') ? strtolower(getenv('SPRYKER_KEY_VALUE_STORE_ENGINE')) : 'redis';
 $config[RedisConstants::REDIS_COMPRESSION_ENABLED] = getenv('SPRYKER_KEY_VALUE_COMPRESSING_ENABLED') ?: true;
 $config[StorageRedisConstants::STORAGE_REDIS_PERSISTENT_CONNECTION] = true;
