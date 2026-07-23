@@ -340,7 +340,7 @@
         "spryker-sdk/phpstan-spryker": "^0.5.1",
         "spryker/architecture-sniffer": "^0.5.10",
         "spryker/code-sniffer": "^0.17.32",
-        "spryker/cypress-tests": "dev-cherry-pick/frw-11739-to-release-202512.0",
+        "spryker/cypress-tests": "dev-release_202512.0_state",
         "spryker/docker-chromedriver": "dev-master",
         "spryker/profiler": "^0.1.3",
         "spryker/robotframework-suite-tests": "dev-release_202512.0_state",
