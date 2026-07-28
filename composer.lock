@@ -255,16 +255,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.389.1",
+            "version": "3.388.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "98506321be0157d78a2c44424a8fce3a4842081d"
+                "reference": "9eca8f6408501a47efe5dee2ce494b93eac983a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/98506321be0157d78a2c44424a8fce3a4842081d",
-                "reference": "98506321be0157d78a2c44424a8fce3a4842081d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9eca8f6408501a47efe5dee2ce494b93eac983a6",
+                "reference": "9eca8f6408501a47efe5dee2ce494b93eac983a6",
                 "shasum": ""
             },
             "require": {
@@ -272,9 +272,9 @@
                 "ext-json": "*",
                 "ext-pcre": "*",
                 "ext-simplexml": "*",
-                "guzzlehttp/guzzle": "^7.8.2 || ^8.0",
-                "guzzlehttp/promises": "^2.0.3 || ^3.0",
-                "guzzlehttp/psr7": "^2.6.3 || ^3.0",
+                "guzzlehttp/guzzle": "^7.4.5",
+                "guzzlehttp/promises": "^2.0",
+                "guzzlehttp/psr7": "^2.4.5",
                 "mtdowling/jmespath.php": "^2.9.1",
                 "php": ">=8.1",
                 "psr/http-message": "^1.0 || ^2.0",
@@ -346,9 +346,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.389.1"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.388.12"
             },
-            "time": "2026-07-27T18:09:06+00:00"
+            "time": "2026-07-22T18:05:00+00:00"
         },
         {
             "name": "brick/math",
@@ -1569,16 +1569,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.15.2",
+            "version": "7.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "744101956d78b7c1384d0cbf379db13e859167bf"
+                "reference": "61443dfb33c62f308ee8add20f45b4d6e4bf8d2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/744101956d78b7c1384d0cbf379db13e859167bf",
-                "reference": "744101956d78b7c1384d0cbf379db13e859167bf",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/61443dfb33c62f308ee8add20f45b4d6e4bf8d2f",
+                "reference": "61443dfb33c62f308ee8add20f45b4d6e4bf8d2f",
                 "shasum": ""
             },
             "require": {
@@ -1677,7 +1677,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.15.2"
+                "source": "https://github.com/guzzle/guzzle/tree/7.15.1"
             },
             "funding": [
                 {
@@ -1693,7 +1693,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-26T23:23:20+00:00"
+            "time": "2026-07-18T11:23:11+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -20601,16 +20601,16 @@
         },
         {
             "name": "spryker/cart",
-            "version": "7.18.0",
+            "version": "7.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cart.git",
-                "reference": "47d0ebf8a5836517a23c1e9997701f3a74c28f22"
+                "reference": "988cbdb80888c87114c1c76b60e275bcf6e8d93d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/cart/zipball/47d0ebf8a5836517a23c1e9997701f3a74c28f22",
-                "reference": "47d0ebf8a5836517a23c1e9997701f3a74c28f22",
+                "url": "https://api.github.com/repos/spryker/cart/zipball/988cbdb80888c87114c1c76b60e275bcf6e8d93d",
+                "reference": "988cbdb80888c87114c1c76b60e275bcf6e8d93d",
                 "shasum": ""
             },
             "require": {
@@ -20662,9 +20662,9 @@
             ],
             "description": "Cart module",
             "support": {
-                "source": "https://github.com/spryker/cart/tree/7.18.0"
+                "source": "https://github.com/spryker/cart/tree/7.17.0"
             },
-            "time": "2026-07-24T10:44:03+00:00"
+            "time": "2026-04-26T19:28:31+00:00"
         },
         {
             "name": "spryker/cart-code",
@@ -22622,16 +22622,16 @@
         },
         {
             "name": "spryker/category-page-search",
-            "version": "2.7.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/category-page-search.git",
-                "reference": "7e62e4b52946c05f1f45bfd88ff6e98d59d397bb"
+                "reference": "89ba7fe1a2ad0d53d36f693dc8a3e56a6bc382d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/category-page-search/zipball/7e62e4b52946c05f1f45bfd88ff6e98d59d397bb",
-                "reference": "7e62e4b52946c05f1f45bfd88ff6e98d59d397bb",
+                "url": "https://api.github.com/repos/spryker/category-page-search/zipball/89ba7fe1a2ad0d53d36f693dc8a3e56a6bc382d1",
+                "reference": "89ba7fe1a2ad0d53d36f693dc8a3e56a6bc382d1",
                 "shasum": ""
             },
             "require": {
@@ -22684,9 +22684,9 @@
             ],
             "description": "CategoryPageSearch module",
             "support": {
-                "source": "https://github.com/spryker/category-page-search/tree/2.7.0"
+                "source": "https://github.com/spryker/category-page-search/tree/2.6.0"
             },
-            "time": "2026-07-23T14:42:31+00:00"
+            "time": "2026-03-12T19:45:37+00:00"
         },
         {
             "name": "spryker/category-page-search-extension",
@@ -24494,16 +24494,16 @@
         },
         {
             "name": "spryker/cms-page-search",
-            "version": "2.11.0",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cms-page-search.git",
-                "reference": "5de51afb3a5d07372c04575f404bdfb24abad6d9"
+                "reference": "6f1840ae2323e319a5d4ac015c0e8fb5ff2cbc89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/cms-page-search/zipball/5de51afb3a5d07372c04575f404bdfb24abad6d9",
-                "reference": "5de51afb3a5d07372c04575f404bdfb24abad6d9",
+                "url": "https://api.github.com/repos/spryker/cms-page-search/zipball/6f1840ae2323e319a5d4ac015c0e8fb5ff2cbc89",
+                "reference": "6f1840ae2323e319a5d4ac015c0e8fb5ff2cbc89",
                 "shasum": ""
             },
             "require": {
@@ -24553,9 +24553,9 @@
             ],
             "description": "CmsPageSearch module",
             "support": {
-                "source": "https://github.com/spryker/cms-page-search/tree/2.11.0"
+                "source": "https://github.com/spryker/cms-page-search/tree/2.10.0"
             },
-            "time": "2026-07-23T14:42:31+00:00"
+            "time": "2026-04-01T12:34:00+00:00"
         },
         {
             "name": "spryker/cms-pages-content-banners-resource-relationship",
@@ -26489,16 +26489,16 @@
         },
         {
             "name": "spryker/configurable-bundle-page-search",
-            "version": "1.7.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/configurable-bundle-page-search.git",
-                "reference": "50db9a8446f7e5132b04dca336c35fea11bb4efc"
+                "reference": "cdae10a1d38ebebd4a4ffc205ccba2ba9e0e07e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/configurable-bundle-page-search/zipball/50db9a8446f7e5132b04dca336c35fea11bb4efc",
-                "reference": "50db9a8446f7e5132b04dca336c35fea11bb4efc",
+                "url": "https://api.github.com/repos/spryker/configurable-bundle-page-search/zipball/cdae10a1d38ebebd4a4ffc205ccba2ba9e0e07e2",
+                "reference": "cdae10a1d38ebebd4a4ffc205ccba2ba9e0e07e2",
                 "shasum": ""
             },
             "require": {
@@ -26549,9 +26549,9 @@
             ],
             "description": "ConfigurableBundlePageSearch module",
             "support": {
-                "source": "https://github.com/spryker/configurable-bundle-page-search/tree/1.7.0"
+                "source": "https://github.com/spryker/configurable-bundle-page-search/tree/1.6.0"
             },
-            "time": "2026-07-23T14:42:31+00:00"
+            "time": "2026-04-01T12:34:00+00:00"
         },
         {
             "name": "spryker/configurable-bundle-page-search-extension",
@@ -38137,20 +38137,20 @@
         },
         {
             "name": "spryker/merchant-search",
-            "version": "1.3.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/merchant-search.git",
-                "reference": "5aeba6964dd4ed145f4c7e3209ea8f93c46cdb13"
+                "reference": "cd969f0dae432da43200239f8d13768f01c316b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/merchant-search/zipball/5aeba6964dd4ed145f4c7e3209ea8f93c46cdb13",
-                "reference": "5aeba6964dd4ed145f4c7e3209ea8f93c46cdb13",
+                "url": "https://api.github.com/repos/spryker/merchant-search/zipball/cd969f0dae432da43200239f8d13768f01c316b2",
+                "reference": "cd969f0dae432da43200239f8d13768f01c316b2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3",
+                "php": ">=8.2",
                 "spryker/event-behavior": "^1.0.0",
                 "spryker/kernel": "^3.33.0",
                 "spryker/merchant": "^3.1.0",
@@ -38197,9 +38197,9 @@
             ],
             "description": "MerchantSearch module",
             "support": {
-                "source": "https://github.com/spryker/merchant-search/tree/1.3.0"
+                "source": "https://github.com/spryker/merchant-search/tree/1.2.0"
             },
-            "time": "2026-07-23T14:42:31+00:00"
+            "time": "2025-08-04T10:53:26+00:00"
         },
         {
             "name": "spryker/merchant-search-extension",
@@ -53352,16 +53352,16 @@
         },
         {
             "name": "spryker/product-set-page-search",
-            "version": "1.15.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/product-set-page-search.git",
-                "reference": "f0dda228c46d49ee0cdff2eea7bcf8f276175388"
+                "reference": "1f2d5a0700f85988c66daf170ea1e21d316cd8ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/product-set-page-search/zipball/f0dda228c46d49ee0cdff2eea7bcf8f276175388",
-                "reference": "f0dda228c46d49ee0cdff2eea7bcf8f276175388",
+                "url": "https://api.github.com/repos/spryker/product-set-page-search/zipball/1f2d5a0700f85988c66daf170ea1e21d316cd8ac",
+                "reference": "1f2d5a0700f85988c66daf170ea1e21d316cd8ac",
                 "shasum": ""
             },
             "require": {
@@ -53416,9 +53416,9 @@
             ],
             "description": "ProductSetPageSearch module",
             "support": {
-                "source": "https://github.com/spryker/product-set-page-search/tree/1.15.0"
+                "source": "https://github.com/spryker/product-set-page-search/tree/1.14.0"
             },
-            "time": "2026-07-23T14:42:31+00:00"
+            "time": "2026-04-01T12:34:00+00:00"
         },
         {
             "name": "spryker/product-set-storage",
@@ -57935,20 +57935,20 @@
         },
         {
             "name": "spryker/sales-return-search",
-            "version": "1.4.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/sales-return-search.git",
-                "reference": "422893194d0bb54585602515229ff81da63bb16e"
+                "reference": "ae0dff7876b0bb74d05ca8b7f84f83e35ca73691"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/sales-return-search/zipball/422893194d0bb54585602515229ff81da63bb16e",
-                "reference": "422893194d0bb54585602515229ff81da63bb16e",
+                "url": "https://api.github.com/repos/spryker/sales-return-search/zipball/ae0dff7876b0bb74d05ca8b7f84f83e35ca73691",
+                "reference": "ae0dff7876b0bb74d05ca8b7f84f83e35ca73691",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3",
+                "php": ">=8.2",
                 "spryker/event-behavior": "^1.0.0",
                 "spryker/glossary": "^3.8.0",
                 "spryker/kernel": "^3.30.0",
@@ -57993,9 +57993,9 @@
             ],
             "description": "SalesReturnSearch module",
             "support": {
-                "source": "https://github.com/spryker/sales-return-search/tree/1.4.0"
+                "source": "https://github.com/spryker/sales-return-search/tree/1.3.0"
             },
-            "time": "2026-07-23T14:42:31+00:00"
+            "time": "2025-08-15T12:11:43+00:00"
         },
         {
             "name": "spryker/sales-returns-rest-api",
@@ -60091,20 +60091,20 @@
         },
         {
             "name": "spryker/service-point-search",
-            "version": "1.4.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/service-point-search.git",
-                "reference": "495043ab3c2e90638263bc6924a1c0df2238fe9c"
+                "reference": "1a763ebcec4f8955433cafeccba8200a78087ceb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/service-point-search/zipball/495043ab3c2e90638263bc6924a1c0df2238fe9c",
-                "reference": "495043ab3c2e90638263bc6924a1c0df2238fe9c",
+                "url": "https://api.github.com/repos/spryker/service-point-search/zipball/1a763ebcec4f8955433cafeccba8200a78087ceb",
+                "reference": "1a763ebcec4f8955433cafeccba8200a78087ceb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3",
+                "php": ">=8.2",
                 "spryker/event-behavior": "^1.0.0",
                 "spryker/kernel": "^3.30.0",
                 "spryker/propel-orm": "^1.5.0",
@@ -60152,9 +60152,9 @@
             ],
             "description": "ServicePointSearch module",
             "support": {
-                "source": "https://github.com/spryker/service-point-search/tree/1.4.0"
+                "source": "https://github.com/spryker/service-point-search/tree/1.3.0"
             },
-            "time": "2026-07-23T14:42:31+00:00"
+            "time": "2025-08-15T12:11:43+00:00"
         },
         {
             "name": "spryker/service-point-search-extension",
@@ -80095,9 +80095,9 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.3.13"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
