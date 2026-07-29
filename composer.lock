@@ -20601,16 +20601,16 @@
         },
         {
             "name": "spryker/cart",
-            "version": "7.17.0",
+            "version": "7.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cart.git",
-                "reference": "988cbdb80888c87114c1c76b60e275bcf6e8d93d"
+                "reference": "5c0c0e8b49e5d9e9135601292acf54cf38a050d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/cart/zipball/988cbdb80888c87114c1c76b60e275bcf6e8d93d",
-                "reference": "988cbdb80888c87114c1c76b60e275bcf6e8d93d",
+                "url": "https://api.github.com/repos/spryker/cart/zipball/5c0c0e8b49e5d9e9135601292acf54cf38a050d3",
+                "reference": "5c0c0e8b49e5d9e9135601292acf54cf38a050d3",
                 "shasum": ""
             },
             "require": {
@@ -20662,9 +20662,9 @@
             ],
             "description": "Cart module",
             "support": {
-                "source": "https://github.com/spryker/cart/tree/7.17.0"
+                "source": "https://github.com/spryker/cart/tree/7.18.1"
             },
-            "time": "2026-04-26T19:28:31+00:00"
+            "time": "2026-07-29T09:54:53+00:00"
         },
         {
             "name": "spryker/cart-code",
@@ -80095,7 +80095,7 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.3.13"
     },
