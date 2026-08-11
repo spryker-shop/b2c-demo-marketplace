@@ -24,6 +24,10 @@ jobs:
 
         steps:
             -   uses: actions/checkout@v4
+                with:
+                    # Nothing downstream needs the checkout token; every repo cloned or
+                    # composer-installed in these jobs is public.
+                    persist-credentials: false
 
             # Must land before the boot so the dump is part of the baked image.
             -   uses: actions/download-artifact@v6
@@ -78,6 +82,8 @@ jobs:
 
         steps:
             -   uses: actions/checkout@v4
+                with:
+                    persist-credentials: false
 
             # Must land before the boot so the dump is part of the baked image.
             -   uses: actions/download-artifact@v6
