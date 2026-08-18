@@ -1,5 +1,6 @@
 # Ignore paths
 /.github/
+/.claude/
 /.idea/
 /docker/
 /vendor/

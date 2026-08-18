@@ -6,8 +6,6 @@ export default class CustomSelect extends Component {
     protected select: HTMLSelectElement;
     protected $select: $;
 
-    protected readyCallback(): void {}
-
     protected init(): void {
         this.select = <HTMLSelectElement>this.getElementsByClassName(`${this.jsName}`)[0];
         this.$select = $(this.select);
@@ -35,7 +33,6 @@ export default class CustomSelect extends Component {
         this.$select.on('select2:select', () => this.onChangeSelect());
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     initSelect(modifiedConfig?: Record<string, any>): void {
         this.$select.select2({
             minimumResultsForSearch: Infinity,

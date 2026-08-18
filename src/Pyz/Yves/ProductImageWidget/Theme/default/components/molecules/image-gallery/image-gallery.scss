@@ -1,4 +1,4 @@
-@import '~slick-carousel/slick/slick';
+@use '~slick-carousel/slick/slick' as *;
 
 @mixin product-image-widget-image-gallery($name: '.image-gallery') {
     #{$name} {
