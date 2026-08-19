@@ -12,7 +12,7 @@
 
         &__title {
             display: block;
-            font: fw(regular) map-get($setting-font-size, default) $setting-font-family-additional;
+            font: fw(regular) map.get($setting-font-size, default) $setting-font-family-additional;
 
             &--bold {
                 font-weight: fw(bold);

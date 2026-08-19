@@ -56,7 +56,7 @@
 
                 &:hover {
                     text-decoration: underline;
-                    color: map-get($setting-color-actions, alert);
+                    color: map.get($setting-color-actions, alert);
                 }
             }
 

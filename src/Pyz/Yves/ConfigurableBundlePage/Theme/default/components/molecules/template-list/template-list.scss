@@ -4,7 +4,7 @@
     #{$name} {
         &__list {
             max-width: none;
-            margin: 0 -#{map-get($setting-spacing, 'big')} #{map-get($setting-spacing, 'biggest')};
+            margin: 0 -#{map.get($setting-spacing, 'big')} #{map.get($setting-spacing, 'biggest')};
             align-items: stretch;
         }
 

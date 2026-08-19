@@ -4,8 +4,6 @@ export default class VariantResetter extends Component {
     protected trigger: HTMLElement;
     protected target: HTMLInputElement;
 
-    protected readyCallback(): void {}
-
     protected init(): void {
         if (this.isAjaxMode) {
             return;

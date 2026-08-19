@@ -1,4 +1,4 @@
-@import '~slick-carousel/slick/slick';
+@use '~slick-carousel/slick/slick' as *;
 
 @mixin shop-ui-slick-carousel($name: '.slick-carousel') {
     #{$name} {
@@ -82,7 +82,7 @@
                         width: rem(12);
                         height: rem(12);
                         background: $setting-color-transparent;
-                        border: rem(1) solid map-get($setting-color-actions, alert);
+                        border: rem(1) solid map.get($setting-color-actions, alert);
                     }
                 }
 

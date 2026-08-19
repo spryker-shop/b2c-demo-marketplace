@@ -21,7 +21,7 @@ image:
         SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY: 'Your private key.'
         SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT: 'https://your.subject'
     node:
-        version: 20
+        version: 24
         npm: 10
 
 composer:

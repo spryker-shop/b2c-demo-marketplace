@@ -1,3 +1,6 @@
+@use '../shared' as *;
+@use '~ShopUi/styles/utils/text' as *;
+
 @include util-text() {
     .text-middle {
         vertical-align: middle;
