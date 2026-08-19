@@ -13,9 +13,6 @@ use Spryker\Zed\GuiTable\GuiTableConfig as SprykerGuiTableConfig;
 
 class GuiTableConfig extends SprykerGuiTableConfig
 {
-    /**
-     * @return string|null
-     */
     public function getDefaultTimezone(): ?string
     {
         return 'UTC';

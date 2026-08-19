@@ -13,17 +13,11 @@ use Spryker\Zed\AgentSecurityMerchantPortalGui\AgentSecurityMerchantPortalGuiCon
 
 class AgentSecurityMerchantPortalGuiConfig extends SprykerAgentSecurityMerchantPortalGuiConfig
 {
-    /**
-     * @return string
-     */
     public function getRoutePatternAgentMerchantPortal(): string
     {
         return '^/(agent(.+)-merchant-portal-gui|multi-factor-auth-merchant-portal/(agent-merchant-user|agent-user-management))(?!agent-security-merchant-portal-gui\/login$)/';
     }
 
-    /**
-     * @return string
-     */
     public function getRoutePatternAgentMerchantPortalLogin(): string
     {
         return '^/(agent-security-merchant-portal-gui/login|multi-factor-auth-merchant-portal/agent-merchant-user($|/))';

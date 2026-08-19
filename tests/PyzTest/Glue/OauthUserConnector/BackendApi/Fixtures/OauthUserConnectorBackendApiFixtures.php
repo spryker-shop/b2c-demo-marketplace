@@ -43,11 +43,6 @@ class OauthUserConnectorBackendApiFixtures implements FixturesBuilderInterface, 
      */
     protected $warehouseUserTransfer;
 
-    /**
-     * @param \PyzTest\Glue\OauthUserConnector\OauthUserConnectorBackendApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(OauthUserConnectorBackendApiTester $I): FixturesContainerInterface
     {
         $this->merchantUserTransfer = $this->createMerchantUserTransfer($I);
@@ -57,35 +52,21 @@ class OauthUserConnectorBackendApiFixtures implements FixturesBuilderInterface, 
         return $this;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     public function getBackofficeUserTransfer(): UserTransfer
     {
         return $this->backofficeUserTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     public function getMerchantUserTransfer(): UserTransfer
     {
         return $this->merchantUserTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     public function getWarehouseUserTransfer(): UserTransfer
     {
         return $this->warehouseUserTransfer;
     }
 
-    /**
-     * @param \PyzTest\Glue\OauthUserConnector\OauthUserConnectorBackendApiTester $I
-     *
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     protected function createBackofficeUserTransfer(OauthUserConnectorBackendApiTester $I): UserTransfer
     {
         $userTransfer = $I->haveUser([
@@ -95,11 +76,6 @@ class OauthUserConnectorBackendApiFixtures implements FixturesBuilderInterface, 
         return $userTransfer->setPassword(static::TEST_PASSWORD);
     }
 
-    /**
-     * @param \PyzTest\Glue\OauthUserConnector\OauthUserConnectorBackendApiTester $I
-     *
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     protected function createMerchantUserTransfer(OauthUserConnectorBackendApiTester $I): UserTransfer
     {
         $userTransfer = $I->haveUser([
@@ -116,11 +92,6 @@ class OauthUserConnectorBackendApiFixtures implements FixturesBuilderInterface, 
         return $userTransfer->setPassword(static::TEST_PASSWORD);
     }
 
-    /**
-     * @param \PyzTest\Glue\OauthUserConnector\OauthUserConnectorBackendApiTester $I
-     *
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     protected function createWarehouseUserTransfer(OauthUserConnectorBackendApiTester $I): UserTransfer
     {
         $userTransfer = $I->haveUser([

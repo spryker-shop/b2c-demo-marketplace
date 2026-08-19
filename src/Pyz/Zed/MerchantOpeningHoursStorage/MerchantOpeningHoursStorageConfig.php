@@ -14,9 +14,6 @@ use Spryker\Zed\MerchantOpeningHoursStorage\MerchantOpeningHoursStorageConfig as
 
 class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStorageStorageConfig
 {
-    /**
-     * @return string|null
-     */
     public function getMerchantOpeningHoursSynchronizationPoolName(): ?string
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;

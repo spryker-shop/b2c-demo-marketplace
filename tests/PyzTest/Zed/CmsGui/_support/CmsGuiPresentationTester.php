@@ -39,8 +39,6 @@ class CmsGuiPresentationTester extends Actor
     protected $localizedFakeData;
 
     /**
-     * @param string $date
-     *
      * @return $this
      */
     public function setValidFrom(string $date)
@@ -62,8 +60,6 @@ class CmsGuiPresentationTester extends Actor
     }
 
     /**
-     * @param string $date
-     *
      * @return $this
      */
     public function setValidTo(string $date)
@@ -74,11 +70,6 @@ class CmsGuiPresentationTester extends Actor
         return $this;
     }
 
-    /**
-     * @param string $selector
-     *
-     * @return bool
-     */
     public function tryToSeeElement(string $selector): bool
     {
         try {
@@ -91,8 +82,6 @@ class CmsGuiPresentationTester extends Actor
     }
 
     /**
-     * @param string $elementIdentifier
-     *
      * @return $this
      */
     public function openIboxForElement(string $elementIdentifier)
@@ -108,10 +97,6 @@ class CmsGuiPresentationTester extends Actor
     }
 
     /**
-     * @param int $formIndex
-     * @param string $name
-     * @param string $url
-     *
      * @return $this
      */
     public function fillLocalizedUrlForm(int $formIndex, string $name, string $url)
@@ -141,13 +126,6 @@ class CmsGuiPresentationTester extends Actor
         return $this;
     }
 
-    /**
-     * @param int $placeHolderIndex
-     * @param int $localeIndex
-     * @param string $contents
-     *
-     * @return void
-     */
     public function fillPlaceholderContents(int $placeHolderIndex, int $localeIndex, string $contents): void
     {
         $translationElementId = 'cms_glossary_glossaryAttributes_' . $placeHolderIndex . '_translations_' . $localeIndex . '_translation';
@@ -193,17 +171,11 @@ class CmsGuiPresentationTester extends Actor
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function grabCmsPageId(): int
     {
         return (int)$this->grabFromCurrentUrl('/id-cms-page=(\d+)/');
     }
 
-    /**
-     * @return array
-     */
     protected function getLocalizedFakeData(): array
     {
         if (!$this->localizedFakeData) {
@@ -221,11 +193,6 @@ class CmsGuiPresentationTester extends Actor
         return $this->localizedFakeData;
     }
 
-    /**
-     * @param string $locale
-     *
-     * @return string
-     */
     public function getLocalizedName(string $locale): string
     {
         $localizedFakeData = $this->getLocalizedFakeData();
@@ -233,11 +200,6 @@ class CmsGuiPresentationTester extends Actor
         return $localizedFakeData[$locale]['name'];
     }
 
-    /**
-     * @param string $locale
-     *
-     * @return string
-     */
     public function getLocalizedUrl(string $locale): string
     {
         $localizedFakeData = $this->getLocalizedFakeData();

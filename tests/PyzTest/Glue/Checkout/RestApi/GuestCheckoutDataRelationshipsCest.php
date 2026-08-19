@@ -35,21 +35,10 @@ class GuestCheckoutDataRelationshipsCest
      */
     protected const HEADER_ANONYMOUS_CUSTOMER_UNIQUE_ID = 'X-Anonymous-Customer-Unique-Id';
 
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\GuestCheckoutDataShipmentRelationshipsFixtures
-     */
     protected GuestCheckoutDataShipmentRelationshipsFixtures $guestCheckoutDataShipmentRelationshipsFixtures;
 
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\GuestCheckoutDataServicePointRelationshipsFixtures
-     */
     protected GuestCheckoutDataServicePointRelationshipsFixtures $guestCheckoutDataServicePointRelationshipsFixtures;
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadShipmentFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\GuestCheckoutDataShipmentRelationshipsFixtures $fixtures */
@@ -57,11 +46,6 @@ class GuestCheckoutDataRelationshipsCest
         $this->guestCheckoutDataShipmentRelationshipsFixtures = $fixtures;
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadServicePointFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\GuestCheckoutDataServicePointRelationshipsFixtures $fixtures */
@@ -71,10 +55,6 @@ class GuestCheckoutDataRelationshipsCest
 
     /**
      * @depends loadShipmentFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesShipmentsRelationship(CheckoutApiTester $I): void
     {
@@ -136,10 +116,6 @@ class GuestCheckoutDataRelationshipsCest
 
     /**
      * @depends loadShipmentFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesShipmentMethodsRelationship(CheckoutApiTester $I): void
     {
@@ -195,10 +171,6 @@ class GuestCheckoutDataRelationshipsCest
 
     /**
      * @depends loadShipmentFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesShipmentTypesRelationship(CheckoutApiTester $I): void
     {
@@ -255,10 +227,6 @@ class GuestCheckoutDataRelationshipsCest
 
     /**
      * @depends loadServicePointFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsSelectedShipmentTypes(CheckoutApiTester $I): void
     {
@@ -304,10 +272,6 @@ class GuestCheckoutDataRelationshipsCest
 
     /**
      * @depends loadServicePointFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesServicePointsRelationship(CheckoutApiTester $I): void
     {

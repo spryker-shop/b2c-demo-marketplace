@@ -33,16 +33,8 @@ class ServicePointGuestCheckoutDataRestApiCest
      */
     protected const HEADER_ANONYMOUS_CUSTOMER_UNIQUE_ID = 'X-Anonymous-Customer-Unique-Id';
 
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointGuestCheckoutDataRestApiFixtures
-     */
     protected ServicePointGuestCheckoutDataRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointGuestCheckoutDataRestApiFixtures $fixtures */
@@ -52,10 +44,6 @@ class ServicePointGuestCheckoutDataRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsSelectedServicePoints(CheckoutApiTester $I): void
     {

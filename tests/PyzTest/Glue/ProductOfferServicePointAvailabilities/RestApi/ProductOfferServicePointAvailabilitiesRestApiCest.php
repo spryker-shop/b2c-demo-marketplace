@@ -42,16 +42,8 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
      */
     protected const TEST_PRODUCT_CONCRETE_SKU = 'TEST_PRODUCT_CONCRETE_SKU';
 
-    /**
-     * @var \PyzTest\Glue\ProductOfferServicePointAvailabilities\RestApi\Fixtures\ProductOfferServicePointAvailabilitiesRestApiFixtures
-     */
     protected ProductOfferServicePointAvailabilitiesRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(ProductOfferServicePointAvailabilitiesApiTester $I): void
     {
         /** @var \PyzTest\Glue\ProductOfferServicePointAvailabilities\RestApi\Fixtures\ProductOfferServicePointAvailabilitiesRestApiFixtures $fixtures */
@@ -61,10 +53,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return void
      */
     public function requestGetProductOfferServicePointAvailabilitiesWithPartiallyAvailableItems(ProductOfferServicePointAvailabilitiesApiTester $I): void
     {
@@ -141,10 +129,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return void
      */
     public function requestGetProductOfferServicePointAvailabilitiesWithoutMerchantReference(
         ProductOfferServicePointAvailabilitiesApiTester $I,
@@ -217,10 +201,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return void
      */
     public function requestGetProductOfferServicePointAvailabilitiesWithShipmentType(
         ProductOfferServicePointAvailabilitiesApiTester $I,
@@ -285,10 +265,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return void
      */
     public function requestGetProductOfferServicePointAvailabilitiesWithIncorrectServiceType(
         ProductOfferServicePointAvailabilitiesApiTester $I,
@@ -352,10 +328,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return void
      */
     public function requestGetProductOfferServicePointAvailabilitiesWithSeveralServicePointsShouldReturnItemsWithAvailabilityForEachServicePoint(
         ProductOfferServicePointAvailabilitiesApiTester $I,
@@ -486,11 +458,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
      * @depends loadFixtures
      *
      * @dataProvider getValidationErrorsDataProvider
-     *
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     * @param \Codeception\Example $example
-     *
-     * @return void
      */
     public function requestGetProductOfferServicePointAvailabilitiesWithInvalidRequestData(
         ProductOfferServicePointAvailabilitiesApiTester $I,
@@ -523,10 +490,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return void
      */
     public function requestGetProductOfferServicePointAvailabilitiesWithoutProductOfferReference(ProductOfferServicePointAvailabilitiesApiTester $I): void
     {
@@ -614,7 +577,6 @@ class ProductOfferServicePointAvailabilitiesRestApiCest
 
     /**
      * @param list<string> $servicePointUuids
-     * @param string $serviceTypeUuid
      *
      * @return array<string, mixed>
      */

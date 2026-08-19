@@ -21,9 +21,6 @@ class CancelMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
      */
     protected const EVENT_CANCEL = 'cancel';
 
-    /**
-     * @return string
-     */
     public function getEventName(): string
     {
         return static::EVENT_CANCEL;

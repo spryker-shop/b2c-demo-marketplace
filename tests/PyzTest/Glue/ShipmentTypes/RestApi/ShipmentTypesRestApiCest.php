@@ -26,16 +26,8 @@ use Spryker\Glue\ShipmentTypesRestApi\ShipmentTypesRestApiConfig;
  */
 class ShipmentTypesRestApiCest
 {
-    /**
-     * @var \PyzTest\Glue\ShipmentTypes\RestApi\ShipmentTypesRestApiFixtures
-     */
     protected ShipmentTypesRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(ShipmentTypesApiTester $I): void
     {
         /** @var \PyzTest\Glue\ShipmentTypes\RestApi\ShipmentTypesRestApiFixtures $fixtures */
@@ -45,10 +37,6 @@ class ShipmentTypesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
      */
     public function requestGetShipmentTypes(ShipmentTypesApiTester $I): void
     {
@@ -79,10 +67,6 @@ class ShipmentTypesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
      */
     public function requestGetShipmentTypesReturnsShipmentTypesSortedByDESC(ShipmentTypesApiTester $I): void
     {
@@ -105,10 +89,6 @@ class ShipmentTypesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
      */
     public function requestGetShipmentTypesReturnsShipmentTypesSortedByASC(ShipmentTypesApiTester $I): void
     {
@@ -131,10 +111,6 @@ class ShipmentTypesRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
      */
     public function requestGetShipmentTypeByUuid(ShipmentTypesApiTester $I): void
     {
@@ -168,11 +144,6 @@ class ShipmentTypesRestApiCest
         );
     }
 
-    /**
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
-     */
     public function requestGetShipmentTypeByUndefinedUuid(ShipmentTypesApiTester $I): void
     {
         // Act

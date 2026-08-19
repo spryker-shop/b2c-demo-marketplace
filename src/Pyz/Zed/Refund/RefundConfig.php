@@ -13,9 +13,6 @@ use Spryker\Zed\Refund\RefundConfig as SprykerRefundConfig;
 
 class RefundConfig extends SprykerRefundConfig
 {
-    /**
-     * @return bool
-     */
     public function shouldCleanupRecalculationMessagesAfterRefund(): bool
     {
         return true;

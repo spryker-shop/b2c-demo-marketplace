@@ -17,9 +17,6 @@ use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\PersistentCart\ResetAme
 
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
-    /**
-     * @return \Spryker\Zed\PersistentCartExtension\Dependency\Plugin\QuoteItemFinderPluginInterface
-     */
     protected function getQuoteItemFinderPlugin(): QuoteItemFinderPluginInterface
     {
         return new BundleProductQuoteItemFinderPlugin(); #ProductBundleFeature
@@ -31,7 +28,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
     protected function getRemoveItemsRequestExpanderPlugins(): array
     {
         return [
-            new RemoveBundleChangeRequestExpanderPlugin(), #ProductBundleFeature
+        new RemoveBundleChangeRequestExpanderPlugin(), #ProductBundleFeature
         ];
     }
 
@@ -41,7 +38,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
     protected function getQuotePostMergePlugins(): array
     {
         return [
-            new ResetAmendmentQuoteProcessFlowQuotePostMergePlugin(),
+        new ResetAmendmentQuoteProcessFlowQuotePostMergePlugin(),
         ];
     }
 }

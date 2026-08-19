@@ -15,17 +15,11 @@ use Spryker\Zed\ProductOfferServicePointStorage\ProductOfferServicePointStorageC
 
 class ProductOfferServicePointStorageConfig extends SprykerProductOfferServicePointStorageConfig
 {
-    /**
-     * @return string|null
-     */
     public function getProductOfferServiceSynchronizationPoolName(): ?string
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 
-    /**
-     * @return string|null
-     */
     public function getEventQueueName(): ?string
     {
         return PublisherConfig::PUBLISH_QUEUE;

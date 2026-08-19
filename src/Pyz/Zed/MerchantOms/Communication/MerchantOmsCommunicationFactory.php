@@ -21,17 +21,11 @@ use Spryker\Zed\SalesReturn\Business\SalesReturnFacadeInterface;
  */
 class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFactory
 {
-    /**
-     * @return \Pyz\Zed\Oms\Business\OmsFacadeInterface
-     */
     public function getOmsFacade(): OmsFacadeInterface
     {
         return $this->getProvidedDependency(MerchantOmsDependencyProvider::FACADE_OMS);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesReturn\Business\SalesReturnFacadeInterface
-     */
     public function getSalesReturnFacade(): SalesReturnFacadeInterface
     {
         return $this->getProvidedDependency(MerchantOmsDependencyProvider::FACADE_SALES_RETURN);

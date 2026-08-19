@@ -157,11 +157,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
      */
     public const FACADE_MERCHANT_USER = 'FACADE_MERCHANT_USER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -180,11 +175,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_USER, function (Container $container) {
@@ -194,11 +184,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addAvailabilityFacade(Container $container): Container
     {
         $container->set(static::FACADE_AVAILABILITY, function (Container $container) {
@@ -208,11 +193,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCategoryFacade(Container $container): Container
     {
         $container->set(static::FACADE_CATEGORY, function (Container $container) {
@@ -222,11 +202,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductBundleFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_BUNDLE, function (Container $container) {
@@ -236,11 +211,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductSearchFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_SEARCH, function (Container $container) {
@@ -250,11 +220,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductRelationFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_RELATION, function (Container $container) {
@@ -264,11 +229,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCurrencyFacade(Container $container): Container
     {
         $container->set(static::FACADE_CURRENCY, function (Container $container) {
@@ -278,11 +238,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addPriceProductFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRICE_PRODUCT, function (Container $container) {
@@ -292,11 +247,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addStockFacade(Container $container): Container
     {
         $container->set(static::FACADE_STOCK, function (Container $container) {
@@ -306,11 +256,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addStoreFacade(Container $container): Container
     {
         $container->set(static::FACADE_STORE, function (Container $container) {

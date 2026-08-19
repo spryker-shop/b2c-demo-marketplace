@@ -206,8 +206,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected const COMMAND_SEPARATOR = ':';
 
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
      * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
@@ -490,8 +488,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
      * @return array<\Spryker\Zed\Console\Dependency\Plugin\ConsolePostRunHookPluginInterface>
      */
     public function getConsolePostRunHookPlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
@@ -502,8 +498,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
      * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     public function getApplicationPlugins(Container $container): array
@@ -520,8 +514,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
      * @return array<\Symfony\Component\EventDispatcher\EventSubscriberInterface>
      */
     public function getEventSubscriber(Container $container): array

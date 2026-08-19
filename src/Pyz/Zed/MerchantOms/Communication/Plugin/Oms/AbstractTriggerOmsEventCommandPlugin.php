@@ -21,9 +21,6 @@ use Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface;
  */
 abstract class AbstractTriggerOmsEventCommandPlugin extends AbstractPlugin implements CommandPluginInterface
 {
-    /**
-     * @return string
-     */
     abstract public function getEventName(): string;
 
     /**

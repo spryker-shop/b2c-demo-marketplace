@@ -16,8 +16,6 @@ class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentT
 {
     /**
      * @api
-     *
-     * @return string|null
      */
     public function getProductOfferShipmentTypeSynchronizationPoolName(): ?string
     {

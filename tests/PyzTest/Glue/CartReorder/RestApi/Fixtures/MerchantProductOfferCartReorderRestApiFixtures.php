@@ -52,94 +52,50 @@ class MerchantProductOfferCartReorderRestApiFixtures implements FixturesBuilderI
      */
     protected const MERCHANT_STATUS_APPROVED = 'approved';
 
-    /**
-     * @var \Generated\Shared\Transfer\StoreTransfer
-     */
     protected StoreTransfer $storeTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected CustomerTransfer $customerTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\MerchantTransfer
-     */
     protected MerchantTransfer $merchantTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     protected ProductConcreteTransfer $productConcreteTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     protected ProductConcreteTransfer $productConcreteTransferWithMerchantProductOffer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ProductOfferTransfer
-     */
     protected ProductOfferTransfer $productOfferTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\SaveOrderTransfer
-     */
     protected SaveOrderTransfer $orderWithMerchantProductOffer;
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     public function getCustomerTransfer(): CustomerTransfer
     {
         return $this->customerTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantTransfer
-     */
     public function getMerchantTransfer(): MerchantTransfer
     {
         return $this->merchantTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function getProductConcreteTransfer(): ProductConcreteTransfer
     {
         return $this->productConcreteTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function getProductConcreteTransferWithMerchantProductOffer(): ProductConcreteTransfer
     {
         return $this->productConcreteTransferWithMerchantProductOffer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer
-     */
     public function getProductOfferTransfer(): ProductOfferTransfer
     {
         return $this->productOfferTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\SaveOrderTransfer
-     */
     public function getOrderWithMerchantProductOffer(): SaveOrderTransfer
     {
         return $this->orderWithMerchantProductOffer;
     }
 
-    /**
-     * @param \PyzTest\Glue\CartReorder\CartReorderApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(CartReorderApiTester $I): FixturesContainerInterface
     {
         $I->configureStateMachine();
@@ -156,11 +112,6 @@ class MerchantProductOfferCartReorderRestApiFixtures implements FixturesBuilderI
         return $this;
     }
 
-    /**
-     * @param \PyzTest\Glue\CartReorder\CartReorderApiTester $I
-     *
-     * @return \Generated\Shared\Transfer\MerchantTransfer
-     */
     protected function createMerchant(CartReorderApiTester $I): MerchantTransfer
     {
         $merchantTransfer = (new MerchantBuilder([
@@ -179,11 +130,6 @@ class MerchantProductOfferCartReorderRestApiFixtures implements FixturesBuilderI
         return $merchantTransfer;
     }
 
-    /**
-     * @param \PyzTest\Glue\CartReorder\CartReorderApiTester $I
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer
-     */
     protected function createProductOffer(CartReorderApiTester $I): ProductOfferTransfer
     {
         $productOfferTransfer = $I->haveProductOffer([
@@ -206,11 +152,6 @@ class MerchantProductOfferCartReorderRestApiFixtures implements FixturesBuilderI
         return $productOfferTransfer;
     }
 
-    /**
-     * @param \PyzTest\Glue\CartReorder\CartReorderApiTester $I
-     *
-     * @return \Generated\Shared\Transfer\SaveOrderTransfer
-     */
     protected function createOrderWithMerchantProductOffer(CartReorderApiTester $I): SaveOrderTransfer
     {
         $itemsData = [

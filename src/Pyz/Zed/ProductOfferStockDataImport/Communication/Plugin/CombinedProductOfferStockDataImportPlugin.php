@@ -21,19 +21,11 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
  */
 class CombinedProductOfferStockDataImportPlugin extends AbstractPlugin implements DataImportPluginInterface
 {
-    /**
-     * @return string
-     */
     public function getImportType(): string
     {
         return ProductOfferStockDataImportConfig::IMPORT_TYPE_COMBINED_PRODUCT_OFFER_STOCK;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
     public function import(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer {

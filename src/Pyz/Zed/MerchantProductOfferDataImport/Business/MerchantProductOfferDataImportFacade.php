@@ -18,11 +18,6 @@ use Spryker\Zed\MerchantProductOfferDataImport\Business\MerchantProductOfferData
  */
 class MerchantProductOfferDataImportFacade extends SprykerMerchantProductOfferDataImportFacade implements MerchantProductOfferDataImportFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
     public function importCombinedMerchantProductOfferData(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer {
@@ -31,16 +26,11 @@ class MerchantProductOfferDataImportFacade extends SprykerMerchantProductOfferDa
             ->import($dataImporterConfigurationTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
     public function importCombinedMerchantProductOfferStoreData(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer {
         return $this->getFactory()
-            ->getCombinedMerchantProductOfferStoreDataImporter()
-            ->import($dataImporterConfigurationTransfer);
+        ->getCombinedMerchantProductOfferStoreDataImporter()
+        ->import($dataImporterConfigurationTransfer);
     }
 }

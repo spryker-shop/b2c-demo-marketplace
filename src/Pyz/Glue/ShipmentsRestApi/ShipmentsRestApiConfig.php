@@ -13,9 +13,6 @@ use Spryker\Glue\ShipmentsRestApi\ShipmentsRestApiConfig as SprykerShipmentsRest
 
 class ShipmentsRestApiConfig extends SprykerShipmentsRestApiConfig
 {
-    /**
-     * @return bool
-     */
     public function shouldExecuteShippingAddressValidationStrategyPlugins(): bool
     {
         return true;

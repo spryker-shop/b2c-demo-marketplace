@@ -26,9 +26,6 @@ use Spryker\Zed\ProductOfferStockDataImport\Business\ProductOfferStockDataImport
  */
 class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStockDataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCombinedProductOfferStockDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getConditionalCsvDataImporterFromConfig(
@@ -48,11 +45,6 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
         return $dataImporter;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
-     *
-     * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
-     */
     public function getConditionalCsvDataImporterFromConfig(
         DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterConditional {
@@ -61,12 +53,6 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
         return $this->createDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
     }
 
-    /**
-     * @param string $importType
-     * @param \Spryker\Zed\DataImport\Business\Model\DataReader\DataReaderInterface $reader
-     *
-     * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
-     */
     public function createDataImporterConditional(
         string $importType,
         DataReaderInterface $reader,
@@ -74,9 +60,6 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
         return new DataImporterConditional($importType, $reader, $this->getGracefulRunnerFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
     {
         return new CombinedProductOfferReferenceToIdProductOfferStep(
@@ -84,25 +67,16 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
         );
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedStockNameToIdStockStep(): DataImportStepInterface
     {
         return new CombinedStockNameToIdStockStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedProductOfferStockWriterStep(): DataImportStepInterface
     {
         return new CombinedProductOfferStockWriterStep();
     }
 
-    /**
-     * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
-     */
     public function createCombinedProductOfferStockMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedProductOfferStockMandatoryColumnCondition();

@@ -13,9 +13,6 @@ use Spryker\Client\ShipmentTypeStorage\ShipmentTypeStorageConfig as SprykerShipm
 
 class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 {
-    /**
-     * @return int
-     */
     public function getScanKeyStoreLimit(): int
     {
         return 20;

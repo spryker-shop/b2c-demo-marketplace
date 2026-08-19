@@ -21,9 +21,6 @@ class RefundMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
      */
     protected const EVENT_REFUND = 'refund';
 
-    /**
-     * @return string
-     */
     public function getEventName(): string
     {
         return static::EVENT_REFUND;

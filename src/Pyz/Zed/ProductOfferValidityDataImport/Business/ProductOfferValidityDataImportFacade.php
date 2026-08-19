@@ -18,11 +18,6 @@ use Spryker\Zed\ProductOfferValidityDataImport\Business\ProductOfferValidityData
  */
 class ProductOfferValidityDataImportFacade extends SprykerProductOfferValidityDataImportFacade implements ProductOfferValidityDataImportFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
     public function importCombinedProductOfferValidity(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer {

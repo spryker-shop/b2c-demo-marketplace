@@ -15,8 +15,6 @@ class MerchantPortalApplicationConfig extends SprykerMerchantPortalApplicationCo
 {
     /**
      * @see \Spryker\Zed\DashboardMerchantPortalGui\Communication\Controller\DashboardController::indexAction()
-     *
-     * @return string
      */
     public function getHomePageUrl(): string
     {

@@ -19,11 +19,6 @@ use Spryker\Zed\SalesDiscountConnector\Communication\Plugin\MerchantSalesOrder\C
 
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -39,8 +34,8 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
     protected function getMerchantOrderPostCreatePlugins(): array
     {
         return [
-            new EventTriggerMerchantOrderPostCreatePlugin(),
-            new UpdateMerchantCommissionTotalsMerchantOrderPostCreatePlugin(),
+        new EventTriggerMerchantOrderPostCreatePlugin(),
+        new UpdateMerchantCommissionTotalsMerchantOrderPostCreatePlugin(),
         ];
     }
 
@@ -50,7 +45,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
     protected function getMerchantOrderExpanderPlugins(): array
     {
         return [
-            new MerchantOmsMerchantOrderExpanderPlugin(),
+        new MerchantOmsMerchantOrderExpanderPlugin(),
         ];
     }
 
@@ -60,7 +55,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
     protected function getMerchantOrderFilterPlugins(): array
     {
         return [
-            new DiscountMerchantOrderFilterPlugin(),
+        new DiscountMerchantOrderFilterPlugin(),
         ];
     }
 
@@ -70,7 +65,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
     protected function getMerchantOrderTotalsPreRecalculatePlugins(): array
     {
         return [
-            new CopyOrderContextMerchantOrderTotalsPreRecalculatePlugin(),
+        new CopyOrderContextMerchantOrderTotalsPreRecalculatePlugin(),
         ];
     }
 }

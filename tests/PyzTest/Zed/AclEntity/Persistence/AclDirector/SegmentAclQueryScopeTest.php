@@ -46,9 +46,6 @@ class SegmentAclQueryScopeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -61,8 +58,6 @@ class SegmentAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithUpdatePermission(): void
     {
@@ -101,8 +96,6 @@ class SegmentAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithDeletePermission(): void
     {
@@ -141,8 +134,6 @@ class SegmentAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithCrudPermission(): void
     {
@@ -181,8 +172,6 @@ class SegmentAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithCrudPermission(): void
     {
@@ -221,8 +210,6 @@ class SegmentAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRuleOnSelectQueryWithReadPermission(): void
     {
@@ -263,8 +250,6 @@ class SegmentAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRuleOnUpdateQueryWithUpdatePermission(): void
     {
@@ -316,8 +301,6 @@ class SegmentAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRuleOnDeleteQueryWithDeletePermission(): void
     {
