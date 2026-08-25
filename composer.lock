@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3791c5d23c9b6dfc1590305e64d0db6",
+    "content-hash": "eb4077f0a77166e510ae5b913505d204",
     "packages": [
         {
             "name": "async-aws/core",
@@ -79262,11 +79262,11 @@
         },
         {
             "name": "spryker/robotframework-suite-tests",
-            "version": "dev-release_202512.0_state",
+            "version": "dev-bugfix/cc-37352/fix-vertex-calculation-shops",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "12f16730f6bed240de8d94db7bbd81a0c5bc708c"
+                "reference": "5fd96466729d61b0bd9cda21eef3e0ac293879ec"
             },
             "bin": [
                 "bin/run-robot-suite-tests.sh"
@@ -79276,7 +79276,7 @@
                 "MIT"
             ],
             "description": "Automated tests for the Robot Framework",
-            "time": "2026-08-18T07:39:31+00:00"
+            "time": "2026-08-25T15:33:50+00:00"
         },
         {
             "name": "spryker/testify",
