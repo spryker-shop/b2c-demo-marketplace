@@ -179,9 +179,6 @@ class CheckoutControllerTest extends Unit
      */
     private $controller;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         $this->skipIfCi();
@@ -191,9 +188,6 @@ class CheckoutControllerTest extends Unit
         $sessionClient->setContainer(new Session(new MockArraySessionStorage()));
     }
 
-    /**
-     * @return void
-     */
     protected function skipIfCi(): void
     {
         if (!getenv('CIRCLECI') && !getenv('TRAVIS')) {
@@ -203,9 +197,6 @@ class CheckoutControllerTest extends Unit
         $this->markTestSkipped('CircleCi/Travis not set up properly');
     }
 
-    /**
-     * @return void
-     */
     public function testIndexAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -221,9 +212,6 @@ class CheckoutControllerTest extends Unit
         $this->assertSame($response->getTargetUrl(), self::CUSTOMER_URL);
     }
 
-    /**
-     * @return void
-     */
     public function testCustomerActionShouldRenderRegisterAndLoginForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -237,9 +225,6 @@ class CheckoutControllerTest extends Unit
         $this->assertArrayHasKey('registerForm', $response);
     }
 
-    /**
-     * @return void
-     */
     public function testCustomerAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -265,9 +250,6 @@ class CheckoutControllerTest extends Unit
         $this->assertSame($response->getTargetUrl(), self::ADDRESS_URL);
     }
 
-    /**
-     * @return void
-     */
     public function testAddressActionShouldRenderAddressForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -282,9 +264,6 @@ class CheckoutControllerTest extends Unit
         $this->assertArrayHasKey('previousStepUrl', $response);
     }
 
-    /**
-     * @return void
-     */
     public function testAddressAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -316,9 +295,6 @@ class CheckoutControllerTest extends Unit
         $this->assertSame($response->getTargetUrl(), self::SHIPMENT_URL);
     }
 
-    /**
-     * @return void
-     */
     public function testShipmentActionShouldRenderShipmentForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -333,9 +309,6 @@ class CheckoutControllerTest extends Unit
         $this->assertArrayHasKey('previousStepUrl', $response);
     }
 
-    /**
-     * @return void
-     */
     public function testShipmentAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -356,9 +329,6 @@ class CheckoutControllerTest extends Unit
         $this->assertSame($response->getTargetUrl(), self::PAYMENT_URL);
     }
 
-    /**
-     * @return void
-     */
     public function testPaymentActionShouldRenderPaymentForms(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -377,8 +347,6 @@ class CheckoutControllerTest extends Unit
 
     /**
      * This test only works with DummyPayment
-     *
-     * @return void
      */
     public function testPaymentAction(): void
     {
@@ -407,9 +375,6 @@ class CheckoutControllerTest extends Unit
         $this->assertSame($response->getTargetUrl(), self::SUMMARY_URL);
     }
 
-    /**
-     * @return void
-     */
     public function testSummaryActionShouldRenderSummaryPage(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -425,9 +390,6 @@ class CheckoutControllerTest extends Unit
         $this->assertArrayHasKey('previousStepUrl', $response);
     }
 
-    /**
-     * @return void
-     */
     public function testSummaryAction(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -449,9 +411,6 @@ class CheckoutControllerTest extends Unit
         $this->assertSame($response->getTargetUrl(), self::PLACE_ORDER_URL);
     }
 
-    /**
-     * @return void
-     */
     public function testPlaceOrder(): void
     {
         $this->markTestSkipped('Move this to function controller tests');
@@ -466,9 +425,6 @@ class CheckoutControllerTest extends Unit
         $this->assertSame($response->getTargetUrl(), self::SUCCESS_URL);
     }
 
-    /**
-     * @return void
-     */
     private function setQuoteForCustomer(): void
     {
         $quoteTransfer = new QuoteTransfer();
@@ -481,9 +437,6 @@ class CheckoutControllerTest extends Unit
         $cartClient->storeQuote($quoteTransfer);
     }
 
-    /**
-     * @return void
-     */
     private function setQuoteForAddress(): void
     {
         $quoteTransfer = new QuoteTransfer();
@@ -500,9 +453,6 @@ class CheckoutControllerTest extends Unit
         $cartClient->storeQuote($quoteTransfer);
     }
 
-    /**
-     * @return void
-     */
     private function setQuoteForShipment(): void
     {
         $quoteTransfer = new QuoteTransfer();
@@ -534,9 +484,6 @@ class CheckoutControllerTest extends Unit
         $cartClient->storeQuote($quoteTransfer);
     }
 
-    /**
-     * @return void
-     */
     private function setQuoteForPayment(): void
     {
         $quoteTransfer = new QuoteTransfer();
@@ -580,9 +527,6 @@ class CheckoutControllerTest extends Unit
         $cartClient->storeQuote($quoteTransfer);
     }
 
-    /**
-     * @return void
-     */
     private function setQuoteForSummary(): void
     {
         $quoteTransfer = new QuoteTransfer();
@@ -631,14 +575,6 @@ class CheckoutControllerTest extends Unit
         $cartClient->storeQuote($quoteTransfer);
     }
 
-    /**
-     * @param string $url
-     * @param string $actionName
-     * @param string $routeName
-     * @param string $formName
-     *
-     * @return array
-     */
     protected function getFormData(string $url, string $actionName, string $routeName, string $formName): array
     {
         $request = Request::create($url, 'GET');
@@ -649,11 +585,6 @@ class CheckoutControllerTest extends Unit
         return $this->getFormDataFromResult($result[$formName]);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormView $formView
-     *
-     * @return array
-     */
     protected function getFormDataFromResult(FormView $formView): array
     {
         $customerData = [];
@@ -664,9 +595,6 @@ class CheckoutControllerTest extends Unit
         return $customerData;
     }
 
-    /**
-     * @return void
-     */
     protected function allowMoreThenOneRequestToZed(): void
     {
         $reflectionProperty = new ReflectionProperty(HttpClient::class, 'alreadyRequested');

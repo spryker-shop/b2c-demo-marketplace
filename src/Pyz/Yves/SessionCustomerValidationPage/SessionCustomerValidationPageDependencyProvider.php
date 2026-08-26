@@ -21,17 +21,11 @@ use SprykerShop\Yves\SessionCustomerValidationPageExtension\Dependency\Plugin\Cu
  */
 class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCustomerValidationPageDependencyProvider
 {
-    /**
-     * @return \SprykerShop\Yves\SessionCustomerValidationPageExtension\Dependency\Plugin\CustomerSessionSaverPluginInterface
-     */
     protected function getCustomerSessionSaverPlugin(): CustomerSessionSaverPluginInterface
     {
         return new RedisCustomerSessionSaverPlugin();
     }
 
-    /**
-     * @return \SprykerShop\Yves\SessionCustomerValidationPageExtension\Dependency\Plugin\CustomerSessionValidatorPluginInterface
-     */
     protected function getCustomerSessionValidatorPlugin(): CustomerSessionValidatorPluginInterface
     {
         return new RedisCustomerSessionValidatorPlugin();
@@ -43,8 +37,8 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
     protected function getCustomerSessionValidatorPlugins(): array
     {
         return [
-            new RedisCustomerSessionValidatorPlugin(),
-            new StorageInvalidationRecordCustomerSessionValidatorPlugin(),
+        new RedisCustomerSessionValidatorPlugin(),
+        new StorageInvalidationRecordCustomerSessionValidatorPlugin(),
         ];
     }
 }

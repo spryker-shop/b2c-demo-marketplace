@@ -28,16 +28,8 @@ use Spryker\Glue\WarehouseUsersBackendApi\WarehouseUsersBackendApiConfig;
  */
 class MerchantUserScopeAuthorizeBackendApiCest
 {
-    /**
-     * @var \PyzTest\Glue\OauthUserConnector\BackendApi\Fixtures\OauthUserConnectorBackendApiFixtures
-     */
     protected OauthUserConnectorBackendApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\OauthUserConnector\OauthUserConnectorBackendApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(OauthUserConnectorBackendApiTester $I): void
     {
         /** @var \PyzTest\Glue\OauthUserConnector\BackendApi\Fixtures\OauthUserConnectorBackendApiFixtures $fixtures */
@@ -48,10 +40,6 @@ class MerchantUserScopeAuthorizeBackendApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\OauthUserConnector\OauthUserConnectorBackendApiTester $I
-     *
-     * @return void
      */
     public function requestServicePointsForMerchantUserForbidden(OauthUserConnectorBackendApiTester $I): void
     {
@@ -67,10 +55,6 @@ class MerchantUserScopeAuthorizeBackendApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\OauthUserConnector\OauthUserConnectorBackendApiTester $I
-     *
-     * @return void
      */
     public function requestWarehouseUserAssignmentsForMerchantUserForbidden(OauthUserConnectorBackendApiTester $I): void
     {

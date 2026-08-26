@@ -19,11 +19,6 @@ use Spryker\Zed\ProductOption\ProductOptionDependencyProvider as SprykerProductO
 
 class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProvider
 {
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
-     */
     protected function createMoneyCollectionFormTypePlugin(Container $container): FormTypeInterface // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return new MoneyCollectionFormTypePlugin();
@@ -35,7 +30,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     protected function getProductOptionListActionViewDataExpanderPlugins(): array
     {
         return [
-            new MerchantProductOptionListActionViewDataExpanderPlugin(),
+        new MerchantProductOptionListActionViewDataExpanderPlugin(),
         ];
     }
 
@@ -45,7 +40,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     protected function getProductOptionListTableQueryCriteriaExpanderPlugins(): array
     {
         return [
-            new MerchantProductOptionListTableQueryCriteriaExpanderPlugin(),
+        new MerchantProductOptionListTableQueryCriteriaExpanderPlugin(),
         ];
     }
 
@@ -55,7 +50,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     protected function getProductOptionGroupExpanderPlugins(): array
     {
         return [
-            new MerchantProductOptionGroupExpanderPlugin(),
+        new MerchantProductOptionGroupExpanderPlugin(),
         ];
     }
 }

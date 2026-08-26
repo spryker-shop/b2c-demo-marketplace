@@ -31,9 +31,6 @@ use Spryker\Zed\PriceProductOfferDataImport\Business\PriceProductOfferDataImport
  */
 class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOfferDataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCombinedPriceProductOfferDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getConditionalCsvDataImporterFromConfig(
@@ -59,11 +56,6 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
         return $dataImporter;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer $dataImporterConfigurationTransfer
-     *
-     * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
-     */
     public function getConditionalCsvDataImporterFromConfig(
         DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterConditional {
@@ -72,12 +64,6 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
         return $this->createDataImporterConditional($dataImporterConfigurationTransfer->getImportType(), $csvReader);
     }
 
-    /**
-     * @param string $importType
-     * @param \Spryker\Zed\DataImport\Business\Model\DataReader\DataReaderInterface $reader
-     *
-     * @return \Pyz\Zed\DataImport\Business\Model\DataImporterConditional
-     */
     public function createDataImporterConditional(
         string $importType,
         DataReaderInterface $reader,
@@ -85,73 +71,46 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
         return new DataImporterConditional($importType, $reader, $this->getGracefulRunnerFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedProductOfferReferenceToProductOfferDataStep(): DataImportStepInterface
     {
         return new CombinedProductOfferReferenceToProductOfferDataStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedProductOfferToIdProductStep(): DataImportStepInterface
     {
         return new CombinedProductOfferToIdProductStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedPriceTypeToIdPriceTypeStep(): DataImportStepInterface
     {
         return new CombinedPriceTypeToIdPriceTypeStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedPriceProductWriterStep(): DataImportStepInterface
     {
         return new CombinedPriceProductWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedStoreToIdStoreStep(): DataImportStepInterface
     {
         return new CombinedStoreToIdStoreStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedCurrencyToIdCurrencyStep(): DataImportStepInterface
     {
         return new CombinedCurrencyToIdCurrencyStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedPriceProductStoreWriterStep(): DataImportStepInterface
     {
         return new CombinedPriceProductStoreWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCombinedPreparePriceDataStep(): DataImportStepInterface
     {
         return new CombinedPreparePriceDataStep($this->getPriceProductFacade(), $this->getUtilEncodingService());
     }
 
-    /**
-     * @return \Pyz\Zed\DataImport\Business\Model\DataSet\DataSetConditionInterface
-     */
     public function createCombinedPriceProductOfferMandatoryColumnCondition(): DataSetConditionInterface
     {
         return new CombinedPriceProductOfferMandatoryColumnCondition();

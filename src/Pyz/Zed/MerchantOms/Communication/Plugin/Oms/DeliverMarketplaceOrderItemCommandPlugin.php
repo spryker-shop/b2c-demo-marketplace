@@ -21,9 +21,6 @@ class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCo
      */
     protected const EVENT_DELIVER = 'deliver';
 
-    /**
-     * @return string
-     */
     public function getEventName(): string
     {
         return static::EVENT_DELIVER;

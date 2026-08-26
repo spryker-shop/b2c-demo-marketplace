@@ -41,7 +41,7 @@ export default [
     },
     // Configuration for Yves TypeScript files
     {
-        files: ['src/{Pyz,SprykerShop,SprykerFeature}/*/src/{Pyz,SprykerShop,SprykerFeature}/Yves/**/*.ts'],
+        files: ['src/Pyz/Yves/**/*.ts'],
         languageOptions: {
             parser: typescriptParser,
             parserOptions: {

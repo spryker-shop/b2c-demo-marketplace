@@ -35,16 +35,8 @@ class ShipmentTypesRestApiFixtures implements FixturesBuilderInterface, Fixtures
      */
     protected array $shipmentTypes = [];
 
-    /**
-     * @var \Generated\Shared\Transfer\ServiceTypeTransfer
-     */
     protected ServiceTypeTransfer $serviceTypeTransfer;
 
-    /**
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(ShipmentTypesApiTester $I): FixturesContainerInterface
     {
         $this->shipmentTypes = [
@@ -65,19 +57,13 @@ class ShipmentTypesRestApiFixtures implements FixturesBuilderInterface, Fixtures
         return $this->shipmentTypes;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ServiceTypeTransfer
-     */
     public function getServiceTypeTransfer(): ServiceTypeTransfer
     {
         return $this->serviceTypeTransfer;
     }
 
     /**
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
      * @param list<string> $storeNames
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
      */
     protected function createActiveShipmentType(ShipmentTypesApiTester $I, array $storeNames = []): ShipmentTypeTransfer
     {
@@ -92,21 +78,11 @@ class ShipmentTypesRestApiFixtures implements FixturesBuilderInterface, Fixtures
         ]);
     }
 
-    /**
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeTransfer
-     */
     protected function createServiceType(ShipmentTypesApiTester $I): ServiceTypeTransfer
     {
         return $I->haveServiceType();
     }
 
-    /**
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
-     */
     protected function createShipmentTypeServiceTypeRelation(ShipmentTypesApiTester $I): void
     {
         $I->haveShipmentTypeServiceTypeRelation(

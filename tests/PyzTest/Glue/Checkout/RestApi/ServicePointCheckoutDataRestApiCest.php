@@ -28,16 +28,8 @@ use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig;
  */
 class ServicePointCheckoutDataRestApiCest
 {
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointCheckoutDataRestApiFixtures
-     */
     protected ServicePointCheckoutDataRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointCheckoutDataRestApiFixtures $fixtures */
@@ -47,10 +39,6 @@ class ServicePointCheckoutDataRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsSelectedServicePoints(CheckoutApiTester $I): void
     {

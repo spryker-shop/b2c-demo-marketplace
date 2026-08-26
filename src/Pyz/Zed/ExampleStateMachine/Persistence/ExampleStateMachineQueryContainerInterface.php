@@ -16,8 +16,6 @@ interface ExampleStateMachineQueryContainerInterface
 {
     /**
      * @param array<int> $stateIds
-     *
-     * @return \Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItemQuery
      */
     public function queryStateMachineItemsByStateIds(array $stateIds = []): ExampleStateMachineItemQuery;
 
@@ -27,8 +25,6 @@ interface ExampleStateMachineQueryContainerInterface
     public function queryAllStateMachineItems(): ObjectCollection;
 
     /**
-     * @param int $idStateMachineItem
-     *
      * @return \Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItemQuery|\Propel\Runtime\Collection\ObjectCollection|array<\Orm\Zed\ExampleStateMachine\Persistence\ExampleStateMachineItem>
      */
     public function queryExampleStateMachineItemByIdStateMachineItem(int $idStateMachineItem);

@@ -38,76 +38,41 @@ class GuestCheckoutDataShipmentRelationshipsFixtures implements FixturesBuilderI
      */
     protected const ANONYMOUS_PREFIX = 'anonymous:';
 
-    /**
-     * @var string
-     */
     protected string $guestCustomerReference;
 
-    /**
-     * @var \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected CustomerTransfer $guestCustomerTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\QuoteTransfer
-     */
     protected QuoteTransfer $guestQuoteTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     protected ShipmentMethodTransfer $shipmentMethodTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     protected ShipmentTypeTransfer $shipmentTypeTransfer;
 
-    /**
-     * @return string
-     */
     public function getGuestCustomerReference(): string
     {
         return $this->guestCustomerReference;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     public function getGuestCustomerTransfer(): CustomerTransfer
     {
         return $this->guestCustomerTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function getGuestQuoteTransfer(): QuoteTransfer
     {
         return $this->guestQuoteTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     public function getShipmentMethodTransfer(): ShipmentMethodTransfer
     {
         return $this->shipmentMethodTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     public function getShipmentTypeTransfer(): ShipmentTypeTransfer
     {
         return $this->shipmentTypeTransfer;
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(CheckoutApiTester $I): FixturesContainerInterface
     {
         $I->truncateSalesOrderThresholds();

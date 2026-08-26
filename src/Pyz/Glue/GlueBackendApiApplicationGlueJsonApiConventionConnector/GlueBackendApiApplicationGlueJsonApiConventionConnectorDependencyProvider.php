@@ -30,11 +30,6 @@ use Spryker\Glue\WarehouseUsersBackendApi\WarehouseUsersBackendApiConfig;
 
 class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
 {
-    /**
-     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
-     *
-     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
-     */
     protected function getResourceRelationshipPlugins(
         ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
     ): ResourceRelationshipCollectionInterface {

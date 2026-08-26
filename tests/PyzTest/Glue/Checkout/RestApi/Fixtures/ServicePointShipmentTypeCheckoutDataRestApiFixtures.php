@@ -38,102 +38,55 @@ class ServicePointShipmentTypeCheckoutDataRestApiFixtures implements FixturesBui
      */
     protected const TEST_PASSWORD = 'change123';
 
-    /**
-     * @var \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected CustomerTransfer $customerTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\QuoteTransfer
-     */
     protected QuoteTransfer $quoteTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     protected ShipmentMethodTransfer $pickableShipmentMethodTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     protected ShipmentMethodTransfer $nonPickableShipmentMethodTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ServicePointTransfer
-     */
     protected ServicePointTransfer $servicePointWithAddress;
 
-    /**
-     * @var \Generated\Shared\Transfer\ServicePointTransfer
-     */
     protected ServicePointTransfer $servicePoint;
 
-    /**
-     * @var \Generated\Shared\Transfer\ServicePointTransfer
-     */
     protected ServicePointTransfer $servicePointWithoutAddress;
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function getQuoteTransfer(): QuoteTransfer
     {
         return $this->quoteTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ServicePointTransfer
-     */
     public function getServicePointWithoutAddress(): ServicePointTransfer
     {
         return $this->servicePointWithoutAddress;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     public function getCustomerTransfer(): CustomerTransfer
     {
         return $this->customerTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     public function getPickableShipmentMethodTransfer(): ShipmentMethodTransfer
     {
         return $this->pickableShipmentMethodTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     public function getNonPickableShipmentMethodTransfer(): ShipmentMethodTransfer
     {
         return $this->nonPickableShipmentMethodTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ServicePointTransfer
-     */
     public function getServicePoint(): ServicePointTransfer
     {
         return $this->servicePoint;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ServicePointTransfer
-     */
     public function getServicePointWithAddress(): ServicePointTransfer
     {
         return $this->servicePointWithAddress;
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(CheckoutApiTester $I): FixturesContainerInterface
     {
         $I->truncateSalesOrderThresholds();

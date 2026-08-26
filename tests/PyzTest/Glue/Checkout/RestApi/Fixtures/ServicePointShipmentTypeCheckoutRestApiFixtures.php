@@ -37,34 +37,16 @@ class ServicePointShipmentTypeCheckoutRestApiFixtures implements FixturesBuilder
      */
     protected const TEST_PASSWORD = 'change123';
 
-    /**
-     * @var \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected CustomerTransfer $customerTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     protected ShipmentMethodTransfer $pickableShipmentMethodTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     protected ShipmentMethodTransfer $regularShipmentMethodTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ServicePointTransfer
-     */
     protected ServicePointTransfer $servicePointTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     protected ShipmentTypeTransfer $pickableShipmentTypeTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\StoreTransfer
-     */
     protected StoreTransfer $storeTransfer;
 
     /**
@@ -72,33 +54,21 @@ class ServicePointShipmentTypeCheckoutRestApiFixtures implements FixturesBuilder
      */
     protected array $productOfferTransfers;
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     public function getCustomerTransfer(): CustomerTransfer
     {
         return $this->customerTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     public function getPickableShipmentMethodTransfer(): ShipmentMethodTransfer
     {
         return $this->pickableShipmentMethodTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentMethodTransfer
-     */
     public function getRegularShipmentMethodTransfer(): ShipmentMethodTransfer
     {
         return $this->regularShipmentMethodTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ServicePointTransfer
-     */
     public function getServicePointTransfer(): ServicePointTransfer
     {
         return $this->servicePointTransfer;
@@ -112,11 +82,6 @@ class ServicePointShipmentTypeCheckoutRestApiFixtures implements FixturesBuilder
         return $this->productOfferTransfers;
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(CheckoutApiTester $I): FixturesContainerInterface
     {
         $I->truncateSalesOrderThresholds();
@@ -131,21 +96,11 @@ class ServicePointShipmentTypeCheckoutRestApiFixtures implements FixturesBuilder
         return $this;
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     protected function createStore(CheckoutApiTester $I): void
     {
         $this->storeTransfer = $I->getStoreFacade()->getCurrentStore();
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     protected function createCustomer(CheckoutApiTester $I): void
     {
         $customerTransfer = $I->haveCustomer([
@@ -157,21 +112,11 @@ class ServicePointShipmentTypeCheckoutRestApiFixtures implements FixturesBuilder
         $this->customerTransfer = $I->confirmCustomer($customerTransfer);
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     protected function createPickableShipmentType(CheckoutApiTester $I): void
     {
         $this->pickableShipmentTypeTransfer = $I->havePickableShipmentType($this->storeTransfer);
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     protected function createShipmentMethods(CheckoutApiTester $I): void
     {
         $this->pickableShipmentMethodTransfer = $I->haveShipmentMethod(
@@ -193,21 +138,11 @@ class ServicePointShipmentTypeCheckoutRestApiFixtures implements FixturesBuilder
         );
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     protected function createServicePoint(CheckoutApiTester $I): void
     {
         $this->servicePointTransfer = $I->haveServicePointWithAddress($this->storeTransfer);
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     protected function createProductOfferTransfers(CheckoutApiTester $I): void
     {
         $productConcreteTransfer1 = $I->haveProductWithStock();

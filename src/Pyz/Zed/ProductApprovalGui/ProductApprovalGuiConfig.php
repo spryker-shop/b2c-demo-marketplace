@@ -13,9 +13,6 @@ use Spryker\Zed\ProductApprovalGui\ProductApprovalGuiConfig as SprykerProductApp
 
 class ProductApprovalGuiConfig extends SprykerProductApprovalGuiConfig
 {
-    /**
-     * @return bool
-     */
     public function isApprovalStatusTreeCustomizationEnabled(): bool
     {
         return true;

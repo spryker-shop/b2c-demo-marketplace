@@ -13,9 +13,6 @@ use Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig as SprykerAclMerchantP
 
 class AclMerchantPortalConfig extends SprykerAclMerchantPortalConfig
 {
-    /**
-     * @return bool
-     */
     public function isMerchantToMerchantUserConjunctionByUsernameEnabled(): bool
     {
         return true;

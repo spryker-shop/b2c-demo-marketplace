@@ -13,9 +13,6 @@ use SprykerShop\Yves\CatalogPage\CatalogPageConfig as SprykerCatalogPageConfig;
 
 class CatalogPageConfig extends SprykerCatalogPageConfig
 {
-    /**
-     * @return bool
-     */
     public function isVisibleEmptyRangeFilters(): bool
     {
         return false;

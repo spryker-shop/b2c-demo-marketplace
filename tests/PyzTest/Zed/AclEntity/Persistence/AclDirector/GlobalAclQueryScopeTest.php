@@ -38,9 +38,6 @@ class GlobalAclQueryScopeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -50,8 +47,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testGlobalScopePrecedenceDefaultScope(): void
     {
@@ -75,8 +70,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testInspectCreateWithCreatePermission(): void
     {
@@ -100,8 +93,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithUpdatePermission(): void
     {
@@ -130,8 +121,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithDeletePermission(): void
     {
@@ -160,8 +149,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testInspectCreateWithMixedPermissions(): void
     {
@@ -187,8 +174,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithMixedPermissions(): void
     {
@@ -218,8 +203,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithMixedPermissions(): void
     {
@@ -251,8 +234,6 @@ class GlobalAclQueryScopeTest extends Unit
      * @group AclEntityCreate
      * @group AclEntityUpdate
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectCudWithCudPermissions(): void
     {
@@ -289,8 +270,6 @@ class GlobalAclQueryScopeTest extends Unit
      * @group AclEntityCreate
      * @group AclEntityUpdate
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectCreateWithMultipleRules(): void
     {
@@ -333,8 +312,6 @@ class GlobalAclQueryScopeTest extends Unit
      * @group AclEntityCreate
      * @group AclEntityUpdate
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectCreateWithMultipleRoles(): void
     {
@@ -376,8 +353,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRuleOnSelectQueryWithReadPermission(): void
     {
@@ -414,8 +389,6 @@ class GlobalAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRuleOnUpdateQueryWithUpdatePermission(): void
     {
@@ -454,8 +427,6 @@ class GlobalAclQueryScopeTest extends Unit
      * @group AclEntityCreate
      * @group AclEntityUpdate
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectWhildcardEntityWithFullPermissionsForGlobalScope(): void
     {

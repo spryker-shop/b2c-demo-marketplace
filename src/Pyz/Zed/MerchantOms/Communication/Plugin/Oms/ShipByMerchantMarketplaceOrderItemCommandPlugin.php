@@ -21,9 +21,6 @@ class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOms
      */
     protected const EVENT_SHIP_BY_MERCHANT = 'ship by merchant';
 
-    /**
-     * @return string
-     */
     public function getEventName(): string
     {
         return static::EVENT_SHIP_BY_MERCHANT;

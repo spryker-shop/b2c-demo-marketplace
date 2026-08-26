@@ -29,16 +29,8 @@ use Spryker\Glue\ShipmentTypeServicePointsRestApi\ShipmentTypeServicePointsRestA
  */
 class ServicePointShipmentTypeCheckoutDataRestApiCest
 {
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointShipmentTypeCheckoutDataRestApiFixtures
-     */
     protected ServicePointShipmentTypeCheckoutDataRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointShipmentTypeCheckoutDataRestApiFixtures $fixtures */
@@ -48,10 +40,6 @@ class ServicePointShipmentTypeCheckoutDataRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsServicePointNotProvidedValidationErrorForMultiShipment(CheckoutApiTester $I): void
     {
@@ -110,10 +98,6 @@ class ServicePointShipmentTypeCheckoutDataRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsServicePointNotProvidedValidationErrorForSingleShipment(CheckoutApiTester $I): void
     {
@@ -162,10 +146,6 @@ class ServicePointShipmentTypeCheckoutDataRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsServicePointHasNoAddressValidationError(CheckoutApiTester $I): void
     {
@@ -233,10 +213,6 @@ class ServicePointShipmentTypeCheckoutDataRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutReturnsShippingAddressMissingValidationError(CheckoutApiTester $I): void
     {
@@ -305,10 +281,6 @@ class ServicePointShipmentTypeCheckoutDataRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsOnlyOneServicePointShouldBeSelectedValidationError(CheckoutApiTester $I): void
     {

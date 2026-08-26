@@ -24,11 +24,6 @@ use PyzTest\Yves\Application\PageObject\Homepage;
  */
 class HomepageCest
 {
-    /**
-     * @param \PyzTest\Yves\Application\ApplicationControllerTester $i
-     *
-     * @return void
-     */
     public function testICanOpenHomepage(ApplicationControllerTester $i): void
     {
         $i->wantTo('See that i can open the homepage');

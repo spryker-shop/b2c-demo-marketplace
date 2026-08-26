@@ -19,9 +19,6 @@ class ProductOfferValidityDataImportConfig extends SprykerProductOfferValidityDa
      */
     public const IMPORT_TYPE_COMBINED_PRODUCT_OFFER_VALIDITY = 'combined-product-offer-validity';
 
-    /**
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     public function getCombinedProductOfferValidityDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         $moduleDataImportDirectory = $this->getDataImportRootPath() . 'common' . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR;

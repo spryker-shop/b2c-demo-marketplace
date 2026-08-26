@@ -19,8 +19,6 @@ use Spryker\Client\SearchElasticsearch\SearchElasticsearchDependencyProvider as 
 class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDependencyProvider
 {
     /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
      * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface>
      */
     protected function getSearchConfigBuilderPlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
@@ -31,8 +29,6 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
     }
 
     /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
      * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
      */
     protected function getSearchConfigExpanderPlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter

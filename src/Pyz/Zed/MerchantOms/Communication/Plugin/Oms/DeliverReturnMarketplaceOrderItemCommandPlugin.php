@@ -21,9 +21,6 @@ class DeliverReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsE
      */
     protected const EVENT_DELIVER_RETURN = 'deliver-return';
 
-    /**
-     * @return string
-     */
     public function getEventName(): string
     {
         return static::EVENT_DELIVER_RETURN;

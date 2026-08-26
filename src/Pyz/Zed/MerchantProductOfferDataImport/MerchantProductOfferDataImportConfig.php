@@ -24,9 +24,6 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
      */
     public const IMPORT_TYPE_COMBINED_MERCHANT_PRODUCT_OFFER_STORE = 'combined-merchant-product-offer-store';
 
-    /**
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     public function getCombinedMerchantProductOfferDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         return $this->buildImporterConfiguration(
@@ -35,9 +32,6 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
         );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     public function getCombinedMerchantProductOfferStoreDataImporterConfiguration(): DataImporterConfigurationTransfer
     {
         return $this->buildImporterConfiguration(
@@ -46,9 +40,6 @@ class MerchantProductOfferDataImportConfig extends SprykerMerchantProductOfferDa
         );
     }
 
-    /**
-     * @return string
-     */
     public function getCombinedMerchantProductOfferFilePath(): string
     {
         $moduleDataImportDirectory = $this->getDataImportRootPath() . 'common' . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR;

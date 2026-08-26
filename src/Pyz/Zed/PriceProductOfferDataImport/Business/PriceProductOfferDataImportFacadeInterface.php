@@ -15,11 +15,6 @@ use Spryker\Zed\PriceProductOfferDataImport\Business\PriceProductOfferDataImport
 
 interface PriceProductOfferDataImportFacadeInterface extends SprykerPriceProductOfferDataImportFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
     public function importCombinedPriceProductOfferData(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null,
     ): DataImporterReportTransfer;

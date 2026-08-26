@@ -51,16 +51,8 @@ class ServicePointShipmentTypeCheckoutRestApiCest
      */
     protected const RESPONSE_DETAILS_CUSTOMER_DATA_MISSING = 'Required customer information is missing from the request body.';
 
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointShipmentTypeCheckoutRestApiFixtures
-     */
     protected ServicePointShipmentTypeCheckoutRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\ServicePointShipmentTypeCheckoutRestApiFixtures $fixtures */
@@ -70,10 +62,6 @@ class ServicePointShipmentTypeCheckoutRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutWithSingleShipmentAndPickableShipmentMethod(CheckoutApiTester $I): void
     {
@@ -134,10 +122,6 @@ class ServicePointShipmentTypeCheckoutRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutWithSplitShipmentAndPickableShipmentMethod(CheckoutApiTester $I): void
     {
@@ -201,10 +185,6 @@ class ServicePointShipmentTypeCheckoutRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutWithSingleShipmentAndPickableShipmentMethodWithoutCustomerDataInRequestBody(CheckoutApiTester $I): void
     {
@@ -263,10 +243,6 @@ class ServicePointShipmentTypeCheckoutRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutWithSplitShipmentAndPickableShipmentMethodWithoutCustomerDataInRequestBody(CheckoutApiTester $I): void
     {
@@ -328,10 +304,6 @@ class ServicePointShipmentTypeCheckoutRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutWithSplitShipmentWithOneItemAndPickableShipmentMethodWithoutCustomerDataInRequestBody(CheckoutApiTester $I): void
     {
@@ -391,10 +363,6 @@ class ServicePointShipmentTypeCheckoutRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutForGuestUserWithPickableShipmentMethodWithoutCustomerDataInRequestBody(CheckoutApiTester $I): void
     {
@@ -447,8 +415,6 @@ class ServicePointShipmentTypeCheckoutRestApiCest
     }
 
     /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
      * @return list<string>
      */
     protected function extractItemGroupKeys(QuoteTransfer $quoteTransfer): array

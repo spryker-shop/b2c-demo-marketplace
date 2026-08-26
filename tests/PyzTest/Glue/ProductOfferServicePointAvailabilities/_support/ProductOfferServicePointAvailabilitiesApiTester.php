@@ -36,9 +36,6 @@ class ProductOfferServicePointAvailabilitiesApiTester extends ApiEndToEndTester
 {
     use _generated\ProductOfferServicePointAvailabilitiesApiTesterActions;
 
-    /**
-     * @return void
-     */
     public function assertProductOfferServicePointAvailabilitiesResourceHasCorrectData(): void
     {
         $this->seeResponseDataContainsSingleResourceOfType(ProductOfferServicePointAvailabilitiesRestApiConfig::RESOURCE_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITIES);
@@ -53,12 +50,6 @@ class ProductOfferServicePointAvailabilitiesApiTester extends ApiEndToEndTester
 
     /**
      * @param array<string, mixed> $productOfferServicePointAvailabilityResponseItemData
-     * @param \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer $expectedProductOfferServicePointAvailabilityResponseItemTransfer
-     * @param int $expectedAvailableQuantity
-     * @param string $expectedIdentifier
-     * @param bool $expectedIsAvailable
-     *
-     * @return void
      */
     public function assertProductOfferServicePointAvailabilityResponseItemHasCorrectData(
         array $productOfferServicePointAvailabilityResponseItemData,
@@ -90,8 +81,6 @@ class ProductOfferServicePointAvailabilitiesApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param string $servicePointUuid
-     *
      * @return array<string, mixed>
      */
     public function getProductOfferServicePointAvailabilityByServicePointUuid(string $servicePointUuid): array

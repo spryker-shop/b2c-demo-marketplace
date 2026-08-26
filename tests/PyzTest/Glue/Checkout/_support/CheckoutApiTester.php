@@ -152,9 +152,6 @@ class CheckoutApiTester extends ApiEndToEndTester
      */
     protected const COUNTRY_ISO3_CODE = 'XXX';
 
-    /**
-     * @return void
-     */
     public function assertCheckoutResponseResourceHasCorrectData(): void
     {
         $this->amSure('The returned resource id should be null')
@@ -179,9 +176,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         );
     }
 
-    /**
-     * @return void
-     */
     public function assertCheckoutDataResponseResourceHasCorrectData(): void
     {
         $this->amSure('The returned resource id should be null')
@@ -196,13 +190,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointAddressTransfer $servicePointAddressTransfer
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     * @param string $itemSku
-     *
-     * @return void
-     */
     public function assertSalesOrderAddressIsCorrectForItem(
         ServicePointAddressTransfer $servicePointAddressTransfer,
         CustomerTransfer $customerTransfer,
@@ -222,11 +209,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         $this->assertSame($customerTransfer->getSalutationOrFail(), $salesOrderShipmentAddressEntity->getSalutation());
     }
 
-    /**
-     * @param int $price
-     *
-     * @return void
-     */
     public function assertShipmentExpensesHaveCorrectPrice(int $price): void
     {
         $this->amSure('The returned resource should have included orders resource')
@@ -250,8 +232,6 @@ class CheckoutApiTester extends ApiEndToEndTester
 
     /**
      * @param array<string> $includes
-     *
-     * @return string
      */
     public function buildCheckoutUrl(array $includes = []): string
     {
@@ -265,8 +245,6 @@ class CheckoutApiTester extends ApiEndToEndTester
 
     /**
      * @param array<string> $includes
-     *
-     * @return string
      */
     public function buildCheckoutDataUrl(array $includes = []): string
     {
@@ -278,9 +256,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         );
     }
 
-    /**
-     * @return \Spryker\Zed\Store\Business\StoreFacadeInterface
-     */
     public function getStoreFacade(): StoreFacadeInterface
     {
         return $this->getLocator()
@@ -288,9 +263,6 @@ class CheckoutApiTester extends ApiEndToEndTester
             ->facade();
     }
 
-    /**
-     * @return \Spryker\Zed\Customer\Business\CustomerFacadeInterface
-     */
     public function getCustomerFacade(): CustomerFacadeInterface
     {
         return $this->getLocator()
@@ -298,19 +270,11 @@ class CheckoutApiTester extends ApiEndToEndTester
             ->facade();
     }
 
-    /**
-     * @return \Spryker\Zed\Cart\Business\CartFacadeInterface
-     */
     public function getCartFacade(): CartFacadeInterface
     {
         return $this->getLocator()->cart()->facade();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AddressTransfer $addressTransfer
-     *
-     * @return array
-     */
     public function getAddressRequestPayload(AddressTransfer $addressTransfer): array
     {
         return [
@@ -330,11 +294,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return array
-     */
     public function getCustomerRequestPayload(CustomerTransfer $customerTransfer): array
     {
         return [
@@ -345,12 +304,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ];
     }
 
-    /**
-     * @param string $paymentMethodName
-     * @param string $paymentProviderName
-     *
-     * @return array
-     */
     public function getPaymentRequestPayload(
         string $paymentMethodName = self::REQUEST_PARAM_PAYMENT_METHOD_NAME_INVOICE,
         string $paymentProviderName = self::REQUEST_PARAM_PAYMENT_PROVIDER_NAME_DUMMY_PAYMENT,
@@ -363,11 +316,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ];
     }
 
-    /**
-     * @param int $idShipmentMethod
-     *
-     * @return array
-     */
     public function getShipmentRequestPayload(int $idShipmentMethod): array
     {
         return [
@@ -376,7 +324,6 @@ class CheckoutApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param string $idServicePoint
      * @param list<string> $itemGroupKeys
      *
      * @return list<array<string, mixed>>
@@ -392,9 +339,6 @@ class CheckoutApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\AddressTransfer|null $addressTransfer
-     *
      * @return array<string, mixed>
      */
     public function getSplitShipmentRequestPayload(ItemTransfer $itemTransfer, ?AddressTransfer $addressTransfer = null): array
@@ -411,13 +355,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param \Generated\Shared\Transfer\ShipmentMethodTransfer $shipmentMethodTransfer
-     * @param int $quantity
-     *
-     * @return array
-     */
     public function getQuoteItemOverrideData(
         ProductConcreteTransfer $productConcreteTransfer,
         ShipmentMethodTransfer $shipmentMethodTransfer,
@@ -433,10 +370,6 @@ class CheckoutApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     * @param \Generated\Shared\Transfer\ShipmentMethodTransfer $shipmentMethodTransfer
-     * @param int $quantity
-     *
      * @return array<string, mixed>
      */
     public function getQuoteProductOfferItemOverrideData(
@@ -453,31 +386,20 @@ class CheckoutApiTester extends ApiEndToEndTester
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return void
-     */
     public function authorizeCustomerToGlue(CustomerTransfer $customerTransfer): void
     {
         $oauthResponseTransfer = $this->haveAuthorizationToGlue($customerTransfer);
         $this->amBearerAuthenticated($oauthResponseTransfer->getAccessToken());
     }
 
-    /**
-     * @return string
-     */
     public function createGuestCustomerReference(): string
     {
         return uniqid('testReference', true);
     }
 
     /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
      * @param array<\Generated\Shared\Transfer\ProductOfferTransfer> $productOfferTransfers
      * @param array<string, mixed> $overrideShipment
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
      */
     public function havePersistentQuoteWithProductOfferItems(
         CustomerTransfer $customerTransfer,
@@ -502,13 +424,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ]);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     * @param array $overrideItems
-     * @param string $priceMode
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function havePersistentQuoteWithItemsAndItemLevelShipment(
         CustomerTransfer $customerTransfer,
         array $overrideItems = [],
@@ -527,11 +442,7 @@ class CheckoutApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
      * @param array<string, mixed> $overrideItemsData
-     * @param string $priceMode
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
      */
     public function havePersistentQuoteWithProductOfferItemsAndItemLevelShipment(
         CustomerTransfer $customerTransfer,
@@ -550,11 +461,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ]);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function havePersistentQuoteWithItemAndItemServicePoint(CustomerTransfer $customerTransfer): QuoteTransfer
     {
         $productConcreteTransfer = $this->haveProductWithStock();
@@ -572,11 +478,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ]);
     }
 
-    /**
-     * @param array $overrideCustomer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function haveEmptyPersistentQuote(array $overrideCustomer = []): QuoteTransfer
     {
         return $this->havePersistentQuote([
@@ -585,9 +486,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         ]);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function haveProductWithStock(): ProductConcreteTransfer
     {
         $productConcreteTransfer = $this->haveFullProduct();
@@ -613,12 +511,7 @@ class CheckoutApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param \Generated\Shared\Transfer\ServiceTransfer $serviceTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
      * @param array<string, mixed> $override
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer
      */
     public function haveProductOfferWithShipmentTypeAndServiceRelations(
         ProductConcreteTransfer $productConcreteTransfer,
@@ -637,10 +530,7 @@ class CheckoutApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
      * @param array<string, mixed> $override
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer
      */
     public function haveProductOfferWithStock(ProductConcreteTransfer $productConcreteTransfer, array $override = []): ProductOfferTransfer
     {
@@ -670,21 +560,11 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $productOfferTransfer;
     }
 
-    /**
-     * @param array $override
-     *
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     public function createCustomerTransfer(array $override = []): CustomerTransfer
     {
         return (new CustomerBuilder($override))->build();
     }
 
-    /**
-     * @param array $override
-     *
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     public function haveCustomerWithPersistentAddress(array $override = []): CustomerTransfer
     {
         $customerTransfer = $this->haveCustomer($override);
@@ -692,12 +572,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $this->haveAddressForCustomer($customerTransfer);
     }
 
-    /**
-     * @param array $paymentMethodOverrideData
-     * @param array $storeOverrideData
-     *
-     * @return \Generated\Shared\Transfer\PaymentMethodTransfer
-     */
     public function havePaymentMethodWithStore(
         array $paymentMethodOverrideData = [],
         array $storeOverrideData = [
@@ -721,12 +595,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $this->havePaymentMethod($paymentMethodOverrideData);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantTransfer $merchantTransfer
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer
-     */
     public function createProductOfferWithStock(
         MerchantTransfer $merchantTransfer,
         ProductConcreteTransfer $productConcreteTransfer,
@@ -767,11 +635,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $productOfferTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     public function havePickableShipmentType(StoreTransfer $storeTransfer): ShipmentTypeTransfer
     {
         $shipmentTypeEntity = SpyShipmentTypeQuery::create()
@@ -790,10 +653,7 @@ class CheckoutApiTester extends ApiEndToEndTester
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
      * @param array<string, mixed> $seedData
-     *
-     * @return \Generated\Shared\Transfer\ServiceTransfer
      */
     public function havePickableService(ShipmentTypeTransfer $shipmentTypeTransfer, array $seedData = []): ServiceTransfer
     {
@@ -813,12 +673,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $serviceTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentMethodTransfer $shipmentMethodTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return void
-     */
     public function addShipmentTypeToShipmentMethod(
         ShipmentMethodTransfer $shipmentMethodTransfer,
         ShipmentTypeTransfer $shipmentTypeTransfer,
@@ -831,11 +685,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         $shipmentMethodEntity->save();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointTransfer
-     */
     public function haveServicePointWithoutAddress(StoreTransfer $storeTransfer): ServicePointTransfer
     {
         $servicePointBuilder = (new ServicePointBuilder([
@@ -854,11 +703,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $this->haveServicePoint($servicePointBuilder->toArray());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointTransfer
-     */
     public function haveServicePointWithAddress(StoreTransfer $storeTransfer): ServicePointTransfer
     {
         $countryTransfer = $this->haveCountryTransfer([
@@ -877,11 +721,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $servicePointTransfer->setAddress($servicePointAddressTransfer->setServicePoint(null));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantTransfer
-     */
     public function haveMerchantWithStoreRelation(StoreTransfer $storeTransfer): MerchantTransfer
     {
         $merchantTransfer = (new MerchantBuilder([
@@ -895,11 +734,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $this->haveMerchant($merchantTransfer->toArray(true, true));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AddressTransfer $addressTransfer
-     *
-     * @return void
-     */
     public function assertCustomerBillingAddressInOrders(AddressTransfer $addressTransfer): void
     {
         $jsonPath = sprintf('$..included[?(@.type == \'%s\')]', 'orders');
@@ -914,11 +748,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         $this->assertSame($addressTransfer->getIso2Code(), $billingAddress['iso2Code']);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AddressTransfer $addressTransfer
-     *
-     * @return void
-     */
     public function assertCustomerShippingAddressInOrderShipments(
         AddressTransfer $addressTransfer,
     ): void {
@@ -934,11 +763,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         $this->assertSame($addressTransfer->getIso2Code(), $shippingAddress['iso2Code']);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected function haveAddressForCustomer(CustomerTransfer $customerTransfer): CustomerTransfer
     {
         $addressTransfer = (new AddressBuilder([
@@ -955,8 +779,6 @@ class CheckoutApiTester extends ApiEndToEndTester
 
     /**
      * @param array<\Generated\Shared\Transfer\ProductOfferTransfer> $productOfferTransfers
-     *
-     * @return array
      */
     protected function mapProductOfferTransfersToQuoteTransferItems(array $productOfferTransfers): array
     {
@@ -976,11 +798,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $quoteTransferItems;
     }
 
-    /**
-     * @param array $overrideItems
-     *
-     * @return array
-     */
     protected function mapProductConcreteTransfersToQuoteTransferItemsWithItemLevelShipment(array $overrideItems = []): array
     {
         $quoteTransferItems = [];
@@ -1038,12 +855,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return $itemTransfersData;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ItemTransfer
-     */
     protected function createItemTransferWithServicePoint(
         ProductConcreteTransfer $productConcreteTransfer,
         StoreTransfer $storeTransfer,
@@ -1060,31 +871,16 @@ class CheckoutApiTester extends ApiEndToEndTester
         ]))->build();
     }
 
-    /**
-     * @param array $overrideItem
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     protected function getProductConcreteTransferFromOverrideItemData(array $overrideItem): ProductConcreteTransfer
     {
         return $overrideItem[static::QUOTE_ITEM_OVERRIDE_DATA_PRODUCT];
     }
 
-    /**
-     * @param array $overrideItem
-     *
-     * @return array
-     */
     protected function getOverrideShipmentDataFromOverrideItemData(array $overrideItem = []): array
     {
         return $overrideItem[static::QUOTE_ITEM_OVERRIDE_DATA_SHIPMENT];
     }
 
-    /**
-     * @param array $overrideItem
-     *
-     * @return int
-     */
     protected function getQuoteItemQuantityFromOverrideItemData(array $overrideItem): int
     {
         return $overrideItem[static::QUOTE_ITEM_OVERRIDE_DATA_QUANTITY] ?? static::DEFAULT_QUOTE_ITEM_QUANTITY;
@@ -1092,8 +888,6 @@ class CheckoutApiTester extends ApiEndToEndTester
 
     /**
      * @param array<string> $includes
-     *
-     * @return string
      */
     protected function formatQueryInclude(array $includes = []): string
     {
@@ -1104,12 +898,6 @@ class CheckoutApiTester extends ApiEndToEndTester
         return sprintf('?%s=%s', RequestConstantsInterface::QUERY_INCLUDE, implode(',', $includes));
     }
 
-    /**
-     * @param string $orderReference
-     * @param string $itemSku
-     *
-     * @return \Orm\Zed\Sales\Persistence\SpySalesOrderAddress|null
-     */
     protected function findSalesOrderAddressEntity(string $orderReference, string $itemSku): ?SpySalesOrderAddress
     {
         return $this->getSpySalesOrderAddressQuery()
@@ -1124,33 +912,21 @@ class CheckoutApiTester extends ApiEndToEndTester
             ->findOne();
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentType\Persistence\SpyShipmentTypeQuery
-     */
     protected function getShipmentTypeQuery(): SpyShipmentTypeQuery
     {
         return SpyShipmentTypeQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\Sales\Persistence\SpySalesOrderAddressQuery
-     */
     protected function getSpySalesOrderAddressQuery(): SpySalesOrderAddressQuery
     {
         return SpySalesOrderAddressQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery
-     */
     protected function getSpyShipmentTypeServiceTypeQuery(): SpyShipmentTypeServiceTypeQuery
     {
         return SpyShipmentTypeServiceTypeQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery
-     */
     protected function getServiceTypeQuery(): SpyServiceTypeQuery
     {
         return SpyServiceTypeQuery::create();

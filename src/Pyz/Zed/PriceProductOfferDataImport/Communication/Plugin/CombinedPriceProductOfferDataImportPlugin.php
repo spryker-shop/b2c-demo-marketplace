@@ -21,19 +21,11 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
  */
 class CombinedPriceProductOfferDataImportPlugin extends AbstractPlugin implements DataImportPluginInterface
 {
-    /**
-     * @return string
-     */
     public function getImportType(): string
     {
         return PriceProductOfferDataImportConfig::IMPORT_TYPE_COMBINED_PRICE_PRODUCT_OFFER;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
     public function import(?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null): DataImporterReportTransfer
     {
         return $this->getFacade()->importCombinedPriceProductOfferData($dataImporterConfigurationTransfer);

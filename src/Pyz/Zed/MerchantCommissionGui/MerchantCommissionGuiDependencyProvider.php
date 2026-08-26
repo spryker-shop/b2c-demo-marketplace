@@ -15,9 +15,6 @@ use Spryker\Zed\MerchantCommissionGuiExtension\Communication\Dependency\Plugin\M
 
 class MerchantCommissionGuiDependencyProvider extends SprykerMerchantCommissionGuiDependencyProvider
 {
-    /**
-     * @return \Spryker\Zed\MerchantCommissionGuiExtension\Communication\Dependency\Plugin\MerchantCommissionExportPluginInterface
-     */
     protected function getMerchantCommissionExportPlugin(): MerchantCommissionExportPluginInterface
     {
         return new DataExportMerchantCommissionExportPlugin();

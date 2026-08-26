@@ -30,21 +30,10 @@ use Spryker\Glue\ShipmentTypesRestApi\ShipmentTypesRestApiConfig;
  */
 class CheckoutDataRelationshipsCest
 {
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\CheckoutDataShipmentRelationshipsFixtures
-     */
     protected CheckoutDataShipmentRelationshipsFixtures $checkoutDataShipmentRelationshipsFixtures;
 
-    /**
-     * @var \PyzTest\Glue\Checkout\RestApi\Fixtures\CheckoutDataServicePointRelationshipsFixtures
-     */
     protected CheckoutDataServicePointRelationshipsFixtures $checkoutDataServicePointRelationshipsFixtures;
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadShipmentFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\CheckoutDataShipmentRelationshipsFixtures $fixtures */
@@ -52,11 +41,6 @@ class CheckoutDataRelationshipsCest
         $this->checkoutDataShipmentRelationshipsFixtures = $fixtures;
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
-     */
     public function loadServicePointFixtures(CheckoutApiTester $I): void
     {
         /** @var \PyzTest\Glue\Checkout\RestApi\Fixtures\CheckoutDataServicePointRelationshipsFixtures $fixtures */
@@ -66,10 +50,6 @@ class CheckoutDataRelationshipsCest
 
     /**
      * @depends loadShipmentFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesShipmentsRelationship(CheckoutApiTester $I): void
     {
@@ -125,10 +105,6 @@ class CheckoutDataRelationshipsCest
 
     /**
      * @depends loadShipmentFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesShipmentMethodsRelationship(CheckoutApiTester $I): void
     {
@@ -181,10 +157,6 @@ class CheckoutDataRelationshipsCest
 
     /**
      * @depends loadShipmentFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesShipmentTypesRelationship(CheckoutApiTester $I): void
     {
@@ -238,10 +210,6 @@ class CheckoutDataRelationshipsCest
 
     /**
      * @depends loadShipmentFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataReturnsSelectedShipmentTypes(CheckoutApiTester $I): void
     {
@@ -284,10 +252,6 @@ class CheckoutDataRelationshipsCest
 
     /**
      * @depends loadServicePointFixtures
-     *
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return void
      */
     public function requestCheckoutDataIncludesServicePointsRelationship(CheckoutApiTester $I): void
     {

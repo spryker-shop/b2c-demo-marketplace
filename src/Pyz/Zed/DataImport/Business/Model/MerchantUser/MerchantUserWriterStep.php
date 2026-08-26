@@ -36,9 +36,6 @@ class MerchantUserWriterStep implements DataImportStepInterface
      */
     protected $merchantUserFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface $merchantUserFacade
-     */
     public function __construct(MerchantUserFacadeInterface $merchantUserFacade)
     {
         $this->merchantUserFacade = $merchantUserFacade;
@@ -74,11 +71,7 @@ class MerchantUserWriterStep implements DataImportStepInterface
     }
 
     /**
-     * @param string $merchantReference
-     *
      * @throws \Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException
-     *
-     * @return int
      */
     protected function getIdMerchantByReference(string $merchantReference): int
     {
@@ -93,11 +86,7 @@ class MerchantUserWriterStep implements DataImportStepInterface
     }
 
     /**
-     * @param string $username
-     *
      * @throws \Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException
-     *
-     * @return int
      */
     protected function getIdUserByUsername(string $username): int
     {

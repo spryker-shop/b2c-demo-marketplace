@@ -14,9 +14,6 @@ use Spryker\Zed\ProductOfferStorage\ProductOfferStorageConfig as SprykerProductO
 
 class ProductOfferStorageConfig extends SprykerProductOfferStorageConfig
 {
-    /**
-     * @return string
-     */
     public function getProductOfferSynchronizationPoolName(): string
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;

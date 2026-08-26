@@ -66,25 +66,16 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
         ];
     }
 
-    /**
-     * @return bool
-     */
     public function isShipmentMethodsMappedToAttributes(): bool
     {
         return false;
     }
 
-    /**
-     * @return bool
-     */
     public function isPaymentProvidersMappedToAttributes(): bool
     {
         return false;
     }
 
-    /**
-     * @return bool
-     */
     public function isAddressesMappedToAttributes(): bool
     {
         return false;

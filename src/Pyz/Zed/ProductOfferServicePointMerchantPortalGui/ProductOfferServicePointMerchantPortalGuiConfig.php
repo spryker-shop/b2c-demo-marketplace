@@ -13,9 +13,6 @@ use Spryker\Zed\ProductOfferServicePointMerchantPortalGui\ProductOfferServicePoi
 
 class ProductOfferServicePointMerchantPortalGuiConfig extends SprykerProductOfferServicePointMerchantPortalGuiConfig
 {
-    /**
-     * @return int|null
-     */
     public function getServicePointChoicesLimit(): ?int
     {
         return 100;

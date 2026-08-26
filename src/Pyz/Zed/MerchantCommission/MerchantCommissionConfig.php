@@ -20,9 +20,6 @@ class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
         'MER000001',
     ];
 
-    /**
-     * @return bool
-     */
     public function isMerchantCommissionPriceModeForStoreCalculationEnabled(): bool
     {
         return false;

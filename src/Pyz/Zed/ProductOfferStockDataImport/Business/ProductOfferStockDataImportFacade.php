@@ -18,11 +18,6 @@ use Spryker\Zed\ProductOfferStockDataImport\Business\ProductOfferStockDataImport
  */
 class ProductOfferStockDataImportFacade extends SprykerProductOfferStockDataImportFacade implements ProductOfferStockDataImportFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\DataImporterReportTransfer
-     */
     public function importCombinedProductOfferStock(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer,
     ): DataImporterReportTransfer {

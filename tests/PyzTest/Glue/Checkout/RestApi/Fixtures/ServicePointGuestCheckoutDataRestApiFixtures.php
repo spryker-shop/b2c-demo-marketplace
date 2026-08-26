@@ -22,37 +22,20 @@ class ServicePointGuestCheckoutDataRestApiFixtures implements FixturesBuilderInt
      */
     protected const ANONYMOUS_PREFIX = 'anonymous:';
 
-    /**
-     * @var string
-     */
     protected string $guestCustomerReference;
 
-    /**
-     * @var \Generated\Shared\Transfer\QuoteTransfer
-     */
     protected QuoteTransfer $guestQuoteTransfer;
 
-    /**
-     * @return string
-     */
     public function getGuestCustomerReference(): string
     {
         return $this->guestCustomerReference;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function getGuestQuoteTransfer(): QuoteTransfer
     {
         return $this->guestQuoteTransfer;
     }
 
-    /**
-     * @param \PyzTest\Glue\Checkout\CheckoutApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(CheckoutApiTester $I): FixturesContainerInterface
     {
         $I->truncateSalesOrderThresholds();

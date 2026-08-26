@@ -45,9 +45,6 @@ class DefaultAclQueryScopeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -65,8 +62,6 @@ class DefaultAclQueryScopeTest extends Unit
     /**
      * @group AclEntitySegmentScope
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testSegmentScopePrecedenceDefaultScope(): void
     {
@@ -106,8 +101,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRulesWithReadPermissionOnEntityLevel(): void
     {
@@ -135,8 +128,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testInspectCreateWithCreatePermissionInEntityLevel(): void
     {
@@ -161,8 +152,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithUpdatePermissionInEntityLevel(): void
     {
@@ -188,8 +177,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithDeletePermissionInEntityLevel(): void
     {
@@ -217,8 +204,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRulesWithReadPermissionInGlobalLevel(): void
     {
@@ -245,8 +230,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testInspectCreateWithCreatePermissionInGlobalLevel(): void
     {
@@ -267,8 +250,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithUpdatePermissionInGlobalLevel(): void
     {
@@ -292,8 +273,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithDeletePermissionInGlobalLevel(): void
     {
@@ -317,8 +296,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRulesWithNoReadPermissionInEntityLevel(): void
     {
@@ -352,8 +329,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testInspectCreateWithNoCreatePermissionInEntityLevel(): void
     {
@@ -382,8 +357,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithNoUpdatePermissionInEntityLevel(): void
     {
@@ -413,8 +386,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithNoDeletePermissionInEntityLevel(): void
     {
@@ -446,8 +417,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testApplyAclRulesWithNoReadPermissionInGlobalLevel(): void
     {
@@ -478,8 +447,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testInspectCreateWithNoCreatePermissionInGlobalLevel(): void
     {
@@ -503,8 +470,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityUpdate
-     *
-     * @return void
      */
     public function testInspectUpdateWithNoUpdatePermissionInGlobalLevel(): void
     {
@@ -532,8 +497,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityDelete
-     *
-     * @return void
      */
     public function testInspectDeleteWithNoDeletePermissionInGlobalLevel(): void
     {
@@ -560,8 +523,6 @@ class DefaultAclQueryScopeTest extends Unit
 
     /**
      * @group AclEntityCreate
-     *
-     * @return void
      */
     public function testOtherEntityGlobalScopeDefinitionDoesntInfluenceCurrentEntity(): void
     {

@@ -47,9 +47,6 @@ class AclQueryDirectorTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -74,8 +71,6 @@ class AclQueryDirectorTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testForeignKeyQueryJoinDoesntInfluenceAclEntityJoins(): void
     {
@@ -133,8 +128,6 @@ class AclQueryDirectorTest extends Unit
 
     /**
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testReferenceColumnQueryJoinDoesntInfluenceAclEntityJoins(): void
     {
@@ -182,8 +175,6 @@ class AclQueryDirectorTest extends Unit
      * @group AclEntityUpdate
      * @group AclEntityDelete
      * @group AclEntityApplyAclRules
-     *
-     * @return void
      */
     public function testOneRoleRulesDontInfluenceOtherRole(): void
     {

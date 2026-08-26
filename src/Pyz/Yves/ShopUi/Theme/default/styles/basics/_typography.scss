@@ -1,3 +1,5 @@
+@use '../shared' as *;
+
 $font-calibre-url: '../fonts/';
 $font-circular-url: '../fonts/';
 $font-calibre-light: '#{$font-calibre-url}CalibreWeb-Light';

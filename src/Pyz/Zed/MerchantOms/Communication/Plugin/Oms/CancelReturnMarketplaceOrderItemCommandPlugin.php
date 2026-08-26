@@ -21,9 +21,6 @@ class CancelReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEv
      */
     protected const EVENT_CANCEL_RETURN = 'cancel-return';
 
-    /**
-     * @return string
-     */
     public function getEventName(): string
     {
         return static::EVENT_CANCEL_RETURN;

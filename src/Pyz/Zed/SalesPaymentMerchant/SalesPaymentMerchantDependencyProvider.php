@@ -16,17 +16,11 @@ use Spryker\Zed\SalesPaymentMerchantSalesMerchantCommission\Communication\Plugin
 
 class SalesPaymentMerchantDependencyProvider extends SprykerSalesPaymentMerchantDependencyProvider
 {
-    /**
-     * @return \Spryker\Zed\SalesPaymentMerchantExtension\Communication\Dependency\Plugin\MerchantPayoutCalculatorPluginInterface|null
-     */
     protected function getMerchantPayoutAmountCalculatorPlugin(): ?MerchantPayoutCalculatorPluginInterface
     {
         return new PayoutAmountMerchantPayoutCalculatorPlugin();
     }
 
-    /**
-     * @return \Spryker\Zed\SalesPaymentMerchantExtension\Communication\Dependency\Plugin\MerchantPayoutCalculatorPluginInterface|null
-     */
     protected function getMerchantPayoutReverseAmountCalculatorPlugin(): ?MerchantPayoutCalculatorPluginInterface
     {
         return new PayoutReverseAmountMerchantPayoutCalculatorPlugin();

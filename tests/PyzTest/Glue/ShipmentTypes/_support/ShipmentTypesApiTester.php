@@ -33,8 +33,6 @@ class ShipmentTypesApiTester extends ApiEndToEndTester
 
     /**
      * @param list<string> $shipmentTypeKeys
-     *
-     * @return string
      */
     public function getShipmentTypeKeysSorting(array $shipmentTypeKeys): string
     {

@@ -21,9 +21,6 @@ use Spryker\Zed\MerchantSalesOrder\Dependency\Facade\MerchantSalesOrderToSalesFa
  */
 class MerchantSalesOrderCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantSalesOrder\Dependency\Facade\MerchantSalesOrderToSalesFacadeInterface
-     */
     public function getSalesFacade(): MerchantSalesOrderToSalesFacadeInterface
     {
         return $this->getProvidedDependency(MerchantSalesOrderDependencyProvider::FACADE_SALES);

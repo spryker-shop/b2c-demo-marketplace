@@ -26,16 +26,8 @@ use Spryker\Glue\ShipmentTypesRestApi\ShipmentTypesRestApiConfig;
  */
 class ShipmentTypesServiceTypesRelationshipRestApiCest
 {
-    /**
-     * @var \PyzTest\Glue\ShipmentTypes\RestApi\ShipmentTypesRestApiFixtures
-     */
     protected ShipmentTypesRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(ShipmentTypesApiTester $I): void
     {
         /** @var \PyzTest\Glue\ShipmentTypes\RestApi\ShipmentTypesRestApiFixtures $fixtures */
@@ -45,10 +37,6 @@ class ShipmentTypesServiceTypesRelationshipRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
      */
     public function requestGetShipmentTypesWithServiceTypesRelationshipsIncludesCorrectServiceTypeResource(ShipmentTypesApiTester $I): void
     {
@@ -97,10 +85,6 @@ class ShipmentTypesServiceTypesRelationshipRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
      */
     public function requestGetShipmentTypesByUuidWithServiceTypesRelationshipsIncludesCorrectServiceTypeResource(ShipmentTypesApiTester $I): void
     {
@@ -148,10 +132,6 @@ class ShipmentTypesServiceTypesRelationshipRestApiCest
 
     /**
      * @depends loadFixtures
-     *
-     * @param \PyzTest\Glue\ShipmentTypes\ShipmentTypesApiTester $I
-     *
-     * @return void
      */
     public function requestGetShipmentTypesByUuidWithServiceTypesRelationshipsDoesNotIncludeServiceTypeResourceWhenShipmentTypeHasNoRelationsWithServiceTypes(
         ShipmentTypesApiTester $I,

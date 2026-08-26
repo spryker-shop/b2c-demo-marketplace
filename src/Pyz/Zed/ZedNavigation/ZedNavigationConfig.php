@@ -29,8 +29,6 @@ class ZedNavigationConfig extends SprykerZedNavigationConfig
 
     /**
      * @api
-     *
-     * @return string
      */
     public function getMergeStrategy(): string
     {
@@ -73,9 +71,6 @@ class ZedNavigationConfig extends SprykerZedNavigationConfig
         return $navigationSchemaFileNamePatterns;
     }
 
-    /**
-     * @return string
-     */
     public function getDefaultNavigationType(): string
     {
         if (APPLICATION === 'MERCHANT_PORTAL') {

@@ -23,8 +23,6 @@ interface ExampleProductSalePageQueryContainerInterface
      *
      * @psalm-suppress TooManyTemplateParams
      *
-     * @param string $labelName
-     *
      * @return \Orm\Zed\ProductLabel\Persistence\SpyProductLabelQuery<\Orm\Zed\ProductLabel\Persistence\SpyProductLabel>
      */
     public function queryProductLabelByName(string $labelName): SpyProductLabelQuery;
@@ -33,11 +31,6 @@ interface ExampleProductSalePageQueryContainerInterface
      * @api
      *
      * @psalm-suppress TooManyTemplateParams
-     *
-     * @param int $idProductLabel
-     * @param string $priceMode
-     *
-     * @return \Orm\Zed\ProductLabel\Persistence\SpyProductLabelProductAbstractQuery
      */
     public function queryRelationsBecomingInactive(int $idProductLabel, string $priceMode): SpyProductLabelProductAbstractQuery;
 
@@ -45,13 +38,6 @@ interface ExampleProductSalePageQueryContainerInterface
      * @api
      *
      * @psalm-suppress TooManyTemplateParams
-     *
-     * @param int $idProductLabel
-     * @param int $currentStoreId
-     * @param int $currentCurrencyId
-     * @param string $priceMode
-     *
-     * @return \Orm\Zed\Product\Persistence\SpyProductAbstractQuery
      */
     public function queryRelationsBecomingActive(
         int $idProductLabel,

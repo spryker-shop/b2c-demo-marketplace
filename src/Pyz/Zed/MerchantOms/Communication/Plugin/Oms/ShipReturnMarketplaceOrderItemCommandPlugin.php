@@ -21,9 +21,6 @@ class ShipReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEven
      */
     protected const EVENT_SHIP_RETURN = 'ship-return';
 
-    /**
-     * @return string
-     */
     public function getEventName(): string
     {
         return static::EVENT_SHIP_RETURN;

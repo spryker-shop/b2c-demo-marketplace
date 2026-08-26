@@ -71,26 +71,12 @@ class ProductOfferServicePointAvailabilitiesRestApiFixtures implements FixturesB
      */
     protected array $serviceTransfers = [];
 
-    /**
-     * @var \Generated\Shared\Transfer\ServiceTypeTransfer
-     */
     protected ServiceTypeTransfer $serviceTypeTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\MerchantTransfer
-     */
     protected MerchantTransfer $merchantTransfer;
 
-    /**
-     * @var \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     protected ShipmentTypeTransfer $shipmentTypeTransfer;
 
-    /**
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(ProductOfferServicePointAvailabilitiesApiTester $I): FixturesContainerInterface
     {
         $storeTransfer = $I->haveStore([StoreTransfer::NAME => static::STORE_NAME_DE]);
@@ -161,31 +147,16 @@ class ProductOfferServicePointAvailabilitiesRestApiFixtures implements FixturesB
         return $this->serviceTransfers;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantTransfer
-     */
     public function getMerchantTransfer(): MerchantTransfer
     {
         return $this->merchantTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     public function getShipmentTypeTransfer(): ShipmentTypeTransfer
     {
         return $this->shipmentTypeTransfer;
     }
 
-    /**
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\ServiceTransfer $serviceTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer|null $shipmentTypeTransfer
-     * @param int $availableQuantity
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer
-     */
     protected function createProductOfferServicePointAvailabilityResponseItem(
         ProductOfferServicePointAvailabilitiesApiTester $I,
         StoreTransfer $storeTransfer,
@@ -236,13 +207,6 @@ class ProductOfferServicePointAvailabilitiesRestApiFixtures implements FixturesB
             ->setAvailableQuantity($availableQuantity);
     }
 
-    /**
-     * @param \PyzTest\Glue\ProductOfferServicePointAvailabilities\ProductOfferServicePointAvailabilitiesApiTester $I
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\ServiceTypeTransfer|null $serviceTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTransfer
-     */
     protected function createServiceTransferWithServicePoint(
         ProductOfferServicePointAvailabilitiesApiTester $I,
         StoreTransfer $storeTransfer,

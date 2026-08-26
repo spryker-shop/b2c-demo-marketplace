@@ -65,19 +65,11 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
      */
     protected $discountConfig;
 
-    /**
-     * @param \Spryker\Zed\Discount\DiscountConfig $discountConfig
-     */
     public function __construct(DiscountConfig $discountConfig)
     {
         $this->discountConfig = $discountConfig;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $discountEntity = SpyDiscountQuery::create()
@@ -109,12 +101,6 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
         $voucherCodeCollection->save();
     }
 
-    /**
-     * @param \Orm\Zed\Discount\Persistence\SpyDiscount $discountEntity
-     * @param int $voucherBatch
-     *
-     * @return bool
-     */
     protected function voucherBatchExists(SpyDiscount $discountEntity, int $voucherBatch): bool
     {
         $query = SpyDiscountVoucherQuery::create()
@@ -125,10 +111,6 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
     }
 
     /**
-     * @param int $length
-     * @param int $quantity
-     * @param string|null $customCode
-     *
      * @return array<string>
      */
     protected function generateCodes(int $length, int $quantity, ?string $customCode = null): array
@@ -153,12 +135,6 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
         return $codesToGenerate;
     }
 
-    /**
-     * @param string $customCode
-     * @param string $code
-     *
-     * @return string
-     */
     protected function addCustomCodeToGenerated(string $customCode, string $code): string
     {
         $replacementString = $this->discountConfig->getVoucherPoolTemplateReplacementString();
@@ -174,21 +150,11 @@ class DiscountVoucherWriterStep implements DataImportStepInterface
         return str_replace($replacementString, $code, $customCode);
     }
 
-    /**
-     * @param string $code
-     *
-     * @return bool
-     */
     protected function voucherCodeExists(string $code): bool
     {
         return (SpyDiscountVoucherQuery::create()->filterByCode($code)->count() > 0);
     }
 
-    /**
-     * @param int $length
-     *
-     * @return string
-     */
     protected function getRandomVoucherCode(int $length): string
     {
         $allowedCharacters = $this->discountConfig->getVoucherCodeCharacters();

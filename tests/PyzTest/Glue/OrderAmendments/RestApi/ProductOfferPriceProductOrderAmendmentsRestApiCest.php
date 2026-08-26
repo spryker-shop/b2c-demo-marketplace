@@ -26,16 +26,8 @@ use Spryker\Glue\CartReorderRestApi\CartReorderRestApiConfig;
  */
 class ProductOfferPriceProductOrderAmendmentsRestApiCest
 {
-    /**
-     * @var \PyzTest\Glue\OrderAmendments\RestApi\Fixtures\ProductOfferPriceOrderAmendmentRestApiFixtures
-     */
     protected ProductOfferPriceOrderAmendmentRestApiFixtures $fixtures;
 
-    /**
-     * @param \PyzTest\Glue\OrderAmendments\OrderAmendmentsApiTester $I
-     *
-     * @return void
-     */
     public function loadFixtures(OrderAmendmentsApiTester $I): void
     {
         /** @var \PyzTest\Glue\OrderAmendments\RestApi\Fixtures\ProductOfferPriceOrderAmendmentRestApiFixtures $fixtures */
@@ -43,11 +35,6 @@ class ProductOfferPriceProductOrderAmendmentsRestApiCest
         $this->fixtures = $fixtures;
     }
 
-    /**
-     * @param \PyzTest\Glue\OrderAmendments\OrderAmendmentsApiTester $I
-     *
-     * @return void
-     */
     public function requestCreateOrderAmendmentWithProductOfferPricesSavedFromTheOrder(OrderAmendmentsApiTester $I): void
     {
         // Arrange
@@ -80,11 +67,6 @@ class ProductOfferPriceProductOrderAmendmentsRestApiCest
         );
     }
 
-    /**
-     * @param \PyzTest\Glue\OrderAmendments\OrderAmendmentsApiTester $I
-     *
-     * @return void
-     */
     protected function assertProductPricesBeforeOrderAmendment(OrderAmendmentsApiTester $I): void
     {
         $I->sendGET($I->getProductOfferPricesUrl($this->fixtures->getProductOfferWithBiggerPrice()->getProductOfferReference()));
