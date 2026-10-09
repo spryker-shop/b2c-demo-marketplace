@@ -1,5 +1,5 @@
 import MultipleShipmentTogglerCore from 'CheckoutPage/components/molecules/multiple-shipment-toggler/multiple-shipment-toggler';
-import CustomSelect from 'ShopUiProject/components/molecules/custom-select/custom-select';
+import CustomSelect from 'src/ShopUi/components/molecules/custom-select/custom-select';
 import { mount } from 'ShopUi/app';
 
 export default class MultipleShipmentToggler extends MultipleShipmentTogglerCore {
