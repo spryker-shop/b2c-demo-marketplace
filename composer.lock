@@ -79007,7 +79007,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/cypress-tests.git",
-                "reference": "49d1e44d2abba4482c80f3f8d4dad05596ec6150"
+                "reference": "e322becde55e8df4bc4d2dd801b35f4063dde38d"
             },
             "type": "spryker-test",
             "license": [
