@@ -51,6 +51,10 @@ suites:
                 - \SprykerTest\Zed\Country\Helper\CountryDataHelper
                 - \SprykerTest\Shared\Discount\Helper\DiscountDataHelper
                 - \SprykerTest\Zed\Category\Helper\CategoryDataHelper
+                - \SprykerTest\Zed\Navigation\Helper\NavigationDataHelper
+                - \SprykerTest\Shared\ProductConfiguration\Helper\ProductConfigurationHelper
+                - \SprykerTest\Shared\ProductRelation\Helper\ProductRelationDataHelper
+                - \SprykerTest\Shared\ProductAlternative\Helper\ProductAlternativeDataHelper
                 - \SprykerTest\Zed\ProductCategory\Helper\ProductCategoryDataHelper
                 - \SprykerTest\Shared\MerchantCommission\Helper\MerchantCommissionHelper
                 - \SprykerTest\Shared\Store\Helper\StoreDataHelper

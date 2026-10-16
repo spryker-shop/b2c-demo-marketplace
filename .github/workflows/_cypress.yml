@@ -29,7 +29,9 @@ jobs:
             # which specs exist, so the matrix comes from the same tree the shards run.
             -   name: Install cypress-tests folder
                 run: |
-                    cd ./data && composer require "spryker/cypress-tests:dev-release_202512.0_state" --dev --no-interaction
+                    # The commit composer.lock pins, not the branch head: CI runs the reviewed state.
+                    CYPRESS_TESTS=$(jq -r '.["packages-dev"][] | select(.name == "spryker/cypress-tests") | "\(.version)#\(.source.reference)"' composer.lock)
+                    cd ./data && composer require "spryker/cypress-tests:${CYPRESS_TESTS}" --dev --no-interaction
 
             -   id: compute
                 name: Generate shard matrix
@@ -78,7 +80,9 @@ jobs:
 
             -   name: Install cypress-tests folder
                 run: |
-                    cd ./data && composer require "spryker/cypress-tests:dev-release_202512.0_state" --dev --no-interaction
+                    # The commit composer.lock pins, not the branch head: CI runs the reviewed state.
+                    CYPRESS_TESTS=$(jq -r '.["packages-dev"][] | select(.name == "spryker/cypress-tests") | "\(.version)#\(.source.reference)"' composer.lock)
+                    cd ./data && composer require "spryker/cypress-tests:${CYPRESS_TESTS}" --dev --no-interaction
                     cp -r vendor/spryker/cypress-tests ../tests/cypress-tests
 
             -   name: Set core spec list
@@ -117,6 +121,15 @@ jobs:
                     docker/sdk exec cypress-tests npx cypress install
                     docker/sdk exec --env "ENV_REPOSITORY_ID=b2c-mp" cypress-tests \
                         npx cypress run --headless --browser chrome --spec "$CORE_SPECS"
+
+            -   name: Upload screenshots
+                if: failure() && steps.run_tests.outcome == 'failure'
+                uses: actions/upload-artifact@v6
+                with:
+                    name: cypress-screenshots-${{ matrix.shard.shard }}
+                    path: .cypress/screenshots
+                    include-hidden-files: true
+                    if-no-files-found: ignore
 
             -   name: Upload artifacts
                 # Scoped to a test failure so a red boot or install step skips this outright; the
