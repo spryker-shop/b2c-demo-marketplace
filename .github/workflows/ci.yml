@@ -77,7 +77,7 @@ jobs:
 
             -   uses: actions/setup-node@v4
                 with:
-                    node-version: '20'
+                    node-version: '24'
 
             -   name: Setup PHP
                 uses: shivammathur/setup-php@v2
@@ -205,6 +205,12 @@ jobs:
 
             -   name: Front-end Formatter
                 run: npm run formatter
+
+            -   name: Back Office Style lint
+                run: npm run zed:stylelint
+
+            -   name: Back Office ES lint
+                run: npm run zed:lint
 
             -   name: Front-end MP Lint
                 run: npm run mp:lint
