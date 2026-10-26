@@ -39617,16 +39617,16 @@
         },
         {
             "name": "spryker/multi-factor-auth-merchant-portal",
-            "version": "2.5.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/multi-factor-auth-merchant-portal.git",
-                "reference": "ee6841434c11fb83ad02a1ea4bb28b6470fb95bc"
+                "reference": "e29352155221287939f0159da8f250540280d2e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/multi-factor-auth-merchant-portal/zipball/ee6841434c11fb83ad02a1ea4bb28b6470fb95bc",
-                "reference": "ee6841434c11fb83ad02a1ea4bb28b6470fb95bc",
+                "url": "https://api.github.com/repos/spryker/multi-factor-auth-merchant-portal/zipball/e29352155221287939f0159da8f250540280d2e1",
+                "reference": "e29352155221287939f0159da8f250540280d2e1",
                 "shasum": ""
             },
             "require": {
@@ -39642,11 +39642,10 @@
                 "spryker/transfer": "^3.27.0",
                 "spryker/user": "^3.27.0",
                 "spryker/zed-navigation-extension": "^1.1.0",
-                "spryker/zed-ui": "^4.3.0"
+                "spryker/zed-ui": "^4.0.0"
             },
             "require-dev": {
-                "spryker/code-sniffer": "*",
-                "spryker/testify": "*"
+                "spryker/code-sniffer": "*"
             },
             "suggest": {
                 "spryker/container": "Use this module when you want to use the Container."
@@ -39668,9 +39667,9 @@
             ],
             "description": "MultiFactorAuthMerchantPortal module",
             "support": {
-                "source": "https://github.com/spryker/multi-factor-auth-merchant-portal/tree/2.5.0"
+                "source": "https://github.com/spryker/multi-factor-auth-merchant-portal/tree/2.1.0"
             },
-            "time": "2026-10-16T11:43:59+00:00"
+            "time": "2026-02-27T15:08:41+00:00"
         },
         {
             "name": "spryker/navigation",
@@ -67344,16 +67343,16 @@
         },
         {
             "name": "spryker/zed-ui",
-            "version": "4.5.1",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-ui.git",
-                "reference": "010041b95dacf8866b48220eb7875904e3a1b46b"
+                "reference": "2efcfb82f62db98af7d0b2fc3af894d8d1b1d9ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/010041b95dacf8866b48220eb7875904e3a1b46b",
-                "reference": "010041b95dacf8866b48220eb7875904e3a1b46b",
+                "url": "https://api.github.com/repos/spryker/zed-ui/zipball/2efcfb82f62db98af7d0b2fc3af894d8d1b1d9ad",
+                "reference": "2efcfb82f62db98af7d0b2fc3af894d8d1b1d9ad",
                 "shasum": ""
             },
             "require": {
@@ -67394,9 +67393,9 @@
             ],
             "description": "ZedUi module",
             "support": {
-                "source": "https://github.com/spryker/zed-ui/tree/4.5.1"
+                "source": "https://github.com/spryker/zed-ui/tree/4.1.1"
             },
-            "time": "2026-10-16T08:32:51+00:00"
+            "time": "2026-04-21T07:24:23+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
