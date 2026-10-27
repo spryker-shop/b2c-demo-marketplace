@@ -324,6 +324,7 @@ class AclQueryDirectorTester extends Actor
             $factory->createAclQueryExpander($aclEntityConfigTransfer),
             $factory->createAclEntityQueryMerger(),
             $this->createAclModelDirector($rolesTransfer, $aclEntityMetadataCollectionTransfer, $bundleConfig),
+            $factory->createAclEntityAmbiguousSelectColumnGuard(),
         );
     }
 

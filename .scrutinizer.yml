@@ -10,11 +10,6 @@ build:
         override:
             - composer install --ignore-platform-reqs --no-interaction --no-scripts # disable PHP dependency (pecl modules) installation
 
-        before:
-            - 'npm cache clean --force'
-            - 'rm -rf node_modules'
-            - 'npm install'
-
     tests:
         override:
             - true # disable test execution on scrutinizer
