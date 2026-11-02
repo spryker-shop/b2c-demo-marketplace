@@ -3594,3 +3594,7 @@ data_import_merchant.validation.invalid_file_content_type,Invalid file content t
 data_import_merchant.validation.invalid_file_content_type,Ungültiger Dateityp.,de_DE
 merchant_product_data_import.validation.missing_required_header,The required field %header% is missing.,en_US
 merchant_product_data_import.validation.missing_required_header,Das erforderliche Feld %header% fehlt.,de_DE
+customer.password.change_limit_exceeded,"You reached the limit of password change attempts. Please try again later.",en_US
+customer.password.change_limit_exceeded,"Sie haben das Limit für Versuche zur Änderung des Passworts erreicht. Bitte versuchen Sie es später erneut.",de_DE
+customer.change_customer_email_limit_exceeded,"You reached the limit of email change requests. Please try again later.",en_US
+customer.change_customer_email_limit_exceeded,"Sie haben das Limit für Anfragen zur Änderung der E-Mail-Adresse erreicht. Bitte versuchen Sie es später erneut.",de_DE
