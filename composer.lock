@@ -65514,16 +65514,16 @@
         },
         {
             "name": "spryker/user-merchant-portal-gui",
-            "version": "4.4.3",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/user-merchant-portal-gui.git",
-                "reference": "0abcef7d7740a135accf641e626928d17609b122"
+                "reference": "e8efc332d8dabd9349b52797054e6bcfea7cdde4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/0abcef7d7740a135accf641e626928d17609b122",
-                "reference": "0abcef7d7740a135accf641e626928d17609b122",
+                "url": "https://api.github.com/repos/spryker/user-merchant-portal-gui/zipball/e8efc332d8dabd9349b52797054e6bcfea7cdde4",
+                "reference": "e8efc332d8dabd9349b52797054e6bcfea7cdde4",
                 "shasum": ""
             },
             "require": {
@@ -65533,7 +65533,7 @@
                 "spryker/kernel": "^3.30.0",
                 "spryker/locale": "^3.3.0 || ^4.0.0",
                 "spryker/merchant-user": "^1.9.2",
-                "spryker/security-blocker": "^1.2.0",
+                "spryker/security-blocker": "^1.4.0",
                 "spryker/symfony": "^3.0.0",
                 "spryker/transfer": "^3.27.0",
                 "spryker/translator": "^1.1.0",
@@ -65563,9 +65563,9 @@
             ],
             "description": "UserMerchantPortalGui module",
             "support": {
-                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/4.4.3"
+                "source": "https://github.com/spryker/user-merchant-portal-gui/tree/4.5.0"
             },
-            "time": "2026-10-26T09:11:27+00:00"
+            "time": "2026-10-30T14:37:09+00:00"
         },
         {
             "name": "spryker/user-merchant-portal-gui-extension",
@@ -80026,9 +80026,9 @@
         "ext-readline": "*",
         "ext-redis": "*"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.3.13"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
