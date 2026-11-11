@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89cc69f61b4cddb9c59ad6b4fb6ea81b",
+    "content-hash": "e092a42105e9b109252ee99f3e6f1197",
     "packages": [
         {
             "name": "async-aws/core",
@@ -79084,24 +79084,6 @@
             "time": "2026-10-02T10:46:24+00:00"
         },
         {
-            "name": "spryker/robotframework-suite-tests",
-            "version": "dev-release_202512.0_state",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spryker/robotframework-suite-tests.git",
-                "reference": "ed3ad1be5a6924a54ce0836da286768f49cde8c0"
-            },
-            "bin": [
-                "bin/run-robot-suite-tests.sh"
-            ],
-            "type": "library",
-            "license": [
-                "MIT"
-            ],
-            "description": "Automated tests for the Robot Framework",
-            "time": "2026-10-09T16:48:33+00:00"
-        },
-        {
             "name": "spryker/testify",
             "version": "3.67.1",
             "source": {
@@ -80008,8 +79990,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "spryker/cypress-tests": 20,
-        "spryker/docker-chromedriver": 20,
-        "spryker/robotframework-suite-tests": 20
+        "spryker/docker-chromedriver": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
