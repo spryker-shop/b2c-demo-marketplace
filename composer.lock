@@ -33605,16 +33605,16 @@
         },
         {
             "name": "spryker/http",
-            "version": "1.17.1",
+            "version": "1.17.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/http.git",
-                "reference": "09632dff048a6b49e124cbaa03ec3f8f0b4a9ee8"
+                "reference": "39abb21ceb9077fdfae2a87d1e3a81c195a7d4d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/http/zipball/09632dff048a6b49e124cbaa03ec3f8f0b4a9ee8",
-                "reference": "09632dff048a6b49e124cbaa03ec3f8f0b4a9ee8",
+                "url": "https://api.github.com/repos/spryker/http/zipball/39abb21ceb9077fdfae2a87d1e3a81c195a7d4d9",
+                "reference": "39abb21ceb9077fdfae2a87d1e3a81c195a7d4d9",
                 "shasum": ""
             },
             "require": {
@@ -33664,9 +33664,9 @@
             ],
             "description": "Http module",
             "support": {
-                "source": "https://github.com/spryker/http/tree/1.17.1"
+                "source": "https://github.com/spryker/http/tree/1.17.3"
             },
-            "time": "2026-09-14T12:38:19+00:00"
+            "time": "2026-11-17T15:34:39+00:00"
         },
         {
             "name": "spryker/http-extension",
@@ -34443,16 +34443,16 @@
         },
         {
             "name": "spryker/log",
-            "version": "3.22.0",
+            "version": "3.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/log.git",
-                "reference": "0434c3a3068a919ada2d91094fe4a3be84c61f81"
+                "reference": "faaed4727993c9a3c00e17e202c31b9a50a0c5ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/log/zipball/0434c3a3068a919ada2d91094fe4a3be84c61f81",
-                "reference": "0434c3a3068a919ada2d91094fe4a3be84c61f81",
+                "url": "https://api.github.com/repos/spryker/log/zipball/faaed4727993c9a3c00e17e202c31b9a50a0c5ef",
+                "reference": "faaed4727993c9a3c00e17e202c31b9a50a0c5ef",
                 "shasum": ""
             },
             "require": {
@@ -34498,9 +34498,9 @@
             ],
             "description": "Log module",
             "support": {
-                "source": "https://github.com/spryker/log/tree/3.22.0"
+                "source": "https://github.com/spryker/log/tree/3.23.1"
             },
-            "time": "2026-09-14T12:38:19+00:00"
+            "time": "2026-11-17T15:34:39+00:00"
         },
         {
             "name": "spryker/log-extension",
@@ -58714,16 +58714,16 @@
         },
         {
             "name": "spryker/search-elasticsearch",
-            "version": "1.24.0",
+            "version": "1.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/search-elasticsearch.git",
-                "reference": "8e70f1550213f6a283345747c5cebf7a9c0b6e2a"
+                "reference": "4874319ad5d0155c2115af9f50d541f82fc89e9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/search-elasticsearch/zipball/8e70f1550213f6a283345747c5cebf7a9c0b6e2a",
-                "reference": "8e70f1550213f6a283345747c5cebf7a9c0b6e2a",
+                "url": "https://api.github.com/repos/spryker/search-elasticsearch/zipball/4874319ad5d0155c2115af9f50d541f82fc89e9c",
+                "reference": "4874319ad5d0155c2115af9f50d541f82fc89e9c",
                 "shasum": ""
             },
             "require": {
@@ -58773,9 +58773,9 @@
             ],
             "description": "SearchElasticsearch module",
             "support": {
-                "source": "https://github.com/spryker/search-elasticsearch/tree/1.24.0"
+                "source": "https://github.com/spryker/search-elasticsearch/tree/1.25.1"
             },
-            "time": "2026-09-15T13:15:58+00:00"
+            "time": "2026-11-17T15:34:39+00:00"
         },
         {
             "name": "spryker/search-elasticsearch-gui",
@@ -67461,21 +67461,21 @@
         },
         {
             "name": "spryker/zed-request",
-            "version": "3.30.0",
+            "version": "3.31.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/zed-request.git",
-                "reference": "50758c9553fb59d4b9da258d1c520b8388b0952b"
+                "reference": "12e6857d80b26fde84ed87f7b7dfd0d9d27647c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/zed-request/zipball/50758c9553fb59d4b9da258d1c520b8388b0952b",
-                "reference": "50758c9553fb59d4b9da258d1c520b8388b0952b",
+                "url": "https://api.github.com/repos/spryker/zed-request/zipball/12e6857d80b26fde84ed87f7b7dfd0d9d27647c5",
+                "reference": "12e6857d80b26fde84ed87f7b7dfd0d9d27647c5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.3",
-                "psr/http-message": "^1.0.0",
+                "psr/http-message": "^1.0.0 || ^2.0.0",
                 "spryker/application-extension": "^1.1.0",
                 "spryker/config": "^3.0.0",
                 "spryker/error-handler": "^2.1.0",
@@ -67530,9 +67530,9 @@
             ],
             "description": "ZedRequest module",
             "support": {
-                "source": "https://github.com/spryker/zed-request/tree/3.30.0"
+                "source": "https://github.com/spryker/zed-request/tree/3.31.1"
             },
-            "time": "2026-10-05T12:17:18+00:00"
+            "time": "2026-11-17T15:34:39+00:00"
         },
         {
             "name": "spryker/zed-request-extension",
