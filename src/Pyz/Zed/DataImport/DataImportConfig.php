@@ -11,6 +11,7 @@ namespace Pyz\Zed\DataImport;
 
 use Spryker\Zed\AclDataImport\AclDataImportConfig;
 use Spryker\Zed\AclEntityDataImport\AclEntityDataImportConfig;
+use Spryker\Zed\Configuration\ConfigurationConfig;
 use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
 use Spryker\Zed\MerchantProductApprovalDataImport\MerchantProductApprovalDataImportConfig;
 use Spryker\Zed\ProductApprovalDataImport\ProductApprovalDataImportConfig;
@@ -243,6 +244,7 @@ class DataImportConfig extends SprykerDataImportConfig
             AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR,
             MerchantProductApprovalDataImportConfig::IMPORT_TYPE_MERCHANT_PRODUCT_APPROVAL_STATUS_DEFAULT,
             ProductApprovalDataImportConfig::IMPORT_TYPE_PRODUCT_APPROVAL_STATUS,
+            ConfigurationConfig::IMPORT_TYPE_CONFIGURATION_VALUE,
         ];
 
         return array_merge(parent::getFullImportTypes(), $customImportTypes);

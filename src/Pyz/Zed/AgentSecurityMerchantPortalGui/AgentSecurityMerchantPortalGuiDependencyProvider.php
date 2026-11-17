@@ -11,6 +11,7 @@ namespace Pyz\Zed\AgentSecurityMerchantPortalGui;
 
 use Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui\AclGroupMerchantUserLoginRestrictionPlugin;
 use Spryker\Zed\AgentSecurityMerchantPortalGui\AgentSecurityMerchantPortalGuiDependencyProvider as SprykerAgentSecurityMerchantPortalGuiDependencyProvider;
+use Spryker\Zed\Captcha\Communication\Plugin\AgentSecurityMerchantPortalGui\AgentMerchantPortalLoginFormCaptchaExpanderPlugin;
 use Spryker\Zed\MultiFactorAuthMerchantPortal\Communication\Plugin\AuthenticationHandler\MerchantAgentUser\MerchantAgentUserMultiFactorAuthenticationHandlerPlugin;
 
 class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecurityMerchantPortalGuiDependencyProvider
@@ -32,6 +33,16 @@ class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecur
     {
         return [
             new AclGroupMerchantUserLoginRestrictionPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\SecurityMerchantPortalGuiExtension\Dependency\Plugin\MerchantPortalLoginFormExpanderPluginInterface>
+     */
+    protected function getMerchantPortalAgentLoginFormExpanderPlugins(): array
+    {
+        return [
+            new AgentMerchantPortalLoginFormCaptchaExpanderPlugin(),
         ];
     }
 }
