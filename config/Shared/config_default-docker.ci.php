@@ -8,8 +8,10 @@ declare(strict_types = 1);
 
 use Monolog\Logger;
 use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
+use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Shared\Event\EventConstants;
 use Spryker\Shared\FileSystem\FileSystemConstants;
+use Spryker\Shared\Flysystem\FlysystemConstants;
 use Spryker\Shared\GlueBackendApiApplication\GlueBackendApiApplicationConstants;
 use Spryker\Shared\GlueJsonApiConvention\GlueJsonApiConventionConstants;
 use Spryker\Shared\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConstants;
@@ -59,6 +61,12 @@ $config[GlueJsonApiConventionConstants::GLUE_DOMAIN] = sprintf(
 $config[RedisConstants::REDIS_IS_DEV_MODE] = false;
 
 // >>> FILESYSTEM
+$localMediaFilesystemConfig = [
+    'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
+    'root' => APPLICATION_ROOT_DIR . '/public/Yves/assets/static/images',
+    'path' => '',
+];
+
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'merchant-product-data-import-files' => [
         'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
@@ -70,4 +78,17 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'root' => '/data',
         'path' => '/data/merchant-product-offer-data-import-files',
     ],
+    'backoffice-media' => $localMediaFilesystemConfig,
+    'storefront-media' => $localMediaFilesystemConfig,
+    'merchant-portal-media' => $localMediaFilesystemConfig,
+];
+
+$publicUrl = sprintf(
+    '%s%s',
+    $config[ApplicationConstants::BASE_URL_YVES],
+    '/assets/static/images',
+);
+
+$config[FlysystemConstants::FLYSYSTEM_OPTIONS] = [
+    'public_url' => $publicUrl,
 ];
