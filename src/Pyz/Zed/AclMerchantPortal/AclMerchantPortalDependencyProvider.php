@@ -16,6 +16,8 @@ use Spryker\Zed\Availability\Communication\Plugin\AclMerchantPortal\Availability
 use Spryker\Zed\Category\Communication\Plugin\AclMerchantPortal\CategoryAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\CategoryImage\Communication\Plugin\AclMerchantPortal\CategoryImageAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\CmsBlock\Communication\Plugin\AclMerchantPortal\CmsBlockAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Configuration\Communication\Plugin\AclMerchantPortal\ConfigurationValueAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Configuration\Communication\Plugin\AclMerchantPortal\ConfigurationValueMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryMerchantAclEntityRuleExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryStoreAclEntityConfigurationExpanderPlugin;
@@ -146,6 +148,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new DiscountMerchantAclEntityRuleExpanderPlugin(),
             new DiscountPromotionMerchantAclEntityRuleExpanderPlugin(),
             new SalesMerchantCommissionMerchantAclEntityRuleExpanderPlugin(),
+            new ConfigurationValueMerchantAclEntityRuleExpanderPlugin(),
         ];
     }
 
@@ -235,6 +238,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new SalesMerchantCommissionAclEntityConfigurationExpanderPlugin(),
             new UserMultiFactorAuthAclEntityConfigurationExpanderPlugin(),
             new DataImportMerchantFileAclEntityConfigurationExpanderPlugin(),
+            new ConfigurationValueAclEntityConfigurationExpanderPlugin(),
         ];
     }
 }
